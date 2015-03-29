@@ -1,0 +1,7 @@
+sculpin_theme:
+  theme: broderboy/deadfish
+  #theme: sculpin/bootstrap-3-blog-theme
+
+sculpin_content_types:
+  posts:
+    permalink: :year/:month/:day/:filename/
