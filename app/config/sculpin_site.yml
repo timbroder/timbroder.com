@@ -3,6 +3,8 @@
 # in a template to get the contents of the `title` key.
 title: timbroder.com
 subtitle: Code. Comics. Crossfit
+#url: http://timbroder.com
+author: Tim Broder
 
 # Insert your disqus shortname
 disqus:

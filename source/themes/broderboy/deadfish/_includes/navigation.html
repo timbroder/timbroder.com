@@ -1,15 +1,9 @@
-<div class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse">
-            {% include "custom/navigation_main_menu" %}
-        </div><!--/.nav-collapse -->
-    </div>
+<div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+        {% include "custom/navigation_main_menu" %}
+    <a class="subscribe-button icon-feed" href="/rss/">Subscribe</a>
 </div>
+<span class="nav-cover"></span>

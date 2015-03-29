@@ -2,18 +2,26 @@
 
 {% block content_wrapper %}
 
-    <article class="hentry" role="article">
+    <article class="post" role="article">
         {% include "article" with {post: page} %}
     </article>
 
     {% if page.previous_post or page.next_post %}
-        <nav class="ordered-content">
+        <aside class="read-next">
             {% if page.next_post %}
-                <a class="next" href="{{ page.next_post.url }}">&laquo; {{ page.next_post.title }}</a>
+                <a class="read-next-story" href="{{ page.next_post.url }}">
+                    <section class="post">
+                        <h2>{{ page.next_post.title }}</h2>
+                     </section>
+                </a>
             {% endif %}
             {% if page.previous_post %}
-                <a class="prev" href="{{ page.previous_post.url }}">{{ page.previous_post.title }} &raquo;</a>
+                <a class="read-next-story prev" href="{{ page.previous_post.url }}">
+                    <section class="post">
+                    <h2>{{ page.previous_post.title }}</h2>
+                    </section>
+                </a>
             {% endif %}
-        </nav>
+        </aside>
     {% endif %}
 {% endblock %}

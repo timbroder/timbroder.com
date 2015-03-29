@@ -1,7 +1,7 @@
 <div class="blog-index">
     {% set index = true %}
     {% for post in page.pagination.items %}
-        <article>
+        <article class="post" role="article">
             {% include "article" %}
         </article>
     {% endfor %}

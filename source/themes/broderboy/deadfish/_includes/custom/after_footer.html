@@ -1,2 +1,5 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+{% for js in theme_paths("assets/js/index.js") %}
+<script type="text/javascript" src="{{ site.url }}/{{ js }}"></script>
+{% endfor %}
