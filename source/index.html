@@ -7,22 +7,11 @@ pagination:
 use:
     - posts
 ---
+{% set index = 'index' %}
 {% for post in page.pagination.items %}
     <article class="post" role="article">
-        <header>
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-        </header>
-        <div>
-            {{ post.blocks.content|raw }}
-        </div>
-        {% if post.meta.tags %}
-            <p class="tags">
-            Tags:
-            {% for tag in post.meta.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
+        {% include "article" %}
+
     </article>
 {% endfor %}
 {% if page.pagination.previous_page or page.pagination.next_page %}
