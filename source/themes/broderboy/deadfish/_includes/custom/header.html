@@ -4,11 +4,21 @@
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">{{ site.title }}</h1>
-            {% if site.subtitle %}
+            <h1 class="page-title">
+                <a href="/">
+                    {{ site.title }}
+                </a>
+            </h1>
+            {#% if site.subtitle %}
             <h2 class="page-description">{{ site.subtitle }}</h2>
-            {% endif %}
-            <h4 class="page-description">app nav something</h2>
+            {% endif %#}
+            <h2 class="page-description">
+                <a href="/">Apps</a>
+                <a href="/">Projects</a>
+                <a href="/">Podcasts</a>
+                <a href="/">Talks</a>
+                <a href="/">About</a>
+            </h2>
         </div>
     </div>
     {# <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a> #}
