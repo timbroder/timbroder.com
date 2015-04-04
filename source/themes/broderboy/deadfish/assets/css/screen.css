@@ -990,11 +990,12 @@ body:not(.post-template) .post-title {
 
 .post-meta {
     display: block;
-    margin: 1.75rem 0 0 0;
+    margin: 1.75rem 0 1.55rem 0;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
+
 }
 
 .author-thumb {
@@ -1022,10 +1023,10 @@ body:not(.post-template) .post-title {
 
 .post-date {
     display: inline-block;
-    margin-left: 8px;
+    //margin-left: 8px;
     padding-left: 12px;
-    border-left: #d5dbde 1px solid;
-    text-transform: uppercase;
+    //border-left: #d5dbde 1px solid;
+    //text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
 }
