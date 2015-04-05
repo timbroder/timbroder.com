@@ -1367,7 +1367,7 @@ body:not(.post-template) .post-title {
     -ms-flex-align: stretch;
     align-items: stretch;
     margin-top: 10rem;
-    margin-bottom: calc(-8rem - 37px);
+    margin-bottom: calc(-4rem - 37px);
 }
 
 .read-next-story {

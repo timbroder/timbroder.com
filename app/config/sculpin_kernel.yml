@@ -5,3 +5,13 @@ sculpin_theme:
 sculpin_content_types:
   posts:
     permalink: :year/:month/:day/:filename/
+
+
+jb_tag_cloud:
+    tag_permalink: /tags/:taxon/index.html
+    tag_entity: Jb\Bundle\TagCloudBundle\Model\Tag
+    tag_cloud_entity: Jb\Bundle\TagCloudBundle\Model\TagCloud
+    max_number: 0
+    strategies:
+        - jb_sculpin.tag_cloud.strategy.alpha
+        - jb_sculpin.tag_cloud.strategy.percent_size

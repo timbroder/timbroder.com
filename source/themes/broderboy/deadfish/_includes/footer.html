@@ -1,4 +1,7 @@
 <footer class="site-footer clearfix">
+    <section>
+        {{ tag_cloud() }}
+    </section>
     <section class="copyright">
         Copyright &copy; 2007-{{ "now"|date("Y") }} -
         {% if site.author %} {{ site.author }} - {% endif %}

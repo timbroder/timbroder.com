@@ -19,4 +19,7 @@
     {% for stylesheet in theme_paths("assets/css/screen.css") %}
         <link href="{{ site.url }}/{{ stylesheet }}" rel="stylesheet" media="screen">
     {% endfor %}
+    {% for stylesheet in theme_paths("assets/css/tag_cloud.css") %}
+    <link href="{{ site.url }}/{{ stylesheet }}" rel="stylesheet" media="screen">
+    {% endfor %}
 </head>
