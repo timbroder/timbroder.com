@@ -1,5 +1,4 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-{% for js in theme_paths("assets/js/index.js") %}
-<script type="text/javascript" src="{{ site.url }}/{{ js }}"></script>
-{% endfor %}
+<script type="text/javascript" src="{{ site.url }}/{{ theme_path("assets/js/index.js") }}"></script>
+<script type="text/javascript" src="{{ site.url }}/{{ theme_path("assets/js/rainbow.min.js") }}"></script>
+<script type="text/javascript" src="{{ site.url }}/{{ theme_path("assets/js/rlns.min.js") }}"></script>

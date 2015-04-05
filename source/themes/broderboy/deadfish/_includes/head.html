@@ -16,10 +16,8 @@
     {% endif %}
     {% include "custom/fonts" %}
     {% include "custom/head" %}
-    {% for stylesheet in theme_paths("assets/css/screen.css") %}
-        <link href="{{ site.url }}/{{ stylesheet }}" rel="stylesheet" media="screen">
-    {% endfor %}
-    {% for stylesheet in theme_paths("assets/css/tag_cloud.css") %}
-    <link href="{{ site.url }}/{{ stylesheet }}" rel="stylesheet" media="screen">
-    {% endfor %}
+    <link href="{{ site.url }}/{{ theme_path("assets/css/screen.css") }}" rel="stylesheet" media="screen">
+    <link href="{{ site.url }}/{{ theme_path("assets/css/tag_cloud.css") }}" rel="stylesheet" media="screen">
+    <link href="{{ site.url }}/{{ theme_path("assets/css/twilight.css") }}" rel="stylesheet" media="screen">
+    {# <link href="{{ site.url }}/{{ theme_path("assets/css/rainbow-linenumbers.css") }}" rel="stylesheet" media="screen"> #}
 </head>
