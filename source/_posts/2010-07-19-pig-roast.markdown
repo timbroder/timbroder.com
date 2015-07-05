@@ -1,0 +1,14 @@
+---
+author: tim
+comments: true
+date: 2010-07-19 21:40:21+00:00
+layout: post
+slug: pig-roast
+title: Pig Roast
+wordpress_id: 568
+categories:
+- Crossfit
+- Random
+---
+
+Had a great time at [Crossfit Virtuosity](http://www.crossfitvirtuosity.com/)'s anniversary pig roast this past weekend. mmmm pig[gallery link="file"]

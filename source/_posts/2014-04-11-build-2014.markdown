@@ -1,0 +1,23 @@
+---
+author: tim
+comments: true
+date: 2014-04-11 23:58:54+00:00
+layout: post
+slug: build-2014
+title: Build 2014
+wordpress_id: 1500
+categories:
+- Code
+---
+
+[Justin](http://carpeaqua.com/2014/04/07/build-2014/) goes over his experience at the Microsoft Build conference this year:
+
+
+<blockquote>With things like C#, the Roslyn compiler/frameworks, and the modern WinRT runtime, it feels like Microsoft is way ahead of Apple in the future looking regard. As a developer, I’m jealous of a lot of the technologies coming out of Microsoft. As a user? They’ve got a long ways to go before I consider using Windows over a Mac.
+
+That said, this is the new Microsoft. They don’t need me to use Windows or Windows Phone as long as I use Microsoft services like Azure, Office 365 and the like.</blockquote>
+
+
+After following what both he and Brent Simmons have been doing with Azure, I'm more than a little curious to tinker with it. I've only recently tried something higher level than AWS, I was a heroku virgin. So, I don't feel I'm biased. The price wars, as well as a [number](http://carpeaqua.com/2014/03/26/the-parts-of-your-platform/) of [arguments](http://www.marco.org/2014/03/27/web-hosting-for-app-developers) for/[against](http://inessential.com/2014/03/27/on_running_your_own_servers_and_why_we) VPS vs [higher](http://www.marco.org/2014/03/27/what-did-brent-learn) level have had this on my kind lately.
+
+Mobile Services as a first class citizen on Azure is interesting. AWS is trying with their push service, but it feels like an afterthought at the moment.

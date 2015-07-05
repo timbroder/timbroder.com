@@ -1,0 +1,19 @@
+---
+author: tim
+comments: true
+date: 2014-04-11 23:53:21+00:00
+layout: post
+slug: security
+title: “Security”
+wordpress_id: 1504
+categories:
+- Code
+---
+
+<blockquote>
+
+> 
+> Were the National Security Agency an agency charged with the security of our nation, it would have reported the Heartbleed bug immediately instead of exploiting it.
+> 
+> 
+</blockquote>

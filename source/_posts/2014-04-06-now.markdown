@@ -1,0 +1,13 @@
+---
+author: tim
+comments: true
+date: 2014-04-06 13:46:28+00:00
+layout: post
+slug: now
+title: Then and Now
+wordpress_id: 1495
+categories:
+- Code
+---
+
+[![140324](http://timbroder.com/wp-content/uploads/2014/04/140324.jpg)](http://timbroder.com/wp-content/uploads/2014/04/140324.jpg)

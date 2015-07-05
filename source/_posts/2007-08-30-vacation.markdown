@@ -1,0 +1,28 @@
+---
+author: tim
+comments: true
+date: 2007-08-30 20:21:00+00:00
+layout: post
+slug: vacation
+title: Vacation!
+wordpress_id: 56
+categories:
+- Code
+---
+
+Hi All,
+  
+  
+
+I'm leaving for vacation in a few.  I'm going to be in Seattle, Washington until Wed morning and then San Fransisco until the following Sunday.  I don't know if / when I'll be able to post anything but I'll try if I have some downtime ;)
+  
+  
+
+Hey look, an embedded map!!
+
+  
+  
+
+
+  
+[View Larger Map](http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken,+NJ&daddr=JFK+to:Seattle,+WA+to:Parnassus+Ave+%4037.762970,+-122.459770+to:JFK+-+John+F+Kennedy+Intl+Airport,+Queens,+NY+to:Hoboken,+NJ&mrcr=4&mra=pi&sll=42.7379,-98.589685&sspn=44.718271,82.265625&ie=UTF8&om=1&ll=42.7379,-98.589685&spn=44.718271,82.265625&source=embed)
