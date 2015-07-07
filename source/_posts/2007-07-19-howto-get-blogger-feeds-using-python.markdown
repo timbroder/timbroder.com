@@ -208,10 +208,42 @@ To the template!
 
 The first part consists of displaying the post itself, along with its relevant information
 
-
+```html
+    {% verbatim %}
+{% for entry in entries %}
+    
+      <h2><a href="/post/{{ entry.my_id }}">{{ entry.title.text }}</h2></a>
+      {{ entry.content.text }}
+      <p>Posted by {% for auth in entry.author %}{{ auth.name.text }}{% if not forloop.last %}, {% endif %}{% endfor %} 
+      on {{ entry.my_date }} at {{ entry.my_time }}</p>
+      {% if entry.category %}<p>Labels: {% for cat in entry.category %}
+       <a href="{{ tag_link }}{{ cat.term }}">{{ cat.term }}</a>
+       {% if not forloop.last %}, {% endif %}
+       {% endfor %}</p>{% endif %}<p><a href="{{ entry.my_link }}">More...</a></p>
+       
+    {% endfor %}
+    {% endverbatim %}
+```
 
 And the second part handles the prev and next links
 
-
-
+```html
+    {% verbatim %}
+    <br></br>
+    <div class="nav">
+    {% if prev %}
+    <a href="/{{ link }}/{{ prev }}">prev</a>
+    {% else %}
+        
+    {% endif %}
+        
+    {% if next %}
+    <a href="/{{ link }}/{{ next }}">next</a>
+    {% else %}
+        
+    {% endif %}
+    </div>
+    {% include 'bottom.html' %}
+    {% endverbatim %}
+```
 That's all for now. A working example is the [gPowered.net](http://gpowered.net/g/) site I'm putting up.  All posts on there are getting pulled from this blog.  I'm going to get into tags and comments next time, as well as javascript and php versions. Stay tuned!
