@@ -12,8 +12,7 @@ categories:
 - Code
 ---
 
-Google Maps released [Embeddable Maps](http://google-
-latlong.blogspot.com/2007/08/youtube-style-embeddable-maps_21.html). It's as
+Google Maps released [Embeddable Maps](http://google-latlong.blogspot.com/2007/08/youtube-style-embeddable-maps_21.html). It's as
 easy as embedding youtube videos. All you have to do is create your map, and
 then under the "Link to this page" menu, there is a new option under the link
 that has some HTML iframe code to add the map anywhere. Check out the next

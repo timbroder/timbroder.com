@@ -35,8 +35,7 @@ from the evil forces of Skeletor, a tyrannical warlord with a skull for a
 face. Skeletor's main goal is to conquer the mysterious fortress of Castle
 Grayskull, from which He-Man draws his powers. If he succeeds, Skeletor would
 be able to conquer not only Eternia, but the whole universe._
-([wikipedia](http://en.wikipedia.org/wiki/He-
-Man_and_the_Masters_of_the_Universe))  
+([wikipedia](http://en.wikipedia.org/wiki/He-Man_and_the_Masters_of_the_Universe))  
   
 And now for a blast from the past, here is the opening theme complete with the
 famous lines.  

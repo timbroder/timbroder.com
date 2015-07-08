@@ -13,8 +13,7 @@ categories:
 ---
 
 I had seen some posts in the past (like [this
-one](http://websquirrel.blogspot.com/2006/11/post-google-docs-spreadsheetsto-
-your.html "this one" )) and figured I would give it a try. The first thing I
+one](http://websquirrel.blogspot.com/2006/11/post-google-docs-spreadsheetsto-your.html "this one" )) and figured I would give it a try. The first thing I
 liked was it feels a lot less cramped then the traditional blogger interface.
 Secondly it feels more responsive which for me is pretty good for me as I'm on
 a 6 year old laptop a lot of the time. Tagging is a little harder. You can tag

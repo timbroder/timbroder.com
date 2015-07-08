@@ -21,8 +21,7 @@ PicasaWeb Photo of the day. Now just about anything is going to be possible. I
 briefly played around with it this morning and added horoscopes and Sudoku to
 my calendar.  
   
-![](http://lh5.google.com/timothy.broder/RsukR5E6BOI/AAAAAAAAKm4/QFkA3ZwVJ_M/s
-400/cal_gadgets.jpg?imgdl=1)  
+![](http://lh5.google.com/timothy.broder/RsukR5E6BOI/AAAAAAAAKm4/QFkA3ZwVJ_M/s400/cal_gadgets.jpg?imgdl=1)  
   
 Other new gadgets include Movie Release dates and famous people's birthdays. I
 expect that very soon there will be video game releases as well.

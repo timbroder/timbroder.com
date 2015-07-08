@@ -13,8 +13,7 @@ categories:
 ---
 
 It's really, really easy to put maps onto any site or blog now using [Embedded
-Maps](http://google-latlong.blogspot.com/2007/08/youtube-style-embeddable-
-maps_21.html). I threw this together real quick to demonstrate. This past
+Maps](http://google-latlong.blogspot.com/2007/08/youtube-style-embeddable-maps_21.html). I threw this together real quick to demonstrate. This past
 weekend I drove up to Syracuse for the New York State fair. A great time if
 you have never been. Plenty of fantastic food and drink. I also had to pick up
 my old roomie, and using Google Maps new multiple destination feature this was
@@ -22,26 +21,21 @@ easy as well.
   
 First stop:  
   
-![](http://lh6.google.com/timothy.broder/RtTt55E6BVI/AAAAAAAAKo0/w16pCqdM2ZU/s
-400/emap1.gif?imgdl=1)  
+![](http://lh6.google.com/timothy.broder/RtTt55E6BVI/AAAAAAAAKo0/w16pCqdM2ZU/s400/emap1.gif?imgdl=1)  
   
 Adding the second stop:  
   
-![](http://lh3.google.com/timothy.broder/RtTt6JE6BWI/AAAAAAAAKo8/gWekdVwBTkM/s
-400/emap2.gif?imgdl=1)  
+![](http://lh3.google.com/timothy.broder/RtTt6JE6BWI/AAAAAAAAKo8/gWekdVwBTkM/s400/emap2.gif?imgdl=1)  
   
 Getting the code to embed the map by clicking on "Link to this page":  
   
-![](http://lh3.google.com/timothy.broder/RtTt6JE6BXI/AAAAAAAAKpE/HbyVJXrzdoc/s
-400/emap3.gif?imgdl=1)  
+![](http://lh3.google.com/timothy.broder/RtTt6JE6BXI/AAAAAAAAKpE/HbyVJXrzdoc/s400/emap3.gif?imgdl=1)  
   
 If you want, more advanced options:  
   
-![](http://lh5.google.com/timothy.broder/RtTuupE6BaI/AAAAAAAAKpg/l7pzHKuWAbo/s
-400/emap4.gif?imgdl=1)  
+![](http://lh5.google.com/timothy.broder/RtTuupE6BaI/AAAAAAAAKpg/l7pzHKuWAbo/s400/emap4.gif?imgdl=1)  
   
-![](http://lh3.google.com/timothy.broder/RtTt6JE6BZI/AAAAAAAAKpU/-pr_1w9SUe0/s
-400/emap5.gif?imgdl=1)  
+![](http://lh3.google.com/timothy.broder/RtTt6JE6BZI/AAAAAAAAKpU/-pr_1w9SUe0/s400/emap5.gif?imgdl=1)  
   
 And now, the final product:  
   

@@ -20,8 +20,7 @@ the map for users that have specified their location in their profile.
   
 [Google Maps Batch Geocoder](http://www.wotton.org/map/batchgeo.html)  
   
-[Google Offices](http://www.google.com/maps/ms?msa=0&msid=11225543655039848866
-2.00000111d25a08716efa7) \- Shows Google Offices around the world  
+[Google Offices](http://www.google.com/maps/ms?msa=0&msid=112255436550398488662.00000111d25a08716efa7) \- Shows Google Offices around the world  
   
 [Traffic and Weather Maps](http://traffic.poly9.com/) \- Mashes Traffic
 conditions, road closings, construction, and weather. Not too useful to me as
@@ -42,15 +41,11 @@ car.
 [Google Maps API](http://www.google.com/apis/maps/documentation/index.html) \-
 Not a map, but the starting resource for if you want to make a mashup  
   
-[Google Maps with a spreadsheet](http://gmaps-
-samples.googlecode.com/svn/trunk/spreadsheetsmapwizard/makecustommap.htm) \-
+[Google Maps with a spreadsheet](http://gmaps-samples.googlecode.com/svn/trunk/spreadsheetsmapwizard/makecustommap.htm) \-
 Power a Google map from  
   
 [StreetViewr](http://streetviewr.com/) \- A collection of funny, interesting,
-random photos that people have found with [Google Street View](http://maps.goo
-gle.com/maps?f=q&hl=en&ie=UTF8&ll=37.09024,-95.712891&spn=47.167389,92.8125&z=
-4&om=1&layer=c&utm_campaign=en&utm_source=en-ha-na-us-google-
-svn&utm_medium=ha)  
+random photos that people have found with [Google Street View](http://maps.google.com/maps?f=q&hl=en&ie=UTF8&ll=37.09024,-95.712891&spn=47.167389,92.8125&z=4&om=1&layer=c&utm_campaign=en&utm_source=en-ha-na-us-google-svn&utm_medium=ha)  
   
 [The EDU Map](http://the-edu-map.com/) \- See places of education for a given
 city  

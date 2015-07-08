@@ -19,8 +19,6 @@ around with it yet. However, when i got to the
 Internet Explorer (6). It works fine in FireFox. Does someone over at Digg
 have a sense of humor or is my browser just acting on the bunk?  
   
-[![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/RtRZ55E6BUI/AAAAAAAAKos/itsvL5UrT2c
-/s400/screen_linux.gif)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/RtRZ55E6BUI/AAA
-AAAAAKos/itsvL5UrT2c/s1600-h/screen_linux.gif)  
+[![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/RtRZ55E6BUI/AAAAAAAAKos/itsvL5UrT2c/s400/screen_linux.gif)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/RtRZ55E6BUI/AAAAAAAAKos/itsvL5UrT2c/s1600-h/screen_linux.gif)  
   
 

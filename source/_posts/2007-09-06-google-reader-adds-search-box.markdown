@@ -21,15 +21,14 @@ for a nice lunch over at dreamworks, glancing over a few feeds (I have a LOT
 to catch up on when I get back to NY), and one jumped out at me, the Google
 Reader Team has finally added a search box to Google reader.  
   
-![](http://lh3.google.com/timothy.broder/RuBD9JE6BbI/AAAAAAAAKqA/hVp1MIIZftM/s
-400/tim.jpg?imgdl=1)  
+![](http://lh3.google.com/timothy.broder/RuBD9JE6BbI/AAAAAAAAKqA/hVp1MIIZftM/s400/tim.jpg?imgdl=1)  
   
 This box will search all of your feeds! Also included in this release are:  
   
-\- Ability to hide side navigation (I just tried it, it's very well done)  
-\- Unread count is now 1,000+ rather then 100+ (this is going to be good for
+* Ability to hide side navigation (I just tried it, it's very well done)  
+* Unread count is now 1,000+ rather then 100+ (this is going to be good for
 me when I get back)  
-\- Forward and Back buttons now have more responsiveness when moving between
+* Forward and Back buttons now have more responsiveness when moving between
 folders and feeds  
   
 Check out [Google Blog Search](http://blogsearch.google.com/) for more blog

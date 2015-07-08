@@ -28,22 +28,17 @@ links were on a different domain from the blog, etc..
 Here is a way to make it work (assuming you already have a blog set up):  
   
 
-  1. Make an account on [FeedBurner](http://www.FeedBurner.com/fb/a/home) and add your blog to it  
+1. Make an account on [FeedBurner](http://www.FeedBurner.com/fb/a/home) and add your blog to it  
+	![](http://lh6.google.com/timothy.broder/RvE7pPREi1I/AAAAAAAAMRQ/rgAU_migW2A/s400/feedburne.jpg?imgdl=1)  
   
-![](http://lh6.google.com/timothy.broder/RvE7pPREi1I/AAAAAAAAMRQ/rgAU_migW2A/s
-400/feedburne.jpg?imgdl=1)  
+1. Then, in blogger go to settings > Site Feed > Post Feed Redirect URL and add your FeedBurner feed  
   
-
-  2. Then, in blogger go to settings > Site Feed > Post Feed Redirect URL and add your FeedBurner feed  
-  
-![](http://lh6.google.com/timothy.broder/RvE7pPREi2I/AAAAAAAAMRY/yy7Obs753HM/s
-400/FeedBurner2.jpg?imgdl=1)  
+	![](http://lh6.google.com/timothy.broder/RvE7pPREi2I/AAAAAAAAMRY/yy7Obs753HM/s400/FeedBurner2.jpg?imgdl=1)  
   
 
   3. Finally, if you want to track your blog in [Google Webmaster Tools](www.google.com/webmasters/sitemaps/) you will have to add the sitemap a little differently then normal. Add a General Web sitemap as the "rss.xml?orderby=updated" feed off of your blog. FeedBurner does not pick up this feed in the redirects, so the Google Bot will not have trouble with it.  
   
-![](http://lh3.google.com/timothy.broder/RvE7pfREi3I/AAAAAAAAMRg/s_PLXzrV9hE/s
-400/FeedBurner3.jpg?imgdl=1)  
+	![](http://lh3.google.com/timothy.broder/RvE7pfREi3I/AAAAAAAAMRg/s_PLXzrV9hE/s400/FeedBurner3.jpg?imgdl=1)  
   
 
   4. After this your site will be tracked by FeedBurner as well as Google Webmaster tools and the Google Bot will be able to use the sitemap properly  

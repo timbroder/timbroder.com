@@ -30,10 +30,8 @@ To start off we'll just copy the functions we need from [last
 time](http://gpowered.blogspot.com/2007/08/google-reader-api-functions.html).
 Generally this is the login and SID token functions, as well as the feed list
 function.  
-  
 
-    
-    
+```python
     from django.shortcuts import render_to_response
     from django.template import Library
     from elementtree import ElementTree   
@@ -93,10 +91,8 @@ function.
     #get a list of the users subscribed feeds
     def get_subscription_list(SID):
         return get_results(SID, subscription_list_url)
-    
+```
 
-  
-  
 Then we'll want to get rid off all the information in the feed that we don't
 want and load what we do into a data dictionary. After its in the dictionary,
 feed names and links (and the folders they are in) are ready to be displayed.

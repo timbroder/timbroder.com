@@ -22,9 +22,5 @@ downtime ;)
 Hey look, an embedded map!!  
   
   
-[View Larger Map](http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken
-,+NJ&daddr=JFK+to:Seattle,+WA+to:Parnassus+Ave+%4037.762970,+-122.459770+to:JF
-K+-+John+F+Kennedy+Intl+Airport,+Queens,+NY+to:Hoboken,+NJ&mrcr=4&mra=pi&sll=4
-2.7379,-98.589685&sspn=44.718271,82.265625&ie=UTF8&om=1&ll=42.7379,-98.589685&
-spn=44.718271,82.265625&source=embed)
+[View Larger Map](http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken,+NJ&daddr=JFK+to:Seattle,+WA+to:Parnassus+Ave+%4037.762970,+-122.459770+to:JFK+-+John+F+Kennedy+Intl+Airport,+Queens,+NY+to:Hoboken,+NJ&mrcr=4&mra=pi&sll=42.7379,-98.589685&sspn=44.718271,82.265625&ie=UTF8&om=1&ll=42.7379,-98.589685&spn=44.718271,82.265625&source=embed)
 

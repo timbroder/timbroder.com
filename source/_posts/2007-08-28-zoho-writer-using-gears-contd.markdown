@@ -15,11 +15,8 @@ tags:
 - gears
 ---
 
-In a quick follow-up to my [previous article](http://blog.gpowered.net/2007/08
-/google-get-in-gear.html); Google [code blog](http://google-code-
-updates.blogspot.com/2007/08/weekly-google-code-roundup-reaching-sky.html)
-posted a [video talk](http://gearsblog.blogspot.com/2007/08/gearing-up-with-
-zoho-offline.html) about the experience the Zoho team had in incorporating
+In a quick follow-up to my [previous article](http://blog.gpowered.net/2007/08/google-get-in-gear.html); Google [code blog](http://google-code-updates.blogspot.com/2007/08/weekly-google-code-roundup-reaching-sky.html)
+posted a [video talk](http://gearsblog.blogspot.com/2007/08/gearing-up-with-zoho-offline.html) about the experience the Zoho team had in incorporating
 Gears with their Writer.  
   
 I hate to bring it up again, but like I said before, the Docs team better get

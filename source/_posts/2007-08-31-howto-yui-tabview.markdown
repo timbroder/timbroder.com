@@ -25,7 +25,7 @@ tab, and the diggs in another. It turned out to be really easy:
 First we need a few dependencies  
 
     
-    
+```HTML
     <!-- Dependencies -->  
     <!-- core CSS -->  
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.0/build/tabview/assets/tabview.css">   
@@ -38,13 +38,13 @@ First we need a few dependencies
     
     <!-- Source file -->  
     <script type="text/javascript" src="http://yui.yahooapis.com/2.3.0/build/tabview/tabview-min.js"></script>  
-    
+```
 
   
 And then we just need to organize some DIVs  
 
     
-    
+```HTML
     <div id="demo" class="yui-navset">   
      <ul class="yui-nav">   
       <li class="selected"><a href="#posts"><em>Posts</em></a></li>  
@@ -62,5 +62,5 @@ And then we just need to organize some DIVs
       </div>
      </div>
     </div>
-    
+```HTML
 

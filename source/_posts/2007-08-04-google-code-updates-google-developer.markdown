@@ -18,27 +18,24 @@ tags:
 ---
 
 After being inspired about Google Gadgets from the [Google Developer
-Podcast](http://google-code-updates.blogspot.com/2007/07/google-developer-
-podcast-episode-five.html) I came up with on that my old [crew
+Podcast](http://google-code-updates.blogspot.com/2007/07/google-developer-podcast-episode-five.html) I came up with one that my old [crew
 team](http://www.rpicrew.com) can use. We have a shared google calendar that
 some of us use to keep track of races, meetings, etc. This gadget pulls and
 formats it nicely for the google IG or desktop.  
   
-[![Add to Google](http://buttons.googlesyndication.com/fusion/add.gif)](http:/
-/fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file
-/109141966999504040851/RPICrewSchedule.xml)  
+[![Add to Google](http://buttons.googlesyndication.com/fusion/add.gif)](http://fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file/109141966999504040851/RPICrewSchedule.xml)  
   
 Javascript code for the gadget:  
 
     
-    
+    ```html
     <style type="text/css">
     div.exp{
-    padding: 0;
-    margin: 0;
+    	padding: 0;
+    	margin: 0;
     }
     div.loc{
-    margin-left: 19px;
+    	margin-left: 19px;
     }
     </style>
     <script type="text/javascript">
@@ -225,7 +222,7 @@ Javascript code for the gadget:
     
     <div id="races"><p>Loading...</p></div>
     <script type="text/javascript" src="http://www.google.com/calendar/feeds/rpicrew@gmail.com/public/full?alt=json-in-script&callback;=processRaces&orderby;=starttime&singleevents;=true&sortorder;=ascending&start-min;=2007-01-01T00:00:00"></script>
-    
+ ```   
 
   
   
@@ -233,7 +230,7 @@ And the XML for the gadget
   
 
     
-    
+   ``` 
     <?xml version="1.0" encoding="UTF-8"?>
     <Module>
     <ModulePrefs title="RPI Crew Schedule"
@@ -459,6 +456,6 @@ And the XML for the gadget
     
     ]]></Content>
     </Module>
-    
+    ```
     
 

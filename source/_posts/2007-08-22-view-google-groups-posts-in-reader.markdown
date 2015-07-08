@@ -22,6 +22,5 @@ trying it out for a few groups, I might like it better then reading through
 the mail. I wonder if there is a way to subscribe to the rolled up versions of
 the posts...  
   
-![](http://lh5.google.com/timothy.broder/RsyngpE6BRI/AAAAAAAAKn8/F6Qvt7wUps4/s
-400/groups_reader.jpg?imgdl=1)
+![](http://lh5.google.com/timothy.broder/RsyngpE6BRI/AAAAAAAAKn8/F6Qvt7wUps4/s400/groups_reader.jpg?imgdl=1)
 

@@ -22,10 +22,10 @@ communication policies from one central location. Postini Solutions can also
 make it easy to meet your archiving and encryption needs._  
   
 Things I would like to see come out of this:  
-\- The ability to encrypt Gmail messages and Google Docs without having to use
+* The ability to encrypt Gmail messages and Google Docs without having to use
 greasemonkey  
-\- A Google API to encrypt files and transfers in your own application or site  
-\- (Ad?) subsidized access to Postini services  
+* A Google API to encrypt files and transfers in your own application or site  
+* (Ad?) subsidized access to Postini services  
   
 The question on the tip of my tongue is, is Postini going to remain a separate
 entity though owned by Google, or are its services going to be completely

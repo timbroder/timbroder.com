@@ -18,8 +18,7 @@ presentations (finally). As a result, there is a new
 [tour](http://www.google.com/google-d-s/tour1.html). There is no API available
 yet but as soon as it comes out I'll post a HOWTO.  
   
-Spreadsheets added [new ways](http://docs.google.com/support/spreadsheets/bin/
-answer.py?answer=75507&query=googlereader&topic=&type=) to pull external data.
+Spreadsheets added [new ways](http://docs.google.com/support/spreadsheets/bin/answer.py?answer=75507&query=googlereader&topic=&type=) to pull external data.
 The external sources can include XML, a URL, HTML, or any feed based file.
 Spreadsheets also added autofill (type Dec and it can autofill December. Type
 Jan, Feb, Mar, and it will fill in the rest of the months for you. This also

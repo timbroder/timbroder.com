@@ -16,8 +16,7 @@ tags:
 - picasa web
 ---
 
-The guys over on the Mashup team have posted a [new tutorial](http://code.goog
-le.com/support/bin/answer.py?answer=74728&topic=12044) on how to use the
+The guys over on the Mashup team have posted a [new tutorial](http://code.google.com/support/bin/answer.py?answer=74728&topic=12044) on how to use the
 Google Mashup Editor to mash Picasa Web Albums with a Google Map. The example
 is [here](http://levsplaces.googlemashups.com/). I started working on my own
 but I haven't really played with the GME before. Hopefully I'll have that

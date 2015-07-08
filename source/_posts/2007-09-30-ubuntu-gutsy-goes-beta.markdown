@@ -19,9 +19,10 @@ Release. So, if you haven't been using it since tribe 2 like me, and want to
 upgrade from Fiesty Fawn, follow the below steps.  
   
 
-  1. Open a terminal.
-  2. Type _sudo update-manager -d_
-  3. Follow the instructions
+1. Open a terminal.
+1. Type _sudo update-manager -d_
+1. Follow the instructions
+
 More information about upgrading can be found
 [here](https://help.ubuntu.com/community/GutsyUpgrades)  
   

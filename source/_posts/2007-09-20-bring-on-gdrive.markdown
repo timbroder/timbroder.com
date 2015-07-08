@@ -24,8 +24,7 @@ few more features on the main Docs UI (bulk file upload, share files right
 from there instead of having to publish from within the document) and allow
 for any file type.  
   
-![](http://lh3.google.com/timothy.broder/RvHFzfREi8I/AAAAAAAAMSI/87CkGvBuJLI/s
-400/plat1.jpg?imgdl=1)  
+![](http://lh3.google.com/timothy.broder/RvHFzfREi8I/AAAAAAAAMSI/87CkGvBuJLI/s400/plat1.jpg?imgdl=1)  
   
 Quick recap of the internal GDrive / Platypus client:  
 Backup: if your computer goes down, catches on fire, or just plain old BSOD's,
@@ -50,8 +49,7 @@ available
   
 **[Xdrive](http://www.xdrive.com)**  
   
-![](http://lh6.google.com/timothy.broder/RvHFzPREi4I/AAAAAAAAMRo/Z4qDjUvEaSM/s
-400/xdrive.jpg?imgdl=1)  
+![](http://lh6.google.com/timothy.broder/RvHFzPREi4I/AAAAAAAAMRo/Z4qDjUvEaSM/s400/xdrive.jpg?imgdl=1)  
   
 Pros
 
@@ -71,8 +69,7 @@ Cons
   
 **[Box.net](http://www.box.net)**  
   
-![](http://lh6.google.com/timothy.broder/RvHFzPREi5I/AAAAAAAAMRw/Z_IsNLXYdyw/s
-400/boxnet.jpg?imgdl=1)  
+![](http://lh6.google.com/timothy.broder/RvHFzPREi5I/AAAAAAAAMRw/Z_IsNLXYdyw/s400/boxnet.jpg?imgdl=1)  
   
 Pros
 
@@ -93,8 +90,7 @@ Cons
   
 **[MoveDigital](www.movedigital.com/)**  
   
-![](http://lh3.google.com/timothy.broder/RvHFzfREi6I/AAAAAAAAMR4/JBWgcFd5K4k/s
-400/movedigital.jpg?imgdl=1)  
+![](http://lh3.google.com/timothy.broder/RvHFzfREi6I/AAAAAAAAMR4/JBWgcFd5K4k/s400/movedigital.jpg?imgdl=1)  
   
 Pros
 
@@ -136,26 +132,22 @@ some good features and it was really easy to upload files. the free 5 gigs
 wasn't too bad either.  
   
 Some related GDrive articles:  
-[GDrive is Here, Almost](http://googlified.com/2007gdrive-is-here-almost/)  
-[Evidence of GDrive in Google
+* [GDrive is Here, Almost](http://googlified.com/2007gdrive-is-here-almost/)  
+* [Evidence of GDrive in Google
 Apps](http://blogoscoped.com/archive/2007-09-04-n51.html)  
-[GDrive Is On The Way](http://googlesystem.blogspot.com/2006/07/gdrive-is-on-
-way.html)  
-[Inside the GDrive Platypus
+* [GDrive Is On The Way](http://googlesystem.blogspot.com/2006/07/gdrive-is-on-way.html)  
+* [Inside the GDrive Platypus
 --Almost](http://battellemedia.com/archives/002986.php)  
-[Another GDrive “Platypus” Leak](http://www.techcrunch.com/2006/10/13/another-
-gdrive-platypus-leak/)  
-[Google Gdrive Client
+* [Another GDrive “Platypus” Leak](http://www.techcrunch.com/2006/10/13/another-gdrive-platypus-leak/)  
+* [Google Gdrive Client
 Leaked](http://blogoscoped.com/archive/2006-10-13-n53.html)  
-[GDrive -> GDisk](http://googlified.com/2006gdrive-gdisk/)  
-[When Will Gdrive Be Public (If
+* [GDrive -> GDisk](http://googlified.com/2006gdrive-gdisk/)  
+* [When Will Gdrive Be Public (If
 Ever)?](http://blogoscoped.com/archive/2006-07-11-n52.html)  
-[GDrive plays whack-a-mole with bloggers](http://www.techcrunch.com/2006/07/10
-/gdrive-plays-whack-a-mole-with-bloggers/)  
-[Evidence of GDrive in Google
+* [GDrive plays whack-a-mole with bloggers](http://www.techcrunch.com/2006/07/10/gdrive-plays-whack-a-mole-with-bloggers/)  
+* [Evidence of GDrive in Google
 Apps](http://blogoscoped.com/archive/2007-09-04-n51.html) [What Ever Happened
-To GDrive?](http://www.techcrunch.com/2007/08/19/what-ever-happened-to-
-gdrive/)  
-[Rumor: Was the Gdrive Release
+To GDrive?](http://www.techcrunch.com/2007/08/19/what-ever-happened-to-gdrive/)  
+* [Rumor: Was the Gdrive Release
 Canceled?](http://blogoscoped.com/archive/2007-08-19-n82.html)
 

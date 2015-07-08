@@ -14,8 +14,7 @@ tags:
 - Docs Spreadsheets
 ---
 
-[Google Data API posts](http://googledataapis.blogspot.com/2007/08/new-api-it-
-slices-it-dices-it-uploads.html) now you can import your spreadsheets and word
+[Google Data API posts](http://googledataapis.blogspot.com/2007/08/new-api-it-slices-it-dices-it-uploads.html) now you can import your spreadsheets and word
 processor documents into [Google Documents](http://docs.google.com/) using the
 new Documents List API.  
   
