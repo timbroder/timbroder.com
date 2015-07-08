@@ -27,6 +27,15 @@
                 </span>
         {% endif %}
         <span><a href="{{ post.url }}" class="poop" style="color:#4A4A4A">๏</a></span>
+        <div class="comment-count">
+            <a href="{{ site.url }}{{ post.url }}#disqus_thread" class="disqus-comment-count"
+                {% if post.dsq_thread_id is not empty %}
+                    data-disqus-identifier="{{ post.dsq_thread_id }}"
+                {% else %}
+                    data-disqus-url="{{ site.url }}{{ post.url }}"
+                {% endif %}
+            ></a>
+        </div>
     </section>
 
   </header>
@@ -42,6 +51,24 @@
 {% endif %}
 
 {% if not index %}
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = '{{ site.disqus_shortname }}';
+        {% if post.dsq_thread_id is not empty %}
+        var disqus_identifier = '{{ post.dsq_thread_id }}';
+        {% endif %}
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
     <footer class="post-footer">
     {% if post.categories or post.tags %}
       <section class="author">

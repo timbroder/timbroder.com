@@ -1069,6 +1069,20 @@ body:not(.post-template) .post-title {
     line-height: 1.5em;
 }
 
+.comment-count {
+    padding-left: 12px;
+}
+
+.poop {
+    font-size: 2rem;
+    vertical-align:middle;
+    margin-bottom: 1.2rem;
+    color: #4A4A4A;
+}
+
+.poop2{
+    vertical-align:middle;
+}
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
@@ -2081,13 +2095,3 @@ body:not(.post-template) .post-title {
    below this point, or it will probably fuck everything up.
    ========================================================================== */
 
-.poop {
-    font-size: 2rem;
-    vertical-align:middle;
-    margin-bottom: 1.2rem;
-    color: #4A4A4A;
-}
-
-.poop2{
-    vertical-align:middle;
-}
