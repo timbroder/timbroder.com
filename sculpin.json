@@ -23,7 +23,8 @@
   ],
   "require": {
     "sculpin/bootstrap-3-blog-theme": "dev-master",
-    "jbouzekri/sculpin-tag-cloud-bundle": "1.*"
+    "jbouzekri/sculpin-tag-cloud-bundle": "1.*",
+    "mavimo/sculpin-redirect-bundle": "@dev"
   },
   "config": {
     "component-dir": "source/components"
