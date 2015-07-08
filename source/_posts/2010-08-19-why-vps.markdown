@@ -1,0 +1,52 @@
+---
+author: tim
+comments: true
+date: 2010-08-19 15:16:43+00:00
+dsq_thread_id: '131310800'
+layout: post
+linked_list_url: ''
+slug: why-vps
+title: Why VPS?
+wordpress_id: 596
+categories:
+- Code
+tags:
+- Shared web hosting service
+- Virtual hosting
+- Virtual private server
+- Web hosting
+---
+
+Lately the four main web hosting options are shared, VPS, dedicated, or a
+cloud based solution.  I'll follow up on this article at a later date with my
+experience with Amazon's cloud solution.  We are rolling out a magento install
+into the cloud in a few weeks and I'll be commenting on how that goes.  To
+start off, what is [VPS web
+hosting](http://www.inmotionhosting.com/vps_hosting.html)? A Virtual Private
+Server (VPS) is a hosting environment that combines the benefits of both
+shared hosting and dedicated hosting. It does this by creating a virtual
+server that runs inside a hardware server via a specially designed partition.
+So why would you need one over shared hosting?
+
+  * Speed: Much faster then shared hosting.  There are fewer people sharing resources on the server and you have guaranteed resources.  If another site is hogging 100% of the cpu on its VPS, this will not effect your sites performance.  A VPS can handle might higher traffic loads then shared hosting.
+  * Security: Your files are isolated from other VPS instances
+  * Full root access to your instance
+  * Reboot: Reboot apache or your whole server instance without effecting the other servers
+  * Cost: Much cheaper then a dedicated instance with almost the same control/resources
+  * More space for files
+  * Custom Instances:  More control over what you get, and is not dependent on the other instances on the same physical server.  With shared hosting the provider usually picks the OS, with VPS there are usually dozens of options.
+  * Private email, IP, and domain: Shared hosts will have one email server for all the hosts
+  * Custom Security policies: From on server virus scanning to a customizable firewall
+  * Reseller: if you have extra resources available you can usually resell these
+The top VPS Hosting providers according to [Web Hosting
+Geeks](http://webhostinggeeks.com/vpshosting.html) are:
+
+  * [Inmotion](http://www.inmotionhosting.com/vps_hosting.html)
+  * [Ultrahosting](http://www.ultrahosting.com/)
+  * [Network Solutions](http://www.networksolutions.com/vps/index.jsp)
+  * [Ace Host](http://www.ace-host.net/index.html)
+  * [HostIcan](http://www.hostican.com/)
+  * [Lunar Pages](http://www.lpdedicated.com/index.php)
+  * [1&amp;1](http://order.1and1.com/xml/order/VirtualServer)
+  * [xlhost](http://www.xlhost.com/)
+
