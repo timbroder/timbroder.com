@@ -6,8 +6,7 @@ dsq_thread_id: '828465510'
 layout: post
 linked_list_url: ''
 slug: the-top-10-best-wordpress-plugins-to-get-up-and-running
-title: The top 10 best Wordpress plugins to get up and running with everything you
-  need.
+title: The top 10 best Wordpress plugins to get up and running with everything you need.
 wordpress_id: 1219
 categories:
 - Code
