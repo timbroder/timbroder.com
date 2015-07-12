@@ -13,8 +13,8 @@ branches:
   #- posts
   - travis
 
-#before_install:
-#  - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
+before_install:
+  - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 
 script:
 - sh build.sh
