@@ -57,8 +57,7 @@ s160-c/London.jpg)](http://picasaweb.google.com/timothy.broder/London)
 ---  
 [London](http://picasaweb.google.com/timothy.broder/London)  
 [![](http://lh6.google.com/timothy.broder/R-B2C6mnXuE/AAAAAAAARlg/aDtJJCZj-fU/
-s160-c/VisitingSeanInColorado.jpg)](http://picasaweb.google.com/timothy.broder
-/VisitingSeanInColorado)  
+s160-c/VisitingSeanInColorado.jpg)](http://picasaweb.google.com/timothy.broder/VisitingSeanInColorado)  
 ---  
 [Visiting Sean in
 Colorado](http://picasaweb.google.com/timothy.broder/VisitingSeanInColorado)

@@ -15,8 +15,7 @@ tags:
 ---
 
 [Google Mashup Editor Blog: New Stuff - 10/4 Feature
-Release](http://googlemashupeditor.blogspot.com/2007/10/new-stuff-104-feature-
-release.html)  
+Release](http://googlemashupeditor.blogspot.com/2007/10/new-stuff-104-feature-release.html)  
   
 There was a feature release for the [Google Mashup
 Editor](http://editor.googlemashups.com) and they also created a [new

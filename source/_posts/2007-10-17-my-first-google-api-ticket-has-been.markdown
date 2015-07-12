@@ -28,8 +28,8 @@ Original ticket:
 folder. This would give more functionality and make the size of the data
 smaller if you only needed to grab a list of file from a certain folder.  
   
-Possibly something like gdata.docs.service.DocumentQuery(folder=['myfolder1'])
-or gdata.docs.service.DocumentQuery(folders=['myfolder1','folder2'])
+Possibly something like: ```gdata.docs.service.DocumentQuery(folder=['myfolder1'])```
+or ```gdata.docs.service.DocumentQuery(folders=['myfolder1','folder2'])```
 
   
 

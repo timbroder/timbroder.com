@@ -67,8 +67,7 @@ APIs: [Google Maps](http://www.google.com/apis/maps/)
 typically traveled at least 1,500 miles. Use this interactive map and the
 100-Mile Diet book to eat local, think global."  
   
-[FormSpring + Google Calendar](http://www.formspring.com/blog/2007/09/07
-/using-google-calendar-with-the-formspring-api/)  
+[FormSpring + Google Calendar](http://www.formspring.com/blog/2007/09/07/using-google-calendar-with-the-formspring-api/)  
 APIs: [Google
 Calendar](code.google.com/apis/calendar/developers_guide_protocol.html),
 formspring  

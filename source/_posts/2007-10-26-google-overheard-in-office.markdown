@@ -12,8 +12,7 @@ categories:
 - Code
 ---
 
-A few days ago I [posted](http://blog.gpowered.net/2007/10/google-overheard-
-in-new-york.html) some [Overheard in New York](www.overheardinnewyork.com)
+A few days ago I [posted](http://blog.gpowered.net/2007/10/google-overheard-in-new-york.html) some [Overheard in New York](www.overheardinnewyork.com)
 Google Posts. Today is some [Overhead in the
 Office](http://www.overheardintheoffice.com). It's not quite as good as the
 orriginal, but the office posts are still really funny. If you like these,
@@ -99,4 +98,3 @@ Tech: Oh crap, I've been infected by Google.
 **Install Yahoo!**  
 Boss: Do we have Google installed on our internet?  
 IT guy: We put it on your machine yesterday.
-

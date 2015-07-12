@@ -15,8 +15,7 @@ tags:
 ---
 
 [Google Photos Blog: Lesser-known (and secret) Picasa
-features](http://googlephotos.blogspot.com/2007/10/lesser-known-and-secret-
-picasa-features.html)  
+features](http://googlephotos.blogspot.com/2007/10/lesser-known-and-secret-picasa-features.html)  
   
 Most people are familiar with Picasa's usual features; Editing, organizing,
 uploading, printing, etc, but Mike Herf, the Picasa Engineering manager is
