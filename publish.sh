@@ -14,6 +14,6 @@ git commit -m "Build website"
 
 git filter-branch --subdirectory-filter output_prod/ -f
 
-git push "https://${GH_TOKEN}@github.com/broderboy/timbroder.com-sculpin" -f gh-pages
+git push "https://github.com/broderboy/timbroder.com-sculpin" -f gh-pages
 
 if [ $? -ne 0 ]; then echo "Could not push the site"; exit 1; fi
