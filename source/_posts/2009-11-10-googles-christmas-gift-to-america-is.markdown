@@ -4,8 +4,7 @@ comments: true
 date: 2009-11-10 21:03:00+00:00
 layout: post
 slug: googles-christmas-gift-to-america-is
-title: Google’s Christmas gift to America is free Wi-Fi at airports starting today
-  (reblog)
+title: Google’s Christmas gift to America is free Wi-Fi at airports starting today (reblog)
 wordpress_id: 221
 categories:
 - Code

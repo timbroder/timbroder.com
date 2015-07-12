@@ -4,8 +4,7 @@ comments: true
 date: 2013-10-21 15:01:03+00:00
 layout: post
 slug: garageband-for-ios-7-to-become-free-with-in-app-purchases-as-apple-reveals-full-set-of-new-ilife-and-iwork-icons-mac-rumors
-title: GarageBand for iOS 7 to Become Free with In-App Purchases as Apple Reveals
-  Full Set of New iLife and iWork Icons - Mac Rumors
+title: GarageBand for iOS 7 to Become Free with In-App Purchases as Apple Reveals Full Set of New iLife and iWork Icons - Mac Rumors
 wordpress_id: 1373
 categories:
 - Code
