@@ -144,13 +144,13 @@ def Feeds(request):
     return render_to_response('pages/feeds.html', {
     'feeds': d,
     })
-  ```  
-
+```
 
 For those of you that use django or are just curious how I end up displaying
 the feeds, this is what i have in my view:  
 
-```python
+```html
+
 ### My Reading
 {% for item in feeds.items %}
 	{{ item.0 }}
@@ -158,7 +158,7 @@ the feeds, this is what i have in my view:
 		[{{ feed.name }}]({{ feed.link }})
 	{% endfor %}
 {% endfor %}
-```    
+``` 
   
 Again, too see what I subscribe to, [click
 here](http://www.gpowered.net/g/feeds/)
