@@ -1,13 +1,17 @@
-#!/bin/bash
+# publish.sh
 
-# Replace "sculpin generate" with "php sculpin.phar generate" if sculpin.phar
-# was downloaded and placed in this directory instead of sculpin having been
-# installed globally.
+# configure env
+git config --global user.email 'timothy.broder@gmail.com'
+git config --global user.name 'broderboy bot'
 
-sculpin generate --env=prod
-if [ $? -ne 0 ]; then echo "Could not generate the site"; exit 1; fi
+# checkout publish branch
+git branch -D gh-pages
+git checkout -b gh-pages
 
-# Add --delete right before "output_prod" to have rsync remove files that are
-# deleted locally from the destination too. See README.md for an example.
-rsync -avze 'ssh -p 4668' output_prod/ username@yoursculpinsite:public_html
-if [ $? -ne 0 ]; then echo "Could not publish the site"; exit 1; fi
+# commit build
+git add -f output_prod
+git commit -m "Build website"
+
+git filter-branch --subdirectory-filter output_prod/ -f
+
+git push "https://github.com/broderboy/timbroder.com-sculpin" -f gh-pages
