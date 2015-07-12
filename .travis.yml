@@ -10,7 +10,7 @@ cache:
 
 branches:
   only:
-  - posts
+  #- posts
   - travis
 
 before_install:
