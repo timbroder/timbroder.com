@@ -13,11 +13,15 @@ branches:
   #- posts
   - travis
 
-before_install:
-  - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
+#before_install:
+#  - echo -e "machine github.com\n  login $GH_TOKEN" >> ~/.netrc
 
 script:
 - sh build.sh
 
 after_success:
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then sh publish.sh; fi
+
+env:
+  global:
+    secure: gNPSFlz4Eakwwq34e2lKm3vwLewp/OYKCVA005PTxAB9b3q6OLq9L37HhKooWjXLelCBp0n2KGDSHXY5J8n5QQz1rx5iOh1jgfZ+up6X3mgvxpIiBMorn+wqglvtDQWjtsOKf/pna6Rl6Cjd1vKir5M+WKEXVMb1PhQwn1rBvJw=
