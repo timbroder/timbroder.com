@@ -2,7 +2,7 @@
 
 # configure env
 git config --global user.email 'timothy.broder@gmail.com'
-git config --global user.name 'broderboy bot'
+git config --global user.name 'broderboy'
 
 # checkout publish branch
 git branch -D gh-pages
