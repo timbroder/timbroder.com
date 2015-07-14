@@ -14,7 +14,7 @@ tags:
 - Android
 ---
 
-Android handsets are poised to spread like wildfire across the open source and
+> Android handsets are poised to spread like wildfire across the open source and
 developer communities upon release.  
   
 I can't wait. Verizon better have Android

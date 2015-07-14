@@ -30,18 +30,16 @@ is that it does not support [XFN](http://gmpg.org/xfn/) or
 if I linked to my [girlfriend's blog](http://maybe-not.net/ "Laura's blog" ),
 the blogroll just lists this as
 
-    
-    
-    [Maybe-Not](http://maybe-not.net/)
-    
-    
+```HTML
+<a href='http://maybe-not.net/' target='_blank'>Maybe-Not</a>
+```
 
 A better link, for example from a [wordpress](http://www.wordpress.org)
 blogroll would look something like
 
-    
-    
-    [Maybe-Not](http://maybe-not.net/ "Laura's blog" )< 
+```HTML
+<a href="http://maybe-not.net/" rel="friend sweetheart" title="Laura&#8217;s blog">Maybe-Not</a>< 
+```
 
 ...and get picked up but the SocialGraph as having a relationship to me.
 Blogger is great and I love using it, but the features of wordpress are

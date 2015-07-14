@@ -19,11 +19,5 @@ two days
   
 Be ready for it.  
   
-  
-  
-  
-  
-  
-_(Or install it [now](https://help.ubuntu.com/community/HardyUpgrades#head-
-d552909d23532acc4ecb9a4c51a902e79caab0e8))_
+_(Or install it [now](https://help.ubuntu.com/community/HardyUpgrades#head-d552909d23532acc4ecb9a4c51a902e79caab0e8))_
 

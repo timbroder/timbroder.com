@@ -15,6 +15,6 @@ tags:
 ---
 
 If you are reading this. I was able to post from my work blackberry, neat
-(Waiting for a baby shower, I mean meeting, to start. Currently guarding the
-cake) Mmmmm cake
 
+*(Waiting for a baby shower, I mean meeting, to start. Currently guarding the
+cake) Mmmmm cake*
