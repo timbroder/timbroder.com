@@ -18,9 +18,7 @@ tags:
 Hardy Heron came out this morning and ubuntu.com is very much down for the
 count  
   
-You can Still update though, click [here](http://72.14.205.104/search?q=cache:
-maBlktBTwPAJ:www.ubuntu.com/getubuntu/upgrading+upgrade+ubuntu&hl=en&ct=clnk&c
-d=1&gl=us&client=firefox-a) for the Google Cache version.  
+You can Still update though, click [here](http://72.14.205.104/search?q=cache:maBlktBTwPAJ:www.ubuntu.com/getubuntu/upgrading+upgrade+ubuntu&hl=en&ct=clnk&cd=1&gl=us&client=firefox-a) for the Google Cache version.  
   
 Happy Updating!  
   
@@ -80,8 +78,7 @@ brown theme and choose something lighter and more fresh.
 To allow people to easily share files over a network. Not more I can say about
 this.  
   
-[Dual/Multi Monitor Support](https://blueprints.launchpad.net/ubuntu/+spec
-/multi-monitor-config)  
+[Dual/Multi Monitor Support](https://blueprints.launchpad.net/ubuntu/+spec/multi-monitor-config)  
 Currently you have to manually tweak Ubuntu if you want to use more than one
 monitor. They want to fix this for hardy.  
   
@@ -90,8 +87,7 @@ Ubuntu](https://wiki.ubuntu.com/DesktopTeam/Specs/Prefetch)
 I noticed a slightly increased start up time in gutsy compared to feisty.
 Hardy will use file prefetch and other optimisations to speed up boot time.  
   
-[Automatix-Ubuntu Team Collaboration](https://wiki.ubuntu.com/Automatix/Ubuntu
-_Team_Collaboration?highlight=%20automatix%20#81830218674224151)  
+[Automatix-Ubuntu Team Collaboration](https://wiki.ubuntu.com/Automatix/Ubuntu_Team_Collaboration?highlight=%20automatix%20#81830218674224151)  
 Automatix was extremely helpful for me in feisty. Although I don't use it in
 gutsy, its good that they are collaborating with the automatix team.  
   
@@ -106,8 +102,7 @@ Ubuntu even safer.
 [Firewall](https://blueprints.launchpad.net/ubuntu/+spec/ubuntu-firewall)  
 Make it easier for users to configure their firewall.  
   
-[Third Party Apt](https://blueprints.launchpad.net/ubuntu/+spec/third-party-
-apt)  
+[Third Party Apt](https://blueprints.launchpad.net/ubuntu/+spec/third-party-apt)  
 Now when you install third party apps, you have to manually add the software
 repository to the sources.list. This spec makes it easy for users to install
 third party software and have it update automatically.  
