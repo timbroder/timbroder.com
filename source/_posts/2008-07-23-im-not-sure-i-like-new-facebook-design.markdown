@@ -21,13 +21,9 @@ twitter isn't even showing up... I'll have to play some more. What do people
 think?  
 
 [![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAAASOU/VaZMmEpswdw
-/s400-R/newfb2.jpg)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAA
-ASOU/FrPl0GKnWr0/s1600-h/newfb2.jpg)  
+/s400-R/newfb2.jpg)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAAASOU/FrPl0GKnWr0/s1600-h/newfb2.jpg)  
 
 * * *
 
   
-[![](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW8qi4MXI/AAAAAAAASOc/cNc-Mv1GYmY
-/s400-R/newfb1.jpg)](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW8qi4MXI/AAAAAAA
-ASOc/pVuueWByKZI/s1600-h/newfb1.jpg)
-
+[![](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW8qi4MXI/AAAAAAAASOc/cNc-Mv1GYmY/s400-R/newfb1.jpg)](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW8qi4MXI/AAAAAAAASOc/pVuueWByKZI/s1600-h/newfb1.jpg)

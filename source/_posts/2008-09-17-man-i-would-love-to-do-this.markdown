@@ -19,4 +19,3 @@ Coast](http://googleblog.blogspot.com/2008/09/running-hood-to-coast.html)
 and finishes on the beach in the town of Seaside. More than 1000 teams
 participate in the race, with 12 runners on each team running three legs
 each."
-

@@ -12,6 +12,4 @@ categories:
 - Code
 ---
 
-[![](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)](http://www.geek
-culture.com/joyoftech/joyimages/1156.jpg)
-
+[![](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)

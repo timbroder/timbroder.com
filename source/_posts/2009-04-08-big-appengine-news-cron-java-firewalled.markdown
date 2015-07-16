@@ -14,8 +14,7 @@ tags:
 - appengine
 ---
 
-[Java Support](http://googleappengine.blogspot.com/2009/04/seriously-this-
-time-new-language-on-app.html): This was the first, and most popular [request
+[Java Support](http://googleappengine.blogspot.com/2009/04/seriously-this-time-new-language-on-app.html): This was the first, and most popular [request
 ](http://code.google.com/p/googleappengine/issues/detail?id=1)in the bug
 tracker. Followed closely by PHP support.  Google has merged the simplicity of
 appengine with the robustness of java, and added it to their [Eclipse
@@ -30,6 +29,5 @@ allowed to be longer.
 exampled of this would be accessing data behind a corporate firewall.  Might
 be a (good/bad) idea ;)  
   
-[Bulk Uploader](http://code.google.com/appengine/docs/python/tools/uploadingda
-ta.html): Dump data into appengine from another database or a CSV file
-
+[Bulk Uploader](http://code.google.com/appengine/docs/python/tools/uploadingdata.html): Dump data into appengine from another database or a CSV
+file

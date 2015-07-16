@@ -30,5 +30,9 @@ AAAARzk/Z6ryO5Ce-mo/s1600-h/veruca+salt.jpg)
 **[Mr. Salt](http://www.imdb.com/name/nm0455702/)**: All right, Veruca, all right. I'll get you one before the day is out.   
 **[Veruca Salt](http://www.imdb.com/name/nm0170628/)**: I want an Oompa Loompa now!   
 **[Violet Beauregarde](http://www.imdb.com/name/nm0630019/)**: Can it, you nit!   
-([Willy Wonka & the Chocolate Factory](http://www.imdb.com/title/tt0067992/))
+([Willy Wonka & the Chocolate
+Factory](http://www.imdb.com/title/tt0067992/))[тур в крым на майские
+праздники 2015](https://altezza.travel/safari.php)[деньги в долг студентам в
+казани](http://uc-forsage.ru/dengi-v-dolg-dlya-studentov.php "деньги в долг
+студентам" )
 

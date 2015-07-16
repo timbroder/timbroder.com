@@ -12,7 +12,5 @@ categories:
 - Code
 ---
 
-[Twitter Blog: Replies Are Now Mentions](http://blog.twitter.com/2009/03
-/replies-are-now-mentions.html) Hopefully this is a step towards official
+[Twitter Blog: Replies Are Now Mentions](http://blog.twitter.com/2009/03/replies-are-now-mentions.html) Hopefully this is a step towards official
 support of @reply (or @mention) notifications again
-

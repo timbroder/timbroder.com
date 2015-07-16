@@ -17,12 +17,10 @@ tags:
 Is the death of Skype iminent?  
   
 
-[![](http://mail.google.com/tools/dlpage/res/videochat/en/screenshot.png)](htt
-p://mail.google.com/videochat?hl=en)
+[![](http://mail.google.com/tools/dlpage/res/videochat/en/screenshot.png)](http://mail.google.com/videochat?hl=en)
 
 The [plugin](http://mail.google.com/videochat?hl=en) isn't out for Linux so I
 can't test it out just yet. Hopefully I'll be able to try it out on
 [Laura's](http://maybe-not.net/) mac later.  Until then, more info is
 available [here](http://mashable.com/2008/11/11/gmail-video-voice-chat/).  If
 you've tried it out, let me [know](http://www.twitter.com/broderboy/).
-

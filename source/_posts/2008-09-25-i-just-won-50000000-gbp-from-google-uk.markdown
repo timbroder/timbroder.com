@@ -51,5 +51,3 @@ We wish you the best of luck as you spend your good fortune.
 Thank you for using Google!  
 Sincerely,  
 Mrs Anita Simon  
-_
-

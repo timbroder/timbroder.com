@@ -19,6 +19,4 @@ Well thats good. Fingers crossed for Verizon release.
 Sorry for the lack of posts. 3 month project going live this weekend. Will
 hopefully have some free time after that.  
   
-Via [Android Community](http://androidcommunity.com/analyst-htc-delay-rumors-
-debunked-q4-launch-still-on-track-20080808/)
-
+Via [Android Community](http://androidcommunity.com/analyst-htc-delay-rumors-debunked-q4-launch-still-on-track-20080808/)

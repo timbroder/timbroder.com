@@ -20,8 +20,4 @@ tags:
 picasa heavily also but there is way too much data there for gears.  Head over
 to your [calendar ](https://www.google.com/calendar/)to add the feature.  
   
-
-[![](http://4.bp.blogspot.com/_ZaGO7GjCqAI/Sa421fHmqBI/AAAAAAAAPJA/TgcJknPLigE
-/s320/offline-calendar-1.png)](http://4.bp.blogspot.com/_ZaGO7GjCqAI/Sa421fHmq
-BI/AAAAAAAAPJA/TgcJknPLigE/s1600/offline-calendar-1.png)
-
+![](http://4.bp.blogspot.com/_ZaGO7GjCqAI/Sa421fHmqBI/AAAAAAAAPJA/TgcJknPLigE/s1600/offline-calendar-1.png)

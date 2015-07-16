@@ -15,4 +15,3 @@ tags:
 ---
 
 I'm going to the NYC one, anyone else?
-

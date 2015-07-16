@@ -25,4 +25,3 @@ hope it helps someone organize like it did me
 is:inbox is:unread  
   
 Happy Holidays all  
-

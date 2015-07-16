@@ -15,4 +15,3 @@ tags:
 ---
 
 [Big Day](http://www.winehq.org/) for software
-

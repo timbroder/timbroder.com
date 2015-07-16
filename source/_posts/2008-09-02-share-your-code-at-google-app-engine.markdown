@@ -13,9 +13,7 @@ categories:
 ---
 
 [Google App Engine Blog: Our favorite recipes for App Engine, all in one
-place](http://googleappengine.blogspot.com/2008/08/our-favorite-recipes-for-
-app-engine-all.html)  
+place](http://googleappengine.blogspot.com/2008/08/our-favorite-recipes-for-app-engine-all.html)  
   
 I'll be submitting some snippets in the near future. Said code will also be
 posted on here ;)
-

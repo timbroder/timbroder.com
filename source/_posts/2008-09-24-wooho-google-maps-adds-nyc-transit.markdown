@@ -20,4 +20,3 @@ I've been using [GypsyMaps](http://www.gypsymaps.com/) up until now if I
 needed directions, we'll see how they stack up against each other  
   
 <http://maps.google.com/nyc>
-

@@ -39,4 +39,3 @@ To Do:
   * get uShare to automatically rescan the directory (currently if I add a video to the folder, the 360 will not see it until i restart uShare)
   * get 1080p HD content to stream. I have tried a few re-encapsulation methods so far, nothing working yet
   * this is an xbox thing, that hopefully will be fixed in the fall update, but navigating large folder trees can get annoying 
-

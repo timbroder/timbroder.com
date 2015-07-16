@@ -28,8 +28,7 @@ tags:
 - reader
 ---
 
-As I said [earlier](http://blog.gpowered.net/2008/04/select-google-io-
-sessions-to-be-posted.html), Quite a few presentations from Google I/O have
+As I said [earlier](http://blog.gpowered.net/2008/04/select-google-io-sessions-to-be-posted.html), Quite a few presentations from Google I/O have
 been [posted](http://sites.google.com/site/io/) for your viewing pleasure.
 I'll be glued to these this weekend while I'm on call.  
   
@@ -47,4 +46,3 @@ Gears
 Mashups  
 Maps  
 and more!  
-

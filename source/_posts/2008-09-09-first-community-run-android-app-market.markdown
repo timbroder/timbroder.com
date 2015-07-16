@@ -14,10 +14,7 @@ tags:
 - Android
 ---
 
-[Check it out](http://www.google-phone.com/android-developer-challenge-
-winners-android-market-is-up-and-accessories-store-goes-live-08316.php)  
+[Check it out](http://www.google-phone.com/android-developer-challenge-winners-android-market-is-up-and-accessories-store-goes-live-08316.php)  
   
 [![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SMan487MRKI/AAAAAAAATDI/V5qQCIr-QD0
-/s400/and.JPG)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SMan487MRKI/AAAAAAAATDI
-/V5qQCIr-QD0/s1600-h/and.JPG)
-
+/s400/and.JPG)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SMan487MRKI/AAAAAAAATDI/V5qQCIr-QD0/s1600-h/and.JPG)

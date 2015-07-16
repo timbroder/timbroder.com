@@ -27,4 +27,3 @@ browser-dependent JavaScript. Server part uses PHP 5. _
   
 Not yet available to the public, but you can sign up to be [notified
 ](http://www.gwtphp.com/download/)when it is
-

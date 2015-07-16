@@ -12,7 +12,6 @@ categories:
 - Code
 ---
 
-[Tech Support Cheat Sheet](http://xkcd.com/627/): "!['Hey Megan, it's your
+[Tech Support Cheat Sheet](http://xkcd.com/627/): !['Hey Megan, it's your
 father. How do I print out a
-flowchart?'](http://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)"
-
+flowchart?'](http://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)

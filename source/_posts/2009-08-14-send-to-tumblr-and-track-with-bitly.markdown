@@ -15,8 +15,7 @@ tags:
 ---
 
 Testing the "send to blogger" button... [Send To Tumblr And Track With Bitly
-Google Reader Custom Link](http://labs.kortina.net/2009/08/13/send-to-tumblr-
-and-track-with-bitly-google-reader-custom-link/): "
+Google Reader Custom Link](http://labs.kortina.net/2009/08/13/send-to-tumblr-and-track-with-bitly-google-reader-custom-link/): "
 
 Google Reader just launched a “Send to Twitter” feature that allows you to
 share bit.ly links to interesting items in your reader with your Twitter
@@ -28,19 +27,18 @@ there as opposed to twitter.com/home, facebook.com/home, or Tumblr Dashboard.
 One thing I miss about Tumblr dashboard was easy reblogging.
 
 [![How to Create Custom Send To Links in Google Reader](http://labs.kortina.ne
-t/files/2009/08/2009-08-13_2354-300x173.png)](http://labs.kortina.net/files/20
-09/08/2009-08-13_2354.png)
+t/files/2009/08/2009-08-13_2354-300x173.png)](http://labs.kortina.net/files/2009/08/2009-08-13_2354.png)
 
 How to Create Custom Send To Links in Google Reader
 
 There is a “Send to Tumblr” link as one of the defaults, but it doesn’t use
 bit.ly urls. So, I hacked together a custom “Send to Tumblr” link.
 
-`URL: http://tumblr.com/share?v=2&u=&t=Send To Tumblr And Track With Bitly
+```
+URL: http://tumblr.com/share?v=2&u=&t=Send To Tumblr And Track With Bitly
 Google Reader Custom Link&s=Send To Tumblr And Track With Bitly Google Reader
 Custom Link%0Avia%20kortina`
-
-` `
+```
 
 `Icon URL: http://assets.tumblr.com/images/favicon.gif?2`
 
@@ -76,6 +74,3 @@ essays?a=o2hn6f5JGDQ:skeQbrLiUSU:7Q72WNTAKBA)
 [![](http://feeds.feedburner.com/~ff/kortina-
 essays?d=c-S6u7MTCTE)](http://feeds.feedburner.com/~ff/kortina-
 essays?a=o2hn6f5JGDQ:skeQbrLiUSU:c-S6u7MTCTE)
-
-"
-

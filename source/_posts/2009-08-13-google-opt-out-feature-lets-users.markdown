@@ -14,6 +14,4 @@ categories:
 
   
 [Google Opt Out Feature Lets Users Protect Privacy By Moving To Remote Village
-](http://www.theonion.com/content/video/google_opt_out_feature_lets_users?utm_
-source=videoembed)
-
+](http://www.theonion.com/content/video/google_opt_out_feature_lets_users?utm_source=videoembed)

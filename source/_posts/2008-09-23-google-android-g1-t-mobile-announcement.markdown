@@ -15,4 +15,3 @@ tags:
 ---
 
 Watch it [here](http://announcement.t-mobileg1.com/)
-

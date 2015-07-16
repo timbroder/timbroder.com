@@ -12,5 +12,5 @@ categories:
 - Code
 ---
 
-Test post from sms (now supported by blogger <http://tinyurl.com/bx6vao> )
-
+Test post from sms (now supported by blogger <http://tinyurl.com/bx6vao>
+)

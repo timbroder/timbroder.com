@@ -46,8 +46,6 @@ it worked for me.
 
 This issue has also been addressed on the [Ubuntu
 Forums](http://ubuntuforums.org/showthread.php?t=712479) and on
-[launchpad](https://bugs.launchpad.net/ubuntu/+source/linux-restricted-
-modules-2.6.24/+bug/208718)  
+[launchpad](https://bugs.launchpad.net/ubuntu/+source/linux-restricted-modules-2.6.24/+bug/208718)  
   
-Note: I have a Dell XPS M1530
-
+*Note: I have a Dell XPS M1530*

@@ -24,8 +24,5 @@ compliance with [my company here] Policy.  _
 URL Requested:  
 ---  
 http://www.tweettrak.com/  
-URL Category:  
-Sex  
-Date:  
-2008-09-23 14:20:25
-
+URL Category:  Sex  
+Date:  2008-09-23 14:20:25  

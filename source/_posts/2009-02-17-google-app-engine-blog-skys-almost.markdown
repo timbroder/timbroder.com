@@ -15,4 +15,3 @@ categories:
 It looks like the app engine infrastructure is improving. No more High CPU
 request warnings, the response deadline (timeout) has been raised from 10 to
 30 seconds, and the static file limit is now 10MB.
-

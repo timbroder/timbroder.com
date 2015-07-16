@@ -27,4 +27,3 @@ at the opening of the show, of which they will consume throughout the show,
 (steadily getting more and more drunk until they are almost incoherent)
 followed by them discussing various Digg stories from the previous week. Both
 audio and video versions of the podcast are available from Revision3."
-

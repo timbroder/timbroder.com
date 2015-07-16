@@ -19,4 +19,3 @@ Get them while they're hot!
 [2.6](http://www.python.org/download/releases/2.6/)  
   
 [3.0 Beta](http://www.python.org/download/releases/3.0/)
-

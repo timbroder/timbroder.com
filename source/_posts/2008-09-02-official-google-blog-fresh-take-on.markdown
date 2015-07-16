@@ -17,5 +17,5 @@ browser](http://googleblog.blogspot.com/2008/09/fresh-take-on-browser.html)
   
 Not too sure how I feel about this. We'll see what it ends up being  
   
-More info: [comic](http://www.google.com/googlebooks/chrome/index.html)
-
+More info:
+[comic](http://www.google.com/googlebooks/chrome/index.html)

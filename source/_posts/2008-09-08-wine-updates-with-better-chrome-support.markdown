@@ -14,6 +14,4 @@ tags:
 - chrome
 ---
 
-via [lifehacker](http://lifehacker.com/5046581/wine-updates-with-better-
-chrome-support): I'll be trying this when I get home.
-
+via [lifehacker](http://lifehacker.com/5046581/wine-updates-with-better-chrome-support): I'll be trying this when I get home.

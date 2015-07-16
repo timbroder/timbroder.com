@@ -12,6 +12,4 @@ categories:
 - Code
 ---
 
-[![](http://www.hanovsolutions.com/resume_comic.png)](http://www.hanovsolution
-s.com/resume_comic.png)
-
+[![](http://www.hanovsolutions.com/resume_comic.png)](http://www.hanovsolutions.com/resume_comic.png)

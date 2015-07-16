@@ -16,5 +16,4 @@ tags:
 
 A [great](http://www.digitalinsane.com/archives/2008/08/30/pacman/) example of
 javascript to create a pacman clone. (Uses
-[YUI](http://developer.yahoo.com/yui/)
-
+[YUI](http://developer.yahoo.com/yui/))

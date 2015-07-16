@@ -14,6 +14,4 @@ tags:
 - Android
 ---
 
-[![](http://picayune.uclick.com/comics/ft/2008/ft081109.gif)](http://picayune.
-uclick.com/comics/ft/2008/ft081109.gif)
-
+[![](http://picayune.uclick.com/comics/ft/2008/ft081109.gif)](http://picayune.uclick.com/comics/ft/2008/ft081109.gif)

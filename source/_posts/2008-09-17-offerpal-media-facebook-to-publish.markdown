@@ -12,11 +12,9 @@ categories:
 - Code
 ---
 
-Things have changed slightly since I [last](http://blog.gpowered.net/2008/05
-/why-microsoft-will-buy-facebook-and.html) wrote about this, but for the
+Things have changed slightly since I [last](http://blog.gpowered.net/2008/05/why-microsoft-will-buy-facebook-and.html) wrote about this, but for the
 better. Look like Google will be able to trawl some of Facebook [after
-all](http://www.insidefacebook.com/2008/09/12/facebook-to-publish-event-
-directory-for-search-engines/).  
+all](http://www.insidefacebook.com/2008/09/12/facebook-to-publish-event-directory-for-search-engines/).  
   
-Searchable data will include People, Pages, Applications, Events, and Groups.
-
+Searchable data will include People, Pages, Applications, Events, and
+Groups.

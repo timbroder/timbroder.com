@@ -13,4 +13,3 @@ categories:
 ---
 
 [Do it](http://www.spreadfirefox.com/en-US/worldrecord/)
-

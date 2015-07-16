@@ -19,4 +19,3 @@ The Mars Phoenix robot found water on mars and what does it do? Sends a
   
 "Are you ready to celebrate? Well, get ready: We have ICE!!!!! Yes, ICE,
 *WATER ICE* on Mars! w00t!!! Best day ever!!"
-

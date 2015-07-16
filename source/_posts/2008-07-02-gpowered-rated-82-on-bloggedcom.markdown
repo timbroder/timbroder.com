@@ -14,7 +14,7 @@ tags:
 - gpowered.net
 ---
 
-I recently recieved an email about someone submitting gPowered to
+I recently received an email about someone submitting gPowered to
 [blogged.com](http://www.blogged.com/blogs/gpowered-by-the-power-of-
 google.html). To whoever submitted it, thank you so much!!  
   
@@ -50,5 +50,3 @@ Marketing Department
 amy@blogged.com  
 www.blogged.com  
   
-_
-

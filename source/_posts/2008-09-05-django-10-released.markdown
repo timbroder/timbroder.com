@@ -17,4 +17,3 @@ tags:
 No, you’re not hallucinating, it’s really here.  
   
 NOW GO [GET IT](http://www.djangoproject.com/download/)
-

@@ -20,5 +20,4 @@ released a few days after I get back. It's almost done =)
 [![Got my stack of books for vacation at the shore. Bye world se... on
 TwitPic](http://twitpic.com/img/5gbx-
 67847ad849843df02601c352bc7ad4b0.488b2aa3.jpg)](http://twitpic.com/5gbx "Got
-my stack of books for vacation at the shore. Bye world se... on TwitPic" )
-
+my stack of books for vacation at the shore. Bye world se... on TwitPic")

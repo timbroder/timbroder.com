@@ -17,4 +17,3 @@ tags:
 See more [funny videos](http://www.collegehumor.com/videos) and [funny
 pictures](http://www.collegehumor.com/pictures) at
 [CollegeHumor](http://www.collegehumor.com/).
-

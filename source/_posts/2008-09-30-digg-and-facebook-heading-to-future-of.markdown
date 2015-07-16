@@ -22,13 +22,12 @@ Wish I could go
   
 Here's the lineup:  
   
-Mark Zuckerberg - Fireside Chat  
-Kevin Rose - The future of social news  
-Dave Morin - A more social Web with [Facebook
+* Mark Zuckerberg - Fireside Chat  
+* Kevin Rose - The future of social news  
+* Dave Morin - A more social Web with [Facebook
 Connect](http://developers.facebook.com/connect.php)  
-Joe Stump - Languages don't scale  
+* Joe Stump - Languages don't scale  
   
 To wrap up the conference there will be a live Diggnation on the main stage
 (Oct 10). Directly after that will be the wrap up party which is rumored to
 have an open bar, but you didn't hear that from me
-

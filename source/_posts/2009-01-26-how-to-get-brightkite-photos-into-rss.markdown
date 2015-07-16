@@ -31,18 +31,16 @@ Looked like a job for [Yahoo!
 Pipes](http://pipes.yahoo.com/pipes/pipe.info?_id=PMOQjpHo3RGyu7JdLXO0Kg).
 
 [![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAajI/XPnLMt02wdQ
-/s320/pipe1.JPG)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAaj
-I/XPnLMt02wdQ/s1600-h/pipe1.JPG)
+/s320/pipe1.JPG)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAajI/XPnLMt02wdQ/s1600-h/pipe1.JPG)
 
 I imported the bkite feed into pipes, filtered on the items that were photo
 posts, and renamed the title so it would have the title of the photo instead
 of the bkite location (by default bkite photo titles are the location where
 you most recently checked in). I also did some URL generation so anyone could
-[use the pipe](http://pipes.yahoo.com/pipes/pipe.run?_id=PMOQjpHo3RGyu7JdLXO0K
-g&_render=rss&username=broderboy) The next step was to get this into
+[use the pipe](http://pipes.yahoo.com/pipes/pipe.run?_id=PMOQjpHo3RGyu7JdLXO0Kg&_render=rss&username=broderboy) The next step was to get this into
 wordpress. I Installed the
 [FeedWordPress](http://projects.radgeek.com/feedwordpress/) plugin and set it
 up to import the pipe's RSS feed. You can tweak the the settings on what user
 should be used to write the posts, categories, tags, permalinks (I set mine to
-point directly back to brightkite). Hope this helps someone out there, enjoy
-
+point directly back to brightkite). Hope this helps someone out there,
+enjoy

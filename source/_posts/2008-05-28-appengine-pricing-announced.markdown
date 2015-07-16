@@ -26,4 +26,3 @@ $0.11 - $0.13 per GB outgoing bandwidth
 $0.09 - $0.11 per GB incoming bandwidth  
   
 Google I/O started this morning, unhappy I am not there...
-

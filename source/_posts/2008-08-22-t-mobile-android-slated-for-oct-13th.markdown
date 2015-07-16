@@ -40,4 +40,3 @@ Phone Features
   * Video (playback only, no recording)
   * Music player &amp; 1GB memory card pre-loaded
   * Applications, all available in Google marketplace (icon on the homescreen)
-

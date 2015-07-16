@@ -41,9 +41,24 @@ includes:
   
 Example jQuery:
 
-    
-    
-    
-    
-    
-
+```
+<script src="http://www.google.com/jsapi"></script>
+<script>
+  // Load jQuery
+  google.load("jquery", "1");
+ 
+  // on page load complete, fire off a jQuery json-p query
+  // against Google web search
+  google.setOnLoadCallback(function() {
+    $.getJSON("http://ajax.googleapis.com/ajax/services/search/web?q=google&;v=1.0&;callback=?",
+ 
+      // on search completion, process the results
+      function (data) {
+        if (data.responseDate.results &&
+            data.responseDate.results.length>0) {
+          renderResults(data.responseDate.results);
+        }
+      });
+    });
+</script>
+```

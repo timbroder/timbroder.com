@@ -22,7 +22,4 @@ anyone else is going to be there send me an
 [tweet](http://twitter.com/broderboy)  
   
   
-[View Larger Map](http://maps.google.com/maps?f=q&hl=en&geocode=&q=76+Ninth+Av
-enue,+New+York,+NY+10011&sll=40.71453,-74.00713&sspn=0.208963,0.421944&ie=UTF8
-&ll=40.751744,-74.000387&spn=0.003845,0.010042&z=14&iwloc=addr&source=embed)
-
+[View Larger Map](http://maps.google.com/maps?f=q&hl=en&geocode=&q=76+Ninth+Avenue,+New+York,+NY+10011&sll=40.71453,-74.00713&sspn=0.208963,0.421944&ie=UTF8&ll=40.751744,-74.000387&spn=0.003845,0.010042&z=14&iwloc=addr&source=embed)

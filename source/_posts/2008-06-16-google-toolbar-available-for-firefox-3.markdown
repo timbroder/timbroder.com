@@ -16,4 +16,3 @@ categories:
 [toolbar](http://toolbar.google.com/) is available for all those with the
 Firefox beta or RC releases. Just in time too... took them long enough...
 happy days are here again!
-

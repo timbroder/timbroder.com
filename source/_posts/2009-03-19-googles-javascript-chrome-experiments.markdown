@@ -22,7 +22,4 @@ graphics, these demo's really show off what the chrome javascript engine can
 do  
   
 
-[![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/ScJ8EmTWaKI/AAAAAAAAbGE/_Oq790Qhn5Q
-/s320/chrome.JPG)](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/ScJ8EmTWaKI/AAAAAAAAb
-GE/_Oq790Qhn5Q/s1600-h/chrome.JPG)
-
+![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/ScJ8EmTWaKI/AAAAAAAAbGE/_Oq790Qhn5Q/s1600-h/chrome.JPG)

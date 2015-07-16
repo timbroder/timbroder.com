@@ -41,4 +41,3 @@ Yes
 ##### Venue Website:
 
 [websterhall.com](http://websterhall.com/)
-

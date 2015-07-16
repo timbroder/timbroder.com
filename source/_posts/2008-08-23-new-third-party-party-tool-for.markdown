@@ -15,5 +15,4 @@ tags:
 ---
 
 [Cloud Status](http://www.cloudstatus.com/appengine) has some pretty cool
-real-time appengine cloud stats. Check it out!
-
+real-time appengine cloud stats. Check it out

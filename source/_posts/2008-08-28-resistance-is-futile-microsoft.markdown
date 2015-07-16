@@ -12,5 +12,5 @@ categories:
 - Code
 ---
 
-[![](http://houghi.org/shots/vim001.gif)](http://houghi.org/shots/vim001.gif)
-
+[![](http://houghi.org/shots/vim001.gif)](http://houghi.org/shots/vim001.gif)[
+туры в танзанию килиманджаро](https://altezza.travel/)

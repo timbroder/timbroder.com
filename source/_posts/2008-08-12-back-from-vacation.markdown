@@ -19,8 +19,7 @@ below.
   
 Also, Check out goodreads.com. Its a lot better then any of the other
 bookshelving services I've reviewed [in the
-past](http://blog.gpowered.net/2007/09/google-books-my-library-vs-
-librarything.html). The reasons why will be in a future post in the not so
+past](http://blog.gpowered.net/2007/09/google-books-my-library-vs-librarything.html). The reasons why will be in a future post in the not so
 distant future.  
   
 
@@ -31,10 +30,7 @@ distant future.
   
   
   
-[![](http://lh6.ggpht.com/timothy.broder/SJXRQBmxkJE/AAAAAAAASaM/y38REUtNRG8/s
-160-c/VacationInWIldwood.jpg)](http://picasaweb.google.com/timothy.broder/Vaca
-tionInWIldwood)  
+[![](http://lh6.ggpht.com/timothy.broder/SJXRQBmxkJE/AAAAAAAASaM/y38REUtNRG8/s160-c/VacationInWIldwood.jpg)](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  
 ---  
 [Vacation in
-WIldwood](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)
-
+WIldwood](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  

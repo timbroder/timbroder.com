@@ -13,8 +13,6 @@ categories:
 ---
 
 Normally I don't just link to other posts, but Scoble's [latest
-article](http://scobleizer.com/2008/05/19/why-microsoft-will-buy-facebook-and-
-keep-it-closed/) is quite a read. It delves into Microsoft + Yahoo Search +
+article](http://scobleizer.com/2008/05/19/why-microsoft-will-buy-facebook-and-keep-it-closed/) is quite a read. It delves into Microsoft + Yahoo Search +
 Facebook giving Google and the rest of the open web quite a hard time.
 Definitely work the time to read.
-

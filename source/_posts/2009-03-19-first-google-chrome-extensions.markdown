@@ -15,11 +15,9 @@ tags:
 - greasemonkey
 ---
 
-Extensions [are coming](http://dev.chromium.org/developers/design-
-documents/extensions/howto) for chrome.  
+Extensions [are coming](http://dev.chromium.org/developers/design-documents/extensions/howto) for chrome.  
   
-Google’s Matt Cutts [in a blog post says](http://www.mattcutts.com/blog/write-
-chrome-extension/): “Extensions currently have very Greasemonkey-like
+Google’s Matt Cutts [in a blog post says](http://www.mattcutts.com/blog/write-chrome-extension/): “Extensions currently have very Greasemonkey-like
 functionality: you identify which web pages should be modified, plus
 JavaScript to be added to those pages. By default, the extension’s JavaScript
 runs after the page loads, but you can specify that the extension’s JavaScript
@@ -28,5 +26,5 @@ but that could change in the future. You also can’t currently load Cascading
 Style Sheets (CSS), but that might also change.”  
   
 Personally, I think they should just port greasemonkey directly so chrome can
-take advantage off all the [existing scripts ](http://userscripts.org/)
-
+take advantage off all the [existing scripts
+](http://userscripts.org/)

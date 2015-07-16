@@ -17,4 +17,3 @@ tags:
 I won't be able to attend Google I/O (It's a bit expensive on short notice for
 me) bit it's a relieve that some of the sessions are going to be posted online
 after the conference.
-

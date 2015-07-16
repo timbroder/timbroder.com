@@ -16,10 +16,8 @@ tags:
 
 You might see some random I/O posts popping up from me over the next few
 days... ;) In the keynote at Google I/O, the HTC Touch was demonstrated
-running Android. Touch streeview, and heck, when you move the phone,
+running Android. Touch streetview, and heck, when you move the phone,
 streetview moves with you!  
   
-Video on [Engadget](http://www.engadgetmobile.com/2008/05/28/google-demos-the-
-htc-dream-at-i-o-conference/) and stills on [Talk
+Video on [Engadget](http://www.engadgetmobile.com/2008/05/28/google-demos-the-htc-dream-at-i-o-conference/) and stills on [Talk
 Android](http://www.talkandroid.com/101-google-io-opening-android-keynote/)
-

@@ -16,7 +16,5 @@ tags:
 
 ... is much better then Windows ;-)  
   
-[![](http://farm3.static.flickr.com/2031/2428594983_fe30642b19_o.jpg)](http://
-farm3.static.flickr.com/2031/2428594983_fe30642b19_o.jpg) In other news: I
+[![](http://farm3.static.flickr.com/2031/2428594983_fe30642b19_o.jpg)](http://farm3.static.flickr.com/2031/2428594983_fe30642b19_o.jpg) In other news: I
 [requested](https://shipit.ubuntu.com/) my Hardy Heron dvd =)
-

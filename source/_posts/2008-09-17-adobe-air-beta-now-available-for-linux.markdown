@@ -16,6 +16,4 @@ tags:
 
 Adobe air is out of alpha and can be downloaded
 [here](http://labs.adobe.com/downloads/air_linux.html). Also check out Life
-Hacker's [top 10](http://lifehacker.com/396393/top-10-apps-worth-installing-
-adobe-air-for) apps worth installing Adobe AIR for
-
+Hacker's [top 10](http://lifehacker.com/396393/top-10-apps-worth-installing-adobe-air-for) apps worth installing Adobe AIR for

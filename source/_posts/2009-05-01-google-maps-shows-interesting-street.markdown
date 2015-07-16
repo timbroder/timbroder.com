@@ -14,10 +14,7 @@ tags:
 - maps
 ---
 
-Good stuff. [Link](http://maps.google.co.uk/maps?&ll=48.067541,12.862533&spn=0
-.006345,0.010267&t=h&z=17)
+Good stuff. [Link](http://maps.google.co.uk/maps?&ll=48.067541,12.862533&spn=0.006345,0.010267&t=h&z=17)
 
 [![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/Sfo_Jqi6JyI/AAAAAAAAbHo/QilHprrfP9c
-/s400/Untitled.jpg)](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/Sfo_Jqi6JyI/AAAAAAA
-AbHo/QilHprrfP9c/s1600-h/Untitled.jpg)
-
+/s400/Untitled.jpg)](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/Sfo_Jqi6JyI/AAAAAAAAbHo/QilHprrfP9c/s1600-h/Untitled.jpg)

@@ -31,8 +31,7 @@ Google.
 [twitter2gTalk](http://twitter2gtalk.appspot.com/): Takes your current tweet
 and sets it as your Google Talk status (away) message.  
   
-I've been toying with [this](http://blog.gpowered.net/2008/03/update-google-
-talk-status-with-twitter.html) for a while now. I really wanted to launch
+I've been toying with [this](http://blog.gpowered.net/2008/03/update-google-talk-status-with-twitter.html) for a while now. I really wanted to launch
 twitter2gTalk as a service that anyone could use. I had the backend code all
 done and was dragging my feet writing the django front-end. I went to a
 hackathon for [Google AppEngine](code.google.com/appengine/) and converted
@@ -45,4 +44,3 @@ this and already signed up). Feel free to follow
 [me](http://twitter.com/broderboy) or [the app](http://twitter.com/twit2gTalk)
 on twitter for feature updates or
 [subscribe](http://feeds.feedburner.com/gPpowered) to this blog.
-

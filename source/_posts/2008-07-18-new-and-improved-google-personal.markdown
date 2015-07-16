@@ -13,8 +13,7 @@ categories:
 ---
 
 I unfortunately haven't had time to touch Google reader in almost 2 weeks now,
-but just caught on [lifehacker](http://lifehacker.com/398759/the-new-igoogle-
-gets-full+screen-gmail) that Google is rolling out a new personal homepage.
+but just caught on [lifehacker](http://lifehacker.com/398759/the-new-igoogle-gets-full+screen-gmail) that Google is rolling out a new personal homepage.
 Some of you may have it enabled by default. If not, head over to
 [www.google.com/ig/sandbox](http://www.google.com/ig/sandbox) and sign up to
 get into the developer sandbox. If you aren't a developer, fake it. My
@@ -23,6 +22,4 @@ to at work. I wonder how long until they block it....
   
 
 [![](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8/3uHMeD_JNbY
-/s320-R/ig.JPG)](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8
-/Wr2BUjBqMs8/s1600-h/ig.JPG)
-
+/s320-R/ig.JPG)](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8/Wr2BUjBqMs8/s1600-h/ig.JPG)

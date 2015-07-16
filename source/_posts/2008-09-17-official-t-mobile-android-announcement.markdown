@@ -14,8 +14,6 @@ tags:
 - Android
 ---
 
-[Cool](http://www.talkandroid.com/211-official-t-mobile-android-
-september/#comment-250), for T-Mobile users anyway. Hopefully Verizon or
+[Cool](http://www.talkandroid.com/211-official-t-mobile-android-september/#comment-250), for T-Mobile users anyway. Hopefully Verizon or
 AT&amp;T; is next in line, and yes, I will leave Verizon for AT&amp;T; if they
 get it first
-

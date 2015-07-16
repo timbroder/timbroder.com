@@ -14,7 +14,4 @@ tags:
 - Android
 ---
 
-Check [them](http://androidcommunity.com/first-live-images-of-fullscreen-
-android-demo-20080528/) out, as usual, youtube is blocked at work for me...
-[catchvideo.net](http://www.catchvideo.net/) to the rescue!
-
+Check [them](http://androidcommunity.com/first-live-images-of-fullscreen-android-demo-20080528/) out, as usual, youtube is blocked at work for me...

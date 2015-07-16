@@ -16,4 +16,3 @@ tags:
 
 Enabling you to switch a Google Maps mashup or page to 3D Google earth with
 just a few lines of javascript
-

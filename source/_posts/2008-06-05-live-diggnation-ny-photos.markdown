@@ -20,7 +20,9 @@ crappy photo quality, I forgot my camera and the blackberry doesn't do so well
 in the dark... I think the estimate for this meetup was about 2,000 people
 inside and 600 waiting outside in the rain? Great turnout, great show.
 Diggnation better come back to NY. (As they said at the show, NY creates/diggs
-the most content on Digg then anywhere else in the world, GO NEW YORK! [![](ht
+the most content on Digg then anywhere else in the world, GO NEW YORK! 
+
+[![](ht
 tp://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPwSCzrtI/AAAAAAAASAk/uE3SLJhkVc4/s400/I
 MG00031.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPwSCzrtI/AAAAAAAASAk/uE
 3SLJhkVc4/s1600-h/IMG00031.jpg) [![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEf
@@ -52,4 +54,3 @@ AR_U/Fq-qaIQjk-E/s1600-h/IMG00041.jpg)
 [![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfO-SCzriI/AAAAAAAAR_M/jaP9miTIGAE
 /s400/IMG00042.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfO-
 SCzriI/AAAAAAAAR_M/jaP9miTIGAE/s1600-h/IMG00042.jpg)
-

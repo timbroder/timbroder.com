@@ -31,6 +31,4 @@ when you use the code “diggcouch” at check out. So make sure you get over to
 [GoDaddy.com](http://www.godaddy.com/) and make some purchases and get your
 entry in today!_"  
   
-[Spread the word](http://revision3.com/blog/2008/09/15/kevin-and-alex-in-your-
-living-room/)
-
+[Spread the word](http://revision3.com/blog/2008/09/15/kevin-and-alex-in-your-living-room/)

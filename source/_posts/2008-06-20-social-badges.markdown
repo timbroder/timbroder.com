@@ -27,25 +27,15 @@ I should have, a long time ago. Feel free to follow me on
 be seeing how this effects my [social
 graph](http://code.google.com/apis/socialgraph/)  
   
-[![FriendFeed](http://gpowered.net/php/images/internal.png)](http://friendfeed
-.com/broderboy) [![Twitter](http://gpowered.net/php/images/twitter.png)](http:
-//twitter.com/broderboy)
+[![FriendFeed](http://gpowered.net/php/images/internal.png)](http://friendfeed.com/broderboy) [![Twitter](http://gpowered.net/php/images/twitter.png)](http://twitter.com/broderboy)
 [![Blog](http://gpowered.net/php/images/blog.png)](http://blog.gpowered.net/) 
-[![Facebook](http://gpowered.net/php/images/facebook.png)](http://www.facebook
-.com/profile.php?id=17500954) [![Digg](http://gpowered.net/php/images/digg.png
-)](http://www.digg.com/users/timothybroder) [![Google Reader](http://gpowered.
-net/php/images/googlereader.png)](http://www.google.com/reader/shared/16162999
-404522159936) [![Last.fm](http://gpowered.net/php/images/lastfm.png)](http://w
-ww.last.fm/user/broderboy/) [![Picasa Web Albums](http://gpowered.net/php/imag
+[![Facebook](http://gpowered.net/php/images/facebook.png)](http://www.facebook.com/profile.php?id=17500954) [![Digg](http://gpowered.net/php/images/digg.png
+)](http://www.digg.com/users/timothybroder) [![Google Reader](http://gpowered.net/php/images/googlereader.png)](http://www.google.com/reader/shared/16162999404522159936) [![Last.fm](http://gpowered.net/php/images/lastfm.png)](http://www.last.fm/user/broderboy/) [![Picasa Web Albums](http://gpowered.net/php/imag
 es/picasa.png)](http://picasaweb.google.com/timothy.broder) [![LinkedIn](http:
 //gpowered.net/php/images/linkedin.png)](http://www.linkedin.com/pub/5/749/644
-) [![LibraryThing](http://gpowered.net/php/images/librarything.png)](http://ww
-w.librarything.com/profile/broderboy) [![Pandora](http://gpowered.net/php/imag
+) [![LibraryThing](http://gpowered.net/php/images/librarything.png)](http://www.librarything.com/profile/broderboy) [![Pandora](http://gpowered.net/php/imag
 es/pandora.png)](http://www.pandora.com/people/timothy.broder) [![del.icio.us]
 (http://gpowered.net/php/images/delicious.png)](http://del.icio.us/broderboy) 
-[![StumbleUpon](http://gpowered.net/php/images/stumbleupon.png)](http://broder
-boy.stumbleupon.com/) [![Tumblr](http://gpowered.net/php/images/tumblr.png)](h
-ttp://broderboy.tumblr.com/) [![YouTube](http://gpowered.net/php/images/youtub
+[![StumbleUpon](http://gpowered.net/php/images/stumbleupon.png)](http://broderboy.stumbleupon.com/) [![Tumblr](http://gpowered.net/php/images/tumblr.png)](http://broderboy.tumblr.com/) [![YouTube](http://gpowered.net/php/images/youtub
 e.png)](http://www.youtube.com/profile?user=broderboy) [![Pownce](http://gpowe
 red.net/php/images/pownce.png)](http://pownce.com/broderboy/)
-
