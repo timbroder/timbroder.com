@@ -15,14 +15,12 @@ categories:
 Anyone want to help me out by donating?  
   
 [Fight Gone Bad IV](http://feedproxy.google.com/~r/timbroder/~3/PDBIQvyH3rY/):
-"
 
 On Sept 26th I am competing in Fight Gone Bad IV to raise money for Wounded
 Warriors and Athletes for a cure.  Fight gone bad is a CrossFit workout scored
 by the number of reps.
 
-Description from the [CrossFit website](http://www.crossfit.com/cf-
-info/faq.html#WOD2)
+Description from the [CrossFit website](http://www.crossfit.com/cf-info/faq.html#WOD2)
 
 **4.3. Explain Fight Gone Bad**
     In this workout you move from each of five stations after a minute. This is a five-minute round from which a one-minute break is allowed before repeating. We’ve used this in 3 and 5 round versions. The stations are: 

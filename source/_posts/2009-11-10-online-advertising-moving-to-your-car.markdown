@@ -15,10 +15,9 @@ categories:
 Another one of mine on the work blog -  
   
 [Online advertising moving to.... your
-car?](http://www.alexanderinteractive.com/blog/2009/11/online-advertising-
-moving-to-your-car.html): "
+car?](http://www.alexanderinteractive.com/blog/2009/11/online-advertising-moving-to-your-car.html): 
 
-With the release of [Android
+> With the release of [Android
 2.0](http://developer.android.com/sdk/android-2.0-highlights.html) on the
 Motorola [Droid](http://www.motorola.com/Consumers/US-EN/Consumer-Product-and-
 Services/Mobile-Phones/Motorola-DROID-US-EN), the Google Maps for Mobile
@@ -38,8 +37,4 @@ businesses.
 
 Either way, just something to think about, times are changing with all the
 technology we now carry around in our pockets.
-
-A demo of navigator in action:
-
-"
 

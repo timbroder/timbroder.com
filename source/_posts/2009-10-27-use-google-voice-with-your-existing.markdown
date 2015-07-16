@@ -54,4 +54,3 @@ existing number — or to get a Google number for additional features.
 Google Voice is about giving you more control over your communications. We
 hope this new option makes it easier for you to manage your messages and
 personalize your voicemail experience."
-

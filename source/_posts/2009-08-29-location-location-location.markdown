@@ -14,11 +14,7 @@ categories:
 
 This will be pretty cool when it comes out  
   
-[Location, Location, Location](http://blog.twitter.com/2009/08/location-
-location-location.html): "[![](http://3.bp.blogspot.com/_E8ZD85Wzu9E/So20MKF3W
-iI/AAAAAAAAAnw/QjXxH9JTBGM/s400/iStock_000006260161Small.jpg)](http://3.bp.blo
-gspot.com/_E8ZD85Wzu9E/So20MKF3WiI/AAAAAAAAAnw/QjXxH9JTBGM/s1600-h/iStock_0000
-06260161Small.jpg)Twitter platform developers have been doing innovative work
+[Location, Location, Location](http://blog.twitter.com/2009/08/location-location-location.html): "![](http://3.bp.blogspot.com/_E8ZD85Wzu9E/So20MKF3WiI/AAAAAAAAAnw/QjXxH9JTBGM/s1600-h/iStock_000006260161Small.jpg)Twitter platform developers have been doing innovative work
 with location for some time despite having access to only a rudimentary level
 of API support. Most of the location-based projects we see are built using the
 simple, account-level location field folks can fill out as part of their
@@ -54,8 +50,4 @@ Twitter. Our platform team has been on a roll lately. Geolocation lead
 location given his personal interest and involvement in events such as
 WhereCamp and his career history with location-aware services.
 
-![](https://blogger.googleusercontent.com/tracker/23958943-4539167026890119148
-?l=blog.twitter.com)
-
-"
-
+![](https://blogger.googleusercontent.com/tracker/23958943-4539167026890119148?l=blog.twitter.com)

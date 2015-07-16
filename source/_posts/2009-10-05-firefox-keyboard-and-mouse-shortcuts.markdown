@@ -15,4 +15,3 @@ categories:
 [Here is a list](http://www.mouserunner.com/FF_Shortcuts1Printable.html) of
 Firefox keyboard and mouse shortcuts for each of the three major operating
 systems organized by topic.
-

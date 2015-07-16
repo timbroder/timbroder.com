@@ -17,18 +17,15 @@ but that is a 2.6 and newer feature.  In Python 2.5 its a little more
 interesting.  Thankfully, wget's spider command can help us out.  
   
   
-
-    
-    
-    from subprocess import Popen, PIPE
-    def url_exists(url):
-        command = ["wget", "-S", "--spider", url]
-        p = Popen(command, stdout=PIPE, stderr=PIPE)
-        stdout, stderr = p.communicate()
-        exists = stderr.find('ERROR 404')
-        if int(exists) > -1:
-            return False
-        else:
-            return True
-    
-
+```python
+from subprocess import Popen, PIPE
+def url_exists(url):
+    command = ["wget", "-S", "--spider", url]
+    p = Popen(command, stdout=PIPE, stderr=PIPE)
+    stdout, stderr = p.communicate()
+    exists = stderr.find('ERROR 404')
+    if int(exists) > -1:
+        return False
+    else:
+        return True
+```

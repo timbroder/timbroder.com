@@ -24,11 +24,10 @@ plugin](http://wordpress.org/extend/plugins/syntaxhighlighter/) to handle the
 code highlighting for me on wordpress.  I love the plugin, didn't have to go
 into the wordpress template. It doesn't support the old pre syntax that I had
 been using previously but it was simple to add in. Patch to add this to 2.3.8
-is below, Thanks to [Alex ](http://www.viper007bond.com/wordpress-
-plugins/syntaxhighlighter/)for the plugin
+is below, Thanks to [Alex ](http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/)for the plugin
 
     
-    
+```    
     --- syntaxhighlighter.orrig.php	2010-06-03 20:08:24.000000000 -0500
     +++ syntaxhighlighter.php	2010-06-18 12:27:35.000000000 -0500
     @@ -101,12 +101,15 @@
@@ -104,5 +103,5 @@ plugins/syntaxhighlighter/)for the plugin
     
      if ( 'true' != $settings['padlinenumbers'] && 'false' != $settings['padlinenumbers'] )
      $settings['padlinenumbers'] = (int) $settings['padlinenumbers'];
-    
-
+    ```
+   

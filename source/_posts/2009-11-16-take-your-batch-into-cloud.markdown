@@ -12,11 +12,10 @@ categories:
 - Code
 ---
 
-from the work blog:  
+From the work blog:  
   
 [Take your batch into the
-cloud](http://www.alexanderinteractive.com/blog/2009/11/take-your-batch-into-
-the-cloud.html): "
+cloud](http://www.alexanderinteractive.com/blog/2009/11/take-your-batch-into-the-cloud.html): "
 
 About a year ago I wrote a webapp called
 [twitter2gtalk](http://twitter2gtalk.appspot.com), which simply takes your
@@ -48,20 +47,23 @@ each other
 
 The original code was something like:  
   
+```
     for users in all my users:  
          get twitter status  
          connect to gtalk  
          get current status  
          update status
+```
 
 My process for converting this to app engine tasks was as follows:  
-1) Create a process to load all of the users into a Task Queue  
-2) Set up each Task Queue so that it can independently do the work for the
+1. Create a process to load all of the users into a Task Queue  
+1. Set up each Task Queue so that it can independently do the work for the
 user that it is associated with  
-3) Schedule Step 1 to run every half hour  
+1. Schedule Step 1 to run every half hour  
   
 Skeleton Code for Step 1:
 
+```python
     class TaskLoader(BaseRequestHandler):
 
         def get(self):  
@@ -80,11 +82,13 @@ datetime.datetime.now())
   
             logging.info("Ended load tasks (%d users) %s" % (count,
 datetime.datetime.now()))  
+```
   
 The Url call for this method: ('/taskloader/', TaskLoader),
 
 The Skeleton code for step 2:  
   
+```python
     class TaskWorker(BaseRequestHandler):  
          def post(self):  
              key = self.request.get('key')
@@ -97,6 +101,7 @@ The Skeleton code for step 2:
                      urlfetch.GET,  
                      {'Cache-Control':'no-cache,max-age=0', 'Pragma':'no-
 cache'})  
+```
   
 Url call for this method: ('/worker/', TaskWorker),
 
@@ -107,14 +112,13 @@ TaskWorker is called
 I can schedule these using cron.yaml in my project:  
   
 cron:  
-\- description: load the task queue  
+```
+description: load the task queue  
 url: /taskloader/  
 schedule: every 30 minutes  
+```
   
 This is a general overview of how to break up your batch in to smaller, easier
 to manage tasks. Please see the App Engine [documentation
 ](http://code.google.com/appengine/docs/python/overview.html)for more detailed
 information.
-
-"
-

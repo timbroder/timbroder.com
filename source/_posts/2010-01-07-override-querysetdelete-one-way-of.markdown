@@ -14,30 +14,29 @@ categories:
 
 We needed to override the default QuerySet delete function to deal with a
 client problem that we were facing  
-  
+
 Yes This is monkey-patching, and probably bad practice but if anyone needs to
 conditionally override the cascading delete that django does at the
 application level from a queryset, this is how to do it  
-  
 
-    
-    
-    from django.db.models.query import QuerySet
-    
-    #save original delete method
-    orrigdelete = QuerySet.delete
-    def showdelete(self):
-        #add on to delete method
-        for test in self:
-            if isinstance(test, YourObject):
-                raise Exception('someone tried to delete your object')
-                return  
-            else:
-                break   
-        #call original delete
-        return orrigdelete(self)
-    
-    #set the queryset delete as our new method
-    QuerySet.delete = showdelete
-    
 
+
+```python
+from django.db.models.query import QuerySet
+
+#save original delete method
+orrigdelete = QuerySet.delete
+def showdelete(self):
+    #add on to delete method
+    for test in self:
+        if isinstance(test, YourObject):
+            raise Exception('someone tried to delete your object')
+            return  
+        else:
+            break   
+    #call original delete
+    return orrigdelete(self)
+
+#set the queryset delete as our new method
+QuerySet.delete = showdelete
+```

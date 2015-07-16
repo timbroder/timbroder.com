@@ -18,11 +18,7 @@ quickest I found
 
   1. Click explore
   2. click "View all recommendations"  
-  
-
-[![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SzD8khAOeNI/AAAAAAAAeX4/RBFGgN8O-B8
-/s1600/read1.png)](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SzD8khAOeNI/AAAAAAAAe
-X4/RBFGgN8O-B8/s1600-h/read1.png)
+  	![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SzD8khAOeNI/AAAAAAAAeX4/RBFGgN8O-B8/s1600-h/read1.png)
 
   3. click Browse
   4. click Create a bundle  
@@ -30,9 +26,7 @@ X4/RBFGgN8O-B8/s1600-h/read1.png)
   
   
 
-[![](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SzD88D6_mgI/AAAAAAAAeYA/6QirJn9t9fc
-/s320/read2.png)](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SzD88D6_mgI/AAAAAAAAeY
-A/6QirJn9t9fc/s1600-h/read2.png)  
+	![](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SzD88D6_mgI/AAAAAAAAeYA/6QirJn9t9fc/s1600-h/read2.png)  
 
   
   
@@ -41,12 +35,9 @@ A/6QirJn9t9fc/s1600-h/read2.png)
   
   
 
-[![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SzD9LFlFG9I/AAAAAAAAeYI/MRJizzHj1Sc
-/s640/read3.png)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SzD9LFlFG9I/AAAAAAAAeY
-I/MRJizzHj1Sc/s1600-h/read3.png)  
+	![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SzD9LFlFG9I/AAAAAAAAeYI/MRJizzHj1Sc/s640/read3.png)  
 
   
   
 
   6. After this is done you can email the bundle to your friends  
-

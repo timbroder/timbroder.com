@@ -13,8 +13,7 @@ categories:
 ---
 
 I'm a'bloggin on the company blog! (Alexander Interactive) [Google Wave as a
-Project Collaboration Tool](http://www.alexanderinteractive.com/blog/2009/10
-/google-wave-as-a-project-collaboration-tool.html): "
+Project Collaboration Tool](http://www.alexanderinteractive.com/blog/2009/10/google-wave-as-a-project-collaboration-tool.html): 
 
 If you aren't already familiar with Google Wave, check out some basic info,
 and a very in-depth video [here](http://wave.google.com/help/wave/about.html).
@@ -70,6 +69,3 @@ Some notes on how Wave can help a project:
 As I said, Wave is very early in its adoption, but after more people join, and
 more developer plugins come out, I think it will be a very valuable tool both
 in the workplace and at home.
-
-"
-

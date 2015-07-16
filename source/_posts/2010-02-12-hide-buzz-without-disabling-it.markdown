@@ -16,5 +16,3 @@ If you want people to see your buzzes, but like myself want to keep checking
 people's google reader shares IN google reader, and see twitter in twitter,
 you can hide the Buzz label.  Go into settings &gt; labels &gt; buzz &gt; hide  
   
-yay
-

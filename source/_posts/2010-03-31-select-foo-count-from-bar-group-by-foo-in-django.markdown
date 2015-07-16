@@ -22,19 +22,19 @@ replicate in a queryset.  Say I wanted to get the authors and the number of
 articles they have written going back to the beginning of 2009 to the
 present:﻿
 
-    
-    
-    from django.db.models import Count
-    Article.objects
-    .filter(created_date__gte=datetime.datetime(2009,1,1))
-    .values('author')
-    .annotate(Count('author'))
-    
+
+```python
+from django.db.models import Count
+Article.objects
+	.filter(created_date__gte=datetime.datetime(2009,1,1))
+	.values('author')
+	.annotate(Count('author'))
+```
+
 
 The result:
 
-    
-    
-    [{'author__count': 1028, 'author': 17L}, {'author__count': 9, 'author': 9L}, {'author__count': 39, 'author': 12L}, {'author__count': 581, 'author': 10L}, {'author__count': 15, 'author': 7L}, {'author__count': 366, 'author': 13L}, {'author__count': 233, 'author': 5L}, {'author__count': 167, 'author': 15L}, {'author__count': 287, 'author': 14L}, {'author__count': 10, 'author': 6L}, {'author__count': 2101, 'author': 16L}]
-    
 
+```
+[{'author__count': 1028, 'author': 17L}, {'author__count': 9, 'author': 9L}, {'author__count': 39, 'author': 12L}, {'author__count': 581, 'author': 10L}, {'author__count': 15, 'author': 7L}, {'author__count': 366, 'author': 13L}, {'author__count': 233, 'author': 5L}, {'author__count': 167, 'author': 15L}, {'author__count': 287, 'author': 14L}, {'author__count': 10, 'author': 6L}, {'author__count': 2101, 'author': 16L}]
+```

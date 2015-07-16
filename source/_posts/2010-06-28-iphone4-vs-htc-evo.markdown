@@ -17,3 +17,5 @@ tags:
 
 Warning: cursing
 
+
+[![](http://img.youtube.com/vi/FL7yD-0pqZg/0.jpg)](http://www.youtube.com/watch?v=FL7yD-0pqZg)

@@ -19,6 +19,6 @@ Happy Holidays and thanks everyone for a great year.
 Check out my company's holiday E-card
 [here](http://www.alexanderinteractive.com/holiday/2009/)  
   
-Our VP of Security takes on an 8 legged intruder  
-  
+Our VP of Security takes on an 8 legged intruder 
 
+[![](http://img.youtube.com/vi/HZB3N9bqBSg/0.jpg)](http://www.youtube.com/watch?v=HZB3N9bqBSg)

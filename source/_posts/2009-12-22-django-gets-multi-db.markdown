@@ -27,4 +27,3 @@ Some of the offhand benifits I can see:
   
 For a great application of MongoDB on a news site see [Business
 Insider](http://www.businessinsider.com/how-we-use-mongodb-2009-11)  
-

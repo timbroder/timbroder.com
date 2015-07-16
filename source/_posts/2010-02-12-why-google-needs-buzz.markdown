@@ -26,6 +26,3 @@ a6KVRROg:XtH5NORu2hI:gIN9vFwOqvQ)](http://feeds.feedburner.com/%7Eff/krose?a
 =Ma-a6KVRROg:XtH5NORu2hI:gIN9vFwOqvQ) [![](http://feeds.feedburner.com/%7Eff/k
 rose?d=yIl2AUoC8zA)](http://feeds.feedburner.com/%7Eff/krose?a=Ma-
 a6KVRROg:XtH5NORu2hI:yIl2AUoC8zA)
-
-"
-

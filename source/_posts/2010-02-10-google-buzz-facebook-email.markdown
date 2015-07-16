@@ -16,8 +16,5 @@ categories:
 like functionality to gmail  
   
   
-Facebook is also [launching email](http://gizmodo.com/5465353/facebook-eyes-
-webmail-with-project-titan), interesting times ahead in the communication
+Facebook is also [launching email](http://gizmodo.com/5465353/facebook-eyes-webmail-with-project-titan), interesting times ahead in the communication
 world.  
-
-

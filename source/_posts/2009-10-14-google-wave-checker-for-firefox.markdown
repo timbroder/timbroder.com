@@ -17,7 +17,4 @@ people on it yet), but one of the annoying things was actually having to be in
 the app to see if I have new waves. [Firefox
 plugin](https://addons.mozilla.org/en-US/firefox/addon/14973), problem solved!
 
-[![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/StYwiumOMGI/AAAAAAAAeDM/0zzwORULv6s
-/s320/2009-10-14_1611_001.png)](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/StYwiumO
-MGI/AAAAAAAAeDM/0zzwORULv6s/s1600-h/2009-10-14_1611_001.png)
-
+![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/StYwiumOMGI/AAAAAAAAeDM/0zzwORULv6s/s1600-h/2009-10-14_1611_001.png)

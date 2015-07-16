@@ -17,5 +17,3 @@ I have quite a few Google Wave invites left, if you would like one
 [@broderboy](http://www.twitter.com/) me, or leave a comment below.  In all
 cases, please leave the email address to send the invite to.  
   
-  
-

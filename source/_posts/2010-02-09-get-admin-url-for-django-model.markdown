@@ -13,18 +13,17 @@ categories:
 ---
 
 Add this to your model to be able to get their admin change link from anywhere  
-  
+
 Useful if you want to jump to the admin screen of an object you are looking at
 on the front end  
-  
 
-    
-    
-    from django.core import urlresolvers
-    from django.contrib.contenttypes.models import ContentType
-    
-    def get_admin_url(self):
-        content_type = ContentType.objects.get_for_model(self.__class__)
-        return urlresolvers.reverse("admin:%s_%s_change" % (content_type.app_label, content_type.model), args=(self.id,))
-    
 
+
+```python
+from django.core import urlresolvers
+from django.contrib.contenttypes.models import ContentType
+
+def get_admin_url(self):
+    content_type = ContentType.objects.get_for_model(self.__class__)
+    return urlresolvers.reverse("admin:%s_%s_change" % (content_type.app_label, content_type.model), args=(self.id,))
+```

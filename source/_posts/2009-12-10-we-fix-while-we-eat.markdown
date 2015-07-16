@@ -17,12 +17,7 @@ Hey, thats me!
 [We fix while we eat](http://www.alexanderinteractive.com/blog/2009/12/we-fix-
 while-we-eat.html): "
 
-[![IMAG0015.jpg](http://www.alexanderinteractive.com/blog/assets_c/2009/12/IMA
-G0015-thumb-
-640x384-86.jpg)](http://www.alexanderinteractive.com/blog/IMAG0015.jpg)  
+![](http://www.alexanderinteractive.com/blog/IMAG0015.jpg)  
 Ai's David Napolitan and [Tim
 Broder](http://www.alexanderinteractive.com/blog/author/tim-broder-1/) fix a
 late night production bug
-
-"
-

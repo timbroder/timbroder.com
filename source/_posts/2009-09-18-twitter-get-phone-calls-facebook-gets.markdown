@@ -23,4 +23,3 @@ Sometime in the next few weeks, the social network's tens of millions of users
 will begin to be able to have high-quality voice conversations, even as its
 third-party developers are able to start including voice in their
 applications.
-
