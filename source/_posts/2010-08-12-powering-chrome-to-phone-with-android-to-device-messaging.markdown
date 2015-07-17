@@ -26,6 +26,4 @@ Google. [Chrome to Phone](http://chrome.blogspot.com/) comprises a Chrome
 Extension, an Android Application, and a Google AppEngine server. All of the
 code is open sourced and serves as a nice example of how to use C2DM. I really
 can't wait for the 2.2 update to my phone. Check out the technical brief
-[here](http://android-developers.blogspot.com/2010/08/powering-chrome-to-
-phone-with-android.html)
-
+[here](http://android-developers.blogspot.com/2010/08/powering-chrome-to-phone-with-android.html)

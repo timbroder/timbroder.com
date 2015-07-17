@@ -49,4 +49,3 @@ Geeks](http://webhostinggeeks.com/vpshosting.html) are:
   * [Lunar Pages](http://www.lpdedicated.com/index.php)
   * [1&amp;1](http://order.1and1.com/xml/order/VirtualServer)
   * [xlhost](http://www.xlhost.com/)
-

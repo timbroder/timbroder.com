@@ -18,4 +18,3 @@ tags:
 If anyone wants invites to the [new Digg site](http://new.digg.com/), or a
 Hulu Plus invite that can be activated right now, Post in the comments and
 I'll divvy them out
-

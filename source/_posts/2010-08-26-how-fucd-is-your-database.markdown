@@ -21,4 +21,3 @@ tags:
 
 Are you using PostgreSQL, MySQL, MSSQL, Oracle, SQLite, MS Access, or NoSQL?
 <http://howfuckedismydatabase.com/>
-

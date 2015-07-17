@@ -21,4 +21,3 @@ total number of articles read From your **233 subscriptions**, over the last
 **shared 62 items**, and **emailed 28 items**.
 
 Since **September 12, 2006** you have read a total of **72,380** items.
-

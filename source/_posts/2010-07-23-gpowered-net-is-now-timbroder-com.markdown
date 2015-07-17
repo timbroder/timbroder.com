@@ -26,4 +26,3 @@ lately, I'll try to post about those. There are two RSS links at the top, RSS
 has everything on this site including gpowered.  the gpowered RSS will
 continue to contain only tech articles. Let me know of any issues on the new
 site
-
