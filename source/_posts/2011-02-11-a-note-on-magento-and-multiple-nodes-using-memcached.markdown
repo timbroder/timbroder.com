@@ -18,7 +18,15 @@ tags:
 ---
 
 If you have multiple nodes using a shared memcached server, make sure you
-define a shared prefix for the keys to use. In local.xml: [xml] &lt;cache&gt;
-... &lt;prefix&gt;a1i&lt;/prefix&gt; &lt;id_prefix&gt;a1i&lt;/id_prefix&gt;
-&lt;memcached&gt; ... [/xml]
+define a shared prefix for the keys to use. 
 
+In local.xml: 
+
+```XML
+        <cache>
+...
+            <prefix>a1i</prefix>
+            <id_prefix>a1i</id_prefix>
+            <memcached>
+...
+```

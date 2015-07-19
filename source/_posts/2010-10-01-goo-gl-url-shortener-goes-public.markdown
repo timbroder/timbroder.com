@@ -19,4 +19,3 @@ tags:
 Google's URL shortener service is now public, complete with QR code generation
 Check it out: <http://goo.gl/AP5t> <http://goo.gl/AP5t.qr> It will be
 interesting to see how this stands up to [bit.ly](http://bit.ly)
-

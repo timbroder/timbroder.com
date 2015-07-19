@@ -14,4 +14,3 @@ categories:
 
 ![](http://www.igeektrooper.com/wp-
 content/uploads/2011/02/wolverinebatmen.jpg)
-

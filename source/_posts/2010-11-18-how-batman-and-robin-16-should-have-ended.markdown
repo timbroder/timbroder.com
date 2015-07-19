@@ -30,4 +30,3 @@ What SHOULD have happened:
 content/uploads/2010/11/batman3.jpg)](http://timbroder.com/wp-
 content/uploads/2010/11/batman3.jpg)Thanks to [John
 ](http://twitter.com/#!/falcore000)for the images
-

@@ -16,7 +16,10 @@ tags:
 ---
 
 Only have a single project running on [redmine](http://www.redmine.org/)? want
-it to be the homepage? in config/routes.rb in cofig/routes.rb [ruby]map.home
-'', :controller =&gt; 'projects', :action =&gt; 'show', :id =&gt;
-'my_project_name'[/ruby]
+it to be the homepage? 
 
+In ```config/routes.rb in cofig/routes.rb```
+
+```ruby
+map.home '', :controller =&gt; 'projects', :action =&gt; 'show', :id =&gt; 'my_project_name'
+```

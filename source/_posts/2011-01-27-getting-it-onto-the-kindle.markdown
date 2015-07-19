@@ -28,5 +28,4 @@ the ones I like the best:
   * "[Send to Kindle](https://chrome.google.com/webstore/detail/ipkfnchcgalnafehpglfbommidgmalan#)" for chrome is a button that will send the content of the page your are currently viewing.
   * The third method is the built in free Kindle email address that isn't broadly advertised: [your.name@free.kindle.com](your.name@free.kindle.com) will beam most docs that you mail it to your Kindle over wifi (does not work with 3G)
   * [Calibre](http://calibre-ebook.com/ "calibre" ) is great for managing what is on your Kindle and converting just about any file format to .mobi (a format the Kindle can read).  Calibre can also be used to [strip the DRM](https://apprenticealf.wordpress.com/2011/01/13/ebooks-formats-drm-and-you-%E2%80%94-a-guide-for-the-perplexed/) off of your purchased Kindle books
-http://www.youtube.com/watch?v=Xu_FgtM_Oqs
-
+[http://www.youtube.com/watch?v=Xu_FgtM_Oqs](http://www.youtube.com/watch?v=Xu_FgtM_Oqs "http://www.youtube.com/watch?v=Xu_FgtM_Oqs")

@@ -15,6 +15,8 @@ tags:
 - php
 ---
 
-[php] Mage::getConfig()-&gt;getNode()-&gt;asNiceXml('full_config.xml'); [/php]
-Where full_config.xml is the file you want it dumped to.
+```PHP
+Mage::getConfig()-&gt;getNode()-&gt;asNiceXml('full_config.xml');
+```
 
+Where full_config.xml is the file you want it dumped to. 

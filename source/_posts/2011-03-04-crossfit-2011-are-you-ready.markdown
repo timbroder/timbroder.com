@@ -12,5 +12,4 @@ categories:
 - Crossfit
 ---
 
-
-
+[![](http://img.youtube.com/vi/xqbw6hZW91k/0.jpg)](http://www.youtube.com/watch?v=xqbw6hZW91k)

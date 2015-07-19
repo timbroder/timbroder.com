@@ -31,5 +31,8 @@ want. In time, we may wonder how search ever worked in any other way.
 
 ## Benefits
 
-**Faster Searches:** By predicting your search and showing results before you finish typing, Google Instant can save 2-5 seconds per search. **Smarter Predictions:** Even when you don’t know exactly what you’re looking for, predictions help guide your search. The top prediction is shown in grey text directly in the search box, so you can stop typing as soon as you see what you need. **Instant Results:** Start typing and results appear right before your eyes. Until now, you had to type a full search term, hit return, and hope for the right results. Now results appear instantly as you type, helping you see where you’re headed, every step of the way.
+**Faster Searches:** By predicting your search and showing results before you finish typing, Google Instant can save 2-5 seconds per search. 
 
+**Smarter Predictions:** Even when you don’t know exactly what you’re looking for, predictions help guide your search. The top prediction is shown in grey text directly in the search box, so you can stop typing as soon as you see what you need. 
+
+**Instant Results:** Start typing and results appear right before your eyes. Until now, you had to type a full search term, hit return, and hope for the right results. Now results appear instantly as you type, helping you see where you’re headed, every step of the way.

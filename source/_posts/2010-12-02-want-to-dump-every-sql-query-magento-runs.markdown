@@ -17,16 +17,43 @@ tags:
 - Zend
 ---
 
-In: lib/Zend/DB/Adapter/Adapter.php [php]public function query($sql, $bind =
-array()) { // connect to the database if needed $this-&gt;_connect(); // is
-the $sql a Zend_Db_Select object? if ($sql instanceof Zend_Db_Select) { if
-(empty($bind)) { $bind = $sql-&gt;getBind(); } $sql = $sql-&gt;assemble(); }
-$time_start = microtime(true); // make sure $bind to an array; // don't use
-(array) typecasting because // because $bind may be a Zend_Db_Expr object if
-(!is_array($bind)) { $bind = array($bind); } // prepare and execute the
-statement with profiling $stmt = $this-&gt;prepare($sql);
-$stmt-&gt;execute($bind); // return the results embedded in the prepared
-statement object $stmt-&gt;setFetchMode($this-&gt;_fetchMode); $time_end =
-microtime(true); $time = $time_end - $time_start; echo "SQL[$time | $sql ]" .
-"\n&lt;br /&gt;\n"; return $stmt; }[/php]
+In: ```lib/Zend/DB/Adapter/Adapter.php```
 
+```PHP
+public function query($sql, $bind = array())
+{
+	// connect to the database if needed
+	$this->_connect();
+
+	// is the $sql a Zend_Db_Select object?
+	if ($sql instanceof Zend_Db_Select) {
+		if (empty($bind)) {
+			$bind = $sql->getBind();
+		}
+
+		$sql = $sql->assemble();
+	}
+	
+	$time_start = microtime(true);
+
+	// make sure $bind to an array;
+	// don't use (array) typecasting because
+	// because $bind may be a Zend_Db_Expr object
+	if (!is_array($bind)) {
+		$bind = array($bind);
+	}
+
+	// prepare and execute the statement with profiling
+	$stmt = $this->prepare($sql);
+	$stmt->execute($bind);
+
+	// return the results embedded in the prepared statement object
+	$stmt->setFetchMode($this->_fetchMode);
+
+	$time_end = microtime(true);
+	$time = $time_end - $time_start;
+
+	echo "SQL[$time | $sql ]" . "\n<br />\n";
+	return $stmt;
+}
+```

@@ -42,4 +42,3 @@ song "Where is the Lol? E"
 
 @werty Pretty sure Fergie raided Ace Frehley's closet for her Super Bowl
 halftime show costume. #superbowl #blackeyedpeas
-

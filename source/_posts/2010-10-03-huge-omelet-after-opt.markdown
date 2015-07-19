@@ -17,4 +17,3 @@ IMG_20101002_113547.jpg)
 
 James OPT Fitzgerald came to the black box yesterday which was a lot of fun.
 Needed a huge omelet after.
-

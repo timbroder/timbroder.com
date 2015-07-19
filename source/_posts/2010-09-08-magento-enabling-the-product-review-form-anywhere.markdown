@@ -16,9 +16,15 @@ tags:
 ---
 
 the form code lives in
-app/design/frontend/yourtemplate/default/template/review/form.phtml in
-catalog.xml enable it with: [xml]&lt;block type="review/form"
-name="product.info.review_form" as="review_form"
-template="review/form.phtml"/&gt;[/xml] and in your template: [php]&lt;?php
-echo $this-&gt;getChildHtml('review_form'); ?&gt;[/php]
+```app/design/frontend/yourtemplate/default/template/review/form.phtml``` in
+catalog.xml enable it with: 
 
+```xml
+<block type="review/form" name="product.info.review_form" as="review_form" template="review/form.phtml"/>
+```
+
+and in your template: 
+
+```PHP
+<?php echo $this->getChildHtml('review_form'); ?>
+```
