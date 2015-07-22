@@ -26,4 +26,3 @@ I wouldn't DO for that kind of data. Do we have our own custom tracking
 data we need? Yes and know. We can track conversions, user flows, A/B test
 what we need. But, the pixel level knowledge of HOW a user is using the site
 that Facebook seems to have seems pretty slick.
-

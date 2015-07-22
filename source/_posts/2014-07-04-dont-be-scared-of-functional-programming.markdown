@@ -22,4 +22,3 @@ PhDs, data scientists and architecture astronauts. For most of us, the real
 benefit of adopting a functional style is that our programs can be broken down
 into smaller, simpler pieces that are both more reliable and easier to
 understand.
-

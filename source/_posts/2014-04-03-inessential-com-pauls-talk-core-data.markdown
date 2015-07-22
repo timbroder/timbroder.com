@@ -23,4 +23,3 @@ I'm learning Core Data as part of my next app and am enjoying it so far.
 Eventually I'll be tackling sync. I need to see for myself how bad Coe Data
 sync is. I've had some exposure to FMDB by tinkering with Marco Arment's
 FCOfflineQueue in the same app.
-

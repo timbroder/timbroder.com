@@ -16,6 +16,4 @@ In his talk at Smashing Conf in Freiburg Germany 2013 Dan Rubin talked about
 the impact of motivation on our work. Here are some notes from his talk Why We
 Do What We Do:
 
-via [Smashing Conf: Why We Do What We
-Do](http://www.lukew.com/ff/entry.asp?1791=).
-
+via [Smashing Conf: Why We Do What We Do](http://www.lukew.com/ff/entry.asp?1791=).

@@ -20,14 +20,21 @@ tags:
 ---
 
 If you are using [AdWhirl](https://www.adwhirl.com/) and want the ad to slide
-in from the bottom of the screen when your View loads, use this snippet: [c]
-\- (void)viewDidLoad { [super viewDidLoad]; AdWhirlView *adWhirlView =
-[AdWhirlView requestAdWhirlViewWithDelegate:self]; adWhirlView.delegate =
-self; adWhirlView.frame = CGRectMake(0, 430+kAdWhirlViewHeight,
-kAdWhirlViewWidth, kAdWhirlViewHeight); [self.parentViewController.view
-insertSubview:adWhirlView belowSubview:self.view]; [UIView
-beginAnimations:@"AdWhirlIn" context:nil]; [UIView setAnimationDuration:.5];
-[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut]; adWhirlView.frame =
-CGRectMake(0, 430, kAdWhirlViewWidth, kAdWhirlViewHeight); [UIView
-commitAnimations]; } [/c]
+in from the bottom of the screen when your View loads, use this snippet:
 
+```c
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    AdWhirlView *adWhirlView = [AdWhirlView requestAdWhirlViewWithDelegate:self];
+    adWhirlView.delegate = self;
+    adWhirlView.frame = CGRectMake(0, 430+kAdWhirlViewHeight, kAdWhirlViewWidth, kAdWhirlViewHeight);
+    [self.parentViewController.view insertSubview:adWhirlView belowSubview:self.view];
+
+    [UIView beginAnimations:@&quot;AdWhirlIn&quot; context:nil];
+    [UIView setAnimationDuration:.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    adWhirlView.frame = CGRectMake(0, 430, kAdWhirlViewWidth, kAdWhirlViewHeight);
+    [UIView commitAnimations];
+}
+```

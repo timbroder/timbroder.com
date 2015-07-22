@@ -26,4 +26,3 @@ Rust, we have issues for feature requests, meta-issues… everything. For some
 repositories, closing all of the issues is not feasible, and for others,
 you’re shooting for zero. (If you don’t believe that this is even possible,
 check out Sequel. Issues are rarely even open for more than a few days!)
-

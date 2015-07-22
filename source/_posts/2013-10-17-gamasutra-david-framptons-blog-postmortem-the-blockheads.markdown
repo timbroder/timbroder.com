@@ -28,7 +28,4 @@ release of the 1.4 update it finally no longer feels "incomplete". So its time
 to share some of the story of its development, and where I feel I went right
 and wrong with The Blockheads.
 
-via [Gamasutra: David Framptons Blog - Postmortem: The Blockheads](http://www.
-gamasutra.com/blogs/DavidFrampton/20131012/202246/Postmortem_The_Blockheads.ph
-p).
-
+via [Gamasutra: David Framptons Blog - Postmortem: The Blockheads](http://www.gamasutra.com/blogs/DavidFrampton/20131012/202246/Postmortem_The_Blockheads.php).

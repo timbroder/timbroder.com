@@ -22,4 +22,3 @@ David Smith's article on the implications (and related cost) of background
 fetch gave me a few things to think about. I have a few parts of my new app
 that use background fetch. Thus far I have been guilty of #2: **Be honest when
 your application didn’t get data from a fetch.** This needs to change.
-

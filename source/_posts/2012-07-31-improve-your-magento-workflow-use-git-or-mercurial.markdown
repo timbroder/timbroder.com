@@ -28,8 +28,11 @@ knees.  It's honestly better to go shoot a quick game of pool while its
 switching rather then try to get anything done.  Eventually... we'll get it
 into mercurial.   Anyway, to migrate a project from svn to git, use the
 following command: [code]git svn clone http://svn/repo/here/trunk[/code] To
-migrate a project from svn to hg, use the following command: [code]hg convert
-http://svn/repo/here/trunk[/code]   Branching is now much, much easier and if
+migrate a project from svn to hg, use the following command: 
+```
+hg convert http://svn/repo/here/trunk```   
+
+Branching is now much, much easier and if
 that isn't enough for you to switch here are a few more reasons:
 
   * git is much easier to use than when it first came out
@@ -40,4 +43,3 @@ that isn't enough for you to switch here are a few more reasons:
   * branching takes on a whole new level. Create custom workflows base on release, or bug, or whatever you want
   * merging is exponentially smoother than SVN (yes, I listed this twice)
   * visual branch diagrams
-

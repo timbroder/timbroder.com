@@ -21,4 +21,3 @@ I hear this. As I get older, and keep to a rigid sleep schedule, I tend to
 find myself being useless after 9pm. I do miss the old days io burning through
 until 2am. Now that flux exists to take care of the circadian issues, we
 should be able to burn all night. Right? RIGHT!?!
-

@@ -16,18 +16,33 @@ tags:
 - wordpress
 ---
 
-By default, Wordpress will link directly to an image in the category or post
-view.  In a project I was working on today I wanted to change that. On the
-category view I wanted the image just to link to the post, and in the post, I
-didn't want a link at all. Useful trick I found below: [php] function
-change_image_permalink($content){ $format = get_post_format(); //category
-listing page. link image to post if (is_single() === FALSE AND $format ==
-'image'){ $content = preg_replace( array('{&lt;a(.*?)(wp-att|wp-
-content/uploads)[^&gt;]*&gt;&lt;img}','{ wp-image-[0-9]*" /&gt;&lt;/a&gt;}'),
-array('&lt;a href="' . get_permalink() . '"&gt;&lt;img','" /&gt;&lt;/a&gt;'),
-$content ); } //post page. remove link else if ($format == 'image'){ $content
-= preg_replace( array('{&lt;a(.*?)(wp-att|wp-
-content/uploads)[^&gt;]*&gt;&lt;img}','{ wp-image-[0-9]*" /&gt;&lt;/a&gt;}'),
-array('&lt;img','" /&gt;'), $content ); } return $content; }
-add_filter('the_content', 'change_image_permalink'); [/php]
+By default, WordPress will link directly to an image in the category or post view.  In a project I was working on today I wanted to change that. On the category view I wanted the image just to link to the post, and in the post, I didn’t want a link at all. Useful trick I found below:
 
+```PHP
+function change_image_permalink($content){
+	$format = get_post_format();
+ 
+	//category listing page. link image to post
+	if (is_single() === FALSE AND $format == 'image'){
+		$content =
+		preg_replace(
+			array('{<a(.*?)(wp-att|wp-content/uploads)[^>]*><img}','{ wp-image-[0-9]*&quot; /></a>}'),
+			array('<a href=&quot;' . get_permalink() . '&quot;><img','&quot; /></a>'),
+			$content
+		);
+	}
+
+	//post page. remove link
+	else if ($format == 'image'){
+		$content =
+			preg_replace(
+				array('{<a(.*?)(wp-att|wp-content/uploads)[^>]*><img}','{ wp-image-[0-9]*&quot; /></a>}'),
+				array('<img','&quot; />'),
+				$content
+			);
+	}
+	
+	return $content;
+}
+add_filter('the_content', 'change_image_permalink');
+```

@@ -20,8 +20,7 @@ something like this. Maybe a few more here..
 
   * The dev intro video was awesome. It’s like Apple saying “We love you, we’ve heard you”
   * That’s a lot of Apple engineers present
-
-It’s a shame I can’t risk my laptop. I want to play with Yosemite! I dig the
+  * It’s a shame I can’t risk my laptop. I want to play with Yosemite! I dig the
 new look
 
   * Ooo dark mode
@@ -33,8 +32,6 @@ new look
   * Proximity calls is crazy. Listening to music on laptop with headphones, call comes in, boom.
   * Hmm, maybe I’ll install the public beta…..
 
-8
-
   * Interactive notifications, thank god. one of the few things still on my “I miss from Android list”
   * Context typing looks hot. I missed switfkey
   * I’m curious if Health can accurately track my sleep. But, I don’t want my device in bed with me
@@ -43,7 +40,7 @@ new look
   * Ah, there we go. Paid tiers. Will probably stick with Flickr for my ultimate backup. (All are also backed up to CrashPlan)
   * Hah, Shazam Siri. Nice
 
-50 mins in the keynote for DEV
+* 50 mins in the keynote for DEV
 
   * App store improvements are awesome. The lists, searches, App bundles. Apple LISTENED. wow. Whoa App preview videos
   * Ahh There’s Test Flight! And it’s free
@@ -65,4 +62,9 @@ new look
 ————  
 Written using [MarsEdit](https://itunes.apple.com/us/app/marsedit-blog-editor-
 for-wordpress/id402376225?mt=12&at=11laRZ&ct=pro)
+
+[акклиматизация в
+горах](https://altezza.travel/articles/Acclimatization)[заявление на получение
+кредита по образцу банка](http://rossobstvennik.ru/anketa-zayavlenie-na-
+poluchenie-kredita.php "образец заявки на получение займа" )
 

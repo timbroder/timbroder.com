@@ -25,4 +25,3 @@ something. Open social? Reader? I've lost faith in them over the past few
 years. (And this blog's original name was gPowered) Time will tell but the
 "best" option IMO is still Titanium. I say that with finger quotes because
 they all suck.
-

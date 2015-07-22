@@ -38,4 +38,3 @@ This is a **huge** pet peeve of mine. "Did you have a chance to respond to
 that email I sent you 30 seconds ago?" drives me nuts. If it's an emergency,
 send me an IM. If I'm offline or don't respond, get up off your ass and walk
 over. If I'm remote and offline for some reason, text me.
-

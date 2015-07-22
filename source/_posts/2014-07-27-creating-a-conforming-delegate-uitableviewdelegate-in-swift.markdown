@@ -19,12 +19,9 @@ This tripped me up for a bit so I hope this helps someone.
 I started out with this class, thinking I could just continue on my merry way.
 This errors in Xcode with: "_class does not conform to NSObjectProtocol_”
 
-    
-    
-    class FastListUITableViewDelegate : UITableViewDelegate {
-        
-    }
-    
+```swift 
+class FastListUITableViewDelegate : UITableViewDelegate { }
+ ```
 
 Hmm ok, but much there yet, what did I miss? This should definitely be a
 class; not a protocol (I have methods to implement), not a @class_protocol
@@ -36,12 +33,8 @@ class and C eventually rolls up to this…
 
 This is working so far:
 
-    
-    
-    class FastListUITableViewDelegate : NSObject, UITableViewDelegate {
-        
-    }
-    
+```swift 
+class FastListUITableViewDelegate : NSObject, UITableViewDelegate { }
+```
 
 I’ll report back here if this solution changes
-

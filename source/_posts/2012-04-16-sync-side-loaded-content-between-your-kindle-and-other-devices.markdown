@@ -35,4 +35,3 @@ Git](http://shop.oreilly.com/product/9780596520137.do).
   8. Copy the book to your kindle via USB. Either by dragging it in your file manager or through Calibre. Do not use email, wifi, or 3g to do this, it will remove the ASIN code that we just wrapped onto the document. Once it is on the device syncing over wifi/3g will function as normal)
   9. Using USB, copy the file to your device. For android this is the kindle folder on your SD card. I haven't tested but doing through iTunes is supposed to work for an iphone/ipad.
 Enjoy!
-

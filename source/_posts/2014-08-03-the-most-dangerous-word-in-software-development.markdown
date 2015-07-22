@@ -23,4 +23,3 @@ categories:
 > “Just add [insert complex option here] to the settings screen.”
 
 If any of these sentences rings true or makes you cringe, read this article.
-

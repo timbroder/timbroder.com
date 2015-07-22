@@ -35,4 +35,3 @@ such as TestsLive.com, which include tutorials and full length, detailed
 practice exams. Practice tests are among the most valuable of exam prep
 activities as they allow you to measure your knowledge attainment and testing
 readiness prior to scheduling your 1Y0-A23 exam.
-

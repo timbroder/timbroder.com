@@ -18,10 +18,7 @@ tags:
 ---
 
 Sort of. It acts as a queue, but subsequent items have problems. Taken from
-the [documentation](https://developer.apple.com/library/ios/documentation/AVFo
-undation/Reference/AVSpeechSynthesizer_Ref/Reference/Reference.html#//apple_re
-f/occ/instm/AVSpeechSynthesizer/speakUtterance:) of -
-(void)speakUtterance:(AVSpeechUtterance *)_utterance_
+the [documentation](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVSpeechSynthesizer_Ref/Reference/Reference.html#//apple_ref/occ/instm/AVSpeechSynthesizer/speakUtterance: "documentation") of ```- (void)speakUtterance:(AVSpeechUtterance *)_utterance_```
 
 > Calling this method adds the utterance to a **queue; utterances are spoken
 in the order in which they are added to the queue**. If the synthesizer is not
@@ -45,37 +42,89 @@ stored in a separate Text entity. A Read object can have many of these.  This
 gives me control over how much text I load into memory at once.  My original
 plan was to load each slice into an Utterance.  When the speaking was done for
 that Utternace, queue up the next one (it should start immediatly or close to
-it). Fragments of this below: [c] self.speechSynthesizer =
-[AVSpeechSynthesizer new]; self.speechSynthesizer.delegate = self; \-
-(BOOL)addWordsToQueue:(NSString *)words { if ( !words ) { return NO; }
-AVSpeechUtterance *utterance = [AVSpeechUtterance
-speechUtteranceWithString:words]; utterance.rate =
-AVSpeechUtteranceMinimumSpeechRate; [self.speechSynthesizer
-speakUtterance:utterance]; return YES; } //used in view \- (void)play {
-[self.speechSynthesizer continueSpeaking]; } \- (void)pause {
-[self.speechSynthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate]; }
-\- (BOOL)isPaused { return self.speechSynthesizer.isPaused; } #pragma mark -
-AVSpeechSynthesizerDelegate \- (void)speechSynthesizer:(AVSpeechSynthesizer
-*)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
-NSString *words = [read getAndIncrementCurrentWordsAsString]; if ( words !=
-nil ) { [self addWordsToQueue:words]; } } [/c] Again, the first Utterance
+it). Fragments of this below: 
+
+```C
+    self.speechSynthesizer = [AVSpeechSynthesizer new];
+    self.speechSynthesizer.delegate = self;
+ 
+- (BOOL)addWordsToQueue:(NSString *)words
+{
+    if ( !words ) {
+        return NO;
+    }
+ 
+    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:words];
+    utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+    [self.speechSynthesizer speakUtterance:utterance];
+ 
+    return YES;
+}
+ 
+//used in view
+- (void)play
+{
+    [self.speechSynthesizer continueSpeaking];
+}
+ 
+- (void)pause
+{
+    [self.speechSynthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+}
+ 
+- (BOOL)isPaused
+{
+    return self.speechSynthesizer.isPaused;
+}
+ 
+#pragma mark - AVSpeechSynthesizerDelegate
+ 
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance
+{
+    NSString *words = [read getAndIncrementCurrentWordsAsString];
+ 
+    if ( words != nil ) {
+        [self addWordsToQueue:words];
+    }
+}
+```
+
+Again, the first Utterance
 works fine, the rest don't. I've also experimented with queueing multiple
 slices at once, as well as checking if the synthesizer I get in
-didFinishSpeechUtterance is the correct instance. I'm
-[not](http://stackoverflow.com/questions/19672814/an-issue-with-
-avspeechsynthesizer-any-workarounds) the first person to run into this issue.
+didFinishSpeechUtterance is the correct instance. 
+
+I'm
+[not](http://stackoverflow.com/questions/19672814/an-issue-with-avspeechsynthesizer-any-workarounds) the first person to run into this issue.
 There are also a number of
 [radars](http://openradar.appspot.com/search?query=AVSpeechSynthesizer+). I've
-added one as well. There is a workaround, but it's dirty and shouldn't be
+added one as well. 
+
+There is a workaround, but it's dirty and shouldn't be
 needed. In didFinishSpeechUtterance I recreate my AVSpeechSynthesizer so I'm
 always dealing with the first item in the queue. I really don't like it.  This
 is still broken in 7.1 beta 5. Hopefully it gets fixed. I'd like to implement
-this properly. [c] \- (void) resetSynth { self.speechSynthesizer =
-[AVSpeechSynthesizer new]; self.speechSynthesizer.delegate = self; } #pragma
-mark - AVSpeechSynthesizerDelegate \-
-(void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer
-didFinishSpeechUtterance:(AVSpeechUtterance *)utterance { [self resetSynth];
-NSString *words = [read getAndIncrementCurrentWordsAsString]; if ( words !=
-nil ) { [self addWordsToQueue:words]; } } [/c] This unfortunately still
-happens in the 7.1 beta
+this properly. 
 
+```C
+- (void) resetSynth
+{
+    self.speechSynthesizer = [AVSpeechSynthesizer new];
+    self.speechSynthesizer.delegate = self;
+}
+ 
+#pragma mark - AVSpeechSynthesizerDelegate
+ 
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance
+{
+    [self resetSynth];
+    NSString *words = [read getAndIncrementCurrentWordsAsString];
+ 
+    if ( words != nil ) {
+        [self addWordsToQueue:words];
+    }
+}
+```
+
+This unfortunately still
+happens in the 7.1 beta

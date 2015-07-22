@@ -18,6 +18,4 @@ contacting them. This is one thing that needs to change on the App Store.
 
 I agree. I sometimes have luck with stalking people down on twitter. But, it
 breaks my heart when I could easily help someone if they have an issue with
-[Weather Notifications](https://itunes.apple.com/us/app/weather-
-notifications/id704052114?ls=1&mt=8&at=11laRZ&ct=LCP)
-
+[Weather Notifications](https://itunes.apple.com/us/app/weather-notifications/id704052114?ls=1&mt=8&at=11laRZ&ct=LCP)

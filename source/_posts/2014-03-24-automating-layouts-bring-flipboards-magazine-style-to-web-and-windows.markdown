@@ -28,4 +28,3 @@ to meet all we can, but staffs change over time)
 
 The way that flipboard handles this is fascinating. I wish we had time on one
 of these sites to get to this level.
-

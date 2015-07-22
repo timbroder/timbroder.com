@@ -17,4 +17,3 @@ is tangibly improving the health and lives of my customers.
 
 Such an awesome feeling. I can only hope my next app helps improve someone.
 This one won't help their health, but hopefully other parts of their life.
-

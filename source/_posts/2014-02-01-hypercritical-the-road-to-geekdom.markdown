@@ -26,4 +26,3 @@ you. Ignore them and dive headfirst into the things that interest you. Soak up
 every experience. Lose yourself in the pursuit of knowledge. When you finally
 come up for air, you’ll find that the long road to geekdom no longer stretches
 out before you. No one can deny you entry. You’re already home.
-

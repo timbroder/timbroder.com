@@ -17,4 +17,3 @@ the most successful stealth, insurgent technology on the web. It is pervasive
 and is the engine for much of the Internet.
 
 Long live RSS!
-

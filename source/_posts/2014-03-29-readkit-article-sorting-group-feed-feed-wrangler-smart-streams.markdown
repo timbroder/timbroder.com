@@ -20,4 +20,3 @@ right-click on the RSS News item in the left panel and choose from the popup
 menu. That brings up a sheet where you can set the ordering.
 
 Thank god. This was driving me nuts.
-

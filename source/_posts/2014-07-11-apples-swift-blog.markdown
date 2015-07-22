@@ -21,4 +21,3 @@ down, some Apple devs being more open on twitter and in the dev forums, and
 now this [blog](https://developer.apple.com/swift/blog/).
 
 It’s an amazing time to be using Apple dev tools
-

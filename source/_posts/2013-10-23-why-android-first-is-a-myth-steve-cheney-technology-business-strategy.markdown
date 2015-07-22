@@ -17,10 +17,10 @@ hardcore android proponent in general and at work).  I’m happy to have other
 validation with my choice
 
 > [Why Android First is a Myth | steve cheney – technology, business &amp;
-strategy](http://stevecheney.com/why-android-first-is-a-myth/): "In mobile,
+strategy](http://stevecheney.com/why-android-first-is-a-myth/):
+> In mobile,
 particularly in consumer markets, there has been an ongoing debate about when
 or if Android will become the first platform that sophisticated startups
 develop for. Often times, this argument is wrongly centered around vanity
 metrics for Android such as worldwide shipments or installed base of each
 platform."
-

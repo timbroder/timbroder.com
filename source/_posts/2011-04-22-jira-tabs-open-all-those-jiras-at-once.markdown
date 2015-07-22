@@ -15,16 +15,14 @@ tags:
 - JIRA
 ---
 
+Update: Code lives on [GitHub](https://github.com/broderboy/jira-tabs "GitHub")
+
 Ever want to open all the Jira’s on the screen in new tabs? Jess does, I do,
 and you should too! For firefox and chrome we now have the JiraTabs bookmark
-button. Drag this link up to your bookmarks bar: [JiraTabs](javascript:
-function tab\(where\){ var elms =
-document.getElementById\(where\).getElementsByTagName\('tr'\); var
-conf=confirm\('Do you want to open '+\(elms.length-1\)+' Jiras?'\);
-if\(conf\){ for\(var i=1; i<elms.length; i++\){ var url = elms\[i\].getElement
-sByClassName\('summary'\)\[0\].getElementsByTagName\('a'\)\[0\];
-window.open\(url.href\);}  } } tab\('issuetable'\);). Then, whenever you are
+button. Go to [this page](http://broderboy.github.io/jira-tabs/ "this page") and drag the link up to your bookmarks bar. Then, whenever you are
 on a filter or search view of Jira's, click the button and all the jira's on
-your screen will open up in new tabs Demo:  Any updates will be made
-[here](https://bitbucket.org/broderboy/jira-tabs/src).
+your screen will open up in new tabs 
 
+Demo:
+
+[![](http://img.youtube.com/vi/PltTkfuhKfM/0.jpg)](http://www.youtube.com/watch?v=PltTkfuhKfM)

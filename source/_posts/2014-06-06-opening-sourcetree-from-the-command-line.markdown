@@ -28,5 +28,5 @@ I use this alias to open it right from my working directory:
   
 ---  
   
-Then, just “sourcetree .” from where I am
+Then, just ```“sourcetree .”``` from where I am
 

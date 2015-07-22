@@ -26,12 +26,8 @@ Azure, Office 365 and the like.
 After following what both he and Brent Simmons have been doing with Azure, I'm
 more than a little curious to tinker with it. I've only recently tried
 something higher level than AWS, I was a heroku virgin. So, I don't feel I'm
-biased. The price wars, as well as a [number](http://carpeaqua.com/2014/03/26
-/the-parts-of-your-platform/) of [arguments](http://www.marco.org/2014/03/27
-/web-hosting-for-app-developers) for/[against](http://inessential.com/2014/03/
-27/on_running_your_own_servers_and_why_we) VPS vs
+biased. The price wars, as well as a [number](http://carpeaqua.com/2014/03/26/the-parts-of-your-platform/) of [arguments](http://www.marco.org/2014/03/27/web-hosting-for-app-developers) for/[against](http://inessential.com/2014/03/27/on_running_your_own_servers_and_why_we) VPS vs
 [higher](http://www.marco.org/2014/03/27/what-did-brent-learn) level have had
 this on my kind lately. Mobile Services as a first class citizen on Azure is
 interesting. AWS is trying with their push service, but it feels like an
 afterthought at the moment.
-

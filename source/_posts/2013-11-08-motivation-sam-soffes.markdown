@@ -30,4 +30,3 @@ great saying:
 
 > I love this. He was talking about getting ideas in the shower and getting so
 excited that you get out and start programming before you can even dry off."
-

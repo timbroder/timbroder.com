@@ -21,12 +21,7 @@ writing on the web.
 #RSS4LIFE
 
 Joking aside, I do get a lot of my news from twitter these days. I would say
-half the articles that I'd be interested in reading (dumping to [Instapaper](h
-ttps://itunes.apple.com/us/app/instapaper/id288545208?mt=8&at=11laRZ&ct=LCP)
-from [Reeder](https://itunes.apple.com/us/app/reeder-2/id697846300?mt=8&at=11l
-aRZ&ct=LCP) or [Mr. reader](https://itunes.apple.com/us/app/mr.-reader/id41287
-4834?mt=8&at=11laRZ&ct=LCP)) I've already added from twitter. Luckily, I use
-[Feed Wrangler](https://itunes.apple.com/us/app/feed-
-wrangler/id634486174?mt=8k) so I don't see duplicates of something already in
+half the articles that I'd be interested in reading (dumping to [Instapaper](https://itunes.apple.com/us/app/instapaper/id288545208?mt=8&at=11laRZ&ct=LCP)
+from [Reeder](https://itunes.apple.com/us/app/reeder-2/id697846300?mt=8&at=11laRZ&ct=LCP) or [Mr. reader](https://itunes.apple.com/us/app/mr.-reader/id412874834?mt=8&at=11laRZ&ct=LCP)) I've already added from twitter. Luckily, I use
+[Feed Wrangler](https://itunes.apple.com/us/app/feed-wrangler/id634486174?mt=8k) so I don't see duplicates of something already in
 Instapaper when browsing my feeds.
-

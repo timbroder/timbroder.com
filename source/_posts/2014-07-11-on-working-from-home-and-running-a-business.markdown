@@ -28,4 +28,3 @@ When we were saving for the down pay payment on our condo we were using a
 combination of mint.com and an allowance (envelope method, cash) I've started
 playing around with mint again to get a better idea of what we spend lonely on
 and prep us for the next chapter.
-

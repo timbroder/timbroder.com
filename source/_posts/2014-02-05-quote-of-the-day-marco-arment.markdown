@@ -14,4 +14,3 @@ categories:
 
 > “Emphasizing and rewarding length over quality results in worse writing and
 more reader abandonment.” – Marco Arment
-

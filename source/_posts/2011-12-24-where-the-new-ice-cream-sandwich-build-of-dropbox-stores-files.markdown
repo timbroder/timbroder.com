@@ -15,8 +15,6 @@ tags:
 - dropbox
 ---
 
-In the old version of dropbox, you used to be able to long press &gt; download
+In the old version of dropbox, you used to be able to long press > download
 a file.  This has been replaced by "favorite". Instead of going to:
-/sdcard/dropbox These files are now stored in:
-/sdcard/Android/data/com.dropbox.android/files/scratch
-
+```/sdcard/dropbox``` These files are now stored in: ```/sdcard/Android/data/com.dropbox.android/files/scratch```

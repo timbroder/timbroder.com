@@ -22,10 +22,12 @@ I’m moving on to Delete and Edit.  Editing the content itself isn’t needed,
 once an item is added to this list, it can’t be changed. Deleting is
 straightforward in
 
-[c]- (void)controller:(NSFetchedResultsController *)controller
+```c
+(void)controller:(NSFetchedResultsController *)controller
 didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath
 forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath
-*)newIndexPath { [/c]
+*)newIndexPath {
+```
 
 With reordering, I have a conundrum.  I have an
 [approach](http://stackoverflow.com/a/2013070/647343) for the actual re-order
@@ -63,9 +65,7 @@ Batch fetch/update/save is my starting point
 
 **Update** 2014-06-06 04:04 PM
 
-It looks like iOS 8 might have better bulk update support. Downloading [this](
-http://devstreaming.apple.com/videos/wwdc/2014/225xxgzhqylosff/225/225_hd_what
-s_new_in_core_data.mov?dl=1) session now
+It looks like iOS 8 might have better bulk update support. Downloading [this](http://devstreaming.apple.com/videos/wwdc/2014/225xxgzhqylosff/225/225_hd_whats_new_in_core_data.mov?dl=1) session now
 
 > [@inessential](https://twitter.com/inessential)
 [@brentsimmons](https://twitter.com/brentsimmons) You might like the Core Data
@@ -76,4 +76,5 @@ demo
 
 > -- solsberg (@solsberg) [June 6,
 2014](https://twitter.com/solsberg/statuses/474993780186447872)
+
 

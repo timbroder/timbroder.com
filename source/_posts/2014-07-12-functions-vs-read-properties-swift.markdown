@@ -23,29 +23,20 @@ property-vs-function-in-swift), so that’s validating.
 
 Property:
 
-    
-    
-    extension String {
-        var fullSentences: [String] {
-            // stuff
-        }
+```c
+extension String {
+    var fullSentences: [String] {
+        // stuff
     }
-    
+}
+```
 
 Function:
 
-    
-    
-    extension String {
-        func fullSentences() -> [String] {
-            // stuff
-        }
+```c
+extension String {
+    func fullSentences() -&gt; [String] {
+        // stuff
     }
-    
-
-[sourcecode wraplines=false gutter=false autolinks=false]  
-Fool by randomness and the black swan
-
-   foo fo fo fo offoofoofo offo  
-[/sourcecode]
-
+}
+```

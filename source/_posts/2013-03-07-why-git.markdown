@@ -24,4 +24,3 @@ pages](http://pages.github.com/). I cover the following:
   * Why Git?
   * Git at [Ai](http://bit.ly/aiwork)
 Check out the slides [here](http://broderboy.github.com/git-presentation/)
-

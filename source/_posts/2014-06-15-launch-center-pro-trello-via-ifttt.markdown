@@ -12,15 +12,11 @@ categories:
 - Code
 ---
 
-I previously [wrote](http://timbroder.com/2013/03/automating-adding-to-trello-
-on-ios.html) about automating adding to Trello from my phone using [Launch
-Center Pro](https://itunes.apple.com/us/app/launch-center-
-pro/id532016360?mt=8&at=11laRZ&ct=pro).  That method involved some scripting
-and [Pythonista](https://itunes.apple.com/us/app/pythonista/id528579881?mt=8&a
-t=11laRZ&ct=pro). It was fun to figure out, but cumbersome to update.
+I previously [wrote](http://timbroder.com/2013/03/automating-adding-to-trello-on-ios.html) about automating adding to Trello from my phone using [Launch
+Center Pro](https://itunes.apple.com/us/app/launch-center-pro/id532016360?mt=8&at=11laRZ&ct=pro).  That method involved some scripting
+and [Pythonista](https://itunes.apple.com/us/app/pythonista/id528579881?mt=8&at=11laRZ&ct=pro). It was fun to figure out, but cumbersome to update.
 
-Now that LCP has [IFTTT integration](http://www.macstories.net/reviews/launch-
-center-pro-2-3-extends-ios-automation/), this process can be simplified. You
+Now that LCP has [IFTTT integration](http://www.macstories.net/reviews/launch-center-pro-2-3-extends-ios-automation/), this process can be simplified. You
 can chain an event from LCP through IFTTT to email a card to Trello. _Note:
 This will only work for 1 list per board. I haven’t figured out if there is a
 way to email to multiple lists on the same board._
@@ -46,4 +42,3 @@ way to email to multiple lists on the same board._
 ![](https://farm4.staticflickr.com/3879/14233796739_efd5e6b108_z_d.jpg)  
 ![](https://farm6.staticflickr.com/5238/14420441225_452eec6f4d_z_d.jpg)  
 ![](https://farm4.staticflickr.com/3887/14428758365_d2df4fc207_m_d.jpg)
-

@@ -17,4 +17,3 @@ safe? If we catch just one bug from entering production, isn’t it worth it?”
 Fuck no it ain’t, and don’t call me Phil. This line of argument is how we got
 the TSA, and how they squandered billions fondling balls and confiscating nail
 clippers.
-

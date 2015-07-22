@@ -22,7 +22,13 @@ back to the server. The custom css attributes are in a small css file that is
 generated on pageload and then cached to the server. All of the admin
 functionality is done through ajax, so I wanted a good way to update the UI of
 the site without having to do a full pageload. The below function was a great
-help. [javascript] function reloadStylesheets() { var queryString = '?reload='
-+ new Date().getTime(); $('link[rel="stylesheet"]').each(function () {
-this.href = this.href.replace(/\?.*|$/, queryString); }); } [/javascript]
+help.
 
+```javascript
+function reloadStylesheets() {
+    var queryString = '?reload=' + new Date().getTime();
+    $('link[rel=&quot;stylesheet&quot;]').each(function () {
+        this.href = this.href.replace(/\?.*|$/, queryString);
+    });
+}
+```

@@ -15,4 +15,3 @@ categories:
 > Pretty much any migration can be done without stopping the world. You
 migrate in steps, with double writes and double reads at some points. Here’s
 the general outline
-

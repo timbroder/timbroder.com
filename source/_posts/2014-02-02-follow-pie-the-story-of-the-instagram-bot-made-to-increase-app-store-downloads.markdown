@@ -16,4 +16,3 @@ categories:
 
 Not helpful for any of my current ideas I don't think. Maybe one of the ides
 on the short list... Good read though
-

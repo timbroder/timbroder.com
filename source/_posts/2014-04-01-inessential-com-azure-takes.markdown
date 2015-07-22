@@ -18,4 +18,3 @@ surely. (I just made up the acronym WOES. It fits.)
 
 Brent Simmons talked a little about the new Microsoft CEO coming from the
 azure team and what it could mean. I love this acronym.
-

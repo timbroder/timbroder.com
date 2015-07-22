@@ -19,4 +19,3 @@ back and that advice has served me well.
 
 Ash Furrow talks about the benefits of abstraction and how it can aid in ramp
 up. A good, short read
-

@@ -12,5 +12,4 @@ categories:
 - Code
 ---
 
-[http://bit.ly/eFvNwn](http://bit.ly/eFvNwn )
-
+[http://bit.ly/eFvNwn](http://bit.ly/eFvNwn)

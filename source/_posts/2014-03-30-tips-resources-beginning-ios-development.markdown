@@ -27,12 +27,12 @@ This helped a lot when modeling classes and data.  This is something I really
 have to force myself to do, I really just want to jump into the code. But, we
 know that just bites you in the ass, you just end up with spaghetti code.
 Case and point being the massive UIViewController in [Weather
-Notifications](https://itunes.apple.com/us/app/weather-
-notifications/id704052114?ls=1&mt=8&at=11laRZ&ct=blog).  It's due for a
-refactor. I have a post in draft about the new features for that app. As I
+Notifications](https://itunes.apple.com/us/app/weather-notifications/id704052114?ls=1&mt=8&at=11laRZ&ct=blog).  It's due for a
+refactor. I have a post in draft about the new features for that app. 
+
+As I
 code, I do find issues with the flow. I'm playing around with the app in the
 simulator, realize that what I designed just doesn't work, so I fix it in the
 code. The philosophical question at this point is do I update my mocks? Why
 didn't I catch it? Is there a way I could have? Still thinking about the
 answer to those.
-

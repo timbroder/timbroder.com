@@ -22,4 +22,3 @@ point.
 
 That's a shame. Indie is something that's been on my mind to see of it was
 possible. We will see what happens over the next year for me as well
-

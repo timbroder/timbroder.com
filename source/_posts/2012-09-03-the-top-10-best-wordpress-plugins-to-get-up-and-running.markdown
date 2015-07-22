@@ -6,7 +6,8 @@ dsq_thread_id: '828465510'
 layout: post
 linked_list_url: ''
 slug: the-top-10-best-wordpress-plugins-to-get-up-and-running
-title: The top 10 best Wordpress plugins to get up and running with everything you need.
+title: The top 10 best Wordpress plugins to get up and running with everything you
+  need.
 wordpress_id: 1219
 categories:
 - Code
@@ -87,4 +88,3 @@ Features:
   * [Contact Form 7](http://contactform7.com/) is the best contact form out there.  It allows you to flexibly design the form and mail. You can manage multiple contact forms as well.  In addition, it supports many features including AJAX submitting, CAPTCHA, Akismet spam filtering, file uploading, etc.
   * [WP Smush.it](http://dialect.ca/code/wp-smushit/)  taps into the API behind Yahoo’s excellent Exceptional Performance series recommends optimizing images in several lossless ways: stripping meta data from JPEGs, optimizing JPEG compression, converting certain GIFs to indexed PNGs and stripping the un-used colours from indexed images.
   * This last one isn't required for all setups, but if like me you have varnish sitting in front of your app servers, [wp-varnish](https://github.com/pkhamre/wp-varnish ) is a must have. It automatically clears your varnish caches as needed.
-

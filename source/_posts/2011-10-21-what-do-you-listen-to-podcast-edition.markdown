@@ -37,5 +37,5 @@ Non Tech
   * 11 O'Clock Comics - Comic news and culture <http://bullpenbulletinspodcast.com/>
   * Word Balloon - Comic creator interviews [ http://wordballoon.com/](http://wordballoon.com/)
   * Fuzzy Typewriter - Random media / culture [ http://fuzzytypewriter.wordpress.com/](http://fuzzytypewriter.wordpress.com/)
-* I listen to every episode, others I cherry-pick
 
+ ** I listen to every episode, others I cherry-pick

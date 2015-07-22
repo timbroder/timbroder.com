@@ -19,4 +19,3 @@ tags:
 This is awesome. Since I do most of my internet reading on iOS these days,
 maybe this wil convince me to blog more. Huge thanks to Shawn Blanc for
 posting this!
-

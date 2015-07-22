@@ -20,4 +20,3 @@ control @N. I was extorted into giving it up.
 Another reason I am quite happy I recently moved all if my domains from
 godaddy to hover. (They even took my godaddy login and did it all for me). I'd
 like to cancel paypal but I just can't bring myself to do it
-

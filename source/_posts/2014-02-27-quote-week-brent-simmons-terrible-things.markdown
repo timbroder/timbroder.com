@@ -15,6 +15,4 @@ categories:
 > I have to design as if terrible things could happen — because by doing so I
 can better prevent terrible things from happening.
 
-via [inessential.com: Vesper Sync Diary #8 - The Problem of Unique
-IDs](http://inessential.com/2014/02/15/vesper_sync_diary_8_the_problem_of_un).
-
+via [inessential.com: Vesper Sync Diary #8 - The Problem of Unique IDs](http://inessential.com/2014/02/15/vesper_sync_diary_8_the_problem_of_un).

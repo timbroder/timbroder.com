@@ -20,4 +20,3 @@ that their crashers should be fixed now, and they should update to the version
 on our website (or wait for the App Store approval). Apple’s customers are
 Apple’s customers, except we’re supposed to support them, but we aren’t
 provided the tools by Apple to do so.
-

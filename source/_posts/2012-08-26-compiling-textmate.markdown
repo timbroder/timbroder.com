@@ -35,11 +35,20 @@ multimarkdown hg ninja proctools [/shell]
   * [multimarkdown](http://fletcherpenney.net/multimarkdown/) — marked-up plain text compiler
   * [mercurial](http://mercurial.selenic.com/) — distributed SCM system
   * pgrep and pkill - part of protocols
+
 If the hg install gives you issues, get the latest command line tools from
 [Apple](https://developer.apple.com/downloads/index.action). (At the time of
 this writing it is Command Line Tools (OS X Lion) for Xcode - August 2012)
-Compile [shell] git clone https://github.com/textmate/textmate.git cd textmate
-git submodule update --init ./configure &amp;&amp; ninja [/shell] Install and
-Cleanup [shell] cp -R ~/build/TextMate/Applications/TextMate/TextMate.app
-Applications rm -Rf ~/build/TextMate* [/shell]
+Compile 
 
+```
+git clone https://github.com/textmate/textmate.git 
+cd textmate
+git submodule update --init ./configure &amp;&amp; ninja 
+```
+Install and Cleanup
+
+```
+cp -R ~/build/TextMate/Applications/TextMate/TextMate.app ~/Applications 
+rm -Rf ~/build/TextMate*
+```
