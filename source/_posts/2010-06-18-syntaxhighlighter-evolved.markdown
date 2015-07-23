@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2010-06-18 17:45:25+00:00
+dsq_thread_id: '109993176'
 layout: post
+linked_list_url: ''
 slug: syntaxhighlighter-evolved
 title: SyntaxHighlighter Evolved
 wordpress_id: 318
@@ -13,13 +15,19 @@ tags:
 - wordpress
 ---
 
-I'm currently in the process of migrating gpowerd.net over to this domain and onto wordpress. [ SyntaxHighlighter ](http://alexgorbatchev.com/wiki/SyntaxHighlighter)has been upgraded quite a bit since I [last](http://timbroder.com/2007/07/howto-post-code/) wrote about it.  I came across a [great plugin](http://wordpress.org/extend/plugins/syntaxhighlighter/) to handle the code highlighting for me on wordpress.  I love the plugin, didn't have to go into the wordpress template.
-
-It doesn't support the old pre syntax that I had been using previously but it was simple to add in.
-
-Patch to add this to 2.3.8 is below, Thanks to [Alex ](http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/)for the plugin
+I'm currently in the process of migrating gpowerd.net over to this domain and
+onto wordpress. [ SyntaxHighlighter
+](http://alexgorbatchev.com/wiki/SyntaxHighlighter)has been upgraded quite a
+bit since I [last](http://timbroder.com/2007/07/howto-post-code/) wrote about
+it.  I came across a [great
+plugin](http://wordpress.org/extend/plugins/syntaxhighlighter/) to handle the
+code highlighting for me on wordpress.  I love the plugin, didn't have to go
+into the wordpress template. It doesn't support the old pre syntax that I had
+been using previously but it was simple to add in. Patch to add this to 2.3.8
+is below, Thanks to [Alex ](http://www.viper007bond.com/wordpress-plugins/syntaxhighlighter/)for the plugin
 
     
+```    
     --- syntaxhighlighter.orrig.php	2010-06-03 20:08:24.000000000 -0500
     +++ syntaxhighlighter.php	2010-06-18 12:27:35.000000000 -0500
     @@ -101,12 +101,15 @@
@@ -75,13 +83,13 @@ Patch to add this to 2.3.8 is below, Thanks to [Alex ](http://www.viper007bond.c
     
      // Allowed configuration parameters and their type
     @@ -925,6 +934,7 @@
-     <label for="syntaxhighlighter-light"><input type="checkbox" id="syntaxhighlighter-light" value="1" name="syntaxhighlighter_settings[light]"></input>settings['light'], 1 ); ?> /> </label>
+     settings['light'], 1 ); ?> /> 
     
-     <label for="syntaxhighlighter-smarttabs"><input type="checkbox" id="syntaxhighlighter-smarttabs" value="1" name="syntaxhighlighter_settings[smarttabs]"></input>settings['smarttabs'], 1 ); ?> /> </label>
+     settings['smarttabs'], 1 ); ?> /> 
     
-     <label for="syntaxhighlighter-wraplines"><input type="checkbox" id="syntaxhighlighter-wraplines" value="1" name="syntaxhighlighter_settings[wraplines]"></input>settings['wraplines'], 1 ); ?> /> </label>
+     settings['wraplines'], 1 ); ?> /> 
     
-    +					<label for="syntaxhighlighter-legacy"><input type="checkbox" id="syntaxhighlighter-legacy" value="1" name="syntaxhighlighter_settings[legacy][/legacy]"></input>settings['legacy'], 1 ); ?> /> </label>
+    +					settings['legacy'], 1 ); ?> /> 
     
      
      
@@ -95,4 +103,5 @@ Patch to add this to 2.3.8 is below, Thanks to [Alex ](http://www.viper007bond.c
     
      if ( 'true' != $settings['padlinenumbers'] && 'false' != $settings['padlinenumbers'] )
      $settings['padlinenumbers'] = (int) $settings['padlinenumbers'];
-    
+    ```
+   

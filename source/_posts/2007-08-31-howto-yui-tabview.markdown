@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2007-08-31 23:25:00+00:00
+dsq_thread_id: '112841102'
 layout: post
+linked_list_url: ''
 slug: howto-yui-tabview
 title: 'HOWTO: YUI Tabview'
 wordpress_id: 57
@@ -13,14 +15,17 @@ tags:
 - YUI
 ---
 
-A few days ago I added the Digg counts to the bottom of the [Posts](http://gpowered.net/g/postlist) page on gPowered.net.  Although, the more posts that I add, the further down on the page this section will get, so I decided to play around with YUI's [tabview control](http://developer.yahoo.com/yui/tabview/) and put the post list in one tab, and the diggs in another.  It turned out to be really easy:  
+A few days ago I added the Digg counts to the bottom of the
+[Posts](http://gpowered.net/g/postlist) page on gPowered.net. Although, the
+more posts that I add, the further down on the page this section will get, so
+I decided to play around with YUI's [tabview
+control](http://developer.yahoo.com/yui/tabview/) and put the post list in one
+tab, and the diggs in another. It turned out to be really easy:  
   
-
 First we need a few dependencies  
 
-
     
-    
+```HTML
     <!-- Dependencies -->  
     <!-- core CSS -->  
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.3.0/build/tabview/assets/tabview.css">   
@@ -33,15 +38,13 @@ First we need a few dependencies
     
     <!-- Source file -->  
     <script type="text/javascript" src="http://yui.yahooapis.com/2.3.0/build/tabview/tabview-min.js"></script>  
-    
+```
 
   
-
 And then we just need to organize some DIVs  
 
-
     
-    
+```HTML
     <div id="demo" class="yui-navset">   
      <ul class="yui-nav">   
       <li class="selected"><a href="#posts"><em>Posts</em></a></li>  
@@ -59,4 +62,5 @@ And then we just need to organize some DIVs
       </div>
      </div>
     </div>
-    
+```HTML
+

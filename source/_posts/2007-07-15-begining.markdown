@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2007-07-15 18:33:00+00:00
+dsq_thread_id: '112578565'
 layout: post
+linked_list_url: ''
 slug: begining
 title: A begining
 wordpress_id: 23
@@ -13,20 +15,40 @@ tags:
 ---
 
 I've been meaning to start this project for a while now so here it goes...  
+  
+Part of my daily routine is reading a couple of comics including [Calvin and
+Hobbes](http://www.gocomics.com/calvinandhobbes/),
+[Dilbert](http://www.dilbert.com/comics/dilbert/archive/),
+[Foxtrot](http://www.gocomics.com/foxtrotclassics/),
+[Garfield](http://www.gocomics.com/garfield/), [xkcd](http://xkcd.com/),
+[vgcats](http://www.vgcats.com/comics/), and [The Watering
+Hole](http://www.oreillynet.com/wateringhole/blog/). Following the quick comic
+catch up I'll look through some various project blogs including
+[Ampache](http://www.ampache.org/), [django](http://www.djangoproject.com/),
+[YUI](http://developer.yahoo.com/yui/), and
+[facebook](http://developers.facebook.com/). But the highlight of my reading
+has always been what Google is up to. On this front my favorite blogs have
+been [Google Operating System](http://googlesystem.blogspot.com/),
+[Googlefied](http://googlified.com/), and [Google
+Blogoscoped](http://blogoscoped.com/). They keep me up to date on what Google
+is doing technically and in the business world. When new api's come out I try
+to take a look at their documentation and see what they can do. I'll also scan
+over Google's official blogs to see if I've missed anything for the day.  
+  
+So I guess now I have to get to the point of this project. With a little
+inspiration from [CanGoogleHearMe?](http://www.cangooglehearme.com) I envision
+a website, starting out as a personal homepage, that is entirely powered by
+Google; All the data stored somehow in a Google service. I'm going to
+chronicle my journey of creating news, updates, photos, links, a profile, and
+anything else you would want to see in a personal page, all Google powered.
+Then later I also want to extend the tutorials to integrating Google with the
+Facebook platform. The languages I hope to cover are python, JavaScript, and
+PHP. I would also like to touch on Java if I can.  
+  
+I also will post some updates from Google themselves, but seeing that there
+are already popular sites that do that, those updates won't be the focal point
+of this blog. Without further adieu, let the tutorials commence!
 
- 
-Part of my daily routine is reading a couple of comics including [Calvin and Hobbes](http://www.gocomics.com/calvinandhobbes/), [Dilbert](http://www.dilbert.com/comics/dilbert/archive/), [Foxtrot](http://www.gocomics.com/foxtrotclassics/), [Garfield](http://www.gocomics.com/garfield/), [xkcd](http://xkcd.com/), [vgcats](http://www.vgcats.com/comics/), and [The Watering Hole](http://www.oreillynet.com/wateringhole/blog/). Following the quick comic catch up I'll look through some various project blogs including [Ampache](http://www.ampache.org/), [django](http://www.djangoproject.com/), [YUI](http://developer.yahoo.com/yui/), and [facebook](http://developers.facebook.com/). But the highlight of my reading has always been what Google is up to. On this front my favorite blogs have been [Google Operating System](http://googlesystem.blogspot.com/), [Googlefied](http://googlified.com/), and [Google Blogoscoped](http://blogoscoped.com/). They keep me up to date on what Google is doing technically and in the business world. When new api's come out I try to take a look at their documentation and see what they can do. I'll also scan over Google's official blogs to see if I've missed anything for the day.
   
   
-
-So I guess now I have to get to the point of this project. With a little inspiration from [CanGoogleHearMe?](http://www.cangooglehearme.com) I envision a website, starting out as a personal homepage, that is entirely powered by Google; All the data stored somehow in a Google service. I'm going to chronicle my journey of creating news, updates, photos, links, a profile, and anything else you would want to see in a personal page, all Google powered. Then later I also want to extend the tutorials to integrating Google with the Facebook platform. The languages I hope to cover are python, JavaScript, and PHP. I would also like to touch on Java if I can.
-  
-  
-
-I also will post some updates from Google themselves, but seeing that there are already popular sites that do that, those updates won't be the focal point of this blog. Without further adieu, let the tutorials commence!
-
-
-  
-  
-
 Edit: [Domain is live!](http://gpowered.net)

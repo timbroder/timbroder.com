@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2007-07-31 01:31:00+00:00
+dsq_thread_id: '122051390'
 layout: post
+linked_list_url: ''
 slug: domain
 title: domain!
 wordpress_id: 27
@@ -12,4 +14,8 @@ tags:
 - gpowered.net
 ---
 
-The design and domain have been set up (actually I finished it a week or so ago but work's been keeping me pretty crazy).  All my examples will be implemented on [gPowered.net](http://gpowered.net/g/) as well as a copy of theses posts.  Enjoy.
+The design and domain have been set up (actually I finished it a week or so
+ago but work's been keeping me pretty crazy). All my examples will be
+implemented on [gPowered.net](http://gpowered.net/g/) as well as a copy of
+theses posts. Enjoy.
+

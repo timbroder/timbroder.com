@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2011-01-04 21:35:38+00:00
+dsq_thread_id: '246419229'
 layout: post
+linked_list_url: ''
 slug: want-to-trace-the-call-stack-in-magento
 title: Want to trace the call stack in Magento?
 wordpress_id: 736
@@ -14,48 +16,50 @@ tags:
 - php
 ---
 
+Update: This code is also available on [Github](https://github.com/broderboy/magento-callstack "Github") as a Mageno module
+
 This has helped me immensely in situations like "Where is this getting called from??!?"
 
 Create a helper like so:
 
-[php]
+```PHP
 class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 {
-	private function get_callstack($delim="\n") {
+	private function get_callstack($delim=&quot;\n&quot;) {
 	  $dt = debug_backtrace();
 	  $cs = '';
 	  foreach ($dt as $t) {
-	    $cs .= $t['file'] . ' line ' . $t['line'] . ' calls ' . $t['function'] . "()" . $delim;
+	    $cs .= $t['file'] . ' line ' . $t['line'] . ' calls ' . $t['function'] . &quot;()&quot; . $delim;
 	  }
 
 	  return $cs;
 	}
 
 	public function toLog() {
-		Mage::log($this->get_callstack());
+		Mage::log($this-&gt;get_callstack());
 	}
 
 	public function toFirePhp() {
-		$stack = $this->get_callstack();
-		foreach (explode("\n", $stack) as $line) {
-			Mage::helper('firephp')->send($line);
+		$stack = $this-&gt;get_callstack();
+		foreach (explode(&quot;\n&quot;, $stack) as $line) {
+			Mage::helper('firephp')-&gt;send($line);
 		}
 	}
 }
-[/php]
+```
 
 That can be called from anywhere:
 
-[php]
-Mage::helper('stack/callstack')->toFirePhp();
-Mage::helper('stack/callstack')->toLog();
-[/php]
+``PHP
+Mage::helper('stack/callstack')-&gt;toFirePhp();
+Mage::helper('stack/callstack')-&gt;toLog();
+```
 
-I've also wrapped this into a module that you can drop right into your project.  Details here: [https://bitbucket.org/broderboy/magento_callstack/src](https://bitbucket.org/broderboy/magento_callstack/src)
+I've also wrapped this into a module that you can drop right into your project.  Details here: [https://bitbucket.org/broderboy/magento_callstack/src](https://bitbucket.org/broderboy/magento_callstack/src "https://bitbucket.org/broderboy/magento_callstack/src")
 
 Example output:
 
-[php]
+```
 .../app/code/community/Timbroder/Stack/Helper/Callstack.php line 16 calls get_callstack()
 .../app/design/frontend/mongoose/default/template/catalog/cms/bikes_bmx.phtml line 12 calls toLog()
 .../app/design/frontend/mongoose/default/template/catalog/cms/bikes.phtml line 21 calls require_once()
@@ -92,6 +96,6 @@ Example output:
 .../app/code/core/Mage/Core/Model/App.php line 304 calls dispatch()
 .../app/Mage.php line 598 calls run()
 .../index.php line 155 calls run()
-[/php]
+```
 
 Thanks to [nextide](http://www.nextide.ca/node/518) for some of the code

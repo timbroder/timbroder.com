@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2008-09-08 14:41:00+00:00
+dsq_thread_id: '121816142'
 layout: post
+linked_list_url: ''
 slug: wine-updates-with-better-chrome-support
 title: WINE Updates with Better Chrome Support
 wordpress_id: 159
@@ -12,4 +14,4 @@ tags:
 - chrome
 ---
 
-via [lifehacker](http://lifehacker.com/5046581/wine-updates-with-better-chrome-support):  I'll be trying this when I get home.
+via [lifehacker](http://lifehacker.com/5046581/wine-updates-with-better-chrome-support): I'll be trying this when I get home.

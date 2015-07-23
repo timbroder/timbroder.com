@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2011-04-19 21:16:46+00:00
+dsq_thread_id: '283857327'
 layout: post
+linked_list_url: ''
 slug: extending-a-magento-controller
 title: Extending a Magento Controller
 wordpress_id: 915
@@ -17,7 +19,7 @@ We're ajaxing part of the Magento shopping cart so we need to modify/extend some
 
 app/code/local/Ai/Checkout/etc/config.xml:
 
-[xml]
+```XML
 <config>
     <modules>
         <Ai_Checkout>
@@ -37,17 +39,17 @@ app/code/local/Ai/Checkout/etc/config.xml:
         </routers>
     </frontend>    
 </config>
-[/xml]
+```
 
 app/code/local/Ai/Checkout/controllers/CartController.php:
 
-[php]
+```PHP
 require_once Mage::getModuleDir('controllers', 'Mage_Checkout') . DS . 'CartController.php';
 
 class Ai_Checkout_CartController extends Mage_Checkout_CartController
 {
    public function updatePostAction()
     {
-    	Mage::log("NEW CONTROLLER", null, 'tim.log');
+    	Mage::log(&quot;NEW CONTROLLER&quot;, null, 'tim.log');
         try {
 [/php]

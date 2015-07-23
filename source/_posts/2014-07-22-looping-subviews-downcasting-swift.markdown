@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2014-07-22 23:23:27+00:00
+dsq_thread_id: '2865530429'
 layout: post
+linked_list_url: ''
 slug: looping-subviews-downcasting-swift
 title: Looping through subviews and downcasting in Swift
 wordpress_id: 1598
@@ -12,13 +14,14 @@ tags:
 - swift
 ---
 
-I've been playing around with Auto-Layout. This snippet was helpful to see what constraints were set on what views in my View Hierarchy.
+I've been playing around with Auto-Layout. This snippet was helpful to see
+what constraints were set on what views in my View Hierarchy. 
 
-Getting the downcast right on the subviews Array took a few tries:
+Getting the downcast right on the subviews Array took a few tries: 
 
-[swift]
+```swift
 func showAL(view: UIView) {
-    println("!")
+    println(&quot;!&quot;)
     println(view)
     println(view.constraints())
 }
@@ -29,4 +32,4 @@ func showAL(view: UIView) {
             showAL(subview)
         }
     }
-[/swift]
+    ```

@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2012-08-17 15:49:55+00:00
+dsq_thread_id: '809062276'
 layout: post
+linked_list_url: ''
 slug: adding-done-and-cancel-buttons-to-an-ios-number-pad
 title: Adding Done and Cancel buttons to an iOS number pad
 wordpress_id: 1147
@@ -16,12 +18,16 @@ tags:
 - xcode
 ---
 
-There are some cases when you may want to have a "Done" or "Cancel" button on an iOs number pad when editing a text field. This doesn't come by default, but is easy to add. See the example snippets below, or check out the code on [github](https://github.com/broderboy/iphone-DoneCancelNumberPadToolbar).
+There are some cases when you may want to have a "Done" or "Cancel" button on
+an iOs number pad when editing a text field. This doesn't come by default, but
+is easy to add. See the example snippets below, or check out the code on
+[github](https://github.com/broderboy/iphone-DoneCancelNumberPadToolbar).
 
-[![](http://timbroder.com/wp-content/uploads/2012/08/Done-Cancel-Iphone.png)](http://timbroder.com/wp-content/uploads/2012/08/Done-Cancel-Iphone.png)
+[![](http://timbroder.com/wp-content/uploads/2012/08/Done-Cancel-Iphone.png)](http://timbroder.com/wp-content/uploads/2012/08/Done-Cancel-Iphone.png) 
 
 Sample Usage:
-[c]
+
+```c
 //In the view controller that's going ot use the component, put this in the header after the class being extended.
 <DoneCancelNumberPadToolbarDelegate>
  
@@ -35,17 +41,18 @@ textField.inputAccessoryView = toolbar;
 #pragma mark - DoneCancelNumberpadToolbar delegate
 -(void)doneCancelNumberPadToolbarDelegate:(DoneCancelNumberPadToolbar *)controller didClickDone:(UITextField *)textField
 {
-    NSLog(@"%@", textField.text);
+    NSLog(@&quot;%@&quot;, textField.text);
 }
  
 -(void)doneCancelNumberPadToolbarDelegate:(DoneCancelNumberPadToolbar *)controller didClickCancel:(UITextField *)textField
 {
-    NSLog(@"Canceled: %@", [textField description]);
+    NSLog(@&quot;Canceled: %@&quot;, [textField description]);
 }
-[/c]
+```
 
 DoneCancelNumberPadToolbar.h
-[c]
+
+```
 #import <UIKit/UIKit.h>
 
 @class DoneCancelNumberPadToolbar;
@@ -61,11 +68,12 @@ DoneCancelNumberPadToolbar.h
 {
     UITextField* textField;
 }
-[/c]
+```
 
 DoneCancelNumberPadToolbar.m
-[c]
-#import "DoneCancelNumberPadToolbar.h"
+
+```c
+#import &quot;DoneCancelNumberPadToolbar.h&quot;
 
 @implementation DoneCancelNumberPadToolbar
 
@@ -78,13 +86,13 @@ DoneCancelNumberPadToolbar.m
         textField = aTextField;
         self.barStyle = UIBarStyleBlackTranslucent;
         self.items = [NSArray arrayWithObjects:
-                      [[UIBarButtonItem alloc]initWithTitle:@"Cancel"
+                      [[UIBarButtonItem alloc]initWithTitle:@&quot;Cancel&quot;
                                                       style:UIBarButtonItemStyleBordered
                                                      target:self
                                                      action:@selector(cancelNumberPad)],
                       [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                    target:nil action:nil],
-                      [[UIBarButtonItem alloc]initWithTitle:@"Done"
+                      [[UIBarButtonItem alloc]initWithTitle:@&quot;Done&quot;
                                                       style:UIBarButtonItemStyleDone
                                                      target:self
                                                      action:@selector(doneWithNumberPad)],
@@ -98,7 +106,7 @@ DoneCancelNumberPadToolbar.m
 -(void)cancelNumberPad
 {
     [textField resignFirstResponder];
-    textField.text = @"";
+    textField.text = @&quot;&quot;;
     [self.delegate doneCancelNumberPadToolbarDelegate:self didClickCancel:textField];
 }
 
@@ -114,6 +122,8 @@ DoneCancelNumberPadToolbar.m
 - (id) initWithTextField:(UITextField *)textField;
 
 @end
-[/c]
+``` 
 
-Special thanks to [akozlik](http://www.reddit.com/r/iOSProgramming/comments/ydrzv/adding_done_and_cancel_buttons_to_an_ios_number/c5v4rpt) for the help with delegates.
+Special thanks to [akozl
+ik](http://www.reddit.com/r/iOSProgramming/comments/ydrzv/adding_done_and_canc
+el_buttons_to_an_ios_number/c5v4rpt) for the help with delegates.

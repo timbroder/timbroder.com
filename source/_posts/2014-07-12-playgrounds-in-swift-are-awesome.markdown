@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2014-07-12 23:19:42+00:00
+dsq_thread_id: '2838891542'
 layout: post
+linked_list_url: ''
 slug: playgrounds-in-swift-are-awesome
 title: Playgrounds in Swift are Awesome
 wordpress_id: 1587
@@ -14,16 +16,8 @@ tags:
 
 Man alive, I missed this from Python.  More live editing, less edit+build+run.
 
-
-
-
-[![2014-07-12_1822](https://farm6.staticflickr.com/5483/14451913518_c2ef7c5358_b.jpg)](https://www.flickr.com/photos/timothybroder/14451913518)
-
-
-
-
- 
-
+[![2014-07-12_1822](https://farm6.staticflickr.com/5483/14451913518_c2ef7c5358_b.jpg)](https://www.flickr.com/photos/timothybroder/14451913518 "View
+'2014-07-12_1822' on Flickr.com" )
 
 
 

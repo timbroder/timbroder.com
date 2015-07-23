@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2011-01-23 18:24:49+00:00
+dsq_thread_id: '1331785100'
 layout: post
+linked_list_url: ''
 slug: breaking-them-in
 title: Breaking them in
 wordpress_id: 779
@@ -12,4 +14,5 @@ tags:
 - Vibrams
 ---
 
-![image](http://timbroder.com/wp-content/uploads/2011/01/wpid-IMAG0003.jpg)
+![image](http://timbroder.com/wp-content/uploads/2011/01/wpid-
+IMAG0003.jpg)

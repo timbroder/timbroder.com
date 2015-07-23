@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2008-03-30 23:11:00+00:00
+dsq_thread_id: '109993633'
 layout: post
+linked_list_url: ''
 slug: update-google-talk-status-with-twitter
 title: Update Google Talk status with Twitter
 wordpress_id: 102
@@ -14,31 +16,37 @@ tags:
 - twitter
 ---
 
-I've had this idea in my head for a while and just got it to work this morning.  
+I've had this idea in my head for a while and just got it to work this
+morning.  
   
-
-Basically you send a tweet from [Twitter](http://twitter.com/broderboy) and this script runs, picks up your current twitter status, and if need be, updates your gChat status.  I'm working on a service version of this where you could use gpowered.net to do all this for you. Stay tuned =)  If I change the version of the script that I have running in the service, you will be able to see the source code that I have checked in [here](http://code.google.com/p/gpowered/source/browse/trunk/gpowered/scripts/twitter2gChat.py)
+Basically you send a tweet from [Twitter](http://twitter.com/broderboy) and
+this script runs, picks up your current twitter status, and if need be,
+updates your gChat status. I'm working on a service version of this where you
+could use gpowered.net to do all this for you. Stay tuned =) If I change the
+version of the script that I have running in the service, you will be able to
+see the source code that I have checked in [here](http://code.google.com/p/gpo
+wered/source/browse/trunk/gpowered/scripts/twitter2gChat.py)  
   
-  
-
 For those of you that don't know what Twitter is: _  
-"Twitter is a free social networking and micro-blogging service that allows users to send "updates" (or "tweets"; text-based posts, up to 140 characters long) to the Twitter website, via short message service (e.g. on a cell phone), instant messaging, or a third-party application such as Twitterrific or Facebook.
-
-Updates are displayed on the user's profile page and instantly delivered to other users who have signed up to receive them. The sender can restrict delivery to those in his or her circle of friends (delivery to everyone is the default). Users can receive updates via the Twitter website, instant messaging, SMS, RSS, email or through an application. For SMS, four gateway numbers are currently available: short codes for the USA, Canada, and India, as well as a UK number for international use. Several third parties offer posting and receiving updates via email." ([Wikipidia](http://en.wikipedia.org/wiki/Twitter))_
+"Twitter is a free social networking and micro-blogging service that allows
+users to send "updates" (or "tweets"; text-based posts, up to 140 characters
+long) to the Twitter website, via short message service (e.g. on a cell
+phone), instant messaging, or a third-party application such as Twitterrific
+or Facebook. Updates are displayed on the user's profile page and instantly
+delivered to other users who have signed up to receive them. The sender can
+restrict delivery to those in his or her circle of friends (delivery to
+everyone is the default). Users can receive updates via the Twitter website,
+instant messaging, SMS, RSS, email or through an application. For SMS, four
+gateway numbers are currently available: short codes for the USA, Canada, and
+India, as well as a UK number for international use. Several third parties
+offer posting and receiving updates via email."
+([Wikipidia](http://en.wikipedia.org/wiki/Twitter))_  
   
-  
-
-
 Requirements:  
-
 [xmpppy](http://xmpppy.sourceforge.net/)  
-
 [python-twitter](http://code.google.com/p/python-twitter/)  
-
   
   
-
-
 
     
     
@@ -159,3 +167,4 @@ Requirements:
     t.getTwitterStatus()
     t.updateGtalkStatus()
     
+

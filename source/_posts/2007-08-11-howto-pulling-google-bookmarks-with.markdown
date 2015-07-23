@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2007-08-11 21:22:00+00:00
+dsq_thread_id: '113567183'
 layout: post
+linked_list_url: ''
 slug: howto-pulling-google-bookmarks-with
 title: 'HOWTO: Pulling Google Bookmarks with Python'
 wordpress_id: 35
@@ -15,11 +17,18 @@ tags:
 - YUI
 ---
 
-I love using [Google Bookmarks](http://www.google.com/bookmarks/) (usually with the [Google Toolbar](http://toolbar.google.com)) because it lets me get to my bookmarks at home on my laptop or desktop, at work, or anywhere.  It's great.  Now I'm using those bookmarks to power the [links](http://gpowered.net/g/links/) section of [gPowered.net](http://gpowered.net/g)  
-
-First we're going to need the [httplib2](http://code.google.com/p/httplib2/downloads/list) library so we can authenticate against Google and grab the bookmark feed and then the [ElementTree](http://effbot.org/zone/element-index.htm) to help process the rss feed.    
+I love using [Google Bookmarks](http://www.google.com/bookmarks/) (usually
+with the [Google Toolbar](http://toolbar.google.com)) because it lets me get
+to my bookmarks at home on my laptop or desktop, at work, or anywhere. It's
+great. Now I'm using those bookmarks to power the
+[links](http://gpowered.net/g/links/) section of
+[gPowered.net](http://gpowered.net/g)  
+First we're going to need the
+[httplib2](http://code.google.com/p/httplib2/downloads/list) library so we can
+authenticate against Google and grab the bookmark feed and then the
+[ElementTree](http://effbot.org/zone/element-index.htm) to help process the
+rss feed.  
   
-
 
     
     
@@ -28,10 +37,9 @@ First we're going to need the [httplib2](http://code.google.com/p/httplib2/downl
     
 
   
-
-Then we'll setup the link to pull the rss from, authenticate against the request, and pull back the feed  
+Then we'll setup the link to pull the rss from, authenticate against the
+request, and pull back the feed  
   
-
 
     
     
@@ -46,10 +54,16 @@ Then we'll setup the link to pull the rss from, authenticate against the request
     
 
   
-
-I figured for this a hashmap (or dictionary) would work well using the tags on the bookmarks as keys, pointing to lists of bookmarks.  Then when we display them, just iterate through the keys.  I also kept a list of the keys to make sorting faster later on.  So we define our objects and then loop through the rss object pulling out the tags for keys, the names of the links, and the urls.  I define a small Bookmark class which holds a name and url which will go into the hashmap to make storing the bookmark's easier.  When I try to add a bookmark to the dict's list I try to append it, if the key(tag) doesn't exist I know I have to start a new list.  
+I figured for this a hashmap (or dictionary) would work well using the tags on
+the bookmarks as keys, pointing to lists of bookmarks. Then when we display
+them, just iterate through the keys. I also kept a list of the keys to make
+sorting faster later on. So we define our objects and then loop through the
+rss object pulling out the tags for keys, the names of the links, and the
+urls. I define a small Bookmark class which holds a name and url which will go
+into the hashmap to make storing the bookmark's easier. When I try to add a
+bookmark to the dict's list I try to append it, if the key(tag) doesn't exist
+I know I have to start a new list.  
   
-
 
     
     
@@ -73,10 +87,9 @@ I figured for this a hashmap (or dictionary) would work well using the tags on t
     
 
   
-
-Then we'll sort the key list and the list of each key.  To do this we need a small function that defines how to sort a bookmark  
+Then we'll sort the key list and the list of each key. To do this we need a
+small function that defines how to sort a bookmark  
   
-
 
     
     
@@ -89,5 +102,8 @@ Then we'll sort the key list and the list of each key.  To do this we need a sma
     
 
   
+Check out the static HTML version [Here](http://gpowered.net/g/links/simple).
+I also made a [fancier version](http://gpowered.net/g/links/) using
+[YUI](http://developer.yahoo.com/yui/)'s
+[TreeView](http://developer.yahoo.com/yui/treeview/)
 
-Check out the static HTML version [Here](http://gpowered.net/g/links/simple).  I also made a [fancier version](http://gpowered.net/g/links/) using [YUI](http://developer.yahoo.com/yui/)'s [TreeView](http://developer.yahoo.com/yui/treeview/)

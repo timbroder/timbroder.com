@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2011-10-17 16:22:06+00:00
+dsq_thread_id: '519583922'
 layout: post
+linked_list_url: ''
 slug: '1060'
 title: Creating a stateless request in Magento
 wordpress_id: 1060
@@ -17,23 +19,23 @@ Have you ever wanted to create a stateless request in Magento? Something that do
 
 As long as Mage_Core_Controller_Varien_Action is a parent in your controller's hierchy, you are good to go (it probably is).  This class has a const FLAG_NO_START_SESSION which looks promising. Digging into the code a little we see that it controls whether cookies are processed or the session is started:
 
-[php]
+```PHP
 <?php
 ...
         if (!$this->getFlag('', self::FLAG_NO_START_SESSION)) {
             $checkCookie = in_array($this->getRequest()->getActionName(), $this->_cookieCheckActions);
-            $checkCookie = $checkCookie && !$this->getRequest()->getParam('nocookie', false);
+            $checkCookie = $checkCookie &amp;&amp; !$this->getRequest()->getParam('nocookie', false);
             $cookies = Mage::getSingleton('core/cookie')->get();
-            if ($checkCookie && empty($cookies)) {
+            if ($checkCookie &amp;&amp; empty($cookies)) {
                 $this->setFlag('', self::FLAG_NO_COOKIES_REDIRECT, true);
             }
             Mage::getSingleton('core/session', array('name' => $this->_sessionNamespace))->start();
         }
-[/php]
+```
 
 By adding to the preDispatch() method of our Action or Controller we can toggle this:
 
-[php]
+```PHP
 <?php
 class Ai_AjaxCatalog_Controller_Action extends Mage_Core_Controller_Front_Action
 {
@@ -44,7 +46,7 @@ class Ai_AjaxCatalog_Controller_Action extends Mage_Core_Controller_Front_Action
 		return $this;
 	}
 }
-[/php]
+```
 
 
 

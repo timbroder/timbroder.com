@@ -2,7 +2,9 @@
 author: tim
 comments: true
 date: 2014-08-13 23:13:59+00:00
+dsq_thread_id: '2925124877'
 layout: post
+linked_list_url: http://www.inman.com/next/how-a-time-tracking-app-from-apple-designers-is-changing-how-i-do-business/
 slug: make-time
 title: “make” time
 wordpress_id: 1687
@@ -11,34 +13,19 @@ categories:
 - Commentary
 ---
 
-<blockquote>
-
-> 
 > We’re often told you need to “make” time, a phrase that rankles me.
-> 
-> 
-</blockquote>
 
+Drives me nuts as well. Our days are already packed. "Making time" isn't
+making it; it's prioritizing time. If you make time for something, you are
+acknowledging that the thing you are making time for has a priority at the
+expense of something else.
 
+> That’s why it’s important to know how long something takes, or to break it
+down into micro projects. By doing so, you may discover that you can reclaim
+time “might” by being more efficient, or by delegating tasks (whether they be
+personal or business-related).
 
-
-
-Drives me nuts as well. Our days are already packed. "Making time" isn't making it; it's prioritizing time. If you make time for something, you are acknowledging that the thing you are making time for has a priority at the expense of something else.
-
-
-
-
-
-<blockquote>
-
-> 
-> That’s why it’s important to know how long something takes, or to break it down into micro projects. By doing so, you may discover that you can reclaim time “might” by being more efficient, or by delegating tasks (whether they be personal or business-related).
-> 
-> 
-</blockquote>
-
-
-
-
-
-This is interesting. I'd be interested in trying it and seeing where all my time is during the day. (I already track all my work hours. Outside of that) I would worry about it being consuming though. Then stressing about missed logs. Maybe
+This is interesting. I'd be interested in trying it and seeing where all my
+time is during the day. (I already track all my work hours. Outside of that) I
+would worry about it being consuming though. Then stressing about missed logs.
+Maybe
