@@ -25,4 +25,3 @@ had a consistent supported environment. Oh, and he mentioned a few times
 “Vagrant Share” which allows you to share your environment with anyone in the
 world. This looked really useful when collaborating with clients as you can
 guarantee they have the same set up as you are using to develop the code.
-

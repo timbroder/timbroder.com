@@ -19,4 +19,3 @@ productivity, and health of your company
 
 > If you’re looking for an office Rosetta Stone, a way to assess company
 culture across industries, coffee is it.
-

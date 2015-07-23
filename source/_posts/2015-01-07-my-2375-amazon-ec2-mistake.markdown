@@ -25,7 +25,6 @@ have created an algorithm that searches GitHub 24 hours per day for API keys…
 Once it finds one it spins up max instances of EC2 servers to farm itself
 bitcoins…  
   
-Boom! A $2375 bill in the morning. Just for trying to learn rails.
+> Boom! A $2375 bill in the morning. Just for trying to learn rails.
 
   
-

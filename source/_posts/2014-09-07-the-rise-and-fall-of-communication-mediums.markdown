@@ -39,4 +39,3 @@ say something. I was a [HUGE](http://timbroder.com/2007/07/begining.html)
 Google fanboy. Since moving off blogger, I’ve managed the servers and software
 that run this blog. I plan on being around for a long time. It’s too much fun
 to stop
-

@@ -51,4 +51,3 @@ Related reading:
   * [Structured Text: A cleaner way to deal with Rich Text in Manageable Content](https://blog.prismic.io/UyheDQEAAIYqPg5V/structured-text-a-cleaner-way-to-deal-with-rich-text-in-manageable-content)
   * [Experiments: compare content variations efficacy on a blog or page](https://blog.prismic.io/VD0Bdi8AADEA8qOm/experiments-compare-content-variations-efficacy-on-a-blog-or-page)
   * [What's powering the Content API? - The Guardian speaks at Lucene Eurocon 2010](http://www.theguardian.com/open-platform/blog/what-is-powering-the-content-api)
-

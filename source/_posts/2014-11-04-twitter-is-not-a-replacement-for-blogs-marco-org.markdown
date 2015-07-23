@@ -14,4 +14,3 @@ categories:
 
 > Too much of my writing in the last few years has gone exclusively into
 Twitter. I need to find a better balance.
-

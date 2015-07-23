@@ -37,4 +37,3 @@ through them and added the following to my iOS RSS folder:
   * [KHANLOU.COM](http://khanlou.com/)
   * [Natasha The Robot](http://natashatherobot.com/) by [@NatashaTheRobot](https://twitter.com/NatashaTheRobot)
   * [Ashley Nelson-Hornstein](http://blog.ashleynh.me/) 
-

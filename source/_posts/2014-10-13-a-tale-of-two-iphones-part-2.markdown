@@ -59,6 +59,5 @@ I’ll stick with comfort.
 
 Space Gray, 64 gig 6, here I come.
 
-(I wasn’t up for renewal until Sept 22. As of this writing, my phone will show
-up on Oct 17)
-
+*(I wasn’t up for renewal until Sept 22. As of this writing, my phone will show
+up on Oct 17)*

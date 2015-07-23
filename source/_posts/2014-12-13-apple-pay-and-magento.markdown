@@ -74,4 +74,3 @@ than a whole seperate browser. I say “if allowed” because there are some
 restrictions on what 3rd party keyboard can do. For example, they cannot touch
 passwords. The stock keyboard reasserts itself when tapping on a password
 field.
-

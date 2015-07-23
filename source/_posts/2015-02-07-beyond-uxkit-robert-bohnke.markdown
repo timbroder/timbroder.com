@@ -20,4 +20,3 @@ UXKit. It is essentially a replica of UIKit, based on top of AppKit.
 
 He also comments on what something like react native could mean for engineers,
 and the attitude the community has had around other “non-native” in the past
-

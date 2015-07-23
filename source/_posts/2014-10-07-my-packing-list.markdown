@@ -18,10 +18,8 @@ I’ve been [traveling](http://en.wikipedia.org/wiki/Tokyo) for
 [year](http://en.wikipedia.org/wiki/Warwick,_Rhode_Island).  Sometimes with
 little notice and it’s helped me to have a go to packing list.  I also use it
 for personal trips as well. I just need less things.  I was originally
-managing this in [clear](https://itunes.apple.com/us/app/clear-tasks-to-do-
-list/id493136154?mt=8&at=11laRZ&ct=pro). Lately I’ve been managing it in
-[Listacular](https://itunes.apple.com/us/app/listacular-for-dropbox-
-rapid/id624606571?at=11laRZ&ct=pro&ls=1&mt=8). I like that this app syncs text
+managing this in [clear](https://itunes.apple.com/us/app/clear-tasks-to-do-list/id493136154?mt=8&at=11laRZ&ct=pro). Lately I’ve been managing it in
+[Listacular](https://itunes.apple.com/us/app/listacular-for-dropbox-rapid/id624606571?at=11laRZ&ct=pro&ls=1&mt=8). I like that this app syncs text
 file todo lists over dropbox. Easy to update on my Mac.
 
   * Aftershave
@@ -70,4 +68,3 @@ file todo lists over dropbox. Easy to update on my Mac.
   * Yoga Matt 
   * iPad 
   * iPhone
-

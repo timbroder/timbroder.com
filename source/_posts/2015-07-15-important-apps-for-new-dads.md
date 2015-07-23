@@ -10,6 +10,7 @@ categories:
 We have a newborn named Charlie. He's 2 weeks old so I'm no expert on being a Dad, but there have been a few apps the have been extremely helpful throughout the whole process. I tried a number of apps with tips, data entry, tools, and other functions, but these are the ones that stuck. As always, my iPhone is constantly by my side and I couldn't imagine going through pregnancy, labor, or fatherhood without them. 
 
 [Who's Your Daddy? The Pregnancy Guide for First Time Dads](http://apple.co/1O6Fg0E)
+
 As soon as you find out your pregnant, download this app and put in the tentative due date of the baby. The app will then start giving you daily tips. These range from the practical:
 
 * Make sure your life insurance is appropriate for a family
@@ -39,6 +40,7 @@ This app was on my home screen for the duration of pregnancy
 ![Daddy Tip 2](https://farm1.staticflickr.com/308/19695513376_43bb959f3a_o_d.png)
 
 [Nurture](http://apple.co/1CHgsMa)
+
 Nurture was great both as a visual log of my wife during her pregnancy, and as an information resource as to what was going on with Baby.  Every week, the app prompted Laura to take a photo of herself. It was really cool to see how she changed from week to week. At the end, the app also strings these images together in a nice little animation.
 
 The feature I liked most about Nurture was the description of how big Charlie actually was.  It lists a fruit or a piece of candy which really lets you correlate his size to something real. From a Skittle, to a mango, to a melon, we looked forward to seeing the update every Tuesday.

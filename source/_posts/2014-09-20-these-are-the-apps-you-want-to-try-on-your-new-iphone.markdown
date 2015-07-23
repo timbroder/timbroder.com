@@ -18,4 +18,3 @@ other apps, and even into widgets inside notification center.
 
 This is a great writeup of how exciting things are getting in the ecosystem
 for both new and old apps alike
-

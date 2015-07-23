@@ -59,4 +59,3 @@ fit comfortably in my pocket? That is the deal breaker. On Monday, I’m going
 to borrow a coworkers 6 Plus for an hour or so and sit with it in my pocket.
 I’m going to walk around with it. I’m going to climb some stairs. If it’s just
 too big, the 6+ is out. If it’s something I think I can adjust to, I am SO in.
-

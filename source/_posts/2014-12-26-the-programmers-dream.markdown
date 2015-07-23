@@ -32,5 +32,5 @@ just waiting to come tumbling down. I think one of the benefits of open source
 is that we can see more clearly that everyone else’s code is just as
 frightening as our own is.
 
-Keep reading
-
+[Keep reading](http://nickbradbury.com/2014/12/11/the-programmers-dream-a-ramble/
+ "Keep reading")

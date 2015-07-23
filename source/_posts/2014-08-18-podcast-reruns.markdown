@@ -58,8 +58,7 @@ Configure as needed, then cick “Run Pipe” to confirm you see the appropriate
 episodes. Then, grab the RSS url for this configuration. Load this URL into
 your pod catcher.
 
-![2014 07 29 1602](http://timbroder.com/wp-
-content/uploads/2014/07/2014-07-29_16021.png)
+![2014 07 29 1602](http://timbroder.com/wp-content/uploads/2014/07/2014-07-29_16021.png)
 
 I’ve been testing this for a few weeks now and it’s working great! Another
 good use would be [Overcast’s](https://itunes.apple.com/us/app/overcast-
@@ -71,7 +70,4 @@ If you are interested in the inner workings of this Pipe, here is a
 screenshot. Though, looking at this now, getting more than 1 episode a week
 needs some tweaking.
 
-[![2014 07 29 1606](http://timbroder.com/wp-
-content/uploads/2014/07/2014-07-29_16061.png)](http://timbroder.com/wp-
-content/uploads/2014/07/2014-07-29_16061.png)
-
+[![2014 07 29 1606](http://timbroder.com/wp-content/uploads/2014/07/2014-07-29_16061.png)](http://timbroder.com/wp-content/uploads/2014/07/2014-07-29_16061.png)
