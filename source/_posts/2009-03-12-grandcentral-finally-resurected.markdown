@@ -4,7 +4,7 @@ comments: true
 date: 2009-03-12 13:46:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: grandcentral-finally-resurected
 title: GrandCentral finally resurected
 wordpress_id: 193

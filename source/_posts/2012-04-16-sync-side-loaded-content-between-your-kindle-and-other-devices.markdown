@@ -4,7 +4,7 @@ comments: true
 date: 2012-04-16 17:35:23+00:00
 dsq_thread_id: '651905946'
 layout: post
-linked_list_url: ''
+link: ''
 slug: sync-side-loaded-content-between-your-kindle-and-other-devices
 title: Sync side-loaded content between your Kindle and other devices
 wordpress_id: 1068

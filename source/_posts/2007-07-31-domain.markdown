@@ -4,7 +4,7 @@ comments: true
 date: 2007-07-31 01:31:00+00:00
 dsq_thread_id: '122051390'
 layout: post
-linked_list_url: ''
+link: ''
 slug: domain
 title: domain!
 wordpress_id: 27

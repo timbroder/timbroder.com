@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-17 20:04:00+00:00
 dsq_thread_id: '111612159'
 layout: post
-linked_list_url: ''
+link: ''
 slug: offerpal-media-facebook-to-publish
 title: Offerpal Media Facebook to Publish Event Directory for Search Engines
 wordpress_id: 166

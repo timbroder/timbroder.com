@@ -4,7 +4,7 @@ comments: true
 date: 2011-03-15 23:31:01+00:00
 dsq_thread_id: '255208339'
 layout: post
-linked_list_url: ''
+link: ''
 slug: setting-a-project-as-the-default-redmine-homepage
 title: Setting a project as the default redmine homepage
 wordpress_id: 874

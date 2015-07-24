@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-06 23:46:00+00:00
 dsq_thread_id: '114309662'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-documents-list-api
 title: New Documents List API
 wordpress_id: 32

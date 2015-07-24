@@ -4,7 +4,7 @@ comments: true
 date: 2014-12-20 21:34:24+00:00
 dsq_thread_id: '3344246189'
 layout: post
-linked_list_url: http://www.macstories.net/reviews/workflow-review-integrated-automation-for-ios-8/
+link: http://www.macstories.net/reviews/workflow-review-integrated-automation-for-ios-8/
 slug: integrated-automation-for-ios-8
 title: Integrated Automation for iOS 8
 wordpress_id: 1737

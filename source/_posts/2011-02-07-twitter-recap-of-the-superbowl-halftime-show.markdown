@@ -4,7 +4,7 @@ comments: true
 date: 2011-02-07 01:36:05+00:00
 dsq_thread_id: '280793374'
 layout: post
-linked_list_url: ''
+link: ''
 slug: twitter-recap-of-the-superbowl-halftime-show
 title: Twitter recap of the superbowl halftime show
 wordpress_id: 821

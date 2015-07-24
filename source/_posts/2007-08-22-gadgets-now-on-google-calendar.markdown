@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-22 02:52:00+00:00
 dsq_thread_id: '111198498'
 layout: post
-linked_list_url: ''
+link: ''
 slug: gadgets-now-on-google-calendar
 title: Gadgets now on Google Calendar!
 wordpress_id: 39

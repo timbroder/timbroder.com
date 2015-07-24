@@ -4,7 +4,7 @@ comments: true
 date: 2015-03-10 14:03:30+00:00
 dsq_thread_id: '3716258245'
 layout: post
-linked_list_url: http://tekside.net/iphonaddict/2015/1/11/games-i-was-addicted-to-in-20
+link: http://tekside.net/iphonaddict/2015/1/11/games-i-was-addicted-to-in-20
 slug: games-i-was-addicted-to-in-2014
 title: Games I was addicted to in 2014
 wordpress_id: 1805

@@ -4,7 +4,7 @@ comments: true
 date: 2014-10-13 15:02:46+00:00
 dsq_thread_id: '3114735897'
 layout: post
-linked_list_url: http://tekside.net/iphonaddict/2014/10/7/a-tale-of-two-iphones
+link: http://tekside.net/iphonaddict/2014/10/7/a-tale-of-two-iphones
 slug: a-tale-of-two-iphones-part-2
 title: 'A Tale of Two iPhones: Part 2'
 wordpress_id: 1724

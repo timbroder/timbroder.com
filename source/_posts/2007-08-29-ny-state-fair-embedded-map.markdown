@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-29 03:58:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: ny-state-fair-embedded-map
 title: NY State Fair Embedded Map
 wordpress_id: 53

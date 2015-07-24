@@ -4,7 +4,7 @@ comments: true
 date: 2007-11-08 01:09:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: gphone-or-lack-there-of
 title: gPhone, or lack there of
 wordpress_id: 100

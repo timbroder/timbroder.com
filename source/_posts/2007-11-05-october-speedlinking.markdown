@@ -4,7 +4,7 @@ comments: true
 date: 2007-11-05 23:17:00+00:00
 dsq_thread_id: '110582969'
 layout: post
-linked_list_url: ''
+link: ''
 slug: october-speedlinking
 title: October Speedlinking
 wordpress_id: 99

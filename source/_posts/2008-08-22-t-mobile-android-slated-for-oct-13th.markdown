@@ -4,7 +4,7 @@ comments: true
 date: 2008-08-22 13:19:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: t-mobile-android-slated-for-oct-13th
 title: T-Mobile Android slated for Oct 13th
 wordpress_id: 149

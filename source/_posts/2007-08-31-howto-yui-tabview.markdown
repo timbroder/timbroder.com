@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-31 23:25:00+00:00
 dsq_thread_id: '112841102'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-yui-tabview
 title: 'HOWTO: YUI Tabview'
 wordpress_id: 57

@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-28 22:14:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: io-web-browser-meet-google-earth
 title: 'I/O: Web Browser, Meet Google Earth'
 wordpress_id: 128

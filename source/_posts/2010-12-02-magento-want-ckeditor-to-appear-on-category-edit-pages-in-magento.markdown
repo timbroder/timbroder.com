@@ -4,7 +4,7 @@ comments: true
 date: 2010-12-02 16:50:50+00:00
 dsq_thread_id: '243862101'
 layout: post
-linked_list_url: ''
+link: ''
 slug: magento-want-ckeditor-to-appear-on-category-edit-pages-in-magento
 title: 'Magento: Want CKEditor to appear on Category edit pages in Magento?'
 wordpress_id: 694

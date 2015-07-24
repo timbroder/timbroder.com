@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-16 16:12:00+00:00
 dsq_thread_id: '121007806'
 layout: post
-linked_list_url: ''
+link: ''
 slug: playing-halo-3-on-imax
 title: Playing Halo 3 on IMAX!
 wordpress_id: 63

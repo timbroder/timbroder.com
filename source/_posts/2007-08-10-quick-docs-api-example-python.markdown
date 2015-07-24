@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-10 03:04:00+00:00
 dsq_thread_id: '110061397'
 layout: post
-linked_list_url: ''
+link: ''
 slug: quick-docs-api-example-python
 title: Quick Docs Api Example (python)
 wordpress_id: 33

@@ -4,7 +4,7 @@ comments: true
 date: 2008-12-23 15:45:00+00:00
 dsq_thread_id: '114274660'
 layout: post
-linked_list_url: ''
+link: ''
 slug: finding-unread-gmails-or-best-gmail
 title: 'Finding unread gmails (or: the best gmail filter ever)'
 wordpress_id: 187

@@ -4,7 +4,7 @@ comments: true
 date: 2013-10-17 21:50:50+00:00
 dsq_thread_id: '1869322137'
 layout: post
-linked_list_url: ''
+link: ''
 slug: gamasutra-david-framptons-blog-postmortem-the-blockheads
 title: 'Gamasutra: David Framptons Blog - Postmortem: The Blockheads'
 wordpress_id: 1369

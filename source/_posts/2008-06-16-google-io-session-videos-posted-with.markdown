@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-16 19:11:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-io-session-videos-posted-with
 title: Google I/O session videos posted with slides
 wordpress_id: 136

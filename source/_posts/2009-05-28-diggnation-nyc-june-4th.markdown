@@ -4,7 +4,7 @@ comments: true
 date: 2009-05-28 14:29:00+00:00
 dsq_thread_id: '120709464'
 layout: post
-linked_list_url: ''
+link: ''
 slug: diggnation-nyc-june-4th
 title: Diggnation NYC, June 4th!
 wordpress_id: 204

@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-03 15:53:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: problogger-birthday-bash-54000-in
 title: 'ProBlogger Birthday Bash: $54,000 in prizes!'
 wordpress_id: 78

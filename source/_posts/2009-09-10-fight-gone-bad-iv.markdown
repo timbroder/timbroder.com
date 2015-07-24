@@ -4,7 +4,7 @@ comments: true
 date: 2009-09-10 19:18:00+00:00
 dsq_thread_id: '123222125'
 layout: post
-linked_list_url: ''
+link: ''
 slug: fight-gone-bad-iv
 title: Fight Gone Bad IV
 wordpress_id: 214

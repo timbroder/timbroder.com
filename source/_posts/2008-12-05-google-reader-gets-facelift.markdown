@@ -4,7 +4,7 @@ comments: true
 date: 2008-12-05 14:20:00+00:00
 dsq_thread_id: '117911633'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-reader-gets-facelift
 title: Google Reader gets a facelift
 wordpress_id: 186

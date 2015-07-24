@@ -4,7 +4,7 @@ comments: true
 date: 2013-09-29 21:09:22+00:00
 dsq_thread_id: '1809132416'
 layout: post
-linked_list_url: ''
+link: ''
 slug: why-we-do-what-we-do
 title: Why We Do What We Do
 wordpress_id: 1361

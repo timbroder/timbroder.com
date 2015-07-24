@@ -4,7 +4,7 @@ comments: true
 date: 2011-10-21 16:25:07+00:00
 dsq_thread_id: '501149281'
 layout: post
-linked_list_url: ''
+link: ''
 slug: what-do-you-listen-to-podcast-edition
 title: What do you listen to? (podcast edition)
 wordpress_id: 1063

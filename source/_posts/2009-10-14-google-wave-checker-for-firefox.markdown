@@ -4,7 +4,7 @@ comments: true
 date: 2009-10-14 20:12:00+00:00
 dsq_thread_id: '110695840'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-wave-checker-for-firefox
 title: Google Wave checker for firefox
 wordpress_id: 218

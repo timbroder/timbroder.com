@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-17 02:57:00+00:00
 dsq_thread_id: '110342015'
 layout: post
-linked_list_url: ''
+link: ''
 slug: my-first-google-api-ticket-has-been
 title: My First Google API ticket has been fixed
 wordpress_id: 90

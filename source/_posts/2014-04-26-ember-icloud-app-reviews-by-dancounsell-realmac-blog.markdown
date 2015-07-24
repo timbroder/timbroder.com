@@ -4,7 +4,7 @@ comments: true
 date: 2014-04-26 23:26:35+00:00
 dsq_thread_id: '2675986793'
 layout: post
-linked_list_url: http://realmacsoftware.com/blog/ember-app-reviews
+link: http://realmacsoftware.com/blog/ember-app-reviews
 slug: ember-icloud-app-reviews-by-dancounsell-realmac-blog
 title: Ember, iCloud & App Reviews by @dancounsell — Realmac Blog
 wordpress_id: 1510

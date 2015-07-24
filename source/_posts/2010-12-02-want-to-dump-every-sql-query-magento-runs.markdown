@@ -4,7 +4,7 @@ comments: true
 date: 2010-12-02 22:35:04+00:00
 dsq_thread_id: '243505474'
 layout: post
-linked_list_url: ''
+link: ''
 slug: want-to-dump-every-sql-query-magento-runs
 title: Want to dump every SQL query Magento runs?
 wordpress_id: 697

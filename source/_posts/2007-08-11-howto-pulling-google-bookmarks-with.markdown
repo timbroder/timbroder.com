@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-11 21:22:00+00:00
 dsq_thread_id: '113567183'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-pulling-google-bookmarks-with
 title: 'HOWTO: Pulling Google Bookmarks with Python'
 wordpress_id: 35

@@ -4,7 +4,7 @@ comments: true
 date: 2014-04-01 13:51:28+00:00
 dsq_thread_id: '2586239807'
 layout: post
-linked_list_url: http://www.loopinsight.com/2014/02/04/begging-for-app-ratings/
+link: http://www.loopinsight.com/2014/02/04/begging-for-app-ratings/
 slug: begging-app-ratings
 title: Begging For App Ratings
 wordpress_id: 1468

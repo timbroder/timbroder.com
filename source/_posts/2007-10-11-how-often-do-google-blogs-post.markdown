@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-11 01:43:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-often-do-google-blogs-post
 title: How often do Google Blogs post?
 wordpress_id: 85

@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-23 01:02:24+00:00
 dsq_thread_id: '2865602782'
 layout: post
-linked_list_url: https://medium.com/@mg/email-is-a-constant-why-i-turned-off-email-notifications-af303fe8e36c
+link: https://medium.com/@mg/email-is-a-constant-why-i-turned-off-email-notifications-af303fe8e36c
 slug: why-i-turned-off-email-notifications
 title: Why I turned off email notifications
 wordpress_id: 1602

@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-30 02:30:00+00:00
 dsq_thread_id: '110582946'
 layout: post
-linked_list_url: ''
+link: ''
 slug: linux-distro-popularity-according-to
 title: Linux Distro Popularity According to Google
 wordpress_id: 98

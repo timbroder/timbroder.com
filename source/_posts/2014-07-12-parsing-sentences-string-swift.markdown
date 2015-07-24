@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-12 23:08:57+00:00
 dsq_thread_id: '2838871623'
 layout: post
-linked_list_url: ''
+link: ''
 slug: parsing-sentences-string-swift
 title: Parsing sentences from a String in Swift
 wordpress_id: 1582

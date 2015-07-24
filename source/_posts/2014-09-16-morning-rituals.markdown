@@ -4,7 +4,7 @@ comments: true
 date: 2014-09-16 15:51:28+00:00
 dsq_thread_id: '3024144661'
 layout: post
-linked_list_url: ''
+link: ''
 slug: morning-rituals
 title: On Morning Rituals
 wordpress_id: 1685

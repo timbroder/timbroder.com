@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-05 11:31:00+00:00
 dsq_thread_id: '119628703'
 layout: post
-linked_list_url: ''
+link: ''
 slug: live-diggnation-ny-photos
 title: Live Diggnation NY Photos
 wordpress_id: 134

@@ -4,7 +4,7 @@ comments: true
 date: 2014-03-24 22:52:37+00:00
 dsq_thread_id: '2501941770'
 layout: post
-linked_list_url: http://techcrunch.com/2014/03/23/layout-in-flipboard-for-web-and-windows/
+link: http://techcrunch.com/2014/03/23/layout-in-flipboard-for-web-and-windows/
 slug: automating-layouts-bring-flipboards-magazine-style-to-web-and-windows
 title: Automating Layouts Bring Flipboard’s Magazine Style To Web And Windows
 wordpress_id: 1463

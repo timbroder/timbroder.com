@@ -4,7 +4,7 @@ comments: true
 date: 2008-03-19 02:15:00+00:00
 dsq_thread_id: '119944994'
 layout: post
-linked_list_url: ''
+link: ''
 slug: ressurection
 title: Ressurection
 wordpress_id: 101

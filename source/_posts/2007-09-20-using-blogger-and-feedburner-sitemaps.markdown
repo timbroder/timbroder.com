@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-20 00:20:00+00:00
 dsq_thread_id: '110879835'
 layout: post
-linked_list_url: ''
+link: ''
 slug: using-blogger-and-feedburner-sitemaps
 title: Using Blogger and Feedburner Sitemaps in Webmaster Tools
 wordpress_id: 68

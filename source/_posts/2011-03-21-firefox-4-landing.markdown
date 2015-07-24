@@ -4,7 +4,7 @@ comments: true
 date: 2011-03-21 20:01:55+00:00
 dsq_thread_id: '259760654'
 layout: post
-linked_list_url: ''
+link: ''
 slug: firefox-4-landing
 title: Firefox 4 landing
 wordpress_id: 885

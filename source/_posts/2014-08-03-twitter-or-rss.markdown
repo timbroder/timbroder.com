@@ -4,7 +4,7 @@ comments: true
 date: 2014-08-03 22:34:34+00:00
 dsq_thread_id: '2897987231'
 layout: post
-linked_list_url: http://www.manton.org/2014/05/twitter_or_rss.html
+link: http://www.manton.org/2014/05/twitter_or_rss.html
 slug: twitter-or-rss
 title: Twitter or RSS
 wordpress_id: 1641

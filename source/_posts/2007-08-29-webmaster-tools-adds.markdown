@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-29 03:27:00+00:00
 dsq_thread_id: '111562914'
 layout: post
-linked_list_url: ''
+link: ''
 slug: webmaster-tools-adds
 title: Webmaster tools adds Internationalization support
 wordpress_id: 49

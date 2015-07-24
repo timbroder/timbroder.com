@@ -4,7 +4,7 @@ comments: true
 date: 2008-08-12 23:22:00+00:00
 dsq_thread_id: '123769349'
 layout: post
-linked_list_url: ''
+link: ''
 slug: back-from-vacation
 title: Back from Vacation
 wordpress_id: 148

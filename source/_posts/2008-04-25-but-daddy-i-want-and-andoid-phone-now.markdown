@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-25 14:02:00+00:00
 dsq_thread_id: '122101742'
 layout: post
-linked_list_url: ''
+link: ''
 slug: but-daddy-i-want-and-andoid-phone-now
 title: But Daddy! I want and Andoid phone NOW!
 wordpress_id: 110

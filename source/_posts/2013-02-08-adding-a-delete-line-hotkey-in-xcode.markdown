@@ -4,7 +4,7 @@ comments: true
 date: 2013-02-08 15:49:20+00:00
 dsq_thread_id: '1072378355'
 layout: post
-linked_list_url: ''
+link: ''
 slug: adding-a-delete-line-hotkey-in-xcode
 title: Adding a Delete Line hotkey in Xcode
 wordpress_id: 1291

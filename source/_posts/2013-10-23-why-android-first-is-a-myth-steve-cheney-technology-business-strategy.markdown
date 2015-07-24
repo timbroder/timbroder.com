@@ -4,7 +4,7 @@ comments: true
 date: 2013-10-23 14:17:41+00:00
 dsq_thread_id: '1895758744'
 layout: post
-linked_list_url: ''
+link: ''
 slug: why-android-first-is-a-myth-steve-cheney-technology-business-strategy
 title: Why Android First is a Myth | steve cheney – technology, business & strategy
 wordpress_id: 1375

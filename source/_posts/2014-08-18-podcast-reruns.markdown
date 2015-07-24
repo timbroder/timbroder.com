@@ -4,7 +4,7 @@ comments: true
 date: 2014-08-18 18:06:58+00:00
 dsq_thread_id: '2938274336'
 layout: post
-linked_list_url: ''
+link: ''
 slug: podcast-reruns
 title: Podcast Reruns
 wordpress_id: 1630

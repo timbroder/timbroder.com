@@ -4,7 +4,7 @@ comments: true
 date: 2010-09-07 17:24:45+00:00
 dsq_thread_id: '386602880'
 layout: post
-linked_list_url: ''
+link: ''
 slug: the-primal-blueprint-30-day-challenge
 title: The Primal Blueprint 30-Day Challenge
 wordpress_id: 631

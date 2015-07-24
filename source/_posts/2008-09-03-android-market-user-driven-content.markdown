@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-03 14:31:00+00:00
 dsq_thread_id: '122204438'
 layout: post
-linked_list_url: ''
+link: ''
 slug: android-market-user-driven-content
 title: 'Android Market: a user-driven content distribution system'
 wordpress_id: 156

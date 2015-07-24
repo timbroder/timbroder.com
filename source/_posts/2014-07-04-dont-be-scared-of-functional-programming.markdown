@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-04 14:07:25+00:00
 dsq_thread_id: '2817493062'
 layout: post
-linked_list_url: http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-programming/
+link: http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-programming/
 slug: dont-be-scared-of-functional-programming
 title: Don't Be Scared Of Functional Programming
 wordpress_id: 1562

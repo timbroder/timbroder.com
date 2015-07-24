@@ -4,7 +4,7 @@ comments: true
 date: 2014-08-21 13:56:27+00:00
 dsq_thread_id: '2946634793'
 layout: post
-linked_list_url: http://www.fastcompany.com/3034469/coffee-week/dont-skimp-on-coffee-a-ctos-plea
+link: http://www.fastcompany.com/3034469/coffee-week/dont-skimp-on-coffee-a-ctos-plea
 slug: dont-skimp-on-coffee-a-ctos-plea
 title: 'Don''t Skimp on Coffee: A CTO''s Plea'
 wordpress_id: 1692

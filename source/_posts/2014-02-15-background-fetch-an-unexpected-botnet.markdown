@@ -4,7 +4,7 @@ comments: true
 date: 2014-02-15 14:37:08+00:00
 dsq_thread_id: '2270752537'
 layout: post
-linked_list_url: http://david-smith.org/blog/2014/02/14/an-unexpected-botnet
+link: http://david-smith.org/blog/2014/02/14/an-unexpected-botnet
 slug: background-fetch-an-unexpected-botnet
 title: 'Background fetch: An Unexpected Botnet'
 wordpress_id: 1421

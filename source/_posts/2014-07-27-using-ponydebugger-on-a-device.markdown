@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-27 20:25:59+00:00
 dsq_thread_id: '2877982731'
 layout: post
-linked_list_url: ''
+link: ''
 slug: using-ponydebugger-on-a-device
 title: Using PonyDebugger on a device
 wordpress_id: 1623

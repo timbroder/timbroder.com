@@ -4,7 +4,7 @@ comments: true
 date: 2014-09-07 20:49:49+00:00
 dsq_thread_id: '2997025961'
 layout: post
-linked_list_url: None
+link: None
 slug: the-rise-and-fall-of-communication-mediums
 title: The Rise and Fall of Communication Mediums
 wordpress_id: 1695

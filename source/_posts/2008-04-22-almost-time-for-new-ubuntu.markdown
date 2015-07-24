@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-22 10:59:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: almost-time-for-new-ubuntu
 title: Almost time for a new Ubuntu
 wordpress_id: 108

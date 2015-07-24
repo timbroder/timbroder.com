@@ -4,7 +4,7 @@ comments: true
 date: 2007-07-19 03:07:00+00:00
 dsq_thread_id: '111936092'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-get-blogger-feeds-using-python
 title: 'HOWTO: Displaying Blogger feeds with Python'
 wordpress_id: 24

@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-22 14:52:00+00:00
 dsq_thread_id: '121702584'
 layout: post
-linked_list_url: ''
+link: ''
 slug: blogger-resumes-service
 title: Blogger resumes service
 wordpress_id: 42

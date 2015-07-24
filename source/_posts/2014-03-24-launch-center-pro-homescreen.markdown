@@ -4,7 +4,7 @@ comments: true
 date: 2014-03-24 19:58:57+00:00
 dsq_thread_id: '2501082066'
 layout: post
-linked_list_url: ''
+link: ''
 slug: launch-center-pro-homescreen
 title: How I use my Launch Center Pro homescreen
 wordpress_id: 1445

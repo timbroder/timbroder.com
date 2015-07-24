@@ -4,7 +4,7 @@ comments: true
 date: 2014-06-15 17:11:21+00:00
 dsq_thread_id: '2766966735'
 layout: post
-linked_list_url: ''
+link: ''
 slug: launch-center-pro-trello-via-ifttt
 title: Launch Center Pro to Trello via IFTTT
 wordpress_id: 1558

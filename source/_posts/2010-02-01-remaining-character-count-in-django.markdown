@@ -4,7 +4,7 @@ comments: true
 date: 2010-02-01 19:28:00+00:00
 dsq_thread_id: '111426281'
 layout: post
-linked_list_url: ''
+link: ''
 slug: remaining-character-count-in-django
 title: Remaining character count in django admin
 wordpress_id: 232

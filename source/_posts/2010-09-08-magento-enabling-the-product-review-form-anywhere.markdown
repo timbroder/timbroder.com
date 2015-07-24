@@ -4,7 +4,7 @@ comments: true
 date: 2010-09-08 18:03:07+00:00
 dsq_thread_id: '243618106'
 layout: post
-linked_list_url: ''
+link: ''
 slug: magento-enabling-the-product-review-form-anywhere
 title: 'Magento:: Enabling the Product Review form anywhere'
 wordpress_id: 647

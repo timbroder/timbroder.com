@@ -4,7 +4,7 @@ comments: true
 date: 2012-09-11 19:17:52+00:00
 dsq_thread_id: '840145019'
 layout: post
-linked_list_url: ''
+link: ''
 slug: generating-an-inlineadmin-form-on-the-fly-in-django
 title: Generating an InlineModelAdmin Form on the fly in Django
 wordpress_id: 1240

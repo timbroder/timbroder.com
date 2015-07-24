@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-07 15:47:00+00:00
 dsq_thread_id: '111996644'
 layout: post
-linked_list_url: ''
+link: ''
 slug: picasa-get-blog
 title: Picasa gets a blog!
 wordpress_id: 82

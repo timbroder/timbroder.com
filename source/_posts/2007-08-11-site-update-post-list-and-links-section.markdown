@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-11 21:43:00+00:00
 dsq_thread_id: '109993620'
 layout: post
-linked_list_url: ''
+link: ''
 slug: site-update-post-list-and-links-section
 title: 'Site Update: Post list and Links section'
 wordpress_id: 36

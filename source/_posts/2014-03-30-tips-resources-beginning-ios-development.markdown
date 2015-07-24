@@ -4,7 +4,7 @@ comments: true
 date: 2014-03-30 17:41:32+00:00
 dsq_thread_id: '2534652008'
 layout: post
-linked_list_url: http://objdev.com/2014/02/beginning-ios-development
+link: http://objdev.com/2014/02/beginning-ios-development
 slug: tips-resources-beginning-ios-development
 title: Tips and Resources for beginning iOS Development
 wordpress_id: 1476

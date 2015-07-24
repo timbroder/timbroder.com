@@ -4,7 +4,7 @@ comments: true
 date: 2009-08-14 13:43:00+00:00
 dsq_thread_id: '109993671'
 layout: post
-linked_list_url: ''
+link: ''
 slug: send-to-tumblr-and-track-with-bitly
 title: Send To Tumblr And Track With Bitly Google Reader Custom Link
 wordpress_id: 211

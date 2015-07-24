@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-05 22:44:00+00:00
 dsq_thread_id: '121758071'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-displaying-blogger-feeds-with-php
 title: 'HOWTO: Displaying Blogger feeds with PHP'
 wordpress_id: 30

@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-11 18:25:00+00:00
 dsq_thread_id: '111497547'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-getting-list-of-post-titles-from
 title: 'HOWTO: Getting a list of post titles from blogger (Python)'
 wordpress_id: 34

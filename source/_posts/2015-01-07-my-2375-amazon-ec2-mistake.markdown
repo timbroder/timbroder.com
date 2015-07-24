@@ -4,7 +4,7 @@ comments: true
 date: 2015-01-07 16:02:04+00:00
 dsq_thread_id: '3401532866'
 layout: post
-linked_list_url: http://www.devfactor.net/2014/12/30/2375-amazon-mistake/
+link: http://www.devfactor.net/2014/12/30/2375-amazon-mistake/
 slug: my-2375-amazon-ec2-mistake
 title: My $2375 Amazon EC2 Mistake
 wordpress_id: 1742

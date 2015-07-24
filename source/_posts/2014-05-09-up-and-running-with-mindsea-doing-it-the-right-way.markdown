@@ -4,7 +4,7 @@ comments: true
 date: 2014-05-09 02:03:47+00:00
 dsq_thread_id: '2678592004'
 layout: post
-linked_list_url: http://www.mindsea.com/2014/04/up-and-running-with-mindsea-doing-it-the-right-way/
+link: http://www.mindsea.com/2014/04/up-and-running-with-mindsea-doing-it-the-right-way/
 slug: up-and-running-with-mindsea-doing-it-the-right-way
 title: 'Up and Running with MindSea: Doing it the Right Way'
 wordpress_id: 1524

@@ -4,7 +4,7 @@ comments: true
 date: 2014-06-03 01:08:39+00:00
 dsq_thread_id: '2731842798'
 layout: post
-linked_list_url: ''
+link: ''
 slug: delayed-thoughts-wwdc-2014-keynote
 title: Delayed Liveblog on the WWDC 2014 Keynote
 wordpress_id: 1541

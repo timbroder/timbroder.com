@@ -4,7 +4,7 @@ comments: true
 date: 2010-07-06 22:03:12+00:00
 dsq_thread_id: '115828949'
 layout: post
-linked_list_url: ''
+link: ''
 slug: front-runners-new-york-lesbian-and-gay-pride-run-5m
 title: Front Runners New York Lesbian and Gay Pride Run (5M)
 wordpress_id: 562

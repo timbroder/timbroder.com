@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-16 02:14:00+00:00
 dsq_thread_id: '110186841'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-photos-blog-lesser-known-and
 title: Top Secret Picasa Features
 wordpress_id: 88

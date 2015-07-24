@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-23 02:57:00+00:00
 dsq_thread_id: '110347319'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-reader-api-functions
 title: 'HOWTO: Google Reader API Functions'
 wordpress_id: 44

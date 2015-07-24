@@ -4,7 +4,7 @@ comments: true
 date: 2012-12-18 20:20:35+00:00
 dsq_thread_id: '981316888'
 layout: post
-linked_list_url: ''
+link: ''
 slug: getting-started-with-varnish-edge-side-includes-and-wordpress
 title: Getting Started with Varnish Edge Side Includes and Wordpress
 wordpress_id: 1269

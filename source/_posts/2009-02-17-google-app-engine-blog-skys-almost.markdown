@@ -4,7 +4,7 @@ comments: true
 date: 2009-02-17 16:16:00+00:00
 dsq_thread_id: '121273860'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-app-engine-blog-skys-almost
 title: 'Google App Engine Blog: The sky''s (almost) the limit! "High CPU" is no more.'
 wordpress_id: 190

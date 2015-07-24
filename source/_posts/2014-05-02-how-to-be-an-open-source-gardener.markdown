@@ -4,7 +4,7 @@ comments: true
 date: 2014-05-02 21:09:48+00:00
 dsq_thread_id: '2677520615'
 layout: post
-linked_list_url: http://words.steveklabnik.com/how-to-be-an-open-source-gardener
+link: http://words.steveklabnik.com/how-to-be-an-open-source-gardener
 slug: how-to-be-an-open-source-gardener
 title: How to be an open source gardener
 wordpress_id: 1514

@@ -4,7 +4,7 @@ comments: true
 date: 2009-12-17 17:03:00+00:00
 dsq_thread_id: '122045854'
 layout: post
-linked_list_url: ''
+link: ''
 slug: sneak-some-advanced-logic-into-django
 title: Sneak some advanced logic into a Django template
 wordpress_id: 226

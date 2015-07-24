@@ -4,7 +4,7 @@ comments: true
 date: 2010-06-22 21:39:41+00:00
 dsq_thread_id: '110579283'
 layout: post
-linked_list_url: ''
+link: ''
 slug: wedding-planning
 title: Wedding Planning
 wordpress_id: 545

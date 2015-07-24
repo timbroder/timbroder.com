@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-06 01:17:00+00:00
 dsq_thread_id: '113443704'
 layout: post
-linked_list_url: ''
+link: ''
 slug: posting-to-blogger-from-google-docs
 title: Posting to Blogger from Google Docs & Spreadsheets
 wordpress_id: 31

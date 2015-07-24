@@ -4,7 +4,7 @@ comments: true
 date: 2009-11-16 22:07:00+00:00
 dsq_thread_id: '109993705'
 layout: post
-linked_list_url: ''
+link: ''
 slug: take-your-batch-into-cloud
 title: Take your batch into the cloud
 wordpress_id: 223

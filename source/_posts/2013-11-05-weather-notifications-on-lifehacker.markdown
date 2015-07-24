@@ -4,7 +4,7 @@ comments: true
 date: 2013-11-05 19:08:53+00:00
 dsq_thread_id: '1940074864'
 layout: post
-linked_list_url: ''
+link: ''
 slug: weather-notifications-on-lifehacker
 title: Weather Notifications on Lifehacker!
 wordpress_id: 1377

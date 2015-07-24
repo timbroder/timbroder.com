@@ -4,7 +4,7 @@ comments: true
 date: 2009-10-05 15:06:00+00:00
 dsq_thread_id: '109993695'
 layout: post
-linked_list_url: ''
+link: ''
 slug: firefox-keyboard-and-mouse-shortcuts
 title: Firefox Keyboard and Mouse Shortcuts
 wordpress_id: 217

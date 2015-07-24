@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-29 03:42:00+00:00
 dsq_thread_id: '121442357'
 layout: post
-linked_list_url: ''
+link: ''
 slug: codeless-embedded-maps
 title: Codeless Embedded Maps
 wordpress_id: 52

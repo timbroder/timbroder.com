@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-24 14:09:00+00:00
 dsq_thread_id: '113969609'
 layout: post
-linked_list_url: ''
+link: ''
 slug: upgrade-ubuntu-to-804-hardy-heron
 title: Upgrade Ubuntu to 8.04 Hardy Heron
 wordpress_id: 109

@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-11 01:11:46+00:00
 dsq_thread_id: '2835011778'
 layout: post
-linked_list_url: http://shawnblanc.net/2014/07/on-working-from-home-and-running-a-business/
+link: http://shawnblanc.net/2014/07/on-working-from-home-and-running-a-business/
 slug: on-working-from-home-and-running-a-business
 title: On Working From Home and Running a Business
 wordpress_id: 1577

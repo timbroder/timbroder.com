@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-22 21:11:00+00:00
 dsq_thread_id: '110359679'
 layout: post
-linked_list_url: ''
+link: ''
 slug: view-google-groups-posts-in-reader
 title: View Google Groups posts in Reader
 wordpress_id: 43

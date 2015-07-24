@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-15 12:27:00+00:00
 dsq_thread_id: '111198470'
 layout: post
-linked_list_url: ''
+link: ''
 slug: android-developer-challenge-judges-and
 title: Android Developer Challenge Judges and Top 50 Details
 wordpress_id: 120

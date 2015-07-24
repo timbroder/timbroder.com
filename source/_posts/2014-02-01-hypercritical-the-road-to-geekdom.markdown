@@ -4,7 +4,7 @@ comments: true
 date: 2014-02-01 14:19:54+00:00
 dsq_thread_id: '2208089351'
 layout: post
-linked_list_url: http://hypercritical.co/2014/01/14/the-road-to-geekdom
+link: http://hypercritical.co/2014/01/14/the-road-to-geekdom
 slug: hypercritical-the-road-to-geekdom
 title: 'Hypercritical: The Road to Geekdom'
 wordpress_id: 1408

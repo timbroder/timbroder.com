@@ -4,7 +4,7 @@ comments: true
 date: 2009-12-22 17:09:00+00:00
 dsq_thread_id: '121662449'
 layout: post
-linked_list_url: ''
+link: ''
 slug: share-google-reader-folders-with
 title: Share Google Reader folders with friends
 wordpress_id: 227

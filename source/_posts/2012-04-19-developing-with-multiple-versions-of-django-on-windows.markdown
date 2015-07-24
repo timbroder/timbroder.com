@@ -4,7 +4,7 @@ comments: true
 date: 2012-04-19 16:47:46+00:00
 dsq_thread_id: '656376127'
 layout: post
-linked_list_url: ''
+link: ''
 slug: developing-with-multiple-versions-of-django-on-windows
 title: Developing with multiple versions of Django on windows
 wordpress_id: 1076

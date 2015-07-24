@@ -4,7 +4,7 @@ comments: true
 date: 2011-04-22 18:21:22+00:00
 dsq_thread_id: '286647167'
 layout: post
-linked_list_url: ''
+link: ''
 slug: jira-tabs-open-all-those-jiras-at-once
 title: 'Jira Tabs: Open all those Jira''s at once! '
 wordpress_id: 926

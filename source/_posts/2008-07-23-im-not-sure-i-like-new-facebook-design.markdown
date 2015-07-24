@@ -4,7 +4,7 @@ comments: true
 date: 2008-07-23 02:19:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: im-not-sure-i-like-new-facebook-design
 title: I'm not sure I like the new Facebook Design
 wordpress_id: 145

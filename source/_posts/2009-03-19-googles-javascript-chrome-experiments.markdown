@@ -4,7 +4,7 @@ comments: true
 date: 2009-03-19 17:08:00+00:00
 dsq_thread_id: '121680646'
 layout: post
-linked_list_url: ''
+link: ''
 slug: googles-javascript-chrome-experiments
 title: Google’s JavaScript/ Chrome Experiments Showcase
 wordpress_id: 196

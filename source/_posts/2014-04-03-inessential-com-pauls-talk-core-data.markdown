@@ -4,7 +4,7 @@ comments: true
 date: 2014-04-03 12:41:35+00:00
 dsq_thread_id: '2586241591'
 layout: post
-linked_list_url: http://inessential.com/2014/02/14/pauls_talk_on_core_data
+link: http://inessential.com/2014/02/14/pauls_talk_on_core_data
 slug: inessential-com-pauls-talk-core-data
 title: 'inessential.com: Paul’s Talk on Core Data'
 wordpress_id: 1470

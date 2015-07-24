@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-05 02:04:00+00:00
 dsq_thread_id: '121343051'
 layout: post
-linked_list_url: ''
+link: ''
 slug: displaying-what-you-read-in-google
 title: Displaying what you read from Google Reader
 wordpress_id: 81

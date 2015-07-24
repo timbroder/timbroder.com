@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-25 15:27:00+00:00
 dsq_thread_id: '109993649'
 layout: post
-linked_list_url: ''
+link: ''
 slug: i-just-won-50000000-gbp-from-google-uk
 title: I JUST WON £500,000.00 GBP FROM GOOGLE UK!!!
 wordpress_id: 175

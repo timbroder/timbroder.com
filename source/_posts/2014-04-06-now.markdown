@@ -4,7 +4,7 @@ comments: true
 date: 2014-04-06 13:46:28+00:00
 dsq_thread_id: '2590818615'
 layout: post
-linked_list_url: http://www.vgcats.com/comics/?strip_id=331
+link: http://www.vgcats.com/comics/?strip_id=331
 slug: now
 title: Then and Now
 wordpress_id: 1495

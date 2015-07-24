@@ -4,7 +4,7 @@ comments: true
 date: 2010-06-28 17:24:17+00:00
 dsq_thread_id: '112171748'
 layout: post
-linked_list_url: ''
+link: ''
 slug: iphone4-vs-htc-evo
 title: iPhone4 vs HTC Evo
 wordpress_id: 547

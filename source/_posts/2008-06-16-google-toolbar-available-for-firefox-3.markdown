@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-16 17:54:00+00:00
 dsq_thread_id: '119716302'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-toolbar-available-for-firefox-3
 title: Google Toolbar Available for Firefox 3
 wordpress_id: 135

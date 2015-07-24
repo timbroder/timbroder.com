@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-29 14:02:00+00:00
 dsq_thread_id: '121764443'
 layout: post
-linked_list_url: ''
+link: ''
 slug: io-appengine-is-open
 title: 'I/O: AppEngine is open!'
 wordpress_id: 130

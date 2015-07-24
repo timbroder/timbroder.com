@@ -4,7 +4,7 @@ comments: true
 date: 2014-09-20 15:18:31+00:00
 dsq_thread_id: '3036849461'
 layout: post
-linked_list_url: http://www.theverge.com/2014/9/19/6397101/the-best-new-apps-for-iphone-ios-8
+link: http://www.theverge.com/2014/9/19/6397101/the-best-new-apps-for-iphone-ios-8
 slug: these-are-the-apps-you-want-to-try-on-your-new-iphone
 title: These are the apps you want to try on your new iPhone
 wordpress_id: 1703

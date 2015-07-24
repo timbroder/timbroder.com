@@ -4,7 +4,7 @@ comments: true
 date: 2008-07-26 13:45:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: heading-on-vacation
 title: Heading on Vacation
 wordpress_id: 146

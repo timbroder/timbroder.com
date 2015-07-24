@@ -4,7 +4,7 @@ comments: true
 date: 2014-05-07 16:07:24+00:00
 dsq_thread_id: '2677470137'
 layout: post
-linked_list_url: ''
+link: ''
 slug: poking-angularjs-model-within-iframe
 title: Poking at an AngularJS model from within an iFrame
 wordpress_id: 1517

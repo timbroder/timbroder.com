@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-30 00:17:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: select-google-io-sessions-to-be-posted
 title: Select Google I/O sessions to be posted online
 wordpress_id: 116

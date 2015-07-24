@@ -4,7 +4,7 @@ comments: true
 date: 2012-08-18 00:50:47+00:00
 dsq_thread_id: '809518683'
 layout: post
-linked_list_url: ''
+link: ''
 slug: animate-adwhirl-bottom
 title: Animate an AdWhirlView from the Bottom of the Screen
 wordpress_id: 1154

@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-06 19:57:34+00:00
 dsq_thread_id: '2828119702'
 layout: post
-linked_list_url: http://dcurt.is/facebooks-predicament
+link: http://dcurt.is/facebooks-predicament
 slug: whatever-goes-up-thats-what-we-do
 title: Whatever goes up, that’s what we do
 wordpress_id: 1565

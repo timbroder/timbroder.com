@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-29 13:53:00+00:00
 dsq_thread_id: '122025898'
 layout: post
-linked_list_url: ''
+link: ''
 slug: io-lots-of-android-ui-videos
 title: 'I/O: Lots of Android UI Videos!'
 wordpress_id: 129

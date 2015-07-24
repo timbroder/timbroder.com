@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-26 01:20:00+00:00
 dsq_thread_id: '119905871'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-overheard-in-office
 title: Google Overheard in the Office
 wordpress_id: 97

@@ -4,7 +4,7 @@ comments: true
 date: 2010-03-16 20:15:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: ie9-platform-preview
 title: IE9 platform preview
 wordpress_id: 238

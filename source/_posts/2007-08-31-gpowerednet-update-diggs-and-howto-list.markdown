@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-31 23:50:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: gpowerednet-update-diggs-and-howto-list
 title: 'gPowered.net update: Diggs and HOWTO list'
 wordpress_id: 58

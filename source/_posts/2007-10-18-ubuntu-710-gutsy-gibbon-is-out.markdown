@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-18 12:01:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: ubuntu-710-gutsy-gibbon-is-out
 title: Ubuntu 7.10 Gutsy Gibbon is out!
 wordpress_id: 91

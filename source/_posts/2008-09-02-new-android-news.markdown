@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-02 15:47:00+00:00
 dsq_thread_id: '121133286'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-android-news
 title: New Android news
 wordpress_id: 154

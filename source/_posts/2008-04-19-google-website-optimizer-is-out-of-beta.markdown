@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-19 02:46:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-website-optimizer-is-out-of-beta
 title: Google Website Optimizer is out of beta
 wordpress_id: 107

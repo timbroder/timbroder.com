@@ -4,7 +4,7 @@ comments: true
 date: 2012-08-20 16:53:46+00:00
 dsq_thread_id: '812236822'
 layout: post
-linked_list_url: ''
+link: ''
 slug: hiding-fields-in-the-admin-based-on-permission
 title: Hiding fields in the Django admin based on permission
 wordpress_id: 1164

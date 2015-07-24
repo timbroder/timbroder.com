@@ -4,7 +4,7 @@ comments: true
 date: 2014-02-15 22:12:22+00:00
 dsq_thread_id: '2272138048'
 layout: post
-linked_list_url: ''
+link: ''
 slug: house-cards-regex-mute-filter-tweetbot
 title: House of Cards regex mute filter for Tweetbot
 wordpress_id: 1424

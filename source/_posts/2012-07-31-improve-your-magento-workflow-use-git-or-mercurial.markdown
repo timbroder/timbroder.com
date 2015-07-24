@@ -4,7 +4,7 @@ comments: true
 date: 2012-07-31 13:18:07+00:00
 dsq_thread_id: '786942944'
 layout: post
-linked_list_url: ''
+link: ''
 slug: improve-your-magento-workflow-use-git-or-mercurial
 title: 'Improve your Magento workflow: Use git or mercurial'
 wordpress_id: 1141

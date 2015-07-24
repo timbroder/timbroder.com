@@ -4,7 +4,7 @@ comments: true
 date: 2011-01-25 16:24:40+00:00
 dsq_thread_id: '276928545'
 layout: post
-linked_list_url: ''
+link: ''
 slug: my-picks-for-the-2011-oscars
 title: My picks for the 2011 Oscars
 wordpress_id: 786

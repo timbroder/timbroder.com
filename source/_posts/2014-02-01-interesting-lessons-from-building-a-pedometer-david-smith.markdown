@@ -4,7 +4,7 @@ comments: true
 date: 2014-02-01 14:25:34+00:00
 dsq_thread_id: '2210416234'
 layout: post
-linked_list_url: http://david-smith.org/blog/2014/01/31/interesting-lessons-from-building-a-pedometer
+link: http://david-smith.org/blog/2014/01/31/interesting-lessons-from-building-a-pedometer
 slug: interesting-lessons-from-building-a-pedometer-david-smith
 title: Interesting Lessons from Building a Pedometer - David Smith
 wordpress_id: 1411

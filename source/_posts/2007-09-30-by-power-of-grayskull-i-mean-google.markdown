@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-30 15:10:00+00:00
 dsq_thread_id: '121320069'
 layout: post
-linked_list_url: ''
+link: ''
 slug: by-power-of-grayskull-i-mean-google
 title: By the Power of Grayskull.... I mean Google
 wordpress_id: 74

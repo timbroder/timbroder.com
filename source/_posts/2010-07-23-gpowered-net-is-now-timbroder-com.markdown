@@ -4,7 +4,7 @@ comments: true
 date: 2010-07-23 19:48:27+00:00
 dsq_thread_id: '121381463'
 layout: post
-linked_list_url: ''
+link: ''
 slug: gpowered-net-is-now-timbroder-com
 title: gpowered.net is now timbroder.com
 wordpress_id: 575

@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-02 23:21:00+00:00
 dsq_thread_id: '119856930'
 layout: post
-linked_list_url: ''
+link: ''
 slug: 5-reasons-why-rim-should-make
 title: 5 Reasons Why RIM Should Make A BlackBerry That Runs Android
 wordpress_id: 132

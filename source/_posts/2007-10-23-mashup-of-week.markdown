@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-23 22:16:00+00:00
 dsq_thread_id: '121451419'
 layout: post
-linked_list_url: ''
+link: ''
 slug: mashup-of-week
 title: Mashup of the Week
 wordpress_id: 94

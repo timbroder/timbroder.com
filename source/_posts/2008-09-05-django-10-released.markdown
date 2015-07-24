@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-05 01:00:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: django-10-released
 title: Django 1.0 released!
 wordpress_id: 158

@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-28 13:55:00+00:00
 dsq_thread_id: '122060690'
 layout: post
-linked_list_url: ''
+link: ''
 slug: appengine-pricing-announced
 title: AppEngine Pricing announced
 wordpress_id: 124

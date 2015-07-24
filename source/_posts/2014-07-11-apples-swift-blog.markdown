@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-11 17:46:58+00:00
 dsq_thread_id: '2835929498'
 layout: post
-linked_list_url: https://developer.apple.com/swift/blog/
+link: https://developer.apple.com/swift/blog/
 slug: apples-swift-blog
 title: Apple's Swift Blog
 wordpress_id: 1579

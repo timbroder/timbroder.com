@@ -4,7 +4,7 @@ comments: true
 date: 2010-09-30 18:04:45+00:00
 dsq_thread_id: '409039313'
 layout: post
-linked_list_url: ''
+link: ''
 slug: some-reading-from-django-nyc
 title: Some reading from django-nyc
 wordpress_id: 664

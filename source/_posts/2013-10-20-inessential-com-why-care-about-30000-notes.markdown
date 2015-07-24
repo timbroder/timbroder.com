@@ -4,7 +4,7 @@ comments: true
 date: 2013-10-20 15:14:45+00:00
 dsq_thread_id: '1879242876'
 layout: post
-linked_list_url: ''
+link: ''
 slug: inessential-com-why-care-about-30000-notes
 title: 'inessential.com: Why Care About 30,000 Notes?'
 wordpress_id: 1371

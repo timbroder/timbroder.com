@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-08 21:02:32+00:00
 dsq_thread_id: '2828067152'
 layout: post
-linked_list_url: ''
+link: ''
 slug: format-json-and-save-to-gist
 title: Format JSON and save to gist with Alfred
 wordpress_id: 1569

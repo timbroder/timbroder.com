@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-25 03:24:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-developer-podcast-ep-8-summary
 title: Google Developer Podcast Ep 8 Summary
 wordpress_id: 71

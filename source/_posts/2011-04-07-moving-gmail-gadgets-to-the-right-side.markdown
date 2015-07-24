@@ -4,7 +4,7 @@ comments: true
 date: 2011-04-07 14:56:39+00:00
 dsq_thread_id: '273641188'
 layout: post
-linked_list_url: ''
+link: ''
 slug: moving-gmail-gadgets-to-the-right-side
 title: Moving Gmail Gadgets to the Right Side
 wordpress_id: 900

@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-25 00:27:00+00:00
 dsq_thread_id: '115750239'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-reader-stats-out-of-wack
 title: Google Reader stats out of Wack
 wordpress_id: 96

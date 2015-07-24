@@ -4,7 +4,7 @@ comments: true
 date: 2010-08-31 13:22:38+00:00
 dsq_thread_id: '242777679'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-reader-adds-to-trends-view
 title: Google Reader adds to trends view
 wordpress_id: 628

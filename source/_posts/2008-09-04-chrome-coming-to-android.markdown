@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-04 13:24:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: chrome-coming-to-android
 title: Chrome coming to Android?
 wordpress_id: 157

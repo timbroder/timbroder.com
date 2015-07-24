@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-30 03:25:00+00:00
 dsq_thread_id: '121595906'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-newest-data-center-pics
 title: Google's Newest Data Center [Pics]
 wordpress_id: 54

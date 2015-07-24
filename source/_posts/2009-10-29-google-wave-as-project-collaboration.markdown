@@ -4,7 +4,7 @@ comments: true
 date: 2009-10-29 17:21:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-wave-as-project-collaboration
 title: Google Wave as a Project Collaboration Tool
 wordpress_id: 220

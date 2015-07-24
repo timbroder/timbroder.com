@@ -4,7 +4,7 @@ comments: true
 date: 2011-01-27 19:56:14+00:00
 dsq_thread_id: '245713324'
 layout: post
-linked_list_url: ''
+link: ''
 slug: want-to-output-the-full-xml-config-magento-is-running
 title: Want to output the full xml config Magento is running?
 wordpress_id: 813

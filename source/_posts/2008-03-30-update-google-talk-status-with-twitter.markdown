@@ -4,7 +4,7 @@ comments: true
 date: 2008-03-30 23:11:00+00:00
 dsq_thread_id: '109993633'
 layout: post
-linked_list_url: ''
+link: ''
 slug: update-google-talk-status-with-twitter
 title: Update Google Talk status with Twitter
 wordpress_id: 102

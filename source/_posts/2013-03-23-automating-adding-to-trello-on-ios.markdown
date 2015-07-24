@@ -4,7 +4,7 @@ comments: true
 date: 2013-03-23 17:38:14+00:00
 dsq_thread_id: '1159541645'
 layout: post
-linked_list_url: ''
+link: ''
 slug: automating-adding-to-trello-on-ios
 title: Automate Adding to Trello on iOS with Launch Center Pro and Pythonista
 wordpress_id: 1299

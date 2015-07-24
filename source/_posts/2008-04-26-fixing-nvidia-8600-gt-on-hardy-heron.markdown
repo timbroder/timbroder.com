@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-26 19:22:00+00:00
 dsq_thread_id: '110884706'
 layout: post
-linked_list_url: ''
+link: ''
 slug: fixing-nvidia-8600-gt-on-hardy-heron
 title: Fixing Nvidia 8600 GT on Hardy Heron
 wordpress_id: 112

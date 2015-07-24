@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-06 23:59:00+00:00
 dsq_thread_id: '121907445'
 layout: post
-linked_list_url: ''
+link: ''
 slug: got-my-google-appengine-account
 title: Got my Google appengine account!
 wordpress_id: 118

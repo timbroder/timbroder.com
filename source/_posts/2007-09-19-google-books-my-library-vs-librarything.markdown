@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-19 02:11:00+00:00
 dsq_thread_id: '113337330'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-books-my-library-vs-librarything
 title: Google Books “My Library” Vs. LibraryThing vs. Shelfari
 wordpress_id: 67

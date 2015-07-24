@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-04 11:36:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: diggnation-filming-at-studio-b-in-nyc
 title: Diggnation filming at Studio B in NYC tonight
 wordpress_id: 133

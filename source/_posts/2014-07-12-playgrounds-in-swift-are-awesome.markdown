@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-12 23:19:42+00:00
 dsq_thread_id: '2838891542'
 layout: post
-linked_list_url: ''
+link: ''
 slug: playgrounds-in-swift-are-awesome
 title: Playgrounds in Swift are Awesome
 wordpress_id: 1587

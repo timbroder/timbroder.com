@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-30 03:32:00+00:00
 dsq_thread_id: '111954297'
 layout: post
-linked_list_url: ''
+link: ''
 slug: getting-numerof-diggs-from-digg
 title: 'HOWTO: Getting the Numer of Diggs from Digg (Python)'
 wordpress_id: 55

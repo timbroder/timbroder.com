@@ -4,7 +4,7 @@ comments: true
 date: 2010-06-18 17:45:25+00:00
 dsq_thread_id: '109993176'
 layout: post
-linked_list_url: ''
+link: ''
 slug: syntaxhighlighter-evolved
 title: SyntaxHighlighter Evolved
 wordpress_id: 318

@@ -4,7 +4,7 @@ comments: true
 date: 2008-11-24 23:53:00+00:00
 dsq_thread_id: '117086909'
 layout: post
-linked_list_url: ''
+link: ''
 slug: set-change-reset-mysql-root-password-on
 title: Set / Change / Reset the MySQL root password on Ubuntu Linux (Ubuntu)
 wordpress_id: 185

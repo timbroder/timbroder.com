@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-09 03:47:00+00:00
 dsq_thread_id: '110474730'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-google-mashup-of-week
 title: NEW! Google Mashup of the Week
 wordpress_id: 83

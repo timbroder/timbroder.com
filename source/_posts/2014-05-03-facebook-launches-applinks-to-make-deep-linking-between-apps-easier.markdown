@@ -4,7 +4,7 @@ comments: true
 date: 2014-05-03 00:09:09+00:00
 dsq_thread_id: '2669252655'
 layout: post
-linked_list_url: http://techcrunch.com/2014/04/30/facebook-launches-applinks-org-to-make-linking-between-apps-easier/
+link: http://techcrunch.com/2014/04/30/facebook-launches-applinks-org-to-make-linking-between-apps-easier/
 slug: facebook-launches-applinks-to-make-deep-linking-between-apps-easier
 title: Facebook Launches AppLinks To Make Deep Linking Between Apps Easier
 wordpress_id: 1512

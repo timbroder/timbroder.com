@@ -4,7 +4,7 @@ comments: true
 date: 2014-10-05 22:56:35+00:00
 dsq_thread_id: '3086633439'
 layout: post
-linked_list_url: http://alankent.wordpress.com/2014/09/27/meet-magento-2014-new-york-a-personal-summary/
+link: http://alankent.wordpress.com/2014/09/27/meet-magento-2014-new-york-a-personal-summary/
 slug: meet-magento-2014-new-york-a-personal-summary
 title: Meet Magento 2014 New York – a Personal Summary
 wordpress_id: 1712

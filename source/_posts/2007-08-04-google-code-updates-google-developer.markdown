@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-04 22:48:00+00:00
 dsq_thread_id: '121501700'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-code-updates-google-developer
 title: First Google Gadget
 wordpress_id: 29

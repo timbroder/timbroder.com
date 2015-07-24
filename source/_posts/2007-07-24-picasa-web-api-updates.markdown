@@ -4,7 +4,7 @@ comments: true
 date: 2007-07-24 02:17:00+00:00
 dsq_thread_id: '110486738'
 layout: post
-linked_list_url: ''
+link: ''
 slug: picasa-web-api-updates
 title: Picasa Web Api updates
 wordpress_id: 26

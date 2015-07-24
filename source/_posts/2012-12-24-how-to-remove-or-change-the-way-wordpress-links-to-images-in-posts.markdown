@@ -4,7 +4,7 @@ comments: true
 date: 2012-12-24 20:34:43+00:00
 dsq_thread_id: '997183744'
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-to-remove-or-change-the-way-wordpress-links-to-images-in-posts
 title: How to Remove or Change the way Wordpress Links to Images in Posts
 wordpress_id: 1278

@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-30 04:59:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: ubuntu-gutsy-goes-beta
 title: Ubuntu Gutsy Goes Beta
 wordpress_id: 73

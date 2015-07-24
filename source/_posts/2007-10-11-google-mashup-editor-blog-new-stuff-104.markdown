@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-11 01:43:00+00:00
 dsq_thread_id: '113863293'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-mashup-editor-blog-new-stuff-104
 title: 'Google Mashup Editor Blog: New Stuff - 10/4 Feature Release'
 wordpress_id: 84

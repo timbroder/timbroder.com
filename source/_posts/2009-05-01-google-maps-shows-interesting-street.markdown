@@ -4,7 +4,7 @@ comments: true
 date: 2009-05-01 00:16:00+00:00
 dsq_thread_id: '121560365'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-maps-shows-interesting-street
 title: Google Maps F-Bombs street names!
 wordpress_id: 203

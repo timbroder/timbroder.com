@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-01 15:41:00+00:00
 dsq_thread_id: '121355858'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-streetview-going-global
 title: Google StreetView Going Global?
 wordpress_id: 75

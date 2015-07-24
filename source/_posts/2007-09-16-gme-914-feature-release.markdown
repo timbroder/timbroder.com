@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-16 17:21:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: gme-914-feature-release
 title: GME 9/14 Feature Release
 wordpress_id: 64

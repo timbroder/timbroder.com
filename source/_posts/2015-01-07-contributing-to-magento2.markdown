@@ -4,7 +4,7 @@ comments: true
 date: 2015-01-07 17:04:00+00:00
 dsq_thread_id: '3399042067'
 layout: post
-linked_list_url: ''
+link: ''
 slug: contributing-to-magento2
 title: Contributing to Magento2
 wordpress_id: 1744

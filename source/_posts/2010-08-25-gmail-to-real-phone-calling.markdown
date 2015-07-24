@@ -4,7 +4,7 @@ comments: true
 date: 2010-08-25 19:07:05+00:00
 dsq_thread_id: '133578996'
 layout: post
-linked_list_url: ''
+link: ''
 slug: gmail-to-real-phone-calling
 title: Gmail to real phone calling
 wordpress_id: 617

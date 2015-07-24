@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-17 22:31:00+00:00
 dsq_thread_id: '121427657'
 layout: post
-linked_list_url: ''
+link: ''
 slug: official-t-mobile-android-announcement
 title: 'Official: T-Mobile Android Announcement September 23rd'
 wordpress_id: 169

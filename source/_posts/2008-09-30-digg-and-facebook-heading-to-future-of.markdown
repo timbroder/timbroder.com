@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-30 14:17:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: digg-and-facebook-heading-to-future-of
 title: Digg and Facebook Heading to the Future of Web Apps expo
 wordpress_id: 177

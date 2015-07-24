@@ -4,7 +4,7 @@ comments: true
 date: 2008-11-11 22:54:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: gmail-adds-voice-and-video-chat
 title: Gmail adds voice and video chat
 wordpress_id: 184

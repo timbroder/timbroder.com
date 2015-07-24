@@ -4,7 +4,7 @@ comments: true
 date: 2014-03-29 15:40:16+00:00
 dsq_thread_id: '2569179974'
 layout: post
-linked_list_url: http://www.leancrew.com/all-this/2014/02/readkit-article-sorting/
+link: http://www.leancrew.com/all-this/2014/02/readkit-article-sorting/
 slug: readkit-article-sorting-group-feed-feed-wrangler-smart-streams
 title: 'ReadKit article sorting: group by feed in Feed Wrangler smart streams'
 wordpress_id: 1472

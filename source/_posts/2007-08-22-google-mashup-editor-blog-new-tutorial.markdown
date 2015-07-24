@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-22 03:34:00+00:00
 dsq_thread_id: '121800017'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-mashup-editor-blog-new-tutorial
 title: 'Google Mashup Editor Blog: New Tutorial: Using Picasa Web Album Feeds in GME'
 wordpress_id: 40

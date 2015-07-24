@@ -4,7 +4,7 @@ comments: true
 date: 2014-11-04 15:21:15+00:00
 dsq_thread_id: '3191324051'
 layout: post
-linked_list_url: http://www.marco.org/2014/11/01/short-form-blogging
+link: http://www.marco.org/2014/11/01/short-form-blogging
 slug: twitter-is-not-a-replacement-for-blogs-marco-org
 title: Twitter is not a replacement for blogs
 wordpress_id: 1728

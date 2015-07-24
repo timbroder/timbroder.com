@@ -4,7 +4,7 @@ comments: true
 date: 2010-12-29 03:08:52+00:00
 dsq_thread_id: '266390238'
 layout: post
-linked_list_url: ''
+link: ''
 slug: want-user-available-in-every-template-in-django
 title: Want user available in every template in Django?
 wordpress_id: 704

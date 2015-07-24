@@ -4,7 +4,7 @@ comments: true
 date: 2010-02-12 14:34:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: why-google-needs-buzz
 title: Why Google Needs Buzz
 wordpress_id: 236

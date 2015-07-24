@@ -4,7 +4,7 @@ comments: true
 date: 2014-12-13 23:12:12+00:00
 dsq_thread_id: '3322595670'
 layout: post
-linked_list_url: http://www.alexanderinteractive.com/blog/2014/09/apple-pay-magento/
+link: http://www.alexanderinteractive.com/blog/2014/09/apple-pay-magento/
 slug: apple-pay-and-magento
 title: Apple Pay and Magento
 wordpress_id: 1735

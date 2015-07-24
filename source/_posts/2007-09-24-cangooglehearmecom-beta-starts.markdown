@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-24 12:10:00+00:00
 dsq_thread_id: '116705898'
 layout: post
-linked_list_url: ''
+link: ''
 slug: cangooglehearmecom-beta-starts
 title: CanGoogleHearMe.com beta starts
 wordpress_id: 70

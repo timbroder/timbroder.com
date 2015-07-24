@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-27 23:36:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-developer-podcast-ep-9-quickcap
 title: Google Developer Podcast Ep 9 QuickCap
 wordpress_id: 72

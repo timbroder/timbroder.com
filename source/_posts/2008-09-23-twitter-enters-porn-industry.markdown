@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-23 14:23:00+00:00
 dsq_thread_id: '110575299'
 layout: post
-linked_list_url: ''
+link: ''
 slug: twitter-enters-porn-industry
 title: Twitter enters the Porn industry
 wordpress_id: 172

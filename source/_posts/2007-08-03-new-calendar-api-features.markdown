@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-03 02:45:00+00:00
 dsq_thread_id: '120787825'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-calendar-api-features
 title: New Calendar API features
 wordpress_id: 28

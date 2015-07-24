@@ -4,7 +4,7 @@ comments: true
 date: 2015-01-12 00:10:24+00:00
 dsq_thread_id: '3413941731'
 layout: post
-linked_list_url: ''
+link: ''
 slug: equality-in-the-apple-blogging-scene
 title: Equality in the Apple Blogging Scene
 wordpress_id: 1754

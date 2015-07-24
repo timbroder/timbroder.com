@@ -4,7 +4,7 @@ comments: true
 date: 2009-04-17 19:11:00+00:00
 dsq_thread_id: '111041871'
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-to-manage-podcasts-in-winamp-screw
 title: How to manage podcasts in Winamp (screw itunes)
 wordpress_id: 201

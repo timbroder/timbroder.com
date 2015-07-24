@@ -4,7 +4,7 @@ comments: true
 date: 2009-03-19 17:11:00+00:00
 dsq_thread_id: '110678533'
 layout: post
-linked_list_url: ''
+link: ''
 slug: first-google-chrome-extensions
 title: First Google Chrome Extensions
 wordpress_id: 197

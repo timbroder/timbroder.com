@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-27 14:47:33+00:00
 dsq_thread_id: '2877329407'
 layout: post
-linked_list_url: ''
+link: ''
 slug: uitapgesturerecognizer-in-swift
 title: UITapGestureRecognizer in Swift
 wordpress_id: 1614

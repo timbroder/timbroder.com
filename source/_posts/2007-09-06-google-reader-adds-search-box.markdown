@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-06 18:20:00+00:00
 dsq_thread_id: '120365390'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-reader-adds-search-box
 title: Google Reader adds Search Box!!
 wordpress_id: 59

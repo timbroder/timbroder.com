@@ -4,7 +4,7 @@ comments: true
 date: 2010-09-08 19:21:05+00:00
 dsq_thread_id: '851915850'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-goes-instant
 title: Google goes Instant
 wordpress_id: 657

@@ -4,7 +4,7 @@ comments: true
 date: 2010-03-31 16:31:06+00:00
 dsq_thread_id: '110651684'
 layout: post
-linked_list_url: ''
+link: ''
 slug: select-foo-count-from-bar-group-by-foo-in-django
 title: select foo, count(*) from bar group by foo in django
 wordpress_id: 247

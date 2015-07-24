@@ -4,7 +4,7 @@ comments: true
 date: 2009-04-08 13:45:00+00:00
 dsq_thread_id: '116967586'
 layout: post
-linked_list_url: ''
+link: ''
 slug: big-appengine-news-cron-java-firewalled
 title: 'Big Appengine news: Cron, Java, Firewalled Data, DB Import'
 wordpress_id: 200

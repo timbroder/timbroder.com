@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-18 23:18:00+00:00
 dsq_thread_id: '121339341'
 layout: post
-linked_list_url: ''
+link: ''
 slug: my-current-fav-google-map-mashups
 title: My current fav Google Map Mashups
 wordpress_id: 37

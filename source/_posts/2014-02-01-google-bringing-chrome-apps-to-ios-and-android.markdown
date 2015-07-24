@@ -4,7 +4,7 @@ comments: true
 date: 2014-02-01 10:49:51+00:00
 dsq_thread_id: '2220343154'
 layout: post
-linked_list_url: http://www.macrumors.com/2014/01/28/google-mobile-chrome-apps/
+link: http://www.macrumors.com/2014/01/28/google-mobile-chrome-apps/
 slug: google-bringing-chrome-apps-to-ios-and-android
 title: Google Bringing Chrome Apps to iOS and Android
 wordpress_id: 1404

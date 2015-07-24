@@ -4,7 +4,7 @@ comments: true
 date: 2009-06-02 15:07:00+00:00
 dsq_thread_id: '109993662'
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-to-display-what-google-reader-rss
 title: 'Wordpress Plugin: Displaying your Google Reader RSS subscriptions'
 wordpress_id: 206

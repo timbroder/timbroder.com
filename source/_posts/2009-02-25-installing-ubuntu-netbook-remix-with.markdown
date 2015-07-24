@@ -4,7 +4,7 @@ comments: true
 date: 2009-02-25 20:51:00+00:00
 dsq_thread_id: '111207570'
 layout: post
-linked_list_url: ''
+link: ''
 slug: installing-ubuntu-netbook-remix-with
 title: Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind
 wordpress_id: 191

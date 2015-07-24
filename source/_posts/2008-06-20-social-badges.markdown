@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-20 00:25:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: social-badges
 title: Social Badges
 wordpress_id: 140

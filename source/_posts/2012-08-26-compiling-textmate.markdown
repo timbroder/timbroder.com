@@ -4,7 +4,7 @@ comments: true
 date: 2012-08-26 18:24:16+00:00
 dsq_thread_id: '819371804'
 layout: post
-linked_list_url: ''
+link: ''
 slug: compiling-textmate
 title: Compiling Textmate
 wordpress_id: 1192

@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-18 10:55:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: rest-in-peace-robert-jordan
 title: Rest in Peace Robert Jordan
 wordpress_id: 66

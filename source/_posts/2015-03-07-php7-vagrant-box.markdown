@@ -4,7 +4,7 @@ comments: true
 date: 2015-03-07 16:13:24+00:00
 dsq_thread_id: '3579007676'
 layout: post
-linked_list_url: ''
+link: ''
 slug: php7-vagrant-box
 title: PHP7 Vagrant Box
 wordpress_id: 1802

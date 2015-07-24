@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-06 19:56:24+00:00
 dsq_thread_id: '2826417939'
 layout: post
-linked_list_url: https://github.com/ksm/SwiftInFlux
+link: https://github.com/ksm/SwiftInFlux
 slug: swiftinflux
 title: SwiftInFlux
 wordpress_id: 1567

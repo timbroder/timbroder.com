@@ -4,7 +4,7 @@ comments: true
 date: 2012-09-10 23:32:42+00:00
 dsq_thread_id: '839042026'
 layout: post
-linked_list_url: ''
+link: ''
 slug: ios-multiple-lines-of-text-in-a-uitableviewcell
 title: 'iOS: Multiple Lines of Text in a UITableViewCell'
 wordpress_id: 1237

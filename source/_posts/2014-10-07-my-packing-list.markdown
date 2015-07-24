@@ -4,7 +4,7 @@ comments: true
 date: 2014-10-07 18:01:55+00:00
 dsq_thread_id: '3092927196'
 layout: post
-linked_list_url: ''
+link: ''
 slug: my-packing-list
 title: My Packing List
 wordpress_id: 1722

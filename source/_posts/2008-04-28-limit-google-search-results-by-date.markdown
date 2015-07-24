@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-28 14:43:00+00:00
 dsq_thread_id: '114218945'
 layout: post
-linked_list_url: ''
+link: ''
 slug: limit-google-search-results-by-date
 title: Limit Google Search Results by Date
 wordpress_id: 113

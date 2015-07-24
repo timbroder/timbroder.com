@@ -4,7 +4,7 @@ comments: true
 date: 2015-02-07 15:46:33+00:00
 dsq_thread_id: '3495489176'
 layout: post
-linked_list_url: http://robb.is/thinking-about/beyond-uxkit/
+link: http://robb.is/thinking-about/beyond-uxkit/
 slug: beyond-uxkit-robert-bohnke
 title: Beyond UXKit - Robert Böhnke
 wordpress_id: 1757

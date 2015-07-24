@@ -4,7 +4,7 @@ comments: true
 date: 2009-08-29 18:39:00+00:00
 dsq_thread_id: '123477204'
 layout: post
-linked_list_url: ''
+link: ''
 slug: location-location-location
 title: Location, Location, Location
 wordpress_id: 213

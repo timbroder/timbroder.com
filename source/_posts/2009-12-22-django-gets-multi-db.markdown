@@ -4,7 +4,7 @@ comments: true
 date: 2009-12-22 19:58:00+00:00
 dsq_thread_id: '110028684'
 layout: post
-linked_list_url: ''
+link: ''
 slug: django-gets-multi-db
 title: Django gets Multi-DB
 wordpress_id: 228

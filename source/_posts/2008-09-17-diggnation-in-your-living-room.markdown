@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-17 14:23:00+00:00
 dsq_thread_id: '121581396'
 layout: post
-linked_list_url: ''
+link: ''
 slug: diggnation-in-your-living-room
 title: Diggnation in your living room!
 wordpress_id: 164

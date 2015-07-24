@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-17 20:00:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: adobe-air-beta-now-available-for-linux
 title: Adobe AIR Beta Now Available for Linux
 wordpress_id: 165

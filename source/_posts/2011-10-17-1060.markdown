@@ -4,7 +4,7 @@ comments: true
 date: 2011-10-17 16:22:06+00:00
 dsq_thread_id: '519583922'
 layout: post
-linked_list_url: ''
+link: ''
 slug: '1060'
 title: Creating a stateless request in Magento
 wordpress_id: 1060

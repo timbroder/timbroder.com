@@ -4,7 +4,7 @@ comments: true
 date: 2009-08-13 21:20:00+00:00
 dsq_thread_id: '120744866'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-opt-out-feature-lets-users
 title: Google Opt Out Feature Lets Users Protect Privacy by Moving to Remote Village
 wordpress_id: 210

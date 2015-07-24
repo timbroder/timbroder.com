@@ -17,8 +17,8 @@ permalink: atom.xml
     {% endif %}
     <generator uri="http://sculpin.io/">Sculpin</generator>
     {% for post in data.posts|slice(0, 10) %}
-    {% if post.linked_list_url is not empty %}
-        {% set linked = post.linked_list_url %}
+    {% if post.link is not empty %}
+        {% set linked = post.link %}
     {% else %}
         {% set linked = null %}
     {% endif %}

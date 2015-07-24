@@ -4,7 +4,7 @@ comments: true
 date: 2014-08-13 23:13:59+00:00
 dsq_thread_id: '2925124877'
 layout: post
-linked_list_url: http://www.inman.com/next/how-a-time-tracking-app-from-apple-designers-is-changing-how-i-do-business/
+link: http://www.inman.com/next/how-a-time-tracking-app-from-apple-designers-is-changing-how-i-do-business/
 slug: make-time
 title: “make” time
 wordpress_id: 1687

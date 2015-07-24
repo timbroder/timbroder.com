@@ -4,7 +4,7 @@ comments: true
 date: 2012-08-17 15:49:55+00:00
 dsq_thread_id: '809062276'
 layout: post
-linked_list_url: ''
+link: ''
 slug: adding-done-and-cancel-buttons-to-an-ios-number-pad
 title: Adding Done and Cancel buttons to an iOS number pad
 wordpress_id: 1147

@@ -4,7 +4,7 @@ comments: true
 date: 2009-09-18 19:40:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: twitter-get-phone-calls-facebook-gets
 title: Twitter get phone calls, Facebook gets voice chat
 wordpress_id: 215

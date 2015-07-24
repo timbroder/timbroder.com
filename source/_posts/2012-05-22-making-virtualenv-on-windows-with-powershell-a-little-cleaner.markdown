@@ -4,7 +4,7 @@ comments: true
 date: 2012-05-22 15:27:45+00:00
 dsq_thread_id: '699887861'
 layout: post
-linked_list_url: ''
+link: ''
 slug: making-virtualenv-on-windows-with-powershell-a-little-cleaner
 title: Making virtualenv on windows with powershell a little cleaner
 wordpress_id: 1090

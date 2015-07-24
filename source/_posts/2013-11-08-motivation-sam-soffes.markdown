@@ -4,7 +4,7 @@ comments: true
 date: 2013-11-08 14:13:07+00:00
 dsq_thread_id: '1953449688'
 layout: post
-linked_list_url: http://sam.roon.io/motivation
+link: http://sam.roon.io/motivation
 slug: motivation-sam-soffes
 title: Motivation — Sam Soffes
 wordpress_id: 1379

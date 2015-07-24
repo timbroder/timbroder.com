@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-23 01:02:13+00:00
 dsq_thread_id: '2865602818'
 layout: post
-linked_list_url: http://indiestack.com/2014/05/coding-under-par/
+link: http://indiestack.com/2014/05/coding-under-par/
 slug: coding-under-par
 title: Coding Under Par
 wordpress_id: 1600

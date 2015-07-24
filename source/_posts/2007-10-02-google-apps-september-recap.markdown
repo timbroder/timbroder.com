@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-02 23:28:00+00:00
 dsq_thread_id: '121285702'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-apps-september-recap
 title: Google Apps September recap
 wordpress_id: 77

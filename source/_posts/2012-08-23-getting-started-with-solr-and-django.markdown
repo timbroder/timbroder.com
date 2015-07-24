@@ -4,7 +4,7 @@ comments: true
 date: 2012-08-23 19:45:56+00:00
 dsq_thread_id: '816104825'
 layout: post
-linked_list_url: ''
+link: ''
 slug: getting-started-with-solr-and-django
 title: Getting Started with Solr and Django
 wordpress_id: 1167

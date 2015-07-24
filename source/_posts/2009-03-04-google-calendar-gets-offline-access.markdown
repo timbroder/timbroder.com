@@ -4,7 +4,7 @@ comments: true
 date: 2009-03-04 13:50:00+00:00
 dsq_thread_id: '121280485'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-calendar-gets-offline-access
 title: Google Calendar gets offline access with Gears
 wordpress_id: 192

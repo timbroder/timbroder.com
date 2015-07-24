@@ -4,7 +4,7 @@ comments: true
 date: 2008-07-18 19:56:00+00:00
 dsq_thread_id: '121907752'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-and-improved-google-personal
 title: New and Improved Google Personal Homepage (ig)
 wordpress_id: 144

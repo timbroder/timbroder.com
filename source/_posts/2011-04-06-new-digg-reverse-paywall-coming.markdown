@@ -4,7 +4,7 @@ comments: true
 date: 2011-04-06 13:45:21+00:00
 dsq_thread_id: '272655868'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-digg-reverse-paywall-coming
 title: New Digg reverse paywall coming
 wordpress_id: 897

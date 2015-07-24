@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-03 22:37:00+00:00
 dsq_thread_id: '109994389'
 layout: post
-linked_list_url: ''
+link: ''
 slug: blogger-adds-bloggroll
 title: Blogger adds bloggroll
 wordpress_id: 103

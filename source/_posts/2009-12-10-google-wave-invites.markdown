@@ -4,7 +4,7 @@ comments: true
 date: 2009-12-10 15:01:00+00:00
 dsq_thread_id: '109993709'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-wave-invites
 title: Google Wave Invites
 wordpress_id: 224

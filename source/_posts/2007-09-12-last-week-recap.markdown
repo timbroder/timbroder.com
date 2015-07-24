@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-12 01:24:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: last-week-recap
 title: Last week recap
 wordpress_id: 61

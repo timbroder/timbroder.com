@@ -4,7 +4,7 @@ comments: true
 date: 2014-12-26 14:59:48+00:00
 dsq_thread_id: '3361696438'
 layout: post
-linked_list_url: http://nickbradbury.com/2014/12/11/the-programmers-dream-a-ramble/
+link: http://nickbradbury.com/2014/12/11/the-programmers-dream-a-ramble/
 slug: the-programmers-dream
 title: The Programmer's Dream
 wordpress_id: 1740

@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-13 11:30:00+00:00
 dsq_thread_id: '121296981'
 layout: post
-linked_list_url: ''
+link: ''
 slug: slight-delay-in-next-howto
 title: Slight delay in next HOWTO
 wordpress_id: 62

@@ -4,7 +4,7 @@ comments: true
 date: 2009-03-31 14:33:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: twitter-blog-replies-are-now-mentions
 title: 'Twitter Blog: Replies Are Now Mentions'
 wordpress_id: 198

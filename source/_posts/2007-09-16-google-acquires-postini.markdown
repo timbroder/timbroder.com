@@ -4,7 +4,7 @@ comments: true
 date: 2007-09-16 17:31:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-acquires-postini
 title: Google acquires Postini
 wordpress_id: 65

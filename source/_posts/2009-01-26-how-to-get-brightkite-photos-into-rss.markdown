@@ -4,7 +4,7 @@ comments: true
 date: 2009-01-26 15:11:00+00:00
 dsq_thread_id: '117911366'
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-to-get-brightkite-photos-into-rss
 title: How to get brightkite photos into an RSS feed (to post to a blog)
 wordpress_id: 188

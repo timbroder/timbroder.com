@@ -4,7 +4,7 @@ comments: true
 date: 2009-09-30 19:51:00+00:00
 dsq_thread_id: '109993689'
 layout: post
-linked_list_url: ''
+link: ''
 slug: checking-if-remote-file-exists-in
 title: Checking if a remote file exists in python
 wordpress_id: 216

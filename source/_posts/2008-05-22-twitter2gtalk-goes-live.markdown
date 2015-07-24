@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-22 19:01:00+00:00
 dsq_thread_id: '109993863'
 layout: post
-linked_list_url: ''
+link: ''
 slug: twitter2gtalk-goes-live
 title: twitter2gTalk Goes Live!
 wordpress_id: 122

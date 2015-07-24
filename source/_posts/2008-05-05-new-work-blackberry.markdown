@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-05 21:31:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-work-blackberry
 title: New Work Blackberry
 wordpress_id: 117

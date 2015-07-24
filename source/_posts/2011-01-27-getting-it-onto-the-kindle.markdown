@@ -4,7 +4,7 @@ comments: true
 date: 2011-01-27 15:05:49+00:00
 dsq_thread_id: '246043444'
 layout: post
-linked_list_url: ''
+link: ''
 slug: getting-it-onto-the-kindle
 title: Getting it onto the Kindle
 wordpress_id: 792

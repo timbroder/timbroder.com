@@ -4,7 +4,7 @@ comments: true
 date: 2010-02-12 16:27:00+00:00
 dsq_thread_id: '110652092'
 layout: post
-linked_list_url: ''
+link: ''
 slug: hide-buzz-without-disabling-it
 title: Hide buzz without disabling it
 wordpress_id: 237

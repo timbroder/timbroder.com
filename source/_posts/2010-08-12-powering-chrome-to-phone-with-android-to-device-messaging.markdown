@@ -4,7 +4,7 @@ comments: true
 date: 2010-08-12 18:42:08+00:00
 dsq_thread_id: '128992975'
 layout: post
-linked_list_url: ''
+link: ''
 slug: powering-chrome-to-phone-with-android-to-device-messaging
 title: 'Powering Chrome to Phone with Android to Device Messaging '
 wordpress_id: 591

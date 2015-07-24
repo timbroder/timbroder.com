@@ -4,7 +4,7 @@ comments: true
 date: 2014-04-01 13:50:22+00:00
 dsq_thread_id: '2584480862'
 layout: post
-linked_list_url: http://inessential.com/2014/02/04/azure_takes_over
+link: http://inessential.com/2014/02/04/azure_takes_over
 slug: inessential-com-azure-takes
 title: 'inessential.com: Azure Takes Over'
 wordpress_id: 1474

@@ -4,7 +4,7 @@ comments: true
 date: 2009-11-10 22:38:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: online-advertising-moving-to-your-car
 title: Online advertising moving to.... your car?
 wordpress_id: 222

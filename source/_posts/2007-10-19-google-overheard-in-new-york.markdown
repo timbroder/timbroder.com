@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-19 00:42:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-overheard-in-new-york
 title: Google Overheard in New York
 wordpress_id: 92

@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-28 18:48:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: aol-joins-opensocial
 title: 'I/O: AOL Joins OpenSocial'
 wordpress_id: 127

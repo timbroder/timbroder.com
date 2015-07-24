@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-02 15:56:00+00:00
 dsq_thread_id: '120289809'
 layout: post
-linked_list_url: ''
+link: ''
 slug: share-your-code-at-google-app-engine
 title: Share your code at ‘Google App Engine Cookbook’
 wordpress_id: 155

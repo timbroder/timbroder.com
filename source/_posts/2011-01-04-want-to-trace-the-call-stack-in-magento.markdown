@@ -4,7 +4,7 @@ comments: true
 date: 2011-01-04 21:35:38+00:00
 dsq_thread_id: '246419229'
 layout: post
-linked_list_url: ''
+link: ''
 slug: want-to-trace-the-call-stack-in-magento
 title: Want to trace the call stack in Magento?
 wordpress_id: 736

@@ -4,7 +4,7 @@ comments: true
 date: 2014-03-28 16:07:22+00:00
 dsq_thread_id: '2567152833'
 layout: post
-linked_list_url: ''
+link: ''
 slug: drafts
 title: Drafts
 wordpress_id: 1486

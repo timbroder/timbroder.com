@@ -4,7 +4,7 @@ comments: true
 date: 2010-01-07 17:05:00+00:00
 dsq_thread_id: '113794599'
 layout: post
-linked_list_url: ''
+link: ''
 slug: override-querysetdelete-one-way-of
 title: Override QuerySet.delete() (one way of preventing cascading deletes)
 wordpress_id: 231

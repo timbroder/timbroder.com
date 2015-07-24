@@ -4,7 +4,7 @@ comments: true
 date: 2010-07-19 21:40:21+00:00
 dsq_thread_id: '119834691'
 layout: post
-linked_list_url: ''
+link: ''
 slug: pig-roast
 title: Pig Roast
 wordpress_id: 568

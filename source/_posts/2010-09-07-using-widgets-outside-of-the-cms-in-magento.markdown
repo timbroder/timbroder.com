@@ -4,7 +4,7 @@ comments: true
 date: 2010-09-07 19:51:46+00:00
 dsq_thread_id: '243694247'
 layout: post
-linked_list_url: ''
+link: ''
 slug: using-widgets-outside-of-the-cms-in-magento
 title: Using widgets outside of the CMS in Magento
 wordpress_id: 638

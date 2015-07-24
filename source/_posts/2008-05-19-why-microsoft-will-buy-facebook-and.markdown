@@ -4,7 +4,7 @@ comments: true
 date: 2008-05-19 21:42:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: why-microsoft-will-buy-facebook-and
 title: Why Microsoft will buy Facebook and keep it closed
 wordpress_id: 121

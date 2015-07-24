@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-23 23:34:00+00:00
 dsq_thread_id: '109993630'
 layout: post
-linked_list_url: ''
+link: ''
 slug: new-blog-address_23
 title: New Blog Address
 wordpress_id: 95

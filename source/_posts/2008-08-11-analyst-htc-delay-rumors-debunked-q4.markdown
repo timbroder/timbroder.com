@@ -4,7 +4,7 @@ comments: true
 date: 2008-08-11 14:41:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: analyst-htc-delay-rumors-debunked-q4
 title: 'Android: Analyst HTC delay rumors debunked - Q4 launch still on track'
 wordpress_id: 147

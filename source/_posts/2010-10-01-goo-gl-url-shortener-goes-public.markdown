@@ -4,7 +4,7 @@ comments: true
 date: 2010-10-01 14:53:20+00:00
 dsq_thread_id: '666951035'
 layout: post
-linked_list_url: ''
+link: ''
 slug: goo-gl-url-shortener-goes-public
 title: Goo.gl url shortener goes public
 wordpress_id: 668

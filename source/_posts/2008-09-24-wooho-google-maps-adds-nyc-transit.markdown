@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-24 17:55:00+00:00
 dsq_thread_id: '111810026'
 layout: post
-linked_list_url: ''
+link: ''
 slug: wooho-google-maps-adds-nyc-transit
 title: Woohoo! Google Maps adds NYC transit directions
 wordpress_id: 174

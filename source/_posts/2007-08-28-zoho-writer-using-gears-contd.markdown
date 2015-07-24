@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-28 01:45:00+00:00
 dsq_thread_id: '110359589'
 layout: post
-linked_list_url: ''
+link: ''
 slug: zoho-writer-using-gears-contd
 title: Zoho Writer using Gears (cont'd)
 wordpress_id: 45

@@ -4,7 +4,7 @@ comments: true
 date: 2011-02-23 20:55:22+00:00
 dsq_thread_id: '243706747'
 layout: post
-linked_list_url: ''
+link: ''
 slug: running-mongodb-as-a-service-on-windows
 title: Running Mongodb as a service on windows
 wordpress_id: 850

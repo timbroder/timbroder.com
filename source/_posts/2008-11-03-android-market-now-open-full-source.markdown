@@ -4,7 +4,7 @@ comments: true
 date: 2008-11-03 14:28:00+00:00
 dsq_thread_id: '111028221'
 layout: post
-linked_list_url: ''
+link: ''
 slug: android-market-now-open-full-source
 title: Android Market now open. Full source released
 wordpress_id: 182

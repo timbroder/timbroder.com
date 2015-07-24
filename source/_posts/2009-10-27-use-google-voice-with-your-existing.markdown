@@ -4,7 +4,7 @@ comments: true
 date: 2009-10-27 14:17:00+00:00
 dsq_thread_id: '109993700'
 layout: post
-linked_list_url: ''
+link: ''
 slug: use-google-voice-with-your-existing
 title: Use Google Voice with your existing number
 wordpress_id: 219

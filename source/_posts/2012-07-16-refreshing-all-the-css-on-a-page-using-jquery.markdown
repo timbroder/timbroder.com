@@ -4,7 +4,7 @@ comments: true
 date: 2012-07-16 19:16:03+00:00
 dsq_thread_id: '767965732'
 layout: post
-linked_list_url: ''
+link: ''
 slug: refreshing-all-the-css-on-a-page-using-jquery
 title: Refreshing all the css on a page using jQuery
 wordpress_id: 1130

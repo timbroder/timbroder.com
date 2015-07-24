@@ -4,7 +4,7 @@ comments: true
 date: 2014-07-27 22:31:11+00:00
 dsq_thread_id: '2878223721'
 layout: post
-linked_list_url: ''
+link: ''
 slug: dismiss-a-modal-uiviewcontroller-created-in-interface-builder
 title: Dismiss a Modal UIViewController created in Interface Builder
 wordpress_id: 1626

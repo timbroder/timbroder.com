@@ -4,7 +4,7 @@ comments: true
 date: 2009-06-02 15:02:00+00:00
 dsq_thread_id: '110297072'
 layout: post
-linked_list_url: ''
+link: ''
 slug: quick-google-authentication-in-php
 title: Quick Google Authentication in PHP
 wordpress_id: 205

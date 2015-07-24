@@ -4,7 +4,7 @@ comments: true
 date: 2010-08-19 15:16:43+00:00
 dsq_thread_id: '131310800'
 layout: post
-linked_list_url: ''
+link: ''
 slug: why-vps
 title: Why VPS?
 wordpress_id: 596

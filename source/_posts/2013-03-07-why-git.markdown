@@ -4,7 +4,7 @@ comments: true
 date: 2013-03-07 15:45:55+00:00
 dsq_thread_id: '1123318589'
 layout: post
-linked_list_url: ''
+link: ''
 slug: why-git
 title: Why Git?
 wordpress_id: 1323

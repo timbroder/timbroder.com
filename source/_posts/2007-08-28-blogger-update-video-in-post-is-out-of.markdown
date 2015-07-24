@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-28 02:01:00+00:00
 dsq_thread_id: '110999024'
 layout: post
-linked_list_url: ''
+link: ''
 slug: blogger-update-video-in-post-is-out-of
 title: 'Blogger Update: Video in post is out of beta'
 wordpress_id: 46

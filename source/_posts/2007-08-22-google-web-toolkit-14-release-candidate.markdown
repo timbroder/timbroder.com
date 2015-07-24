@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-22 03:47:00+00:00
 dsq_thread_id: '122082111'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-web-toolkit-14-release-candidate
 title: Google Web Toolkit 1.4 Release Candidate 2
 wordpress_id: 41

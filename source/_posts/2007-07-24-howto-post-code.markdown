@@ -4,7 +4,7 @@ comments: true
 date: 2007-07-24 01:52:00+00:00
 dsq_thread_id: '109993607'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-post-code
 title: 'HOWTO: post code'
 wordpress_id: 25

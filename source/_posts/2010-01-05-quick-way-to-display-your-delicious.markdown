@@ -4,7 +4,7 @@ comments: true
 date: 2010-01-05 14:46:00+00:00
 dsq_thread_id: '119741033'
 layout: post
-linked_list_url: ''
+link: ''
 slug: quick-way-to-display-your-delicious
 title: A quick way to display your delicious links by tag
 wordpress_id: 230

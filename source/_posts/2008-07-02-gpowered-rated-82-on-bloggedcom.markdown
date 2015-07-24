@@ -4,7 +4,7 @@ comments: true
 date: 2008-07-02 01:19:00+00:00
 dsq_thread_id: '121508957'
 layout: post
-linked_list_url: ''
+link: ''
 slug: gpowered-rated-82-on-bloggedcom
 title: gPowered Rated 8.2 on Blogged.com!
 wordpress_id: 143

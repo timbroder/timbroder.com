@@ -4,7 +4,7 @@ comments: true
 date: 2008-10-06 12:55:00+00:00
 dsq_thread_id: '109993656'
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-to-turn-any-webpage-into-rss-feed
 title: How to turn any webpage into an RSS feed
 wordpress_id: 180

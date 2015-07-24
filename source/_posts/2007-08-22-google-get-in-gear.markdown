@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-22 02:34:00+00:00
 dsq_thread_id: '112360413'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-get-in-gear
 title: C'mon Google! Get in Gear!!
 wordpress_id: 38

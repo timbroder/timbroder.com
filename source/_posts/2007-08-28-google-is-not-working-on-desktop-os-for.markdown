@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-28 22:52:00+00:00
 dsq_thread_id: '116261521'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-is-not-working-on-desktop-os-for
 title: Google is NOT working on a desktop OS for the public!!
 wordpress_id: 48

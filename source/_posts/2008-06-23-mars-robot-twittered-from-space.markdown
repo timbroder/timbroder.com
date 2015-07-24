@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-23 18:34:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: mars-robot-twittered-from-space
 title: Mars Robot twittered from Space
 wordpress_id: 142

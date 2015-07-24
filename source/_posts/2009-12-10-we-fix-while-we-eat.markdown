@@ -4,7 +4,7 @@ comments: true
 date: 2009-12-10 16:48:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: we-fix-while-we-eat
 title: We fix while we eat
 wordpress_id: 225

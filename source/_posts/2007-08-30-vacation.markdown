@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-30 20:21:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: vacation
 title: Vacation!
 wordpress_id: 56

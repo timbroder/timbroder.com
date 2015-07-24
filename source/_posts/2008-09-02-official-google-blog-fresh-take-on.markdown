@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-02 13:54:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: official-google-blog-fresh-take-on
 title: 'Official Google Blog: A fresh take on the browser'
 wordpress_id: 152

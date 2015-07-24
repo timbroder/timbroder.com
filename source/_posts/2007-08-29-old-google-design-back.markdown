@@ -4,7 +4,7 @@ comments: true
 date: 2007-08-29 03:29:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: old-google-design-back
 title: Old Google Design back?
 wordpress_id: 50

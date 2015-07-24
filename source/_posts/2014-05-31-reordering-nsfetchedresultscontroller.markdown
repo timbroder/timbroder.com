@@ -4,7 +4,7 @@ comments: true
 date: 2014-05-31 16:14:22+00:00
 dsq_thread_id: '2726415845'
 layout: post
-linked_list_url: None
+link: None
 slug: reordering-nsfetchedresultscontroller
 title: Reordering a NSFetchedResultsController
 wordpress_id: 1531

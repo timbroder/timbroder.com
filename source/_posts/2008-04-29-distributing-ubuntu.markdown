@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-29 20:39:00+00:00
 dsq_thread_id: '121874684'
 layout: post
-linked_list_url: ''
+link: ''
 slug: distributing-ubuntu
 title: Distributing Ubuntu
 wordpress_id: 114

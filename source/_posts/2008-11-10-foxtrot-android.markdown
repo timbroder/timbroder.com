@@ -4,7 +4,7 @@ comments: true
 date: 2008-11-10 14:37:00+00:00
 dsq_thread_id: '122140874'
 layout: post
-linked_list_url: ''
+link: ''
 slug: foxtrot-android
 title: Foxtrot Android
 wordpress_id: 183

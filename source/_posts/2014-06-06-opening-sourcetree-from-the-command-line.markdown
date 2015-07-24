@@ -4,7 +4,7 @@ comments: true
 date: 2014-06-06 15:33:35+00:00
 dsq_thread_id: '2741912600'
 layout: post
-linked_list_url: ''
+link: ''
 slug: opening-sourcetree-from-the-command-line
 title: Opening SourceTree from the Command line
 wordpress_id: 1550

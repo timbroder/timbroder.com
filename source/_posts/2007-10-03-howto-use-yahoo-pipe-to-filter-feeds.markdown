@@ -4,7 +4,7 @@ comments: true
 date: 2007-10-03 22:59:00+00:00
 dsq_thread_id: '111417073'
 layout: post
-linked_list_url: ''
+link: ''
 slug: howto-use-yahoo-pipe-to-filter-feeds
 title: 'HOWTO: Use a Yahoo Pipe to filter feeds'
 wordpress_id: 79

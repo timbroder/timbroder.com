@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-02 15:40:00+00:00
 dsq_thread_id: '121039670'
 layout: post
-linked_list_url: ''
+link: ''
 slug: javascript-pacman-clone
 title: Javascript pacman clone
 wordpress_id: 153

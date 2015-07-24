@@ -4,7 +4,7 @@ comments: true
 date: 2008-06-23 18:28:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: android-handsets-could-be-delayed-until
 title: Android Handset’s Could Be Delayed Until 2009
 wordpress_id: 141

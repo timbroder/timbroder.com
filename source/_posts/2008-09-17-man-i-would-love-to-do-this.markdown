@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-17 20:48:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: man-i-would-love-to-do-this
 title: Man I would love to do this
 wordpress_id: 168

@@ -4,7 +4,7 @@ comments: true
 date: 2015-02-06 16:03:23+00:00
 dsq_thread_id: '3495636050'
 layout: post
-linked_list_url: http://mongular.org/docs
+link: http://mongular.org/docs
 slug: mongular-content-delivery-system
 title: Mongular, a Content Delivery System
 wordpress_id: 1759

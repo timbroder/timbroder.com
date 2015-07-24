@@ -4,7 +4,7 @@ comments: true
 date: 2011-04-19 21:16:46+00:00
 dsq_thread_id: '283857327'
 layout: post
-linked_list_url: ''
+link: ''
 slug: extending-a-magento-controller
 title: Extending a Magento Controller
 wordpress_id: 915

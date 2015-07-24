@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-09 16:38:00+00:00
 dsq_thread_id: ''
 layout: post
-linked_list_url: ''
+link: ''
 slug: first-community-run-android-app-market
 title: First Community run Android App Market goes live
 wordpress_id: 161

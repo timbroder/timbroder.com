@@ -4,7 +4,7 @@ comments: true
 date: 2008-10-09 20:28:00+00:00
 dsq_thread_id: '110276812'
 layout: post
-linked_list_url: ''
+link: ''
 slug: gwtphp-google-web-toolkit-php-5
 title: GWTPHP = Google Web Toolkit + PHP 5
 wordpress_id: 181

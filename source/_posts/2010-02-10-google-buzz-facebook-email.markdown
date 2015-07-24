@@ -4,7 +4,7 @@ comments: true
 date: 2010-02-10 16:55:00+00:00
 dsq_thread_id: '115179986'
 layout: post
-linked_list_url: ''
+link: ''
 slug: google-buzz-facebook-email
 title: Google Buzz? Facebook Email?
 wordpress_id: 235

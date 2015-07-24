@@ -4,7 +4,7 @@ comments: true
 date: 2010-02-09 19:17:00+00:00
 dsq_thread_id: '110431677'
 layout: post
-linked_list_url: ''
+link: ''
 slug: django-admin-inline-preview
 title: Django Admin inline preview
 wordpress_id: 234

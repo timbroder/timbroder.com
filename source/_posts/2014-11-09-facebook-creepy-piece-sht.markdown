@@ -4,7 +4,7 @@ comments: true
 date: 2014-11-09 02:04:35+00:00
 dsq_thread_id: '3215855767'
 layout: post
-linked_list_url: ''
+link: ''
 slug: facebook-creepy-piece-sht
 title: Facebook, you creepy piece of sh*t
 wordpress_id: 1732

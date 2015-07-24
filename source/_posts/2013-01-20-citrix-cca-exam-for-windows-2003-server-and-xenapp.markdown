@@ -4,7 +4,7 @@ comments: true
 date: 2013-01-20 23:26:19+00:00
 dsq_thread_id: '1037278367'
 layout: post
-linked_list_url: ''
+link: ''
 slug: citrix-cca-exam-for-windows-2003-server-and-xenapp
 title: Citrix CCA Exam for Windows 2003 Server and XenApp
 wordpress_id: 1282

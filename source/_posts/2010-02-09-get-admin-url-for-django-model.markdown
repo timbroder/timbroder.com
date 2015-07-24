@@ -4,7 +4,7 @@ comments: true
 date: 2010-02-09 18:48:00+00:00
 dsq_thread_id: '110651160'
 layout: post
-linked_list_url: ''
+link: ''
 slug: get-admin-url-for-django-model
 title: Get the admin url for a django model
 wordpress_id: 233

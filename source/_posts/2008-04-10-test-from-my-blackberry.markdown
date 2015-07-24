@@ -4,7 +4,7 @@ comments: true
 date: 2008-04-10 19:23:00+00:00
 dsq_thread_id: '120111119'
 layout: post
-linked_list_url: ''
+link: ''
 slug: test-from-my-blackberry
 title: test from my blackberry
 wordpress_id: 104

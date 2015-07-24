@@ -4,7 +4,7 @@ comments: true
 date: 2008-09-22 22:05:00+00:00
 dsq_thread_id: '109998840'
 layout: post
-linked_list_url: ''
+link: ''
 slug: how-to-stream-video-to-xbox-360-from
 title: How to stream video to an Xbox 360 from linux
 wordpress_id: 170
