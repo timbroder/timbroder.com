@@ -62,6 +62,7 @@ But, this method needs to live in the partial template AND update the model. For
 
 
 ```HTML
+{% verbatim %}
 <script type="text/javascript">
     function callSave(payload){
         console.log('Data being saved from iframe: ', payload);
@@ -73,11 +74,13 @@ But, this method needs to live in the partial template AND update the model. For
 <iframe src="/....html" width="100%" height="800" scrolling="no" seamless="seamless" style="border:0;"></iframe>
 <pre>{{parent[uuid][data.id].value}}</pre>
 <textarea type="text" id="iframe-data" ng-model="parent[uuid][data.id].value" data-name="{{data.name}}" data-id="{{data.id}}" value="{{data.value}}"></textarea>
+{% endverbatim %}
 ```
 
 The trick ended up being that ngModel listens for an “input” event. Use that, hide the textarea, and I’m good to go
 
 ```HTML
+{% verbatim %}
 <script type="text/javascript">
     function callSave(payload){
         console.log('Data being saved from iframe: ', payload);
@@ -90,6 +93,7 @@ The trick ended up being that ngModel listens for an “input” event. Use that
 <iframe src="/....html" width="100%" height="800" scrolling="no" seamless="seamless" style="border:0;"></iframe>
 <pre>{{parent[uuid][data.id].value}}</pre>
 <textarea type="text" id="iframe-data" ng-model="parent[uuid][data.id].value" data-name="{{data.name}}" data-id="{{data.id}}" value="{{data.value}}" style="display: none;"></textarea>
+{% endverbatim %}
 ```
 
 I know the Angular way to do this would have been a combination of $watch and $apply from within the directive. I went down that road for a few hours. Because of timeline constraints I have to leave as is. I’ve acknowledged that I’m incurring technical debt and marked a TODO that may or may never get addressed.

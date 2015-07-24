@@ -38,7 +38,9 @@ def user(request):
 user is now available in any template:
 
 ```HTML
+{% verbatim %}
 {% if user.is_authenticated %}Do Something Special{% endif %}
+{% endverbatim %}
 ```
 
 source: [StackOverflow](http://stackoverflow.com/questions/41547/always-including-the-user-in-the-django-template-context "StackOverflow")

@@ -152,12 +152,14 @@ the feeds, this is what i have in my view:
 ```html
 
 ### My Reading
+{% verbatim %}
 {% for item in feeds.items %}
 	{{ item.0 }}
 	{% for feed in item.1 %}
 		[{{ feed.name }}]({{ feed.link }})
 	{% endfor %}
 {% endfor %}
+{% endverbatim %}
 ``` 
   
 Again, too see what I subscribe to, [click

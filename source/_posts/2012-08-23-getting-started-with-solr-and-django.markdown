@@ -135,11 +135,13 @@ naming convention: ```search/indexes/[app]/[model]_text.txt```
 For us, this is templates/search/indexes/jobs/job_text.txt
 
 ```HTML
+{% verbatim %}
 {{ object.name }}
 {{ object.description }}
 {{ object.salary }}
 {{ object.type }}
 {{ object.added_at }}
+{% endverbatim %}
 ```
 
 Now, lets get our data into Solr. Run ./manage.py build_solr_schema to
@@ -167,6 +169,7 @@ Create templates/search/search.html This gives you a basic search form, the
 results, and pagination for a number of results
 
 ```HTML
+{% verbatim %}
 {% extends 'base.html' %}
 
 {% block hero_text %}Search{% endblock %}
@@ -231,11 +234,13 @@ results, and pagination for a number of results
             </div>
         {% endif %}
 {% endblock %}
+{% endverbatim %}
 ```
 
 And the templates/search/_result_object.txt
 
 ```HTML
+{% verbatim %}
 {% load more_like_this %}
 
 
@@ -272,6 +277,7 @@ And the templates/search/_result_object.txt
     </div>
 </div>
 {% endwith %}
+{% endverbatim %}
 ```
 
 Start up your dev server for search!
@@ -291,6 +297,7 @@ solrconfig.xml and add a MoreLikeThisHandler within thetag:
 Our full _result_object.html now looks like this:
 
 ```HTML
+{% verbatim %}
 {% load more_like_this %}
  
  
@@ -327,6 +334,7 @@ Our full _result_object.html now looks like this:
     </div>
 </div>
 {% endwith %}
+{% endverbatim %}
 ```
   
 ## Facets
@@ -360,6 +368,7 @@ Then, we can use the generated facets in the search template in the facets
 variable
 
 ```html
+{% verbatim %}
 {% extends 'base.html' %}
  
 {% block hero_text %}Search{% endblock %}
@@ -424,6 +433,8 @@ variable
             </div>
         {% endif %}
 {% endblock %}
+{% endverbatim %}
+```
 
 And we're done! As I said, check out the [haystack documentation](http
 ://django-haystack.readthedocs.org/en/latest/index.html) for more information.

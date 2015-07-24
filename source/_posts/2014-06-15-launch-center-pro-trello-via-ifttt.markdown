@@ -32,7 +32,7 @@ way to email to multiple lists on the same board._
   5. On the Trello board you wish to work with: Go into the settings and click “Email-to-board Settings.” Grab the email address for that board. Choose which list the card should be added and it’s position._ The email in this screenshot is hooked up to anything._  
 ![](https://farm4.staticflickr.com/3881/14427446122_587019f3fe_z_d.jpg)
 
-  6. In the “Then” of your IFTTT recipe, choose Gmail. In the To Address, add in the trello address. Leave just “{{Value 1}}” in the subject. This will become the title of the card.  If you want to add a description or other attributes of the card, use the other Values that Launch Center Pro provides. More on how email variables are used by Trello is available [here](http://blog.trello.com/create-cards-via-email/).  
+  6. In the “Then” of your IFTTT recipe, choose Gmail. In the To Address, add in the trello address. Leave just ```{% verbatim %} “{{Value 1}}” {% endverbatim %}``` in the subject. This will become the title of the card.  If you want to add a description or other attributes of the card, use the other Values that Launch Center Pro provides. More on how email variables are used by Trello is available [here](http://blog.trello.com/create-cards-via-email/).
 ![](https://farm6.staticflickr.com/5073/14425422041_9acc965248_z_d.jpg)
 
   7. In LCP: Add a new action -&gt; System Actions -&gt; IFTTT. Name can be anything. Trigger Name must match the trigger name in IFTTT. For each value you want to use, add a text prompt. In this example I’m only using Value 1.  

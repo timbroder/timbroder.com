@@ -28,6 +28,7 @@ However, the way magento ajaxes the form fields into view on the category pages 
 This snippet should help anyone trying to get it to work in ```app/design/adminhtml/default/default/template/fontis/wysiwyg/wysiwyg.phtml```
 
 ```PHP
+{% verbatim %}
 <?php } else if($editorType == 'ckeditor') { ?>
 
 	<script type="text/javascript" src="<?php echo $this->getJsUrl() ?>fontis/ckeditor/ckeditor.js"></script>
@@ -70,6 +71,7 @@ pageLoaded = true;
 }
 </script>
 <?php } ?>
+{% endverbatim %}
 ```
 
 in ```app/design/adminhtml/default/default/template/catalog/category/edit/form.phtml``` add this at the bottom but inside the script tag
