@@ -33,10 +33,10 @@ think about it.
 Log into AdWords, create a new campaign and copy the below settings: (Click to
 zoom in)
 
-[![](http://timbroder.com/wp-content/uploads/2012/08/dropbox1.png)](http://timbroder.com/wp-content/uploads/2012/08/dropbox1.png)[![](http://timbroder.com/wp-content/uploads/2012/08/dropbox2.png)](http://timbroder.com/wp-content/uploads/2012/08/dropbox2.png)[![](http://timbroder.com/wp-
-content/uploads/2012/08/dropbox3.png)](http://timbroder.com/wp-content/uploads/2012/08/dropbox3.png)[![](http://timbroder.com/wp-
-content/uploads/2012/08/dropbox4.png)](http://timbroder.com/wp-content/uploads/2012/08/dropbox4.png)[![](http://timbroder.com/wp-
-content/uploads/2012/08/dropbox5.png)](http://timbroder.com/wp-content/uploads/2012/08/dropbox5.png)
+[![](/images/2012/08/dropbox1.png)](/images/2012/08/dropbox1.png)[![](/images/2012/08/dropbox2.png)](/images/2012/08/dropbox2.png)[![](http://timbroder.com/wp-
+content/uploads/2012/08/dropbox3.png)](/images/2012/08/dropbox3.png)[![](http://timbroder.com/wp-
+content/uploads/2012/08/dropbox4.png)](/images/2012/08/dropbox4.png)[![](http://timbroder.com/wp-
+content/uploads/2012/08/dropbox5.png)](/images/2012/08/dropbox5.png)
 
 After this the campaign should be approved and you are all set. Keep an eye on
 it at the end of every day and see if you want to continue it to keep getting

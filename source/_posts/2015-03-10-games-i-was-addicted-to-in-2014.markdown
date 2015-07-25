@@ -1,4 +1,4 @@
----
+    ---
 author: tim
 comments: true
 date: 2015-03-10 14:03:30+00:00
@@ -46,7 +46,7 @@ of that though the music and sound effects are top notch. If you were ever a
 fan of D&amp;D style point+click RPGs, this will feel right at home. If you've
 never tried them, I can't recommend this game enough.
 
-[![1](http://timbroder.com/wp-content/uploads/2015/03/1-1024x768.png)](http://timbroder.com/wp-content/uploads/2015/03/1.png) 
+[![1](/images/2015/03/1-1024x768.png)](/images/2015/03/1.png)
 
 **[Tiny Tower](http://apple.co/1Dzrkql) &amp; [Pocket Trains](http://apple.co/1LGeXPK)** \- I put
 these games together because while very different games, they have similar
@@ -75,7 +75,7 @@ becomes addicting trying to get to that next score. I play tower defense
 style: Building into one of the top two corners and slowly growing numbers in
 those directions. What's your high score? 
 
-[![2](http://timbroder.com/wp-content/uploads/2015/03/2.png)](http://timbroder.com/wp-content/uploads/2015/03/2.png) 
+[![2](/images/2015/03/2.png)](/images/2015/03/2.png)
 
 **[2048](http://apple.co/1LGf2Dc)** \- This game is very similar to threes
 (maybe too much so). But, it's still fun. I keep this one around because it
@@ -83,7 +83,7 @@ takes a little less concentration than threes. It's more mindless and good for
 when I'm tired or need to think. It's a good distraction. 2048 is my checkers
 to my Threes chess. 
 
-[![3](http://timbroder.com/wp-content/uploads/2015/03/3.png)](http://timbroder.com/wp-content/uploads/2015/03/3.png) 
+[![3](/images/2015/03/3.png)](/images/2015/03/3.png)
 
 **[Honorable Mention: Monument Valley](http://apple.co/1DzrKgm)** \- I
 can't stress enough that you NEED to go play this game. There is no other
@@ -93,6 +93,6 @@ at them, moving pieces around just to see what they do. It only gets Honorable
 Mention because of replay value. I played through it once in a few hours and
 that was that. But, it's magical. Everyone should play it
 
-[![4](http://timbroder.com/wp-content/uploads/2015/03/4.jpeg)](http://timbroder.com/wp-content/uploads/2015/03/4.jpeg)
+[![4](/images/2015/03/4.jpeg)](/images/2015/03/4.jpeg)
 
-[![5](http://timbroder.com/wp-content/uploads/2015/03/5.jpeg)](http://timbroder.com/wp-content/uploads/2015/03/5.jpeg)
+[![5](/images/2015/03/5.jpeg)](/images/2015/03/5.jpeg)

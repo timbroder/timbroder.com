@@ -17,7 +17,7 @@ tags:
 Have you ever wanted to display multiple lines of text in your Table Cell?
 It's easy to do in your UITableViewController. 
 
-![](http://timbroder.com/wp-content/uploads/2012/09/2012-09-10_1921.png) 
+![](/images/2012/09/2012-09-10_1921.png)
 
 First, let's define the type of font we're going to use. We'll need this in 2 places: 
 

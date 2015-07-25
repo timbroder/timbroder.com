@@ -12,4 +12,4 @@ categories:
 - Random
 ---
 
-I made wings! ![](http://timbroder.com/wp-content/uploads/2010/07/IMAG0109.jpg)
+I made wings! ![](/images/2010/07/IMAG0109.jpg)

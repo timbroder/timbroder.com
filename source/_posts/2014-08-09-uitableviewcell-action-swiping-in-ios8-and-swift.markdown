@@ -20,7 +20,7 @@ effect: [UITableViewRowAction](https://developer.apple.com/library/prerelease/i
 Prior to this, I used
 [SWTableViewCell](https://github.com/CEWendel/SWTableViewCell).
 
-![](http://timbroder.com/wp-content/uploads/2014/08/14870105002_77af4bf515_b.jpg)
+![](/images/2014-08-09-uitableviewcell-action-swiping-in-ios8-and-swift/14870105002_77af4bf515_b.jpg)
 
 Below is how to get the basic functionality working. Please note that you have
 to implement the 2nd function whether it has a body or not

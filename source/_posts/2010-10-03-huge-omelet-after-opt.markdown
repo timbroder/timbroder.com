@@ -12,7 +12,7 @@ categories:
 - Random
 ---
 
-![image](http://timbroder.com/wp-content/uploads/2010/10/wpid-
+![image](/images/2010/10/wpid-
 IMG_20101002_113547.jpg)
 
 James OPT Fitzgerald came to the black box yesterday which was a lot of fun.

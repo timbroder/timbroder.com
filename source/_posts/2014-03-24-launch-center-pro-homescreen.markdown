@@ -17,7 +17,7 @@ Recently [there](http://jwie.be/launch-center-pro-daily-journaling) have
 attention. I had tried a few months ago to simplify my home screen, no luck.
 This time, it's sticking.
 
-[![BjINmu5IQAAlbgA](http://timbroder.com/wp-content/uploads/2014/03/BjINmu5IQAAlbgA.png)](http://timbroder.com/wp-content/uploads/2014/03/BjINmu5IQAAlbgA.png)
+[![BjINmu5IQAAlbgA](/images/2014/03/BjINmu5IQAAlbgA.png)](/images/2014/03/BjINmu5IQAAlbgA.png)
 
 A few people have asked me on
 twitter what flows I use in LCP so I'm throwing this post together. Please
@@ -46,14 +46,14 @@ them on my homescreen has been invaluable.  The last 4
 [Riposte](https://itunes.apple.com/us/app/tweetbot-3-for-twitter-iphone/id722294701?mt=8&at=11laRZ&ct=lcpbp), and [Instapaper](https://itunes.apple.com/us/app/instapaper/id288545208?mt=8&at=11laRZ&ct=lcpbp)) get opened
 multiple times a day on average so they needed to stay.
 
-[![IMG_2099](http://timbroder.com/wp-content/uploads/2014/03/IMG_2099.png)](http://timbroder.com/wp-content/uploads/2014/03/IMG_2099.png)
+[![IMG_2099](/images/2014/03/IMG_2099.png)](/images/2014/03/IMG_2099.png)
 
 This is my main screen. From bottom left to top right: Text my wife Apps that
 I use to consume things Apps that I use to "do" things Contacts and logging to
 Day One Group texting and communication Random things and [adding to
 Trello](http://timbroder.com/2013/03/automating-adding-to-trello-on-ios.html)
 
-![IMG_2100](http://timbroder.com/wp-content/uploads/2014/03/IMG_2100.png)
+![IMG_2100](/images/2014/03/IMG_2100.png)
 
 Reading/Listening apps that I just can't live without. Instapaper stayed on
 the homscreen. Tried living without it, didn't work. I open that app multiple
@@ -61,27 +61,27 @@ times a day.  When I'm in the mood, I use Velocity for speed reading.
 [Pushpin](https://itunes.apple.com/us/app/pushpin-for-pinboard/id548052590?mt=8&at=11laRZ&ct=lcpbp) is a new addition. I'm a fan of
 [Pinbook](https://itunes.apple.com/us/app/pinbook-for-pinboard/id564452716?mt=8&at=11laRZ&ct=lcpbp), but giving this one a try.
 
-![IMG_2101](http://timbroder.com/wp-content/uploads/2014/03/IMG_2101.png)
+![IMG_2101](/images/2014/03/IMG_2101.png)
 
 I've started playing around with more Actions here. New Day One entry, new
 Fantastical reminder, go right to search in Google Maps, go right to search in
 [1Password](https://itunes.apple.com/us/app/1password-password-manager/id568903335?mt=8&at=11laRZ&ct=lcpbp), new post in
 [Buffer](https://itunes.apple.com/us/app/buffer-for-twitter-facebook/id490474324?mt=8&at=11laRZ&ct=lcpbp).
 
-![IMG_2102](http://timbroder.com/wp-content/uploads/2014/03/IMG_2102.png)
+![IMG_2102](/images/2014/03/IMG_2102.png)
 
 Fast ways to text/call/email my family.
 
-![IMG_2103](http://timbroder.com/wp-content/uploads/2014/03/IMG_2103.png)
+![IMG_2103](/images/2014/03/IMG_2103.png)
 
 Some quick logging that I've been playing with in Day
-One![IMG_2104](http://timbroder.com/wp-content/uploads/2014/03/IMG_2104.png)
+One![IMG_2104](/images/2014/03/IMG_2104.png)
 
 This is one of the main things I miss about widgets in android. Quick texting
 a contact. This is THE reason I bought LCP when I first got an iPhone. I would
 go so far as to say I wouldn't have bought an iPhone without
-LCP.![IMG_2105](http://timbroder.com/wp-content/uploads/2014/03/IMG_2105.png)
+LCP.![IMG_2105](/images/2014/03/IMG_2105.png)
 
-Quick work contacts![IMG_2106](http://timbroder.com/wp-content/uploads/2014/03/IMG_2106.png)
+Quick work contacts![IMG_2106](/images/2014/03/IMG_2106.png)
 
 Random things I play around with

@@ -14,5 +14,5 @@ tags:
 - Vibrams
 ---
 
-![image](http://timbroder.com/wp-content/uploads/2011/01/wpid-
+![image](/images/2011/01/wpid-
 IMAG0003.jpg)

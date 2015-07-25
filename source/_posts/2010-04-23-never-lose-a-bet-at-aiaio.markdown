@@ -12,4 +12,4 @@ categories:
 - Random
 ---
 
-![](http://timbroder.com/wp-content/uploads/2010/04/wpid-2010-04-21-14.15.53.jpg)  
+![](/images/2010/04/wpid-2010-04-21-14.15.53.jpg)

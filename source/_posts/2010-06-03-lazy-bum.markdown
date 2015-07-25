@@ -14,4 +14,4 @@ tags:
 - aiaio
 ---
 
-![image](http://timbroder.com/wp-content/uploads/2010/06/wpid-IMAG0048.jpg) Jack guards the office
+![image](/images/2010/06/wpid-IMAG0048.jpg) Jack guards the office

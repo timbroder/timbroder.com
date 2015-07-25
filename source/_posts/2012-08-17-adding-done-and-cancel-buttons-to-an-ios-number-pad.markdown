@@ -23,7 +23,7 @@ an iOs number pad when editing a text field. This doesn't come by default, but
 is easy to add. See the example snippets below, or check out the code on
 [github](https://github.com/broderboy/iphone-DoneCancelNumberPadToolbar).
 
-[![](http://timbroder.com/wp-content/uploads/2012/08/Done-Cancel-Iphone.png)](http://timbroder.com/wp-content/uploads/2012/08/Done-Cancel-Iphone.png) 
+[![](/images/2012/08/Done-Cancel-Iphone.png)](/images/2012/08/Done-Cancel-Iphone.png)
 
 Sample Usage:
 

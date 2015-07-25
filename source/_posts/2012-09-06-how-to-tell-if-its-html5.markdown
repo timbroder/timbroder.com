@@ -12,4 +12,4 @@ categories:
 - Code
 ---
 
-![](http://timbroder.com/wp-content/uploads/2012/09/jxBZG.jpg)
+![](/images/2012/09/jxBZG.jpg)

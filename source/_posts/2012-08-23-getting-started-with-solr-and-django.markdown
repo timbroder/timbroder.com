@@ -282,7 +282,7 @@ And the templates/search/_result_object.txt
 
 Start up your dev server for search!
 
-[![](http://timbroder.com/wp-content/uploads/2012/08/solr1.png)](http://timbroder.com/wp-content/uploads/2012/08/solr1.png)
+[![](/images/2012/08/solr1.png)](/images/2012/08/solr1.png)
 
 ## Related Items
 

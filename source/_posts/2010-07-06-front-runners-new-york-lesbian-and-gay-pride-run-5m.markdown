@@ -15,4 +15,4 @@ tags:
 ---
 
 Was hot, humid, and I was still tired from Thursday night's Wallstreet race,
-but a good time nevertheless  ![](http://timbroder.com/wp-content/uploads/2010/07/2010-07-06_1800.png)
+but a good time nevertheless  ![](/images/2010/07/2010-07-06_1800.png)

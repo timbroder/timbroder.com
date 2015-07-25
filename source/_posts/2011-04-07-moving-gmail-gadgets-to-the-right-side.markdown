@@ -21,7 +21,7 @@ gadget](http://www.rememberthemilk.com/services/gmail/gadget/) to be so far
 down on the left hand side of my screen.  There is no built in way to move
 gadgets to the right hand side with the exception of chat (labels used to do
 this but was removed in favor of drag in drop back in late 2009).
-[![](http://timbroder.com/wp-content/uploads/2011/04/gmail_right_widgets.png)](http://timbroder.com/wp-content/uploads/2011/04/gmail_right_widgets.png)   If you don't have anything
+[![](/images/2011/04/gmail_right_widgets.png)](/images/2011/04/gmail_right_widgets.png)   If you don't have anything
 in the right hand column, _enable Right-Side Chat_ from Gmail Labs.  We are
 going to add in some custom css to gmail so install either [Stylist ](https://
 chrome.google.com/extensions/detail/pabfempgigicdjjlccdgnbmeggkbjdhd)for

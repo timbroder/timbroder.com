@@ -29,10 +29,10 @@ workflow](http://www.macstories.net/stories/automating-ios-how-pythonista-change
 code shown below can be found on
 [GitHub](https://github.com/broderboy/PythonistaTrello). 
 
-[![2013-02-1114.32.57](http://timbroder.com/wp-content/uploads/2013/02/2013-02-11-14.32.57.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-32-57) 
+[![2013-02-1114.32.57](/images/2013/02/2013-02-11-14.32.57.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-32-57)
 
 [![2013-02-11
-14.33.00](http://timbroder.com/wp-content/uploads/2013/03/LCP.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-33-00) 
+14.33.00](/images/2013/03/LCP.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-33-00)
 
 [Pythonista](http://omz-software.com/pythonista/) lets you edit and run python scripts on your phone.
 There are a few ways to get scripts onto your device:
@@ -72,9 +72,9 @@ url = 'https://trello.com/1/authorize?key=3e2cd730f3dcccbe15eaf0d39d219a37&amp;n
 webbrowser.open(url)
 ```
 
-[![2013-02-11 14.54.35](http://timbroder.com/wp-content/uploads/2013/02/2013-02-11-14.54.35.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-54-35)
+[![2013-02-11 14.54.35](/images/2013/02/2013-02-11-14.54.35.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-54-35)
 
-[ ![2013-02-1114.54.40](http://timbroder.com/wp-content/uploads/2013/02/2013-02-11-14.54.40.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-54-40) 
+[ ![2013-02-1114.54.40](/images/2013/02/2013-02-11-14.54.40.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-54-40)
 
 Now that we have our key and tokens,
 let's get get all of our boards and the lists on each one. Run this script and
@@ -126,9 +126,9 @@ for board in boards:
 
 Running this, we'll get the IDs of the lists we need
 
-[![2013-02-11 15.06.39](http://timbroder.com/wp-content/uploads/2013/02/2013-02-11-15.06.39.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-15-06-39) 
+[![2013-02-11 15.06.39](/images/2013/02/2013-02-11-15.06.39.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-15-06-39)
 
-[![2013-02-1115.07.13](http://timbroder.com/wp-content/uploads/2013/02/2013-02-11-15.07.13.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-15-07-13) 
+[![2013-02-1115.07.13](/images/2013/02/2013-02-11-15.07.13.png)](http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-15-07-13)
 
 Finally, we'll need to take our key, the
 id of the list, what we want our card to say, and hit the API with them.  I

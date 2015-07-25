@@ -55,7 +55,7 @@ new look
   * Swift. **BOOM. HOLY SHIT**. Closures, Generics, Namespaces
   * OMG the playground
   * Grabbing the book right now. It’s trending. Pretty cool
-  * ![Bugshot 2014 06 02 210418](http://timbroder.com/wp-content/uploads/2014/06/Bugshot_2014-06-02_210418.png)
+  * ![Bugshot 2014 06 02 210418](/images/2014/06/Bugshot_2014-06-02_210418.png)
 
 
 
