@@ -1,12 +1,14 @@
 # The contents of this file are parsed and made available as
 # via `site.*`. So for example, {{ site.title }} can be used
 # in a template to get the contents of the `title` key.
-title: Tim Broder
+title: timbroder.com
 subtitle: Code. Comics. Crossfit
 #url: http://timbroder.com
 author: Tim Broder
 email: timothy.broder@gmail.com
 disqus_shortname: timbrodercom
+feed: http://feeds.feedburner.com/timbroder
+analytics_id: UA-17099661-1
 
 # Insert your disqus shortname
 disqus:
