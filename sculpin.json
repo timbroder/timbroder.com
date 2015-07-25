@@ -18,15 +18,10 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@github.com:sculpin/bootstrap-3-blog-theme.git"
-    },
-    {
-      "type": "vcs",
       "url": "https://github.com/broderboy/php-markdown"
     },
   ],
   "require": {
-    "sculpin/bootstrap-3-blog-theme": "dev-master",
     "jbouzekri/sculpin-tag-cloud-bundle": "1.*",
     "mavimo/sculpin-redirect-bundle": "dev-outbound-urls"
   },
