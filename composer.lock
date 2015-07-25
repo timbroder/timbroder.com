@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b87c8426a49e6d02154f162c6e568b16",
+    "hash": "1c48b41e0d537084a65da28b1a7e1b51",
     "packages": [
         {
             "name": "composer/composer",
@@ -932,17 +932,17 @@
         },
         {
             "name": "mavimo/sculpin-redirect-bundle",
-            "version": "dev-master",
+            "version": "dev-outbound-urls",
             "target-dir": "Mavimo/Sculpin/Bundle/RedirectBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mavimo/sculpin-redirect-bundle.git",
-                "reference": "5c42c401942008de04aa1e1d64161ca105568e2a"
+                "url": "https://github.com/broderboy/sculpin-redirect-bundle.git",
+                "reference": "e781ead574e00085a235910d0f2e310631de643a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mavimo/sculpin-redirect-bundle/zipball/5c42c401942008de04aa1e1d64161ca105568e2a",
-                "reference": "5c42c401942008de04aa1e1d64161ca105568e2a",
+                "url": "https://api.github.com/repos/broderboy/sculpin-redirect-bundle/zipball/e781ead574e00085a235910d0f2e310631de643a",
+                "reference": "e781ead574e00085a235910d0f2e310631de643a",
                 "shasum": ""
             },
             "require": {
@@ -954,7 +954,6 @@
                     "Mavimo\\Sculpin\\Bundle\\RedirectBundle": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -974,7 +973,10 @@
                 "site",
                 "static"
             ],
-            "time": "2014-01-04 14:40:02"
+            "support": {
+                "source": "https://github.com/broderboy/sculpin-redirect-bundle/tree/outbound-urls"
+            },
+            "time": "2015-07-25 16:26:27"
         },
         {
             "name": "michelf/php-markdown",

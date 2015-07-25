@@ -8,17 +8,17 @@
     "packages": [
         {
             "name": "jbouzekri/sculpin-tag-cloud-bundle",
-            "version": "1.1",
+            "version": "1.2",
             "target-dir": "Jb/Bundle/TagCloudBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbouzekri/SculpinTagCloudBundle.git",
-                "reference": "fef4a8f538d122924829d247a87386920d3715f4"
+                "reference": "936cf34ce60cb8fb4774931b1841fc775a3e9208"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbouzekri/SculpinTagCloudBundle/zipball/fef4a8f538d122924829d247a87386920d3715f4",
-                "reference": "fef4a8f538d122924829d247a87386920d3715f4",
+                "url": "https://api.github.com/repos/jbouzekri/SculpinTagCloudBundle/zipball/936cf34ce60cb8fb4774931b1841fc775a3e9208",
+                "reference": "936cf34ce60cb8fb4774931b1841fc775a3e9208",
                 "shasum": ""
             },
             "type": "sculpin-bundle",
@@ -40,7 +40,7 @@
                 "sculpin",
                 "tag"
             ],
-            "time": "2015-02-13 20:13:59"
+            "time": "2015-07-12 16:31:50"
         },
         {
             "name": "mavimo/sculpin-redirect-bundle",

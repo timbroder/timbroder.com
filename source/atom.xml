@@ -1,6 +1,6 @@
 ---
 use: ["posts"]
-permalink: atom.xml
+permalink: atom_feedburner.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -16,7 +16,7 @@ permalink: atom.xml
         </author>
     {% endif %}
     <generator uri="http://sculpin.io/">Sculpin</generator>
-    {% for post in data.posts|slice(0, 10) %}
+    {% for post in data.posts|slice(0, 30) %}
     {% if post.link is not empty %}
         {% set linked = post.link %}
     {% else %}

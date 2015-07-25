@@ -7,13 +7,17 @@
     {
       "type": "vcs",
       "url": "https://github.com/broderboy/php-markdown"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/broderboy/sculpin-redirect-bundle.git"
     }
   ],
   "require": {
     "michelf/php-markdown": "dev-fork",
     "sculpin/sculpin": "dev-fork",
     "jbouzekri/sculpin-tag-cloud-bundle": "1.*",
-    "mavimo/sculpin-redirect-bundle": "@dev",
+    "mavimo/sculpin-redirect-bundle": "dev-outbound-urls",
 
     "dflydev/embedded-composer-console": "@dev",
     "dflydev/embedded-composer-core": "@dev",

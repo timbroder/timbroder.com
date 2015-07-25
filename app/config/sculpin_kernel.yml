@@ -4,7 +4,7 @@ sculpin_theme:
 
 sculpin_content_types:
   posts:
-    permalink: :year/:month/:filename/
+    permalink: :year/:month/:filename.html
 
 
 jb_tag_cloud:
