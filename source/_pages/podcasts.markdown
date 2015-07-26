@@ -12,5 +12,5 @@ Check out the shows that [I listen to][11]
 [8]: http://twitter.com/SamDakArk
 [9]: http://twitter.com/roCkerChick
 [10]: https://itunes.apple.com/us/podcast/show-tell-cast-tekside-network/id942711989?mt=2&amp;at=11laRZ&amp;ct=pro
-[11]: /podcasts-i-listen-to
+[11]: /podcasts-i-listen-to.html
 [12]: http://d208tez5h4u8q2.cloudfront.net/wp-content/uploads/2015/02/download.png

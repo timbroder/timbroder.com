@@ -10,7 +10,7 @@ sculpin_content_types:
     type: path
     path: _pages
     layout: single
-    permalink: :title
+    permalink: :title.html
 
 jb_tag_cloud:
     tag_permalink: /tags/:taxon/index.html
