@@ -15,3 +15,4 @@ s3.conf
 .idea/workspace.xml
 .idea/scopes/scope_settings.xml
 vendor*
+overcast.opml
