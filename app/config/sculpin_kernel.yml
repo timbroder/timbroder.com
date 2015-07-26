@@ -5,7 +5,12 @@ sculpin_theme:
 sculpin_content_types:
   posts:
     permalink: :year/:month/:filename.html
-
+  pages:
+    singular_name: page
+    type: path
+    path: _pages
+    layout: single
+    permalink: :title
 
 jb_tag_cloud:
     tag_permalink: /tags/:taxon/index.html

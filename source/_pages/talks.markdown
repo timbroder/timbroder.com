@@ -1,6 +1,5 @@
 ---
 title: Talks
-layout: single
 ---
 
 I give talks at Ai, conferences, and various [Meetups][7] around NYC

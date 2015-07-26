@@ -1,6 +1,6 @@
 ---
 title: Podcasts I Listen To
-layout: single
+child: true
 ---
 
 # Podcasts I Listen to
