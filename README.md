@@ -1,4 +1,4 @@
-TimBroder.com
+[TimBroder.com](http://www.timbroder.com)
 =====================
 [![Build Status](https://travis-ci.org/broderboy/timbroder.com-sculpin.svg?branch=master)](https://travis-ci.org/broderboy/timbroder.com-sculpin)
 
