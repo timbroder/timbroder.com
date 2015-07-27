@@ -11,14 +11,14 @@ tags:
 
 A few new articles popped up in my RSS feed since I [mentioned](http://www.timbroder.com/2015/07/apple-music-is-a-nightmare-and-i%E2%80%99m-done-with-it.html) Apple Music
 
-# [I got my music back. At least most of it](http://www.loopinsight.com/2015/07/24/i-got-my-music-back-at-least-most-of-it/)
+[I got my music back. At least most of it](http://www.loopinsight.com/2015/07/24/i-got-my-music-back-at-least-most-of-it/)
 
 > At this point, I’m just glad to have most of music back, but I still have no idea what happened to the other songs, for sure.
 
 Jim was able to meet with Apple privately and investigate a lot of his issues. Check out his post for the full story
  
 
-# [Dave Mark: Why I’m not done with Apple Music](http://www.loopinsight.com/2015/07/24/dave-mark-why-im-not-done-with-apple-music/)
+[Dave Mark: Why I’m not done with Apple Music](http://www.loopinsight.com/2015/07/24/dave-mark-why-im-not-done-with-apple-music/)
 
 > My Mac and iOS devices might as well be on different planets. When I search for a song on my iPhone, I can tap the Apple Music tab and, assuming the song is available on the Apple Music library, I can add the song to my current playlist, download it to my device for offline play, and mark it with a For You heart. Easy peasy.
 > 
@@ -30,7 +30,7 @@ Jim was able to meet with Apple privately and investigate a lot of his issues. C
 
 Click through to continue
 
-# [Apple Music ought to be better than this](http://morrick.me/archives/7371)
+[Apple Music ought to be better than this](http://morrick.me/archives/7371)
 
 > Mark is not the only one willing to cut Apple some slack. I’ve heard other people — satisfied enough with Apple Music — sharing this kind of forgiving attitude.
 > 
@@ -50,7 +50,7 @@ As I said last time. I expected more. A higher quality
 
 I don't understand this
 
-# [Don’t order the fish – Marco.org](http://www.marco.org/2015/07/26/dont-order-the-fish)
+[Don’t order the fish – Marco.org](http://www.marco.org/2015/07/26/dont-order-the-fish)
 
 > But the iTunes Store back-end is a toxic hellstew of unreliability. Everything that touches the iTunes Store has a spotty record for me and almost every Mac owner I know.
 > 
