@@ -1,12 +1,14 @@
 ---
 title: The Best Apps for New Dads
-draft: true
+date: 2015-07-27 12:32
 tags:
     - apps
     - kids
 categories:
     - code
 ---
+
+I posted over on [TekSide](http://tekside.net/iphonaddict/2015/7/15/the-best-apps-for-new-dads "TekSide"):
 
 We have a newborn named Charlie. He's 2 weeks old so I'm no expert on being a Dad, but there have been a few apps the have been extremely helpful throughout the whole process. I tried a number of apps with tips, data entry, tools, and other functions, but these are the ones that stuck. As always, my iPhone is constantly by my side and I couldn't imagine going through pregnancy, labor, or fatherhood without them. 
 
