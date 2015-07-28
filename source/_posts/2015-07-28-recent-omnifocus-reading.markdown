@@ -1,7 +1,11 @@
 ---
 layout: post
-title: Recent Omnifocus Reading and things I want to try
+title: Recent Omnifocus Reading and Things I Want to Try
 date: 2015-07-28 15:56
+tags:
+    - omnifocus
+categories:
+    - Productivity
 ---
 
 I've been doing some reading on Omnifocus over the past few days. I've also purchases David Allen's new [GTD Book](http://amzn.to/1IDjHqq "GTD Book"). Below are pieces of interest that I've found along with brief commentary on things I want to try.
