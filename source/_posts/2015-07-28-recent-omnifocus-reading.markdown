@@ -8,7 +8,7 @@ categories:
     - Productivity
 ---
 
-I've been doing some reading on Omnifocus over the past few days. I've also purchases David Allen's new [GTD Book](http://amzn.to/1IDjHqq "GTD Book"). Below are pieces of interest that I've found along with brief commentary on things I want to try.
+I've been doing some reading on Omnifocus over the past few days. I've also purchased David Allen's new [GTD Book](http://amzn.to/1IDjHqq "GTD Book"). Below are pieces of interest that I've found along with brief commentary on things I want to try.
 
 I use Omnifocus heavily for both [iOS](http://apple.co/1CHgCmI "iOS") and [Mac](http://apple.co/1euWetx "Mac")
 
