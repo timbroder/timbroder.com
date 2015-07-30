@@ -27,7 +27,12 @@ permalink: atom_feedburner.xml
             <link href="{% if linked %}{{ linked}}{% else %}{{ site.url }}{{ post.url }}{% endif %}"/>
             <updated>{{ post.date|date('c') }}</updated>
             <id>{{ site.url }}{{ post.url }}</id>
-            <content type="html"><![CDATA[{{ post.blocks.content|raw }}]]></content>
+            <content type="html">
+                <![CDATA[
+                <a href="{{ site.url }}{{ post.url }}">๏</a><br>
+                {{ post.blocks.content|raw }}
+                ]]>
+            </content>
         </entry>
     {% endfor %}
 </feed>
