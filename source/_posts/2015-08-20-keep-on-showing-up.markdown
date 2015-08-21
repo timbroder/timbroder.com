@@ -7,4 +7,4 @@ link: http://www.swervefitness.com/blog/jessica-lippke
 
 > Just keep showing up
 
-Very inspiring article by my friend, [Jess](jessicalippke "%fill:name%")
+Very inspiring article by my friend, [Jess](http://twitter.com/jessicalippke)
