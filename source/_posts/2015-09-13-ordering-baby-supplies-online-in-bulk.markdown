@@ -2,6 +2,8 @@
 layout: post
 title: The Best Place to Order Baby Supplies Online, In Bulk
 date: 2015-09-13 16:07
+tags:
+    - kids
 ---
 
 We live in an age were BJ's and Costco are no longer the only game in town to get bulk supplies. Many websites are offering very competitive prices to the giant warehouse wholesale clubs. *(Thank goodness, those places stress me out).* We knew when we had Charlie that joining one of these clubs was probably going to happen.
