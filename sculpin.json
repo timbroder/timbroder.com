@@ -19,11 +19,12 @@
     {
       "type": "vcs",
       "url": "https://github.com/broderboy/php-markdown"
-    },
+    }
   ],
   "require": {
     "jbouzekri/sculpin-tag-cloud-bundle": "1.*",
-    "mavimo/sculpin-redirect-bundle": "dev-outbound-urls"
+    "mavimo/sculpin-redirect-bundle": "@dev",
+    "mavimo/sculpin-editor-bundle": "@dev"
   },
   "config": {
     "component-dir": "source/components"

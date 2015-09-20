@@ -6,7 +6,8 @@ class SculpinKernel extends \Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKer
     {
         return array(
             'Jb\Bundle\TagCloudBundle\JbTagCloudBundle',
-            'Mavimo\Sculpin\Bundle\RedirectBundle\SculpinRedirectBundle'
+            'Mavimo\Sculpin\Bundle\RedirectBundle\SculpinRedirectBundle',
+            'Mavimo\Sculpin\Bundle\EditorBundle\SculpinEditorBundle'
         );
     }
 }

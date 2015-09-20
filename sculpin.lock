@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ac74666462e623c0bdf9a2676c61ee3c",
+    "hash": "2412708ad0e238f1b4f2f2fb914197ee",
     "packages": [
         {
             "name": "jbouzekri/sculpin-tag-cloud-bundle",
@@ -41,6 +41,52 @@
                 "tag"
             ],
             "time": "2015-07-12 16:31:50"
+        },
+        {
+            "name": "mavimo/sculpin-editor-bundle",
+            "version": "dev-master",
+            "target-dir": "Mavimo/Sculpin/Bundle/EditorBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mavimo/sculpin-editor-bundle.git",
+                "reference": "b740383232a236156426ca721b229ec47408c7c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mavimo/sculpin-editor-bundle/zipball/b740383232a236156426ca721b229ec47408c7c7",
+                "reference": "b740383232a236156426ca721b229ec47408c7c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mavimo\\Sculpin\\Bundle\\EditorBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Vito Moscaritolo",
+                    "email": "marco@mavimo.org",
+                    "homepage": "http://www.mavimo.org"
+                }
+            ],
+            "description": "Sculpin Editor Bundle",
+            "homepage": "https://sculpin.io",
+            "keywords": [
+                "blog",
+                "blogging",
+                "projects",
+                "site",
+                "static"
+            ],
+            "time": "2014-01-04 16:34:28"
         },
         {
             "name": "mavimo/sculpin-redirect-bundle",
@@ -87,36 +133,14 @@
                 "static"
             ],
             "time": "2014-01-04 14:40:02"
-        },
-        {
-            "name": "sculpin/bootstrap-3-blog-theme",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sculpin/bootstrap-3-blog-theme.git",
-                "reference": "63d2c12172bfabe0d3231c87d1339698551ab0f2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sculpin/bootstrap-3-blog-theme/zipball/63d2c12172bfabe0d3231c87d1339698551ab0f2",
-                "reference": "63d2c12172bfabe0d3231c87d1339698551ab0f2",
-                "shasum": ""
-            },
-            "type": "sculpin-theme",
-            "description": "A Bootstrap 3 Blog Theme for Sculpin",
-            "support": {
-                "source": "https://github.com/sculpin/bootstrap-3-blog-theme/tree/master",
-                "issues": "https://github.com/sculpin/bootstrap-3-blog-theme/issues"
-            },
-            "time": "2014-01-16 06:29:42"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sculpin/bootstrap-3-blog-theme": 20,
-        "mavimo/sculpin-redirect-bundle": 20
+        "mavimo/sculpin-redirect-bundle": 20,
+        "mavimo/sculpin-editor-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
