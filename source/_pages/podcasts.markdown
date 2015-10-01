@@ -13,4 +13,4 @@ Check out the shows that [I listen to][11]
 [9]: http://twitter.com/roCkerChick
 [10]: https://itunes.apple.com/us/podcast/show-tell-cast-tekside-network/id942711989?mt=2&amp;at=11laRZ&amp;ct=pro
 [11]: /podcasts-i-listen-to.html
-[12]: http://d208tez5h4u8q2.cloudfront.net/wp-content/uploads/2015/02/download.png
+[12]: http://static1.squarespace.com/static/511f025be4b09463c75fdc0e/t/54f8d6c9e4b02dcbd8f736d1/1425594059527/1500w/sat.png
