@@ -6,6 +6,7 @@ categories:
 - Productivity
 tags:
 - OmniFocus
+- kids
 ---
 
 Laura and I are trying a formal Honey-Do List. We're both very task-oriented people and we really like lists. There are a lot of things I can do to help with Charlie but have to wait until I get home from work. Vice-versa, stuff I'll think of while I'm at work that Laura should take a look at on the days she's home. 
