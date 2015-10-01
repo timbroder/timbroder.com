@@ -19,7 +19,7 @@ There had to be a solution. What actually mattered? It boiled down to two things
 
 Neither OmniFocus or RTM have the ability to do 2-way sync. But, they CAN take in tasks through email addresses. Ok, there is a way for tasks to get into our respective worlds from somewhere else. Check.
 
-The next step was to have something be the single point of entry for tasks. This entry point would also serve as the aggregate list of both our worlds. Wunderlist and Todoist both have great API's, there had to be something. There was also a good chance that [IFTTT](https://ifttt.com/ "IFTTT") or [Zapier](https://zapier.com "Zapier") could connect to everything. IFTTT was a bust, but Zapier hooked us up. I went with Wunderlist because Todoist's notifications are a premium only feature. We're not sure if we'll actually use the notifications, but I didn't feel like switching if we decided to in the future. Wanderlist could also handle shared lists, asignees, and due dates.
+The next step was to have something be the single point of entry for tasks. This entry point would also serve as the aggregate list of both our worlds. Wunderlist and Todoist both have great API's, there had to be something. There was also a good chance that [IFTTT](https://ifttt.com/ "IFTTT") or [Zapier](https://zapier.com "Zapier") could connect to everything. IFTTT was a bust, but Zapier hooked us up. I went with Wunderlist because Todoist's notifications are a premium only feature. We're not sure if we'll actually use the notifications, but I didn't feel like switching if we decided to in the future. Wunderlist could also handle shared lists, asignees, and due dates.
 
 How to set it up:
 
