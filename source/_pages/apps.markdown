@@ -5,6 +5,7 @@ title: Apps
 I really wanted to learn native app development. Having a C background and having a bad experience with Android Dev, I got myself an iPhone 5, formed an [LLC][1], and dove in on nights/weekends. In a perfect world I would have made millions! It's been a lot of fun. Lately, I've been learning Swift
 
 It's been featured on:
+
 * [LifeHacker](http://lifehacker.com/weather-notifications-gives-you-a-forecast-without-open-1458155902 "LifeHacker")
 * [Macstories](https://www.macstories.net/reviews/daily-weather-summaries-with-weather-notifications/ "Macstories")
 * [TekSide](http://tekside.net/iphonaddict/2013/10/23/iphonaddict-review-weather-notifications "TekSide")
