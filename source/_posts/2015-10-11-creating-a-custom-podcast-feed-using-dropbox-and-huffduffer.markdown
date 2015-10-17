@@ -23,9 +23,9 @@ I've been using it to create a custom podcast feed of random audio files that I 
 1. Setup Dropbox on iOS
 2. Open [this url](https://workflow.is/workflows/8e8692c8bacd4dc39c944edb18b0dea8 "this url") in Safari
 3. Tap "Get Workflow" ![](https://farm6.staticflickr.com/5690/22099535245_93b81398fb_o_d.jpg)
-4. Allow Safari to open Workflow ![](https://www.flickr.com/photos/timothybroder/22099516045/in/datetaken/)
-5. Open the workflow in Workflow ![](https://www.flickr.com/photos/timothybroder/22073343796/in/datetaken/)
-6. Check to see if Workflow has access to Dropbox ![](https://www.flickr.com/photos/timothybroder/21911637698/in/datetaken/)
+4. Allow Safari to open Workflow ![](https://farm6.staticflickr.com/5711/22099516045_42ec98f0d2_o_d.png)
+5. Open the workflow in Workflow ![](https://farm6.staticflickr.com/5672/22073343796_82eb407d66_o_d.jpg)
+6. Check to see if Workflow has access to Dropbox ![](https://farm1.staticflickr.com/693/21911637698_f4f1c3f0d2_o_d.jpg)
 7. Hit Done
 8. Go back into the workflow and run it
 9. Navigate to where your audio files are in dropbox ![](https://farm6.staticflickr.com/5767/21911561790_82249be6f8_o_d.png)
