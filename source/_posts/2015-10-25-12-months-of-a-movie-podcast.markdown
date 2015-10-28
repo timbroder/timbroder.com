@@ -8,7 +8,7 @@ The 12th episode of [Show & Tell](http://tekside.net/show-tell/ "Show & Tell"), 
 
 The show is hosted by [Samuel Strickland](https://twitter.com/samdakark "Samuel Strickland"), accompanied by myself and [Ellyn MaNamara](https://twitter.com/rockerchick "Ellyn MaNamara"). Each month, we pick a movie that we've each seen before, and bring it to the show to discuss. We chat, rate, review, and once in a while go off the rails. It has been SO much fun working with the crew on the [Tekside](http://tekside.net/ "Tekside") network, being part of a podcast, and leaning the ins & outs of recording and producing. 
 
-It's been great as forced relaxation for me. I was hesitant to jump into a show with people I'd never spoken to before (we had 1 Skype call before we recorded episode 1). Immediately, recording became one of the highlights of the week (month) that I look forward to. Sam and Ellyn are a lot of run to talk to on the air or hang out in our Slack channel. There have definitely been movies I never would have considered otherwise that I really liked. We're currently gearing up for our Star Wars spectacular and I can't wait! 
+It's been great as forced relaxation for me. I was hesitant to jump into a show with people I'd never spoken to before (we had 1 Skype call before we recorded episode 1). Immediately, recording became one of the highlights of the week (month) that I look forward to. Sam and Ellyn are a lot of fun to talk to on the air or hang out in our Slack channel. There have definitely been movies I never would have considered otherwise that I really liked. We're currently gearing up for our Star Wars spectacular and I can't wait! 
 
 Our episodes to date (I started with Top Gun, obviously)
 
