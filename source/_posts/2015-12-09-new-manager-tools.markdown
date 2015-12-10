@@ -36,4 +36,5 @@ Below are some required reading to add to your utility belt. Start taking a read
 
 * [Manager Tools Podcast](https://www.manager-tools.com/all-podcasts?field_content_domain_tid=4 "Manager Tools Podcast") - A huge library of how to deal with any situation. Skim the list, there will be something in there you want to learn about. Don't forget to subscribe!
 
+*Thanks to [mshmsh5000](https://twitter.com/mshmsh5000 "mshmsh5000") and [jessicalippke](https://twitter.com/jessicalippke "jessicalippke") for input
 If you have anything that should be on this starter list, let me know!
