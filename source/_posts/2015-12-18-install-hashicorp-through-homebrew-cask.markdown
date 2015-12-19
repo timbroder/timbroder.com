@@ -5,7 +5,7 @@ date: 2015-12-18 19:12
 link: https://github.com/hashicorp/otto/issues/121
 ---
 
-Came accross this awesome gem today while setting up a new laptop
+Came accross [this](https://github.com/hashicorp/otto/issues/121 "this") awesome gem today while setting up a new laptop
 
 ```bash
 ➜  ~  vagrant
