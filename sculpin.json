@@ -19,12 +19,17 @@
     {
       "type": "vcs",
       "url": "https://github.com/broderboy/php-markdown"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/timbroder/SculpinAlgoliaSearchBundle.git"
     }
   ],
   "require": {
     "jbouzekri/sculpin-tag-cloud-bundle": "1.*",
     "mavimo/sculpin-redirect-bundle": "@dev",
-    "mavimo/sculpin-editor-bundle": "@dev"
+    "mavimo/sculpin-editor-bundle": "@dev",
+    "timbroder/sculpin-algolia": "@dev"
   },
   "config": {
     "component-dir": "source/components"
