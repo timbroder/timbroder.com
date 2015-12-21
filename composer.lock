@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f1c484a54f18efc51dd4dc20e07b398",
-    "content-hash": "c479d91a9c069e22e18cee3811dadae4",
+    "hash": "9f2edc06ca2ee29e223ce14b11fecbb6",
+    "content-hash": "426e2b2c9ee03693e1279d88f562ca73",
     "packages": [
+        {
+            "name": "algolia/algoliasearch-client-php",
+            "version": "1.5.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/algolia/algoliasearch-client-php.git",
+                "reference": "04c6cecc413c47ad101f6766d0799b8e7b3a06dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/algolia/algoliasearch-client-php/zipball/04c6cecc413c47ad101f6766d0799b8e7b3a06dd",
+                "reference": "04c6cecc413c47ad101f6766d0799b8e7b3a06dd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "AlgoliaSearch": "src/",
+                    "AlgoliaSearch\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Algolia Team",
+                    "email": "contact@algolia.com"
+                },
+                {
+                    "name": "Ryan T. Catlin",
+                    "email": "ryan.catlin@gmail.com"
+                },
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "Algolia Search API Client for PHP",
+            "homepage": "https://github.com/algolia/algoliasearch-client-php",
+            "time": "2015-05-27 12:37:42"
+        },
         {
             "name": "composer/composer",
             "version": "dev-master",
@@ -2404,6 +2454,50 @@
             "time": "2015-11-30 12:35:10"
         },
         {
+            "name": "timbroder/sculpin-algolia",
+            "version": "dev-master",
+            "target-dir": "Timbroder/Bundle/AlgoliaBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/timbroder/SculpinAlgoliaSearchBundle.git",
+                "reference": "276c75a8646692659421f247f1de718456ac7c92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/timbroder/SculpinAlgoliaSearchBundle/zipball/276c75a8646692659421f247f1de718456ac7c92",
+                "reference": "276c75a8646692659421f247f1de718456ac7c92",
+                "shasum": ""
+            },
+            "require": {
+                "algolia/algoliasearch-client-php": "1.5.*"
+            },
+            "type": "sculpin-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Timbroder\\Bundle\\AlgoliaBundle": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Generate tag cloud in Sculpin",
+            "homepage": "https://github.com/timbroder/SculpinAlgoliaSearchBundle",
+            "keywords": [
+                "Bundle",
+                "algolia",
+                "categories",
+                "php",
+                "sculpin",
+                "search",
+                "tags"
+            ],
+            "support": {
+                "source": "https://github.com/timbroder/SculpinAlgoliaSearchBundle/tree/master",
+                "issues": "https://github.com/timbroder/SculpinAlgoliaSearchBundle/issues"
+            },
+            "time": "2015-12-21 00:57:31"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.3.0",
             "source": {
@@ -2657,6 +2751,7 @@
         "sculpin/sculpin": 20,
         "mavimo/sculpin-redirect-bundle": 20,
         "mavimo/sculpin-editor-bundle": 20,
+        "timbroder/sculpin-algolia": 20,
         "dflydev/embedded-composer-console": 20,
         "dflydev/embedded-composer-core": 20,
         "composer/composer": 20

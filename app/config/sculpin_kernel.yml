@@ -20,3 +20,12 @@ jb_tag_cloud:
     strategies:
         - jb_sculpin.tag_cloud.strategy.alpha
         - jb_sculpin.tag_cloud.strategy.percent_size
+
+timbroder_algolia:
+    enabled: true # enable the indexation at the end of the generate task
+    engine: algolia # change the engine (for now only indextank is supported)
+    options:
+        application_id: "AB2NSR9192"
+        admin_api_key: "9151a628fb6b0f5e8fb544e82ca1cfb6"
+        index: "dev_timbroder.com"
+        clear_on_sync: 0
