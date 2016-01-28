@@ -4,7 +4,7 @@ title: Tektok Podcast - Ep023 - Overly Connected
 date: 2016-01-28 15:21
 link: http://tekside.net/tektok/2016/1/26/tekto-podcast-ep023-overly-connected
 ---
-I had the pleasure of joining the
+I had the pleasure of joining the Tektok podcast this week
 
 > Episode #: 23
 > 
