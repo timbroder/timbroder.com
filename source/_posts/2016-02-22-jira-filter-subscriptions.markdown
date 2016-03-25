@@ -27,4 +27,5 @@ Setup the schedule to be every 30 mins, 24 hours a day, and to **not** email you
 
 ![](https://farm2.staticflickr.com/1644/24831359639_ab75c74611_z_d.jpg)
 
+
 You'll get a well formatted email if there are new issues, and you can cherry pick the ones you want to watch

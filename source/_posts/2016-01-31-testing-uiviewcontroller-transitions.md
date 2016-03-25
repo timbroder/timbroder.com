@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Testing UIViewController 
+title: Testing UIViewController Transitions with Quick and Swift 
 date: 2016-01-31 14:57
 categories:
 - Code
