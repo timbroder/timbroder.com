@@ -2,6 +2,7 @@
 layout: post
 title: Jumping Ship on Basecamp 3
 date: 2016-03-29 18:06
+draft: true
 ---
 
 I love Basecamp. I've used it in [some shape](https://help.basecamp.com/basecamp "some form") or [form](https://basecamp.com/2 "form") for almost [7 years](http://www.alexanderinteractive.com/ "7 years"). I was [super excited](http://www.timbroder.com/2015/10/a-preview-of-what's-new-in-basecamp-3.html "super excited") for Basecamp 3. I wish I could say "It's not you, it's me" but that would be a lie. 
