@@ -15,7 +15,7 @@ tags:
 - mock
 ---
 
-[Bootable](http://www.archybold.com/blog/post/booting-eloquent-model-traits "Bootable") Model traits are pretty nifty. I've used them to register certain events for the models using my Trait. However, I've run into an issue trying to mock models that are using the trait. Specifically, when a Mockery version of the model is instantiated, it's boot code agrees that it should have a bootMyTrait method, but can't find it when it tries to call it.
+[Bootable](http://www.archybold.com/blog/post/booting-eloquent-model-traits "Bootable") Model traits are pretty nifty. I'm using them to register certain events for the models using my Trait. However, I've run into an issue trying to mock models that are using the trait. Specifically, when a Mockery version of the model is instantiated, it's boot code agrees that it should have a bootMyTrait method, but can't find it when it tries to call it.
 
 As an example, here is a trait:
 
@@ -167,6 +167,6 @@ mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery.php:142
 mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:122
 ```
 
-So, I can move the code I'm doing in the boot method to a ServiceProvidor, but then I'll need to register each Model that uses the trait. This feels dirty, and using the boot method seems appropriate. So I think I've either hit a bug, or am Mocking the trait-using-model incorrectly. I've looked at ```getMockForTrait``` but I also need the mocked instance to extend Eloquent (a few of the trait's methods call eloquent methods)
+So, I can move the code I'm doing in the boot method to a ServiceProvider, but then I'll need to register each Model that uses the trait. This feels dirty, and using the boot method seems appropriate. So I think I've either hit a bug, or am Mocking the trait-using-model incorrectly. I've looked at ```getMockForTrait``` but I also need the mocked instance to extend Eloquent (a few of the trait's methods call eloquent methods)
 
 If anyone sees something I missed, much appreciated
