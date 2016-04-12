@@ -17,6 +17,8 @@ tags:
 
 [Bootable](http://www.archybold.com/blog/post/booting-eloquent-model-traits "Bootable") Model traits are pretty nifty. I'm using them to register certain events for the models using my Trait. However, I've run into an issue trying to mock models that are using the trait. Specifically, when a Mockery version of the model is instantiated, it's boot code agrees that it should have a bootMyTrait method, but can't find it when it tries to call it.
 
+[Sample Repository](https://github.com/timbroder/mock-bootable-laravel-model-trait "Sample Repository") for the below, with commands to reproduce.
+
 As an example, here is a trait:
 
 ```php
