@@ -172,3 +172,32 @@ mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Founda
 So, I can move the code I'm doing in the boot method to a ServiceProvider, but then I'll need to register each Model that uses the trait. This feels dirty, and using the boot method seems appropriate. So I think I've either hit a bug, or am Mocking the trait-using-model incorrectly. I've looked at ```getMockForTrait``` but I also need the mocked instance to extend Eloquent (a few of the trait's methods call eloquent methods)
 
 If anyone sees something I missed, much appreciated
+
+*Update Apr, 22 (Friday) 2016-04-22 03:28 PM*
+
+Thanks to [Marcin](http://stackoverflow.com/a/36771173/647343 "Marcin"), we have a solution!
+
+```php
+<?php
+
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Mockery as m;
+
+class ExampleTest extends TestCase
+{
+    /**
+     * A basic functional test example.
+     *
+     * @return void
+     */
+    public function testTraitBooting()
+    {
+        $mock = m::mock('App\MyModel')->makePartial();
+        $mock->shouldReceive('bootMyTrait')->once();
+        $mock->__construct();
+    }
+}
+
+```
