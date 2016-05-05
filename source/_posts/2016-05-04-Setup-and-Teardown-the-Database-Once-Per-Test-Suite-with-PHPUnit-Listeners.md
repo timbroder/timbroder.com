@@ -6,7 +6,7 @@ layout: post
 link: ''
 slug: setup-and-teardown-the-database-once-per-test-suite-with-phpunit-listeners
 
-title: Setup and Teardown the Database Once Per Test Suite with PHPUnit Listeners
+title: Setup and Teardown the Database Once Per Test Suite in PHPUnit 
 
 categories:
 - Code
@@ -19,7 +19,7 @@ tags:
 
 I'm working on a series of integration tests where I want to set up and reset the database for each run. This could easily be done in the setUp and tearDown methods, but doing the full db each time is slow. Yes, I could just do the tables I need, but I was curious, and now I don't have to worry about which tables are setup in my testing DB. In this example, I'm using Laravel's migrations and SQLite as the test DB.
 
-**UPDATE 05/05/2016**: As Sebastian [point out below](http://www.timbroder.com/2016/05/Setup-and-Teardown-the-Database-Once-Per-Test-Suite-with-PHPUnit-Listeners.html#comment-2659950789 "point out below") (thanks!) there is a much more appropriate way. Using ```setUpBeforeClass``` and ```tearDownAfterClass``` we achieve the same effect
+**UPDATE 05/05/2016**: As Sebastian [points out below](http://www.timbroder.com/2016/05/Setup-and-Teardown-the-Database-Once-Per-Test-Suite-with-PHPUnit-Listeners.html#comment-2659950789 "point out below") (thanks!) there is a much more appropriate way. Using ```setUpBeforeClass``` and ```tearDownAfterClass``` we achieve the same effect
 
 ```php
 public static function setUpBeforeClass()
