@@ -19,10 +19,26 @@ tags:
 
 I'm working on a series of integration tests where I want to set up and reset the database for each run. This could easily be done in the setUp and tearDown methods, but doing the full db each time is slow. Yes, I could just do the tables I need, but I was curious, and now I don't have to worry about which tables are setup in my testing DB. In this example, I'm using Laravel's migrations and SQLite as the test DB.
 
-PHPUnit has [listeners](https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.examples.SimpleTestListener.php "listeners") that you can tap into at various parts of your tests' lifecycle. I'm particularly interested in when a specific suite starts and ends. We'll need to do 2 things:
+**UPDATE 05/05/2016**: As Sebastian [point out below](http://www.timbroder.com/2016/05/Setup-and-Teardown-the-Database-Once-Per-Test-Suite-with-PHPUnit-Listeners.html#comment-2659950789 "point out below") (thanks!) there is a much more appropriate way. Using ```setUpBeforeClass``` and ```tearDownAfterClass``` we achieve the same effect
 
-1. Create our Listener
-2. Register this Listener in phpunit.xml
+```php
+public static function setUpBeforeClass()
+{
+    parent::setUpBeforeClass();
+    exec('php artisan migrate --database sqlite_test');
+}
+
+public static function tearDownAfterClass()
+{
+    exec('php artisan migrate:reset --database sqlite_test');
+    parent::tearDownAfterClass(); 
+}
+```
+
+<del>PHPUnit has [listeners](https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.examples.SimpleTestListener.php "listeners") that you can tap into at various parts of your tests' lifecycle. I'm particularly interested in when a specific suite starts and ends. We'll need to do 2 things:</del>
+
+1. <del>Create our Listener</del>
+2. <del>Register this Listener in phpunit.xml</del>
 
 The listener is as follows:
 
@@ -49,13 +65,13 @@ class FullDBListener extends PHPUnit_Framework_BaseTestListener
 
 This does a few things:
 
-1. Stores the class names of each suite we want to run the db migrations for
-2. In ```startTestSuite``` it checks to see if we're in the right suite
-3. If we are, run an artisan migration on our test db
-4. In ```endTestSuite``` it checks to see if we're in the right suite
-5. If we are, run an artisan migration:reset on our test db
+1. <del>Stores the class names of each suite we want to run the db migrations for</del>
+2. <del>In ```startTestSuite``` it checks to see if we're in the right suite</del>
+3. <del>If we are, run an artisan migration on our test db</del>
+4. <del>In ```endTestSuite``` it checks to see if we're in the right suite</del>
+5. <del>If we are, run an artisan migration:reset on our test db</del>
 
-Next, we need to make PHPUnit aware of this listener. Update your path accordingly
+<del>Next, we need to make PHPUnit aware of this listener. Update your path accordingly</del>
 
 ```xml
 <listeners>
