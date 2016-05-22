@@ -18,6 +18,7 @@
     }
   ],
   "require": {
+    "sculpin/sculpin-theme-composer-plugin": "dev-master",
     "michelf/php-markdown": "dev-fork",
     "sculpin/sculpin": "dev-fork",
     "jbouzekri/sculpin-tag-cloud-bundle": "1.*",
