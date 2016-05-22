@@ -2,15 +2,15 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/broderboy/sculpin"
+      "url": "https://github.com/timbroder/sculpin"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/broderboy/php-markdown"
+      "url": "https://github.com/timbroder/php-markdown"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/broderboy/sculpin-redirect-bundle.git"
+      "url": "https://github.com/timbroder/sculpin-redirect-bundle.git"
     },
     {
       "type": "vcs",
