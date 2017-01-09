@@ -25,7 +25,7 @@ How often has this happened to you?
 
 Now in the perfect world, we're keeping a [programming notebook](https://geo.itunes.apple.com/app/quiver-programmers-notebook/id866773894?at=11laRZ&ct=afp15&ls=1&mt=12 "programming notebook") or remembering to bookmark/tag/organize what we find. If you do, awesome, I wish I was you. For the rest of us mere mortals, read on.
 
-I wanted something that would let me search *my* collection of SO *things* so I could find it later. Here's where I ended up
+I wanted something that would let me search *my* collection of SO *things* so I could find it later. Here's where I ended up: Every SO post I star being automatically bookmarked with full-text search
 
 **The Flow**
 
