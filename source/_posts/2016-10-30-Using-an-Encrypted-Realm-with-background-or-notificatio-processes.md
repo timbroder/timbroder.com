@@ -3,6 +3,7 @@ author: tim
 comments: true
 date: 2016-10-30 13:54:00+00:00
 layout: post
+link: ''
 slug: using-an-encrypted-realm-with-background-or-notificatio-processes
 
 title: Using an Encrypted Realm in a background or notification processes?
@@ -14,6 +15,7 @@ tags:
 - realm
 - encryption
 ---
+
 
 *Note: This post's primary purpose is to help me think through this problem. I have no prescribed solution at the end of it. The conversation will continue on [Stack Overflow](http://stackoverflow.com/q/40332246/647343 "Stack Overflow"). I will update this post once I have a final approach.* 
 
