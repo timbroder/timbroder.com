@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep032 -Mixed Emotions On Ios 11
-date: 2017-11-15 08:28
+date: 2017-09-27 08:28
 link: http://tekside.net/gtdjedi/2017/9/27/gtdjedi-podcast-ep032-mixed-emotions-on-ios-11
 ---
 
