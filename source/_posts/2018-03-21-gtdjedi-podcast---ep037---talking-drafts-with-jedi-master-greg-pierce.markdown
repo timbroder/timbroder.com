@@ -7,6 +7,6 @@ link: http://tekside.net/gtdjedi/2018/3/21/gtdjedi-podcast-ep037-talking-drafts-
 
 > The Dev Seg
 > 
-> Special Guest Greg Pierce of @agiletortoise
+> Special Guest Greg Pierce of [@agiletortoise](https://twitter.com/agiletortoise "@agiletortoise")
 
 ​
