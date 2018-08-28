@@ -4,7 +4,7 @@ title: My Favorite Keto Recipes
 date: 2018-08-24 08:30
 ---
 
-*As mentioned on my guest appearance on [The JackedCast](http://tekside.net/jacked/ "The JackedCast")*
+*As mentioned on my guest appearance on [The JackedCast Episode 38](http://tekside.net/jacked/2018/8/25/jackedcast-ep038-transformations-with-timothy-broder)*
 
 *Updated: 08/24/2018*
 
