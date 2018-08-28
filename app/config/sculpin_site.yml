@@ -3,11 +3,11 @@
 # in a template to get the contents of the `title` key.
 title: timbroder.com
 subtitle: Code. Comics. Crossfit
-url: http://www.timbroder.com
+url: https://www.timbroder.com
 author: Tim Broder
 email: timothy.broder@gmail.com
 disqus_shortname: timbrodercom
-feed: http://feeds.feedburner.com/timbroder
+feed: https://feeds.feedburner.com/timbroder
 analytics_id: UA-17099661-1
 
 # Insert your disqus shortname
