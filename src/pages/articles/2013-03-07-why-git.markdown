@@ -8,8 +8,7 @@ link: ''
 slug: why-git
 title: Why Git?
 wordpress_id: 1323
-categories:
-- Code
+category: Code
 ---
 
 A few months ago I gave a presentation at

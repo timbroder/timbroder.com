@@ -8,8 +8,7 @@ link: ''
 slug: google-web-toolkit-14-release-candidate
 title: Google Web Toolkit 1.4 Release Candidate 2
 wordpress_id: 41
-categories:
-- Code
+category: Code
 tags:
 - GWT
 ---

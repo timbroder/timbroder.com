@@ -8,8 +8,7 @@ link: ''
 slug: using-ponydebugger-on-a-device
 title: Using PonyDebugger on a device
 wordpress_id: 1623
-categories:
-- Code
+category: Code
 tags:
 - debug
 - HOWTO

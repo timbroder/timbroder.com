@@ -8,8 +8,7 @@ link: ''
 slug: fight-gone-bad-iv
 title: Fight Gone Bad IV
 wordpress_id: 214
-categories:
-- Code
+category: Code
 ---
 
 Anyone want to help me out by donating?  

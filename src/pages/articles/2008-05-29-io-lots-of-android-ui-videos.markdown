@@ -8,8 +8,7 @@ link: ''
 slug: io-lots-of-android-ui-videos
 title: 'I/O: Lots of Android UI Videos!'
 wordpress_id: 129
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: google-hosting-popular-javascript
 title: Google hosting popular javascript libraries
 wordpress_id: 125
-categories:
-- Code
+category: Code
 ---
 
 I came across this yesterday looking for the [mootools](http://mootools.net/)

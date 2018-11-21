@@ -8,8 +8,7 @@ link: ''
 slug: limit-google-search-results-by-date
 title: Limit Google Search Results by Date
 wordpress_id: 113
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 ---

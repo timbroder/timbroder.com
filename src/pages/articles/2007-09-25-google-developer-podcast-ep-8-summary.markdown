@@ -8,8 +8,7 @@ link: ''
 slug: google-developer-podcast-ep-8-summary
 title: Google Developer Podcast Ep 8 Summary
 wordpress_id: 71
-categories:
-- Code
+category: Code
 ---
 
 I got some time today on the train today to listen to Episode 8 of the Google

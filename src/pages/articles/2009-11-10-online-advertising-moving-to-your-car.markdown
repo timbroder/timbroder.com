@@ -8,8 +8,7 @@ link: ''
 slug: online-advertising-moving-to-your-car
 title: Online advertising moving to.... your car?
 wordpress_id: 222
-categories:
-- Code
+category: Code
 ---
 
 Another one of mine on the work blog -  

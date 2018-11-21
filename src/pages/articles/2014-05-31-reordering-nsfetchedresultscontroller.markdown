@@ -8,8 +8,7 @@ link: None
 slug: reordering-nsfetchedresultscontroller
 title: Reordering a NSFetchedResultsController
 wordpress_id: 1531
-categories:
-- Code
+category: Code
 tags:
 - CoreData
 - ios

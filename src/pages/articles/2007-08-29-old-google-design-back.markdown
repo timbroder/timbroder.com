@@ -8,8 +8,7 @@ link: ''
 slug: old-google-design-back
 title: Old Google Design back?
 wordpress_id: 50
-categories:
-- Code
+category: Code
 ---
 
 [Blogoscoped](http://blogoscoped.com/archive/2007-08-27.html#n55) reports that

@@ -8,8 +8,7 @@ link: ''
 slug: gmail-to-real-phone-calling
 title: Gmail to real phone calling
 wordpress_id: 617
-categories:
-- Code
+category: Code
 tags:
 - gmail
 - Skype

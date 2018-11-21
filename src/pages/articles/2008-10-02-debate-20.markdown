@@ -8,8 +8,7 @@ link: ''
 slug: debate-20
 title: Debate 2.0
 wordpress_id: 179
-categories:
-- Code
+category: Code
 tags:
 - friendfeed
 - twitter

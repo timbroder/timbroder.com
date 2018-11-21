@@ -8,8 +8,7 @@ link: ''
 slug: io-web-browser-meet-google-earth
 title: 'I/O: Web Browser, Meet Google Earth'
 wordpress_id: 128
-categories:
-- Code
+category: Code
 tags:
 - maps
 ---

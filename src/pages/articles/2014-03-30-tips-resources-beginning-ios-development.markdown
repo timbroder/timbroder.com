@@ -8,8 +8,7 @@ link: http://objdev.com/2014/02/beginning-ios-development
 slug: tips-resources-beginning-ios-development
 title: Tips and Resources for beginning iOS Development
 wordpress_id: 1476
-categories:
-- Code
+category: Code
 ---
 
 > While you are planning and building out your application, think about the

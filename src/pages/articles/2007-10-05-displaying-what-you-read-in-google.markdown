@@ -8,8 +8,7 @@ link: ''
 slug: displaying-what-you-read-in-google
 title: Displaying what you read from Google Reader
 wordpress_id: 81
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - python

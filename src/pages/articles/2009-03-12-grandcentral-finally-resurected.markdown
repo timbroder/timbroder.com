@@ -8,8 +8,7 @@ link: ''
 slug: grandcentral-finally-resurected
 title: GrandCentral finally resurected
 wordpress_id: 193
-categories:
-- Code
+category: Code
 ---
 
 GrandCentral [lives again](http://googleblog.blogspot.com/2009/03/here-comes-google-voice.html), as Google Voice.  Google voice is rolling out, although

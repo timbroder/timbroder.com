@@ -8,8 +8,7 @@ link: ''
 slug: update-google-talk-status-with-twitter
 title: Update Google Talk status with Twitter
 wordpress_id: 102
-categories:
-- Code
+category: Code
 tags:
 - gchat
 - python

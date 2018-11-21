@@ -8,8 +8,7 @@ link: ''
 slug: why-we-do-what-we-do
 title: Why We Do What We Do
 wordpress_id: 1361
-categories:
-- Reading
+category: Reading
 ---
 
 In his talk at Smashing Conf in Freiburg Germany 2013 Dan Rubin talked about

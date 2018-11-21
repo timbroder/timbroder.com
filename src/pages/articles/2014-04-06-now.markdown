@@ -8,8 +8,7 @@ link: http://www.vgcats.com/comics/?strip_id=331
 slug: now
 title: Then and Now
 wordpress_id: 1495
-categories:
-- Code
+category: Code
 ---
 
 [![140324](/images/2014/04/140324.jpg)](/images/2014/04/140324.jpg)

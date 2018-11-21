@@ -8,8 +8,7 @@ link: ''
 slug: my-packing-list
 title: My Packing List
 wordpress_id: 1722
-categories:
-- Code
+category: Code
 ---
 
 I’ve been [traveling](http://en.wikipedia.org/wiki/Tokyo) for

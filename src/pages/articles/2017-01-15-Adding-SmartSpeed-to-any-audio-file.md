@@ -8,8 +8,7 @@ slug: adding-smartspeed-to-any-audio-file
 
 title: Adding Smart Speed to any audio file with Audacity
 
-categories:
-- Code
+category: Code
 tags:
 - 
 - 

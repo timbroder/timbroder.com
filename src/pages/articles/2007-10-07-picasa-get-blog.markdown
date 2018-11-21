@@ -8,8 +8,7 @@ link: ''
 slug: picasa-get-blog
 title: Picasa gets a blog!
 wordpress_id: 82
-categories:
-- Code
+category: Code
 tags:
 - picasa web
 ---

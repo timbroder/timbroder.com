@@ -8,8 +8,7 @@ link: ''
 slug: view-google-groups-posts-in-reader
 title: View Google Groups posts in Reader
 wordpress_id: 43
-categories:
-- Code
+category: Code
 tags:
 - groups
 - HOWTO

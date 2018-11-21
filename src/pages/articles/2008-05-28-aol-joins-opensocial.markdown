@@ -8,8 +8,7 @@ link: ''
 slug: aol-joins-opensocial
 title: 'I/O: AOL Joins OpenSocial'
 wordpress_id: 127
-categories:
-- Code
+category: Code
 tags:
 - opensocial
 ---

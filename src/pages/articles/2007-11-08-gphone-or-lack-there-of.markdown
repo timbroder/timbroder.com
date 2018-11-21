@@ -8,8 +8,7 @@ link: ''
 slug: gphone-or-lack-there-of
 title: gPhone, or lack there of
 wordpress_id: 100
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

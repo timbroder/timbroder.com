@@ -8,8 +8,7 @@ link: ''
 slug: test-post-from-sms-now-supported-by
 title: No Content Found
 wordpress_id: 195
-categories:
-- Code
+category: Code
 ---
 
 Test post from sms (now supported by blogger <http://tinyurl.com/bx6vao>

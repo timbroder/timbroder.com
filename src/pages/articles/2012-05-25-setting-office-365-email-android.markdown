@@ -8,8 +8,7 @@ link: ''
 slug: setting-office-365-email-android
 title: Setting up Office 365 email on Android
 wordpress_id: 1101
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

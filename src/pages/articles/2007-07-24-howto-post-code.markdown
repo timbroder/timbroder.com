@@ -8,8 +8,7 @@ link: ''
 slug: howto-post-code
 title: 'HOWTO: post code'
 wordpress_id: 25
-categories:
-- Code
+category: Code
 ---
 
 Posting code is made quite easy by using

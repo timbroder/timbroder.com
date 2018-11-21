@@ -8,8 +8,7 @@ link: http://indiestack.com/2014/05/coding-under-par/
 slug: coding-under-par
 title: Coding Under Par
 wordpress_id: 1600
-categories:
-- Code
+category: Code
 ---
 
 > when it’s midnight and I’m on a perceived roll with some coding challenge,

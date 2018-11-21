@@ -8,8 +8,7 @@ link: ''
 slug: google%e2%80%99s-groupon-competitor-goes-live
 title: Google’s Groupon Competitor Goes Live
 wordpress_id: 923
-categories:
-- Code
+category: Code
 ---
 
 [http://bit.ly/eFvNwn](http://bit.ly/eFvNwn)

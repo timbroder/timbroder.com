@@ -8,8 +8,7 @@ link: ''
 slug: setting-a-project-as-the-default-redmine-homepage
 title: Setting a project as the default redmine homepage
 wordpress_id: 874
-categories:
-- Code
+category: Code
 tags:
 - Redmine
 - Ruby

@@ -8,8 +8,7 @@ link: ''
 slug: by-power-of-grayskull-i-mean-google
 title: By the Power of Grayskull.... I mean Google
 wordpress_id: 74
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

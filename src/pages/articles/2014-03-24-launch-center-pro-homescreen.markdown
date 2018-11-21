@@ -8,8 +8,7 @@ link: ''
 slug: launch-center-pro-homescreen
 title: How I use my Launch Center Pro homescreen
 wordpress_id: 1445
-categories:
-- Code
+category: Code
 ---
 
 Recently [there](http://jwie.be/launch-center-pro-daily-journaling) have

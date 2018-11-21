@@ -8,8 +8,7 @@ link: ''
 slug: finding-unread-gmails-or-best-gmail
 title: 'Finding unread gmails (or: the best gmail filter ever)'
 wordpress_id: 187
-categories:
-- Code
+category: Code
 tags:
 - gmail
 - HOWTO

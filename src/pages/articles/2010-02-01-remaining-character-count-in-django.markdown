@@ -8,8 +8,7 @@ link: ''
 slug: remaining-character-count-in-django
 title: Remaining character count in django admin
 wordpress_id: 232
-categories:
-- Code
+category: Code
 ---
 
 Update: This code also lives on [Github](https://github.com/broderboy/django-admin-remainingcharacters)

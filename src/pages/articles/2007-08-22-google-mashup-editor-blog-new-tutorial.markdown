@@ -8,8 +8,7 @@ link: ''
 slug: google-mashup-editor-blog-new-tutorial
 title: 'Google Mashup Editor Blog: New Tutorial: Using Picasa Web Album Feeds in GME'
 wordpress_id: 40
-categories:
-- Code
+category: Code
 tags:
 - GME
 - maps

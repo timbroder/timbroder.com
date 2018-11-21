@@ -8,8 +8,7 @@ link: ''
 slug: comments-turned-on
 title: Comments turned on
 wordpress_id: 80
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

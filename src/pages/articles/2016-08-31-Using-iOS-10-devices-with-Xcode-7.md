@@ -8,8 +8,7 @@ slug: using-ios-10-devices-with-xcode-7
 
 title: Using iOS 10 devices with Xcode 7
 
-categories:
-- Code
+category: Code
 ---
 
 [Peter Steinberger](https://twitter.com/steipete "Peter Steinberger") started a GREAT [gist](https://gist.github.com/steipete/d9b44d8e9f341e81414e86d7ff8fb62d "gist") on *Using Xcode 7.3.1 and iOS 10 devices*.

@@ -8,8 +8,7 @@ link: ''
 slug: september-madness
 title: September Madness
 wordpress_id: 178
-categories:
-- Code
+category: Code
 ---
 
 A little off the beaten path from what I usually post, but have at, we're

@@ -8,8 +8,7 @@ link: ''
 slug: matrix-runs-on-windows
 title: The Matrix Runs on Windows
 wordpress_id: 189
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

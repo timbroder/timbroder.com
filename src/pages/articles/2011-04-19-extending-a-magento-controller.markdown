@@ -8,8 +8,7 @@ link: ''
 slug: extending-a-magento-controller
 title: Extending a Magento Controller
 wordpress_id: 915
-categories:
-- Code
+category: Code
 tags:
 - magento
 - php

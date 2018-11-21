@@ -8,8 +8,7 @@ link: http://techcrunch.com/2014/04/30/facebook-launches-applinks-org-to-make-li
 slug: facebook-launches-applinks-to-make-deep-linking-between-apps-easier
 title: Facebook Launches AppLinks To Make Deep Linking Between Apps Easier
 wordpress_id: 1512
-categories:
-- Code
+category: Code
 ---
 
 > So with this new scheme, you just pass the app a web URL and if a compatible

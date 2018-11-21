@@ -8,8 +8,7 @@ link: ''
 slug: get-admin-url-for-django-model
 title: Get the admin url for a django model
 wordpress_id: 233
-categories:
-- Code
+category: Code
 ---
 
 Add this to your model to be able to get their admin change link from anywhere  

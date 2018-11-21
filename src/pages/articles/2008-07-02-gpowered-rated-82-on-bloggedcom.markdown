@@ -8,8 +8,7 @@ link: ''
 slug: gpowered-rated-82-on-bloggedcom
 title: gPowered Rated 8.2 on Blogged.com!
 wordpress_id: 143
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

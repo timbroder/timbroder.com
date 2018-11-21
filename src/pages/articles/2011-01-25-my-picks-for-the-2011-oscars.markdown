@@ -8,8 +8,7 @@ link: ''
 slug: my-picks-for-the-2011-oscars
 title: My picks for the 2011 Oscars
 wordpress_id: 786
-categories:
-- Random
+category: Random
 ---
 
 ## Best Supporting Actress

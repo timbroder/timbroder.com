@@ -8,8 +8,7 @@ link: ''
 slug: google-wave-as-project-collaboration
 title: Google Wave as a Project Collaboration Tool
 wordpress_id: 220
-categories:
-- Code
+category: Code
 ---
 
 I'm a'bloggin on the company blog! (Alexander Interactive) [Google Wave as a

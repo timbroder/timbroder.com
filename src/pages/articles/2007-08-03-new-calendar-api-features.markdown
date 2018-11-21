@@ -8,8 +8,7 @@ link: ''
 slug: new-calendar-api-features
 title: New Calendar API features
 wordpress_id: 28
-categories:
-- Code
+category: Code
 tags:
 - calendar
 - gdata

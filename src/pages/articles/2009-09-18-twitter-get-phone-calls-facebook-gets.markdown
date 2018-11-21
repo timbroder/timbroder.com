@@ -8,8 +8,7 @@ link: ''
 slug: twitter-get-phone-calls-facebook-gets
 title: Twitter get phone calls, Facebook gets voice chat
 wordpress_id: 215
-categories:
-- Code
+category: Code
 ---
 
 Twitter users on Thursday will, for the first time, be able to [make voice

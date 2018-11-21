@@ -8,8 +8,7 @@ link: ''
 slug: want-to-output-the-full-xml-config-magento-is-running
 title: Want to output the full xml config Magento is running?
 wordpress_id: 813
-categories:
-- Code
+category: Code
 tags:
 - magento
 - php

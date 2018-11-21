@@ -8,8 +8,7 @@ link: ''
 slug: mashup-of-week
 title: Mashup of the Week
 wordpress_id: 94
-categories:
-- Code
+category: Code
 tags:
 - Mashups
 ---

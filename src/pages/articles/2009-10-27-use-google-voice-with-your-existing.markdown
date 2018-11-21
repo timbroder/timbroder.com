@@ -8,8 +8,7 @@ link: ''
 slug: use-google-voice-with-your-existing
 title: Use Google Voice with your existing number
 wordpress_id: 219
-categories:
-- Code
+category: Code
 ---
 
 WOOHOO!!!! It's working on my verizon blackberry!  

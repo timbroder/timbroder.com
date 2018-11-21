@@ -8,8 +8,7 @@ link: ''
 slug: inessential-com-why-care-about-30000-notes
 title: 'inessential.com: Why Care About 30,000 Notes?'
 wordpress_id: 1371
-categories:
-- Code
+category: Code
 ---
 
 Brent Simmons posts some interesting philosophy on sample data sizes. I'm

@@ -8,8 +8,7 @@ link: ''
 slug: google-website-optimizer-is-out-of-beta
 title: Google Website Optimizer is out of beta
 wordpress_id: 107
-categories:
-- Code
+category: Code
 ---
 
 Google's [Website Optimizer](http://www.google.com/websiteoptimizer) is out of

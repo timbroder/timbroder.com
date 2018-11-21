@@ -8,8 +8,7 @@ link: ''
 slug: facebook-creepy-piece-sht
 title: Facebook, you creepy piece of sh*t
 wordpress_id: 1732
-categories:
-- Commentary
+category: Commentary
 ---
 
 I debated posting this for a few days. I’m deciding to because when I was

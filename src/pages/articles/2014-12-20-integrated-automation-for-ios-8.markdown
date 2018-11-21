@@ -8,8 +8,7 @@ link: http://www.macstories.net/reviews/workflow-review-integrated-automation-fo
 slug: integrated-automation-for-ios-8
 title: Integrated Automation for iOS 8
 wordpress_id: 1737
-categories:
-- Commentary
+category: Commentary
 ---
 
 I can't wait to play with

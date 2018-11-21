@@ -8,8 +8,7 @@ link: ''
 slug: what-do-you-listen-to-podcast-edition
 title: What do you listen to? (podcast edition)
 wordpress_id: 1063
-categories:
-- Code
+category: Code
 tags:
 - podcasts
 ---

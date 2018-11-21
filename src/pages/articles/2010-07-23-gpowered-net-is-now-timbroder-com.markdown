@@ -8,8 +8,7 @@ link: ''
 slug: gpowered-net-is-now-timbroder-com
 title: gpowered.net is now timbroder.com
 wordpress_id: 575
-categories:
-- Code
+category: Code
 tags:
 - aiaio
 - blogger

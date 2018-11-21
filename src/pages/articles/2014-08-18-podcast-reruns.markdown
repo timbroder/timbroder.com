@@ -8,8 +8,7 @@ link: ''
 slug: podcast-reruns
 title: Podcast Reruns
 wordpress_id: 1630
-categories:
-- Code
+category: Code
 tags:
 - podcasts
 - yahoo pipes

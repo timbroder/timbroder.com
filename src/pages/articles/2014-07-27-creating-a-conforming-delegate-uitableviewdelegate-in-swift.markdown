@@ -8,8 +8,7 @@ link: ''
 slug: creating-a-conforming-delegate-uitableviewdelegate-in-swift
 title: Creating a conforming delegate (UITableViewDelegate) in Swift
 wordpress_id: 1606
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

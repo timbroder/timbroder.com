@@ -8,8 +8,7 @@ link: ''
 slug: parsing-sentences-string-swift
 title: Parsing sentences from a String in Swift
 wordpress_id: 1582
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

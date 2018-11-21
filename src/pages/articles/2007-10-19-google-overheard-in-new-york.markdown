@@ -8,8 +8,7 @@ link: ''
 slug: google-overheard-in-new-york
 title: Google Overheard in New York
 wordpress_id: 92
-categories:
-- Code
+category: Code
 ---
 
 If you haven't heard about [Overheard in New

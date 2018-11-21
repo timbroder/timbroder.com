@@ -8,8 +8,7 @@ link: ''
 slug: uitapgesturerecognizer-in-swift
 title: UITapGestureRecognizer in Swift
 wordpress_id: 1614
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

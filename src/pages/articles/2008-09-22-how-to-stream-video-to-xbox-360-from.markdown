@@ -8,8 +8,7 @@ link: ''
 slug: how-to-stream-video-to-xbox-360-from
 title: How to stream video to an Xbox 360 from linux
 wordpress_id: 170
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - ubuntu

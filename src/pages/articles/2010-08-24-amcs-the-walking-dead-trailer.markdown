@@ -8,8 +8,7 @@ link: ''
 slug: amcs-the-walking-dead-trailer
 title: AMC'S THE WALKING DEAD Trailer
 wordpress_id: 614
-categories:
-- Comics
+category: Comics
 tags:
 - Walking Dead
 ---

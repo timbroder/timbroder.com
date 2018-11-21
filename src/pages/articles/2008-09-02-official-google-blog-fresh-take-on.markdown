@@ -8,8 +8,7 @@ link: ''
 slug: official-google-blog-fresh-take-on
 title: 'Official Google Blog: A fresh take on the browser'
 wordpress_id: 152
-categories:
-- Code
+category: Code
 ---
 
 [Official Google Blog: A fresh take on the

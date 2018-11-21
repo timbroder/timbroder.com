@@ -8,8 +8,7 @@ link: http://www.alexanderinteractive.com/blog/2014/09/apple-pay-magento/
 slug: apple-pay-and-magento
 title: Apple Pay and Magento
 wordpress_id: 1735
-categories:
-- Code
+category: Code
 tags:
 - applepay
 - magento

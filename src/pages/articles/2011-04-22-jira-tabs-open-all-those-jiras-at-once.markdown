@@ -8,8 +8,7 @@ link: ''
 slug: jira-tabs-open-all-those-jiras-at-once
 title: 'Jira Tabs: Open all those Jira''s at once! '
 wordpress_id: 926
-categories:
-- Code
+category: Code
 tags:
 - javascript
 - JIRA

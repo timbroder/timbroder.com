@@ -8,8 +8,7 @@ link: ''
 slug: jump-higher
 title: Jump Higher
 wordpress_id: 879
-categories:
-- Crossfit
+category: Crossfit
 ---
 
 [![](http://img.youtube.com/vi/tPZdYboa-HY/0.jpg)](http://www.youtube.com/watch?v=tPZdYboa-HY)

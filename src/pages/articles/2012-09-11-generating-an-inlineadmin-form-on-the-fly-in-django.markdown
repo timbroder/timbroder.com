@@ -8,8 +8,7 @@ link: ''
 slug: generating-an-inlineadmin-form-on-the-fly-in-django
 title: Generating an InlineModelAdmin Form on the fly in Django
 wordpress_id: 1240
-categories:
-- Code
+category: Code
 tags:
 - django
 ---

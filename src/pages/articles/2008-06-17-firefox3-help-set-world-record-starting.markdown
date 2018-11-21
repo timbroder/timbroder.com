@@ -8,8 +8,7 @@ link: ''
 slug: firefox3-help-set-world-record-starting
 title: 'Firefox3: Help set a world record starting at 1pm EST'
 wordpress_id: 137
-categories:
-- Code
+category: Code
 ---
 
 [Do it](http://www.spreadfirefox.com/en-US/worldrecord/)

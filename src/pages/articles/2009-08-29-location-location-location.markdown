@@ -8,8 +8,7 @@ link: ''
 slug: location-location-location
 title: Location, Location, Location
 wordpress_id: 213
-categories:
-- Code
+category: Code
 ---
 
 This will be pretty cool when it comes out  

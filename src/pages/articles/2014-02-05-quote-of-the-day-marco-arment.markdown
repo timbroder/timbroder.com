@@ -8,8 +8,7 @@ link: http://www.marco.org/2014/01/26/long-form
 slug: quote-of-the-day-marco-arment
 title: 'Quote of the Day: Marco Arment'
 wordpress_id: 1418
-categories:
-- Code
+category: Code
 ---
 
 > “Emphasizing and rewarding length over quality results in worse writing and

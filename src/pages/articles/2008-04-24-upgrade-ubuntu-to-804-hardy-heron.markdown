@@ -8,8 +8,7 @@ link: ''
 slug: upgrade-ubuntu-to-804-hardy-heron
 title: Upgrade Ubuntu to 8.04 Hardy Heron
 wordpress_id: 109
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - ubuntu

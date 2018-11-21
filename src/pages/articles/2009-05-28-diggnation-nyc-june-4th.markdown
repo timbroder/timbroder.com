@@ -8,8 +8,7 @@ link: ''
 slug: diggnation-nyc-june-4th
 title: Diggnation NYC, June 4th!
 wordpress_id: 204
-categories:
-- Code
+category: Code
 tags:
 - digg
 ---

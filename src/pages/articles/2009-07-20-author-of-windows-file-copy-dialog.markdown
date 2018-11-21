@@ -8,8 +8,7 @@ link: ''
 slug: author-of-windows-file-copy-dialog
 title: The author of the Windows file copy dialog visits some friends
 wordpress_id: 208
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 - windows

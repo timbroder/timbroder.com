@@ -8,8 +8,7 @@ link: ''
 slug: blogger-resumes-service
 title: Blogger resumes service
 wordpress_id: 42
-categories:
-- Code
+category: Code
 tags:
 - blogger
 ---

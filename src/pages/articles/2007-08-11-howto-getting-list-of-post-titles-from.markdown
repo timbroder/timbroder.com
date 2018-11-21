@@ -8,8 +8,7 @@ link: ''
 slug: howto-getting-list-of-post-titles-from
 title: 'HOWTO: Getting a list of post titles from blogger (Python)'
 wordpress_id: 34
-categories:
-- Code
+category: Code
 tags:
 - blogger
 - HOWTO

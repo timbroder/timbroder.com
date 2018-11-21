@@ -6,8 +6,7 @@ layout: post
 link: ''
 slug: trying-to-mock-a-self-booting-laravel-model-trait
 title: Trying to Mock a Self Booting Laravel Model Trait
-categories:
-- Code
+category: Code
 tags:
 - laravel
 - TDD

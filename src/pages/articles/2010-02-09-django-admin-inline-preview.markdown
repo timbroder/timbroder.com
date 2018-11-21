@@ -8,8 +8,7 @@ link: ''
 slug: django-admin-inline-preview
 title: Django Admin inline preview
 wordpress_id: 234
-categories:
-- Code
+category: Code
 ---
 
 Update: This code lives on [Github](https://github.com/broderboy/django-admin-preview)

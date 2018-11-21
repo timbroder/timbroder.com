@@ -8,8 +8,7 @@ link: ''
 slug: poking-angularjs-model-within-iframe
 title: Poking at an AngularJS model from within an iFrame
 wordpress_id: 1517
-categories:
-- Code
+category: Code
 tags:
 - angularjs
 ---

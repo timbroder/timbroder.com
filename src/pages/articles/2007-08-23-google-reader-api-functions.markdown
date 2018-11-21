@@ -8,8 +8,7 @@ link: ''
 slug: google-reader-api-functions
 title: 'HOWTO: Google Reader API Functions'
 wordpress_id: 44
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - python

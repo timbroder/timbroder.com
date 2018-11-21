@@ -8,8 +8,7 @@ link: https://developer.apple.com/swift/blog/
 slug: apples-swift-blog
 title: Apple's Swift Blog
 wordpress_id: 1579
-categories:
-- Code
+category: Code
 ---
 
 > This new blog will bring you a behind-the-scenes look into the design of the

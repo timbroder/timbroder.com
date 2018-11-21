@@ -8,8 +8,7 @@ link: ''
 slug: running-mongodb-as-a-service-on-windows
 title: Running Mongodb as a service on windows
 wordpress_id: 850
-categories:
-- Code
+category: Code
 tags:
 - mongodb
 ---

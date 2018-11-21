@@ -8,8 +8,7 @@ link: http://hypercritical.co/2014/01/14/the-road-to-geekdom
 slug: hypercritical-the-road-to-geekdom
 title: 'Hypercritical: The Road to Geekdom'
 wordpress_id: 1408
-categories:
-- Code
+category: Code
 ---
 
 > Geekdom is not a club; it’s a destination, open to anyone who wants to put

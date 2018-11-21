@@ -8,8 +8,7 @@ link: ''
 slug: sneak-some-advanced-logic-into-django
 title: Sneak some advanced logic into a Django template
 wordpress_id: 226
-categories:
-- Code
+category: Code
 ---
 
 I was adding on an app to a Django project at work where I was overriding an

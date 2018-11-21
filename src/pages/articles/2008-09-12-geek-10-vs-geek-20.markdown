@@ -8,8 +8,7 @@ link: ''
 slug: geek-10-vs-geek-20
 title: Geek 1.0 vs. Geek 2.0
 wordpress_id: 162
-categories:
-- Code
+category: Code
 ---
 
 [![](http://farm4.static.flickr.com/3044/2780453718_16d3121d13_o.gif)](http://spotonce.com/story.php?title=Geek_1-0_vs-_Geek_2-0__Pic)

@@ -8,8 +8,7 @@ link: ''
 slug: google-books-my-library-vs-librarything
 title: Google Books “My Library” Vs. LibraryThing vs. Shelfari
 wordpress_id: 67
-categories:
-- Code
+category: Code
 ---
 
 I love to read. I always have and I probably always will. When people ask me

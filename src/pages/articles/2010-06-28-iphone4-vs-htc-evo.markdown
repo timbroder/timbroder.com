@@ -8,8 +8,7 @@ link: ''
 slug: iphone4-vs-htc-evo
 title: iPhone4 vs HTC Evo
 wordpress_id: 547
-categories:
-- Code
+category: Code
 tags:
 - Android
 - iphone

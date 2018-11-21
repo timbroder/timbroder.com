@@ -8,8 +8,7 @@ link: ''
 slug: ny-state-fair-embedded-map
 title: NY State Fair Embedded Map
 wordpress_id: 53
-categories:
-- Code
+category: Code
 ---
 
 It's really, really easy to put maps onto any site or blog now using [Embedded

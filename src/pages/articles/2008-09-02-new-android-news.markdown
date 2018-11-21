@@ -8,8 +8,7 @@ link: ''
 slug: new-android-news
 title: New Android news
 wordpress_id: 154
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

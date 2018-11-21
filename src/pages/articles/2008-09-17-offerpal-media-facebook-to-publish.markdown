@@ -8,8 +8,7 @@ link: ''
 slug: offerpal-media-facebook-to-publish
 title: Offerpal Media Facebook to Publish Event Directory for Search Engines
 wordpress_id: 166
-categories:
-- Code
+category: Code
 ---
 
 Things have changed slightly since I [last](http://blog.gpowered.net/2008/05/why-microsoft-will-buy-facebook-and.html) wrote about this, but for the

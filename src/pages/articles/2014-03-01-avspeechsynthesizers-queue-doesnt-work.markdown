@@ -8,8 +8,7 @@ link: ''
 slug: avspeechsynthesizers-queue-doesnt-work
 title: AVSpeechSynthesizer's queue doesn't work
 wordpress_id: 1434
-categories:
-- Code
+category: Code
 tags:
 - AVSpeechSynthesizer
 - CoreData

@@ -8,8 +8,7 @@ link: ''
 slug: ios-multiple-lines-of-text-in-a-uitableviewcell
 title: 'iOS: Multiple Lines of Text in a UITableViewCell'
 wordpress_id: 1237
-categories:
-- Code
+category: Code
 tags:
 - ios
 ---

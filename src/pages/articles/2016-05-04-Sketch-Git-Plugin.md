@@ -8,8 +8,7 @@ slug: sketch-git-plugin
 
 title: Sketch Git Plugin
 
-categories:
-- Code
+category: Code
 tags:
 - sketch
 - git

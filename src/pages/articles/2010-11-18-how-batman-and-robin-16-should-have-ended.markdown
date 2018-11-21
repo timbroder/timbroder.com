@@ -8,8 +8,7 @@ link: ''
 slug: how-batman-and-robin-16-should-have-ended
 title: 'How Batman and Robin #16 should have ended'
 wordpress_id: 683
-categories:
-- Comics
+category: Comics
 tags:
 - Batman
 - Batman and Robin

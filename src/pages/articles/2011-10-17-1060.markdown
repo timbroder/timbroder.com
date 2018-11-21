@@ -8,8 +8,7 @@ link: ''
 slug: '1060'
 title: Creating a stateless request in Magento
 wordpress_id: 1060
-categories:
-- Code
+category: Code
 tags:
 - magento
 - php

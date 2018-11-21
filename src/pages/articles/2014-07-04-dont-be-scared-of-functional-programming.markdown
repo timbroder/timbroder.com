@@ -8,8 +8,7 @@ link: http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-pr
 slug: dont-be-scared-of-functional-programming
 title: Don't Be Scared Of Functional Programming
 wordpress_id: 1562
-categories:
-- Code
+category: Code
 ---
 
 This [article](http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-

@@ -8,8 +8,7 @@ link: ''
 slug: how-to-tell-if-its-html5
 title: How to tell if it's HTML5
 wordpress_id: 1228
-categories:
-- Code
+category: Code
 ---
 
 ![](/images/2012/09/jxBZG.jpg)

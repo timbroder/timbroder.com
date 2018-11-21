@@ -8,8 +8,7 @@ link: ''
 slug: get-18-gigs-on-a-free-dropbox-account-for-10-20
 title: Get 18+ Gigs on a Free Dropbox account for $10-$20
 wordpress_id: 1205
-categories:
-- Code
+category: Code
 tags:
 - adwords
 - dropbox

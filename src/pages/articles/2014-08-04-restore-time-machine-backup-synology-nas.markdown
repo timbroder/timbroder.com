@@ -8,8 +8,7 @@ link: ''
 slug: restore-time-machine-backup-synology-nas
 title: How to Restore a Time Machine Backup From a Synology NAS
 wordpress_id: 1649
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 ---

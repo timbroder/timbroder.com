@@ -8,8 +8,7 @@ link: ''
 slug: domain
 title: domain!
 wordpress_id: 27
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

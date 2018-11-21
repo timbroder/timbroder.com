@@ -8,8 +8,7 @@ link: http://inessential.com/2014/02/04/azure_takes_over
 slug: inessential-com-azure-takes
 title: 'inessential.com: Azure Takes Over'
 wordpress_id: 1474
-categories:
-- Code
+category: Code
 ---
 
 > There’s still a lot of the old Microsoft there, the Windows, Office,

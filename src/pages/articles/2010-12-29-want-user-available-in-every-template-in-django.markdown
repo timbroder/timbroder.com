@@ -8,8 +8,7 @@ link: ''
 slug: want-user-available-in-every-template-in-django
 title: Want user available in every template in Django?
 wordpress_id: 704
-categories:
-- Code
+category: Code
 tags:
 - django
 - HOWTO

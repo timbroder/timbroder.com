@@ -8,8 +8,7 @@ link: ''
 slug: googles-javascript-chrome-experiments
 title: Google’s JavaScript/ Chrome Experiments Showcase
 wordpress_id: 196
-categories:
-- Code
+category: Code
 tags:
 - chrome
 - javascript

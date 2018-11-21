@@ -8,8 +8,7 @@ link: ''
 slug: non-google-appengine-hosting
 title: Non Google AppEngine hosting
 wordpress_id: 106
-categories:
-- Code
+category: Code
 tags:
 - appengine
 ---

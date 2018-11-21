@@ -8,8 +8,7 @@ slug: feb-23-was-a-security-day
 
 title: Feb 23 was a security day
 
-categories:
-- Code
+category: Code
 tags:
 - security
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: howto-get-blogger-feeds-using-python
 title: 'HOWTO: Displaying Blogger feeds with Python'
 wordpress_id: 24
-categories:
-- Code
+category: Code
 tags:
 - blogger
 - gdata

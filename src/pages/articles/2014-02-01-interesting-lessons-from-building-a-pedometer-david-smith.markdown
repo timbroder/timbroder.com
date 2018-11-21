@@ -8,8 +8,7 @@ link: http://david-smith.org/blog/2014/01/31/interesting-lessons-from-building-a
 slug: interesting-lessons-from-building-a-pedometer-david-smith
 title: Interesting Lessons from Building a Pedometer - David Smith
 wordpress_id: 1411
-categories:
-- Code
+category: Code
 ---
 
 > It is a rare thing for a software developer to know that what I’m building

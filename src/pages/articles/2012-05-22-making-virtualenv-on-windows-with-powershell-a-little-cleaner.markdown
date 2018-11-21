@@ -8,8 +8,7 @@ link: ''
 slug: making-virtualenv-on-windows-with-powershell-a-little-cleaner
 title: Making virtualenv on windows with powershell a little cleaner
 wordpress_id: 1090
-categories:
-- Code
+category: Code
 tags:
 - django
 - powershell

@@ -8,8 +8,7 @@ link: ''
 slug: why-microsoft-will-buy-facebook-and
 title: Why Microsoft will buy Facebook and keep it closed
 wordpress_id: 121
-categories:
-- Code
+category: Code
 ---
 
 Normally I don't just link to other posts, but Scoble's [latest

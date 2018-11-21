@@ -8,8 +8,7 @@ link: ''
 slug: slight-delay-in-next-howto
 title: Slight delay in next HOWTO
 wordpress_id: 62
-categories:
-- Code
+category: Code
 ---
 
 I was trying very hard to get the next HOWTO online last night. I got it about

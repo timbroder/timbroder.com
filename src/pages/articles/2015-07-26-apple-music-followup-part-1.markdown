@@ -2,8 +2,7 @@
 layout: post
 title: 'Apple Music Followup: Part 1'
 date: 2015-07-26 21:55
-categories:
-- Commentary
+category: Commentary
 tags:
 - apple
 - music

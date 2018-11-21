@@ -8,8 +8,7 @@ link: ''
 slug: quick-docs-api-example-python
 title: Quick Docs Api Example (python)
 wordpress_id: 33
-categories:
-- Code
+category: Code
 tags:
 - Docs Spreadsheets
 - gdata

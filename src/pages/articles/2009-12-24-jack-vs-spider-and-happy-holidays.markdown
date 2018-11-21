@@ -8,8 +8,7 @@ link: ''
 slug: jack-vs-spider-and-happy-holidays
 title: Jack Vs Spider and Happy Holidays
 wordpress_id: 229
-categories:
-- Code
+category: Code
 tags:
 - Ai
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: got-my-google-appengine-account
 title: Got my Google appengine account!
 wordpress_id: 118
-categories:
-- Code
+category: Code
 tags:
 - appengine
 - gpowered.net

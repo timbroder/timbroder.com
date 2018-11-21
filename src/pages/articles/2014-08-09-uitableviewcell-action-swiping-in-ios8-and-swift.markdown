@@ -8,8 +8,7 @@ link: ''
 slug: uitableviewcell-action-swiping-in-ios8-and-swift
 title: UITableViewCell Action Swiping in iOS8 and Swift
 wordpress_id: 1671
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: breaking-them-in
 title: Breaking them in
 wordpress_id: 779
-categories:
-- Crossfit
+category: Crossfit
 tags:
 - Vibrams
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: new-blog-address_23
 title: New Blog Address
 wordpress_id: 95
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

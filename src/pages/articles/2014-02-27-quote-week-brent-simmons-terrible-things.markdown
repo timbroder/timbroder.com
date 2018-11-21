@@ -8,8 +8,7 @@ link: http://inessential.com/2014/02/15/vesper_sync_diary_8_the_problem_of_un
 slug: quote-week-brent-simmons-terrible-things
 title: 'Quote of the week: Brent Simmons on terrible things'
 wordpress_id: 1431
-categories:
-- Code
+category: Code
 ---
 
 > I have to design as if terrible things could happen — because by doing so I

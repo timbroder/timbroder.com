@@ -8,8 +8,7 @@ link: ''
 slug: google-reader-adds-search-box
 title: Google Reader adds Search Box!!
 wordpress_id: 59
-categories:
-- Code
+category: Code
 tags:
 - reader
 ---

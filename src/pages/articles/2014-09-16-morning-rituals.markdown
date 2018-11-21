@@ -8,8 +8,7 @@ link: ''
 slug: morning-rituals
 title: On Morning Rituals
 wordpress_id: 1685
-categories:
-- Code
+category: Code
 tags:
 - coffee
 - sleep

@@ -8,8 +8,7 @@ link: ''
 slug: want-to-dump-every-sql-query-magento-runs
 title: Want to dump every SQL query Magento runs?
 wordpress_id: 697
-categories:
-- Code
+category: Code
 tags:
 - magento
 - php

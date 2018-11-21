@@ -8,8 +8,7 @@ link: ''
 slug: build-2014
 title: Build 2014
 wordpress_id: 1500
-categories:
-- Code
+category: Code
 ---
 
 [Justin](http://carpeaqua.com/2014/04/07/build-2014/) goes over his experience

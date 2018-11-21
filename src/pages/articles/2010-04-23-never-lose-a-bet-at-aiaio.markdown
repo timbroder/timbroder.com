@@ -8,8 +8,7 @@ link: ''
 slug: never-lose-a-bet-at-aiaio
 title: 'Never lose a bet at #aiaio'
 wordpress_id: 267
-categories:
-- Random
+category: Random
 ---
 
 ![](/images/2010/04/wpid-2010-04-21-14.15.53.jpg)

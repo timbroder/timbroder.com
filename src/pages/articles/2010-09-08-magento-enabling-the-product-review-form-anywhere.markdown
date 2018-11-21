@@ -8,8 +8,7 @@ link: ''
 slug: magento-enabling-the-product-review-form-anywhere
 title: 'Magento:: Enabling the Product Review form anywhere'
 wordpress_id: 647
-categories:
-- Code
+category: Code
 tags:
 - magento
 - php

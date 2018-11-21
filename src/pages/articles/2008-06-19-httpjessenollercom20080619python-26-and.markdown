@@ -8,8 +8,7 @@ link: ''
 slug: httpjessenollercom20080619python-26-and
 title: Python 2.6 and 3.0 Beta 1 Released.
 wordpress_id: 139
-categories:
-- Code
+category: Code
 tags:
 - python
 ---

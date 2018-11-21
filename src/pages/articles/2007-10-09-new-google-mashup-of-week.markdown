@@ -8,8 +8,7 @@ link: ''
 slug: new-google-mashup-of-week
 title: NEW! Google Mashup of the Week
 wordpress_id: 83
-categories:
-- Code
+category: Code
 tags:
 - Mashups
 ---

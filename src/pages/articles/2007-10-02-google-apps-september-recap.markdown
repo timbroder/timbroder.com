@@ -8,8 +8,7 @@ link: ''
 slug: google-apps-september-recap
 title: Google Apps September recap
 wordpress_id: 77
-categories:
-- Code
+category: Code
 ---
 
 Its definitely been a busy month for Google Apps with the launch of

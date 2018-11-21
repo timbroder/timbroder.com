@@ -8,8 +8,7 @@ link: http://techcrunch.com/2014/03/23/layout-in-flipboard-for-web-and-windows/
 slug: automating-layouts-bring-flipboards-magazine-style-to-web-and-windows
 title: Automating Layouts Bring Flipboard’s Magazine Style To Web And Windows
 wordpress_id: 1463
-categories:
-- Code
+category: Code
 ---
 
 > We automate the whole process of layout design and editing by slotting your

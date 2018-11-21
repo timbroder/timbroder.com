@@ -8,8 +8,7 @@ link: ''
 slug: fake-stan-lee-vs-comic-con-2009
 title: 'Fake Stan Lee vs. Comic Con 2009 '
 wordpress_id: 588
-categories:
-- Comics
+category: Comics
 tags:
 - ComicCon
 - Stan Lee

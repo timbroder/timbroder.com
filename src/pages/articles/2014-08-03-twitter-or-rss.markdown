@@ -8,8 +8,7 @@ link: http://www.manton.org/2014/05/twitter_or_rss.html
 slug: twitter-or-rss
 title: Twitter or RSS
 wordpress_id: 1641
-categories:
-- Commentary
+category: Commentary
 ---
 
 > If you had to choose between only reading Twitter or only reading weblogs,

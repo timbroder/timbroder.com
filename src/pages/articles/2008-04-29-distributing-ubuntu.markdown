@@ -8,8 +8,7 @@ link: ''
 slug: distributing-ubuntu
 title: Distributing Ubuntu
 wordpress_id: 114
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: quick-google-authentication-in-php
 title: Quick Google Authentication in PHP
 wordpress_id: 205
-categories:
-- Code
+category: Code
 tags:
 - gdata
 - HOWTO

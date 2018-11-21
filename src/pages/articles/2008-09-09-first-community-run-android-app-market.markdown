@@ -8,8 +8,7 @@ link: ''
 slug: first-community-run-android-app-market
 title: First Community run Android App Market goes live
 wordpress_id: 161
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

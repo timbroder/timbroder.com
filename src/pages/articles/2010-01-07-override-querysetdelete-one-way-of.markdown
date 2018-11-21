@@ -8,8 +8,7 @@ link: ''
 slug: override-querysetdelete-one-way-of
 title: Override QuerySet.delete() (one way of preventing cascading deletes)
 wordpress_id: 231
-categories:
-- Code
+category: Code
 ---
 
 We needed to override the default QuerySet delete function to deal with a

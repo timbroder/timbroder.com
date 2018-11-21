@@ -8,8 +8,7 @@ link: http://www.devfactor.net/2014/12/30/2375-amazon-mistake/
 slug: my-2375-amazon-ec2-mistake
 title: My $2375 Amazon EC2 Mistake
 wordpress_id: 1742
-categories:
-- Commentary
+category: Commentary
 ---
 
 A word of warning: Know what your modules/extensions/pods/plugins are doing,

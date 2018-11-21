@@ -8,8 +8,7 @@ link: ''
 slug: send-to-tumblr-and-track-with-bitly
 title: Send To Tumblr And Track With Bitly Google Reader Custom Link
 wordpress_id: 211
-categories:
-- Code
+category: Code
 tags:
 - reader
 ---

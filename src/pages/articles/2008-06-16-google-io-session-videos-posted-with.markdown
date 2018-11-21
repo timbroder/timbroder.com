@@ -8,8 +8,7 @@ link: ''
 slug: google-io-session-videos-posted-with
 title: Google I/O session videos posted with slides
 wordpress_id: 136
-categories:
-- Code
+category: Code
 tags:
 - Android
 - appengine

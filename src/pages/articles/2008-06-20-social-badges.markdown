@@ -8,8 +8,7 @@ link: ''
 slug: social-badges
 title: Social Badges
 wordpress_id: 140
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 - socialgraph

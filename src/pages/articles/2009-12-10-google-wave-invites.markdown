@@ -8,8 +8,7 @@ link: ''
 slug: google-wave-invites
 title: Google Wave Invites
 wordpress_id: 224
-categories:
-- Code
+category: Code
 ---
 
 I have quite a few Google Wave invites left, if you would like one

@@ -8,8 +8,7 @@ link: ''
 slug: using-blogger-and-feedburner-sitemaps
 title: Using Blogger and Feedburner Sitemaps in Webmaster Tools
 wordpress_id: 68
-categories:
-- Code
+category: Code
 tags:
 - blogger
 ---

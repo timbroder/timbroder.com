@@ -8,8 +8,7 @@ link: ''
 slug: crossfit-2011-are-you-ready
 title: Crossfit 2011. Are you Ready?
 wordpress_id: 865
-categories:
-- Crossfit
+category: Crossfit
 ---
 
 [![](http://img.youtube.com/vi/xqbw6hZW91k/0.jpg)](http://www.youtube.com/watch?v=xqbw6hZW91k)

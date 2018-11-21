@@ -8,8 +8,7 @@ link: ''
 slug: twitter-recap-of-the-superbowl-halftime-show
 title: Twitter recap of the superbowl halftime show
 wordpress_id: 821
-categories:
-- Random
+category: Random
 ---
 
 Ok so, the superbowl halftime was just god awful

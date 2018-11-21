@@ -8,8 +8,7 @@ link: ''
 slug: huge-omelet-after-opt
 title: Huge omelet after OPT
 wordpress_id: 674
-categories:
-- Random
+category: Random
 ---
 
 ![image](/images/2010/10/wpid-

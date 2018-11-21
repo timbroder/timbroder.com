@@ -8,8 +8,7 @@ link: ''
 slug: gadgets-now-on-google-calendar
 title: Gadgets now on Google Calendar!
 wordpress_id: 39
-categories:
-- Code
+category: Code
 tags:
 - calendar
 - gadgets

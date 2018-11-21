@@ -8,8 +8,7 @@ link: ''
 slug: appengine-pricing-announced
 title: AppEngine Pricing announced
 wordpress_id: 124
-categories:
-- Code
+category: Code
 tags:
 - appengine
 ---

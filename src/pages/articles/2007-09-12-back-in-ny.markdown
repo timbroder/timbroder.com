@@ -8,8 +8,7 @@ link: ''
 slug: back-in-ny
 title: Back in NY!
 wordpress_id: 60
-categories:
-- Code
+category: Code
 ---
 
 Well as much fun as I had on the West Coast, there's no place like home and

@@ -8,8 +8,7 @@ link: ''
 slug: gpowerednet-update-diggs-and-howto-list
 title: 'gPowered.net update: Diggs and HOWTO list'
 wordpress_id: 58
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

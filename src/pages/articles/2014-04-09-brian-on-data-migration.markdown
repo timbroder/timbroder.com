@@ -8,8 +8,7 @@ link: http://inessential.com/2014/04/07/brian_on_data_migration
 slug: brian-on-data-migration
 title: Brian on Data Migration
 wordpress_id: 1498
-categories:
-- Code
+category: Code
 ---
 
 > Pretty much any migration can be done without stopping the world. You

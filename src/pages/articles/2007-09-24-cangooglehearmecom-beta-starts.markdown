@@ -8,8 +8,7 @@ link: ''
 slug: cangooglehearmecom-beta-starts
 title: CanGoogleHearMe.com beta starts
 wordpress_id: 70
-categories:
-- Code
+category: Code
 ---
 
 The beta for [CanGoogleHearMe.com](http://cangooglehearme.com/) has started

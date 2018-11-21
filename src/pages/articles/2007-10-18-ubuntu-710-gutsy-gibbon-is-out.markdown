@@ -8,8 +8,7 @@ link: ''
 slug: ubuntu-710-gutsy-gibbon-is-out
 title: Ubuntu 7.10 Gutsy Gibbon is out!
 wordpress_id: 91
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

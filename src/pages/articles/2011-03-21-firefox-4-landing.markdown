@@ -8,8 +8,7 @@ link: ''
 slug: firefox-4-landing
 title: Firefox 4 landing
 wordpress_id: 885
-categories:
-- Code
+category: Code
 tags:
 - firefox
 ---

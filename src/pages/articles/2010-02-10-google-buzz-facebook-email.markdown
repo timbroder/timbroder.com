@@ -8,8 +8,7 @@ link: ''
 slug: google-buzz-facebook-email
 title: Google Buzz? Facebook Email?
 wordpress_id: 235
-categories:
-- Code
+category: Code
 ---
 
 [Google Buzz](http://www.google.com/buzz) quetly came out, adds friendfeed

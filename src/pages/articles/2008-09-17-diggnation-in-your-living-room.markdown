@@ -8,8 +8,7 @@ link: ''
 slug: diggnation-in-your-living-room
 title: Diggnation in your living room!
 wordpress_id: 164
-categories:
-- Code
+category: Code
 tags:
 - digg
 ---

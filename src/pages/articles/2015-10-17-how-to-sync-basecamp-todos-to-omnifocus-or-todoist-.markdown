@@ -2,8 +2,7 @@
 layout: post
 title: How to Sync Basecamp Todos to Omnifocus or Todoist 
 date: 2015-10-17 11:54
-categories:
-- productivity
+category: productivity
 tags:
 - omnifocus
 - GTD

@@ -8,8 +8,7 @@ link: ''
 slug: sync-side-loaded-content-between-your-kindle-and-other-devices
 title: Sync side-loaded content between your Kindle and other devices
 wordpress_id: 1068
-categories:
-- Code
+category: Code
 tags:
 - Calibre
 - Kindle

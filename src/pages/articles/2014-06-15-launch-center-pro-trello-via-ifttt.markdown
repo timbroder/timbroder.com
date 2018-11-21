@@ -8,8 +8,7 @@ link: ''
 slug: launch-center-pro-trello-via-ifttt
 title: Launch Center Pro to Trello via IFTTT
 wordpress_id: 1558
-categories:
-- Code
+category: Code
 ---
 
 I previously [wrote](http://timbroder.com/2013/03/automating-adding-to-trello-on-ios.html) about automating adding to Trello from my phone using [Launch

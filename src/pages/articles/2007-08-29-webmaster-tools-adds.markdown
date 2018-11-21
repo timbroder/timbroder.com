@@ -8,8 +8,7 @@ link: ''
 slug: webmaster-tools-adds
 title: Webmaster tools adds Internationalization support
 wordpress_id: 49
-categories:
-- Code
+category: Code
 ---
 
 You can now register domains in [Webmaster

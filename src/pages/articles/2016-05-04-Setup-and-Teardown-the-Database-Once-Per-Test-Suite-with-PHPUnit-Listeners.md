@@ -8,8 +8,7 @@ slug: setup-and-teardown-the-database-once-per-test-suite-with-phpunit-listeners
 
 title: Setup and Teardown the Database Once Per Test Suite in PHPUnit 
 
-categories:
-- Code
+category: Code
 tags:
 - php
 - laravel

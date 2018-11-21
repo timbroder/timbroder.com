@@ -8,8 +8,7 @@ link: ''
 slug: playing-halo-3-on-imax
 title: Playing Halo 3 on IMAX!
 wordpress_id: 63
-categories:
-- Code
+category: Code
 ---
 
 Completely off topic, but I had to share. Last Thursday I had the amazing

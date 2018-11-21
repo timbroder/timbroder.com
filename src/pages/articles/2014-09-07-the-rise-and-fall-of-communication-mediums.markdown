@@ -8,8 +8,7 @@ link: None
 slug: the-rise-and-fall-of-communication-mediums
 title: The Rise and Fall of Communication Mediums
 wordpress_id: 1695
-categories:
-- Commentary
+category: Commentary
 ---
 
 [Brent Simmons](http://inessential.com/2014/08/27/waffle_on_social_media):

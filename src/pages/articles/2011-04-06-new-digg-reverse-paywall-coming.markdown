@@ -8,8 +8,7 @@ link: ''
 slug: new-digg-reverse-paywall-coming
 title: New Digg reverse paywall coming
 wordpress_id: 897
-categories:
-- Code
+category: Code
 tags:
 - digg
 ---

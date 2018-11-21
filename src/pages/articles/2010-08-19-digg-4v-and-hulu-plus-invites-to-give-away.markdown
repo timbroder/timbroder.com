@@ -8,8 +8,7 @@ link: ''
 slug: digg-4v-and-hulu-plus-invites-to-give-away
 title: Digg 4v and Hulu Plus invites to give away
 wordpress_id: 610
-categories:
-- Code
+category: Code
 tags:
 - digg
 - Hulu

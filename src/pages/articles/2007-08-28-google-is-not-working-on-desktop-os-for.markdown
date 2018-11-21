@@ -8,8 +8,7 @@ link: ''
 slug: google-is-not-working-on-desktop-os-for
 title: Google is NOT working on a desktop OS for the public!!
 wordpress_id: 48
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

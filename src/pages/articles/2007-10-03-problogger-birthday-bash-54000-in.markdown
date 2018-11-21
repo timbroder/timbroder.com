@@ -8,8 +8,7 @@ link: ''
 slug: problogger-birthday-bash-54000-in
 title: 'ProBlogger Birthday Bash: $54,000 in prizes!'
 wordpress_id: 78
-categories:
-- Code
+category: Code
 ---
 
 ProBlogger's Birthday is

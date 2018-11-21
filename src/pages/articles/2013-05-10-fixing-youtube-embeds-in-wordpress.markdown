@@ -8,8 +8,7 @@ link: ''
 slug: fixing-youtube-embeds-in-wordpress
 title: Fixing YouTube embeds in Wordpress
 wordpress_id: 1353
-categories:
-- Code
+category: Code
 tags:
 - php
 - wordpress

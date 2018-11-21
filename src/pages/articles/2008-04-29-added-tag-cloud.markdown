@@ -8,8 +8,7 @@ link: ''
 slug: added-tag-cloud
 title: Added a tag cloud
 wordpress_id: 115
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

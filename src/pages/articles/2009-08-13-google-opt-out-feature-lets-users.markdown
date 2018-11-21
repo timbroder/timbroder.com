@@ -8,8 +8,7 @@ link: ''
 slug: google-opt-out-feature-lets-users
 title: Google Opt Out Feature Lets Users Protect Privacy by Moving to Remote Village
 wordpress_id: 210
-categories:
-- Code
+category: Code
 ---
 
   

@@ -8,8 +8,7 @@ link: ''
 slug: google-maps-shows-interesting-street
 title: Google Maps F-Bombs street names!
 wordpress_id: 203
-categories:
-- Code
+category: Code
 tags:
 - maps
 ---

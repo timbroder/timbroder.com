@@ -8,8 +8,7 @@ link: ''
 slug: wolverine-or-2-batmen
 title: Wolverine? Or 2 Batmen?
 wordpress_id: 824
-categories:
-- Comics
+category: Comics
 ---
 
 ![](http://www.igeektrooper.com/wp-

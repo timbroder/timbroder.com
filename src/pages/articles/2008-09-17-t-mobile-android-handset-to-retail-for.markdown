@@ -8,8 +8,7 @@ link: ''
 slug: t-mobile-android-handset-to-retail-for
 title: T-Mobile Android handset to retail for $199
 wordpress_id: 167
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

@@ -2,8 +2,7 @@
 layout: post
 title: Using Omnifocus as a Honey-Do App
 date: 2015-10-01 12:40
-categories:
-- Productivity
+category: Productivity
 tags:
 - OmniFocus
 - kids

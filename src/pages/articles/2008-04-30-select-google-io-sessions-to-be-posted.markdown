@@ -8,8 +8,7 @@ link: ''
 slug: select-google-io-sessions-to-be-posted
 title: Select Google I/O sessions to be posted online
 wordpress_id: 116
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

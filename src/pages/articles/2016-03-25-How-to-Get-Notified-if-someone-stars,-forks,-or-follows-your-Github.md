@@ -6,8 +6,7 @@ layout: post
 link: ''
 slug: how-to-get-notified-if-someone-stars,-forks,-or-follows-your-github
 title: How to Get Notified if someone stars, forks, or follows your Github
-categories:
-- Code
+category: Code
 tags:
 - github
 - git

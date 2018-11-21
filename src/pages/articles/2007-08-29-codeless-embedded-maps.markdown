@@ -8,8 +8,7 @@ link: ''
 slug: codeless-embedded-maps
 title: Codeless Embedded Maps
 wordpress_id: 52
-categories:
-- Code
+category: Code
 ---
 
 Google Maps released [Embeddable Maps](http://google-latlong.blogspot.com/2007/08/youtube-style-embeddable-maps_21.html). It's as

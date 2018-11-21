@@ -8,8 +8,7 @@ link: http://shawnblanc.net/2014/01/poster-url-schemes/
 slug: my-url-schemes-for-posting-links-from-my-iphone-and-ipad-using-poster
 title: My URL Schemes for Posting Links From My iPhone and iPad Using Poster
 wordpress_id: 1393
-categories:
-- Code
+category: Code
 tags:
 - instapaper
 ---

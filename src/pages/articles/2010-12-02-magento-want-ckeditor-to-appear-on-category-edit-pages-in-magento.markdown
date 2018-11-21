@@ -8,8 +8,7 @@ link: ''
 slug: magento-want-ckeditor-to-appear-on-category-edit-pages-in-magento
 title: 'Magento: Want CKEditor to appear on Category edit pages in Magento?'
 wordpress_id: 694
-categories:
-- Code
+category: Code
 tags:
 - ajax
 - CKEditor

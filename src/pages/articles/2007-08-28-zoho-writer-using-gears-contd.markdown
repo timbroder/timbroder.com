@@ -8,8 +8,7 @@ link: ''
 slug: zoho-writer-using-gears-contd
 title: Zoho Writer using Gears (cont'd)
 wordpress_id: 45
-categories:
-- Code
+category: Code
 tags:
 - Docs Spreadsheets
 - gears

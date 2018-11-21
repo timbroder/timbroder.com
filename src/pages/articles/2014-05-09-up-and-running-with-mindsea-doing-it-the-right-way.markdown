@@ -8,8 +8,7 @@ link: http://www.mindsea.com/2014/04/up-and-running-with-mindsea-doing-it-the-ri
 slug: up-and-running-with-mindsea-doing-it-the-right-way
 title: 'Up and Running with MindSea: Doing it the Right Way'
 wordpress_id: 1524
-categories:
-- Code
+category: Code
 ---
 
 > I once worked with a company that told me if just two lines of code are

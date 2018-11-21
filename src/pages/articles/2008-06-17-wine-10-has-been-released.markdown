@@ -8,8 +8,7 @@ link: ''
 slug: wine-10-has-been-released
 title: Wine 1.0 has been released
 wordpress_id: 138
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

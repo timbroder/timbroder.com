@@ -8,8 +8,7 @@ link: http://tekside.net/iphonaddict/2014/9/23/a-tale-of-two-iphones
 slug: a-tale-of-two-iphones
 title: A Tale of Two iPhones
 wordpress_id: 1716
-categories:
-- Code
+category: Code
 ---
 
 I wrote up my thoughts on picking a new phone over on [the Tekside

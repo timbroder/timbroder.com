@@ -8,8 +8,7 @@ link: ''
 slug: t-mobile-android-slated-for-oct-13th
 title: T-Mobile Android slated for Oct 13th
 wordpress_id: 149
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

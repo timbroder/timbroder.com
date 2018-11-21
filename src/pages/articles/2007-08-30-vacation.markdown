@@ -8,8 +8,7 @@ link: ''
 slug: vacation
 title: Vacation!
 wordpress_id: 56
-categories:
-- Code
+category: Code
 ---
 
 Hi All,  

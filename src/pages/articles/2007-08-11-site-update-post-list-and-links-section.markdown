@@ -8,8 +8,7 @@ link: ''
 slug: site-update-post-list-and-links-section
 title: 'Site Update: Post list and Links section'
 wordpress_id: 36
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

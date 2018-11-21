@@ -8,9 +8,7 @@ link: ''
 slug: skynet
 title: Skynet Becomes Self Aware Tonight
 wordpress_id: 918
-categories:
-- Code
-- Random
+category: Code
 tags:
 - skynet
 - Terminator

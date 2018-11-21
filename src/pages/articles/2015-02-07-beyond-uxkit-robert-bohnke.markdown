@@ -8,8 +8,7 @@ link: http://robb.is/thinking-about/beyond-uxkit/
 slug: beyond-uxkit-robert-bohnke
 title: Beyond UXKit - Robert Böhnke
 wordpress_id: 1757
-categories:
-- Commentary
+category: Commentary
 ---
 
 Robert Böhnke wrote a good [piece](http://robb.is/thinking-about/beyond-

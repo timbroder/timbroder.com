@@ -8,8 +8,7 @@ link: http://arstechnica.com/security/2014/01/how-i-lost-my-50000-twitter-userna
 slug: how-i-lost-my-50000-twitter-username
 title: How I lost my $50,000 Twitter username
 wordpress_id: 1406
-categories:
-- Code
+category: Code
 ---
 
 > I had a rare Twitter username, @N. Yep, just one letter. I’ve been offered

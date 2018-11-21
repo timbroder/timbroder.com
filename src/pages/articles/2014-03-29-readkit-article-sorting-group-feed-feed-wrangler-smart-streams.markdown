@@ -8,8 +8,7 @@ link: http://www.leancrew.com/all-this/2014/02/readkit-article-sorting/
 slug: readkit-article-sorting-group-feed-feed-wrangler-smart-streams
 title: 'ReadKit article sorting: group by feed in Feed Wrangler smart streams'
 wordpress_id: 1472
-categories:
-- Code
+category: Code
 ---
 
 > I upgraded to Version 2.4 of ReadKit the other day and found my new

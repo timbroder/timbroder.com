@@ -8,8 +8,7 @@ link: ''
 slug: lazy-bum
 title: Lazy bum
 wordpress_id: 303
-categories:
-- Random
+category: Random
 tags:
 - aiaio
 ---

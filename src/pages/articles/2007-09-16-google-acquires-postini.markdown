@@ -8,8 +8,7 @@ link: ''
 slug: google-acquires-postini
 title: Google acquires Postini
 wordpress_id: 65
-categories:
-- Code
+category: Code
 ---
 
 Google has acquired [Postini](http://www.postini.com/index.php) to better

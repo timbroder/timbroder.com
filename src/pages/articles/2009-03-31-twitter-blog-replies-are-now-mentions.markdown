@@ -8,8 +8,7 @@ link: ''
 slug: twitter-blog-replies-are-now-mentions
 title: 'Twitter Blog: Replies Are Now Mentions'
 wordpress_id: 198
-categories:
-- Code
+category: Code
 ---
 
 [Twitter Blog: Replies Are Now Mentions](http://blog.twitter.com/2009/03/replies-are-now-mentions.html) Hopefully this is a step towards official

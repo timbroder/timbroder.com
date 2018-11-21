@@ -8,8 +8,7 @@ link: http://tekside.net/iphonaddict/2015/1/11/games-i-was-addicted-to-in-20
 slug: games-i-was-addicted-to-in-2014
 title: Games I was addicted to in 2014
 wordpress_id: 1805
-categories:
-- Commentary
+category: Commentary
 tags:
 - ios
 ---

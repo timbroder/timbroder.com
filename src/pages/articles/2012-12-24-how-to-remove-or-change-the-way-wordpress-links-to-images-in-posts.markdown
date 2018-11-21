@@ -8,8 +8,7 @@ link: ''
 slug: how-to-remove-or-change-the-way-wordpress-links-to-images-in-posts
 title: How to Remove or Change the way Wordpress Links to Images in Posts
 wordpress_id: 1278
-categories:
-- Code
+category: Code
 tags:
 - php
 - regex

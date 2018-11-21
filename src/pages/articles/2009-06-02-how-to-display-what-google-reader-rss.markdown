@@ -8,8 +8,7 @@ link: ''
 slug: how-to-display-what-google-reader-rss
 title: 'Wordpress Plugin: Displaying your Google Reader RSS subscriptions'
 wordpress_id: 206
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - php

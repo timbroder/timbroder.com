@@ -8,8 +8,7 @@ link: http://www.inman.com/next/how-a-time-tracking-app-from-apple-designers-is-
 slug: make-time
 title: “make” time
 wordpress_id: 1687
-categories:
-- Code
+category: Code
 - Commentary
 ---
 

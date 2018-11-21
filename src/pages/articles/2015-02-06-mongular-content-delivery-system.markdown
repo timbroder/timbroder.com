@@ -8,8 +8,7 @@ link: http://mongular.org/docs
 slug: mongular-content-delivery-system
 title: Mongular, a Content Delivery System
 wordpress_id: 1759
-categories:
-- Code
+category: Code
 - Commentary
 ---
 

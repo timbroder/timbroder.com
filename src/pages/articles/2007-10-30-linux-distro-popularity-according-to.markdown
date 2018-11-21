@@ -8,8 +8,7 @@ link: ''
 slug: linux-distro-popularity-according-to
 title: Linux Distro Popularity According to Google
 wordpress_id: 98
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

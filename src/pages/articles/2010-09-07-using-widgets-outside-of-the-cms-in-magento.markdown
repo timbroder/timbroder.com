@@ -8,8 +8,7 @@ link: ''
 slug: using-widgets-outside-of-the-cms-in-magento
 title: Using widgets outside of the CMS in Magento
 wordpress_id: 638
-categories:
-- Code
+category: Code
 tags:
 - magento
 - php

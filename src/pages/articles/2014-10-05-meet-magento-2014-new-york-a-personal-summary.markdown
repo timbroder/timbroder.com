@@ -8,8 +8,7 @@ link: http://alankent.wordpress.com/2014/09/27/meet-magento-2014-new-york-a-pers
 slug: meet-magento-2014-new-york-a-personal-summary
 title: Meet Magento 2014 New York – a Personal Summary
 wordpress_id: 1712
-categories:
-- Commentary
+category: Commentary
 ---
 
 Alan Kent, Chief Architect of Magento 2 has a great write up of Meet Magento

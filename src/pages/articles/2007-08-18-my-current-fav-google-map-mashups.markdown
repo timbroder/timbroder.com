@@ -8,8 +8,7 @@ link: ''
 slug: my-current-fav-google-map-mashups
 title: My current fav Google Map Mashups
 wordpress_id: 37
-categories:
-- Code
+category: Code
 ---
 
 These are some sites I've found since people have started making Google Map

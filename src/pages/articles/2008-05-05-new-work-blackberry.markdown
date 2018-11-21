@@ -8,8 +8,7 @@ link: ''
 slug: new-work-blackberry
 title: New Work Blackberry
 wordpress_id: 117
-categories:
-- Code
+category: Code
 tags:
 - blackberry
 ---

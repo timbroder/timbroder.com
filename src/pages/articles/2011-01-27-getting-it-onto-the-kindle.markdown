@@ -8,8 +8,7 @@ link: ''
 slug: getting-it-onto-the-kindle
 title: Getting it onto the Kindle
 wordpress_id: 792
-categories:
-- Code
+category: Code
 tags:
 - Atom
 - Calibre

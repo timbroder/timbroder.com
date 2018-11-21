@@ -8,8 +8,7 @@ link: ''
 slug: im-not-sure-i-like-new-facebook-design
 title: I'm not sure I like the new Facebook Design
 wordpress_id: 145
-categories:
-- Code
+category: Code
 ---
 
 Originally I had friendfeed taking care of all my Facebook status updates. I

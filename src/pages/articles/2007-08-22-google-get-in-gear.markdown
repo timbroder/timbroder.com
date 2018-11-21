@@ -8,8 +8,7 @@ link: ''
 slug: google-get-in-gear
 title: C'mon Google! Get in Gear!!
 wordpress_id: 38
-categories:
-- Code
+category: Code
 tags:
 - Docs Spreadsheets
 - gears

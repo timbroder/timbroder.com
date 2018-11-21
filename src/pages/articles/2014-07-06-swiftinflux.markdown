@@ -8,8 +8,7 @@ link: https://github.com/ksm/SwiftInFlux
 slug: swiftinflux
 title: SwiftInFlux
 wordpress_id: 1567
-categories:
-- Code
+category: Code
 ---
 
 > SwiftInFlux, a community-based project for cataloguing the changes that

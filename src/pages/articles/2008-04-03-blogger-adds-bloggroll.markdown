@@ -8,8 +8,7 @@ link: ''
 slug: blogger-adds-bloggroll
 title: Blogger adds bloggroll
 wordpress_id: 103
-categories:
-- Code
+category: Code
 tags:
 - blogger
 - reader

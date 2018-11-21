@@ -8,8 +8,7 @@ link: ''
 slug: chrome-coming-to-android
 title: Chrome coming to Android?
 wordpress_id: 157
-categories:
-- Code
+category: Code
 tags:
 - Android
 - chrome

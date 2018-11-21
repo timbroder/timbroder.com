@@ -8,8 +8,7 @@ link: ''
 slug: foxtrot-android
 title: Foxtrot Android
 wordpress_id: 183
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

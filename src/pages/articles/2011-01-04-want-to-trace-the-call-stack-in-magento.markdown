@@ -8,8 +8,7 @@ link: ''
 slug: want-to-trace-the-call-stack-in-magento
 title: Want to trace the call stack in Magento?
 wordpress_id: 736
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - magento

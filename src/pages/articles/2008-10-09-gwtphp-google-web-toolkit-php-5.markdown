@@ -8,8 +8,7 @@ link: ''
 slug: gwtphp-google-web-toolkit-php-5
 title: GWTPHP = Google Web Toolkit + PHP 5
 wordpress_id: 181
-categories:
-- Code
+category: Code
 tags:
 - GWT
 - php

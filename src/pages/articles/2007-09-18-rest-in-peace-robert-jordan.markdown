@@ -8,8 +8,7 @@ link: ''
 slug: rest-in-peace-robert-jordan
 title: Rest in Peace Robert Jordan
 wordpress_id: 66
-categories:
-- Code
+category: Code
 ---
 
 Alas and woes, one of my favorite authors, [Robert

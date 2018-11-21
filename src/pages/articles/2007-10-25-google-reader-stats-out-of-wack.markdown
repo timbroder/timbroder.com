@@ -8,8 +8,7 @@ link: ''
 slug: google-reader-stats-out-of-wack
 title: Google Reader stats out of Wack
 wordpress_id: 96
-categories:
-- Code
+category: Code
 tags:
 - reader
 ---

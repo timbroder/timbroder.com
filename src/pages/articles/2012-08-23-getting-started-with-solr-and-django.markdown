@@ -8,8 +8,7 @@ link: ''
 slug: getting-started-with-solr-and-django
 title: Getting Started with Solr and Django
 wordpress_id: 1167
-categories:
-- Code
+category: Code
 tags:
 - django
 - python

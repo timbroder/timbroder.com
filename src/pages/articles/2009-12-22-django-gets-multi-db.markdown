@@ -8,8 +8,7 @@ link: ''
 slug: django-gets-multi-db
 title: Django gets Multi-DB
 wordpress_id: 228
-categories:
-- Code
+category: Code
 ---
 
 For his Google Summer of Code project [Alex

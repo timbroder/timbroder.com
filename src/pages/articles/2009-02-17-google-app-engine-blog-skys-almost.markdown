@@ -8,8 +8,7 @@ link: ''
 slug: google-app-engine-blog-skys-almost
 title: 'Google App Engine Blog: The sky''s (almost) the limit! "High CPU" is no more.'
 wordpress_id: 190
-categories:
-- Code
+category: Code
 ---
 
 It looks like the app engine infrastructure is improving. No more High CPU

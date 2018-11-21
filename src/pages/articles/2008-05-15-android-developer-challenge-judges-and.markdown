@@ -8,8 +8,7 @@ link: ''
 slug: android-developer-challenge-judges-and
 title: Android Developer Challenge Judges and Top 50 Details
 wordpress_id: 120
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: adding-a-delete-line-hotkey-in-xcode
 title: Adding a Delete Line hotkey in Xcode
 wordpress_id: 1291
-categories:
-- Code
+category: Code
 tags:
 - xcode
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: outtake-from-our-engagement-photo-shoot
 title: Outtake from our engagement photo shoot.
 wordpress_id: 652
-categories:
-- Broder
+category: Broder
 tags:
 - engagement
 ---

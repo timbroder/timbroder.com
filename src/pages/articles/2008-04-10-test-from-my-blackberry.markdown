@@ -8,8 +8,7 @@ link: ''
 slug: test-from-my-blackberry
 title: test from my blackberry
 wordpress_id: 104
-categories:
-- Code
+category: Code
 tags:
 - blackberry
 ---

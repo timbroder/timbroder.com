@@ -8,9 +8,7 @@ link: ''
 slug: pig-roast
 title: Pig Roast
 wordpress_id: 568
-categories:
-- Crossfit
-- Random
+category: Crossfit
 ---
 
 Had a great time at [Crossfit

@@ -8,8 +8,7 @@ link: ''
 slug: equality-in-the-apple-blogging-scene
 title: Equality in the Apple Blogging Scene
 wordpress_id: 1754
-categories:
-- Code
+category: Code
 ---
 
 Long time Mac developer, Daniel Jalkut posited a question last night on

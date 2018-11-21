@@ -8,8 +8,7 @@ link: ''
 slug: wedding-planning
 title: Wedding Planning
 wordpress_id: 545
-categories:
-- Random
+category: Random
 ---
 
 Tim: aside from not being a buffet, the food looks redic 

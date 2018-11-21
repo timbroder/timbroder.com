@@ -8,8 +8,7 @@ slug: using-an-encrypted-realm-with-background-or-notificatio-processes
 
 title: Using an Encrypted Realm in a background or notification processes?
 
-categories:
-- Code
+category: Code
 tags:
 - swift
 - realm

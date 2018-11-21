@@ -8,8 +8,7 @@ slug: kidfund-is-on-betalist!
 
 title: Kidfund is on Betalist!
 
-categories:
-- Kidfund
+category: Kidfund
 tags:
 - startup
 - beta

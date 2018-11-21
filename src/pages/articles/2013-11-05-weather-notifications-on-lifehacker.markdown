@@ -8,8 +8,7 @@ link: ''
 slug: weather-notifications-on-lifehacker
 title: Weather Notifications on Lifehacker!
 wordpress_id: 1377
-categories:
-- Code
+category: Code
 ---
 
 OMG. I’m on lifehacker.

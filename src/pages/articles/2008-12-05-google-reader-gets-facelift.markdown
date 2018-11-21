@@ -8,8 +8,7 @@ link: ''
 slug: google-reader-gets-facelift
 title: Google Reader gets a facelift
 wordpress_id: 186
-categories:
-- Code
+category: Code
 tags:
 - reader
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: hiding-fields-in-the-admin-based-on-permission
 title: Hiding fields in the Django admin based on permission
 wordpress_id: 1164
-categories:
-- Code
+category: Code
 tags:
 - django
 - python

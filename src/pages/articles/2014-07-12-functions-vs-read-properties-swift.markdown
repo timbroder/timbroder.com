@@ -8,8 +8,7 @@ link: ''
 slug: functions-vs-read-properties-swift
 title: Functions or Read-Only Properties in Swift?
 wordpress_id: 1589
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

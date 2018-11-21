@@ -8,8 +8,7 @@ link: http://david-smith.org/blog/2014/02/14/an-unexpected-botnet
 slug: background-fetch-an-unexpected-botnet
 title: 'Background fetch: An Unexpected Botnet'
 wordpress_id: 1421
-categories:
-- Code
+category: Code
 ---
 
 > When enabled within your applications you are essentially building a

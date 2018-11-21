@@ -8,8 +8,7 @@ link: ''
 slug: last-week-recap
 title: Last week recap
 wordpress_id: 61
-categories:
-- Code
+category: Code
 ---
 
 These are just a few highlights from while I was gone...  

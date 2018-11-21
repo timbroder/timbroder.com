@@ -8,8 +8,7 @@ link: ''
 slug: howto-yui-tabview
 title: 'HOWTO: YUI Tabview'
 wordpress_id: 57
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - YUI

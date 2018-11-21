@@ -8,8 +8,7 @@ link: ''
 slug: io-myspace-installs-gears
 title: 'I/O: MySpace installs gears'
 wordpress_id: 131
-categories:
-- Code
+category: Code
 tags:
 - gears
 ---

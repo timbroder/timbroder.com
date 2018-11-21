@@ -8,8 +8,7 @@ link: ''
 slug: back-from-vacation
 title: Back from Vacation
 wordpress_id: 148
-categories:
-- Code
+category: Code
 ---
 
 I did as much relaxing as I could on Vacation down at the Jersey Shore. No

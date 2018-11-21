@@ -8,8 +8,7 @@ link: ''
 slug: i-just-won-50000000-gbp-from-google-uk
 title: I JUST WON £500,000.00 GBP FROM GOOGLE UK!!!
 wordpress_id: 175
-categories:
-- Code
+category: Code
 ---
 
 Now, normally gmail's spam system picks up on these.  I apparently was entered

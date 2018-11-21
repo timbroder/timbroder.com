@@ -8,9 +8,7 @@ link: ''
 slug: stress-relief-blow-things-up
 title: 'Stress Relief: Blow things up'
 wordpress_id: 857
-categories:
-- Code
-- Random
+category: Code
 ---
 
   

@@ -8,8 +8,7 @@ link: ''
 slug: google-calendar-gets-offline-access
 title: Google Calendar gets offline access with Gears
 wordpress_id: 192
-categories:
-- Code
+category: Code
 tags:
 - calendar
 - gears

@@ -8,8 +8,7 @@ link: ''
 slug: how-to-turn-any-webpage-into-rss-feed
 title: How to turn any webpage into an RSS feed
 wordpress_id: 180
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: 5-reasons-why-rim-should-make
 title: 5 Reasons Why RIM Should Make A BlackBerry That Runs Android
 wordpress_id: 132
-categories:
-- Code
+category: Code
 tags:
 - Android
 - blackberry

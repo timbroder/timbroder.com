@@ -8,8 +8,7 @@ link: ''
 slug: drafts
 title: Drafts
 wordpress_id: 1486
-categories:
-- Code
+category: Code
 tags:
 - drafts
 ---

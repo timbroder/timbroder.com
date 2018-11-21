@@ -8,8 +8,7 @@ link: ''
 slug: google-mashup-editor-blog-new-stuff-104
 title: 'Google Mashup Editor Blog: New Stuff - 10/4 Feature Release'
 wordpress_id: 84
-categories:
-- Code
+category: Code
 tags:
 - GME
 ---

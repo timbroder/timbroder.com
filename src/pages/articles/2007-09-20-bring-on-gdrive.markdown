@@ -8,8 +8,7 @@ link: ''
 slug: bring-on-gdrive
 title: Bring on the GDrive!
 wordpress_id: 69
-categories:
-- Code
+category: Code
 tags:
 - gdrive
 ---

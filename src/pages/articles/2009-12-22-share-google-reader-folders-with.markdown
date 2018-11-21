@@ -8,8 +8,7 @@ link: ''
 slug: share-google-reader-folders-with
 title: Share Google Reader folders with friends
 wordpress_id: 227
-categories:
-- Code
+category: Code
 ---
 
 A quick rundown on how to share whole folders with friends so they can see

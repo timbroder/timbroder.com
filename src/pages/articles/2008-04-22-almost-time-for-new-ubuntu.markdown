@@ -8,8 +8,7 @@ link: ''
 slug: almost-time-for-new-ubuntu
 title: Almost time for a new Ubuntu
 wordpress_id: 108
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

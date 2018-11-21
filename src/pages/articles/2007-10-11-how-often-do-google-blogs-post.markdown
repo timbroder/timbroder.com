@@ -8,8 +8,7 @@ link: ''
 slug: how-often-do-google-blogs-post
 title: How often do Google Blogs post?
 wordpress_id: 85
-categories:
-- Code
+category: Code
 ---
 
 Google has been using it's blogger platform to deliver news about it's

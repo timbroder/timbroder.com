@@ -8,8 +8,7 @@ link: ''
 slug: developing-with-multiple-versions-of-django-on-windows
 title: Developing with multiple versions of Django on windows
 wordpress_id: 1076
-categories:
-- Code
+category: Code
 tags:
 - django
 ---

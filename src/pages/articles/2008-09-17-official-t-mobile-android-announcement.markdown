@@ -8,8 +8,7 @@ link: ''
 slug: official-t-mobile-android-announcement
 title: 'Official: T-Mobile Android Announcement September 23rd'
 wordpress_id: 169
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

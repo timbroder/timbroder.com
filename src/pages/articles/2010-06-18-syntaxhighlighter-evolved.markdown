@@ -8,8 +8,7 @@ link: ''
 slug: syntaxhighlighter-evolved
 title: SyntaxHighlighter Evolved
 wordpress_id: 318
-categories:
-- Code
+category: Code
 tags:
 - php
 - wordpress

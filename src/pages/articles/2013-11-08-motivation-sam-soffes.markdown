@@ -8,8 +8,7 @@ link: http://sam.roon.io/motivation
 slug: motivation-sam-soffes
 title: Motivation — Sam Soffes
 wordpress_id: 1379
-categories:
-- Code
+category: Code
 ---
 
 This hit pretty home for me. I have motivation problems sometimes. Sometimes

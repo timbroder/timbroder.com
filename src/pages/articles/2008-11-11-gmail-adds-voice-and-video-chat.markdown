@@ -8,8 +8,7 @@ link: ''
 slug: gmail-adds-voice-and-video-chat
 title: Gmail adds voice and video chat
 wordpress_id: 184
-categories:
-- Code
+category: Code
 tags:
 - gmail
 ---

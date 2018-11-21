@@ -8,8 +8,7 @@ link: ''
 slug: cookbake-off-at-aiaio
 title: 'Cook/bake off at #aiaio!'
 wordpress_id: 557
-categories:
-- Random
+category: Random
 ---
 
 I made wings! ![](/images/2010/07/IMAG0109.jpg)

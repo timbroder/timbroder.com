@@ -8,8 +8,7 @@ link: ''
 slug: wooho-google-maps-adds-nyc-transit
 title: Woohoo! Google Maps adds NYC transit directions
 wordpress_id: 174
-categories:
-- Code
+category: Code
 tags:
 - maps
 ---

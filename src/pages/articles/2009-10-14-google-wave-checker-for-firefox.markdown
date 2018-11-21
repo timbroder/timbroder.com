@@ -8,8 +8,7 @@ link: ''
 slug: google-wave-checker-for-firefox
 title: Google Wave checker for firefox
 wordpress_id: 218
-categories:
-- Code
+category: Code
 ---
 
 I'm liking google wave so far (not loving yet, but there aren't that many

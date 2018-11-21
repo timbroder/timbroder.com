@@ -8,8 +8,7 @@ link: ''
 slug: google-streetview-going-global
 title: Google StreetView Going Global?
 wordpress_id: 75
-categories:
-- Code
+category: Code
 tags:
 - maps
 ---

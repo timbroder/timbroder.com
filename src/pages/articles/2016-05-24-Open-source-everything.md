@@ -8,8 +8,7 @@ slug: open-source-everything
 
 title: Open source everything
 
-categories:
-- Code
+category: Code
 tags:
 - opensource
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: opening-sourcetree-from-the-command-line
 title: Opening SourceTree from the Command line
 wordpress_id: 1550
-categories:
-- Code
+category: Code
 tags:
 - git
 ---

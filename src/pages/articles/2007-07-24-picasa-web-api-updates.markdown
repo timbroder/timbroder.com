@@ -8,8 +8,7 @@ link: ''
 slug: picasa-web-api-updates
 title: Picasa Web Api updates
 wordpress_id: 26
-categories:
-- Code
+category: Code
 tags:
 - gdata
 - picasa web

@@ -5,8 +5,7 @@ date: 2016-02-22 23:00:00+00:00
 layout: post
 slug: jira-filter-subscriptions
 title: Jira Filter Subscriptions
-categories:
-- Code
+category: Code
 tags:
 - jira
 ---

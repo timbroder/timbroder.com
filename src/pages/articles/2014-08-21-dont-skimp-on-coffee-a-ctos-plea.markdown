@@ -8,8 +8,7 @@ link: http://www.fastcompany.com/3034469/coffee-week/dont-skimp-on-coffee-a-ctos
 slug: dont-skimp-on-coffee-a-ctos-plea
 title: 'Don''t Skimp on Coffee: A CTO''s Plea'
 wordpress_id: 1692
-categories:
-- Commentary
+category: Commentary
 ---
 
 My friend [Matt](https://twitter.com/mshmsh5000), CTO of

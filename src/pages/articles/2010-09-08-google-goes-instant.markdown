@@ -8,8 +8,7 @@ link: ''
 slug: google-goes-instant
 title: Google goes Instant
 wordpress_id: 657
-categories:
-- Code
+category: Code
 tags:
 - autocomplete
 - Google

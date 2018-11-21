@@ -8,8 +8,7 @@ link: ''
 slug: select-foo-count-from-bar-group-by-foo-in-django
 title: select foo, count(*) from bar group by foo in django
 wordpress_id: 247
-categories:
-- Code
+category: Code
 tags:
 - django
 - HOWTO

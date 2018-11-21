@@ -8,8 +8,7 @@ link: ''
 slug: live-diggnation-ny-photos
 title: Live Diggnation NY Photos
 wordpress_id: 134
-categories:
-- Code
+category: Code
 tags:
 - digg
 - events

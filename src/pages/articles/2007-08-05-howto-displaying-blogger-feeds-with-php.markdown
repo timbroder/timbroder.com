@@ -8,8 +8,7 @@ link: ''
 slug: howto-displaying-blogger-feeds-with-php
 title: 'HOWTO: Displaying Blogger feeds with PHP'
 wordpress_id: 30
-categories:
-- Code
+category: Code
 tags:
 - blogger
 - gdata

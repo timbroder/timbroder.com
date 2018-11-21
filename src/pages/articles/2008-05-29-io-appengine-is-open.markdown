@@ -8,8 +8,7 @@ link: ''
 slug: io-appengine-is-open
 title: 'I/O: AppEngine is open!'
 wordpress_id: 130
-categories:
-- Code
+category: Code
 tags:
 - appengine
 ---

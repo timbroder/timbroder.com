@@ -8,8 +8,7 @@ link: ''
 slug: ubuntu-gutsy-goes-beta
 title: Ubuntu Gutsy Goes Beta
 wordpress_id: 73
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

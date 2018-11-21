@@ -8,8 +8,7 @@ link: ''
 slug: new-and-improved-google-personal
 title: New and Improved Google Personal Homepage (ig)
 wordpress_id: 144
-categories:
-- Code
+category: Code
 ---
 
 I unfortunately haven't had time to touch Google reader in almost 2 weeks now,

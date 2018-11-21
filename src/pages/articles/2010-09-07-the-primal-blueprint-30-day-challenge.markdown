@@ -8,8 +8,7 @@ link: ''
 slug: the-primal-blueprint-30-day-challenge
 title: The Primal Blueprint 30-Day Challenge
 wordpress_id: 631
-categories:
-- Nutrition
+category: Nutrition
 tags:
 - primal
 ---

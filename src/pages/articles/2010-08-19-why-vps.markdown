@@ -8,8 +8,7 @@ link: ''
 slug: why-vps
 title: Why VPS?
 wordpress_id: 596
-categories:
-- Code
+category: Code
 tags:
 - Shared web hosting service
 - Virtual hosting

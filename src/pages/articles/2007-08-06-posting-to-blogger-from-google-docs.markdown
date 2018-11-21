@@ -8,8 +8,7 @@ link: ''
 slug: posting-to-blogger-from-google-docs
 title: Posting to Blogger from Google Docs & Spreadsheets
 wordpress_id: 31
-categories:
-- Code
+category: Code
 ---
 
 I had seen some posts in the past (like [this

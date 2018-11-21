@@ -8,8 +8,7 @@ link: ''
 slug: django-10-released
 title: Django 1.0 released!
 wordpress_id: 158
-categories:
-- Code
+category: Code
 tags:
 - python
 ---

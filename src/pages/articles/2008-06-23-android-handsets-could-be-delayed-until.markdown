@@ -8,8 +8,7 @@ link: ''
 slug: android-handsets-could-be-delayed-until
 title: Android Handset’s Could Be Delayed Until 2009
 wordpress_id: 141
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

@@ -8,8 +8,7 @@ link: https://medium.com/@mg/email-is-a-constant-why-i-turned-off-email-notifica
 slug: why-i-turned-off-email-notifications
 title: Why I turned off email notifications
 wordpress_id: 1602
-categories:
-- Code
+category: Code
 ---
 
 > Just about a week ago I had an epiphany: Email is a constant. It will never

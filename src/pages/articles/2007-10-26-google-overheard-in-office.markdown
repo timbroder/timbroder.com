@@ -8,8 +8,7 @@ link: ''
 slug: google-overheard-in-office
 title: Google Overheard in the Office
 wordpress_id: 97
-categories:
-- Code
+category: Code
 ---
 
 A few days ago I [posted](http://blog.gpowered.net/2007/10/google-overheard-in-new-york.html) some [Overheard in New York](www.overheardinnewyork.com)

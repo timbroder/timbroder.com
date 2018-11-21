@@ -8,8 +8,7 @@ link: ''
 slug: displaying-custom-attributes-on-the-product-page-in-magento
 title: Displaying Custom Attributes on the Product Page in Magento
 wordpress_id: 551
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - magento

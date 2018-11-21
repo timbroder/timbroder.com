@@ -8,8 +8,7 @@ link: ''
 slug: heading-on-vacation
 title: Heading on Vacation
 wordpress_id: 146
-categories:
-- Code
+category: Code
 ---
 
 Finally getting a vacation in, going down to the Jersey shore.  Got a nice

@@ -8,8 +8,7 @@ link: ''
 slug: refreshing-all-the-css-on-a-page-using-jquery
 title: Refreshing all the css on a page using jQuery
 wordpress_id: 1130
-categories:
-- Code
+category: Code
 tags:
 - css
 - javascript

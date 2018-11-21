@@ -8,8 +8,7 @@ link: ''
 slug: resistance-is-futile-microsoft
 title: 'Resistance is Futile: Microsoft Paperclip comes to Unix'
 wordpress_id: 151
-categories:
-- Code
+category: Code
 ---
 
 [![](http://houghi.org/shots/vim001.gif)](http://houghi.org/shots/vim001.gif)[

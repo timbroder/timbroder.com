@@ -8,8 +8,7 @@ link: ''
 slug: javascript-pacman-clone
 title: Javascript pacman clone
 wordpress_id: 153
-categories:
-- Code
+category: Code
 tags:
 - YUI
 ---

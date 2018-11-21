@@ -8,8 +8,7 @@ link: ''
 slug: format-json-and-save-to-gist
 title: Format JSON and save to gist with Alfred
 wordpress_id: 1569
-categories:
-- Code
+category: Code
 tags:
 - alfred
 - github

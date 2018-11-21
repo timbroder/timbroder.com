@@ -8,8 +8,7 @@ link: ''
 slug: checking-if-remote-file-exists-in
 title: Checking if a remote file exists in python
 wordpress_id: 216
-categories:
-- Code
+category: Code
 ---
 
 Normally, to check if a remote web file exists I would use urllib's getcode()

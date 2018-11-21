@@ -8,8 +8,7 @@ link: ''
 slug: new-digg-home-page-breaks-linux-section
 title: New Digg Home Page breaks the Linux section on IE?
 wordpress_id: 47
-categories:
-- Code
+category: Code
 ---
 
 So I'm sitting here eating lunch and go to see if there is anything new on

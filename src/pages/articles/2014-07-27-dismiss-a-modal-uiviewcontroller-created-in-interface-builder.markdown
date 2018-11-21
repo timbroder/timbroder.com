@@ -8,8 +8,7 @@ link: ''
 slug: dismiss-a-modal-uiviewcontroller-created-in-interface-builder
 title: Dismiss a Modal UIViewController created in Interface Builder
 wordpress_id: 1626
-categories:
-- Code
+category: Code
 tags:
 - interfacebuilder
 - swift

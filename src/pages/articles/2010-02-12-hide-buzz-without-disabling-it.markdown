@@ -8,8 +8,7 @@ link: ''
 slug: hide-buzz-without-disabling-it
 title: Hide buzz without disabling it
 wordpress_id: 237
-categories:
-- Code
+category: Code
 ---
 
 If you want people to see your buzzes, but like myself want to keep checking

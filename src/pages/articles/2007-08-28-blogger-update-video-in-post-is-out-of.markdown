@@ -8,8 +8,7 @@ link: ''
 slug: blogger-update-video-in-post-is-out-of
 title: 'Blogger Update: Video in post is out of beta'
 wordpress_id: 46
-categories:
-- Code
+category: Code
 ---
 
 Or out of "in draft" I should say. Not much to show in the ways of how to use

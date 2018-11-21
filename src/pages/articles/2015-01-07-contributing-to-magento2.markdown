@@ -8,8 +8,7 @@ link: ''
 slug: contributing-to-magento2
 title: Contributing to Magento2
 wordpress_id: 1744
-categories:
-- Code
+category: Code
 tags:
 - magento
 ---

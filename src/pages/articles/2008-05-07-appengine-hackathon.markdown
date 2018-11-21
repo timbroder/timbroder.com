@@ -8,8 +8,7 @@ link: ''
 slug: appengine-hackathon
 title: Appengine Hackathon!
 wordpress_id: 119
-categories:
-- Code
+category: Code
 tags:
 - appengine
 - events

@@ -8,8 +8,7 @@ link: http://words.steveklabnik.com/how-to-be-an-open-source-gardener
 slug: how-to-be-an-open-source-gardener
 title: How to be an open source gardener
 wordpress_id: 1514
-categories:
-- Code
+category: Code
 ---
 
 A good read on triaging issues using the Rails project as an example

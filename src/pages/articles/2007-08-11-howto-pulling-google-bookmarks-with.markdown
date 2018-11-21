@@ -8,8 +8,7 @@ link: ''
 slug: howto-pulling-google-bookmarks-with
 title: 'HOWTO: Pulling Google Bookmarks with Python'
 wordpress_id: 35
-categories:
-- Code
+category: Code
 tags:
 - bookmarks
 - HOWTO

@@ -8,8 +8,7 @@ link: ''
 slug: google-newest-data-center-pics
 title: Google's Newest Data Center [Pics]
 wordpress_id: 54
-categories:
-- Code
+category: Code
 ---
 
 [Information

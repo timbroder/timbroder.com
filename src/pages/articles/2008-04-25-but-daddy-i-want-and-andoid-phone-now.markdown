@@ -8,8 +8,7 @@ link: ''
 slug: but-daddy-i-want-and-andoid-phone-now
 title: But Daddy! I want and Andoid phone NOW!
 wordpress_id: 110
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

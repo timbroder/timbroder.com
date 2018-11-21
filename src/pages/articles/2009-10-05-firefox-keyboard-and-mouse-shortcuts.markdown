@@ -8,8 +8,7 @@ link: ''
 slug: firefox-keyboard-and-mouse-shortcuts
 title: Firefox Keyboard and Mouse Shortcuts
 wordpress_id: 217
-categories:
-- Code
+category: Code
 ---
 
 [Here is a list](http://www.mouserunner.com/FF_Shortcuts1Printable.html) of

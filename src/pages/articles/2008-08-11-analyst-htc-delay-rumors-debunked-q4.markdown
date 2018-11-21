@@ -8,8 +8,7 @@ link: ''
 slug: analyst-htc-delay-rumors-debunked-q4
 title: 'Android: Analyst HTC delay rumors debunked - Q4 launch still on track'
 wordpress_id: 147
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: october-speedlinking
 title: October Speedlinking
 wordpress_id: 99
-categories:
-- Code
+category: Code
 tags:
 - blogger
 - calendar

@@ -8,8 +8,7 @@ link: ''
 slug: how-to-get-brightkite-photos-into-rss
 title: How to get brightkite photos into an RSS feed (to post to a blog)
 wordpress_id: 188
-categories:
-- Code
+category: Code
 tags:
 - brightkite
 - HOWTO

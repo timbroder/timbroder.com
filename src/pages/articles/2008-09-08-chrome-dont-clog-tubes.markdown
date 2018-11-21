@@ -8,8 +8,7 @@ link: ''
 slug: chrome-dont-clog-tubes
 title: 'Chrome: Don''t Clog the Tubes!'
 wordpress_id: 160
-categories:
-- Code
+category: Code
 tags:
 - chrome
 ---

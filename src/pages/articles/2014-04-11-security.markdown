@@ -8,8 +8,7 @@ link: http://inessential.com/2014/04/11/security
 slug: security
 title: “Security”
 wordpress_id: 1504
-categories:
-- Code
+category: Code
 ---
 
 > Were the National Security Agency an agency charged with the security of our

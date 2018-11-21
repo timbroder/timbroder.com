@@ -8,8 +8,7 @@ link: http://david-smith.org/blog/2014/02/20/expansion-and-consolidation
 slug: expansion-followed-by-consolidation
 title: Expansion Followed By Consolidation
 wordpress_id: 1429
-categories:
-- Code
+category: Code
 ---
 
 David Smith:

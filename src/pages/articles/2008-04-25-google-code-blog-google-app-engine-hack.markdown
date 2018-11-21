@@ -8,8 +8,7 @@ link: ''
 slug: google-code-blog-google-app-engine-hack
 title: 'Google Code Blog: Google App Engine Hack-a-thon coming to your coast!'
 wordpress_id: 111
-categories:
-- Code
+category: Code
 tags:
 - appengine
 ---

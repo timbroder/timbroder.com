@@ -8,8 +8,7 @@ link: http://www.macrumors.com/2014/01/28/google-mobile-chrome-apps/
 slug: google-bringing-chrome-apps-to-ios-and-android
 title: Google Bringing Chrome Apps to iOS and Android
 wordpress_id: 1404
-categories:
-- Code
+category: Code
 ---
 
 > Google today launched Chrome apps for iOS and Android, which will see

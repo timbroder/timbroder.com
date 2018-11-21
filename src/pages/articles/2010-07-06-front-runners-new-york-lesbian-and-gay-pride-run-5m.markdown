@@ -8,8 +8,7 @@ link: ''
 slug: front-runners-new-york-lesbian-and-gay-pride-run-5m
 title: Front Runners New York Lesbian and Gay Pride Run (5M)
 wordpress_id: 562
-categories:
-- Crossfit
+category: Crossfit
 tags:
 - running
 ---

@@ -8,8 +8,7 @@ link: http://inessential.com/2014/02/14/pauls_talk_on_core_data
 slug: inessential-com-pauls-talk-core-data
 title: 'inessential.com: Paul’s Talk on Core Data'
 wordpress_id: 1470
-categories:
-- Code
+category: Code
 ---
 
 > it’s more that I’m eternally on the fence about Core Data.

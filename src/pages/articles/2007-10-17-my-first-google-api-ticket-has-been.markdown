@@ -8,8 +8,7 @@ link: ''
 slug: my-first-google-api-ticket-has-been
 title: My First Google API ticket has been fixed
 wordpress_id: 90
-categories:
-- Code
+category: Code
 tags:
 - Docs Spreadsheets
 ---

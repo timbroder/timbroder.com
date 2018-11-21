@@ -8,8 +8,7 @@ link: http://37signals.com/svn/posts/3159-testing-like-the-tsa
 slug: quote-day-david-37signals
 title: Quote of the day by David of 37signals
 wordpress_id: 1478
-categories:
-- Code
+category: Code
 ---
 
 > “But what’s the harm in over-testing, Phil, don’t you want your code to be

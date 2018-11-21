@@ -8,8 +8,7 @@ link: http://www.loopinsight.com/2014/02/04/begging-for-app-ratings/
 slug: begging-app-ratings
 title: Begging For App Ratings
 wordpress_id: 1468
-categories:
-- Code
+category: Code
 ---
 
 > John Gruber recently suggested that users who are annoyed by “Please Rate

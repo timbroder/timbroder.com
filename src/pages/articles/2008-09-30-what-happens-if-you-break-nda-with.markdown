@@ -8,8 +8,7 @@ link: ''
 slug: what-happens-if-you-break-nda-with
 title: What happens if you break the NDA with Apple's App Store
 wordpress_id: 176
-categories:
-- Code
+category: Code
 ---
 
 [![](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)

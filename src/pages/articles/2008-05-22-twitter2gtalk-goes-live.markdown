@@ -8,8 +8,7 @@ link: ''
 slug: twitter2gtalk-goes-live
 title: twitter2gTalk Goes Live!
 wordpress_id: 122
-categories:
-- Code
+category: Code
 tags:
 - appengine
 - twitter

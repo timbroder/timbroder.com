@@ -8,8 +8,7 @@ link: ''
 slug: tennessee-for-weekend
 title: Tennessee for the weekend
 wordpress_id: 86
-categories:
-- Code
+category: Code
 ---
 
 Be back Sunday  

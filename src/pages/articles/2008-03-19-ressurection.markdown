@@ -8,8 +8,7 @@ link: ''
 slug: ressurection
 title: Ressurection
 wordpress_id: 101
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: howto-use-yahoo-pipe-to-filter-feeds
 title: 'HOWTO: Use a Yahoo Pipe to filter feeds'
 wordpress_id: 79
-categories:
-- Code
+category: Code
 tags:
 - YUI
 ---

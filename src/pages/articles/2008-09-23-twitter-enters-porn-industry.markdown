@@ -8,8 +8,7 @@ link: ''
 slug: twitter-enters-porn-industry
 title: Twitter enters the Porn industry
 wordpress_id: 172
-categories:
-- Code
+category: Code
 tags:
 - twitter
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: some-reading-from-django-nyc
 title: Some reading from django-nyc
 wordpress_id: 664
-categories:
-- Code
+category: Code
 tags:
 - django
 - javascript

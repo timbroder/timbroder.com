@@ -8,8 +8,7 @@ link: ''
 slug: big-appengine-news-cron-java-firewalled
 title: 'Big Appengine news: Cron, Java, Firewalled Data, DB Import'
 wordpress_id: 200
-categories:
-- Code
+category: Code
 tags:
 - appengine
 ---

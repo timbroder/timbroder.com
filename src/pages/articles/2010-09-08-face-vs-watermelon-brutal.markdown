@@ -8,7 +8,6 @@ link: ''
 slug: face-vs-watermelon-brutal
 title: Face vs. watermelon = BRUTAL
 wordpress_id: 660
-categories:
-- Random
+category: Random
 ---
 

@@ -8,8 +8,7 @@ link: ''
 slug: compiling-textmate
 title: Compiling Textmate
 wordpress_id: 1192
-categories:
-- Code
+category: Code
 tags:
 - homebrew
 - osx

@@ -8,8 +8,7 @@ link: ''
 slug: where-the-new-ice-cream-sandwich-build-of-dropbox-stores-files
 title: Where the new Ice Cream Sandwich build of dropbox stores files
 wordpress_id: 1056
-categories:
-- Code
+category: Code
 tags:
 - Android
 - dropbox

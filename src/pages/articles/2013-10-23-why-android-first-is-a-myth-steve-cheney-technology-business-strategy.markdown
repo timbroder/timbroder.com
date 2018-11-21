@@ -8,8 +8,7 @@ link: ''
 slug: why-android-first-is-a-myth-steve-cheney-technology-business-strategy
 title: Why Android First is a Myth | steve cheney – technology, business & strategy
 wordpress_id: 1375
-categories:
-- Code
+category: Code
 ---
 
 This article made me think back to when I switch to iOS to make apps. (I was a

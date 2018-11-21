@@ -8,8 +8,7 @@ link: http://dcurt.is/facebooks-predicament
 slug: whatever-goes-up-thats-what-we-do
 title: Whatever goes up, that’s what we do
 wordpress_id: 1565
-categories:
-- Code
+category: Code
 ---
 
 This is a quite from a Facebook employee:

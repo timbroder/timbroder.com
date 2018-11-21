@@ -8,8 +8,7 @@ link: ''
 slug: programmable-web-hits-500-apis
 title: Programmable Web hits 500 API's!
 wordpress_id: 51
-categories:
-- Code
+category: Code
 ---
 
 This isn't a Google post per say, but if you haven't checked out [Programmable

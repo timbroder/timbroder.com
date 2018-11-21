@@ -8,8 +8,7 @@ link: ''
 slug: google-photos-blog-lesser-known-and
 title: Top Secret Picasa Features
 wordpress_id: 88
-categories:
-- Code
+category: Code
 tags:
 - picasa web
 ---

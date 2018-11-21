@@ -8,8 +8,7 @@ link: http://realmacsoftware.com/blog/ember-app-reviews
 slug: ember-icloud-app-reviews-by-dancounsell-realmac-blog
 title: Ember, iCloud & App Reviews by @dancounsell — Realmac Blog
 wordpress_id: 1510
-categories:
-- Code
+category: Code
 ---
 
 > The worst thing is we can't reply to those users. It makes me sad to see

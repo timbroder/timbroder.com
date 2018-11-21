@@ -8,8 +8,7 @@ link: ''
 slug: why-google-needs-buzz
 title: Why Google Needs Buzz
 wordpress_id: 236
-categories:
-- Code
+category: Code
 ---
 
 [Why Google Needs Buzz](http://kevinrose.com/post/385156078): "

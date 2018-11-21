@@ -8,8 +8,7 @@ link: ''
 slug: share-your-code-at-google-app-engine
 title: Share your code at ‘Google App Engine Cookbook’
 wordpress_id: 155
-categories:
-- Code
+category: Code
 ---
 
 [Google App Engine Blog: Our favorite recipes for App Engine, all in one

@@ -8,8 +8,7 @@ link: ''
 slug: we-fix-while-we-eat
 title: We fix while we eat
 wordpress_id: 225
-categories:
-- Code
+category: Code
 ---
 
 Hey, thats me!  

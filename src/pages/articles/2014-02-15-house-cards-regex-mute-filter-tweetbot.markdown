@@ -8,8 +8,7 @@ link: ''
 slug: house-cards-regex-mute-filter-tweetbot
 title: House of Cards regex mute filter for Tweetbot
 wordpress_id: 1424
-categories:
-- Code
+category: Code
 ---
 
 Some regular expressions if you don't want to see spoilers in your timeline

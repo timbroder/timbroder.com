@@ -8,8 +8,7 @@ link: ''
 slug: looping-subviews-downcasting-swift
 title: Looping through subviews and downcasting in Swift
 wordpress_id: 1598
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

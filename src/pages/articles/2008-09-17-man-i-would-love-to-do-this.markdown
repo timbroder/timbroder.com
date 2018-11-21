@@ -8,8 +8,7 @@ link: ''
 slug: man-i-would-love-to-do-this
 title: Man I would love to do this
 wordpress_id: 168
-categories:
-- Code
+category: Code
 ---
 
 [Official Google Blog: Running Hood to

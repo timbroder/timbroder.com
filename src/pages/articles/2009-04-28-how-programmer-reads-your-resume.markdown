@@ -8,8 +8,7 @@ link: ''
 slug: how-programmer-reads-your-resume
 title: How a Programmer reads your resume
 wordpress_id: 202
-categories:
-- Code
+category: Code
 ---
 
 [![](http://www.hanovsolutions.com/resume_comic.png)](http://www.hanovsolutions.com/resume_comic.png)

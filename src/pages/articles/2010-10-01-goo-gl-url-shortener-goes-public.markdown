@@ -8,8 +8,7 @@ link: ''
 slug: goo-gl-url-shortener-goes-public
 title: Goo.gl url shortener goes public
 wordpress_id: 668
-categories:
-- Code
+category: Code
 tags:
 - bit.ly
 - Google

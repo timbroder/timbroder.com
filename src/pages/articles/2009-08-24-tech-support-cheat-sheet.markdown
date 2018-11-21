@@ -8,8 +8,7 @@ link: ''
 slug: tech-support-cheat-sheet
 title: Tech Support Cheat Sheet
 wordpress_id: 212
-categories:
-- Code
+category: Code
 ---
 
 [Tech Support Cheat Sheet](http://xkcd.com/627/): !['Hey Megan, it's your

@@ -8,8 +8,7 @@ link: ''
 slug: io-android-on-htc-dream
 title: 'I/O: Android on the HTC Dream'
 wordpress_id: 126
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

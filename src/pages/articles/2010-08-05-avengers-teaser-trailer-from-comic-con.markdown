@@ -8,8 +8,7 @@ link: ''
 slug: avengers-teaser-trailer-from-comic-con
 title: Avengers teaser trailer from Comic Con
 wordpress_id: 585
-categories:
-- Comics
+category: Comics
 tags:
 - Avengers
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: google-treasure-hunt-week-3-is-up
 title: Google Treasure Hunt Week 3 is up
 wordpress_id: 123
-categories:
-- Code
+category: Code
 ---
 
 have at

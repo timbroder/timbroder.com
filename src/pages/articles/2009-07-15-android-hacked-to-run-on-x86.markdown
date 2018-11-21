@@ -8,8 +8,7 @@ link: ''
 slug: android-hacked-to-run-on-x86
 title: Android hacked to run on x86
 wordpress_id: 207
-categories:
-- Code
+category: Code
 tags:
 - Android
 - netbook

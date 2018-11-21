@@ -8,8 +8,7 @@ link: ''
 slug: gme-914-feature-release
 title: GME 9/14 Feature Release
 wordpress_id: 64
-categories:
-- Code
+category: Code
 tags:
 - GME
 ---

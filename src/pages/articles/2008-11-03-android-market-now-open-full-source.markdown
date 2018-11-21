@@ -8,8 +8,7 @@ link: ''
 slug: android-market-now-open-full-source
 title: Android Market now open. Full source released
 wordpress_id: 182
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

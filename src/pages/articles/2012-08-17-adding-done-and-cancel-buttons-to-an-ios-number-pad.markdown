@@ -8,8 +8,7 @@ link: ''
 slug: adding-done-and-cancel-buttons-to-an-ios-number-pad
 title: Adding Done and Cancel buttons to an iOS number pad
 wordpress_id: 1147
-categories:
-- Code
+category: Code
 tags:
 - ios
 - ipad

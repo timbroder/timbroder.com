@@ -8,8 +8,7 @@ link: ''
 slug: quick-way-to-display-your-delicious
 title: A quick way to display your delicious links by tag
 wordpress_id: 230
-categories:
-- Code
+category: Code
 ---
 
 quick, dirty, and slow with lots of tags  

@@ -8,8 +8,7 @@ link: ''
 slug: google-android-g1-t-mobile-announcement
 title: Google Android G1 T-Mobile announcement is streaming live
 wordpress_id: 173
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

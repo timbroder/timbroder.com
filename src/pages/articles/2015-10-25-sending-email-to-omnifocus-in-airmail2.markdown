@@ -2,8 +2,7 @@
 layout: post
 title: Sending Email to Omnifocus in Airmail2
 date: 2015-10-25 09:10
-categories:
-- productivity
+category: productivity
 tags:
 - omnifocus
 ---

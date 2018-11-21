@@ -8,8 +8,7 @@ link: http://shawnblanc.net/2014/07/on-working-from-home-and-running-a-business/
 slug: on-working-from-home-and-running-a-business
 title: On Working From Home and Running a Business
 wordpress_id: 1577
-categories:
-- Code
+category: Code
 ---
 
 Shawn Blanc talks about how he organizes himself and his company for working

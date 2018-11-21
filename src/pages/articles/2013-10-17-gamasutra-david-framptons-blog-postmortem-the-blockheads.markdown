@@ -8,8 +8,7 @@ link: ''
 slug: gamasutra-david-framptons-blog-postmortem-the-blockheads
 title: 'Gamasutra: David Framptons Blog - Postmortem: The Blockheads'
 wordpress_id: 1369
-categories:
-- Code
+category: Code
 ---
 
 The Blockheads is an extremely popular (and profitable) game. David Frampton

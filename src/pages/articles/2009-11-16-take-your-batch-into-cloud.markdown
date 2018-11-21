@@ -8,8 +8,7 @@ link: ''
 slug: take-your-batch-into-cloud
 title: Take your batch into the cloud
 wordpress_id: 223
-categories:
-- Code
+category: Code
 ---
 
 From the work blog:  

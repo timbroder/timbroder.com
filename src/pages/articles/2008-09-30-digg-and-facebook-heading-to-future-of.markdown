@@ -8,8 +8,7 @@ link: ''
 slug: digg-and-facebook-heading-to-future-of
 title: Digg and Facebook Heading to the Future of Web Apps expo
 wordpress_id: 177
-categories:
-- Code
+category: Code
 tags:
 - digg
 - facebook

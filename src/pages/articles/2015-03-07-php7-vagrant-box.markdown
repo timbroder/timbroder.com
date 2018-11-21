@@ -8,8 +8,7 @@ link: ''
 slug: php7-vagrant-box
 title: PHP7 Vagrant Box
 wordpress_id: 1802
-categories:
-- Code
+category: Code
 tags:
 - php
 - vagrant

@@ -8,8 +8,7 @@ link: ''
 slug: google-developer-podcast-ep-9-quickcap
 title: Google Developer Podcast Ep 9 QuickCap
 wordpress_id: 72
-categories:
-- Code
+category: Code
 ---
 
 I got some time today to listen to this Podcast today on the way to and from

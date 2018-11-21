@@ -8,8 +8,7 @@ link: ''
 slug: oh-amazon
 title: oh amazon
 wordpress_id: 679
-categories:
-- Broder
+category: Broder
 ---
 
 (10:18:07 AM) Laura: I think you ordered two plastic ball and chaisn 

@@ -8,8 +8,7 @@ link: ''
 slug: first-google-chrome-extensions
 title: First Google Chrome Extensions
 wordpress_id: 197
-categories:
-- Code
+category: Code
 tags:
 - chrome
 - greasemonkey

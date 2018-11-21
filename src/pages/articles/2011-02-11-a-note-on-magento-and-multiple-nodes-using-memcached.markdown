@@ -8,8 +8,7 @@ link: ''
 slug: a-note-on-magento-and-multiple-nodes-using-memcached
 title: A note on Magento and multiple nodes using Memcached
 wordpress_id: 831
-categories:
-- Code
+category: Code
 tags:
 - magento
 - Memcached

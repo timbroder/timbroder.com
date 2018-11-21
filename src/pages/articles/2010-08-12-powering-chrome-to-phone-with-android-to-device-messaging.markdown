@@ -8,8 +8,7 @@ link: ''
 slug: powering-chrome-to-phone-with-android-to-device-messaging
 title: 'Powering Chrome to Phone with Android to Device Messaging '
 wordpress_id: 591
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: wine-updates-with-better-chrome-support
 title: WINE Updates with Better Chrome Support
 wordpress_id: 159
-categories:
-- Code
+category: Code
 tags:
 - chrome
 ---

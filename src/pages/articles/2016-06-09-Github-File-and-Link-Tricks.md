@@ -8,8 +8,7 @@ slug: github-file-and-link-tricks
 
 title: Github File and Link Tricks
 
-categories:
-- Code
+category: Code
 tags:
 - github
 - productivity

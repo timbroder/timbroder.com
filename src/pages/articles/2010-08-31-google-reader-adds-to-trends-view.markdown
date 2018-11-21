@@ -8,8 +8,7 @@ link: ''
 slug: google-reader-adds-to-trends-view
 title: Google Reader adds to trends view
 wordpress_id: 628
-categories:
-- Code
+category: Code
 tags:
 - Google Reader
 ---

@@ -8,8 +8,7 @@ link: ''
 slug: delayed-thoughts-wwdc-2014-keynote
 title: Delayed Liveblog on the WWDC 2014 Keynote
 wordpress_id: 1541
-categories:
-- Commentary
+category: Commentary
 ---
 
 I was stuck in meetings most of the day but I was able to download the keynote

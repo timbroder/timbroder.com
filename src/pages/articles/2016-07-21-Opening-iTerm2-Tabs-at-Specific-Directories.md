@@ -8,8 +8,7 @@ slug: opening-iterm2-tabs-at-specific-directories
 
 title: Opening iTerm2 Tabs at Specific Directories
 
-categories:
-- Code
+category: Code
 tags:
 - 
 - 

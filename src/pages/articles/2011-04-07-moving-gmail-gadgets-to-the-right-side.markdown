@@ -8,8 +8,7 @@ link: ''
 slug: moving-gmail-gadgets-to-the-right-side
 title: Moving Gmail Gadgets to the Right Side
 wordpress_id: 900
-categories:
-- Code
+category: Code
 tags:
 - css
 - gmail

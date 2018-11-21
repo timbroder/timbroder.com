@@ -8,8 +8,7 @@ link: ''
 slug: google-code-updates-google-developer
 title: First Google Gadget
 wordpress_id: 29
-categories:
-- Code
+category: Code
 tags:
 - calendar
 - gadgets

@@ -8,8 +8,7 @@ link: http://www.mobileinc.co.uk/2013/12/follow-pie-the-instagram-bot-made-to-ge
 slug: follow-pie-the-story-of-the-instagram-bot-made-to-increase-app-store-downloads
 title: Follow Pie – The Story Of The Instagram Bot Made To Increase App Store Downloads
 wordpress_id: 1416
-categories:
-- Code
+category: Code
 ---
 
 > “How the hell do you have 18,000 followers on Instagram???”

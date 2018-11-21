@@ -8,8 +8,7 @@ link: ''
 slug: 42-75-new-box-jump-pr
 title: 42.75" New Box Jump PR
 wordpress_id: 893
-categories:
-- Crossfit
+category: Crossfit
 ---
 
 [video](https://www.facebook.com/timbroder/videos/679430254336/?l=2066031206978693743 "video")

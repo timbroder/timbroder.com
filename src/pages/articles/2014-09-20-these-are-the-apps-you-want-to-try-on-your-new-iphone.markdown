@@ -8,8 +8,7 @@ link: http://www.theverge.com/2014/9/19/6397101/the-best-new-apps-for-iphone-ios
 slug: these-are-the-apps-you-want-to-try-on-your-new-iphone
 title: These are the apps you want to try on your new iPhone
 wordpress_id: 1703
-categories:
-- Commentary
+category: Commentary
 ---
 
 >  

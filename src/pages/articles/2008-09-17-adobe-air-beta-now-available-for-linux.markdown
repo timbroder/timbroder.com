@@ -8,8 +8,7 @@ link: ''
 slug: adobe-air-beta-now-available-for-linux
 title: Adobe AIR Beta Now Available for Linux
 wordpress_id: 165
-categories:
-- Code
+category: Code
 tags:
 - ubuntu
 ---

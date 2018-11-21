@@ -8,8 +8,7 @@ link: ''
 slug: animate-adwhirl-bottom
 title: Animate an AdWhirlView from the Bottom of the Screen
 wordpress_id: 1154
-categories:
-- Code
+category: Code
 tags:
 - adwhirl
 - ipad

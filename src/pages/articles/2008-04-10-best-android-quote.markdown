@@ -8,8 +8,7 @@ link: ''
 slug: best-android-quote
 title: Best Android quote
 wordpress_id: 105
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

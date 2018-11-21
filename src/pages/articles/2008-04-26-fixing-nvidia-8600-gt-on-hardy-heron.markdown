@@ -8,8 +8,7 @@ link: ''
 slug: fixing-nvidia-8600-gt-on-hardy-heron
 title: Fixing Nvidia 8600 GT on Hardy Heron
 wordpress_id: 112
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - ubuntu

@@ -8,8 +8,7 @@ link: ''
 slug: android-market-user-driven-content
 title: 'Android Market: a user-driven content distribution system'
 wordpress_id: 156
-categories:
-- Code
+category: Code
 tags:
 - Android
 ---

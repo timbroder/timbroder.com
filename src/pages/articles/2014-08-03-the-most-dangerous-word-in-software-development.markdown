@@ -8,8 +8,7 @@ link: http://alistapart.com/blog/post/the-most-dangerous-word-in-software-develo
 slug: the-most-dangerous-word-in-software-development
 title: The Most Dangerous Word In Software Development
 wordpress_id: 1639
-categories:
-- Commentary
+category: Commentary
 ---
 
 > “Just put it up on a server somewhere.”

@@ -8,8 +8,7 @@ link: ''
 slug: getting-numerof-diggs-from-digg
 title: 'HOWTO: Getting the Numer of Diggs from Digg (Python)'
 wordpress_id: 55
-categories:
-- Code
+category: Code
 tags:
 - HOWTO
 - python

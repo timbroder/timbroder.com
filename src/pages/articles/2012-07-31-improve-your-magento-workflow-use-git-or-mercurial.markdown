@@ -8,8 +8,7 @@ link: ''
 slug: improve-your-magento-workflow-use-git-or-mercurial
 title: 'Improve your Magento workflow: Use git or mercurial'
 wordpress_id: 1141
-categories:
-- Code
+category: Code
 tags:
 - git
 - magento

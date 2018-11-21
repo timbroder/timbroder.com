@@ -8,8 +8,7 @@ link: ''
 slug: playgrounds-in-swift-are-awesome
 title: Playgrounds in Swift are Awesome
 wordpress_id: 1587
-categories:
-- Code
+category: Code
 tags:
 - swift
 ---

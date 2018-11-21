@@ -8,8 +8,7 @@ link: ''
 slug: mars-robot-twittered-from-space
 title: Mars Robot twittered from Space
 wordpress_id: 142
-categories:
-- Code
+category: Code
 tags:
 - twitter
 ---

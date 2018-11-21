@@ -8,8 +8,7 @@ link: ''
 slug: new-documents-list-api
 title: New Documents List API
 wordpress_id: 32
-categories:
-- Code
+category: Code
 tags:
 - Docs Spreadsheets
 ---

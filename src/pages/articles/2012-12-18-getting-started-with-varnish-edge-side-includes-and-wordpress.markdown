@@ -8,8 +8,7 @@ link: ''
 slug: getting-started-with-varnish-edge-side-includes-and-wordpress
 title: Getting Started with Varnish Edge Side Includes and Wordpress
 wordpress_id: 1269
-categories:
-- Code
+category: Code
 tags:
 - ESI
 - varnish

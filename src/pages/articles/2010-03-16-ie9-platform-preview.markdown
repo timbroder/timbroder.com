@@ -8,8 +8,7 @@ link: ''
 slug: ie9-platform-preview
 title: IE9 platform preview
 wordpress_id: 238
-categories:
-- Code
+category: Code
 tags:
 - Internet Explorer
 ---
