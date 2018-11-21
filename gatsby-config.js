@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
-    subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-    copyright: '© All rights reserved.',
+    url: 'https://www.timbroder.com',
+    title: 'timbroder.com',
+    subtitle: 'Code. Comics. Crossfit',
+    copyright: '© 2007-2019 Tim Broder. All rights reserved.',
     disqusShortname: '',
     menu: [
       {
@@ -20,13 +20,13 @@ module.exports = {
       }
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vk: '#'
+      name: 'Tim Broder',
+      email: 'timothy.broder@gmail.com',
+      twitter: 'timothybroder',
+      github: 'timbroder',
+      rss: '/rss.xml',
+      linkedin: 'timbroder',
+      instagram: 'timothybroder'
     }
   },
   plugins: [
@@ -60,7 +60,9 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.site_url + edge.node.fields.slug,
                   guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                  link: site.siteMetadata.link,
+                  slug: site.siteMetadata.slug
                 }))
             ),
             query: `
@@ -107,7 +109,12 @@ module.exports = {
             resolve: 'gatsby-remark-responsive-iframe',
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbersGlobal: true
+            }
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants'
         ]

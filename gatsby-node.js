@@ -4,6 +4,7 @@ const path = require('path');
 const lost = require('lost');
 const pxtorem = require('postcss-pxtorem');
 const slash = require('slash');
+const moment = require('moment');
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
@@ -106,11 +107,18 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     let slug = fileNode.fields.slug;
     if (typeof node.frontmatter.path !== 'undefined') {
       slug = node.frontmatter.path;
+    } else if (typeof node.frontmatter.slug !== 'undefined' && typeof node.frontmatter.date) {
+      slug = `/${moment(node.frontmatter.date).format('YYYY/MM/') + node.frontmatter.slug}`;
+    } else {
+      const fileName = _.replace(_.last(_.split(node.fileAbsolutePath, '/')), '.md', '');
+      const adjusted = _.replace(fileName, new RegExp('\\d{4}-\\d{2}-\\d{2}-', 'g'), '');
+      slug = `/${moment(node.frontmatter.date).format('YYYY/MM/') + adjusted}`;
     }
+
     createNodeField({
       node,
       name: 'slug',
-      value: slug
+      value: `${slug}.html`
     });
 
     if (node.frontmatter.tags) {
