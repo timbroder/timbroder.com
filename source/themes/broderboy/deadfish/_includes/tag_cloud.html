@@ -1,6 +1,0 @@
-{% for tag in tag_cloud %}
-    <span class="tag size{{ tag.weight }}"><a href="{{ site.url }}/blog/tags/{{ tag.tag|url_encode(true) }}">{{ tag.tag }}</a></span>
-    {% if not loop.last %}
-        &nbsp;
-    {% endif %}
-{% endfor %}
