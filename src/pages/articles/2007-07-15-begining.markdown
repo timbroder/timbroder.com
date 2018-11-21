@@ -8,10 +8,11 @@ link: ''
 slug: begining
 title: A begining
 wordpress_id: 23
-categories:
-- Code
+category: Code
 tags:
 - gpowered.net
+draft: false
+description: yolo
 ---
 
 I've been meaning to start this project for a while now so here it goes...  
