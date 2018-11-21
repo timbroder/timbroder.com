@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Wertzone: A History Of Epic Fantasy - Part 1
+title: 'The Wertzone: A History Of Epic Fantasy - Part 1'
 date: 2016-01-10 20:57
 link: http://thewertzone.blogspot.com/2015/08/a-history-of-epic-fantasy-part-1.html
 ---

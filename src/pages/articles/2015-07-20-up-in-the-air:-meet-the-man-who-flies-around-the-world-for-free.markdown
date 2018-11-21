@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Up In The Air: Meet The Man Who Flies Around The World For Free
+title: 'Up In The Air: Meet The Man Who Flies Around The World For Free'
 date: 2015-07-20 20:12
 link: http://www.rollingstone.com/culture/features/ben-schlappig-airlines-fly-free-20150720
 ---

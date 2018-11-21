@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Magento 2: Q&A With A Systems Architect
+title: 'Magento 2: Q&A With A Systems Architect'
 date: 2015-10-04 16:55
 link: http://www.blueacorn.com/blog/Magento-Two-Interview/
 ---

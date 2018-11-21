@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sam: Ios Games You Need To Play
+title: 'Sam: Ios Games You Need To Play'
 date: 2015-07-21 11:03
 link: http://www.samuelstrickland.me/blog/2015/7/ios-games-you-need-to-play
 ---

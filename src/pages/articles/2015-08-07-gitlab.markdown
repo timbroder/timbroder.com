@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gitlab: Almost Everything We Do Will Be Open
+title: 'Gitlab: Almost Everything We Do Will Be Open'
 date: 2015-08-07 17:01
 link: https://about.gitlab.com/2015/08/03/almost-everything-we-do-is-now-open/
 ---
