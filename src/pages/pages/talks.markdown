@@ -1,5 +1,7 @@
 ---
 title: Talks
+layout: page
+path: /talks
 ---
 
 I give talks at Ai, conferences, and various [Meetups][7] around NYC

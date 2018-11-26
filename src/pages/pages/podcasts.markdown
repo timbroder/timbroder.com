@@ -1,5 +1,7 @@
 ---
 title: Podcasts
+layout: page
+path: /podcasts
 ---
 
 I co-host the Show &amp; Tell Cast on the [Tekside][7] network. Every month,&nbsp;I join&nbsp;[Sam Strickland][8] and [Ellyn Mcnamara][9] to share and discuss a film that we each have selected. We cover our favorite classics as well as the latest and greatest. It’s a fantastic opportunity to expose each other and our friends to great films we may have missed or overlooked. [Subscribe in iTunes][10]

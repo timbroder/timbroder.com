@@ -1,5 +1,7 @@
 ---
 title: Projects
+layout: page
+path: /projects
 ---
 Most of my projects are client work and under NDA. If I have free time, I hack on random things
 

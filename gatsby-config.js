@@ -7,16 +7,20 @@ module.exports = {
     disqusShortname: '',
     menu: [
       {
-        label: 'Articles',
-        path: '/'
+        label: 'Apps',
+        path: '/apps.html'
       },
       {
-        label: 'About me',
-        path: '/about/'
+        label: 'Podcasts',
+        path: '/podcasts.html'
       },
       {
-        label: 'Contact me',
-        path: '/contact/'
+        label: 'Projects',
+        path: '/projects.html'
+      },
+      {
+        label: 'Talks',
+        path: '/talks.html'
       }
     ],
     author: {

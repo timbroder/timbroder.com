@@ -1,5 +1,7 @@
 ---
 title: Apps
+layout: page
+path: /apps
 ---
 
 I really wanted to learn native app development. Having a C background and having a bad experience with Android Dev, I got myself an iPhone 5, formed an [LLC][1], and dove in on nights/weekends. In a perfect world I would have made millions! It's been a lot of fun. Lately, I've been learning Swift

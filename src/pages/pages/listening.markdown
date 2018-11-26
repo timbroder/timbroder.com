@@ -1,9 +1,8 @@
 ---
 title: Podcasts I Listen To
-child: true
+layout: page
+path: /podcasts-i-listen-to
 ---
-
-# Podcasts I Listen to
 
 Some of these I listen to every week. Some I cherry pick
 
