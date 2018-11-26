@@ -27,6 +27,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               slug
             }
             frontmatter {
+              link
               tags
               layout
               category

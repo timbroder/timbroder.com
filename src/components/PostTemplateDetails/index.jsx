@@ -42,6 +42,11 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
+            {post.frontmatter.link &&
+            <div className="post-single__date">
+              <em>Check out the <a href={post.frontmatter.link}>original article</a></em>
+            </div>
+            }
             <div className="post-single__body" dangerouslySetInnerHTML={{ __html: post.html }} />
             <div className="post-single__date">
               <em>Published {moment(post.frontmatter.date).format('D MMM YYYY')}</em>
