@@ -46,7 +46,6 @@ module.exports = {
               siteMetadata {
                 site_url: url
                 title
-                description: subtitle
               }
             }
           }
@@ -56,7 +55,6 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => (
               allMarkdownRemark.edges.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.site_url + edge.node.fields.slug,
                   guid: site.siteMetadata.site_url + edge.node.fields.slug,

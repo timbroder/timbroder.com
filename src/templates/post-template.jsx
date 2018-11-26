@@ -5,16 +5,15 @@ import PostTemplateDetails from '../components/PostTemplateDetails';
 class PostTemplate extends React.Component {
   render() {
     const siteMetadata = this.props.data.site.siteMetadata;
-    const { title, subtitle } = siteMetadata;
+    const { title } = siteMetadata;
     const post = this.props.data.markdownRemark;
-    const { title: postTitle, description: postDescription } = post.frontmatter;
-    const description = postDescription !== null ? postDescription : subtitle;
+    const { title: postTitle } = post.frontmatter;
 
     return (
       <div>
         <Helmet>
           <title>{`${postTitle} - ${title}`}</title>
-          <meta name="description" content={description} />
+          <meta name="description" content="meow2" />
         </Helmet>
         <PostTemplateDetails siteMetadata={siteMetadata} post={post} />
       </div>

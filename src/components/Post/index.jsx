@@ -5,7 +5,7 @@ import './style.scss';
 
 class Post extends React.Component {
   render() {
-    const { title, date, category, description } = this.props.data.node.frontmatter;
+    const { title, date, category } = this.props.data.node.frontmatter;
     const { slug, categorySlug } = this.props.data.node.fields;
 
     return (
@@ -24,7 +24,7 @@ class Post extends React.Component {
         <h2 className="post__title">
           <Link className="post__title-link" to={slug}>{title}</Link>
         </h2>
-        <p className="post__description">{description}</p>
+        <p className="post__description">meow1</p>
         <Link className="post__readmore" to={slug}>Read</Link>
       </div>
     );

@@ -5,16 +5,14 @@ import PageTemplateDetails from '../components/PageTemplateDetails';
 class PageTemplate extends React.Component {
   render() {
     const siteMetadata = this.props.data.site.siteMetadata;
-    const { title, subtitle } = siteMetadata;
+    const { title } = siteMetadata;
     const page = this.props.data.markdownRemark;
-    const { title: pageTitle, description: pageDescription } = page.frontmatter;
-    const description = pageDescription !== null ? pageDescription : subtitle;
+    const { title: pageTitle } = page.frontmatter;
 
     return (
       <div>
         <Helmet>
           <title>{`${pageTitle} - ${title}`}</title>
-          <meta name="description" content={description} />
         </Helmet>
         <PageTemplateDetails
           siteMetadata={siteMetadata}
@@ -40,7 +38,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
-        description
       }
     }
   }
