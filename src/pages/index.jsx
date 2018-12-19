@@ -49,6 +49,7 @@ export const pageQuery = graphql`
             slug
             categorySlug
           }
+          excerpt(pruneLength: 500)
           frontmatter {
             title
             date
