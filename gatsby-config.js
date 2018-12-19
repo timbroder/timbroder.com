@@ -4,7 +4,7 @@ module.exports = {
     title: 'timbroder.com',
     subtitle: 'Code. Comics. Crossfit',
     copyright: '© 2007-2019 Tim Broder. All rights reserved.',
-    disqusShortname: '',
+    disqusShortname: 'timbrodercom',
     menu: [
       {
         label: 'Apps',
