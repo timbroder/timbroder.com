@@ -28,7 +28,7 @@ module.exports = {
       email: 'timothy.broder@gmail.com',
       twitter: 'timothybroder',
       github: 'timbroder',
-      rss: '/rss.xml',
+      rss: 'http://feeds.feedburner.com/timbroder',
       linkedin: 'timbroder',
       instagram: 'timothybroder'
     }
@@ -42,7 +42,7 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: 'gatsby-plugin-feed-timbroder',
       options: {
         query: `
           {
@@ -92,7 +92,7 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml'
+            output: '/atom_feedburner.xml'
           }
         ]
       }
