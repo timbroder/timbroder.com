@@ -20,4 +20,4 @@ Man alive, I missed this from Python.  More live editing, less edit+build+run.
 
 
 
-![](http://sd.keepcalm-o-matic.co.uk/i/everything-is-awesome-6.png)
+![](https://sd.keepcalm-o-matic.co.uk/i/everything-is-awesome-6.png)
