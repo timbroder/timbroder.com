@@ -17,7 +17,7 @@ quickest I found
 
   1. Click explore
   2. click "View all recommendations"  
-  	![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SzD8khAOeNI/AAAAAAAAeX4/RBFGgN8O-B8/s1600-h/read1.png)
+  	![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SzD8khAOeNI/AAAAAAAAeX4/RBFGgN8O-B8/s1600-h/read1.png)
 
   3. click Browse
   4. click Create a bundle  
@@ -25,7 +25,7 @@ quickest I found
   
   
 
-	![](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SzD88D6_mgI/AAAAAAAAeYA/6QirJn9t9fc/s1600-h/read2.png)  
+	![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SzD88D6_mgI/AAAAAAAAeYA/6QirJn9t9fc/s1600-h/read2.png)  
 
   
   

@@ -63,7 +63,7 @@ jquery,charCount.js
  
 /*
 * Modified 2010 Tim Broder for django-admin-charcount
-* http://gpowered.net
+* https://gpowered.net
 */
 (function($) {
 $.fn.charCount = function(options){

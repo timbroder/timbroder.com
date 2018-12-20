@@ -19,4 +19,4 @@ able to hide the stats in the upper left. The only one I ever look at is how
 many total unread items I have.  
   
 
-![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/STk5K-WSxAI/AAAAAAAAT_c/dhYyr6IvNIk/s1600-h/reader.jpg)
+![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/STk5K-WSxAI/AAAAAAAAT_c/dhYyr6IvNIk/s1600-h/reader.jpg)

@@ -40,7 +40,7 @@ not already have it as the title, I was curious as to how this would effect
 the results. Below are the results of the most popular Distros on Distrowatch.
 Look, Ubuntu! The spreadsheet that has all of the findings (and all 366
 distros) is shared
-[here](http://spreadsheets.google.com/pub?key=p919ps7OYXvugbqx9SegSTw)  
+[here](https://spreadsheets.google.com/pub?key=p919ps7OYXvugbqx9SegSTw)  
   
 **Distro**| **Page Hist**  
 ---|---  
@@ -57,7 +57,7 @@ Slackware Linux| 3,010,000
 MEPIS Linux| 1,640,000  
   
   
-![Distro Chart](http://spreadsheets.google.com/pub?key=p919ps7OYXvugbqx9SegSTw&oid=2&output=image)  
+![Distro Chart](https://spreadsheets.google.com/pub?key=p919ps7OYXvugbqx9SegSTw&oid=2&output=image)  
   
 Stay tuned for the code behind it!
 [Subscribe](http://feeds.feedburner.com/gPpowered) to the feed to get more

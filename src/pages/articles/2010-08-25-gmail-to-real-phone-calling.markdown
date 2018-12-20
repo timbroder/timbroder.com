@@ -15,7 +15,7 @@ tags:
 ---
 
 We're playing with this at the office, pretty slick.  Seems like google just
-really wants to be skype though ![](http://3.bp.blogspot.com/_JE4qNpFW6Yk/THRyAaGzsCI/AAAAAAAAAsI/Kv0RN0TmcLU/s800/screenshot2.jpeg) "[Gmail voice and video
+really wants to be skype though ![](https://3.bp.blogspot.com/_JE4qNpFW6Yk/THRyAaGzsCI/AAAAAAAAAsI/Kv0RN0TmcLU/s800/screenshot2.jpeg) "[Gmail voice and video
 chat](http://gmailblog.blogspot.com/2008/11/say-hello-to-gmail-voice-and-video-chat.html) makes it easy to stay in touch with friends and family using
 your computer’s microphone and speakers. But until now, this required both
 people to be at their computers, signed into Gmail at the same time. Given

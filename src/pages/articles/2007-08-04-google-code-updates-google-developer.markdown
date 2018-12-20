@@ -22,7 +22,7 @@ team](http://www.rpicrew.com) can use. We have a shared google calendar that
 some of us use to keep track of races, meetings, etc. This gadget pulls and
 formats it nicely for the google IG or desktop.  
   
-[![Add to Google](http://buttons.googlesyndication.com/fusion/add.gif)](http://fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file/109141966999504040851/RPICrewSchedule.xml)  
+[![Add to Google](https://buttons.googlesyndication.com/fusion/add.gif)](http://fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file/109141966999504040851/RPICrewSchedule.xml)  
   
 Javascript code for the gadget:  
 
@@ -233,7 +233,7 @@ And the XML for the gadget
     <?xml version="1.0" encoding="UTF-8"?>
     <Module>
     <ModulePrefs title="RPI Crew Schedule"
-    title_url="http://gpowered.net"
+    title_url="https://gpowered.net"
     author="Tim Broder"
     height="150"
     width="250"

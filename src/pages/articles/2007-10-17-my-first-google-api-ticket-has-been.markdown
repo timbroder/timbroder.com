@@ -15,7 +15,7 @@ tags:
 
 My first [ticket](http://code.google.com/p/gdata-issues/issues/detail?id=44)
 for the Google Document List API has been fixed. As I posted about
-[before](http://gpowered.blogspot.com/2007/08/quick-docs-api-example-
+[before](https://gpowered.blogspot.com/2007/08/quick-docs-api-example-
 python.html), the Document List API did not have the ability to just retrieve
 the documents from a given folder or tag. This has now been made possible,
 thanks API team!  

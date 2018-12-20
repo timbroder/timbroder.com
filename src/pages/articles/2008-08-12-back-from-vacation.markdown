@@ -22,7 +22,7 @@ past](http://blog.gpowered.net/2007/09/google-books-my-library-vs-librarything.h
 distant future.  
   
 
-[![Widget_logo](http://www.goodreads.com/images/widget/widget_logo.gif)](http:
+[![Widget_logo](https://www.goodreads.com/images/widget/widget_logo.gif)](http:
 //www.goodreads.com/user/show/1253891)
 
   

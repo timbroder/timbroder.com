@@ -17,7 +17,7 @@ but it's been way to hectic. Here are some highlights some commentary thrown
 in.  
   
 
-  * ZohoWriter goes on Gears - See my opinions about this [here](http://gpowered.blogspot.com/2007/08/google-get-in-gear.html). Google really needs to step it up and get Gears into their own services. The top two on my list being Gmail and Docs
+  * ZohoWriter goes on Gears - See my opinions about this [here](https://gpowered.blogspot.com/2007/08/google-get-in-gear.html). Google really needs to step it up and get Gears into their own services. The top two on my list being Gmail and Docs
   * Embed Google Maps in a "youtube like way". Also the Drag zoom and custom marker manager controls have been improved. Very easy to use.
   * Sky in Google Earth. I havn't played with this yet. I'll check it out after work tomorrow if Halo 3 isn't in the mailbox ;-) 
     * Stars
@@ -27,7 +27,7 @@ in.
 The Guest in this episode was Mark Stahl, the Tech lead of GData since it
 started (about 2 1/2 years)
 
-  * GData is the way to interact with Google Data, See most of my [HOWTO's](http://gpowered.blogspot.com/search/label/HOWTO) for examples.
+  * GData is the way to interact with Google Data, See most of my [HOWTO's](https://gpowered.blogspot.com/search/label/HOWTO) for examples.
   * Uses the Atom publishing protocol (REST)
   * Resources are represented as XML. Many, many libraries are out there for working with XML so no steep learning curve for working with the data.
   * GET, PUT, POST, DEL to manipulate Data

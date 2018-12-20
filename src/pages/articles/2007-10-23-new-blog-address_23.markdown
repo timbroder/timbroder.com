@@ -26,6 +26,6 @@ feed](http://feeds.feedburner.com/gPpowered) so if you use that to subscribe
 you shouldn't have to change anything (although with the forwarding I don't
 think it matters, but why risk it). I also set up gpowered.net and
 www.gpowered.net to forward to the blog as the main page. Any of my python
-examples will be moved from http://gpowered.net to http://gpowered.net/g/. I'm
+examples will be moved from https://gpowered.net to https://gpowered.net/g/. I'm
 going to update all of the posts to reflect this.
 

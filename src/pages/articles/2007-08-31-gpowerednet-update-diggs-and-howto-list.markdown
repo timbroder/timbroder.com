@@ -15,6 +15,6 @@ tags:
 
 Quick update while I'm sitting here waiting for my friends in Seattle to get
 home from work, and its dinner time in NY, I need food! Anyway, I added the
-Digg count and HOWTO lists to the [Post List](http://gpowered.net/g/postlist/)
+Digg count and HOWTO lists to the [Post List](https://gpowered.net/g/postlist/)
 page as YUI tabview tabs.
 

@@ -15,7 +15,7 @@ tags:
 ---
 
 A few days ago I added the Digg counts to the bottom of the
-[Posts](http://gpowered.net/g/postlist) page on gPowered.net. Although, the
+[Posts](https://gpowered.net/g/postlist) page on gPowered.net. Although, the
 more posts that I add, the further down on the page this section will get, so
 I decided to play around with YUI's [tabview
 control](http://developer.yahoo.com/yui/tabview/) and put the post list in one

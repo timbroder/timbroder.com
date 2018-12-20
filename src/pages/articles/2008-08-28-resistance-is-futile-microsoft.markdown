@@ -11,5 +11,5 @@ wordpress_id: 151
 category: Code
 ---
 
-[![](http://houghi.org/shots/vim001.gif)](http://houghi.org/shots/vim001.gif)[
+[![](https://houghi.org/shots/vim001.gif)](https://houghi.org/shots/vim001.gif)[
 туры в танзанию килиманджаро](https://altezza.travel/)

@@ -15,6 +15,6 @@ tags:
 
 The design and domain have been set up (actually I finished it a week or so
 ago but work's been keeping me pretty crazy). All my examples will be
-implemented on [gPowered.net](http://gpowered.net/g/) as well as a copy of
+implemented on [gPowered.net](https://gpowered.net/g/) as well as a copy of
 theses posts. Enjoy.
 

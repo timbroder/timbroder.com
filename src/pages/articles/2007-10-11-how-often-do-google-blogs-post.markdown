@@ -22,8 +22,8 @@ The top two are the official Google Blog, and the Google Code blog, which
 makes sense as they are all encompassing aspects of Google. Following these
 are Maps and Adsense, two of Google biggest products.  
   
-![](http://spreadsheets.google.com/pub?key=p919ps7OYXvu5ZpA4odOsHw&oid=2&output=image)  
+![](https://spreadsheets.google.com/pub?key=p919ps7OYXvu5ZpA4odOsHw&oid=2&output=image)  
   
 This chart is live from the spreadsheet I made which you can view
-[here](http://spreadsheets.google.com/pub?key=p919ps7OYXvu5ZpA4odOsHw)
+[here](https://spreadsheets.google.com/pub?key=p919ps7OYXvu5ZpA4odOsHw)
 

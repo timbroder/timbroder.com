@@ -13,7 +13,7 @@ category: Code
 
 This will be pretty cool when it comes out  
   
-[Location, Location, Location](http://blog.twitter.com/2009/08/location-location-location.html): "![](http://3.bp.blogspot.com/_E8ZD85Wzu9E/So20MKF3WiI/AAAAAAAAAnw/QjXxH9JTBGM/s1600-h/iStock_000006260161Small.jpg)Twitter platform developers have been doing innovative work
+[Location, Location, Location](http://blog.twitter.com/2009/08/location-location-location.html): "![](https://3.bp.blogspot.com/_E8ZD85Wzu9E/So20MKF3WiI/AAAAAAAAAnw/QjXxH9JTBGM/s1600-h/iStock_000006260161Small.jpg)Twitter platform developers have been doing innovative work
 with location for some time despite having access to only a rudimentary level
 of API support. Most of the location-based projects we see are built using the
 simple, account-level location field folks can fill out as part of their

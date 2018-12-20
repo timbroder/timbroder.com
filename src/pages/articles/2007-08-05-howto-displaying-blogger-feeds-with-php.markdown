@@ -17,7 +17,7 @@ tags:
 ---
 
 This HOWTO is going to follow the basic structure of the
-[Python](http://gpowered.net/g/post/2/) one.  
+[Python](https://gpowered.net/g/post/2/) one.  
   
 To start out you'll have to grab the [Zend Google data Client
 Library](http://framework.zend.com/download/gdata) and then set the
@@ -126,8 +126,8 @@ private function get_total($query){
 <ns0:generator uri="http://www.blogger.com" version="7.00">Blogger</ns0:generator>
 <ns0:author><ns0:name>Tim</ns0:name></ns0:author>
 <ns0:id>tag:blogger.com,1999:blog-413573351281770670</ns0:id>
-<ns0:link href="http://gpowered.blogspot.com/" rel="alternate" type="text/html" />
-<ns0:link href="http://gpowered.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" />
+<ns0:link href="https://gpowered.blogspot.com/" rel="alternate" type="text/html" />
+<ns0:link href="https://gpowered.blogspot.com/feeds/posts/default" rel="http://schemas.google.com/g/2005#feed" type="application/atom+xml" />
 <ns0:link href="http://www.blogger.com/feeds/413573351281770670/posts/default?max-results=0" rel="self" type="application/atom+xml" />
 <ns0:link href="http://www.blogger.com/feeds/413573351281770670/posts/default" rel="http://schemas.google.com/g/2005#post" type="application/atom+xml" />
 <ns0:title type="text">gPowered</ns0:title>
@@ -283,5 +283,5 @@ Below all the php we can run through out output object and display the posts
 
   
 That's all for now. A working example is
-[here](http://gpowered.net/php/blogger.php)
+[here](https://gpowered.net/php/blogger.php)
 

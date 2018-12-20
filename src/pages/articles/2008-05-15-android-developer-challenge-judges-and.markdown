@@ -25,9 +25,9 @@ uses the phone on the camera to take a photo of a bar code, look up the
 product in a database, and then gets you all the information you would need
 about that product and where you can buy it right from your phone (amazon,
 ebay, etc). Do yourself a favor and watch the
-[video](http://scan.jsharkey.org/).  
+[video](https://scan.jsharkey.org/).  
   
-![](http://scan.jsharkey.org/vlcsnap-7082040.png.jpg)  
+![](https://scan.jsharkey.org/vlcsnap-7082040.png.jpg)  
   
 I'll be going through that slide deck and will be posting some more of my
 favorites. Anyone else hope the HTC Diamond can run Android out of the box?

@@ -17,7 +17,7 @@ tags:
 
 I've been wanting to [share](http://www.gpowered.net/g/feeds/) what I
 subscribe to in Google Reader and using the [functions I
-wrote](http://gpowered.blogspot.com/2007/08/google-reader-api-functions.html)
+wrote](https://gpowered.blogspot.com/2007/08/google-reader-api-functions.html)
 I was able to do just that. Check out the article for the full run down on the
 unofficial Google Reader API. This is written in python but should be easily
 portable to php. If i get around to it, I want to make a WordPress plugin so
@@ -26,7 +26,7 @@ bloggers can share what they read with their readers. This will be followed
 users can do the same in the sidebar. On to the code!  
   
 To start off we'll just copy the functions we need from [last
-time](http://gpowered.blogspot.com/2007/08/google-reader-api-functions.html).
+time](https://gpowered.blogspot.com/2007/08/google-reader-api-functions.html).
 Generally this is the login and SID token functions, as well as the feed list
 function.  
 

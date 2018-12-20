@@ -44,7 +44,7 @@ following steps should get you up to speed on podcasting with winamp
   
   
 
-![](http://1.bp.blogspot.com/_Ng3QbVQfLZ8/SejSAesN5OI/AAAAAAAAbG8/i6n7ZuHGR7A/s1600-h/1.jpg)
+![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SejSAesN5OI/AAAAAAAAbG8/i6n7ZuHGR7A/s1600-h/1.jpg)
 
   * plug in your ipod
   * enable podcast support for the ipod

@@ -116,8 +116,8 @@ The below function returns the total number of posts that are in the feed.  We c
      <ns0:generator version="7.00" uri="http://www.blogger.com">Blogger</ns0:generator>
      <ns0:author><ns0:name>Tim</ns0:name></ns0:author>
      <ns0:id>tag:blogger.com,1999:blog-413573351281770670</ns0:id>
-     <ns0:link href="http://gpowered.blogspot.com/" type="text/html" rel="alternate"></ns0:link>
-     <ns0:link href="http://gpowered.blogspot.com/feeds/posts/default" type="application/atom+xml" rel="http://schemas.google.com/g/2005#feed"></ns0:link>
+     <ns0:link href="https://gpowered.blogspot.com/" type="text/html" rel="alternate"></ns0:link>
+     <ns0:link href="https://gpowered.blogspot.com/feeds/posts/default" type="application/atom+xml" rel="http://schemas.google.com/g/2005#feed"></ns0:link>
      <ns0:link href="http://www.blogger.com/feeds/413573351281770670/posts/default?max-results=0" type="application/atom+xml" rel="self"></ns0:link>
      <ns0:link href="http://www.blogger.com/feeds/413573351281770670/posts/default" type="application/atom+xml" rel="http://schemas.google.com/g/2005#post"></ns0:link>
      <ns0:title type="text">gPowered</ns0:title>
@@ -247,4 +247,4 @@ And the second part handles the prev and next links
     {% include 'bottom.html' %}
     {% endverbatim %}
 ```
-That's all for now. A working example is the [gPowered.net](http://gpowered.net/g/) site I'm putting up.  All posts on there are getting pulled from this blog.  I'm going to get into tags and comments next time, as well as javascript and php versions. Stay tuned!
+That's all for now. A working example is the [gPowered.net](https://gpowered.net/g/) site I'm putting up.  All posts on there are getting pulled from this blog.  I'm going to get into tags and comments next time, as well as javascript and php versions. Stay tuned!

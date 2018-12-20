@@ -21,7 +21,7 @@ many Diggs certain stories were getting. In some ways it is similar to GData:
 make a call to a URL, get some XML back, parse it, etc. It does, however, feel
 lighter, probably due to its streamlined nature. It has one purpose, get
 information off of Digg. Using this, I've added a section in the [Post
-List](http://gpowered.net/g/postlist/) section of gPowered.net that shows the
+List](https://gpowered.net/g/postlist/) section of gPowered.net that shows the
 Diggs of a few of the articles that I have submitted on Digg.  
   
 The API is broken into 5 main sections or endpoints. Each of these will return

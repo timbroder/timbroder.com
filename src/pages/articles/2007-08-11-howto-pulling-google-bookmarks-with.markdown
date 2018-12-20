@@ -20,8 +20,8 @@ I love using [Google Bookmarks](http://www.google.com/bookmarks/) (usually
 with the [Google Toolbar](http://toolbar.google.com)) because it lets me get
 to my bookmarks at home on my laptop or desktop, at work, or anywhere. It's
 great. Now I'm using those bookmarks to power the
-[links](http://gpowered.net/g/links/) section of
-[gPowered.net](http://gpowered.net/g)  
+[links](https://gpowered.net/g/links/) section of
+[gPowered.net](https://gpowered.net/g)  
 First we're going to need the
 [httplib2](http://code.google.com/p/httplib2/downloads/list) library so we can
 authenticate against Google and grab the bookmark feed and then the
@@ -101,8 +101,8 @@ small function that defines how to sort a bookmark
     
 
   
-Check out the static HTML version [Here](http://gpowered.net/g/links/simple).
-I also made a [fancier version](http://gpowered.net/g/links/) using
+Check out the static HTML version [Here](https://gpowered.net/g/links/simple).
+I also made a [fancier version](https://gpowered.net/g/links/) using
 [YUI](http://developer.yahoo.com/yui/)'s
 [TreeView](http://developer.yahoo.com/yui/treeview/)
 

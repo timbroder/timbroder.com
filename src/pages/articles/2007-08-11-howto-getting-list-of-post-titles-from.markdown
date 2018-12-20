@@ -16,8 +16,8 @@ tags:
 ---
 
 This will be a quick one on how to pull the titles from your blog. I'm using
-it to [Lists the posts](http://gpowered.net/g/postlist) I have available on
-[gPowered.net](http://gpowered.net/g/). Firstly we'll set up our imports and
+it to [Lists the posts](https://gpowered.net/g/postlist) I have available on
+[gPowered.net](https://gpowered.net/g/). Firstly we'll set up our imports and
 call to the blogger service.  
 
 
