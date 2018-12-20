@@ -6,9 +6,12 @@ class TagTemplateDetails extends React.Component {
     const items = [];
     const tagTitle = this.props.tag;
     const posts = this.props.posts;
-    posts.forEach((post) => {
-      items.push(<Post data={post} key={post.node.fields.slug} />);
-    });
+
+    if (posts) {
+      posts.forEach((post) => {
+        items.push(<Post data={post} key={post.node.fields.slug} />);
+      });
+    }
 
     return (
       <div className="content">
