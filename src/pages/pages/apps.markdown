@@ -26,6 +26,6 @@ Coming Soon:
 
 [1]: http://taco23.com/
 [2]: https://itunes.apple.com/us/app/weather-notifications/id704052114?mt=8&at=11laRZ&ct=pro
-[3]: http://taco23.com/weathernotifications/wp-content/uploads/sites/2/2013/09/AppIcon76x76@2x2.png
+[3]: https://taco23.com/weathernotifications/wp-content/uploads/sites/2/2013/09/AppIcon76x76@2x2.png
 [4]: http://timbroder.com/2014/03/avspeechsynthesizers-queue-doesnt-work.html
 [5]: https://itunes.apple.com/us/app/tinder/id547702041?mt=8&at=11laRZ&ct=pro

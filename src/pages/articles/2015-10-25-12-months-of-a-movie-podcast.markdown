@@ -84,4 +84,4 @@ Our episodes to date (I started with Top Gun, obviously)
 * Never-ending Story
 * 8 Mile
 
-![](http://static1.squarespace.com/static/511f025be4b09463c75fdc0e/t/54f8d6c9e4b02dcbd8f736d1/1425594059527/1500w/sat.png)
+![](https://static1.squarespace.com/static/511f025be4b09463c75fdc0e/t/54f8d6c9e4b02dcbd8f736d1/1425594059527/1500w/sat.png)

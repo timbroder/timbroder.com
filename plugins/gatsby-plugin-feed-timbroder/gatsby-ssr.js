@@ -31,7 +31,7 @@ exports.onRenderBody = function (_ref, pluginOptions) {
       key: "gatsby-plugin-feed-" + i,
       rel: "alternate",
       type: "application/rss+xml",
-      href: "http://feeds.feedburner.com/timbroder"
+      href: "https://feeds.feedburner.com/timbroder"
     });
   });
 

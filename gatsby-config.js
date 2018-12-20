@@ -28,7 +28,7 @@ module.exports = {
       email: 'timothy.broder@gmail.com',
       twitter: 'timothybroder',
       github: 'timbroder',
-      rss: 'http://feeds.feedburner.com/timbroder',
+      rss: 'https://feeds.feedburner.com/timbroder',
       linkedin: 'timbroder',
       instagram: 'timothybroder'
     }
