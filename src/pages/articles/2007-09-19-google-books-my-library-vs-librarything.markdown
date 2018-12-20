@@ -36,7 +36,7 @@ Normally I just go to Amazon if I’m looking for a book, but that’s more like
 because that’s what I am used to. Check out my test Library
 [here](http://books.google.com/books?as_list=BDYjGJ9gQiI2fwZ2RhK_5ARoUEnPi_37Mmen-Zjyn9rNza5Y7yew&hl=en)  
   
-![](http://lh6.google.com/timothy.broder/RvCD9fREiyI/AAAAAAAAMQ4/Rm4fglWiqd4/s400/mylibrary.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RvCD9fREiyI/AAAAAAAAMQ4/Rm4fglWiqd4/s400/mylibrary.jpg?imgdl=1)  
   
 Pros  
 
@@ -69,7 +69,7 @@ I had initially been turned off by this one because the UI seemed clunky and
 was sluggish when I first tested it out. A lot of this has changed. Check out
 my test library [here](http://www.librarything.com/catalog/broderboy)  
   
-![](http://lh6.google.com/timothy.broder/RvCD9fREizI/AAAAAAAAMRA/rPQTBXANWPg/s400/librarything.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RvCD9fREizI/AAAAAAAAMRA/rPQTBXANWPg/s400/librarything.jpg?imgdl=1)  
   
 Pros  
 
@@ -100,7 +100,7 @@ LibraryThing Blog widget:
 This is the service I originally went with. Check out my main shelf
 [here](http://www.shelfari.com/broderboy/shelf)  
   
-![](http://lh6.google.com/timothy.broder/RvCD9fREi0I/AAAAAAAAMRI/GZLVbfjMVig/s400/shelfari.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RvCD9fREi0I/AAAAAAAAMRI/GZLVbfjMVig/s400/shelfari.jpg?imgdl=1)  
   
 Pros  
 

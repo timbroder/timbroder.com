@@ -19,8 +19,8 @@ the new one. Some valuable information is missing from the posts, diggs,
 twitter isn't even showing up... I'll have to play some more. What do people
 think?  
 
-[![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAAASOU/VaZMmEpswdw
-/s400-R/newfb2.jpg)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAAASOU/FrPl0GKnWr0/s1600-h/newfb2.jpg)  
+[![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAAASOU/VaZMmEpswdw
+/s400-R/newfb2.jpg)](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SIaW5MGLaHI/AAAAAAAASOU/FrPl0GKnWr0/s1600-h/newfb2.jpg)  
 
 * * *
 

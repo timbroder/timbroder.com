@@ -16,5 +16,5 @@ Or out of "in draft" I should say. Not much to show in the ways of how to use
 added next to the add an image icon. Maybe I'll use this in my upcoming post
 about using spreadsheets and base as a database... hmmm...  
   
-![](http://lh6.google.com/timothy.broder/RtOBZJE6BSI/AAAAAAAAKoc/83d-BWrBiFM/s400/blogger_video_post.jpg?imgdl=1)
+![](https://lh6.google.com/timothy.broder/RtOBZJE6BSI/AAAAAAAAKoc/83d-BWrBiFM/s400/blogger_video_post.jpg?imgdl=1)
 

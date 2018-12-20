@@ -19,10 +19,10 @@ but there is no way I would be able to power it. I'm sure the proximity to the
 dam's power station and water supply were key factors in choosing the
 location.  
   
-![](http://i.cmpnet.com/infoweek/galleries/automated/62/google12_full.JPG)  
+![](https://i.cmpnet.com/infoweek/galleries/automated/62/google12_full.JPG)  
   
-![](http://i.cmpnet.com/infoweek/galleries/automated/62/google11_full.JPG)  
+![](https://i.cmpnet.com/infoweek/galleries/automated/62/google11_full.JPG)  
   
-![](http://i.cmpnet.com/infoweek/galleries/automated/62/google7_full.JPG)  
+![](https://i.cmpnet.com/infoweek/galleries/automated/62/google7_full.JPG)  
   
 

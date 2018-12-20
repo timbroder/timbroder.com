@@ -25,5 +25,5 @@ Kong. I am hopefully going to two of these in the next 6 months (Tokyo and
 London) around the holidays. Although, Google might have some [legal hoops](http://www.theregister.co.uk/2007/06/05/google_street_view_legality_in_europe/)
 to jump through if they decide to do this.  
   
-[![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/RwEVuTA7FPI/AAAAAAAAMSc/7eShW1mlfzk/s400/googUK.jpg)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/RwEVuTA7FPI/AAAAAAAAMSc/7eShW1mlfzk/s1600-h/googUK.jpg)
+[![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/RwEVuTA7FPI/AAAAAAAAMSc/7eShW1mlfzk/s400/googUK.jpg)](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/RwEVuTA7FPI/AAAAAAAAMSc/7eShW1mlfzk/s1600-h/googUK.jpg)
 

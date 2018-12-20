@@ -29,8 +29,8 @@ an rss feed of all your activity, but I was only interested in the photos.
 Looked like a job for [Yahoo!
 Pipes](http://pipes.yahoo.com/pipes/pipe.info?_id=PMOQjpHo3RGyu7JdLXO0Kg).
 
-[![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAajI/XPnLMt02wdQ
-/s320/pipe1.JPG)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAajI/XPnLMt02wdQ/s1600-h/pipe1.JPG)
+[![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAajI/XPnLMt02wdQ
+/s320/pipe1.JPG)](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SX3Uw_HR3KI/AAAAAAAAajI/XPnLMt02wdQ/s1600-h/pipe1.JPG)
 
 I imported the bkite feed into pipes, filtered on the items that were photo
 posts, and renamed the title so it would have the title of the photo instead

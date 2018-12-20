@@ -54,11 +54,11 @@ following steps should get you up to speed on podcasting with winamp
   
   
 
-![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SejS5pxj2JI/AAAAAAAAbHE/zU0cecph26A/s1600-h/2.jpg)
+![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SejS5pxj2JI/AAAAAAAAbHE/zU0cecph26A/s1600-h/2.jpg)
 
   * Add your podcasts by searching for them in the directory, or adding them manually using their RSS feed  
   
   
-![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SejTsQ-8VoI/AAAAAAAAbHM/RGPUVDtoXpI/s1600-h/3.jpg)
+![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SejTsQ-8VoI/AAAAAAAAbHM/RGPUVDtoXpI/s1600-h/3.jpg)
 
 After this you should be good to go. podcasts!

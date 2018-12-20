@@ -29,7 +29,7 @@ distant future.
   
   
   
-[![](http://lh6.ggpht.com/timothy.broder/SJXRQBmxkJE/AAAAAAAASaM/y38REUtNRG8/s160-c/VacationInWIldwood.jpg)](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  
+[![](https://lh6.ggpht.com/timothy.broder/SJXRQBmxkJE/AAAAAAAASaM/y38REUtNRG8/s160-c/VacationInWIldwood.jpg)](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  
 ---  
 [Vacation in
 WIldwood](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  

@@ -24,8 +24,8 @@ the most content on Digg then anywhere else in the world, GO NEW YORK!
 [![](ht
 tp://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPwSCzrtI/AAAAAAAASAk/uE3SLJhkVc4/s400/I
 MG00031.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPwSCzrtI/AAAAAAAASAk/uE
-3SLJhkVc4/s1600-h/IMG00031.jpg) [![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEf
-PtyCzrsI/AAAAAAAASAc/peqDoJ87kDk/s400/IMG00032.jpg)](http://4.bp.blogspot.com/
+3SLJhkVc4/s1600-h/IMG00031.jpg) [![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEf
+PtyCzrsI/AAAAAAAASAc/peqDoJ87kDk/s400/IMG00032.jpg)](https://4.bp.blogspot.com/
 _Ng3QbVQfLZ8/SEfPtyCzrsI/AAAAAAAASAc/peqDoJ87kDk/s1600-h/IMG00032.jpg) [![](ht
 tp://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPrSCzrrI/AAAAAAAASAU/eCCoFaLbTwo/s400/I
 MG00033.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPrSCzrrI/AAAAAAAASAU/eC
@@ -47,8 +47,8 @@ MG00039.jpg)](http://3.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPGiCzrlI/AAAAAAAAR_k/9Z
 VOZXOuhq8/s1600-h/IMG00039.jpg) [![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEf
 PDSCzrkI/AAAAAAAAR_c/HuoFOMnMPvw/s400/IMG00040.jpg)](http://2.bp.blogspot.com/
 _Ng3QbVQfLZ8/SEfPDSCzrkI/AAAAAAAAR_c/HuoFOMnMPvw/s1600-h/IMG00040.jpg)
-[![](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPAyCzrjI/AAAAAAAAR_U/Fq-qaIQjk-E
-/s400/IMG00041.jpg)](http://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPAyCzrjI/AAAAAAA
+[![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPAyCzrjI/AAAAAAAAR_U/Fq-qaIQjk-E
+/s400/IMG00041.jpg)](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SEfPAyCzrjI/AAAAAAA
 AR_U/Fq-qaIQjk-E/s1600-h/IMG00041.jpg)
 [![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfO-SCzriI/AAAAAAAAR_M/jaP9miTIGAE
 /s400/IMG00042.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SEfO-

@@ -23,7 +23,7 @@ few more features on the main Docs UI (bulk file upload, share files right
 from there instead of having to publish from within the document) and allow
 for any file type.  
   
-![](http://lh3.google.com/timothy.broder/RvHFzfREi8I/AAAAAAAAMSI/87CkGvBuJLI/s400/plat1.jpg?imgdl=1)  
+![](https://lh3.google.com/timothy.broder/RvHFzfREi8I/AAAAAAAAMSI/87CkGvBuJLI/s400/plat1.jpg?imgdl=1)  
   
 Quick recap of the internal GDrive / Platypus client:  
 Backup: if your computer goes down, catches on fire, or just plain old BSOD's,
@@ -48,7 +48,7 @@ available
   
 **[Xdrive](http://www.xdrive.com)**  
   
-![](http://lh6.google.com/timothy.broder/RvHFzPREi4I/AAAAAAAAMRo/Z4qDjUvEaSM/s400/xdrive.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RvHFzPREi4I/AAAAAAAAMRo/Z4qDjUvEaSM/s400/xdrive.jpg?imgdl=1)  
   
 Pros
 
@@ -68,7 +68,7 @@ Cons
   
 **[Box.net](http://www.box.net)**  
   
-![](http://lh6.google.com/timothy.broder/RvHFzPREi5I/AAAAAAAAMRw/Z_IsNLXYdyw/s400/boxnet.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RvHFzPREi5I/AAAAAAAAMRw/Z_IsNLXYdyw/s400/boxnet.jpg?imgdl=1)  
   
 Pros
 
@@ -89,7 +89,7 @@ Cons
   
 **[MoveDigital](www.movedigital.com/)**  
   
-![](http://lh3.google.com/timothy.broder/RvHFzfREi6I/AAAAAAAAMR4/JBWgcFd5K4k/s400/movedigital.jpg?imgdl=1)  
+![](https://lh3.google.com/timothy.broder/RvHFzfREi6I/AAAAAAAAMR4/JBWgcFd5K4k/s400/movedigital.jpg?imgdl=1)  
   
 Pros
 
@@ -105,7 +105,7 @@ Cons
   
 **[Omnidrive](www.omnidrive.com/)**  
   
-![](http://lh3.google.com/timothy.broder/RvHFzfREi7I/AAAAAAAAMSA/P_Z24ztAeQ4/s
+![](https://lh3.google.com/timothy.broder/RvHFzfREi7I/AAAAAAAAMSA/P_Z24ztAeQ4/s
 400/omni.jpg?imgdl=1)  
   
 

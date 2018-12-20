@@ -32,14 +32,14 @@ The first step is to log into or create a Yahoo account and go to
 going to use is under sources and is called "Fetch Feed". Add as many of these
 as you want to pull in all the feeds you will need.  
   
-![](http://lh6.google.com/timothy.broder/RwQeq2uGXrI/AAAAAAAAMTE/_APNQgTsUMQ/s400/pipe1.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RwQeq2uGXrI/AAAAAAAAMTE/_APNQgTsUMQ/s400/pipe1.jpg?imgdl=1)  
   
 Then use unions (located under Operators) to join these Fetches together. If
 you have more then 5 feeds, you will need multiple unions.  
   
   
   
-![](http://lh6.google.com/timothy.broder/RwQeq2uGXsI/AAAAAAAAMTM/uKp3MSfdtUg/s400/pipe2.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RwQeq2uGXsI/AAAAAAAAMTM/uKp3MSfdtUg/s400/pipe2.jpg?imgdl=1)  
   
 Finally, add a filter, also located under Operators. Here, "Permit" items that
 match "any" of the following. Then, add rules where item.description >
@@ -47,7 +47,7 @@ Contains and then the word or phrase you want to search for. This filter will
 allow any posts that have the words through, and block everything else. Send
 the output of the Filter to the Pipe Output and you are done.  
   
-![](http://lh6.google.com/timothy.broder/RwQeq2uGXtI/AAAAAAAAMTU/zrI8IloMhiw/s400/pipe3.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RwQeq2uGXtI/AAAAAAAAMTU/zrI8IloMhiw/s400/pipe3.jpg?imgdl=1)  
   
 You can then subscribe to the output of this pipe with the reader of your
 choice. When I subscribe to my pipe's [feed](http://pipes.yahoo.com/pipes/pipe
@@ -58,6 +58,6 @@ one filter with a regular expression, or just with "oogle".
 Here is a full view of the
 [pipe](http://pipes.yahoo.com/pipes/pipe.info?_id=vF35LapU3BG9UzFodbq02Q)  
   
-![](http://lh6.google.com/timothy.broder/RwQeq2uGXuI/AAAAAAAAMTc/RAnjUutsd5A/s400/pipe4.jpg?imgdl=1)  
+![](https://lh6.google.com/timothy.broder/RwQeq2uGXuI/AAAAAAAAMTc/RAnjUutsd5A/s400/pipe4.jpg?imgdl=1)  
   
 
