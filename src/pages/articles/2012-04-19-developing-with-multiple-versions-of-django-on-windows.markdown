@@ -13,7 +13,7 @@ tags:
 - django
 ---
 
-At [work](http://www.alexanderinteractive.com/), we have sites that use
+At [work](https://www.alexanderinteractive.com/), we have sites that use
 various versions of [Django](https://www.djangoproject.com/), so there is a
 need to switch packages.  On my mac I use
 [virtualenv](http://www.virtualenv.org/en/latest/index.html) to handle this,

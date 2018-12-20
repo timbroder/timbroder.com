@@ -13,7 +13,7 @@ tags:
 - primal
 ---
 
-![primal 30day challenge 1](http://i247.photobucket.com/albums/gg158/MDA2008/MDA2009/primal_30day_challenge-1.gif)
+![primal 30day challenge 1](https://i247.photobucket.com/albums/gg158/MDA2008/MDA2009/primal_30day_challenge-1.gif)
 
 If you want to lose weight, gain muscle, reduce stress, increase energy or
 just generally look and feel healthier you’ve come to the right place. Oh, and

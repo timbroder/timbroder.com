@@ -11,4 +11,4 @@ wordpress_id: 879
 category: Crossfit
 ---
 
-[![](http://img.youtube.com/vi/tPZdYboa-HY/0.jpg)](http://www.youtube.com/watch?v=tPZdYboa-HY)
+[![](https://img.youtube.com/vi/tPZdYboa-HY/0.jpg)](http://www.youtube.com/watch?v=tPZdYboa-HY)

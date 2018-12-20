@@ -24,4 +24,4 @@ your screen will open up in new tabs
 
 Demo:
 
-[![](http://img.youtube.com/vi/PltTkfuhKfM/0.jpg)](http://www.youtube.com/watch?v=PltTkfuhKfM)
+[![](https://img.youtube.com/vi/PltTkfuhKfM/0.jpg)](http://www.youtube.com/watch?v=PltTkfuhKfM)

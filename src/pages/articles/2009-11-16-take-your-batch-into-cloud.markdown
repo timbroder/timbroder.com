@@ -14,7 +14,7 @@ category: Code
 From the work blog:  
   
 [Take your batch into the
-cloud](http://www.alexanderinteractive.com/blog/2009/11/take-your-batch-into-the-cloud.html): "
+cloud](https://www.alexanderinteractive.com/blog/2009/11/take-your-batch-into-the-cloud.html): "
 
 About a year ago I wrote a webapp called
 [twitter2gtalk](http://twitter2gtalk.appspot.com), which simply takes your

@@ -11,7 +11,7 @@ Jim Dalrymple at The Loop has had some scathing issues with Apple Music. My thou
 > 
 > I had high hopes for Apple Music. I really wanted it to work and become my default music streaming service, but after the problems I’ve experienced over the last couple of weeks, I’m disabling it altogether
 
-I had mediocre hopes for apple music. A lot of my friends at [work](http://www.alexanderinteractive.com/ "work") and at [Tekside](http://tekside.net/ "Tekside") are raving about it. But, it's a service. A web/cloud/backend service. Apple historically has sucked at these. (Ping, iCloud sync, iMessage still isn't perfect). 
+I had mediocre hopes for apple music. A lot of my friends at [work](https://www.alexanderinteractive.com/ "work") and at [Tekside](http://tekside.net/ "Tekside") are raving about it. But, it's a service. A web/cloud/backend service. Apple historically has sucked at these. (Ping, iCloud sync, iMessage still isn't perfect). 
 
 This isn't a review because as I'm still playing with it. But I'm looking at it from the perspective of someone who has used Spotify for years. I've commented a few times that I've been delighted at the new music their weekly newsletter recommends for me. I end up **LOVING** about 80% of them and they get discography playlists. (Unless I'm listening to trance or classical I make discography playlists for every band I listen to. I usually listen to them in order. It never been one for a more traditionally playlist or shuffling different bands on a play. I like to listen to albums, the way they were destined to be listened to. 
 

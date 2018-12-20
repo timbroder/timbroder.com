@@ -13,7 +13,7 @@ tags:
 - Internet Explorer
 ---
 
-[![](http://www.blogcdn.com/www.switched.com/media/2009/11/ie9scribble.jpg)](http://www.blogcdn.com/www.switched.com/media/2009/11/ie9scribble.jpg)
+[![](https://www.blogcdn.com/www.switched.com/media/2009/11/ie9scribble.jpg)](https://www.blogcdn.com/www.switched.com/media/2009/11/ie9scribble.jpg)
 
 Interested in checking out the new Web platform capabilities of Internet
 Explorer 9?

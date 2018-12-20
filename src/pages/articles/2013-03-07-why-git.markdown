@@ -12,7 +12,7 @@ category: Code
 ---
 
 A few months ago I gave a presentation at
-[work](http://www.alexanderinteractive.com/) about why we moved from SVN to
+[work](https://www.alexanderinteractive.com/) about why we moved from SVN to
 distributed source and git. Totally forgot to put it in a post here. I also
 had a lot of fun playing with [reveal.js](http://broderboy.github.com/git-
 presentation/) for the slides and setting up [github

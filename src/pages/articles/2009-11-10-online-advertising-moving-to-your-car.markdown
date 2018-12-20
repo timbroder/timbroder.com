@@ -14,7 +14,7 @@ category: Code
 Another one of mine on the work blog -  
   
 [Online advertising moving to.... your
-car?](http://www.alexanderinteractive.com/blog/2009/11/online-advertising-moving-to-your-car.html): 
+car?](https://www.alexanderinteractive.com/blog/2009/11/online-advertising-moving-to-your-car.html): 
 
 > With the release of [Android
 2.0](http://developer.android.com/sdk/android-2.0-highlights.html) on the
