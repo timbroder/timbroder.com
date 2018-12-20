@@ -14,7 +14,7 @@ category: Code
 [Google’s Christmas gift to America is free Wi-Fi at airports starting
 today](http://feedproxy.google.com/~r/TheBoyGeniusReport/~3/XoTZjgYPRM4/): 
 
-![google-xmas-wifi](http://media.boygeniusreport.com/wp-content/uploads/2009/11/google-xmas-wifi.jpg)
+![google-xmas-wifi](https://media.boygeniusreport.com/wp-content/uploads/2009/11/google-xmas-wifi.jpg)
 
 > Those that hate Google but travel frequently might feel a bit conflicted over
 the next couple of months because of Google’s holiday gift to America.
@@ -29,4 +29,4 @@ choosing.
 
 [Read](http://www.google.com/intl/en/press/pressrel/20091110_free_airport_wifi_holiday.html)
 
-![](http://feeds.feedburner.com/~r/TheBoyGeniusReport/~4/XoTZjgYPRM4)
+![](https://feeds.feedburner.com/~r/TheBoyGeniusReport/~4/XoTZjgYPRM4)

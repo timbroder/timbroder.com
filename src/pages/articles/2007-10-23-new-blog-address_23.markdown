@@ -22,7 +22,7 @@ Over the coming days/weeks I'll be updating the template on the rest of the
 domain to coincide more with the blog, as well as adding the top menu to the
 blog. The blog is still powered by blogger and the old address nicely forwards
 to the new one, posts included. I also updated the [FeedBurner
-feed](http://feeds.feedburner.com/gPpowered) so if you use that to subscribe
+feed](https://feeds.feedburner.com/gPpowered) so if you use that to subscribe
 you shouldn't have to change anything (although with the forwarding I don't
 think it matters, but why risk it). I also set up gpowered.net and
 www.gpowered.net to forward to the blog as the main page. Any of my python

@@ -11,4 +11,4 @@ wordpress_id: 202
 category: Code
 ---
 
-[![](http://www.hanovsolutions.com/resume_comic.png)](http://www.hanovsolutions.com/resume_comic.png)
+[![](https://www.hanovsolutions.com/resume_comic.png)](https://www.hanovsolutions.com/resume_comic.png)

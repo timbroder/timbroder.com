@@ -33,5 +33,5 @@ list all the files that show up more then once on your hard drive, pretty
 nifty for cleaning space.  
   
 For more features on Wednesdays,
-[subscribe](http://feeds.feedburner.com/GooglePicasaBlog) to the photo blog.
+[subscribe](https://feeds.feedburner.com/GooglePicasaBlog) to the photo blog.
 

@@ -111,7 +111,7 @@ haven't gotten a chance to until now. Enjoy.
   * Webmaster central fixes the [Cross Domain Sitemap errors](http://googlewebmastercentral.blogspot.com/2007/10/dealing-with-sitemap-cross-submissions.html)   
   
 
-  * Google maps [adds Flash Content](http://feeds.feedburner.com/~r/OfficialGoogleMapsApiBlog/~3/174019883/make-your-kml-flash-y.html) into KLM   
+  * Google maps [adds Flash Content](https://feeds.feedburner.com/~r/OfficialGoogleMapsApiBlog/~3/174019883/make-your-kml-flash-y.html) into KLM   
   
 
   * [Google Notebook adds labels and bookmarks](http://googlesystem.blogspot.com/2007/11/google-notebook-adds-labels-and.html)   

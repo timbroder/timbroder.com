@@ -137,16 +137,16 @@ Apps](http://blogoscoped.com/archive/2007-09-04-n51.html)
 * [GDrive Is On The Way](http://googlesystem.blogspot.com/2006/07/gdrive-is-on-way.html)  
 * [Inside the GDrive Platypus
 --Almost](http://battellemedia.com/archives/002986.php)  
-* [Another GDrive “Platypus” Leak](http://www.techcrunch.com/2006/10/13/another-gdrive-platypus-leak/)  
+* [Another GDrive “Platypus” Leak](https://www.techcrunch.com/2006/10/13/another-gdrive-platypus-leak/)  
 * [Google Gdrive Client
 Leaked](http://blogoscoped.com/archive/2006-10-13-n53.html)  
 * [GDrive -> GDisk](http://googlified.com/2006gdrive-gdisk/)  
 * [When Will Gdrive Be Public (If
 Ever)?](http://blogoscoped.com/archive/2006-07-11-n52.html)  
-* [GDrive plays whack-a-mole with bloggers](http://www.techcrunch.com/2006/07/10/gdrive-plays-whack-a-mole-with-bloggers/)  
+* [GDrive plays whack-a-mole with bloggers](https://www.techcrunch.com/2006/07/10/gdrive-plays-whack-a-mole-with-bloggers/)  
 * [Evidence of GDrive in Google
 Apps](http://blogoscoped.com/archive/2007-09-04-n51.html) [What Ever Happened
-To GDrive?](http://www.techcrunch.com/2007/08/19/what-ever-happened-to-gdrive/)  
+To GDrive?](https://www.techcrunch.com/2007/08/19/what-ever-happened-to-gdrive/)  
 * [Rumor: Was the Gdrive Release
 Canceled?](http://blogoscoped.com/archive/2007-08-19-n82.html)
 

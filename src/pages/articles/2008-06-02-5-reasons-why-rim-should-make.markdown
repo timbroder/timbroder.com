@@ -19,4 +19,4 @@ sure how I feel about lots of typing in a touch screen. I played with the HTC
 Touch over the weekend. It was cool, it was pretty, but the screen wasn't as
 responsive as I would have hoped. We'll see what HTC can do with the
 [Diamond](http://www.htc.com/www/product.aspx?id=46278) and the
-[Dream](http://androidcommunity.com/first-live-images-of-fullscreen-android-demo-20080528/)
+[Dream](https://androidcommunity.com/first-live-images-of-fullscreen-android-demo-20080528/)

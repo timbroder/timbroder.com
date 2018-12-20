@@ -11,4 +11,4 @@ wordpress_id: 176
 category: Code
 ---
 
-[![](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)](http://www.geekculture.com/joyoftech/joyimages/1156.jpg)
+[![](https://www.geekculture.com/joyoftech/joyimages/1156.jpg)](https://www.geekculture.com/joyoftech/joyimages/1156.jpg)

@@ -16,7 +16,7 @@ tags:
 Myspace unveiled a new search feature of their message center at Google I/O
 utilizing gears. As you search your messages, results are shown in real time,
 coming out of the local cache stored in gears. Hopefully this will give gears
-more publicity and other sited ([ahem](http://www.techcrunch.com/2008/05/28/myspace-shows-facebook-how-its-done-google-gears-to-power-messaging/),
+more publicity and other sited ([ahem](https://www.techcrunch.com/2008/05/28/myspace-shows-facebook-how-its-done-google-gears-to-power-messaging/),
 facebook) will take a look at it ;)  
   
 This almost makes me want to create a myspace account to go play with it...

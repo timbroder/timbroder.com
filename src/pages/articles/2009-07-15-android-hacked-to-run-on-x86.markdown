@@ -14,4 +14,4 @@ tags:
 - netbook
 ---
 
-I foresee this being my weekend project <http://androidcommunity.com/android-hacked-to-run-on-x86-20090714/>
+I foresee this being my weekend project <https://androidcommunity.com/android-hacked-to-run-on-x86-20090714/>

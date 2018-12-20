@@ -14,5 +14,5 @@ tags:
 ---
 
 After today, AOL's products will
-[support](http://www.techcrunch.com/2008/05/28/aol-joins-opensocial/) Google's
+[support](https://www.techcrunch.com/2008/05/28/aol-joins-opensocial/) Google's
 OpenSocial.

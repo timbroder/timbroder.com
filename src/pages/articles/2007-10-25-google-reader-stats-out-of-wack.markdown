@@ -13,7 +13,7 @@ tags:
 - reader
 ---
 
-First, [Techcrunch](http://www.techcrunch.com/2007/10/14/top-blogs-on-google-reader/) came up with a list of the top blogs that users subscribe to using
+First, [Techcrunch](https://www.techcrunch.com/2007/10/14/top-blogs-on-google-reader/) came up with a list of the top blogs that users subscribe to using
 Google Reader. The top 3 on the list were BBC with 202,463, Google News wih
 192,100, and ESPN with 189,274 . Remember, these are only the stats if the
 subscriber is using Google Reader, obviously there are blogs with a higher

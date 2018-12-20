@@ -15,4 +15,4 @@ A little off the beaten path from what I usually post, but have at, we're
 taking bets here at work, winner gets to claim Alaska as their sovereign
 kingdom of awesomeness
 
-![](http://www.techcrunch.com/wp-content/uploads/2008/09/septembermadnessb.jpg)
+![](https://www.techcrunch.com/wp-content/uploads/2008/09/septembermadnessb.jpg)

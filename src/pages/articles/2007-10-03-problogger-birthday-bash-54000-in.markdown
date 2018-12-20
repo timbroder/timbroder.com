@@ -23,7 +23,7 @@ announcing the contest. The second set of prizes were free listings on
 [SeekZap](http://www.seekzap.com/) and all you had to do was sign up! (This is
 the one I'm really bummed about missing.) The final prize for yesterday for
 the first 25 responders was tubes of Mederma scar treatment. For the full
-prize list, see [here](http://feeds.feedburner.com/~r/ProbloggerHelpingBloggersEarnMoney/~3/164167517/)  
+prize list, see [here](https://feeds.feedburner.com/~r/ProbloggerHelpingBloggersEarnMoney/~3/164167517/)  
   
 You don't have to have a blog to participate in most of the competitions so if
 you want to have some fun over the next few days, and into the weekend (this

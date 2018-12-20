@@ -28,6 +28,6 @@ hosting blogger's [photo upload feature](http://buzz.blogger.com/2007/03/blogger
 developing Orkut's [photo picker](http://en.blog.orkut.com/2007/08/spice-up-your-scraps.html), and creating Mapplets for browsing [geotagged photos](http://google-latlong.blogspot.com/2007/08/posted-by-ping-hsin-chen-software.html)
 inside of Google Maps.  
   
-Subscribe to their [feed](http://feeds.feedburner.com/GooglePicasaBlog) for
+Subscribe to their [feed](https://feeds.feedburner.com/GooglePicasaBlog) for
 updates.
 

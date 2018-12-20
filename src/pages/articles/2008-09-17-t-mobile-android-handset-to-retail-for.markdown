@@ -13,4 +13,4 @@ tags:
 - Android
 ---
 
-iPhone vs. Android, [go!](http://androidcommunity.com/t-mobile-android-handset-to-retail-for-199-20080918/)
+iPhone vs. Android, [go!](https://androidcommunity.com/t-mobile-android-handset-to-retail-for-199-20080918/)

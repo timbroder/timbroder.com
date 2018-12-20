@@ -42,4 +42,4 @@ I hope some people will find this cool or useful (some people have been
 this and already signed up). Feel free to follow
 [me](http://twitter.com/broderboy) or [the app](http://twitter.com/twit2gTalk)
 on twitter for feature updates or
-[subscribe](http://feeds.feedburner.com/gPpowered) to this blog.
+[subscribe](https://feeds.feedburner.com/gPpowered) to this blog.
