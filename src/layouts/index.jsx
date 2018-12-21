@@ -13,7 +13,12 @@ class Layout extends React.Component {
 
     return (
       <div className="layout">
-        <Helmet defaultTitle="TimBroder.com" />
+        <Helmet
+          defaultTitle="TimBroder.com"
+          meta={[
+            { name: 'google-site-verification', content: 'Ew8Ze6bRJcJJAzaL7ageSyFtg5e6RQN4NwRldNmnPHw' }
+          ]}
+        />
         {children()}
       </div>
     );
