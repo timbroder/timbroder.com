@@ -8,19 +8,19 @@ module.exports = {
     menu: [
       {
         label: 'Apps',
-        path: '/apps.html'
+        path: '/apps'
       },
       {
         label: 'Podcasts',
-        path: '/podcasts.html'
+        path: '/podcasts'
       },
       {
         label: 'Projects',
-        path: '/projects.html'
+        path: '/projects'
       },
       {
         label: 'Talks',
-        path: '/talks.html'
+        path: '/talks'
       }
     ],
     author: {
