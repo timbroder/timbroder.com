@@ -119,7 +119,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: `${slug}.html`
+      value: `${slug}`
     });
 
     if (node.frontmatter.tags) {
