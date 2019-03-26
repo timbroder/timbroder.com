@@ -13,7 +13,6 @@ class PostTemplate extends React.Component {
       <div>
         <Helmet>
           <title>{`${postTitle} - ${title}`}</title>
-          <meta name="description" content="meow2" />
         </Helmet>
         <PostTemplateDetails siteMetadata={siteMetadata} post={post} />
       </div>
