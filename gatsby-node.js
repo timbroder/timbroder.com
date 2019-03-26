@@ -111,7 +111,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else if (typeof node.frontmatter.slug !== 'undefined' && typeof node.frontmatter.date) {
       slug = `/${moment(node.frontmatter.date).format('YYYY/MM/') + node.frontmatter.slug}`;
     } else {
-      const fileName = _.replace(_.last(_.split(node.fileAbsolutePath, '/')), '.md', '');
+      const fileName = _.replace(_.replace(_.last(_.split(node.fileAbsolutePath, '/')), '.md', ''), '.markdown', '');
       const adjusted = _.replace(fileName, new RegExp('\\d{4}-\\d{2}-\\d{2}-', 'g'), '');
       slug = `/${moment(node.frontmatter.date).format('YYYY/MM/') + adjusted}`;
     }
