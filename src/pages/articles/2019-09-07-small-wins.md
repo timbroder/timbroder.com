@@ -4,6 +4,7 @@ excerpt:
 tags: 
 layout: post
 link: https://davidhemphill.com/small-wins
+date: 2018-09-07
 ---
 
 Great short read. Remember to value the little wins. Not just the big ones
