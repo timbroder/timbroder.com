@@ -1,7 +1,8 @@
 ---
 title: What's your best life hack?
 layout: post
-date: 2020-03-02
+slug: best-life-hack
+date: 2020-03-20
 tags:
 - dayone
 - journal
