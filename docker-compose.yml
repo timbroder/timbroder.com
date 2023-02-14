@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  gatsby:
+    image: gatsby-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: gatsby
+    ports:
+      - "8000:8000"
