@@ -17,6 +17,7 @@ class IndexRoute extends React.Component {
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={subtitle} />
+          <a rel="me" href="https://masto.ai/@timothybroder">Mastodon</a>
         </Helmet>
         <Sidebar siteMetadata={this.props.data.site.siteMetadata} />
         <div className="content">
