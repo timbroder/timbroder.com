@@ -26,6 +26,9 @@ const Layout = ({location, title, children}) => {
                     <div className="mt-16 sm:mt-20">{children}</div>
                 </Container>
             </div>
+            <footer>
+                <a rel="me" href="https://masto.ai/@timothybroder">Mastodon</a>
+            </footer>
         </div>
 
     )
