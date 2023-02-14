@@ -19,7 +19,7 @@ export default function PostCard({ post: post }) {
                 >
                     {post.frontmatter.date}
                 </Card.Eyebrow>
-                <Card.Description>{post.frontmatter.description}</Card.Description>
+                <Card.Description>{post.frontmatter.description || post.excerpt}</Card.Description>
                 <Card.Cta>Read article</Card.Cta>
             </Card>
             <Card.Eyebrow
