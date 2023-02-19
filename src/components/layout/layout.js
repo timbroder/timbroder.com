@@ -1,10 +1,11 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import {Container} from "./container";
+import Headline from "../content/headline";
 
 const Layout = ({location, title, children}) => {
     const rootPath = `${__PATH_PREFIX__}/`
-    // const isRootPath = location.pathname === rootPath
+    const isRootPath = location.pathname === rootPath
 
     return (
         <div className="bg-zinc-50">
@@ -16,9 +17,17 @@ const Layout = ({location, title, children}) => {
             <div className="relative">
                 <Container className="mt-16 sm:mt-32">
                     <header className="max-w-2xl">
-                        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
-                            <Link to="/">{title}</Link>
-                        </h1>
+                        {isRootPath
+                            ?
+                            <Headline>
+                                <Link to="/">{title}</Link>
+                            </Headline>
+                            :
+                            <span className="font-bold tracking-tight text-zinc-800 text-2xl">
+                                <Link to="/">{title}</Link>
+                            </span>
+                        }
+
                         {/*<p className="mt-6 text-base text-zinc-600">*/}
                         {/*    {intro}*/}
                         {/*</p>*/}

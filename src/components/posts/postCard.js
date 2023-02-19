@@ -1,8 +1,7 @@
 import * as React from "react"
 import {Card} from "../content/card";
-import {formatDate} from "../../lib/formatDate";
 
-export default function PostCard({ post: post }) {
+export default function PostCard({ post: post, showDesc: showDesc = true }) {
     const title = post.frontmatter.title || post.fields.slug
 
     return (
@@ -19,7 +18,9 @@ export default function PostCard({ post: post }) {
                 >
                     {post.frontmatter.date}
                 </Card.Eyebrow>
-                <Card.Description>{post.frontmatter.description || post.excerpt}</Card.Description>
+                {showDesc &&
+                    <Card.Description>{post.frontmatter.description || post.excerpt}</Card.Description>
+                }
                 <Card.Cta>Read article</Card.Cta>
             </Card>
             <Card.Eyebrow

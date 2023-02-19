@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Tim Broder`,
+    title: `Tim Broder .com`,
     author: {
       name: `Kyle Mathews`,
       summary: `who lives and works in San Francisco building useful things.`,
@@ -28,6 +28,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `page`,
       },
     },
     {

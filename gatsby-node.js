@@ -11,6 +11,9 @@ const moment = require("moment");
 
 // Define the template for blog post
 const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const pageTemplate = path.resolve('./src/templates/page-template.js');
+const tagTemplate = path.resolve('./src/templates/tag-template.js');
+const categoryTemplate = path.resolve('./src/templates/category-template.js');
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -18,17 +21,30 @@ const blogPost = path.resolve(`./src/templates/blog-post.js`)
 exports.createPages = async ({graphql, actions, reporter}) => {
     const {createPage} = actions
 
-    // Get all markdown blog posts sorted by date
+
+    // Get all markdown blog nodes sorted by date
     const result = await graphql(`
     {
-      allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
-        nodes {
-          id
-          fields {
-            slug
-          }
+        allMarkdownRemark(
+            sort: { frontmatter: { date: ASC } },
+            filter: { frontmatter: { draft: { ne: true } } }, 
+            limit: 1000
+        ) {
+            edges {
+                node {
+                    id
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        layout
+                        category
+                        tags
+                        link
+                    }
+                }
+            }
         }
-      }
     }
   `)
 
@@ -40,26 +56,49 @@ exports.createPages = async ({graphql, actions, reporter}) => {
         return
     }
 
-    const posts = result.data.allMarkdownRemark.nodes
+    const nodes = result.data.allMarkdownRemark.edges
 
-    // Create blog posts pages
+    // Create blog nodes pages
     // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
     // `context` is available in the template as a prop and as a variable in GraphQL
 
-    if (posts.length > 0) {
-        posts.forEach((post, index) => {
-            const previousPostId = index === 0 ? null : posts[index - 1].id
-            const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+    if (nodes.length > 0) {
+        nodes.forEach((post, i) => {
+            let tags = []
+            let categories = []
 
-            createPage({
-                path: post.fields.slug,
-                component: blogPost,
-                context: {
-                    id: post.id,
-                    previousPostId,
-                    nextPostId,
-                },
-            })
+            if (post.node.frontmatter?.layout === 'page') {
+                console.log('skip post')
+            } else {
+                const previousPostId = i === 0 ? null : nodes[i - 1].node.id
+                const nextPostId = i === nodes.length - 1 ? null : nodes[i + 1].node.id
+
+                console.log(previousPostId, nextPostId)
+
+                createPage({
+                    path: post.node.fields.slug,
+                    component: blogPost,
+                    context: {
+                        id: post.node.id,
+                        previousPostId,
+                        nextPostId,
+                    },
+                })
+
+                if (post.node?.frontmatter?.tags) {
+                    tags = tags.concat(post.node.frontmatter.tags);
+                }
+
+                tags.forEach((tag, ti) => {
+                    const tagPath = `/tag/${_.kebabCase(tag)}/`;
+                    createPage({
+                        path: tagPath,
+                        component: tagTemplate,
+                        context: { tag }
+                    });
+                })
+            }
+
         })
     }
 }
