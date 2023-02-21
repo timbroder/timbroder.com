@@ -7,6 +7,7 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import {Fragment} from "react";
 
 const Seo = ({ description, title, children }) => {
   const { site } = useStaticQuery(
@@ -29,7 +30,7 @@ const Seo = ({ description, title, children }) => {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <>
+    <Fragment>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
@@ -43,7 +44,7 @@ const Seo = ({ description, title, children }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </>
+    </Fragment>
   )
 }
 

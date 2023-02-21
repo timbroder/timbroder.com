@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 import Post from "../components/posts/post";
 import Headline from "../components/content/headline";
 import _ from "lodash";
-import {Fragment} from "react";
 
 const BlogPostTemplate = ({
                               data: {previous, next, site, markdownRemark: post},
@@ -23,9 +22,6 @@ const BlogPostTemplate = ({
                 itemType="http://schema.org/Article"
             >
                 <header className="flex flex-col">
-                    <Headline padded={false}>
-                        {post.frontmatter.title}
-                    </Headline>
                     <span className="flex flex-row mt-2">
                         <time
                             dateTime={post.frontmatter.date}
@@ -34,6 +30,26 @@ const BlogPostTemplate = ({
                             <span className="h-4 w-0.5 rounded-full bg-zinc-200"/>
                             <span className="ml-3">{post.frontmatter.date}</span>
                         </time>
+                    </span>
+                    <Headline padded={false}>
+                        {post.frontmatter.title}
+                    </Headline>
+                </header>
+                <Post post={post}/>
+                {/*<header>*/}
+                {/*  <h1 itemProp="headline">{post.frontmatter.title}</h1>*/}
+                {/*  <p>{post.frontmatter.date}</p>*/}
+                {/*</header>*/}
+                {/*<section*/}
+                {/*  dangerouslySetInnerHTML={{ __html: post.html }}*/}
+                {/*  itemProp="articleBody"*/}
+                {/*/>*/}
+                {/*<hr />*/}
+                {/*<footer>*/}
+                {/*  <Bio />*/}
+                {/*</footer>*/}
+                <footer className="flex flex-col">
+                    <span className="flex flex-row mt-2">
                         {tags &&
                             <span className="ml-1 ">
                             {tags.map((tag) => (
@@ -53,22 +69,7 @@ const BlogPostTemplate = ({
                             </span>
                         }
                     </span>
-
-
-                </header>
-                <Post post={post}/>
-                {/*<header>*/}
-                {/*  <h1 itemProp="headline">{post.frontmatter.title}</h1>*/}
-                {/*  <p>{post.frontmatter.date}</p>*/}
-                {/*</header>*/}
-                {/*<section*/}
-                {/*  dangerouslySetInnerHTML={{ __html: post.html }}*/}
-                {/*  itemProp="articleBody"*/}
-                {/*/>*/}
-                {/*<hr />*/}
-                {/*<footer>*/}
-                {/*  <Bio />*/}
-                {/*</footer>*/}
+                </footer>
             </article>
             {/*<nav className="blog-post-nav">*/}
             {/*  <ul*/}
@@ -132,6 +133,7 @@ export const pageQuery = graphql`
         description
         tags
         category
+        link
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

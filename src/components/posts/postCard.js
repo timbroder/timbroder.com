@@ -17,11 +17,15 @@ export default function PostCard({ post: post, showDesc: showDesc = true }) {
                     decorate
                 >
                     {post.frontmatter.date}
+
+                    {post.frontmatter.category &&
+                        <span>&nbsp;in {post.frontmatter.category}</span>
+                    }
                 </Card.Eyebrow>
                 {showDesc &&
                     <Card.Description>{post.frontmatter.description || post.excerpt}</Card.Description>
                 }
-                <Card.Cta>Read article</Card.Cta>
+                <Card.Cta>Read {post.frontmatter.link ? 'commentary' : 'article'}</Card.Cta>
             </Card>
             <Card.Eyebrow
                 as="time"
@@ -29,6 +33,9 @@ export default function PostCard({ post: post, showDesc: showDesc = true }) {
                 className="mt-1 hidden md:block"
             >
                 {post.frontmatter.date}
+                {post.frontmatter.category &&
+                <span>&nbsp;in {post.frontmatter.category}</span>
+            }
             </Card.Eyebrow>
         </article>
     )

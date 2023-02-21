@@ -1,17 +1,15 @@
 import * as React from "react"
 import clsx from 'clsx'
 import {Link} from "gatsby";
+import {Fragment} from "react";
 
 function ChevronRightIcon(props) {
     return (
-        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-            <path
-                d="M6.75 5.75 9.25 8l-2.5 2.25"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             className="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
         </svg>
+
     )
 }
 
@@ -27,14 +25,14 @@ export function Card({as: Component = 'div', className, children}) {
 
 Card.Link = function CardLink({children, ...props}) {
     return (
-        <>
+        <Fragment>
             <div
                 className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"/>
             <Link {...props}>
                 <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"/>
                 <span className="relative z-10">{children}</span>
             </Link>
-        </>
+        </Fragment>
     )
 }
 
