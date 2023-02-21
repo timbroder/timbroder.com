@@ -97,6 +97,19 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                         context: { tag }
                     });
                 })
+
+                if (post.node?.frontmatter?.category) {
+                    categories = tags.concat(post.node.frontmatter.category);
+                }
+
+                categories.forEach((category, ti) => {
+                    const categoryPath = `/category/${_.kebabCase(category)}/`;
+                    createPage({
+                        path: categoryPath,
+                        component: categoryTemplate,
+                        context: { category }
+                    });
+                })
             }
 
         })

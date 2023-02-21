@@ -1,13 +1,12 @@
 import * as React from "react"
 import {Link, graphql} from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
-import {Prose} from "../components/content/pros";
 import Post from "../components/posts/post";
 import Headline from "../components/content/headline";
 import _ from "lodash";
+import {Fragment} from "react";
 
 const BlogPostTemplate = ({
                               data: {previous, next, site, markdownRemark: post},
@@ -15,6 +14,7 @@ const BlogPostTemplate = ({
                           }) => {
     const siteTitle = site.siteMetadata?.title || `Title`
     const tags = post.frontmatter.tags;
+    const category = post.frontmatter.category;
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -31,17 +31,26 @@ const BlogPostTemplate = ({
                             dateTime={post.frontmatter.date}
                             className="flex items-center text-base text-zinc-400"
                         >
-                        <span className="h-4 w-0.5 rounded-full bg-zinc-200"/>
-                        <span className="ml-3">{post.frontmatter.date}</span>
-                    </time>
+                            <span className="h-4 w-0.5 rounded-full bg-zinc-200"/>
+                            <span className="ml-3">{post.frontmatter.date}</span>
+                        </time>
                         {tags &&
-                            <span className="ml-1">
+                            <span className="ml-1 ">
                             {tags.map((tag) => (
                                 <Link to={`/tag/${_.kebabCase(tag)}/`}>
-                                    <span className="mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white">{tag}</span>
+                                    <span
+                                        className=" align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white">{tag}</span>
                                 </Link>
                             ))}
-                        </span>
+                            </span>
+                        }
+                        {category &&
+                            <span className="flex items-center text-base text-zinc-400">
+                                <span className="ml-3 h-4 w-0.5 rounded-full bg-zinc-200 "/>
+                                <span className="ml-3 align-middle">
+                                    <Link to={`/category/${_.kebabCase(category)}/`}>Category: <span className="underline"> {category}</span></Link>
+                                </span>
+                            </span>
                         }
                     </span>
 
@@ -122,6 +131,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        category
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
