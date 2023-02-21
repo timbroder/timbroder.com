@@ -114,8 +114,8 @@ module.exports = {
                 }
               }
             }`,
-            output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            output: "/atom_feedburner.xml",
+            title: "TimBroder.com RSS Feed",
           },
         ],
       },

@@ -1,0 +1,58 @@
+---
+title: Podcasts I Listen To
+layout: page
+path: /podcasts-i-listen-to
+---
+
+These days I almost exclusively listen to 3 podcasts/networks. Most of these are Tabletop Roleplaying Game Actual Plays of Dungeons and Dragons and Pathfinder. Think of it as listening to improve fantasy storytelling where dice rolls decide major decisions and you are a long for the ride right with the cast. They are great fun
+
+* [Accidental Tech Podcast](http://atp.fm/)
+* [Critical Cole](https://critrole.com/)
+* [The Glass Cannon Network](https://www.glasscannonnetwork.com/)
+
+These are some of the podcasts I used listen to every week. Some I cherry picked. 
+
+* [Accidental Tech Podcast](http://atp.fm/)
+* [Analog(ue)](http://relay.fm/analogue)
+* [B-Sides](http://relay.fm/b-sides)
+* [Back to Work](http://5by5.tv/b2w)
+* [Bitsplitting](http://bitsplitting.org/)
+* [Build Phase]()
+* [CMD+Space](http://5by5.tv/cmdspace)
+* [CocoaRadio](http://carpeaqua.com/cocoaradio)
+* [Connected](http://relay.fm/connected)
+* [Core Intuition](http://www.coreint.org/)
+* [Dads Being Dads](http://dadsbeingdads.net/)
+* [Debug](http://www.imore.com/debug/)
+* [Developing Perspective](http://developingperspective.com/)
+* [Founders Talk](http://5by5.tv/founderstalk)
+* [Grit](http://5by5.tv/quit)
+* [Home Work](http://5by5.tv/homework)
+* [How Did This Get Made?](http://www.earwolf.com/show/how-did-this-get-made/)
+* [Inquisitive](http://www.relay.fm/inquisitive)
+* [Iterate](http://www.iterate.tv/)
+* [Mac Power Users](http://5by5.tv/mpu)
+* [MageTalk: The Magento Podcast](http://magetalk.com/)
+* [Mobile Couch](http://mobilecouch.co/)
+* [NSBrief](http://nsbrief.com/)
+* [Notification Center](http://notificationcenter.tv/)
+* [Podcast Reruns](http://pipes.yahoo.com/pipes/pipe.info?_id=8c527db6f0bc8abded0526805a638f00)
+* [Pragmatic](http://techdistortion.com/podcasts/pragmatic)
+* [Ray Wenderlich](http://www.raywenderlich.com/)
+* [Release Notes](http://releasenotes.tv/)
+* [Review](http://www.imore.com/reviewcast)
+* [Serial](http://serialpodcast.org/)
+* [Shawn Today](http://today.shawnblanc.net/)
+* [Software Indie](http://softwareindie.com/)
+* [Springboard](http://springboardshow.com/)
+* [Sword & Laser](http://swordandlaser.com/)
+* [The Art of Manliness](http://www.artofmanliness.com/)
+* [The Incomparable](http://www.theincomparable.com/theincomparable)
+* [The Nathan Barry Show](http://nathanbarry.com/)
+* [The Prompt](http://5by5.tv/prompt)
+* [The Record](http://therecord.co/)
+* [The Weekly Briefly](http://weeklybriefly.net/)
+* [Turning This Car Around](http://turningthiscararound.com/)
+* [Vector](http://www.imore.com/vector)
+* [iFanboy.com Comic Book Podcast](http://www.ifanboy.com/)
+* [iOSDocked Podcast](http://tekside.net/iosdocked/)

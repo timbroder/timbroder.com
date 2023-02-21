@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
 import Posts from "../components/posts/posts";
+import {Fragment} from "react";
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,7 +26,19 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="All posts" />
+export const Head = () => (
+  <Fragment>
+    <Seo title="TimBroder.com Posts" />
+    <a rel="me" href="https://masto.ai/@timothybroder">Mastodon</a>
+    <link
+        key={`gatsby-plugin-feed-0`}
+        rel="alternate"
+        type="application/rss+xml"
+        title="TimBroder.com RSS Feed"
+        href="https://feeds.feedburner.com/timbroder"
+    />
+  </Fragment>
+)
 
 export const pageQuery = graphql`
   {

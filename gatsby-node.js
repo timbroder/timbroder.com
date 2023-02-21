@@ -10,7 +10,7 @@ const _ = require('lodash');
 const moment = require("moment");
 
 // Define the template for blog post
-const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const postTemplate = path.resolve(`./src/templates/post-template.js`)
 const pageTemplate = path.resolve('./src/templates/page-template.js');
 const tagTemplate = path.resolve('./src/templates/tag-template.js');
 const categoryTemplate = path.resolve('./src/templates/category-template.js');
@@ -63,12 +63,16 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     // `context` is available in the template as a prop and as a variable in GraphQL
 
     if (nodes.length > 0) {
-        nodes.forEach((post, i) => {
+        nodes.forEach((item, i) => {
             let tags = []
             let categories = []
 
-            if (post.node.frontmatter?.layout === 'page') {
-                console.log('skip post')
+            if (item.node.frontmatter?.layout === 'page') {
+                createPage({
+                    path: item.node.fields.slug,
+                    component: pageTemplate,
+                    context: { id: item.node.id }
+                });
             } else {
                 const previousPostId = i === 0 ? null : nodes[i - 1].node.id
                 const nextPostId = i === nodes.length - 1 ? null : nodes[i + 1].node.id
@@ -76,17 +80,17 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                 console.log(previousPostId, nextPostId)
 
                 createPage({
-                    path: post.node.fields.slug,
-                    component: blogPost,
+                    path: item.node.fields.slug,
+                    component: postTemplate,
                     context: {
-                        id: post.node.id,
+                        id: item.node.id,
                         previousPostId,
                         nextPostId,
                     },
                 })
 
-                if (post.node?.frontmatter?.tags) {
-                    tags = tags.concat(post.node.frontmatter.tags);
+                if (item.node?.frontmatter?.tags) {
+                    tags = tags.concat(item.node.frontmatter.tags);
                 }
 
                 tags.forEach((tag, ti) => {
@@ -98,8 +102,8 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                     });
                 })
 
-                if (post.node?.frontmatter?.category) {
-                    categories = tags.concat(post.node.frontmatter.category);
+                if (item.node?.frontmatter?.category) {
+                    categories = tags.concat(item.node.frontmatter.category);
                 }
 
                 categories.forEach((category, ti) => {
