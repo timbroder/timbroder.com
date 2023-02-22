@@ -16,7 +16,7 @@ module.exports = {
       since: `2007`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://www.timbroder.com/`,
     social: {
       twitter: `kylemathews`,
     },
@@ -112,6 +112,35 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+            {
+              site {
+                siteMetadata {
+                  siteUrl
+                }
+              }
+              allSitePage(
+                filter: {
+                  path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
+                }
+              ) {
+                nodes {
+                  path
+                }
+              }
+          }`,
+        serialize: ({ path, modifiedGmt }) => {
+          console.log("!", path);
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-feed`,

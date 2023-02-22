@@ -61,9 +61,3 @@ new look
 ————  
 Written using [MarsEdit](https://itunes.apple.com/us/app/marsedit-blog-editor-
 for-wordpress/id402376225?mt=12&at=11laRZ&ct=pro)
-
-[акклиматизация в
-горах](https://altezza.travel/articles/Acclimatization)[заявление на получение
-кредита по образцу банка](http://rossobstvennik.ru/anketa-zayavlenie-na-
-poluchenie-kredita.php "образец заявки на получение займа" )
-
