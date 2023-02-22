@@ -19,12 +19,20 @@ const categoryTemplate = path.resolve('./src/templates/category-template.js');
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({graphql, actions, reporter}) => {
-    const {createPage} = actions
+    const {createPage, createRedirect} = actions
 
 
     // Get all markdown blog nodes sorted by date
     const result = await graphql(`
     {
+        site {
+          siteMetadata {
+            redirects {
+                from 
+                to 
+            }
+          }
+        }
         allMarkdownRemark(
             sort: { frontmatter: { date: ASC } },
             filter: { frontmatter: { draft: { ne: true } } }, 
@@ -57,6 +65,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     }
 
     const nodes = result.data.allMarkdownRemark.edges
+    const redirects = result.data.site.siteMetadata.redirects
 
     // Create blog nodes pages
     // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -116,6 +125,15 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                 })
             }
 
+        })
+    }
+
+    if (redirects.length > 0) {
+        redirects.forEach((item, i) => {
+            createRedirect({
+                fromPath: item.from,
+                toPath: item.to,
+            });
         })
     }
 }

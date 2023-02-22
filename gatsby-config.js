@@ -41,6 +41,12 @@ module.exports = {
         title: 'About',
         slug: '/about/'
       },
+    ],
+    redirects: [
+      {
+        from: '/feed',
+        to: '/atom_feedburner.xml'
+      }
     ]
   },
   plugins: [
