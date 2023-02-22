@@ -1,0 +1,20 @@
+---
+layout: post
+title: Vagrant 1.8 is out! Linked clones, snapshots, port, ansible and more!
+date: 2015-12-21 18:59
+link: https://hashicorp.com/blog/vagrant-1-8.html
+---
+
+Vagrant 1.8 is out and it's a huge update. My 3 favorite features are below. Click through above for the full list
+
+> Snapshots are a feature of hypervisors that allow the point-in-time state of a virtual machine to be saved and restored
+
+This is awesome. No more copy disks around or worrying you forgot to back up the DB or git stash!
+
+> New command: port - This will display a list of forwarded ports to the guest machine. This is especially useful if Vagrant is auto-correcting ports in the case of collisions.
+
+​
+
+> New provisioner: ansible_local - This executes Ansible on the guest machine rather than on the host machine.
+
+​

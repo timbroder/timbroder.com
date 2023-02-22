@@ -1,0 +1,12 @@
+---
+layout: post
+title: Workflow 1.3 Brings Powerful Widget, Sync, Health Actions, And More
+date: 2015-09-20 10:17
+link: https://www.macstories.net/ios/workflow-1-3-brings-powerful-widget-sync-health-actions-and-more/
+---
+
+> I’m even more excited about the ability to read and automate Health data in Workflow and combine the results with actions, custom UIs, and other iOS apps.
+> 
+> With a new Find Health Samples action, you can read any Health category where samples match filters that include dates, source, name, and value; this allows you to, say, fetch steps for the last month, calories logged by a specific app, or heart rate from your Apple Watch. Each unit can be grouped, sorted, and limited; once fetched from Health, you can also get additional details of a sample.
+
+This is cool. I've been meaning to export all of the health data I've been collecting into a few spreadsheets and start picking through it. It's nice to know that there are a number of options available through Workflow to muck with this data

@@ -1,0 +1,14 @@
+---
+layout: post
+title: 'Gitlab: Almost Everything We Do Will Be Open'
+date: 2015-08-07 17:01
+link: https://about.gitlab.com/2015/08/03/almost-everything-we-do-is-now-open/
+---
+
+> Today we’re announcing a move from doing the majority of our development work internally, to almost exclusively working in public issue trackers on GitLab.com. This means that anyone can view and comment on all of our discussion and work. This includes bugs, new features, performance issues and everything else that relates to our products.
+
+Awesome. We use Gitlab for our source control at [work](http://alexanderinteractive.com) and I couldn't be happier to see this. 
+
+> We were not working in the open as a true open source project should.
+
+​

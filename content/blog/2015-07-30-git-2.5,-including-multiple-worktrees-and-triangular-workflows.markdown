@@ -1,0 +1,16 @@
+---
+layout: post
+title: Git 2.5, Including Multiple Worktrees And Triangular Workflows
+date: 2015-07-30 10:26
+link: https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows
+---
+
+Git 2.5 has been released with worktrees, better triangular workflows, and performance enhancements. Read GitHub's take on it [here](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows "%fill:name%")
+
+> The new Git subcommand git worktree creates additional working trees connected to an existing Git repository [1]. Each linked working tree is a pseudo-repository with its own checked-out working copy. Its .git is actually a file that refers to the history and references from the main repository
+
+Nice. This is Git's solution to having multiple clones for different long running streams. I do this more often than I thought 
+
+> Git has many features that support triangular workflows, but it’s sometimes hard to see how to use them together in real life. Let’s take a closer look at triangular workflows, including the new command line shorthand <reference>@{push} that was added in Git 2.5.
+
+This is neat. It might take me a little while to adopt this. The existing flow works well for me
