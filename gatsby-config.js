@@ -11,14 +11,37 @@ module.exports = {
   siteMetadata: {
     title: `Tim Broder .com`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Tim Broder`,
+      summary: `Code, Comics, Crossfit, and now, D&D.`,
+      since: `2007`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,
     },
+    nav: [
+      {
+        title: 'Posts',
+        slug: '/'
+      },
+      {
+        title: 'Podcasts',
+        slug: '/podcasts/'
+      },
+      {
+        title: 'Projects',
+        slug: '/projects/'
+      },
+      {
+        title: 'Talks',
+        slug: '/talks/'
+      },
+      {
+        title: 'About',
+        slug: '/about/'
+      },
+    ]
   },
   plugins: [
     `gatsby-plugin-image`,

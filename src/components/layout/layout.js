@@ -2,6 +2,8 @@ import * as React from "react"
 import {Link} from "gatsby"
 import {Container} from "./container";
 import Headline from "../content/headline";
+import Header from "./header";
+import Footer from "./footer";
 
 const Layout = ({location, title, children}) => {
     const rootPath = `${__PATH_PREFIX__}/`
@@ -15,6 +17,7 @@ const Layout = ({location, title, children}) => {
                 </div>
             </div>
             <div className="relative">
+                <Header location={location}/>
                 <Container className="mt-16 sm:mt-32">
                     <header className="max-w-2xl">
                         {isRootPath
@@ -23,21 +26,24 @@ const Layout = ({location, title, children}) => {
                                 <Link to="/">{title}</Link>
                             </Headline>
                             :
-                            <span className="font-bold tracking-tight text-zinc-800 text-2xl">
-                                <Link to="/">{title}</Link>
-                            </span>
+                            null
+                            // <span className="font-bold tracking-tight text-zinc-800 text-2xl">
+                            //     <Link to="/">{title}</Link>
+                            // </span>
                         }
 
                         {/*<p className="mt-6 text-base text-zinc-600">*/}
                         {/*    {intro}*/}
                         {/*</p>*/}
                     </header>
-                    <div className="mt-16 sm:mt-20">{children}</div>
+                    <div className="mt-16 sm:mt-20">
+                        <main>
+                            {children}
+                        </main>
+                    </div>
                 </Container>
             </div>
-            <footer>
-                <a rel="me" href="https://masto.ai/@timothybroder">Mastodon</a>
-            </footer>
+            <Footer/>
         </div>
 
     )
