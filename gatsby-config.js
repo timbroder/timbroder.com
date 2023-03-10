@@ -43,6 +43,7 @@ module.exports = {
       },
     ]
   },
+  redirects: [],
   plugins: [
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
