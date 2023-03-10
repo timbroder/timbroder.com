@@ -41,9 +41,14 @@ module.exports = {
         title: 'About',
         slug: '/about/'
       },
+    ],
+    redirects: [
+      {
+        from: '/feed',
+        to: '/atom_feedburner.xml'
+      }
     ]
   },
-  redirects: [],
   plugins: [
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
