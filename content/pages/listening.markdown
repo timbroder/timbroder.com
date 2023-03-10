@@ -9,6 +9,8 @@ These days I almost exclusively listen to 3 podcasts/networks. Most of these are
 * [Accidental Tech Podcast](http://atp.fm/)
 * [Critical Cole](https://critrole.com/)
 * [The Glass Cannon Network](https://www.glasscannonnetwork.com/)
+* [Worlds Beyond Number](https://worldsbeyondnumber.com/)
+* [Dimension 20](https://www.dropout.tv/dimension-20)
 
 These are some of the podcasts I used listen to every week. Some I cherry picked. 
 
