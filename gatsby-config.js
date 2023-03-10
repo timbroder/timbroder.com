@@ -15,7 +15,7 @@ module.exports = {
       summary: `Code, Comics, Crossfit, and now, D&D.`,
       since: `2007`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Tim Broder is a creative technologist`,
     siteUrl: `https://www.timbroder.com/`,
     social: {
       twitter: `kylemathews`,
@@ -41,12 +41,6 @@ module.exports = {
         title: 'About',
         slug: '/about/'
       },
-    ],
-    redirects: [
-      {
-        from: '/feed',
-        to: '/atom_feedburner.xml'
-      }
     ]
   },
   plugins: [
@@ -185,7 +179,7 @@ module.exports = {
                 }
               }
             }`,
-            output: "/atom_feedburner.xml",
+            output: "/feed",
             title: "TimBroder.com RSS Feed",
           },
         ],

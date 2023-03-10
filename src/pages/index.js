@@ -28,7 +28,7 @@ export default BlogIndex
 export const Head = () => (
   <Fragment>
     <Seo title="TimBroder.com Posts" />
-    <a rel="me" href="https://masto.ai/@timothybroder">Mastodon</a>
+    <a id="mastadon" rel="me" href="https://masto.ai/@timothybroder">Mastodon</a>
     <link
         key={`gatsby-plugin-feed-0`}
         rel="alternate"
