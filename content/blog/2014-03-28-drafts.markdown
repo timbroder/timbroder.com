@@ -1,0 +1,20 @@
+---
+author: tim
+comments: true
+date: 2014-03-28 16:07:22+00:00
+dsq_thread_id: '2567152833'
+layout: post
+link: ''
+slug: drafts
+title: Drafts
+wordpress_id: 1486
+category: Code
+tags:
+- drafts
+---
+
+On the plane last night I realize that I have quite a number of draft posts
+sitting in [Drafts](https://itunes.apple.com/us/app/weather-notifications/id704052114?ls=1&mt=8&uo=4&at=11l4Cf&ct=blog). These came in
+from [Instapaper](https://itunes.apple.com/en/app/instapaper/id288545208?mt=8&uo=4&at=11l4Cf&ct=blog) on the train. I probably read an unhealthy amount of
+things in Instapaper.  I’m going to try to be more diligent about posting
+these in real time. For now I’ve scheduled these out over the next few days

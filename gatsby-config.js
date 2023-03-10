@@ -1,139 +1,117 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+ */
+
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
-    url: 'https://www.timbroder.com',
-    title: 'timbroder.com',
-    subtitle: 'Code. Comics. Crossfit',
-    copyright: '© 2007-2020 Tim Broder. All rights reserved.',
-    disqusShortname: 'timbrodercom',
-    menu: [
-      {
-        label: 'Apps',
-        path: '/apps'
-      },
-      {
-        label: 'Podcasts',
-        path: '/podcasts'
-      },
-      {
-        label: 'Projects',
-        path: '/projects'
-      },
-      {
-        label: 'Talks',
-        path: '/talks'
-      }
-    ],
+    title: `Tim Broder .com`,
     author: {
-      name: 'Tim Broder',
-      email: 'timothy.broder@gmail.com',
-      twitter: 'timothybroder',
-      github: 'timbroder',
-      rss: 'https://feeds.feedburner.com/timbroder',
-      linkedin: 'timbroder',
-      instagram: 'timothybroder'
-    }
+      name: `Tim Broder`,
+      summary: `Code, Comics, Crossfit, and now, D&D.`,
+      since: `2007`,
+    },
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://www.timbroder.com/`,
+    social: {
+      twitter: `kylemathews`,
+    },
+    nav: [
+      {
+        title: 'Posts',
+        slug: '/'
+      },
+      {
+        title: 'Podcasts',
+        slug: '/podcasts/'
+      },
+      {
+        title: 'Projects',
+        slug: '/projects/'
+      },
+      {
+        title: 'Talks',
+        slug: '/talks/'
+      },
+      {
+        title: 'About',
+        slug: '/about/'
+      },
+    ],
+    redirects: [
+      {
+        from: '/feed',
+        to: '/atom_feedburner.xml'
+      }
+    ]
   },
   plugins: [
+    `gatsby-plugin-image`,
+    'gatsby-plugin-postcss',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
     },
     {
-      resolve: 'gatsby-plugin-feed-timbroder',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                site_url: url
-                title
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => (
-              allMarkdownRemark.edges.map(edge =>
-                Object.assign({}, edge.node.frontmatter, {
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.site_url + edge.node.fields.slug,
-                  guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }],
-                  link: site.siteMetadata.link,
-                  slug: site.siteMetadata.slug
-                }))
-            ),
-            query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
-                ) {
-                  edges {
-                    node {
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        layout
-                        draft
-                        description
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/atom_feedburner.xml'
-          }
-        ]
-      }
+        path: `${__dirname}/content/pages`,
+        name: `page`,
+      },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 960
-            }
+              maxWidth: 630,
+            },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
-              showLineNumbersGlobal: true
+              showLineNumbers: true
             }
           },
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants'
-        ]
-      }
+          {
+            resolve: `gatsby-plugin-google-gtag`,
+            options: {
+              // You can add multiple tracking ids and a pageview event will be fired for all of them.
+              trackingIds: [
+                "G-L8N53HMK1R", // Google Analytics / GA
+              ],
+              // This object is used for configuration specific to this plugin
+              pluginConfig: {
+                head: true,
+              },
+            },
+          }
+        ],
+      },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-17099661-1' }
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:400,400i,500,700`]
-      }
-    },
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
@@ -141,7 +119,7 @@ module.exports = {
             {
               site {
                 siteMetadata {
-                  url
+                  siteUrl
                 }
               }
               allSitePage(
@@ -149,27 +127,83 @@ module.exports = {
                   path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
                 }
               ) {
-                edges {
-                  node {
-                    path
-                  }
+                nodes {
+                  path
                 }
               }
           }`,
-        output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.url + edge.node.path,
-              changefreq: 'daily',
-              priority: 0.7
-            };
-          })
+        serialize: ({ path, modifiedGmt }) => {
+          console.log("!", path);
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
       }
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-postcss-sass'
-  ]
-};
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `{
+              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+                nodes {
+                  excerpt
+                  html
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    title
+                    date
+                  }
+                }
+              }
+            }`,
+            output: "/atom_feedburner.xml",
+            title: "TimBroder.com RSS Feed",
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Starter Blog`,
+        short_name: `Gatsby`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+  ],
+}

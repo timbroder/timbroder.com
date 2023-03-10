@@ -1,170 +1,216 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
+ */
+
+const path = require(`path`)
+const {createFilePath} = require(`gatsby-source-filesystem`)
 const _ = require('lodash');
-const Promise = require('bluebird');
-const path = require('path');
-const lost = require('lost');
-const pxtorem = require('postcss-pxtorem');
-const slash = require('slash');
-const moment = require('moment');
+const moment = require("moment");
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+// Define the template for blog post
+const postTemplate = path.resolve(`./src/templates/post-template.js`)
+const pageTemplate = path.resolve('./src/templates/page-template.js');
+const tagTemplate = path.resolve('./src/templates/tag-template.js');
+const categoryTemplate = path.resolve('./src/templates/category-template.js');
 
-  return new Promise((resolve, reject) => {
-    const postTemplate = path.resolve('./src/templates/post-template.jsx');
-    const pageTemplate = path.resolve('./src/templates/page-template.jsx');
-    const tagTemplate = path.resolve('./src/templates/tag-template.jsx');
-    const categoryTemplate = path.resolve('./src/templates/category-template.jsx');
+/**
+ * @type {import('gatsby').GatsbyNode['createPages']}
+ */
+exports.createPages = async ({graphql, actions, reporter}) => {
+    const {createPage, createRedirect} = actions
 
-    graphql(`
+
+    // Get all markdown blog nodes sorted by date
+    const result = await graphql(`
     {
-      allMarkdownRemark(
-        limit: 1000,
-        filter: { frontmatter: { draft: { ne: true } } },
-      ) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              link
-              tags
-              layout
-              category
+        site {
+          siteMetadata {
+            redirects {
+                from 
+                to 
             }
           }
         }
-      }
-    }
-  `).then((result) => {
-      if (result.errors) {
-        console.log(result.errors);
-        reject(result.errors);
-      }
-
-      _.each(result.data.allMarkdownRemark.edges, (edge) => {
-        if (_.get(edge, 'node.frontmatter.layout') === 'page') {
-          createPage({
-            path: edge.node.fields.slug,
-            component: slash(pageTemplate),
-            context: { slug: edge.node.fields.slug }
-          });
-        } else if (_.get(edge, 'node.frontmatter.layout') === 'post') {
-          createPage({
-            path: edge.node.fields.slug,
-            component: slash(postTemplate),
-            context: { slug: edge.node.fields.slug }
-          });
-
-          let tags = [];
-          if (_.get(edge, 'node.frontmatter.tags')) {
-            tags = tags.concat(edge.node.frontmatter.tags);
-          }
-
-          tags = _.uniq(tags);
-          _.each(tags, (tag) => {
-            const tagPath = `/tags/${_.kebabCase(tag)}/`;
-            createPage({
-              path: tagPath,
-              component: tagTemplate,
-              context: { tag }
-            });
-          });
-
-          let categories = [];
-          if (_.get(edge, 'node.frontmatter.category')) {
-            categories = categories.concat(edge.node.frontmatter.category);
-          }
-
-          categories = _.uniq(categories);
-          _.each(categories, (category) => {
-            const categoryPath = `/categories/${_.kebabCase(category)}/`;
-            createPage({
-              path: categoryPath,
-              component: categoryTemplate,
-              context: { category }
-            });
-          });
+        allMarkdownRemark(
+            sort: { frontmatter: { date: ASC } },
+            filter: { frontmatter: { draft: { ne: true } } }, 
+            limit: 1000
+        ) {
+            edges {
+                node {
+                    id
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        layout
+                        category
+                        tags
+                        link
+                    }
+                }
+            }
         }
-      });
+    }
+  `)
 
-      resolve();
-    });
-  });
-};
-
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
-
-  if (node.internal.type === 'File') {
-    const parsedFilePath = path.parse(node.absolutePath);
-    const slug = `/${parsedFilePath.dir.split('---')[1]}/`;
-    createNodeField({ node, name: 'slug', value: slug });
-  } else if (
-    node.internal.type === 'MarkdownRemark' &&
-    typeof node.slug === 'undefined'
-  ) {
-    const fileNode = getNode(node.parent);
-    let slug = fileNode.fields.slug;
-    if (typeof node.frontmatter.path !== 'undefined') {
-      slug = node.frontmatter.path;
-    } else if (typeof node.frontmatter.slug !== 'undefined' && typeof node.frontmatter.date) {
-      slug = `/${moment(node.frontmatter.date).format('YYYY/MM/') + node.frontmatter.slug}`;
-    } else {
-      const fileName = _.replace(_.replace(_.last(_.split(node.fileAbsolutePath, '/')), '.md', ''), '.markdown', '');
-      const adjusted = _.replace(fileName, new RegExp('\\d{4}-\\d{2}-\\d{2}-', 'g'), '');
-      slug = `/${moment(node.frontmatter.date).format('YYYY/MM/') + adjusted}`;
+    if (result.errors) {
+        reporter.panicOnBuild(
+            `There was an error loading your blog posts`,
+            result.errors
+        )
+        return
     }
 
-    createNodeField({
-      node,
-      name: 'slug',
-      value: `${slug}`
-    });
+    const nodes = result.data.allMarkdownRemark.edges
+    const redirects = result.data.site.siteMetadata.redirects
 
-    if (node.frontmatter.tags) {
-      const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${_.kebabCase(tag)}/`);
-      createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
+    // Create blog nodes pages
+    // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+    // `context` is available in the template as a prop and as a variable in GraphQL
+
+    if (nodes.length > 0) {
+        nodes.forEach((item, i) => {
+            let tags = []
+            let categories = []
+
+            if (item.node.frontmatter?.layout === 'page') {
+                createPage({
+                    path: item.node.fields.slug,
+                    component: pageTemplate,
+                    context: { id: item.node.id }
+                });
+            } else {
+                const previousPostId = i === 0 ? null : nodes[i - 1].node.id
+                const nextPostId = i === nodes.length - 1 ? null : nodes[i + 1].node.id
+
+                console.log(previousPostId, nextPostId)
+
+                createPage({
+                    path: item.node.fields.slug,
+                    component: postTemplate,
+                    context: {
+                        id: item.node.id,
+                        previousPostId,
+                        nextPostId,
+                    },
+                })
+
+                if (item.node?.frontmatter?.tags) {
+                    tags = tags.concat(item.node.frontmatter.tags);
+                }
+
+                tags.forEach((tag, ti) => {
+                    const tagPath = `/tag/${_.kebabCase(tag)}/`;
+                    createPage({
+                        path: tagPath,
+                        component: tagTemplate,
+                        context: { tag }
+                    });
+                })
+
+                if (item.node?.frontmatter?.category) {
+                    categories = tags.concat(item.node.frontmatter.category);
+                }
+
+                categories.forEach((category, ti) => {
+                    const categoryPath = `/category/${_.kebabCase(category)}/`;
+                    createPage({
+                        path: categoryPath,
+                        component: categoryTemplate,
+                        context: { category }
+                    });
+                })
+            }
+
+        })
     }
 
-    if (typeof node.frontmatter.category !== 'undefined') {
-      const categorySlug = `/categories/${_.kebabCase(node.frontmatter.category)}/`;
-      createNodeField({ node, name: 'categorySlug', value: categorySlug });
+    if (redirects.length > 0) {
+        redirects.forEach((item, i) => {
+            createRedirect({
+                fromPath: item.from,
+                toPath: item.to,
+            });
+        })
     }
-  }
-};
+}
 
-exports.modifyWebpackConfig = ({ config }) => {
-  config.merge({
-    postcss: [
-      lost(),
-      pxtorem({
-        rootValue: 16,
-        unitPrecision: 5,
-        propList: [
-          'font',
-          'font-size',
-          'line-height',
-          'letter-spacing',
-          'margin',
-          'margin-top',
-          'margin-left',
-          'margin-bottom',
-          'margin-right',
-          'padding',
-          'padding-top',
-          'padding-left',
-          'padding-bottom',
-          'padding-right',
-          'border-radius',
-          'width',
-          'max-width'
-        ],
-        selectorBlackList: [],
-        replace: true,
-        mediaQuery: false,
-        minPixelValue: 0
-      })
-    ]
-  });
-};
+/**
+ * @type {import('gatsby').GatsbyNode['onCreateNode']}
+ */
+exports.onCreateNode = ({node, actions, getNode}) => {
+    const {createNodeField} = actions
+
+    if (node.internal.type === 'File') {
+        const parsedFilePath = path.parse(node.absolutePath);
+        const slug = `/${parsedFilePath.dir.split('---')[1]}/`;
+        createNodeField({node, name: 'slug', value: slug});
+    } else if (node.internal.type === `MarkdownRemark` &&
+        typeof node.slug === 'undefined') {
+        let value;
+
+        if (typeof node.frontmatter.path !== 'undefined') {
+            value = node.frontmatter.path;
+        } else if (typeof node.frontmatter.slug !== 'undefined' && typeof node.frontmatter.date) {
+            value = `/${moment(node.frontmatter.date).format('YYYY/MM/') + node.frontmatter.slug}`;
+        } else {
+            const fileName = _.replace(_.replace(_.last(_.split(node.fileAbsolutePath, '/')), '.md', ''), '.markdown', '');
+            const adjusted = _.replace(fileName, new RegExp('\\d{4}-\\d{2}-\\d{2}-', 'g'), '');
+            value = `/${moment(node.frontmatter.date).format('YYYY/MM/') + adjusted}`;
+        }
+
+        createNodeField({
+            name: `slug`,
+            node,
+            value,
+        })
+    }
+}
+
+/**
+ * @type {import('gatsby').GatsbyNode['createSchemaCustomization']}
+ */
+exports.createSchemaCustomization = ({actions}) => {
+    const {createTypes} = actions
+
+    // Explicitly define the siteMetadata {} object
+    // This way those will always be defined even if removed from gatsby-config.js
+
+    // Also explicitly define the Markdown frontmatter
+    // This way the "MarkdownRemark" queries will return `null` even when no
+    // blog posts are stored inside "content/blog" instead of returning an error
+    createTypes(`
+    type SiteSiteMetadata {
+      author: Author
+      siteUrl: String
+      social: Social
+    }
+
+    type Author {
+      name: String
+      summary: String
+    }
+
+    type Social {
+      twitter: String
+    }
+
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+      fields: Fields
+    }
+
+    type Frontmatter {
+      title: String
+      description: String
+      date: Date @dateformat
+    }
+
+    type Fields {
+      slug: String
+    }
+  `)
+}

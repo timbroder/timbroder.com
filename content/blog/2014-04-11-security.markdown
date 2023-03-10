@@ -1,0 +1,17 @@
+---
+author: tim
+comments: true
+date: 2014-04-11 23:53:21+00:00
+dsq_thread_id: '2609694072'
+layout: post
+link: http://inessential.com/2014/04/11/security
+slug: security
+title: “Security”
+wordpress_id: 1504
+category: Code
+---
+
+> Were the National Security Agency an agency charged with the security of our
+nation, it would have reported the Heartbleed bug immediately instead of
+exploiting it.
+
