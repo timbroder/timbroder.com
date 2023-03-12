@@ -21,7 +21,7 @@ function SocialLink({ className, href, children, icon: Icon }) {
         <li className={clsx(className, 'flex')}>
             <Link
                 href={href}
-                className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500"
                 target="_blank"
             >
                 <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
@@ -55,15 +55,15 @@ const About = ({ location }) => {
                                 height={1024}
                                 quality={100}
                                 alt="Profile picture"
-                                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                                className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover"
                             />
                         </div>
                     </div>
                     <div className="lg:order-first lg:row-span-2">
-                        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+                        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
                             I’m Tim Broder. I live just north of New York City, where I build things and play.
                         </h1>
-                        <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+                        <div className="mt-6 space-y-7 text-base text-zinc-600">
                             <p>
                                 I've loved making things with tech for as long as I can remember. I got my start playing with MS paint when I was 8 years old on my dad’s windows 3.1 machine. I built my first website (a Final Fantasy 7 fan site) on Geocities in 8th grade. I had only “been on the internet” for a few months at that point, and mostly at friends' houses. I remember thinking HOLY SH*T I can MAKE this myself?!?! Fast forward 6 months and I was competing in the ThinkQuest website competition through my school. I knew then that I wanted to get a “Ph. D. in web design”
                             </p>
