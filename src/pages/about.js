@@ -95,7 +95,8 @@ const About = ({ location }) => {
                             <SocialLink href="https://www.goodreads.com/user/show/1253891-tim-broder" icon={GoodreadsIcon} className="mt-4">
                                 What I'm reading
                             </SocialLink>
-                            <SocialLink href="https://psnprofiles.com/SEPHROTH64" icon={PlaystationIcon} className="mt-4">
+                            {/*<SocialLink href="https://psnprofiles.com/SEPHROTH64" icon={PlaystationIcon} className="mt-4">*/}
+                            <SocialLink href="https://www.exophase.com/user/timbroder/" icon={PlaystationIcon} className="mt-4">
                                 What I'm playing
                             </SocialLink>
                             <SocialLink href="https://www.last.fm/user/broderboy/" icon={LastFmIcon} className="mt-4">
