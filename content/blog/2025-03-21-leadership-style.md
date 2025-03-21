@@ -7,7 +7,7 @@ tags:
 - leadership
 ---
 
-As part of taking a new position at [Highlights For Children](https://shop.highlights.com/), I participated in "new leader asimilation". It's a way for leaders to get to know their new teams, and visa versa. The most-asked question I got in advance was "What is your leadership style?" Now, I know what my style is in my head. What my core principles are and how they govern my leadership. But I've never taken the time to write it down. I had ChatGPT interview me so I could write it out. It was a fun exercise. I had no disagreements by the end of the process. Both the summary of my leadership style and the chat itself is below. The only editing I've done is for spelling to protect the innocent ;)
+As part of taking a new position at [Highlights For Children](https://shop.highlights.com/), I participated in "new leader assimilation". It's a way for leaders to get to know their new teams, and visa versa. The most-asked question I got in advance was "What is your leadership style?" Now, I know what my style is in my head. What my core principles are and how they govern my leadership. But I've never taken the time to write it down. I had ChatGPT interview me so I could write it out. It was a fun exercise. I had no disagreements by the end of the process. Both the summary of my leadership style and the chat itself is below. The only editing I've done is for spelling to protect the innocent ;)
 
 
 **# My Leadership Style**
