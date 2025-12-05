@@ -14,6 +14,9 @@ const postTemplate = path.resolve(`./src/templates/post-template.js`)
 const pageTemplate = path.resolve('./src/templates/page-template.js');
 const tagTemplate = path.resolve('./src/templates/tag-template.js');
 const categoryTemplate = path.resolve('./src/templates/category-template.js');
+const blogListTemplate = path.resolve('./src/templates/blog-list-template.js');
+
+const POSTS_PER_PAGE = 20;
 
 /**
  * @type {import('gatsby').GatsbyNode['createPages']}
@@ -21,21 +24,20 @@ const categoryTemplate = path.resolve('./src/templates/category-template.js');
 exports.createPages = async ({graphql, actions, reporter}) => {
     const {createPage, createRedirect} = actions
 
-
     // Get all markdown blog nodes sorted by date
     const result = await graphql(`
     {
         site {
           siteMetadata {
             redirects {
-                from 
-                to 
+                from
+                to
             }
           }
         }
         allMarkdownRemark(
             sort: { frontmatter: { date: ASC } },
-            filter: { frontmatter: { draft: { ne: true } } }, 
+            filter: { frontmatter: { draft: { ne: true } } },
             limit: 1000
         ) {
             edges {
@@ -67,69 +69,118 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     const nodes = result.data.allMarkdownRemark.edges
     const redirects = result.data.site.siteMetadata.redirects
 
-    // Create blog nodes pages
-    // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-    // `context` is available in the template as a prop and as a variable in GraphQL
+    // Separate posts and pages
+    const posts = nodes.filter(item => item.node.frontmatter?.layout !== 'page')
+    const pages = nodes.filter(item => item.node.frontmatter?.layout === 'page')
 
-    if (nodes.length > 0) {
-        nodes.forEach((item, i) => {
-            let tags = []
-            let categories = []
+    // Collect all tags and categories with their post counts
+    const tagCounts = {}
+    const categoryCounts = {}
 
-            if (item.node.frontmatter?.layout === 'page') {
-                createPage({
-                    path: item.node.fields.slug,
-                    component: pageTemplate,
-                    context: { id: item.node.id }
-                });
-            } else {
-                const previousPostId = i === 0 ? null : nodes[i - 1].node.id
-                const nextPostId = i === nodes.length - 1 ? null : nodes[i + 1].node.id
-
-                console.log(previousPostId, nextPostId)
-
-                createPage({
-                    path: item.node.fields.slug,
-                    component: postTemplate,
-                    context: {
-                        id: item.node.id,
-                        previousPostId,
-                        nextPostId,
-                    },
-                })
-
-                if (item.node?.frontmatter?.tags) {
-                    tags = tags.concat(item.node.frontmatter.tags);
+    posts.forEach(item => {
+        if (item.node?.frontmatter?.tags) {
+            item.node.frontmatter.tags.forEach(tag => {
+                const tagSlug = _.kebabCase(tag)
+                if (!tagCounts[tagSlug]) {
+                    tagCounts[tagSlug] = { name: tag, count: 0 }
                 }
-
-                tags.forEach((tag, ti) => {
-                    const tagPath = `/tag/${_.kebabCase(tag)}/`;
-                    createPage({
-                        path: tagPath,
-                        component: tagTemplate,
-                        context: { tag }
-                    });
-                })
-
-                if (item.node?.frontmatter?.category) {
-                    categories = tags.concat(item.node.frontmatter.category);
-                }
-
-                categories.forEach((category, ti) => {
-                    const categoryPath = `/category/${_.kebabCase(category)}/`;
-                    createPage({
-                        path: categoryPath,
-                        component: categoryTemplate,
-                        context: { category }
-                    });
-                })
+                tagCounts[tagSlug].count++
+            })
+        }
+        if (item.node?.frontmatter?.category) {
+            const catSlug = _.kebabCase(item.node.frontmatter.category)
+            if (!categoryCounts[catSlug]) {
+                categoryCounts[catSlug] = { name: item.node.frontmatter.category, count: 0 }
             }
+            categoryCounts[catSlug].count++
+        }
+    })
 
+    // Create paginated blog list pages (home page)
+    const numPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+    Array.from({ length: numPages }).forEach((_, i) => {
+        createPage({
+            path: i === 0 ? `/` : `/page/${i + 1}/`,
+            component: blogListTemplate,
+            context: {
+                limit: POSTS_PER_PAGE,
+                skip: i * POSTS_PER_PAGE,
+                numPages,
+                currentPage: i + 1,
+            },
         })
-    }
+    })
 
-    if (redirects.length > 0) {
-        redirects.forEach((item, i) => {
+    // Create individual post pages
+    posts.forEach((item, i) => {
+        const previousPostId = i === 0 ? null : posts[i - 1].node.id
+        const nextPostId = i === posts.length - 1 ? null : posts[i + 1].node.id
+
+        createPage({
+            path: item.node.fields.slug,
+            component: postTemplate,
+            context: {
+                id: item.node.id,
+                previousPostId,
+                nextPostId,
+            },
+        })
+    })
+
+    // Create individual static pages
+    pages.forEach(item => {
+        createPage({
+            path: item.node.fields.slug,
+            component: pageTemplate,
+            context: { id: item.node.id }
+        })
+    })
+
+    // Create paginated tag pages
+    Object.keys(tagCounts).forEach(tagSlug => {
+        const tag = tagCounts[tagSlug]
+        const numTagPages = Math.ceil(tag.count / POSTS_PER_PAGE)
+
+        Array.from({ length: numTagPages }).forEach((_, i) => {
+            createPage({
+                path: i === 0 ? `/tag/${tagSlug}/` : `/tag/${tagSlug}/page/${i + 1}/`,
+                component: tagTemplate,
+                context: {
+                    tag: tag.name,
+                    limit: POSTS_PER_PAGE,
+                    skip: i * POSTS_PER_PAGE,
+                    numPages: numTagPages,
+                    currentPage: i + 1,
+                    basePath: `/tag/${tagSlug}/`,
+                },
+            })
+        })
+    })
+
+    // Create paginated category pages
+    Object.keys(categoryCounts).forEach(catSlug => {
+        const category = categoryCounts[catSlug]
+        const numCatPages = Math.ceil(category.count / POSTS_PER_PAGE)
+
+        Array.from({ length: numCatPages }).forEach((_, i) => {
+            createPage({
+                path: i === 0 ? `/category/${catSlug}/` : `/category/${catSlug}/page/${i + 1}/`,
+                component: categoryTemplate,
+                context: {
+                    category: category.name,
+                    limit: POSTS_PER_PAGE,
+                    skip: i * POSTS_PER_PAGE,
+                    numPages: numCatPages,
+                    currentPage: i + 1,
+                    basePath: `/category/${catSlug}/`,
+                },
+            })
+        })
+    })
+
+    // Create redirects
+    if (redirects && redirects.length > 0) {
+        redirects.forEach((item) => {
             createRedirect({
                 fromPath: item.from,
                 toPath: item.to,
