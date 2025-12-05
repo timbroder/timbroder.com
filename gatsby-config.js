@@ -16,7 +16,7 @@ module.exports = {
       since: `2007`,
     },
     description: `Tim Broder is a creative technologist`,
-    siteUrl: `https://www.timbroder.com/`,
+    siteUrl: `https://timbroder.com/`,
     social: {
       twitter: `kylemathews`,
     },
