@@ -28,10 +28,11 @@ const TagTemplate = ({
     )
 }
 
-export const Head = ({pageContext}) => {
+export const Head = ({pageContext, location}) => {
     return (
         <Seo
             title={`Category: ${pageContext.category}`}
+            pathname={location.pathname}
         />
     )
 }
