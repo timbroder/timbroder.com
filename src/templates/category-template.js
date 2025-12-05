@@ -31,7 +31,7 @@ const TagTemplate = ({
 export const Head = ({pageContext}) => {
     return (
         <Seo
-            title={`category ${pageContext.tag}`}
+            title={`Category: ${pageContext.category}`}
         />
     )
 }
