@@ -6,47 +6,44 @@ import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
 import Posts from "../components/posts/posts"
 import Pagination from "../components/pagination"
-import Headline from "../components/content/headline"
 
-const TagTemplate = ({
-    data,
-    location,
-    pageContext
-}) => {
+const BlogListTemplate = ({ data, location, pageContext }) => {
+    const siteTitle = data.site.siteMetadata?.title || `Title`
     const posts = data.allMarkdownRemark.nodes
-    const siteTitle = data.site.siteMetadata?.title
-    const { tag, currentPage, numPages, basePath } = pageContext
+    const { currentPage, numPages } = pageContext
 
     return (
         <Layout location={location} title={siteTitle}>
-            <header className="flex flex-col">
-                <Headline>
-                    {`Tag: ${tag}`}
-                </Headline>
-            </header>
             <Posts posts={posts} />
             <Pagination
                 currentPage={currentPage}
                 numPages={numPages}
-                basePath={basePath}
+                basePath="/"
             />
         </Layout>
     )
 }
 
-export const Head = ({ pageContext, location }) => {
-    const { tag, currentPage, numPages, basePath } = pageContext
+export default BlogListTemplate
+
+export const Head = ({ location, pageContext }) => {
+    const { currentPage, numPages } = pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? basePath : `${basePath}page/${currentPage - 1}/`
-    const nextPage = `${basePath}page/${currentPage + 1}/`
-    const title = currentPage === 1 ? `Tag: ${tag}` : `Tag: ${tag} - Page ${currentPage}`
+    const prevPage = currentPage - 1 === 1 ? "/" : `/page/${currentPage - 1}/`
+    const nextPage = `/page/${currentPage + 1}/`
+    const title = currentPage === 1 ? "TimBroder.com Posts" : `TimBroder.com Posts - Page ${currentPage}`
 
     return (
         <Fragment>
-            <Seo
-                title={title}
-                pathname={location.pathname}
+            <Seo title={title} pathname={location.pathname} />
+            <link key="mastodon" rel="me" href="https://masto.ai/@timothybroder" />
+            <link
+                key="gatsby-plugin-feed-0"
+                rel="alternate"
+                type="application/rss+xml"
+                title="TimBroder.com RSS Feed"
+                href="https://feeds.feedburner.com/timbroder"
             />
             {!isFirst && <link rel="prev" href={prevPage} />}
             {!isLast && <link rel="next" href={nextPage} />}
@@ -54,10 +51,8 @@ export const Head = ({ pageContext, location }) => {
     )
 }
 
-export default TagTemplate
-
 export const pageQuery = graphql`
-    query BlogPostByTag($tag: String, $skip: Int!, $limit: Int!) {
+    query BlogListQuery($skip: Int!, $limit: Int!) {
         site {
             siteMetadata {
                 title
@@ -65,7 +60,7 @@ export const pageQuery = graphql`
         }
         allMarkdownRemark(
             sort: { frontmatter: { date: DESC } }
-            filter: { frontmatter: { draft: { ne: true }, tags: { in: [$tag] }, layout: { eq: "post" } } }
+            filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
             limit: $limit
             skip: $skip
         ) {
@@ -75,9 +70,10 @@ export const pageQuery = graphql`
                     slug
                 }
                 frontmatter {
-                    title
                     date(formatString: "MMMM DD, YYYY")
+                    title
                     description
+                    category
                 }
             }
         }

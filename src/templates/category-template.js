@@ -1,65 +1,85 @@
 import * as React from "react"
-import {Link, graphql} from "gatsby"
+import { Link, graphql } from "gatsby"
+import { Fragment } from "react"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
-import {Prose} from "../components/content/pros";
-import Posts from "../components/posts/posts";
-import Headline from "../components/content/headline";
+import Posts from "../components/posts/posts"
+import Pagination from "../components/pagination"
+import Headline from "../components/content/headline"
 
-const TagTemplate = ({
-                         data,
-                         location,
-                         pageContext
-                     }) => {
+const CategoryTemplate = ({
+    data,
+    location,
+    pageContext
+}) => {
     const posts = data.allMarkdownRemark.nodes
     const siteTitle = data.site.siteMetadata?.title
+    const { category, currentPage, numPages, basePath } = pageContext
 
     return (
         <Layout location={location} title={siteTitle}>
             <header className="flex flex-col">
                 <Headline>
-                    {`Category: ${pageContext.category}`}
+                    {`Category: ${category}`}
                 </Headline>
             </header>
-            <Posts posts={posts}/>
+            <Posts posts={posts} />
+            <Pagination
+                currentPage={currentPage}
+                numPages={numPages}
+                basePath={basePath}
+            />
         </Layout>
     )
 }
 
-export const Head = ({pageContext, location}) => {
+export const Head = ({ pageContext, location }) => {
+    const { category, currentPage, numPages, basePath } = pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage = currentPage - 1 === 1 ? basePath : `${basePath}page/${currentPage - 1}/`
+    const nextPage = `${basePath}page/${currentPage + 1}/`
+    const title = currentPage === 1 ? `Category: ${category}` : `Category: ${category} - Page ${currentPage}`
+
     return (
-        <Seo
-            title={`Category: ${pageContext.category}`}
-            pathname={location.pathname}
-        />
+        <Fragment>
+            <Seo
+                title={title}
+                pathname={location.pathname}
+            />
+            {!isFirst && <link rel="prev" href={prevPage} />}
+            {!isLast && <link rel="next" href={nextPage} />}
+        </Fragment>
     )
 }
 
-export default TagTemplate
+export default CategoryTemplate
 
 export const pageQuery = graphql`
-  query BlogPostByCategory($category: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(
-        sort: { frontmatter: { date: ASC } },
-        filter: { frontmatter: { draft: { ne: true }, category: { eq: $category }, layout: { eq: "post" }} }
-    ) {
-      nodes {
-      excerpt(pruneLength: 512)
-      fields {
-          slug
+    query BlogPostByCategory($category: String, $skip: Int!, $limit: Int!) {
+        site {
+            siteMetadata {
+                title
+            }
         }
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-      }
+        allMarkdownRemark(
+            sort: { frontmatter: { date: DESC } }
+            filter: { frontmatter: { draft: { ne: true }, category: { eq: $category }, layout: { eq: "post" } } }
+            limit: $limit
+            skip: $skip
+        ) {
+            nodes {
+                excerpt(pruneLength: 512)
+                fields {
+                    slug
+                }
+                frontmatter {
+                    title
+                    date(formatString: "MMMM DD, YYYY")
+                    description
+                }
+            }
+        }
     }
-  }}
 `
