@@ -17,9 +17,6 @@ module.exports = {
     },
     description: `Tim Broder is a creative technologist`,
     siteUrl: `https://timbroder.com/`,
-    social: {
-      twitter: `kylemathews`,
-    },
     nav: [
       {
         title: 'Posts',
