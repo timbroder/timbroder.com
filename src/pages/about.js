@@ -5,7 +5,6 @@ import {
     InstagramIcon,
     MastodonIcon,
     GithubIcon,
-    TwitterIcon,
     LinkedInIcon,
     GoodreadsIcon,
     PlaystationIcon, LastFmIcon, TraktIcon, RedditIcon
@@ -104,9 +103,6 @@ const About = ({ location }) => {
                             </SocialLink>
                             <SocialLink href="https://trakt.tv/users/timbroder" icon={TraktIcon} className="mt-4">
                                 What I'm watching
-                            </SocialLink>
-                            <SocialLink href="https://twitter.com/timothybroder" icon={TwitterIcon} className="mt-4">
-                                Not really active on Twitter
                             </SocialLink>
                         </ul>
                     </div>
