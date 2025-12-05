@@ -101,13 +101,46 @@ const BlogPostTemplate = ({
     )
 }
 
-export const Head = ({data: {markdownRemark: post}, location}) => {
+export const Head = ({data: {markdownRemark: post, site}, location}) => {
+    const siteUrl = site.siteMetadata?.siteUrl
+    const articleUrl = `${siteUrl}${location.pathname}`
+    const ogImage = `${siteUrl}/og-image.png`
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.frontmatter.title,
+        "description": post.frontmatter.description || post.excerpt,
+        "url": articleUrl,
+        "datePublished": post.frontmatter.dateISO,
+        "author": {
+            "@type": "Person",
+            "name": site.siteMetadata?.author?.name,
+            "url": siteUrl
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": site.siteMetadata?.author?.name,
+            "url": siteUrl
+        },
+        "image": ogImage,
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": articleUrl
+        }
+    }
+
     return (
-        <Seo
-            title={post.frontmatter.title}
-            description={post.frontmatter.description || post.excerpt}
-            pathname={location.pathname}
-        />
+        <>
+            <Seo
+                title={post.frontmatter.title}
+                description={post.frontmatter.description || post.excerpt}
+                pathname={location.pathname}
+            />
+            <script type="application/ld+json">
+                {JSON.stringify(jsonLd)}
+            </script>
+        </>
     )
 }
 
@@ -122,6 +155,10 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
+        author {
+          name
+        }
       }
     }
     markdownRemark(id: { eq: $id }) {
@@ -131,6 +168,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        dateISO: date(formatString: "YYYY-MM-DD")
         description
         tags
         category
