@@ -30,12 +30,12 @@ function SocialLink({ className, href, children, icon: Icon }) {
     )
 }
 
-export const Head = () => (
+export const Head = ({location}) => (
     <Fragment>
-        <Seo title="About - Tim Broder" />
-        <meta
-            name="description"
-            content="I’m Tim Broder. I live just north of New York City, where I build things and play"
+        <Seo
+            title="About - Tim Broder"
+            description="I'm Tim Broder. I live just north of New York City, where I build things and play"
+            pathname={location.pathname}
         />
     </Fragment>
 )

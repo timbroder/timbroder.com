@@ -25,9 +25,9 @@ export default BlogIndex
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => (
+export const Head = ({location}) => (
   <Fragment>
-    <Seo title="TimBroder.com Posts" />
+    <Seo title="TimBroder.com Posts" pathname={location.pathname} />
     <link key="mastodon" rel="me" href="https://masto.ai/@timothybroder" />
     <link
         key={`gatsby-plugin-feed-0`}
