@@ -9,7 +9,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import {Fragment} from "react";
 
-const Seo = ({ description, title, pathname, children }) => {
+const Seo = ({ description, title, pathname, image, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -28,6 +28,7 @@ const Seo = ({ description, title, pathname, children }) => {
   const defaultTitle = site.siteMetadata?.title
   const siteUrl = site.siteMetadata?.siteUrl
   const canonicalUrl = pathname ? `${siteUrl}${pathname}` : null
+  const ogImage = image ? `${siteUrl}${image}` : `${siteUrl}/og-image.png`
 
   return (
     <Fragment>
@@ -38,9 +39,11 @@ const Seo = ({ description, title, pathname, children }) => {
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      <meta name="twitter:card" content="summary" />
+      <meta property="og:image" content={ogImage} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={ogImage} />
       {children}
     </Fragment>
   )
