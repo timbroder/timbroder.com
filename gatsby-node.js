@@ -371,7 +371,7 @@ exports.createSchemaCustomization = ({actions}) => {
     union ContentfulContentReference = ContentfulAsset | ContentfulCodeBlock
 
     type ContentfulAsset implements Node {
-      contentful_id: String
+      contentful_id: String!
       title: String
       description: String
       file: ContentfulAssetFile
@@ -383,7 +383,7 @@ exports.createSchemaCustomization = ({actions}) => {
     }
 
     type ContentfulCodeBlock implements Node {
-      contentful_id: String
+      contentful_id: String!
       title: String
       language: String
       code: ContentfulCodeBlockCode
