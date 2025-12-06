@@ -82,7 +82,7 @@ export const Head = ({ location, pageContext }) => {
 }
 
 export const pageQuery = graphql`
-    query BlogListQuery($skip: Int!, $limit: Int!) {
+    query BlogListQuery {
         site {
             siteMetadata {
                 title
