@@ -19,12 +19,44 @@ const blogListTemplate = path.resolve('./src/templates/blog-list-template.js');
 const POSTS_PER_PAGE = 20;
 
 /**
+ * Generate slug for Contentful posts using the same pattern as Markdown
+ */
+function generateContentfulSlug(date, slug) {
+    return `/${moment(date).format('YYYY/MM/')}${slug}/`
+}
+
+/**
+ * Normalize a post from either source to a common shape for page creation
+ */
+function normalizePost(node, source) {
+    if (source === 'markdown') {
+        return {
+            id: node.id,
+            source: 'markdown',
+            slug: node.fields?.slug,
+            category: node.frontmatter?.category,
+            tags: node.frontmatter?.tags || [],
+            layout: node.frontmatter?.layout,
+        }
+    } else {
+        return {
+            id: node.id,
+            source: 'contentful',
+            slug: generateContentfulSlug(node.date, node.slug),
+            category: node.category,
+            tags: node.tags || [],
+            layout: 'post', // Contentful posts are always posts, not pages
+        }
+    }
+}
+
+/**
  * @type {import('gatsby').GatsbyNode['createPages']}
  */
 exports.createPages = async ({graphql, actions, reporter}) => {
     const {createPage, createRedirect} = actions
 
-    // Get all markdown blog nodes sorted by date
+    // Get all markdown blog nodes and Contentful blog posts sorted by date
     const result = await graphql(`
     {
         site {
@@ -51,7 +83,22 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                         category
                         tags
                         link
+                        date
                     }
+                }
+            }
+        }
+        allContentfulBlogPost(
+            sort: { date: ASC },
+            filter: { draft: { ne: true } }
+        ) {
+            edges {
+                node {
+                    id
+                    slug
+                    date
+                    category
+                    tags
                 }
             }
         }
@@ -66,20 +113,45 @@ exports.createPages = async ({graphql, actions, reporter}) => {
         return
     }
 
-    const nodes = result.data.allMarkdownRemark.edges
+    const markdownNodes = result.data.allMarkdownRemark.edges
+    const contentfulNodes = result.data.allContentfulBlogPost?.edges || []
     const redirects = result.data.site.siteMetadata.redirects
 
-    // Separate posts and pages
-    const posts = nodes.filter(item => item.node.frontmatter?.layout !== 'page')
-    const pages = nodes.filter(item => item.node.frontmatter?.layout === 'page')
+    // Normalize all posts
+    const markdownPosts = markdownNodes
+        .map(item => ({ ...normalizePost(item.node, 'markdown'), date: item.node.frontmatter?.date }))
+        .filter(item => item.layout !== 'page')
+
+    const markdownPages = markdownNodes
+        .map(item => normalizePost(item.node, 'markdown'))
+        .filter(item => item.layout === 'page')
+
+    const contentfulPosts = contentfulNodes
+        .map(item => ({ ...normalizePost(item.node, 'contentful'), date: item.node.date }))
+
+    // Create a set of markdown slugs for conflict detection
+    const markdownSlugs = new Set(markdownPosts.map(p => p.slug))
+
+    // Filter out contentful posts that conflict with markdown (markdown takes priority)
+    const filteredContentfulPosts = contentfulPosts.filter(p => {
+        if (markdownSlugs.has(p.slug)) {
+            reporter.warn(`Contentful post with slug "${p.slug}" conflicts with a Markdown post. Markdown takes priority.`)
+            return false
+        }
+        return true
+    })
+
+    // Merge all posts and sort by date ascending (for prev/next navigation)
+    const allPosts = [...markdownPosts, ...filteredContentfulPosts]
+    allPosts.sort((a, b) => new Date(a.date) - new Date(b.date))
 
     // Collect all tags and categories with their post counts
     const tagCounts = {}
     const categoryCounts = {}
 
-    posts.forEach(item => {
-        if (item.node?.frontmatter?.tags) {
-            item.node.frontmatter.tags.forEach(tag => {
+    allPosts.forEach(item => {
+        if (item.tags) {
+            item.tags.forEach(tag => {
                 const tagSlug = _.kebabCase(tag)
                 if (!tagCounts[tagSlug]) {
                     tagCounts[tagSlug] = { name: tag, count: 0 }
@@ -87,17 +159,17 @@ exports.createPages = async ({graphql, actions, reporter}) => {
                 tagCounts[tagSlug].count++
             })
         }
-        if (item.node?.frontmatter?.category) {
-            const catSlug = _.kebabCase(item.node.frontmatter.category)
+        if (item.category) {
+            const catSlug = _.kebabCase(item.category)
             if (!categoryCounts[catSlug]) {
-                categoryCounts[catSlug] = { name: item.node.frontmatter.category, count: 0 }
+                categoryCounts[catSlug] = { name: item.category, count: 0 }
             }
             categoryCounts[catSlug].count++
         }
     })
 
     // Create paginated blog list pages (home page)
-    const numPages = Math.ceil(posts.length / POSTS_PER_PAGE)
+    const numPages = Math.ceil(allPosts.length / POSTS_PER_PAGE)
     Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
             path: i === 0 ? `/` : `/page/${i + 1}/`,
@@ -112,27 +184,32 @@ exports.createPages = async ({graphql, actions, reporter}) => {
     })
 
     // Create individual post pages
-    posts.forEach((item, i) => {
-        const previousPostId = i === 0 ? null : posts[i - 1].node.id
-        const nextPostId = i === posts.length - 1 ? null : posts[i + 1].node.id
+    allPosts.forEach((item, i) => {
+        const previousPostId = i === 0 ? null : allPosts[i - 1].id
+        const nextPostId = i === allPosts.length - 1 ? null : allPosts[i + 1].id
+        const previousPostSource = i === 0 ? null : allPosts[i - 1].source
+        const nextPostSource = i === allPosts.length - 1 ? null : allPosts[i + 1].source
 
         createPage({
-            path: item.node.fields.slug,
+            path: item.slug,
             component: postTemplate,
             context: {
-                id: item.node.id,
+                id: item.id,
+                source: item.source,
                 previousPostId,
                 nextPostId,
+                previousPostSource,
+                nextPostSource,
             },
         })
     })
 
-    // Create individual static pages
-    pages.forEach(item => {
+    // Create individual static pages (markdown only)
+    markdownPages.forEach(item => {
         createPage({
-            path: item.node.fields.slug,
+            path: item.slug,
             component: pageTemplate,
-            context: { id: item.node.id }
+            context: { id: item.id }
         })
     })
 
@@ -218,6 +295,14 @@ exports.onCreateNode = ({node, actions, getNode}) => {
             node,
             value,
         })
+    } else if (node.internal.type === 'ContentfulBlogPost') {
+        // Create slug field for Contentful posts
+        const slug = generateContentfulSlug(node.date, node.slug)
+        createNodeField({
+            name: `slug`,
+            node,
+            value: slug,
+        })
     }
 }
 
@@ -262,6 +347,10 @@ exports.createSchemaCustomization = ({actions}) => {
 
     type Fields {
       slug: String
+    }
+
+    type ContentfulBlogPost implements Node {
+      fields: Fields
     }
   `)
 }

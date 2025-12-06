@@ -1,16 +1,46 @@
 import * as React from "react"
+import { useMemo, Fragment } from "react"
 import { Link, graphql } from "gatsby"
-import { Fragment } from "react"
 
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
 import Posts from "../components/posts/posts"
 import Pagination from "../components/pagination"
 
+/**
+ * Merge and sort posts from both Markdown and Contentful sources
+ */
+function mergePosts(markdownNodes = [], contentfulNodes = []) {
+    // Add source identifier and normalize date for sorting
+    const markdownPosts = markdownNodes.map(node => ({
+        ...node,
+        _source: 'markdown',
+        _sortDate: new Date(node.frontmatter?.date || 0),
+    }))
+
+    const contentfulPosts = contentfulNodes.map(node => ({
+        ...node,
+        _source: 'contentful',
+        _sortDate: new Date(node.date || 0),
+    }))
+
+    // Merge and sort by date descending
+    const allPosts = [...markdownPosts, ...contentfulPosts]
+    allPosts.sort((a, b) => b._sortDate - a._sortDate)
+
+    return allPosts
+}
+
 const BlogListTemplate = ({ data, location, pageContext }) => {
     const siteTitle = data.site.siteMetadata?.title || `Title`
-    const posts = data.allMarkdownRemark.nodes
     const { currentPage, numPages } = pageContext
+
+    // Merge posts from both sources
+    const posts = useMemo(() => {
+        const markdownNodes = data.allMarkdownRemark?.nodes || []
+        const contentfulNodes = data.allContentfulBlogPost?.nodes || []
+        return mergePosts(markdownNodes, contentfulNodes)
+    }, [data])
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -61,8 +91,6 @@ export const pageQuery = graphql`
         allMarkdownRemark(
             sort: { frontmatter: { date: DESC } }
             filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } }
-            limit: $limit
-            skip: $skip
         ) {
             nodes {
                 excerpt(pruneLength: 512)
@@ -74,6 +102,25 @@ export const pageQuery = graphql`
                     title
                     description
                     category
+                    link
+                }
+            }
+        }
+        allContentfulBlogPost(
+            sort: { date: DESC }
+            filter: { draft: { ne: true } }
+        ) {
+            nodes {
+                id
+                title
+                slug
+                date
+                formattedDate: date(formatString: "MMMM DD, YYYY")
+                description
+                category
+                link
+                fields {
+                    slug
                 }
             }
         }

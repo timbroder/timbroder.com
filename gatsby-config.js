@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -49,6 +53,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     'gatsby-plugin-postcss',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -156,19 +167,46 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
+            serialize: ({ query: { site, allMarkdownRemark, allContentfulBlogPost } }) => {
+              const moment = require('moment')
+
+              // Process markdown posts
+              const markdownPosts = allMarkdownRemark.nodes.map(node => ({
+                title: node.frontmatter.title,
+                description: node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.fields.slug,
+                guid: site.siteMetadata.siteUrl + node.fields.slug,
+                custom_elements: [{ "content:encoded": node.html }],
+                _sortDate: new Date(node.frontmatter.date),
+              }))
+
+              // Process Contentful posts
+              const contentfulPosts = (allContentfulBlogPost?.nodes || []).map(node => {
+                const slug = `/${moment(node.date).format('YYYY/MM/')}${node.slug}/`
+                return {
+                  title: node.title,
+                  description: node.description || '',
+                  date: node.date,
+                  url: site.siteMetadata.siteUrl + slug,
+                  guid: site.siteMetadata.siteUrl + slug,
+                  custom_elements: [{ "content:encoded": node.description || '' }],
+                  _sortDate: new Date(node.date),
+                }
               })
+
+              // Merge and sort by date descending
+              const allPosts = [...markdownPosts, ...contentfulPosts]
+              allPosts.sort((a, b) => b._sortDate - a._sortDate)
+
+              // Remove internal sort field before returning
+              return allPosts.map(({ _sortDate, ...post }) => post)
             },
             query: `{
-              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+              allMarkdownRemark(
+                sort: {frontmatter: {date: DESC}}
+                filter: { frontmatter: { draft: { ne: true }, layout: { eq: "post" } } }
+              ) {
                 nodes {
                   excerpt
                   html
@@ -179,6 +217,17 @@ module.exports = {
                     title
                     date
                   }
+                }
+              }
+              allContentfulBlogPost(
+                sort: { date: DESC }
+                filter: { draft: { ne: true } }
+              ) {
+                nodes {
+                  title
+                  slug
+                  date
+                  description
                 }
               }
             }`,
