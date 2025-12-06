@@ -1,6 +1,6 @@
 import * as React from "react"
+import { useMemo, Fragment } from "react"
 import { Link, graphql } from "gatsby"
-import { Fragment } from "react"
 
 import Layout from "../components/layout/layout"
 import Seo from "../components/seo"
@@ -8,14 +8,41 @@ import Posts from "../components/posts/posts"
 import Pagination from "../components/pagination"
 import Headline from "../components/content/headline"
 
+/**
+ * Merge and sort posts from both Markdown and Contentful sources
+ */
+function mergePosts(markdownNodes = [], contentfulNodes = []) {
+    const markdownPosts = markdownNodes.map(node => ({
+        ...node,
+        _source: 'markdown',
+        _sortDate: new Date(node.frontmatter?.date || 0),
+    }))
+
+    const contentfulPosts = contentfulNodes.map(node => ({
+        ...node,
+        _source: 'contentful',
+        _sortDate: new Date(node.date || 0),
+    }))
+
+    const allPosts = [...markdownPosts, ...contentfulPosts]
+    allPosts.sort((a, b) => b._sortDate - a._sortDate)
+
+    return allPosts
+}
+
 const CategoryTemplate = ({
     data,
     location,
     pageContext
 }) => {
-    const posts = data.allMarkdownRemark.nodes
     const siteTitle = data.site.siteMetadata?.title
     const { category, currentPage, numPages, basePath } = pageContext
+
+    const posts = useMemo(() => {
+        const markdownNodes = data.allMarkdownRemark?.nodes || []
+        const contentfulNodes = data.allContentfulBlogPost?.nodes || []
+        return mergePosts(markdownNodes, contentfulNodes)
+    }, [data])
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -57,7 +84,7 @@ export const Head = ({ pageContext, location }) => {
 export default CategoryTemplate
 
 export const pageQuery = graphql`
-    query BlogPostByCategory($category: String, $skip: Int!, $limit: Int!) {
+    query BlogPostByCategory($category: String) {
         site {
             siteMetadata {
                 title
@@ -66,8 +93,6 @@ export const pageQuery = graphql`
         allMarkdownRemark(
             sort: { frontmatter: { date: DESC } }
             filter: { frontmatter: { draft: { ne: true }, category: { eq: $category }, layout: { eq: "post" } } }
-            limit: $limit
-            skip: $skip
         ) {
             nodes {
                 excerpt(pruneLength: 512)
@@ -78,6 +103,26 @@ export const pageQuery = graphql`
                     title
                     date(formatString: "MMMM DD, YYYY")
                     description
+                    category
+                    link
+                }
+            }
+        }
+        allContentfulBlogPost(
+            sort: { date: DESC }
+            filter: { draft: { ne: true }, category: { eq: $category } }
+        ) {
+            nodes {
+                id
+                title
+                slug
+                date
+                formattedDate: date(formatString: "MMMM DD, YYYY")
+                description
+                category
+                link
+                fields {
+                    slug
                 }
             }
         }

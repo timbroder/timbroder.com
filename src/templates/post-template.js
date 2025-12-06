@@ -7,13 +7,100 @@ import Post from "../components/posts/post";
 import Headline from "../components/content/headline";
 import _ from "lodash";
 
+/**
+ * Normalize post data from either source
+ */
+function normalizePostData(data, pageContext) {
+    const source = pageContext.source || 'markdown'
+
+    if (source === 'markdown' && data.markdownRemark) {
+        const post = data.markdownRemark
+        return {
+            source: 'markdown',
+            title: post.frontmatter.title,
+            date: post.frontmatter.date,
+            dateISO: post.frontmatter.dateISO,
+            description: post.frontmatter.description || post.excerpt,
+            excerpt: post.excerpt,
+            tags: post.frontmatter.tags,
+            category: post.frontmatter.category,
+            link: post.frontmatter.link,
+            html: post.html,
+            ogImage: null, // Markdown posts don't have custom OG images yet
+            _original: post,
+        }
+    } else if (source === 'contentful' && data.contentfulBlogPost) {
+        const post = data.contentfulBlogPost
+        return {
+            source: 'contentful',
+            title: post.title,
+            date: post.formattedDate,
+            dateISO: post.date,
+            description: post.description || '',
+            excerpt: post.description || '',
+            tags: post.tags,
+            category: post.category,
+            link: post.link,
+            content: post.content,
+            ogImage: post.ogImage?.file?.url ? `https:${post.ogImage.file.url}` : null,
+            _original: post,
+        }
+    }
+
+    return null
+}
+
+/**
+ * Get previous/next post info based on source
+ */
+function getPrevNextInfo(data, pageContext) {
+    const { previousPostSource, nextPostSource } = pageContext
+
+    let previous = null
+    let next = null
+
+    // Get previous post
+    if (previousPostSource === 'markdown' && data.previousMarkdown) {
+        previous = {
+            slug: data.previousMarkdown.fields?.slug,
+            title: data.previousMarkdown.frontmatter?.title,
+        }
+    } else if (previousPostSource === 'contentful' && data.previousContentful) {
+        previous = {
+            slug: data.previousContentful.fields?.slug,
+            title: data.previousContentful.title,
+        }
+    }
+
+    // Get next post
+    if (nextPostSource === 'markdown' && data.nextMarkdown) {
+        next = {
+            slug: data.nextMarkdown.fields?.slug,
+            title: data.nextMarkdown.frontmatter?.title,
+        }
+    } else if (nextPostSource === 'contentful' && data.nextContentful) {
+        next = {
+            slug: data.nextContentful.fields?.slug,
+            title: data.nextContentful.title,
+        }
+    }
+
+    return { previous, next }
+}
+
 const BlogPostTemplate = ({
-                              data: {previous, next, site, markdownRemark: post},
-                              location,
-                          }) => {
-    const siteTitle = site.siteMetadata?.title || `Title`
-    const tags = post.frontmatter.tags;
-    const category = post.frontmatter.category;
+    data,
+    location,
+    pageContext,
+}) => {
+    const siteTitle = data.site.siteMetadata?.title || `Title`
+    const postData = normalizePostData(data, pageContext)
+
+    if (!postData) {
+        return <Layout location={location} title={siteTitle}><p>Post not found</p></Layout>
+    }
+
+    const { tags, category } = postData
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -24,36 +111,24 @@ const BlogPostTemplate = ({
                 <header className="flex flex-col">
                     <span className="flex flex-row mt-2">
                         <time
-                            dateTime={post.frontmatter.date}
+                            dateTime={postData.dateISO}
                             className="flex items-center text-base text-zinc-400"
                         >
                             <span className="h-4 w-0.5 rounded-full bg-zinc-200"/>
-                            <span className="ml-3">{post.frontmatter.date}</span>
+                            <span className="ml-3">{postData.date}</span>
                         </time>
                     </span>
                     <Headline padded={false}>
-                        {post.frontmatter.title}
+                        {postData.title}
                     </Headline>
                 </header>
-                <Post post={post}/>
-                {/*<header>*/}
-                {/*  <h1 itemProp="headline">{post.frontmatter.title}</h1>*/}
-                {/*  <p>{post.frontmatter.date}</p>*/}
-                {/*</header>*/}
-                {/*<section*/}
-                {/*  dangerouslySetInnerHTML={{ __html: post.html }}*/}
-                {/*  itemProp="articleBody"*/}
-                {/*/>*/}
-                {/*<hr />*/}
-                {/*<footer>*/}
-                {/*  <Bio />*/}
-                {/*</footer>*/}
+                <Post post={postData._original} source={postData.source}/>
                 <footer className="flex flex-col">
                     <span className="flex flex-row mt-2">
                         {tags &&
                             <span className="ml-1 ">
                             {tags.map((tag) => (
-                                <Link to={`/tag/${_.kebabCase(tag)}/`}>
+                                <Link key={tag} to={`/tag/${_.kebabCase(tag)}/`}>
                                     <span
                                         className=" align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white">{tag}</span>
                                 </Link>
@@ -71,48 +146,27 @@ const BlogPostTemplate = ({
                     </span>
                 </footer>
             </article>
-            {/*<nav className="blog-post-nav">*/}
-            {/*  <ul*/}
-            {/*    style={{*/}
-            {/*      display: `flex`,*/}
-            {/*      flexWrap: `wrap`,*/}
-            {/*      justifyContent: `space-between`,*/}
-            {/*      listStyle: `none`,*/}
-            {/*      padding: 0,*/}
-            {/*    }}*/}
-            {/*  >*/}
-            {/*    <li>*/}
-            {/*      {previous && (*/}
-            {/*        <Link to={previous.fields.slug} rel="prev">*/}
-            {/*          ← {previous.frontmatter.title}*/}
-            {/*        </Link>*/}
-            {/*      )}*/}
-            {/*    </li>*/}
-            {/*    <li>*/}
-            {/*      {next && (*/}
-            {/*        <Link to={next.fields.slug} rel="next">*/}
-            {/*          {next.frontmatter.title} →*/}
-            {/*        </Link>*/}
-            {/*      )}*/}
-            {/*    </li>*/}
-            {/*  </ul>*/}
-            {/*</nav>*/}
         </Layout>
     )
 }
 
-export const Head = ({data: {markdownRemark: post, site}, location}) => {
+export const Head = ({data, location, pageContext}) => {
+    const site = data.site
     const siteUrl = site.siteMetadata?.siteUrl
     const articleUrl = `${siteUrl}${location.pathname}`
-    const ogImage = `${siteUrl}/og-image.png`
+
+    const postData = normalizePostData(data, pageContext)
+    if (!postData) return null
+
+    const ogImage = postData.ogImage || `${siteUrl}/og-image.png`
 
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": post.frontmatter.title,
-        "description": post.frontmatter.description || post.excerpt,
+        "headline": postData.title,
+        "description": postData.description,
         "url": articleUrl,
-        "datePublished": post.frontmatter.dateISO,
+        "datePublished": postData.dateISO,
         "author": {
             "@type": "Person",
             "name": site.siteMetadata?.author?.name,
@@ -133,9 +187,10 @@ export const Head = ({data: {markdownRemark: post, site}, location}) => {
     return (
         <>
             <Seo
-                title={post.frontmatter.title}
-                description={post.frontmatter.description || post.excerpt}
+                title={postData.title}
+                description={postData.description}
                 pathname={location.pathname}
+                image={postData.ogImage}
             />
             <script type="application/ld+json">
                 {JSON.stringify(jsonLd)}
@@ -175,7 +230,46 @@ export const pageQuery = graphql`
         link
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    contentfulBlogPost(id: { eq: $id }) {
+      id
+      title
+      slug
+      date
+      formattedDate: date(formatString: "MMMM DD, YYYY")
+      description
+      tags
+      category
+      link
+      content {
+        raw
+        references {
+          ... on ContentfulAsset {
+            contentful_id
+            __typename
+            gatsbyImageData(width: 800, placeholder: BLURRED)
+            title
+            description
+          }
+          ... on ContentfulCodeBlock {
+            contentful_id
+            __typename
+            title
+            language
+            code {
+              code
+            }
+            showLineNumbers
+          }
+        }
+      }
+      ogImage {
+        file {
+          url
+        }
+        gatsbyImageData(width: 1200, placeholder: BLURRED)
+      }
+    }
+    previousMarkdown: markdownRemark(id: { eq: $previousPostId }) {
       fields {
         slug
       }
@@ -183,13 +277,25 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    nextMarkdown: markdownRemark(id: { eq: $nextPostId }) {
       fields {
         slug
       }
       frontmatter {
         title
       }
+    }
+    previousContentful: contentfulBlogPost(id: { eq: $previousPostId }) {
+      fields {
+        slug
+      }
+      title
+    }
+    nextContentful: contentfulBlogPost(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      title
     }
   }
 `
