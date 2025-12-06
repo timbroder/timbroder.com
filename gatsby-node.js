@@ -350,12 +350,48 @@ exports.createSchemaCustomization = ({actions}) => {
     }
 
     type ContentfulBlogPost implements Node {
+      title: String
       slug: String
       date: Date @dateformat
       draft: Boolean
+      description: String
       category: String
       tags: [String]
+      link: String
+      content: ContentfulBlogPostContent
+      ogImage: ContentfulAsset
       fields: Fields
+    }
+
+    type ContentfulBlogPostContent {
+      raw: String
+      references: [ContentfulContentReference] @link
+    }
+
+    union ContentfulContentReference = ContentfulAsset | ContentfulCodeBlock
+
+    type ContentfulAsset implements Node {
+      contentful_id: String
+      title: String
+      description: String
+      file: ContentfulAssetFile
+    }
+
+    type ContentfulAssetFile {
+      url: String
+      contentType: String
+    }
+
+    type ContentfulCodeBlock implements Node {
+      contentful_id: String
+      title: String
+      language: String
+      code: ContentfulCodeBlockCode
+      showLineNumbers: Boolean
+    }
+
+    type ContentfulCodeBlockCode {
+      code: String
     }
   `)
 }
