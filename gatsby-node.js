@@ -350,6 +350,11 @@ exports.createSchemaCustomization = ({actions}) => {
     }
 
     type ContentfulBlogPost implements Node {
+      slug: String
+      date: Date @dateformat
+      draft: Boolean
+      category: String
+      tags: [String]
       fields: Fields
     }
   `)
