@@ -119,6 +119,9 @@ export const pageQuery = graphql`
                 description
                 category
                 link
+                content {
+                    raw
+                }
                 fields {
                     slug
                 }

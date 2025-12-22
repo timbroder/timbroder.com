@@ -146,4 +146,59 @@ export function renderContentfulRichText(richText) {
   return renderRichText(richText, options)
 }
 
+/**
+ * Extract plain text from a Contentful rich text node recursively
+ */
+function extractTextFromNode(node) {
+  if (!node) return ''
+
+  // Text node - return its value
+  if (node.nodeType === 'text') {
+    return node.value || ''
+  }
+
+  // Node with content array - recursively extract from children
+  if (node.content && Array.isArray(node.content)) {
+    return node.content.map(extractTextFromNode).join('')
+  }
+
+  return ''
+}
+
+/**
+ * Extract plain text excerpt from Contentful rich text content
+ * @param {Object} richText - The rich text object with raw JSON
+ * @param {number} maxLength - Maximum length of the excerpt (default 512)
+ * @returns {string} Plain text excerpt
+ */
+export function extractRichTextExcerpt(richText, maxLength = 512) {
+  if (!richText || !richText.raw) return ''
+
+  try {
+    const document = JSON.parse(richText.raw)
+    const text = extractTextFromNode(document)
+
+    // Clean up whitespace
+    const cleaned = text.replace(/\s+/g, ' ').trim()
+
+    // Truncate if needed
+    if (cleaned.length <= maxLength) {
+      return cleaned
+    }
+
+    // Find a good breaking point (end of word/sentence)
+    const truncated = cleaned.substring(0, maxLength)
+    const lastSpace = truncated.lastIndexOf(' ')
+
+    if (lastSpace > maxLength * 0.8) {
+      return truncated.substring(0, lastSpace) + '...'
+    }
+
+    return truncated + '...'
+  } catch (e) {
+    console.warn('Failed to extract excerpt from rich text:', e)
+    return ''
+  }
+}
+
 export default renderContentfulRichText
