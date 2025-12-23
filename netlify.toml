@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build -- --verbose --log-pages"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  GATSBY_EXPERIMENTAL_QUERY_CONCURRENCY = "1"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"

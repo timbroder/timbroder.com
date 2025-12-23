@@ -11,6 +11,7 @@ const BlogPostTemplate = ({
                               data: {site, markdownRemark: post},
                               location,
                           }) => {
+    console.log(`[DEBUG] Rendering page: ${location.pathname}`)
     const siteTitle = site.siteMetadata?.title || `Title`
 
     return (
