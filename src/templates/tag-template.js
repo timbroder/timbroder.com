@@ -35,6 +35,7 @@ const TagTemplate = ({
     location,
     pageContext
 }) => {
+    console.log(`[DEBUG] Rendering tag: ${location.pathname}`)
     const siteTitle = data.site.siteMetadata?.title
     const { tag, currentPage, numPages, basePath } = pageContext
 

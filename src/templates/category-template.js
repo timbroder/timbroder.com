@@ -35,6 +35,7 @@ const CategoryTemplate = ({
     location,
     pageContext
 }) => {
+    console.log(`[DEBUG] Rendering category: ${location.pathname}`)
     const siteTitle = data.site.siteMetadata?.title
     const { category, currentPage, numPages, basePath } = pageContext
 

@@ -93,6 +93,7 @@ const BlogPostTemplate = ({
     location,
     pageContext,
 }) => {
+    console.log(`[DEBUG] Rendering post: ${location.pathname} (source: ${pageContext.source || 'markdown'})`)
     const siteTitle = data.site.siteMetadata?.title || `Title`
     const postData = normalizePostData(data, pageContext)
 

@@ -32,6 +32,7 @@ function mergePosts(markdownNodes = [], contentfulNodes = []) {
 }
 
 const BlogListTemplate = ({ data, location, pageContext }) => {
+    console.log(`[DEBUG] Rendering blog-list: ${location.pathname}`)
     const siteTitle = data.site.siteMetadata?.title || `Title`
     const { currentPage, numPages } = pageContext
 
