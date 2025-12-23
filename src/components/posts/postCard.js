@@ -1,6 +1,5 @@
 import * as React from "react"
 import {Card} from "../content/card";
-import {extractRichTextExcerpt} from "../../utils/render-rich-text";
 
 /**
  * Normalize post data from either Markdown or Contentful source
@@ -18,14 +17,13 @@ function normalizePost(post) {
             link: post.frontmatter.link,
         }
     } else {
-        // Contentful post - use description or generate excerpt from content
-        const excerpt = post.description || extractRichTextExcerpt(post.content)
+        // Contentful post - use description field
         return {
             slug: post.fields?.slug,
             title: post.title || post.fields?.slug,
             date: post.formattedDate || post.date,
             category: post.category,
-            description: excerpt,
+            description: post.description || '',
             link: post.link,
         }
     }
