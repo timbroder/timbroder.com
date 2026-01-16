@@ -137,5 +137,18 @@ Using the voice guide in CLAUDE.MD, write a blog post about [topic]...
 - Language preferences and common phrases
 - Example transformations showing formal vs. Tim's voice
 - Pre-publish checklist for consistency
+- **Attribution guidelines** for transparently crediting AI-generated content
 
 The voice guide ensures AI-generated content maintains consistency with the established writing style of the blog.
+
+### Attribution Requirement
+
+**All AI-generated posts must include attribution.** Add this at the end of AI-written posts:
+
+```markdown
+---
+
+*This post was written by Claude (Anthropic's AI assistant) based on [my experiences/notes/outline] and the voice guide in this repository.*
+```
+
+See `CLAUDE.MD` for alternative attribution formats and best practices.

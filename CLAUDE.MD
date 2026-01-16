@@ -162,6 +162,58 @@ Before publishing, ask yourself:
 - [ ] Does the opening hook the reader immediately?
 - [ ] Is the technical content balanced with context?
 - [ ] Would I actually use these words in conversation?
+- [ ] Have I added proper attribution for AI-generated content?
+
+## Attribution for AI-Generated Content
+
+**IMPORTANT:** All AI-generated blog posts must include clear attribution to maintain transparency with readers.
+
+### Attribution Format
+
+Add this note at the **end of the post** (after the main content, before any closing links):
+
+```markdown
+---
+
+*This post was written by Claude (Anthropic's AI assistant) based on [my experiences/my notes/my outline/etc.] and the voice guide in this repository.*
+```
+
+### Alternative Formats
+
+**For posts with significant human input:**
+```markdown
+---
+
+*This post was co-written with Claude, Anthropic's AI assistant, using the voice guide in this repository.*
+```
+
+**For link posts or short reflections:**
+```markdown
+---
+
+*Written by Claude using Tim's voice guide.*
+```
+
+### Front Matter Addition (Optional)
+
+You can also add an `ai_assisted` field to the front matter for filtering or display purposes:
+
+```yaml
+---
+title: Your Post Title
+layout: post
+date: YYYY-MM-DD
+ai_assisted: true
+ai_model: claude-sonnet-4-5
+---
+```
+
+### Why Attribution Matters
+
+- **Transparency** - Readers deserve to know when content is AI-generated
+- **Trust** - Honest attribution builds credibility
+- **Evolving practice** - As AI tools become more common, clear attribution sets a good example
+- **Learning** - Helps readers understand what AI can and cannot do well
 
 ## Blog Post Front Matter Template
 
