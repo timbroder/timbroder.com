@@ -94,3 +94,61 @@ Required in Netlify (Site settings → Environment variables):
 |----------|-------------|
 | `CONTENTFUL_SPACE_ID` | Your Contentful space ID |
 | `CONTENTFUL_ACCESS_TOKEN` | Content Delivery API access token |
+
+## AI-Assisted Content Creation
+
+This repository includes a comprehensive writing voice guide (`CLAUDE.MD`) that captures Tim's authentic writing style, tone, and patterns based on 25+ blog posts spanning 2007-2026.
+
+### Using the Voice Guide
+
+**With Claude (or other AI assistants):**
+
+```
+Using the voice guide in CLAUDE.MD, write a blog post about [topic]...
+```
+
+**Example prompts:**
+
+1. **Technical post:**
+   ```
+   Using the voice guide in CLAUDE.MD, write a blog post about debugging
+   a React performance issue. Include: the problem, how I investigated it
+   with React DevTools, the solution, and what I learned. Keep it 300-400 words.
+   ```
+
+2. **Personal reflection:**
+   ```
+   Using the voice guide in CLAUDE.MD, write a short post (150-200 words)
+   about the importance of taking breaks during focused work. Make it personal
+   and include a practical takeaway.
+   ```
+
+3. **Link post:**
+   ```
+   Using the voice guide in CLAUDE.MD, write a link post about this article:
+   [URL]. Pull out 2-3 key quotes and explain why it resonated with me.
+   ```
+
+### What the Voice Guide Includes
+
+- Core voice characteristics (conversational, authentic, humble)
+- Writing style guidelines (sentence structure, paragraph formatting)
+- Content patterns for different post types (technical, personal, link posts)
+- Language preferences and common phrases
+- Example transformations showing formal vs. Tim's voice
+- Pre-publish checklist for consistency
+- **Attribution guidelines** for transparently crediting AI-generated content
+
+The voice guide ensures AI-generated content maintains consistency with the established writing style of the blog.
+
+### Attribution Requirement
+
+**All AI-generated posts must include attribution.** Add this at the end of AI-written posts:
+
+```markdown
+---
+
+*This post was written by Claude (Anthropic's AI assistant) based on [my experiences/notes/outline] and the voice guide in this repository.*
+```
+
+See `CLAUDE.MD` for alternative attribution formats and best practices.
