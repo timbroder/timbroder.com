@@ -382,30 +382,24 @@ These were checked for and confirmed not implemented:
 
 ---
 
-## Questions to Discuss
+## Migration Decisions
 
-1. **Contentful going forward?** Do you want to keep Contentful as a content source in Astro, or consolidate everything to markdown/MDX? Astro has good Contentful support, but it adds complexity.
+| # | Question | Decision |
+|---|----------|----------|
+| 1 | Contentful going forward? | **Keep Contentful** — Maintain dual-source architecture (Markdown + Contentful) in Astro |
+| 2 | Feedburner | **Both for now** — Generate RSS feed directly in Astro, but keep the Feedburner redirect as a transition |
+| 3 | Legacy frontmatter | **Preserve in existing files** — Don't strip legacy fields (`wordpress_id`, `dsq_thread_id`, etc.) from old posts, but create a clean template for new posts without them |
+| 4 | Manifest branding | **Update both** — Name to "Tim Broder .com", icon to avatar image |
+| 5 | About page format | **`.astro` component** — Full control over layout, direct equivalent of the current React component |
+| 6 | `@headlessui/react` | **Drop it** — Along with all other unused dependencies. **Scorched earth policy**: Gatsby and everything not part of the new Astro system must be removed entirely. Old templates, old configs, old deps — all gone. |
+| 7 | Link posts | **Keep** — Preserve the Daring Fireball-style link post pattern |
+| 8 | Docker files | **Drop** — Remove Dockerfile and docker-compose.yml |
+| 9 | Pagination count | **Keep at 20** posts per page |
+| 10 | Tag/Category system | **Keep both** — Tags (array) and categories (single string), both with paginated archive pages |
+| 11 | Podcasts I Listen To page | **Keep** — Migrate the page as-is |
+| 12 | Google Analytics | **Keep GA4** — Same tracking ID (`G-L8N53HMK1R`), wired into Astro |
+| 13 | Previous/Next navigation | **Drop** — Remove prev/next post navigation from single post pages |
 
-2. **Feedburner:** The RSS feed redirects through Feedburner (`https://feeds.feedburner.com/timbroder`). Do you want to keep using Feedburner, or generate the RSS feed directly from Astro and point the domain's `/feed` to it?
+### Guiding Principle
 
-3. **Legacy frontmatter cleanup:** Older posts have WordPress/Jekyll remnants (`wordpress_id`, `dsq_thread_id`, `author`, `comments`). Should we strip these during migration, or leave them as-is for historical record?
-
-4. **Manifest name:** Currently says "Gatsby Starter Blog" and uses the default Gatsby icon. Should these be updated during migration?
-
-5. **The About page** is a custom React component (not markdown). In Astro, this could be an `.astro` component or an MDX file. Preference?
-
-6. **`@headlessui/react`** is listed as a dependency — is it actively used anywhere, or can it be dropped?
-
-7. **Link posts:** Do you still use the link-post pattern (external `link` field with commentary)? Should we keep this feature?
-
-8. **Docker files:** Are the Dockerfile and docker-compose.yml still used for local development, or can they be dropped?
-
-9. **Pagination count:** 20 posts per page — should that stay the same?
-
-10. **Tag/Category system:** Currently tags are an array and category is a single string. Both generate paginated archive pages. Keep this structure, or simplify?
-
-11. **The `podcasts-i-listen-to` page** links to `/podcasts-i-listen-to` from the podcasts page, but the page file is `listening.markdown` with `path: /podcasts-i-listen-to` — do you still want this page?
-
-12. **Google Analytics:** Keep GA4, or switch to something privacy-focused (Plausible, Fathom, etc.)?
-
-13. **Previous/Next navigation** on posts currently works across both content sources (markdown and Contentful) in chronological order. Preserve this behavior?
+**Scorched earth on old tooling.** After migration, the repo should look like a pure Astro project. No Gatsby code, no React templates, no unused dependencies. Only Astro, Tailwind, and what's needed for the features above.
