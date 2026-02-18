@@ -1,11 +1,8 @@
 node_modules/
+dist/
+.astro/
 .cache/
-public/
 npm-debug.log
-.eslintcache
-.gatsby-context.js
-.idea
-gatsby-starter-lumen.iml
 .DS_Store
 yarn-error.log
 .env*
