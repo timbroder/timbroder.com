@@ -37,8 +37,8 @@ const tagName = allPosts.length > 0
 
 const isFirst = currentPage === 1
 const isLast = currentPage === totalPages
-const prevPage = currentPage - 1 === 1 ? basePath : `${basePath}page/${currentPage - 1}/`
-const nextPage = `${basePath}page/${currentPage + 1}/`
+const prevPage = currentPage - 1 === 1 ? basePath : `${basePath}${currentPage - 1}/`
+const nextPage = `${basePath}${currentPage + 1}/`
 const title = currentPage === 1 ? `Tag: ${tagName}` : `Tag: ${tagName} - Page ${currentPage}`
 ---
 
