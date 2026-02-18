@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2009/02/installing-ubuntu-netbook-remix-with/"><meta property="og:title" content="Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2009/02/installing-ubuntu-netbook-remix-with/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind","description":"","url":"https://timbroder.com/2009/02/installing-ubuntu-netbook-remix-with/","datePublished":"2009-02-25","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2009/02/installing-ubuntu-netbook-remix-with/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2009-02-25" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">February 25, 2009</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind </h1> </header> <div class="mt-8 prose"> <section> <p>I recently picked up a MSI Wind Netbook and love the damn thing. <a href="http://www.canonical.com/projects/ubuntu/unr">Ubuntu
+Netbook Remix</a> brings in a great
+UI which makes navigating on the small screen much easier.I used Ubuntu Jaunty
+Jackalope Alpha 4 as the base install, mainly because I didn’t want to go
+through the trouble of converting my ext3 partitions to ext4 when it comes out
+on April 23rd, and the driver support is more complete.  I haven’t had many
+problems with it aside from a few random firefox crashes.</p>
+<p><img src="https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SaWunIJBkfI/AAAAAAAAa7c/XG8CFukv18E/s1600-h/Screenshot1.png" alt=""></p>
+<p><img src="https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAAAAAa74/DBWWqZQOEko/s1600-h/partitions.png" alt=""></p>
+<ol>
+<li>
+<p>We’re going to make a bootable USB stick to install Ubuntu</p>
+</li>
+<li>
+<p>On a separate machine, <a href="http://www.ubuntu.com/testing/jaunty/alpha4#Download%20Alpha%204">Download </a>the cd image.  If you want to use 8.10, get the iso <a href="http://www.ubuntu.com/getubuntu/download">here</a></p>
+</li>
+<li>
+<p>if you are already using an Ubuntu install of 8.10 or higher, skip to step 11</p>
+</li>
+<li>
+<p>burn the image to a cd</p>
+</li>
+<li>
+<p>Boot to the cd, do not install, load the demo OS</p>
+</li>
+<li>
+<p>click System->Administration->Create a USB startup disk</p>
+</li>
+<li>
+<p>point it to either the cd in your drive, or the iso</p>
+</li>
+<li>
+<p>point to the correct USB stick</p>
+</li>
+<li>
+<p>the rest of the settings can stay default</p>
+</li>
+<li>
+<p>click Make Startup Disk</p>
+</li>
+<li>
+<p>Insert the usb drive into your wind, power it on, and hit delete to go into the bios, change the first boot device to USB Drive</p>
+</li>
+<li>
+<p>save and exit the bios</p>
+</li>
+<li>
+<p>If the wind boots off of the USB stick correctly, you should see the same screen as when you had booted off the cd</p>
+</li>
+<li>
+<p><a href="https://help.ubuntu.com/community/GraphicalInstall">Install </a>Ubuntu</p>
+</li>
+<li>
+<p>I made my partitions as follows:<br>
+|30 gig recovery partition|20 gig XP partition|15 Gig Ext4 Ubuntu Partition|4
+gig swap partition|the rest of the drive as an ext4 partition<br>
+![](<a href="https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAA">https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAA</a>
+AAAa74/DBWWqZQOEko/s1600-h/partitions.png)</p>
+</li>
+<li>
+<p>That last partition is where I will mount my home directory, as well as mount from windows xp using <a href="http://www.fs-driver.org/faq.html">ext2fs </a>(I havn’t actually tried this yet)</p>
+</li>
+<li>
+<p>Add the netbook remix repositories to your system.  This can be be done in synaptic or by typing the following into a terminal<br>
+sudo gedit /etc/apt/sources.list</p>
+</li>
+<li>
+<p>add the following:<br>
+deb <a href="http://ppa.launchpad.net/netbook-remix-team/ubuntu">http://ppa.launchpad.net/netbook-remix-team/ubuntu</a> intrepid main<br>
+deb-src <a href="http://ppa.launchpad.net/netbook-remix-team/ubuntu">http://ppa.launchpad.net/netbook-remix-team/ubuntu</a> intrepid main</p>
+</li>
+<li>
+<p>sudo apt-get update</p>
+</li>
+<li>
+<p>sudo apt-get install go-home-applet<br>
+sudo apt-get install window-picker-applet<br>
+sudo apt-get install maximus<br>
+sudo apt-get install human-netbook-theme</p>
+</li>
+<li>
+<p>Select the “Human Netbook Theme” in System Preferences>Apperance</p>
+</li>
+<li>
+<p>go into System Preferences-> sessions->startup programs and confirm that “Maximus” and “window-picker-applet” are thre</p>
+</li>
+<li>
+<p><strong>Disable Compiz Effects</strong> System Preferences->Appearance->None</p>
+<p>This is what is required to get netbook remix running, I continued with the
+following to tweak it some more</p>
+</li>
+<li>
+<p>Delete the bottom panel by right clicking on it</p>
+</li>
+<li>
+<p>Delete all the applets on the top panel by right clicking on them</p>
+</li>
+<li>
+<p>Add applets to the top panel so it ends up like:<br>
+Window Picker Applet | Trash Can |Notification Area | MixerApplet | Clock</p>
+</li>
+<li>
+<p>I also made alt+q the hotkey to show the desktop, makes navigating to it faster. Another option is the show desktop applet button that can be added to the top bar.  Preferences->keyboard shortcuts->“Hide all normal windows…”</p>
+</li>
+</ol>
+<p>More info is available
+<a href="http://wiki.msiwind.net/index.php/Ubuntu_8.04_Hardy_Heron">here</a>.</p> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/howto/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> HOWTO </span> </a><a href="/tag/netbook/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> netbook </span> </a><a href="/tag/ubuntu/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> ubuntu </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

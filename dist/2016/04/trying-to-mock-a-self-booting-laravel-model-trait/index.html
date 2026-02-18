@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Trying to Mock a Self Booting Laravel Model Trait | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2016/04/trying-to-mock-a-self-booting-laravel-model-trait/"><meta property="og:title" content="Trying to Mock a Self Booting Laravel Model Trait"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2016/04/trying-to-mock-a-self-booting-laravel-model-trait/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Trying to Mock a Self Booting Laravel Model Trait"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Trying to Mock a Self Booting Laravel Model Trait","description":"","url":"https://timbroder.com/2016/04/trying-to-mock-a-self-booting-laravel-model-trait/","datePublished":"2016-04-12","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2016/04/trying-to-mock-a-self-booting-laravel-model-trait/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2016-04-12" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">April 12, 2016</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Trying to Mock a Self Booting Laravel Model Trait </h1> </header> <div class="mt-8 prose"> <section> <p><a href="http://www.archybold.com/blog/post/booting-eloquent-model-traits" title="Bootable">Bootable</a> Model traits are pretty nifty. I’m using them to register certain events for the models using my Trait. However, I’ve run into an issue trying to mock models that are using the trait. Specifically, when a Mockery version of the model is instantiated, it’s boot code agrees that it should have a bootMyTrait method, but can’t find it when it tries to call it.</p>
+<p><a href="https://github.com/timbroder/mock-bootable-laravel-model-trait" title="Sample Repository">Sample Repository</a> for the below, with commands to reproduce.</p>
+<p>As an example, here is a trait:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F92672">namespace</span><span> </span><span style="color:#A6E22E;text-decoration:underline">App</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">trait</span><span> </span><span style="color:#A6E22E;text-decoration:underline">MyTrait</span></span>
+<span class="line"><span style="color:#F8F8F2">{</span></span>
+<span class="line"><span style="color:#F92672">    public</span><span style="color:#F92672"> static</span><span style="color:#66D9EF;font-style:italic"> function</span><span style="color:#A6E22E"> bootMyTrait</span><span style="color:#F8F8F2">()</span></span>
+<span class="line"><span style="color:#F8F8F2">    {</span></span>
+<span class="line"><span style="color:#66D9EF">        print</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Booting MyTrait</span><span style="color:#AE81FF">\n</span><span style="color:#E6DB74">"</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F8F8F2">    }</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<p>And a model using it:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F92672">namespace</span><span> </span><span style="color:#A6E22E;text-decoration:underline">App</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Database\Eloquent\</span><span style="color:#66D9EF;font-style:italic">Model</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">MyModel</span><span style="color:#F92672"> extends</span><span> </span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">Model</span></span>
+<span class="line"><span style="color:#F8F8F2">{</span></span>
+<span class="line"><span style="color:#F92672">    use</span><span style="color:#66D9EF;font-style:italic"> MyTrait</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<p>Instantiating the model regularly works fine. This shows the desired output:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F8F8F2">$model </span><span style="color:#F92672">=</span><span style="color:#F92672"> new</span><span style="color:#66D9EF;font-style:italic"> MyModel</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<p>However, trying to mock this model does not cooperate. This:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">WithoutMiddleware</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">DatabaseMigrations</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">DatabaseTransactions</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">ExampleTest</span><span style="color:#F92672"> extends</span><span> </span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">TestCase</span></span>
+<span class="line"><span style="color:#F8F8F2">{</span></span>
+<span class="line"><span style="color:#88846F">    /**</span></span>
+<span class="line"><span style="color:#88846F">     * A basic functional test example.</span></span>
+<span class="line"><span style="color:#88846F">     *</span></span>
+<span class="line"><span style="color:#88846F">     * </span><span style="color:#F92672">@return</span><span style="color:#F92672"> void</span></span>
+<span class="line"><span style="color:#88846F">     */</span></span>
+<span class="line"><span style="color:#F92672">    public</span><span style="color:#66D9EF;font-style:italic"> function</span><span style="color:#A6E22E"> testTraitBooting</span><span style="color:#F8F8F2">()</span></span>
+<span class="line"><span style="color:#F8F8F2">    {</span></span>
+<span class="line"><span style="color:#F8F8F2">        $model </span><span style="color:#F92672">=</span><span style="color:#FD971F"> $this</span><span style="color:#F92672">-></span><span style="color:#A6E22E">getMock</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'App\MyModel'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F8F8F2">    }</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<p>Fails. Adding some debugging to Eloquent:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#88846F">    /**</span></span>
+<span class="line"><span style="color:#88846F">     * Boot all of the bootable traits on the model.</span></span>
+<span class="line"><span style="color:#88846F">     *</span></span>
+<span class="line"><span style="color:#88846F">     * </span><span style="color:#F92672">@return</span><span style="color:#F92672"> void</span></span>
+<span class="line"><span style="color:#88846F">     */</span></span>
+<span class="line"><span style="color:#F92672">    protected</span><span style="color:#F92672"> static</span><span style="color:#66D9EF;font-style:italic"> function</span><span style="color:#A6E22E"> bootTraits</span><span style="color:#F8F8F2">()</span></span>
+<span class="line"><span style="color:#F8F8F2">    {</span></span>
+<span class="line"><span style="color:#F8F8F2">        $class </span><span style="color:#F92672">=</span><span style="color:#66D9EF;font-style:italic"> static</span><span style="color:#F92672">::class</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">        foreach</span><span style="color:#F8F8F2"> (</span><span style="color:#A6E22E">class_uses_recursive</span><span style="color:#F8F8F2">($class) </span><span style="color:#F92672">as</span><span style="color:#F8F8F2"> $trait) {</span></span>
+<span class="line"><span style="color:#66D9EF">            print</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"</span><span style="color:#AE81FF">\n</span><span style="color:#E6DB74">Testing that class: </span><span style="color:#F8F8F2">$class</span><span style="color:#E6DB74"> has method: "</span><span style="color:#F92672"> .</span><span style="color:#F8F8F2"> $method </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> 'boot'</span><span style="color:#F92672">.</span><span style="color:#A6E22E">class_basename</span><span style="color:#F8F8F2">($trait) </span><span style="color:#F92672">.</span><span style="color:#E6DB74"> " because of Trait: </span><span style="color:#F8F8F2">$trait</span><span style="color:#AE81FF">\n</span><span style="color:#E6DB74">"</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F92672">            if</span><span style="color:#F8F8F2"> (</span><span style="color:#66D9EF">method_exists</span><span style="color:#F8F8F2">($class, $method </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> 'boot'</span><span style="color:#F92672">.</span><span style="color:#A6E22E">class_basename</span><span style="color:#F8F8F2">($trait))) {</span></span>
+<span class="line"><span style="color:#66D9EF">                print</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Class: </span><span style="color:#F8F8F2">$class</span><span style="color:#E6DB74"> has method: </span><span style="color:#F8F8F2">$method</span><span style="color:#AE81FF"> \n</span><span style="color:#E6DB74">"</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F92672">                try</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#66D9EF">                    forward_static_call</span><span style="color:#F8F8F2">([$class, $method]);</span></span>
+<span class="line"><span style="color:#F8F8F2">                } </span><span style="color:#F92672">catch</span><span style="color:#F8F8F2"> (\</span><span style="color:#66D9EF;font-style:italic">PHPUnit_Framework_MockObject_BadMethodCallException</span><span style="color:#F8F8F2"> $e) {</span></span>
+<span class="line"><span style="color:#66D9EF">                    print</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Class: </span><span style="color:#F8F8F2">$class</span><span style="color:#E6DB74"> failed calling </span><span style="color:#F8F8F2">$method</span><span style="color:#AE81FF">\n</span><span style="color:#E6DB74">"</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F92672">                    throw</span><span style="color:#F8F8F2"> $e;</span></span>
+<span class="line"><span style="color:#F8F8F2">                }</span></span>
+<span class="line"><span style="color:#F8F8F2">            }</span></span>
+<span class="line"><span style="color:#F8F8F2">        }</span></span>
+<span class="line"><span style="color:#F8F8F2">    }</span></span></code></pre>
+<p>Gives us this failure:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>PHPUnit 5.1.0 by Sebastian Bergmann and contributors.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>E                                                                   1 / 1 (100%)</span></span>
+<span class="line"><span>Testing that class: Mock_MyModel_9ee820db has method: bootMyTrait because of Trait: App\MyTrait</span></span>
+<span class="line"><span>Class: Mock_MyModel_9ee820db has method: bootMyTrait</span></span>
+<span class="line"><span>Class: Mock_MyModel_9ee820db failed calling bootMyTrait</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Time: 129 ms, Memory: 18.00Mb</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>There was 1 error:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1) ExampleTest::testTraitBooting</span></span>
+<span class="line"><span>PHPUnit_Framework_MockObject_BadMethodCallException:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:326</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:309</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:296</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:277</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/tests/ExampleTest.php:16</span></span></code></pre>
+<p>I’ve also tried creating the mock a few different ways. Using <a href="https://github.com/laravel/framework/blob/2a38acf7ee2882d831a3b9a1361a710e70ffa31e/tests/Database/DatabaseSoftDeletingTraitTest.php#L14" title="DatabaseSoftDeletingTraitTest">DatabaseSoftDeletingTraitTest</a> as an example:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">WithoutMiddleware</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">DatabaseMigrations</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">DatabaseTransactions</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#66D9EF;font-style:italic"> Mockery</span><span style="color:#F92672"> as</span><span style="color:#F8F8F2"> m;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">ExampleTest</span><span style="color:#F92672"> extends</span><span> </span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">TestCase</span></span>
+<span class="line"><span style="color:#F8F8F2">{</span></span>
+<span class="line"><span style="color:#88846F">    /**</span></span>
+<span class="line"><span style="color:#88846F">     * A basic functional test example.</span></span>
+<span class="line"><span style="color:#88846F">     *</span></span>
+<span class="line"><span style="color:#88846F">     * </span><span style="color:#F92672">@return</span><span style="color:#F92672"> void</span></span>
+<span class="line"><span style="color:#88846F">     */</span></span>
+<span class="line"><span style="color:#F92672">    public</span><span style="color:#66D9EF;font-style:italic"> function</span><span style="color:#A6E22E"> testTraitBooting</span><span style="color:#F8F8F2">()</span></span>
+<span class="line"><span style="color:#F8F8F2">    {</span></span>
+<span class="line"><span style="color:#F8F8F2">        $mock </span><span style="color:#F92672">=</span><span style="color:#66D9EF;font-style:italic"> m</span><span style="color:#F92672">::</span><span style="color:#A6E22E">mock</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'App\MyModel'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#F8F8F2">        $mock</span><span style="color:#F92672">-></span><span style="color:#A6E22E">shouldReceive</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'bootMyTrait'</span><span style="color:#F8F8F2">)</span><span style="color:#F92672">-></span><span style="color:#A6E22E">once</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"><span style="color:#F8F8F2">    }</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<p>But here, bootMyTrait is never called:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>PHPUnit 5.1.0 by Sebastian Bergmann and contributors.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>E                                                                   1 / 1 (100%)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Time: 149 ms, Memory: 19.25Mb</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>There was 1 error:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1) ExampleTest::testTraitBooting</span></span>
+<span class="line"><span>Mockery\Exception\InvalidCountException: Method bootMyTrait() from Mockery_0_App_MyModel should be called</span></span>
+<span class="line"><span> exactly 1 times but called 0 times.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery/CountValidator/Exact.php:37</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery/Expectation.php:271</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery/ExpectationDirector.php:120</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery/Container.php:297</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery/Container.php:282</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/mockery/mockery/library/Mockery.php:142</span></span>
+<span class="line"><span>mock-bootable-laravel-model-trait/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestCase.php:122</span></span></code></pre>
+<p>So, I can move the code I’m doing in the boot method to a ServiceProvider, but then I’ll need to register each Model that uses the trait. This feels dirty, and using the boot method seems appropriate. So I think I’ve either hit a bug, or am Mocking the trait-using-model incorrectly. I’ve looked at <code>getMockForTrait</code> but I also need the mocked instance to extend Eloquent (a few of the trait’s methods call eloquent methods)</p>
+<p>If anyone sees something I missed, much appreciated</p>
+<p><em>Update Apr, 22 (Friday) 2016-04-22 03:28 PM</em></p>
+<p>Thanks to <a href="http://stackoverflow.com/a/36771173/647343" title="Marcin">Marcin</a>, we have a solution!</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="php"><code><span class="line"><span style="color:#F92672">&#x3C;?</span><span style="color:#AE81FF">php</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">WithoutMiddleware</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">DatabaseMigrations</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#F8F8F2"> Illuminate\Foundation\Testing\</span><span style="color:#66D9EF;font-style:italic">DatabaseTransactions</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F92672">use</span><span style="color:#66D9EF;font-style:italic"> Mockery</span><span style="color:#F92672"> as</span><span style="color:#F8F8F2"> m;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">ExampleTest</span><span style="color:#F92672"> extends</span><span> </span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">TestCase</span></span>
+<span class="line"><span style="color:#F8F8F2">{</span></span>
+<span class="line"><span style="color:#88846F">    /**</span></span>
+<span class="line"><span style="color:#88846F">     * A basic functional test example.</span></span>
+<span class="line"><span style="color:#88846F">     *</span></span>
+<span class="line"><span style="color:#88846F">     * </span><span style="color:#F92672">@return</span><span style="color:#F92672"> void</span></span>
+<span class="line"><span style="color:#88846F">     */</span></span>
+<span class="line"><span style="color:#F92672">    public</span><span style="color:#66D9EF;font-style:italic"> function</span><span style="color:#A6E22E"> testTraitBooting</span><span style="color:#F8F8F2">()</span></span>
+<span class="line"><span style="color:#F8F8F2">    {</span></span>
+<span class="line"><span style="color:#F8F8F2">        $mock </span><span style="color:#F92672">=</span><span style="color:#66D9EF;font-style:italic"> m</span><span style="color:#F92672">::</span><span style="color:#A6E22E">mock</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'App\MyModel'</span><span style="color:#F8F8F2">)</span><span style="color:#F92672">-></span><span style="color:#A6E22E">makePartial</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"><span style="color:#F8F8F2">        $mock</span><span style="color:#F92672">-></span><span style="color:#A6E22E">shouldReceive</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'bootMyTrait'</span><span style="color:#F8F8F2">)</span><span style="color:#F92672">-></span><span style="color:#A6E22E">once</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"><span style="color:#F8F8F2">        $mock</span><span style="color:#F92672">-></span><span style="color:#A6E22E">__construct</span><span style="color:#F8F8F2">();</span></span>
+<span class="line"><span style="color:#F8F8F2">    }</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span></code></pre> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/laravel/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> laravel </span> </a><a href="/tag/tdd/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> TDD </span> </a><a href="/tag/testing/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> testing </span> </a><a href="/tag/mock/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> mock </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

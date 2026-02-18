@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Remaining character count in django admin | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2010/02/remaining-character-count-in-django/"><meta property="og:title" content="Remaining character count in django admin"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2010/02/remaining-character-count-in-django/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Remaining character count in django admin"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Remaining character count in django admin","description":"","url":"https://timbroder.com/2010/02/remaining-character-count-in-django/","datePublished":"2010-02-01","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2010/02/remaining-character-count-in-django/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2010-02-01" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">February 01, 2010</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Remaining character count in django admin </h1> </header> <div class="mt-8 prose"> <section> <p>Update: This code also lives on <a href="https://github.com/broderboy/django-admin-remainingcharacters">Github</a></p>
+<p>Want to display the remaining characters on a text field in admin? (based off
+of maxlength or an override)</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#88846F">#have your ModelAdmin inherit this to use</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">CounterAdmin</span><span style="color:#F8F8F2">(</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">admin</span><span style="color:#F8F8F2">.</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">ModelAdmin</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F8F8F2">    counted_fields </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> ()</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span></span>
+<span class="line"><span style="color:#88846F">    #really for textareas</span></span>
+<span class="line"><span style="color:#F8F8F2">    max_lengths </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> {</span><span style="color:#E6DB74">'abstract'</span><span style="color:#F8F8F2">: </span><span style="color:#AE81FF">400</span><span style="color:#F8F8F2">,}</span></span>
+<span class="line"><span style="color:#F8F8F2">    </span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">    class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">Media</span><span style="color:#F8F8F2">:</span></span>
+<span class="line"><span style="color:#F8F8F2">        js </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> (</span><span style="color:#E6DB74">'js/jquery.js'</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#E6DB74">              'js/jquery.charCount.js'</span><span style="color:#F8F8F2">,)</span></span>
+<span class="line"><span style="color:#F8F8F2">        </span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">    def</span><span style="color:#A6E22E"> formfield_for_dbfield</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">self</span><span style="color:#F8F8F2">, </span><span style="color:#FD971F;font-style:italic">db_field</span><span style="color:#F8F8F2">, </span><span style="color:#F92672">**</span><span style="color:#FD971F;font-style:italic">kwargs</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F8F8F2">        field </span><span style="color:#F92672">=</span><span style="color:#66D9EF;font-style:italic"> super</span><span style="color:#F8F8F2">(CounterAdmin, </span><span style="color:#FD971F">self</span><span style="color:#F8F8F2">).formfield_for_dbfield(db_field, </span><span style="color:#F92672">**</span><span style="color:#F8F8F2">kwargs)</span></span>
+<span class="line"><span style="color:#66D9EF">        print</span><span style="color:#F8F8F2"> db_field.name</span></span>
+<span class="line"><span style="color:#66D9EF">        print</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.counted_fields</span></span>
+<span class="line"><span style="color:#F92672">        if</span><span style="color:#F8F8F2"> db_field.name </span><span style="color:#F92672">in</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.counted_fields:</span></span>
+<span class="line"><span style="color:#F92672">            try</span><span style="color:#F8F8F2">:</span></span>
+<span class="line"><span style="color:#66D9EF">                len</span><span style="color:#F92672"> =</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.max_lengths[db_field.name]</span></span>
+<span class="line"><span style="color:#F8F8F2">                field.widget.attrs[</span><span style="color:#E6DB74">'maxlength'</span><span style="color:#F8F8F2">] </span><span style="color:#F92672">=</span><span style="color:#66D9EF"> len</span></span>
+<span class="line"><span style="color:#F92672">            except</span><span style="color:#F8F8F2">: </span><span style="color:#F92672">pass</span></span>
+<span class="line"><span style="color:#F8F8F2">            field.widget.attrs[</span><span style="color:#E6DB74">'class'</span><span style="color:#F8F8F2">] </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> 'counted '</span><span style="color:#F92672"> +</span><span style="color:#F8F8F2"> field.widget.attrs.get(</span><span style="color:#E6DB74">'class'</span><span style="color:#F8F8F2">,</span><span style="color:#E6DB74">''</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F92672">        return</span><span style="color:#F8F8F2"> field</span></span></code></pre>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F8F8F2">jquery,charCount.js</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#88846F">/*</span></span>
+<span class="line"><span style="color:#88846F">*  Character Count Plugin - jQuery plugin</span></span>
+<span class="line"><span style="color:#88846F">*  Dynamic character count for text areas and input fields</span></span>
+<span class="line"><span style="color:#88846F">* written by Alen Grakalic</span></span>
+<span class="line"><span style="color:#88846F">* http://cssglobe.com/post/7161/jquery-plugin-simplest-twitterlike-dynamic-character-count-for-textareas</span></span>
+<span class="line"><span style="color:#88846F">*</span></span>
+<span class="line"><span style="color:#88846F">* Copyright (c) 2009 Alen Grakalic (http://cssglobe.com)</span></span>
+<span class="line"><span style="color:#88846F">* Dual licensed under the MIT (MIT-LICENSE.txt)</span></span>
+<span class="line"><span style="color:#88846F">* and GPL (GPL-LICENSE.txt) licenses.</span></span>
+<span class="line"><span style="color:#88846F">*</span></span>
+<span class="line"><span style="color:#88846F">* Built for jQuery library</span></span>
+<span class="line"><span style="color:#88846F">* http://jquery.com</span></span>
+<span class="line"><span style="color:#88846F">*</span></span>
+<span class="line"><span style="color:#88846F">*/</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#88846F">/*</span></span>
+<span class="line"><span style="color:#88846F">* Modified 2010 Tim Broder for django-admin-charcount</span></span>
+<span class="line"><span style="color:#88846F">* https://gpowered.net</span></span>
+<span class="line"><span style="color:#88846F">*/</span></span>
+<span class="line"><span style="color:#F8F8F2">(</span><span style="color:#66D9EF;font-style:italic">function</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">$</span><span style="color:#F8F8F2">) {</span></span>
+<span class="line"><span style="color:#F8F8F2">$.fn.</span><span style="color:#A6E22E">charCount</span><span style="color:#F92672"> =</span><span style="color:#66D9EF;font-style:italic"> function</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">options</span><span style="color:#F8F8F2">){</span></span>
+<span class="line"><span style="color:#88846F">  // default configuration properties</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">  var</span><span style="color:#F8F8F2"> defaults </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">   allowed: </span><span style="color:#AE81FF">140</span><span style="color:#F8F8F2">,  </span></span>
+<span class="line"><span style="color:#F8F8F2">   warning: </span><span style="color:#AE81FF">20</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">   css: </span><span style="color:#E6DB74">'help'</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">   counterElement: </span><span style="color:#E6DB74">'p'</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">   cssWarning: </span><span style="color:#E6DB74">'warning'</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">   cssExceeded: </span><span style="color:#E6DB74">'exceeded'</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">   counterText: </span><span style="color:#E6DB74">''</span></span>
+<span class="line"><span style="color:#F8F8F2">  };</span></span>
+<span class="line"><span style="color:#F8F8F2">  </span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">  var</span><span style="color:#F8F8F2"> options </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> $.</span><span style="color:#A6E22E">extend</span><span style="color:#F8F8F2">(defaults, options);</span></span>
+<span class="line"><span style="color:#F8F8F2">  </span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">  function</span><span style="color:#A6E22E"> calculate</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">obj</span><span style="color:#F8F8F2">){</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">   var</span><span style="color:#F8F8F2"> count </span><span style="color:#F92672">=</span><span style="color:#A6E22E"> $</span><span style="color:#F8F8F2">(obj).</span><span style="color:#A6E22E">val</span><span style="color:#F8F8F2">().length;</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">   var</span><span style="color:#F8F8F2"> available </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> options.allowed </span><span style="color:#F92672">-</span><span style="color:#F8F8F2"> count;</span></span>
+<span class="line"><span style="color:#F92672">   if</span><span style="color:#F8F8F2">(available </span><span style="color:#F92672">&#x3C;</span><span style="color:#F92672"> =</span><span style="color:#F8F8F2"> options.warning </span><span style="color:#F92672">&#x26;&#x26;</span><span style="color:#F8F8F2"> available </span><span style="color:#F92672">>=</span><span style="color:#AE81FF"> 0</span><span style="color:#F8F8F2">){</span></span>
+<span class="line"><span style="color:#A6E22E">    $</span><span style="color:#F8F8F2">(obj).</span><span style="color:#A6E22E">next</span><span style="color:#F8F8F2">().</span><span style="color:#A6E22E">addClass</span><span style="color:#F8F8F2">(options.cssWarning);</span></span>
+<span class="line"><span style="color:#F8F8F2">   } </span><span style="color:#F92672">else</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#A6E22E">    $</span><span style="color:#F8F8F2">(obj).</span><span style="color:#A6E22E">next</span><span style="color:#F8F8F2">().</span><span style="color:#A6E22E">removeClass</span><span style="color:#F8F8F2">(options.cssWarning);</span></span>
+<span class="line"><span style="color:#F8F8F2">   }</span></span>
+<span class="line"><span style="color:#F92672">   if</span><span style="color:#F8F8F2">(available </span><span style="color:#F92672">&#x3C;</span><span style="color:#AE81FF"> 0</span><span style="color:#F8F8F2">){</span></span>
+<span class="line"><span style="color:#A6E22E">    $</span><span style="color:#F8F8F2">(obj).</span><span style="color:#A6E22E">next</span><span style="color:#F8F8F2">().</span><span style="color:#A6E22E">addClass</span><span style="color:#F8F8F2">(options.cssExceeded);</span></span>
+<span class="line"><span style="color:#F8F8F2">   } </span><span style="color:#F92672">else</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#A6E22E">    $</span><span style="color:#F8F8F2">(obj).</span><span style="color:#A6E22E">next</span><span style="color:#F8F8F2">().</span><span style="color:#A6E22E">removeClass</span><span style="color:#F8F8F2">(options.cssExceeded);</span></span>
+<span class="line"><span style="color:#F8F8F2">   }</span></span>
+<span class="line"><span style="color:#A6E22E">   $</span><span style="color:#F8F8F2">(obj).</span><span style="color:#A6E22E">next</span><span style="color:#F8F8F2">().</span><span style="color:#A6E22E">html</span><span style="color:#F8F8F2">(options.counterText </span><span style="color:#F92672">+</span><span style="color:#F8F8F2"> available);</span></span>
+<span class="line"><span style="color:#F8F8F2">  };</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#FD971F">  this</span><span style="color:#F8F8F2">.</span><span style="color:#A6E22E">each</span><span style="color:#F8F8F2">(</span><span style="color:#66D9EF;font-style:italic">function</span><span style="color:#F8F8F2">() {    </span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#A6E22E">   $</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">).</span><span style="color:#A6E22E">after</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'&#x3C;'</span><span style="color:#F92672">+</span><span style="color:#F8F8F2"> options.counterElement </span><span style="color:#F92672">+</span><span style="color:#E6DB74">' class="'</span><span style="color:#F92672"> +</span><span style="color:#F8F8F2"> options.css </span><span style="color:#F92672">+</span><span style="color:#E6DB74"> '">'</span><span style="color:#F92672">+</span><span style="color:#F8F8F2"> options.counterText </span><span style="color:#F92672">+</span><span style="color:#E6DB74">''</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#A6E22E">   calculate</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#A6E22E">   $</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">).</span><span style="color:#A6E22E">keyup</span><span style="color:#F8F8F2">(</span><span style="color:#66D9EF;font-style:italic">function</span><span style="color:#F8F8F2">(){</span><span style="color:#A6E22E">calculate</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">); });</span></span>
+<span class="line"><span style="color:#A6E22E">   $</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">).</span><span style="color:#A6E22E">change</span><span style="color:#F8F8F2">(</span><span style="color:#66D9EF;font-style:italic">function</span><span style="color:#F8F8F2">(){</span><span style="color:#A6E22E">calculate</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">)});</span></span>
+<span class="line"><span style="color:#F8F8F2">  });</span></span>
+<span class="line"><span style="color:#F8F8F2">  </span></span>
+<span class="line"><span style="color:#F8F8F2">};</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">})(jQuery);</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#88846F">/*function init_counters(selector, len){</span></span>
+<span class="line"><span style="color:#88846F">$(selector).each(function() {</span></span>
+<span class="line"><span style="color:#88846F">  //console.log($(this).attr('maxlength'));</span></span>
+<span class="line"><span style="color:#88846F">  if(len==null){</span></span>
+<span class="line"><span style="color:#88846F">   len = $(this).attr('maxlength');</span></span>
+<span class="line"><span style="color:#88846F">  }</span></span>
+<span class="line"><span style="color:#88846F">  $(this).charCount({</span></span>
+<span class="line"><span style="color:#88846F">   counterText: 'Characters Remaining: ',</span></span>
+<span class="line"><span style="color:#88846F">   allowed: len,</span></span>
+<span class="line"><span style="color:#88846F">  });</span></span>
+<span class="line"><span style="color:#88846F">});</span></span>
+<span class="line"><span style="color:#88846F">}*/</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#A6E22E">$</span><span style="color:#F8F8F2">(document).</span><span style="color:#A6E22E">ready</span><span style="color:#F8F8F2">(</span><span style="color:#66D9EF;font-style:italic">function</span><span style="color:#F8F8F2">(){</span></span>
+<span class="line"><span style="color:#A6E22E">$</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">".counted"</span><span style="color:#F8F8F2">).</span><span style="color:#A6E22E">each</span><span style="color:#F8F8F2">(</span><span style="color:#66D9EF;font-style:italic">function</span><span style="color:#F8F8F2">(){</span></span>
+<span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#A6E22E">log</span><span style="color:#F8F8F2">(</span><span style="color:#A6E22E">$</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">));</span></span>
+<span class="line"><span style="color:#F8F8F2">  len </span><span style="color:#F92672">=</span><span style="color:#A6E22E"> $</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">).</span><span style="color:#A6E22E">attr</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">'maxlength'</span><span style="color:#F8F8F2">);</span></span>
+<span class="line"><span style="color:#A6E22E">  $</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F">this</span><span style="color:#F8F8F2">).</span><span style="color:#A6E22E">charCount</span><span style="color:#F8F8F2">({</span></span>
+<span class="line"><span style="color:#F8F8F2">   counterText: </span><span style="color:#E6DB74">'Characters Remaining: '</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">   allowed: len,</span></span>
+<span class="line"><span style="color:#F8F8F2">  });</span></span>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"><span style="color:#88846F">//init_counters("input[maxlength]", 80);</span></span>
+<span class="line"><span style="color:#88846F">//init_counters("textarea[maxlength]");</span></span>
+<span class="line"><span style="color:#88846F">//init_counters("#id_abstract", 400);</span></span>
+<span class="line"><span style="color:#F8F8F2">});</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#88846F">/*</span></span>
+<span class="line"><span style="color:#88846F">* &#x3C;style type="text/css"></span></span>
+<span class="line"><span style="color:#88846F">form .counter{</span></span>
+<span class="line"><span style="color:#88846F">}</span></span>
+<span class="line"><span style="color:#88846F">form .warning{color:#600;}</span></span>
+<span class="line"><span style="color:#88846F">form .exceeded{color:#e00;}</span></span>
+<span class="line"><span style="color:#88846F">&#x3C;/style></span></span>
+<span class="line"><span style="color:#88846F">*/</span></span></code></pre> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2">  <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

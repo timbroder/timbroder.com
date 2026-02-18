@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { getCollection, render } from 'astro:content'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SEO from '../components/SEO.astro'
+import Headline from '../components/Headline.astro'
+import Prose from '../components/Prose.astro'
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection('pages')
+  return pages.map(page => {
+    const pathParam = page.data.path.replace(/^\//, '').replace(/\/$/, '')
+    return {
+      params: { path: pathParam },
+      props: { page },
+    }
+  })
+}) satisfies GetStaticPaths
+
+const { page } = Astro.props
+const { Content } = await render(page)
+---
+
+<BaseLayout>
+  <Fragment slot="head">
+    <SEO title={page.data.title} pathname={page.data.path + '/'} />
+  </Fragment>
+
+  <header class="flex flex-col">
+    <Headline padded={false}>
+      {page.data.title}
+    </Headline>
+  </header>
+
+  <Prose class="mt-8">
+    <Content />
+  </Prose>
+</BaseLayout>

@@ -1,0 +1,61 @@
+---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import Container from '../components/Container.astro'
+import Headline from '../components/Headline.astro'
+import '../styles/global.css'
+
+interface Props {
+  title?: string
+  showTitle?: boolean
+}
+
+const { title, showTitle = false } = Astro.props
+const isRootPath = Astro.url.pathname === '/'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <slot name="head" />
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script>
+  </head>
+  <body>
+    <div class="bg-zinc-50">
+      <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-zinc-100" />
+        </div>
+      </div>
+      <div class="relative">
+        <Header />
+        <Container class="mt-16 sm:mt-32">
+          <header class="max-w-2xl">
+            {(showTitle || isRootPath) && title && (
+              <Headline>
+                <a href="/">{title}</a>
+              </Headline>
+            )}
+          </header>
+          <div class="mt-16 sm:mt-20">
+            <main>
+              <slot />
+            </main>
+          </div>
+        </Container>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

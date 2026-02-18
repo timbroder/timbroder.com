@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Automate Adding to Trello on iOS with Launch Center Pro and Pythonista | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2013/03/automating-adding-to-trello-on-ios/"><meta property="og:title" content="Automate Adding to Trello on iOS with Launch Center Pro and Pythonista"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2013/03/automating-adding-to-trello-on-ios/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Automate Adding to Trello on iOS with Launch Center Pro and Pythonista"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Automate Adding to Trello on iOS with Launch Center Pro and Pythonista","description":"","url":"https://timbroder.com/2013/03/automating-adding-to-trello-on-ios/","datePublished":"2013-03-23","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2013/03/automating-adding-to-trello-on-ios/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2013-03-23" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">March 23, 2013</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Automate Adding to Trello on iOS with Launch Center Pro and Pythonista </h1> </header> <div class="mt-8 prose"> <section> <p>I love using <a href="https://trello.com/">Trello </a>to organize my life and work. While
+I kind of like it’s iOS app, sometimes navigating to a board to add a card can
+be a little time consuming.  I want this process to be faster. I also use
+Launch Center Pro to get some quick actions that I miss from Android. Mostly
+around quick communication, adding events, and now, adding to Trello.  LCP
+uses x-callback-urls for inter-app communication, but Trello doesn’t have any
+that I could see. Inspired by Federico
+<a href="https://twitter.com/viticci">Viticci</a>’s article on <a href="http://www.macstories.net/stories/automating-ios-how-pythonista-changed-my-workflow/">automating his iOS
+workflow</a>, I decided to take a crack at it using pythonista. All
+code shown below can be found on
+<a href="https://github.com/broderboy/PythonistaTrello">GitHub</a>.</p>
+<p><a href="http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-32-57"><img src="/images/2013/02/2013-02-11-14.32.57.png" alt="2013-02-1114.32.57"></a></p>
+<p><a href="http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-33-00"><img src="/images/2013/03/LCP.png" alt="2013-02-11
+14.33.00"></a></p>
+<p><a href="http://omz-software.com/pythonista/">Pythonista</a> lets you edit and run python scripts on your phone.
+There are a few ways to get scripts onto your device:</p>
+<ul>
+<li>Edit right in the app</li>
+<li>Import <a href="https://gist.github.com/omz/b0644f5ed1d94bd32805">from a gist</a></li>
+<li>Use <a href="http://tapbots.com/software/pastebot/">pastebot</a>. A great app that gives you multiple clipboards on your device that will also sync with your mac. This is my preferred method.</li>
+</ul>
+<p>The endgame of all this: I want to be able to add a card to a specific board,
+with as few taps as possible. Check out this video for what we are going to
+build.  Digging into the <a href="https://trello.com/docs/api/card/index.html#post-1-cards">Trello
+API</a>, we can see
+that to add a card, we’ll need a name for the card and the ID of the list to
+add it to. We also see that we’ll need a token for any of the API calls. To
+get all of our lists, we’ll also need to know about all of our boards.  This
+breaks our tasks out as follows:</p>
+<ol>
+<li>Get an App API Key</li>
+<li>Get an API Token</li>
+<li>Get a list of every board we heve</li>
+<li>Get the IDs of every list on each of these boards</li>
+<li>Add a new card to our list of choice</li>
+</ol>
+<p>To get an App API Key, you can generate one <a href="https://trello.com/1/appKey/generate" title="here">here</a>.  In theory, the one I distribute with
+these scripts should be ok. Get this first script into Pythonista and run it.
+It will generate a permanant API token for you that you can leave in Launch
+Center Pro when running these scripts.</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#88846F">#GetTrelloToken</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> webbrowser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">url </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> 'https://trello.com/1/authorize?key=3e2cd730f3dcccbe15eaf0d39d219a37&#x26;amp;name=PythonistaTrello&#x26;amp;expiration=never&#x26;amp;response_type=token&#x26;amp;scope=read,write'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#88846F">#open web browser to get a permanant Trello API Token</span></span>
+<span class="line"><span style="color:#F8F8F2">webbrowser.open(url)</span></span></code></pre>
+<p><a href="http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-54-35"><img src="/images/2013/02/2013-02-11-14.54.35.png" alt="2013-02-11 14.54.35"></a></p>
+<p><a href="http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-14-54-40"> <img src="/images/2013/02/2013-02-11-14.54.40.png" alt="2013-02-1114.54.40"></a></p>
+<p>Now that we have our key and tokens,
+let’s get get all of our boards and the lists on each one. Run this script and
+pass in your token and your email address as arguments. (In pythonista hold
+down run to get the “Run with arguments dialog”). Add your arguments separated
+by spaces. For me, this could look something like: <code>"EGYlyiOdggDOaPoTUxaTQobmS6gtiX timothy.broder@gmail.com"</code></p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#88846F">#List all lists by user</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> urllib2</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> urllib</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> json</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> sys</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">if</span><span style="color:#66D9EF"> len</span><span style="color:#F8F8F2">(sys.argv) </span><span style="color:#F92672">!=</span><span style="color:#AE81FF"> 3</span><span style="color:#F8F8F2">:</span></span>
+<span class="line"><span style="color:#F92672">    raise</span><span style="color:#66D9EF;font-style:italic"> Exception</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Usage: list_trello_lists.py [token] [email]"</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">key </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> "3e2cd730f3dcccbe15eaf0d39d219a37"</span></span>
+<span class="line"><span style="color:#F8F8F2">args </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> { </span><span style="color:#E6DB74">'key'</span><span style="color:#F8F8F2">: key,</span></span>
+<span class="line"><span style="color:#E6DB74">    'token'</span><span style="color:#F8F8F2">: sys.argv[</span><span style="color:#AE81FF">1</span><span style="color:#F8F8F2">],</span></span>
+<span class="line"><span style="color:#E6DB74">    'filter'</span><span style="color:#F8F8F2">: </span><span style="color:#E6DB74">'open'</span><span style="color:#F8F8F2">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#88846F">#build out api url</span></span>
+<span class="line"><span style="color:#F8F8F2">username </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> sys.argv[</span><span style="color:#AE81FF">2</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"><span style="color:#F8F8F2">boards_url </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> "https://api.trello.com/1/members/</span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">/boards/?</span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">"</span><span style="color:#F92672"> %</span><span style="color:#F8F8F2"> (username, urllib.urlencode(args))</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#88846F">#get board data from api</span></span>
+<span class="line"><span style="color:#F92672">try</span><span style="color:#F8F8F2">:</span></span>
+<span class="line"><span style="color:#F8F8F2">    data </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> urllib2.urlopen(boards_url)</span></span>
+<span class="line"><span style="color:#F92672">except</span><span style="color:#F8F8F2"> urllib2.HTTPError </span><span style="color:#F92672">as</span><span style="color:#F8F8F2"> inst:</span></span>
+<span class="line"><span style="color:#F92672">    raise</span><span style="color:#66D9EF;font-style:italic"> Exception</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Key or Token incorrect"</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">boards </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> json.loads(data.read())</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#88846F">#loop through each board</span></span>
+<span class="line"><span style="color:#F92672">for</span><span style="color:#F8F8F2"> board </span><span style="color:#F92672">in</span><span style="color:#F8F8F2"> boards:</span></span>
+<span class="line"><span style="color:#F8F8F2">    board_id </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> board[</span><span style="color:#E6DB74">'id'</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"><span style="color:#F8F8F2">    lists_url </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> "https://api.trello.com/1/boards/</span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">/lists?</span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">"</span><span style="color:#F92672"> %</span><span style="color:#F8F8F2"> (board_id, urllib.urlencode(args))</span></span>
+<span class="line"><span style="color:#F8F8F2">    data </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> urllib2.urlopen(lists_url)</span></span>
+<span class="line"><span style="color:#F8F8F2">    lists </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> json.loads(data.read())</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF">    print</span><span style="color:#E6DB74"> "-- </span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">"</span><span style="color:#F92672"> %</span><span style="color:#F8F8F2"> board[</span><span style="color:#E6DB74">'name'</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"><span style="color:#88846F">    #output each list in board</span></span>
+<span class="line"><span style="color:#F92672">    for</span><span style="color:#F8F8F2"> lizt </span><span style="color:#F92672">in</span><span style="color:#F8F8F2"> lists:</span></span>
+<span class="line"><span style="color:#66D9EF">        print</span><span style="color:#E6DB74"> "</span><span style="color:#AE81FF">\"%s\"</span><span style="color:#AE81FF"> %s</span><span style="color:#E6DB74">"</span><span style="color:#F92672"> %</span><span style="color:#F8F8F2"> (lizt[</span><span style="color:#E6DB74">'name'</span><span style="color:#F8F8F2">], lizt[</span><span style="color:#E6DB74">'id'</span><span style="color:#F8F8F2">])</span></span>
+<span class="line"><span style="color:#66D9EF">    print</span><span style="color:#E6DB74"> "</span><span style="color:#AE81FF">\n</span><span style="color:#E6DB74">"</span></span></code></pre>
+<p>Running this, we’ll get the IDs of the lists we need</p>
+<p><a href="http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-15-06-39"><img src="/images/2013/02/2013-02-11-15.06.39.png" alt="2013-02-11 15.06.39"></a></p>
+<p><a href="http://timbroder.com/2013/03/automating-adding-to-trello-with-launch-center-pro-and-pythonista.html/2013-02-11-15-07-13"><img src="/images/2013/02/2013-02-11-15.07.13.png" alt="2013-02-1115.07.13"></a></p>
+<p>Finally, we’ll need to take our key, the
+id of the list, what we want our card to say, and hit the API with them.  I
+also add in a position so the cards I add this way will appear at the top of
+their list. We’ll pass these in as parameters:</p>
+<p><code>"EGYlyiOdggDOaPoTUxaTQobmS6gtiX V12t3k6RQQ2r8X top the name of my card goes here"</code></p>
+<p>Two things to point out inthis script:</p>
+<ul>
+<li>we put the name of the card at the end so we can just loop through all the remaining words and not have to worry about wrapping the name in quotes to deal with spaces.</li>
+<li>since the end game of this is to run from Launch center pro, we want to jump back to Launch Center Pro at the end using it’s x-callback-url</li>
+</ul>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#88846F">#Add card to List</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> urllib2</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> urllib</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> json</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> sys</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> webbrowser</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">arglen </span><span style="color:#F92672">=</span><span style="color:#66D9EF"> len</span><span style="color:#F8F8F2">(sys.argv)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">if</span><span style="color:#F8F8F2"> arglen </span><span style="color:#F92672">&#x3C;</span><span style="color:#AE81FF"> 5</span><span style="color:#F8F8F2">:     </span><span style="color:#F92672">raise</span><span style="color:#66D9EF;font-style:italic"> Exception</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Usage: list_trello_lists.py [token] [list_id] [position] [card_name]"</span><span style="color:#F8F8F2">) name </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> sys.argv[</span><span style="color:#AE81FF">4</span><span style="color:#F8F8F2">] </span><span style="color:#88846F">#take care of spaces if arglen > 5:</span></span>
+<span class="line"><span style="color:#F92672">    for</span><span style="color:#F8F8F2"> i </span><span style="color:#F92672">in</span><span style="color:#66D9EF"> range</span><span style="color:#F8F8F2">(</span><span style="color:#AE81FF">5</span><span style="color:#F8F8F2">,arglen):</span></span>
+<span class="line"><span style="color:#F8F8F2">        name </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> "</span><span style="color:#AE81FF">%s</span><span style="color:#AE81FF"> %s</span><span style="color:#E6DB74">"</span><span style="color:#F92672"> %</span><span style="color:#F8F8F2"> (name, sys.argv[i])</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F8F8F2">key </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> "3e2cd730f3dcccbe15eaf0d39d219a37"</span></span>
+<span class="line"><span style="color:#F8F8F2">token </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> sys.argv[</span><span style="color:#AE81FF">1</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"><span style="color:#F8F8F2">args </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> { </span><span style="color:#E6DB74">'key'</span><span style="color:#F8F8F2">: key,</span></span>
+<span class="line"><span style="color:#E6DB74">    'token'</span><span style="color:#F8F8F2">: sys.argv[</span><span style="color:#AE81FF">1</span><span style="color:#F8F8F2">],</span></span>
+<span class="line"><span style="color:#E6DB74">    'name'</span><span style="color:#F8F8F2">: name,</span></span>
+<span class="line"><span style="color:#E6DB74">    'pos'</span><span style="color:#F8F8F2">: sys.argv[</span><span style="color:#AE81FF">3</span><span style="color:#F8F8F2">],</span></span>
+<span class="line"><span style="color:#E6DB74">    'idList'</span><span style="color:#F8F8F2">: sys.argv[</span><span style="color:#AE81FF">2</span><span style="color:#F8F8F2">]</span></span>
+<span class="line"><span style="color:#F8F8F2">    }</span></span>
+<span class="line"><span style="color:#F8F8F2">card_add_url </span><span style="color:#F92672">=</span><span style="color:#E6DB74"> "https://api.trello.com/1/cards"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">try</span><span style="color:#F8F8F2">:</span></span>
+<span class="line"><span style="color:#F8F8F2">    data </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> urllib2.urlopen(card_add_url, urllib.urlencode(args))</span></span>
+<span class="line"><span style="color:#F92672">except</span><span style="color:#F8F8F2"> urllib2.HTTPError </span><span style="color:#F92672">as</span><span style="color:#F8F8F2"> inst:</span></span>
+<span class="line"><span style="color:#F92672">    raise</span><span style="color:#66D9EF;font-style:italic"> Exception</span><span style="color:#F8F8F2">(</span><span style="color:#E6DB74">"Key or Token incorrect"</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#88846F">#jump back to Launch Center Pro</span></span>
+<span class="line"><span style="color:#F8F8F2">webbrowser.open(</span><span style="color:#E6DB74">"launchpro:"</span><span style="color:#F8F8F2">)</span></span></code></pre>
+<p>To run this in Launch Center Pro,
+Add an Action > Pythonista > Run Script with Arguments. Put in the name
+of the script, then in arguments, but everything from above except the name:
+“EGYlyiOdggDOaPoTUxaTQobmS6gtiX V12t3k6RQQ2r8X top,” then hit the button that
+says input prompt. Now, when you run the script, Launch Center Pro will prompt
+you for text, enter the name of the card and hit go.</p>
+<p>Add as many of these as
+you want! Just swap out the list ID.</p> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/ios/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> ios </span> </a><a href="/tag/launch-center-pro/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> launch center pro </span> </a><a href="/tag/python/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> python </span> </a><a href="/tag/pythonista/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> pythonista </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

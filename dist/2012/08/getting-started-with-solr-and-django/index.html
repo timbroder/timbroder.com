@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Getting Started with Solr and Django | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2012/08/getting-started-with-solr-and-django/"><meta property="og:title" content="Getting Started with Solr and Django"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2012/08/getting-started-with-solr-and-django/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Getting Started with Solr and Django"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Getting Started with Solr and Django","description":"","url":"https://timbroder.com/2012/08/getting-started-with-solr-and-django/","datePublished":"2012-08-23","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2012/08/getting-started-with-solr-and-django/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2012-08-23" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">August 23, 2012</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Getting Started with Solr and Django </h1> </header> <div class="mt-8 prose"> <section> <p><a href="http://lucene.apache.org/solr/">Solr</a> is a very powerful search tool and it
+is pretty easy to get the basics, such as full text search, facets, and
+related assets up and running pretty quickly. We will be using haystack to do
+the communication between Django and Solr. All code for this can be viewed on
+<a href="https://github.com/broderboy/django-solr-demo">github</a>.</p>
+<h2 id="install">Install</h2>
+<p>Assuming you already have Django up and running, the first thing we need to do
+is install Solr.</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>curl -O http://mirrors.gigenet.com/apache/lucene/solr/4.0.0-BETA/apache-solr-4.0.0-BETA.zip</span></span>
+<span class="line"><span>unzip apache-solr-4.0.0-BETA.zip</span></span>
+<span class="line"><span>cd apache-solr-4.0.0-BETA</span></span>
+<span class="line"><span>cd example</span></span>
+<span class="line"><span>java -jar start.jar</span></span></code></pre>
+<p>Next install pysolr and haystack. (At the time of this writing the git
+checkout of haystack works better with the Solr 4.0 beta then the 1.2.7 that’s
+in pip.)</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>pip install pysolr</span></span>
+<span class="line"><span>pip install -e https://github.com/toastdriven/django-haystack.git</span></span></code></pre>
+<p>Add ‘haystack’ to INSTALLED_APPS in settings.py and add the following haystack
+connection:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#AE81FF">HAYSTACK_CONNECTIONS</span><span style="color:#F92672"> =</span><span style="color:#F8F8F2"> { </span></span>
+<span class="line"><span style="color:#E6DB74">	'default'</span><span style="color:#F8F8F2">: { </span></span>
+<span class="line"><span style="color:#E6DB74">		'ENGINE'</span><span style="color:#F8F8F2">: </span><span style="color:#E6DB74">'haystack.backends.solr_backend.SolrEngine'</span><span style="color:#F8F8F2">, </span></span>
+<span class="line"><span style="color:#E6DB74">		'URL'</span><span style="color:#F8F8F2">: </span><span style="color:#E6DB74">'http://127.0.0.1:8983/solr'</span><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">	}, </span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<h2 id="full-text-search">Full Text Search</h2>
+<p>For the example, we’re going to create a simple job database that a recruiter
+might use. Here is the model:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> django.db </span><span style="color:#F92672">import</span><span style="color:#F8F8F2"> models</span></span>
+<span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> django.contrib.localflavor.us</span></span>
+<span class="line"><span style="color:#F92672">import</span><span style="color:#F8F8F2"> models </span><span style="color:#F92672">as</span><span style="color:#F8F8F2"> us_models</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#AE81FF">JOB_TYPES</span><span style="color:#F92672"> =</span><span style="color:#F8F8F2"> (</span></span>
+<span class="line"><span style="color:#F8F8F2">	(</span><span style="color:#E6DB74">'pt'</span><span style="color:#F8F8F2">, </span><span style="color:#E6DB74">'Part Time'</span><span style="color:#F8F8F2">),</span></span>
+<span class="line"><span style="color:#F8F8F2">	(</span><span style="color:#E6DB74">'ft'</span><span style="color:#F8F8F2">, </span><span style="color:#E6DB74">'Full Time'</span><span style="color:#F8F8F2">),</span></span>
+<span class="line"><span style="color:#F8F8F2">	(</span><span style="color:#E6DB74">'ct'</span><span style="color:#F8F8F2">, </span><span style="color:#E6DB74">'Contract'</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">Company</span><span style="color:#F8F8F2">(</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">models</span><span style="color:#F8F8F2">.</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">Model</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F8F8F2">	name </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.CharField(</span><span style="color:#FD971F;font-style:italic">max_length</span><span style="color:#F92672">=</span><span style="color:#AE81FF">64</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	address </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.TextField(</span><span style="color:#FD971F;font-style:italic">blank</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">, </span><span style="color:#FD971F;font-style:italic">null</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	contact_email </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.EmailField()</span></span>
+<span class="line"><span style="color:#F8F8F2">	</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">	def</span><span style="color:#66D9EF"> __unicode__</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">self</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F92672">		return</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">Location</span><span style="color:#F8F8F2">(</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">models</span><span style="color:#F8F8F2">.</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">Model</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F8F8F2">	city </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.CharField(</span><span style="color:#FD971F;font-style:italic">max_length</span><span style="color:#F92672">=</span><span style="color:#AE81FF">64</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	state </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> us_models.USStateField()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">	def</span><span style="color:#66D9EF"> __unicode__</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">self</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F92672">		return</span><span style="color:#E6DB74"> "</span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">, </span><span style="color:#AE81FF">%s</span><span style="color:#E6DB74">"</span><span style="color:#F92672"> %</span><span style="color:#F8F8F2"> (</span><span style="color:#FD971F">self</span><span style="color:#F8F8F2">.city, </span><span style="color:#FD971F">self</span><span style="color:#F8F8F2">.state)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">class</span><span> </span><span style="color:#A6E22E;text-decoration:underline">Job</span><span style="color:#F8F8F2">(</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">models</span><span style="color:#F8F8F2">.</span><span style="color:#A6E22E;font-style:italic;text-decoration:underline">Model</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F8F8F2">	name </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.CharField(</span><span style="color:#FD971F;font-style:italic">max_length</span><span style="color:#F92672">=</span><span style="color:#AE81FF">64</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	description </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.TextField()</span></span>
+<span class="line"><span style="color:#F8F8F2">	salary </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.CharField(</span><span style="color:#FD971F;font-style:italic">max_length</span><span style="color:#F92672">=</span><span style="color:#AE81FF">64</span><span style="color:#F8F8F2">, </span><span style="color:#FD971F;font-style:italic">blank</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">, </span><span style="color:#FD971F;font-style:italic">null</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">	type</span><span style="color:#F92672"> =</span><span style="color:#F8F8F2"> models.CharField(</span><span style="color:#FD971F;font-style:italic">max_length</span><span style="color:#F92672">=</span><span style="color:#AE81FF">2</span><span style="color:#F8F8F2">, </span><span style="color:#FD971F;font-style:italic">choices</span><span style="color:#F92672">=</span><span style="color:#AE81FF">JOB_TYPES</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	company </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.ForeignKey(Company, </span><span style="color:#FD971F;font-style:italic">related_name</span><span style="color:#F92672">=</span><span style="color:#E6DB74">'jobs'</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	location </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.ForeignKey(Location, </span><span style="color:#FD971F;font-style:italic">related_name</span><span style="color:#F92672">=</span><span style="color:#E6DB74">'location_jobs'</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	contact_email </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.EmailField(</span><span style="color:#FD971F;font-style:italic">blank</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">, </span><span style="color:#FD971F;font-style:italic">null</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	added_at </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> models.DateTimeField(</span><span style="color:#FD971F;font-style:italic">auto_now</span><span style="color:#F92672">=</span><span style="color:#AE81FF">True</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2">	</span></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">	def</span><span style="color:#66D9EF"> __unicode__</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">self</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F92672">		return</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.name</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#66D9EF;font-style:italic">	def</span><span style="color:#A6E22E"> get_contact_email</span><span style="color:#F8F8F2">(</span><span style="color:#FD971F;font-style:italic">self</span><span style="color:#F8F8F2">):</span></span>
+<span class="line"><span style="color:#F92672">		if</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.contact_email:</span></span>
+<span class="line"><span style="color:#F92672">			return</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.contact_email</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F92672">		return</span><span style="color:#FD971F"> self</span><span style="color:#F8F8F2">.company.contact_email</span></span></code></pre>
+<p>The next step is to create the
+SearchIndex object that will be used to transpose to data to Solr. save this
+as search_indexes.py in the same folder as your models.py. The text field with
+its template will be used for full text search on Solr. The other two fields
+will be used to faceted (drill down) navigation. For more details on this
+file, check out the [haystack tutorial](<a href="http://django-">http://django-</a>
+haystack.readthedocs.org/en/latest/tutorial.html#handling-data).</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>class JobIndex(indexes.SearchIndex, indexes.Indexable):</span></span>
+<span class="line"><span>	text = indexes.CharField(document=True, use_template=True)</span></span>
+<span class="line"><span>	type = indexes.CharField(model_attr='type', faceted=True)</span></span>
+<span class="line"><span>	location = indexes.CharField(model_attr='location', faceted=True)</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>	def get_model(self):</span></span>
+<span class="line"><span>		return Job</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	def index_queryset(self):</span></span>
+<span class="line"><span>		return self.get_model().objects.all()</span></span></code></pre>
+<p>Create the search index template in your template folder with the following
+naming convention: <code>search/indexes/[app]/[model]_text.txt</code></p>
+<p>For us, this is templates/search/indexes/jobs/job_text.txt</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{% verbatim %}</span></span>
+<span class="line"><span>{{ object.name }}</span></span>
+<span class="line"><span>{{ object.description }}</span></span>
+<span class="line"><span>{{ object.salary }}</span></span>
+<span class="line"><span>{{ object.type }}</span></span>
+<span class="line"><span>{{ object.added_at }}</span></span>
+<span class="line"><span>{% endverbatim %}</span></span></code></pre>
+<p>Now, lets get our data into Solr. Run ./manage.py build_solr_schema to
+generate a schema.xml file. Move this into example\solr\conf in your Solr
+install. Note: if using Solr 4, edit this file and replace stopwords_en.txt
+with lang/stopwords_en.txt in all locations. To test everything and load your
+data, run: manage.py rebuild_index Subsequent updates can be made with:
+manage.py update_index.</p>
+<p>If that all worked we can start working on the front-end to see the data in
+Django. Add this to your urls.py</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>(r'^$', include('haystack.urls')),</span></span></code></pre>
+<p>At this point there are at least two templates we’ll need. One for the search
+results page, and a sub-template to represent each item we are pulling back.
+My example uses <a href="http://twitter.github.com/bootstrap/">twitter bootstrap</a> for
+some layout help and styling, see my base.html
+[here](<a href="https://github.com/broderboy/django-solr-">https://github.com/broderboy/django-solr-</a>
+demo/blob/master/templates/base.html) if interested.</p>
+<p>Create templates/search/search.html This gives you a basic search form, the
+results, and pagination for a number of results</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{% verbatim %}</span></span>
+<span class="line"><span>{% extends 'base.html' %}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{% block hero_text %}Search{% endblock %}</span></span>
+<span class="line"><span>{% block header %}&#x3C;p>Click around!&#x3C;/p>{% endblock %}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{% block content %}</span></span>
+<span class="line"><span>&#x3C;div class="span12"></span></span>
+<span class="line"><span>    &#x3C;h1>Search&#x3C;/h1></span></span>
+<span class="line"><span>    &#x3C;form method="get" action="." class=".form-search"></span></span>
+<span class="line"><span>        &#x3C;table></span></span>
+<span class="line"><span>            {{ form.as_table }}</span></span>
+<span class="line"><span>        &#x3C;/table></span></span>
+<span class="line"><span>        &#x3C;input type="submit" value="Search"></span></span>
+<span class="line"><span>    &#x3C;/form></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>        {% if query %}</span></span>
+<span class="line"><span>            &#x3C;div class="span2"></span></span>
+<span class="line"><span>                &#x3C;h3>Filter&#x3C;/h3></span></span>
+<span class="line"><span>                {% if facets.fields.type %}</span></span>
+<span class="line"><span>                    &#x3C;div></span></span>
+<span class="line"><span>                        &#x3C;h4>Type&#x3C;/h4></span></span>
+<span class="line"><span>                        &#x3C;ul></span></span>
+<span class="line"><span>                        {% for type in facets.fields.type %}</span></span>
+<span class="line"><span>                            &#x3C;li>&#x3C;a href="{{ request.get_full_path }}&#x26;amp;selected_facets=type_exact:{{ type.0|urlencode }}">{{ type.0 }}&#x3C;/a> ({{ type.1 }})&#x3C;/li></span></span>
+<span class="line"><span>                        {% endfor %}</span></span>
+<span class="line"><span>                        &#x3C;/ul></span></span>
+<span class="line"><span>                    &#x3C;/div></span></span>
+<span class="line"><span>                {% endif %}</span></span>
+<span class="line"><span>                {% if facets.fields.location %}</span></span>
+<span class="line"><span>                    &#x3C;div></span></span>
+<span class="line"><span>                        &#x3C;h4>Location&#x3C;/h4></span></span>
+<span class="line"><span>                        &#x3C;ul></span></span>
+<span class="line"><span>                        {% for location in facets.fields.location %}</span></span>
+<span class="line"><span>                            &#x3C;li>&#x3C;a href="{{ request.get_full_path }}&#x26;amp;selected_facets=location_exact:{{ location.0|urlencode }}">{{ location.0 }}&#x3C;/a> ({{ location.1 }})&#x3C;/li></span></span>
+<span class="line"><span>                        {% endfor %}</span></span>
+<span class="line"><span>                        &#x3C;/ul></span></span>
+<span class="line"><span>                    &#x3C;/div></span></span>
+<span class="line"><span>                {% endif %}</span></span>
+<span class="line"><span>            &#x3C;/div></span></span>
+<span class="line"><span>            &#x3C;div class="span6"></span></span>
+<span class="line"><span>                &#x3C;h3>Results&#x3C;/h3></span></span>
+<span class="line"><span>                &#x3C;div class="accordion" id="accordion2"></span></span>
+<span class="line"><span>                    {% for result in page.object_list %}</span></span>
+<span class="line"><span>                        {% include 'search/_result_object.html' %}</span></span>
+<span class="line"><span>                    {% empty %}</span></span>
+<span class="line"><span>                        &#x3C;p>No results found.&#x3C;/p></span></span>
+<span class="line"><span>                    {% endfor %}</span></span>
+<span class="line"><span>                &#x3C;/div></span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>                {% if page.has_previous or page.has_next %}</span></span>
+<span class="line"><span>                    &#x3C;div></span></span>
+<span class="line"><span>                        {% if page.has_previous %}&#x3C;a href="?q={{ query }}&#x26;amp;page={{ page.previous_page_number }}">{% endif %}&#x26;laquo; Previous{% if page.has_previous %}&#x3C;/a>{% endif %}</span></span>
+<span class="line"><span>                        |</span></span>
+<span class="line"><span>                        {% if page.has_next %}&#x3C;a href="?q={{ query }}&#x26;amp;page={{ page.next_page_number }}">{% endif %}Next &#x26;raquo;{% if page.has_next %}&#x3C;/a>{% endif %}</span></span>
+<span class="line"><span>                    &#x3C;/div></span></span>
+<span class="line"><span>                {% endif %}</span></span>
+<span class="line"><span>            &#x3C;/div></span></span>
+<span class="line"><span>        {% else %}</span></span>
+<span class="line"><span>            &#x3C;div class="span6"></span></span>
+<span class="line"><span>                {# Show some example queries to run, maybe query syntax, something else? #}</span></span>
+<span class="line"><span>            &#x3C;/div></span></span>
+<span class="line"><span>        {% endif %}</span></span>
+<span class="line"><span>{% endblock %}</span></span>
+<span class="line"><span>{% endverbatim %}</span></span></code></pre>
+<p>And the templates/search/_result_object.txt</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{% verbatim %}</span></span>
+<span class="line"><span>{% load more_like_this %}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{% with obj=result.object %}</span></span>
+<span class="line"><span>&#x3C;div class="accordion-group"></span></span>
+<span class="line"><span>    &#x3C;div class="accordion-heading"></span></span>
+<span class="line"><span>        &#x3C;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_{{ obj.id }}"></span></span>
+<span class="line"><span>            {{ obj.name }}</span></span>
+<span class="line"><span>        &#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;div style="padding: 8px 15px;"></span></span>
+<span class="line"><span>            &#x3C;p>Company: {{ obj.company }}&#x3C;/p></span></span>
+<span class="line"><span>            &#x3C;p>Type: {{ obj.type }}&#x3C;/p></span></span>
+<span class="line"><span>            {% if obj.salary %}&#x3C;p>Salary: {{ obj.salary }}&#x3C;/p>{% endif %}</span></span>
+<span class="line"><span>            &#x3C;p>Location: {{ obj.location }}&#x3C;/p></span></span>
+<span class="line"><span>        &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;div id="collapse_{{ obj.id }}" class="accordion-body collapse in"></span></span>
+<span class="line"><span>        &#x3C;div class="accordion-inner"></span></span>
+<span class="line"><span>            &#x3C;p>Contact: &#x3C;a href="mailto:{{ obj.get_contact_email }}">{{ obj.get_contact_email }}&#x3C;/a>&#x3C;/p></span></span>
+<span class="line"><span>            {{ obj.description }}</span></span>
+<span class="line"><span>            {% more_like_this obj as related_content limit 5  %}</span></span>
+<span class="line"><span>            {% if related_content %}</span></span>
+<span class="line"><span>                &#x3C;div></span></span>
+<span class="line"><span>                    &#x3C;br></span></span>
+<span class="line"><span>                    &#x3C;p>&#x3C;strong>Related:&#x3C;/strong>&#x3C;/p></span></span>
+<span class="line"><span>                    &#x3C;ul></span></span>
+<span class="line"><span>                        {% for related in related_content %}</span></span>
+<span class="line"><span>                            &#x3C;li>&#x3C;a>{{ related.object.name }}&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>                        {% endfor %}</span></span>
+<span class="line"><span>                    &#x3C;/ul></span></span>
+<span class="line"><span>                &#x3C;/div></span></span>
+<span class="line"><span>            {% endif %}</span></span>
+<span class="line"><span>        &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>{% endwith %}</span></span>
+<span class="line"><span>{% endverbatim %}</span></span></code></pre>
+<p>Start up your dev server for search!</p>
+<p><a href="/images/2012/08/solr1.png"><img src="/images/2012/08/solr1.png" alt=""></a></p>
+<h2 id="related-items">Related Items</h2>
+<p>Adding Related Items is as simple as using the related_content tag in the
+haystack more_like_this tag library and tweaking out Solr config. Open up
+solrconfig.xml and add a MoreLikeThisHandler within thetag:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;requesthandler name="/mlt" class="solr.MoreLikeThisHandler">&#x3C;/requesthandler></span></span></code></pre>
+<p>Our full _result_object.html now looks like this:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>{% verbatim %}</span></span>
+<span class="line"><span>{% load more_like_this %}</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>{% with obj=result.object %}</span></span>
+<span class="line"><span>&#x3C;div class="accordion-group"></span></span>
+<span class="line"><span>    &#x3C;div class="accordion-heading"></span></span>
+<span class="line"><span>        &#x3C;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_{{ obj.id }}"></span></span>
+<span class="line"><span>            {{ obj.name }}</span></span>
+<span class="line"><span>        &#x3C;/a></span></span>
+<span class="line"><span>        &#x3C;div style="padding: 8px 15px;"></span></span>
+<span class="line"><span>            &#x3C;p>Company: {{ obj.company }}&#x3C;/p></span></span>
+<span class="line"><span>            &#x3C;p>Type: {{ obj.type }}&#x3C;/p></span></span>
+<span class="line"><span>            {% if obj.salary %}&#x3C;p>Salary: {{ obj.salary }}&#x3C;/p>{% endif %}</span></span>
+<span class="line"><span>            &#x3C;p>Location: {{ obj.location }}&#x3C;/p></span></span>
+<span class="line"><span>        &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;div id="collapse_{{ obj.id }}" class="accordion-body collapse in"></span></span>
+<span class="line"><span>        &#x3C;div class="accordion-inner"></span></span>
+<span class="line"><span>            &#x3C;p>Contact: &#x3C;a href="mailto:{{ obj.get_contact_email }}">{{ obj.get_contact_email }}&#x3C;/a>&#x3C;/p></span></span>
+<span class="line"><span>            {{ obj.description }}</span></span>
+<span class="line"><span>            {% more_like_this obj as related_content limit 5  %}</span></span>
+<span class="line"><span>            {% if related_content %}</span></span>
+<span class="line"><span>                &#x3C;div></span></span>
+<span class="line"><span>                    &#x3C;br /></span></span>
+<span class="line"><span>                    &#x3C;p>&#x3C;strong>Related:&#x3C;/strong>&#x3C;/p></span></span>
+<span class="line"><span>                    &#x3C;ul></span></span>
+<span class="line"><span>                        {% for related in related_content %}</span></span>
+<span class="line"><span>                            &#x3C;li>&#x3C;a>{{ related.object.name }}&#x3C;/a>&#x3C;/li></span></span>
+<span class="line"><span>                        {% endfor %}</span></span>
+<span class="line"><span>                    &#x3C;/ul></span></span>
+<span class="line"><span>                &#x3C;/div></span></span>
+<span class="line"><span>            {% endif %}</span></span>
+<span class="line"><span>        &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/div></span></span>
+<span class="line"><span>{% endwith %}</span></span>
+<span class="line"><span>{% endverbatim %}</span></span></code></pre>
+<h2 id="facets">Facets</h2>
+<p>To get our type and location facets, we’ll have to add them to a queryset and
+pass this to a FacetedSearchView instead of the default one. urls.py now looks
+like this:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> django.conf.urls </span><span style="color:#F92672">import</span><span style="color:#F8F8F2"> patterns, include, url</span></span>
+<span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> django.contrib </span><span style="color:#F92672">import</span><span style="color:#F8F8F2"> admin</span></span>
+<span class="line"><span style="color:#F8F8F2">admin.autodiscover()</span></span>
+<span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> haystack.forms </span><span style="color:#F92672">import</span><span style="color:#F8F8F2"> FacetedSearchForm</span></span>
+<span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> haystack.query </span><span style="color:#F92672">import</span><span style="color:#F8F8F2"> SearchQuerySet</span></span>
+<span class="line"><span style="color:#F92672">from</span><span style="color:#F8F8F2"> haystack.views </span><span style="color:#F92672">import</span><span style="color:#F8F8F2"> FacetedSearchView</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">sqs </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> SearchQuerySet().facet(</span><span style="color:#E6DB74">'type'</span><span style="color:#F8F8F2">).facet(</span><span style="color:#E6DB74">'location'</span><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">urlpatterns </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> patterns(</span><span style="color:#E6DB74">'haystack.views'</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">    url(</span><span style="color:#66D9EF;font-style:italic">r</span><span style="color:#E6DB74">'^$'</span><span style="color:#F8F8F2">, FacetedSearchView(</span><span style="color:#FD971F;font-style:italic">form_class</span><span style="color:#F92672">=</span><span style="color:#F8F8F2">FacetedSearchForm, </span><span style="color:#FD971F;font-style:italic">searchqueryset</span><span style="color:#F92672">=</span><span style="color:#F8F8F2">sqs), </span><span style="color:#FD971F;font-style:italic">name</span><span style="color:#F92672">=</span><span style="color:#E6DB74">'haystack_search'</span><span style="color:#F8F8F2">),</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">urlpatterns </span><span style="color:#F92672">=</span><span style="color:#F8F8F2"> urlpatterns </span><span style="color:#F92672">+</span><span style="color:#F8F8F2"> patterns(</span><span style="color:#E6DB74">''</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#F8F8F2">    url(</span><span style="color:#66D9EF;font-style:italic">r</span><span style="color:#E6DB74">'^admin/'</span><span style="color:#F8F8F2">, include(admin.site.urls)),</span></span>
+<span class="line"><span style="color:#88846F">    #(r'^', include('haystack.urls')),</span></span>
+<span class="line"><span style="color:#F8F8F2">)</span></span>
+<span class="line"><span style="color:#F92672">-</span><span style="color:#F8F8F2"> See more at: http:</span><span style="color:#F92672">//</span><span style="color:#F8F8F2">timbroder.com</span><span style="color:#F92672">/</span><span style="color:#AE81FF">2012</span><span style="color:#F92672">/</span><span style="color:#AE81FF">0</span><span style="color:#F44747">8</span><span style="color:#F92672">/</span><span style="color:#F8F8F2">getting</span><span style="color:#F92672">-</span><span style="color:#F8F8F2">started</span><span style="color:#F92672">-with-</span><span style="color:#F8F8F2">solr</span><span style="color:#F92672">-and-</span><span style="color:#F8F8F2">django.html</span><span style="color:#F44747">?</span><span style="color:#F8F8F2">preview</span><span style="color:#F92672">=</span><span style="color:#F8F8F2">true</span><span style="color:#F92672">&#x26;</span><span style="color:#F8F8F2">preview_id</span><span style="color:#F92672">=</span><span style="color:#AE81FF">1167</span><span style="color:#F92672">&#x26;</span><span style="color:#F8F8F2">preview_nonce</span><span style="color:#F92672">=</span><span style="color:#F8F8F2">f6c209628d</span><span style="color:#88846F">#sthash.2NVpbeDJ.dpuf</span></span></code></pre>
+<p>Then, we can use the generated facets in the search template in the facets
+variable</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#F8F8F2">{% verbatim %}</span></span>
+<span class="line"><span style="color:#F8F8F2">{% extends 'base.html' %}</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">{% block hero_text %}Search{% endblock %}</span></span>
+<span class="line"><span style="color:#F8F8F2">{% block header %}&#x3C;/</span><span style="color:#F92672">p</span><span style="color:#F8F8F2">>&#x3C;</span><span style="color:#F92672">p</span><span style="color:#F8F8F2">>Click around!&#x3C;/</span><span style="color:#F92672">p</span><span style="color:#F8F8F2">>{% endblock %}</span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2"> </span></span>
+<span class="line"><span style="color:#F8F8F2">{% block content %}</span></span>
+<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#F92672">div</span><span style="color:#A6E22E"> class</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"span12"</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#F92672">h1</span><span style="color:#F8F8F2">>Search&#x3C;/</span><span style="color:#F92672">h1</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#F92672">form</span><span style="color:#A6E22E"> method</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"get"</span><span style="color:#A6E22E"> action</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"."</span><span style="color:#A6E22E"> class</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">".form-search"</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">        &#x3C;</span><span style="color:#F92672">table</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">            {{ form.as_table }}</span></span>
+<span class="line"><span style="color:#F8F8F2">        &#x3C;/</span><span style="color:#F92672">table</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">        &#x3C;</span><span style="color:#F92672">input</span><span style="color:#A6E22E"> type</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"submit"</span><span style="color:#A6E22E"> value</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"Search"</span><span style="color:#F8F8F2">/></span></span>
+<span class="line"><span style="color:#F8F8F2">    &#x3C;/</span><span style="color:#F92672">form</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">        {% if query %}</span></span>
+<span class="line"><span style="color:#F8F8F2">            &#x3C;</span><span style="color:#F92672">div</span><span style="color:#A6E22E"> class</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"span2"</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                &#x3C;</span><span style="color:#F92672">h3</span><span style="color:#F8F8F2">>Filter&#x3C;/</span><span style="color:#F92672">h3</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                {% if facets.fields.type %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                    &#x3C;</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;</span><span style="color:#F92672">h4</span><span style="color:#F8F8F2">>Type&#x3C;/</span><span style="color:#F92672">h4</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;</span><span style="color:#F92672">ul</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% for type in facets.fields.type %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                            &#x3C;</span><span style="color:#F92672">li</span><span style="color:#F8F8F2">>&#x3C;</span><span style="color:#F92672">a</span><span style="color:#A6E22E"> href</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"{{ request.get_full_path }}</span><span style="color:#AE81FF">&#x26;amp;</span><span style="color:#E6DB74">selected_facets=type_exact:{{ type.0|urlencode }}"</span><span style="color:#F8F8F2">>{{ type.0 }}&#x3C;/</span><span style="color:#F92672">a</span><span style="color:#F8F8F2">> ({{ type.1 }})&#x3C;/</span><span style="color:#F92672">li</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% endfor %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;/</span><span style="color:#F92672">ul</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                    &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                {% endif %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                {% if facets.fields.location %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                    &#x3C;</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;</span><span style="color:#F92672">h4</span><span style="color:#F8F8F2">>Location&#x3C;/</span><span style="color:#F92672">h4</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;</span><span style="color:#F92672">ul</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% for location in facets.fields.location %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                            &#x3C;</span><span style="color:#F92672">li</span><span style="color:#F8F8F2">>&#x3C;</span><span style="color:#F92672">a</span><span style="color:#A6E22E"> href</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"{{ request.get_full_path }}</span><span style="color:#AE81FF">&#x26;amp;</span><span style="color:#E6DB74">selected_facets=location_exact:{{ location.0|urlencode }}"</span><span style="color:#F8F8F2">>{{ location.0 }}&#x3C;/</span><span style="color:#F92672">a</span><span style="color:#F8F8F2">> ({{ location.1 }})&#x3C;/</span><span style="color:#F92672">li</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% endfor %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;/</span><span style="color:#F92672">ul</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                    &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                {% endif %}</span></span>
+<span class="line"><span style="color:#F8F8F2">            &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">            &#x3C;</span><span style="color:#F92672">div</span><span style="color:#A6E22E"> class</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"span6"</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                &#x3C;</span><span style="color:#F92672">h3</span><span style="color:#F8F8F2">>Results&#x3C;/</span><span style="color:#F92672">h3</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                &#x3C;</span><span style="color:#F92672">div</span><span style="color:#A6E22E"> class</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"accordion"</span><span style="color:#A6E22E"> id</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"accordion2"</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                    {% for result in page.object_list %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% include 'search/_result_object.html' %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                    {% empty %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                        &#x3C;</span><span style="color:#F92672">p</span><span style="color:#F8F8F2">>No results found.&#x3C;/</span><span style="color:#F92672">p</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                    {% endfor %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">    </span></span>
+<span class="line"><span style="color:#F8F8F2">                {% if page.has_previous or page.has_next %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                    &#x3C;</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% if page.has_previous %}&#x3C;</span><span style="color:#F92672">a</span><span style="color:#A6E22E"> href</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"?q={{ query }}</span><span style="color:#AE81FF">&#x26;amp;</span><span style="color:#E6DB74">page={{ page.previous_page_number }}"</span><span style="color:#F8F8F2">>{% endif %}</span><span style="color:#AE81FF">&#x26;laquo;</span><span style="color:#F8F8F2"> Previous{% if page.has_previous %}&#x3C;/</span><span style="color:#F92672">a</span><span style="color:#F8F8F2">>{% endif %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                        |</span></span>
+<span class="line"><span style="color:#F8F8F2">                        {% if page.has_next %}&#x3C;</span><span style="color:#F92672">a</span><span style="color:#A6E22E"> href</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"?q={{ query }}</span><span style="color:#AE81FF">&#x26;amp;</span><span style="color:#E6DB74">page={{ page.next_page_number }}"</span><span style="color:#F8F8F2">>{% endif %}Next </span><span style="color:#AE81FF">&#x26;raquo;</span><span style="color:#F8F8F2">{% if page.has_next %}&#x3C;/</span><span style="color:#F92672">a</span><span style="color:#F8F8F2">>{% endif %}</span></span>
+<span class="line"><span style="color:#F8F8F2">                    &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                {% endif %}</span></span>
+<span class="line"><span style="color:#F8F8F2">            &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">        {% else %}</span></span>
+<span class="line"><span style="color:#F8F8F2">            &#x3C;</span><span style="color:#F92672">div</span><span style="color:#A6E22E"> class</span><span style="color:#F8F8F2">=</span><span style="color:#E6DB74">"span6"</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">                {# Show some example queries to run, maybe query syntax, something else? #}</span></span>
+<span class="line"><span style="color:#F8F8F2">            &#x3C;/</span><span style="color:#F92672">div</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">        {% endif %}</span></span>
+<span class="line"><span style="color:#F8F8F2">{% endblock %}</span></span>
+<span class="line"><span style="color:#F8F8F2">{% endverbatim %}</span></span></code></pre>
+<p>And we’re done! As I said, check out the [haystack documentation](http
+://django-haystack.readthedocs.org/en/latest/index.html) for more information.
+Leave any questions in the comments and I’ll be sure to answer them</p>
+<p>[![](<a href="http://timbroder.com/wp-">http://timbroder.com/wp-</a>
+content/uploads/2012/08/solr2.png)](<a href="http://timbroder.com/wp-">http://timbroder.com/wp-</a>
+content/uploads/2012/08/solr2.png)</p> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/django/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> django </span> </a><a href="/tag/python/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> python </span> </a><a href="/tag/solr/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> solr </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

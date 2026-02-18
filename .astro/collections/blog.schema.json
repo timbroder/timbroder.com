@@ -1,0 +1,127 @@
+{
+  "$ref": "#/definitions/blog",
+  "definitions": {
+    "blog": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "layout": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": "post"
+        },
+        "tags": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": []
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "categories": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "link": {
+          "$ref": "#/definitions/blog/properties/category"
+        },
+        "description": {
+          "$ref": "#/definitions/blog/properties/category"
+        },
+        "draft": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "slug": {
+          "$ref": "#/definitions/blog/properties/category"
+        },
+        "wordpress_id": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "dsq_thread_id": {
+          "anyOf": [
+            {
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "author": {
+          "$ref": "#/definitions/blog/properties/category"
+        },
+        "comments": {
+          "$ref": "#/definitions/blog/properties/draft"
+        },
+        "excerpt": {
+          "$ref": "#/definitions/blog/properties/category"
+        },
+        "path": {
+          "$ref": "#/definitions/blog/properties/category"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "date"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

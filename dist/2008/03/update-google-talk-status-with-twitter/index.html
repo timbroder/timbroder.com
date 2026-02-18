@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Update Google Talk status with Twitter | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2008/03/update-google-talk-status-with-twitter/"><meta property="og:title" content="Update Google Talk status with Twitter"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2008/03/update-google-talk-status-with-twitter/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Update Google Talk status with Twitter"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Update Google Talk status with Twitter","description":"","url":"https://timbroder.com/2008/03/update-google-talk-status-with-twitter/","datePublished":"2008-03-30","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2008/03/update-google-talk-status-with-twitter/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2008-03-30" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">March 30, 2008</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Update Google Talk status with Twitter </h1> </header> <div class="mt-8 prose"> <section> <p>I’ve had this idea in my head for a while and just got it to work this
+morning.</p>
+<p>Basically you send a tweet from <a href="http://twitter.com/broderboy">Twitter</a> and
+this script runs, picks up your current twitter status, and if need be,
+updates your gChat status. I’m working on a service version of this where you
+could use gpowered.net to do all this for you. Stay tuned =) If I change the
+version of the script that I have running in the service, you will be able to
+see the source code that I have checked in [here](<a href="http://code.google.com/p/gpo">http://code.google.com/p/gpo</a>
+wered/source/browse/trunk/gpowered/scripts/twitter2gChat.py)</p>
+<p>For those of you that don’t know what Twitter is: _<br>
+“Twitter is a free social networking and micro-blogging service that allows
+users to send “updates” (or “tweets”; text-based posts, up to 140 characters
+long) to the Twitter website, via short message service (e.g. on a cell
+phone), instant messaging, or a third-party application such as Twitterrific
+or Facebook. Updates are displayed on the user’s profile page and instantly
+delivered to other users who have signed up to receive them. The sender can
+restrict delivery to those in his or her circle of friends (delivery to
+everyone is the default). Users can receive updates via the Twitter website,
+instant messaging, SMS, RSS, email or through an application. For SMS, four
+gateway numbers are currently available: short codes for the USA, Canada, and
+India, as well as a UK number for international use. Several third parties
+offer posting and receiving updates via email.”
+(<a href="http://en.wikipedia.org/wiki/Twitter">Wikipidia</a>)_</p>
+<p>Requirements:<br>
+<a href="http://xmpppy.sourceforge.net/">xmpppy</a><br>
+<a href="http://code.google.com/p/python-twitter/">python-twitter</a></p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>import sys, xmpp, os, twitter</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>class Twitter2gChat:</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    twitter_login = os.environ['TWITTER_LOGIN']</span></span>
+<span class="line"><span>    twitter_pass = os.environ['TWITTER_PASS']</span></span>
+<span class="line"><span>    google_login = os.environ['GOOGLE_LOGIN']</span></span>
+<span class="line"><span>    google_pass = os.environ['GOOGLE_PASS']</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    twitter_status = None</span></span>
+<span class="line"><span>    updated = False</span></span>
+<span class="line"><span>    catches = 0</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    #keep looping and wait for xmpp response</span></span>
+<span class="line"><span>    def GoOn(self,conn):</span></span>
+<span class="line"><span>        while self.StepOn(conn):</span></span>
+<span class="line"><span>            pass</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    #keep listening for responses</span></span>
+<span class="line"><span>    def StepOn(self,conn):</span></span>
+<span class="line"><span>        try:</span></span>
+<span class="line"><span>            conn.Process(1)</span></span>
+<span class="line"><span>        except KeyboardInterrupt:</span></span>
+<span class="line"><span>                return 0</span></span>
+<span class="line"><span>        return 1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    #handle responses</span></span>
+<span class="line"><span>    def iqHandler(self, conn,iq_node):</span></span>
+<span class="line"><span>        print 'in iqHandler'</span></span>
+<span class="line"><span>        self.catches = self.catches + 1</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        #we have looped enough, die</span></span>
+<span class="line"><span>        if self.catches == 4:</span></span>
+<span class="line"><span>            print 'i think we did it'</span></span>
+<span class="line"><span>            sys.exit(0)</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        #print response, don't need to send anything back    </span></span>
+<span class="line"><span>        if self.updated == True:</span></span>
+<span class="line"><span>            print iq_node</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        #havn't updated yet, sent status update</span></span>
+<span class="line"><span>        else:</span></span>
+<span class="line"><span>            #we can build of response</span></span>
+<span class="line"><span>            node = iq_node.getChildren()[0]</span></span>
+<span class="line"><span>            </span></span>
+<span class="line"><span>            #remove what we don't ned</span></span>
+<span class="line"><span>            node.delAttr('status-list-max')</span></span>
+<span class="line"><span>            node.delAttr('status-max')</span></span>
+<span class="line"><span>            node.delAttr('status-list-contents-max')</span></span>
+<span class="line"><span>            iq_node.delAttr('from')</span></span>
+<span class="line"><span>            iq_node.delAttr('type')</span></span>
+<span class="line"><span>            iq_node.delAttr('to')</span></span>
+<span class="line"><span>           </span></span>
+<span class="line"><span>           #update the current status</span></span>
+<span class="line"><span>            curr_status = node.getChildren()[0]</span></span>
+<span class="line"><span>            </span></span>
+<span class="line"><span>            #no need to update</span></span>
+<span class="line"><span>            if curr_status.getData() == self.twitter_status:</span></span>
+<span class="line"><span>                print 'status is already tweet'</span></span>
+<span class="line"><span>                sys.exit(0)</span></span>
+<span class="line"><span>                </span></span>
+<span class="line"><span>            curr_status.setData(self.twitter_status)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            #set response</span></span>
+<span class="line"><span>            iq_node.setType('set')</span></span>
+<span class="line"><span>            </span></span>
+<span class="line"><span>            print 'sending'</span></span>
+<span class="line"><span>            print iq_node</span></span>
+<span class="line"><span>            self.updated = True</span></span>
+<span class="line"><span>            conn.send(iq_node)</span></span>
+<span class="line"><span>            print 'end of iqHandler\n\n'</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    #start talking to the server and update status</span></span>
+<span class="line"><span>    def updateGtalkStatus(self):</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        #connect</span></span>
+<span class="line"><span>        jid=xmpp.protocol.JID(self.google_login)</span></span>
+<span class="line"><span>        cl=xmpp.Client(jid.getDomain(),debug=[])</span></span>
+<span class="line"><span>        if not cl.connect(('talk.google.com',5222)):</span></span>
+<span class="line"><span>            print 'Can not connect to server.'</span></span>
+<span class="line"><span>            sys.exit(1)</span></span>
+<span class="line"><span>        if not cl.auth(jid.getNode(),self.google_pass):</span></span>
+<span class="line"><span>            print 'Can not auth with server'</span></span>
+<span class="line"><span>            sys.exit(1)</span></span>
+<span class="line"><span>            </span></span>
+<span class="line"><span>        #build query to get current status</span></span>
+<span class="line"><span>        iq = xmpp.Iq()</span></span>
+<span class="line"><span>        iq.setType('get')</span></span>
+<span class="line"><span>        iq.setTo('timothy.broder@gmail.com')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        node = xmpp.Node()</span></span>
+<span class="line"><span>        node.setName('query')</span></span>
+<span class="line"><span>        node.setAttr('xmlns', 'google:shared-status')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        iq.addChild(node=node) </span></span>
+<span class="line"><span>        print iq</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        #register with server and send subscribe to status updates</span></span>
+<span class="line"><span>        cl.RegisterHandler('iq',self.iqHandler)</span></span>
+<span class="line"><span>        cl.send(iq)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        self.GoOn(cl)</span></span>
+<span class="line"><span>        cl.disconnect()</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>    #get current twitter status</span></span>
+<span class="line"><span>    def getTwitterStatus(self):</span></span>
+<span class="line"><span>        api = twitter.Api(username=self.twitter_login, password=self.twitter_pass)</span></span>
+<span class="line"><span>        self.twitter_status = api.GetUserTimeline(self.twitter_login, 1)[0].text</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        #don't want to use replies</span></span>
+<span class="line"><span>        if self.twitter_status.find('@') >= 0:</span></span>
+<span class="line"><span>            sys.exit(0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>t = Twitter2gChat()</span></span>
+<span class="line"><span>t.getTwitterStatus()</span></span>
+<span class="line"><span>t.updateGtalkStatus()</span></span></code></pre> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/gchat/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> gchat </span> </a><a href="/tag/python/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> python </span> </a><a href="/tag/twitter/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> twitter </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

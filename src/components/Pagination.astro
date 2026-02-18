@@ -1,0 +1,45 @@
+---
+interface Props {
+  currentPage: number
+  totalPages: number
+  basePath: string
+}
+
+const { currentPage, totalPages, basePath } = Astro.props
+
+const isFirst = currentPage === 1
+const isLast = currentPage === totalPages
+const prevPage = currentPage - 1 === 1 ? basePath : `${basePath}page/${currentPage - 1}/`
+const nextPage = `${basePath}page/${currentPage + 1}/`
+---
+
+{totalPages > 1 && (
+  <nav class="flex items-center justify-between border-t border-zinc-200 px-4 py-3 sm:px-6 mt-8" aria-label="Pagination">
+    <div class="hidden sm:block">
+      <p class="text-sm text-zinc-700">
+        Page <span class="font-medium">{currentPage}</span> of{' '}
+        <span class="font-medium">{totalPages}</span>
+      </p>
+    </div>
+    <div class="flex flex-1 justify-between sm:justify-end gap-3">
+      {!isFirst && (
+        <a
+          href={prevPage}
+          class="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50"
+          rel="prev"
+        >
+          &larr; Previous
+        </a>
+      )}
+      {!isLast && (
+        <a
+          href={nextPage}
+          class="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50"
+          rel="next"
+        >
+          Next &rarr;
+        </a>
+      )}
+    </div>
+  </nav>
+)}

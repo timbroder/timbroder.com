@@ -1,0 +1,55 @@
+---
+import type { GetStaticPaths } from 'astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SEO from '../components/SEO.astro'
+import PostCard from '../components/PostCard.astro'
+import Pagination from '../components/Pagination.astro'
+import { getAllPosts } from '../lib/posts'
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getAllPosts()
+  return paginate(posts, {
+    pageSize: 20,
+  })
+}) satisfies GetStaticPaths
+
+const { page } = Astro.props
+const currentPage = page.currentPage
+const totalPages = page.lastPage
+const isFirst = currentPage === 1
+const isLast = currentPage === totalPages
+const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}/`
+const nextPage = `/page/${currentPage + 1}/`
+const title = currentPage === 1 ? 'TimBroder.com Posts' : `TimBroder.com Posts - Page ${currentPage}`
+---
+
+<BaseLayout title="Tim Broder .com" showTitle={currentPage === 1}>
+  <Fragment slot="head">
+    <SEO title={title} pathname={Astro.url.pathname} />
+    <link rel="me" href="https://masto.ai/@timothybroder" />
+    <link rel="alternate" type="application/rss+xml" title="TimBroder.com RSS Feed" href="/feed.xml" />
+    {!isFirst && <link rel="prev" href={prevPage} />}
+    {!isLast && <link rel="next" href={nextPage} />}
+  </Fragment>
+
+  <div class="md:border-l md:border-zinc-100 md:pl-6">
+    <div class="flex max-w-3xl flex-col space-y-16">
+      {page.data.map((post) => (
+        <PostCard
+          slug={post.slug}
+          title={post.title}
+          date={post.formattedDate}
+          category={post.category}
+          description={post.description}
+          link={post.link}
+        />
+      ))}
+    </div>
+  </div>
+
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    basePath="/"
+  />
+</BaseLayout>

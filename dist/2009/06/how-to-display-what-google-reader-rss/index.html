@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Wordpress Plugin: Displaying your Google Reader RSS subscriptions | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2009/06/how-to-display-what-google-reader-rss/"><meta property="og:title" content="Wordpress Plugin: Displaying your Google Reader RSS subscriptions"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2009/06/how-to-display-what-google-reader-rss/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Wordpress Plugin: Displaying your Google Reader RSS subscriptions"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wordpress Plugin: Displaying your Google Reader RSS subscriptions","description":"","url":"https://timbroder.com/2009/06/how-to-display-what-google-reader-rss/","datePublished":"2009-06-02","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2009/06/how-to-display-what-google-reader-rss/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2009-06-02" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">June 02, 2009</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Wordpress Plugin: Displaying your Google Reader RSS subscriptions </h1> </header> <div class="mt-8 prose"> <section> <p>I’ve been meaning to write this code for a while, and I really wanted to take
+a stab at writing a wordpress plugin so here it goes.</p>
+<p>The following takes in Google user credentials, and allows the user to display
+what RSS feeds they subscribe to on their wordpress blog</p>
+<p>Example: <a href="http://timbroder.gpowered.net/rss-i-read/">The RSS that I read</a><br>
+Update: This plugin is now hosted by wordpress. <a href="http://wordpress.org/extend/plugins/google-reader-subscription-list/">click
+here</a></p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>/*</span></span>
+<span class="line"><span>Plugin Name: Google Reader Subscription List</span></span>
+<span class="line"><span>Version: 1</span></span>
+<span class="line"><span>Author: Timothy Broder</span></span>
+<span class="line"><span>Description: Lists a users subscribed Google Reader feeds</span></span>
+<span class="line"><span>*/</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>/*  Copyright 2009  Timothy Broder (email : timothy.broder@gmail.com)</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>    This program is free software; you can redistribute it and/or modify</span></span>
+<span class="line"><span>    it under the terms of the GNU General Public License as published by</span></span>
+<span class="line"><span>    the Free Software Foundation; either version 2 of the License, or</span></span>
+<span class="line"><span>    (at your option) any later version.</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>    This program is distributed in the hope that it will be useful,</span></span>
+<span class="line"><span>    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></span>
+<span class="line"><span>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></span>
+<span class="line"><span>    GNU General Public License for more details.</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>    You should have received a copy of the GNU General Public License</span></span>
+<span class="line"><span>    along with this program; if not, write to the Free Software</span></span>
+<span class="line"><span>    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA</span></span>
+<span class="line"><span>*/</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>if (!class_exists('GoogleReaderSubList')) {</span></span>
+<span class="line"><span>class GoogleReaderSubList {</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  var $show_list       = 'show-google-reader-sub-list';  //the hook in a page</span></span>
+<span class="line"><span>  var $login          = '';</span></span>
+<span class="line"><span>  var $pass          = '';</span></span>
+<span class="line"><span>  var $source         = 'wordpress-google-reader-sub-list-';  //the source the api sees when logging into Google</span></span>
+<span class="line"><span>  var $service         = 'reader';  </span></span>
+<span class="line"><span>  var $login_url        = 'https://www.google.com/accounts/ServiceLoginAuth?service=mail'; //URL to login to google</span></span>
+<span class="line"><span>  var $subscription_list_url  = 'http://www.google.com/reader/api/0/subscription/list'; //URL that holds a users subscriptions</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  function GoogleReaderSubList() {</span></span>
+<span class="line"><span>   $options    = $this->get_admin_options();</span></span>
+<span class="line"><span>   $this->login  = $options['google_login'];</span></span>
+<span class="line"><span>   $this->pass  = $options['google_pass'];</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>   $this->source = $this->source . $this->login;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>  function show_sub_list() {</span></span>
+<span class="line"><span>   $stop = false;</span></span>
+<span class="line"><span>   if ($this->login == '' || $this->login == null) {</span></span>
+<span class="line"><span>    echo 'Google login not set&#x3C;br />';</span></span>
+<span class="line"><span>    $stop = true;</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>   if ($this->pass == '' || $this->pass == null) {</span></span>
+<span class="line"><span>    echo 'Google password not set&#x3C;br />';</span></span>
+<span class="line"><span>    $stop = true;</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   //check to see if the zend plugin has been installed and activated</span></span>
+<span class="line"><span>   //http://wordpress.org/extend/plugins/zend-framework/</span></span>
+<span class="line"><span>   if (!(defined('WP_ZEND_FRAMEWORK') &#x26;&#x26; WP_ZEND_FRAMEWORK)) {</span></span>
+<span class="line"><span>    echo 'The &#x3C;a href="http://wordpress.org/extend/plugins/zend-framework/" target="_blank">Zend Framework Plugin&#x3C;/a> is not active.  Please install and activate it.';</span></span>
+<span class="line"><span>    $stop = true;</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>   if ($stop) {</span></span>
+<span class="line"><span>    return;</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>      </span></span>
+<span class="line"><span>   $client = new Zend_Http_Client($this->login_url);</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   //connect, authenticate, and handshake with Google</span></span>
+<span class="line"><span>   $client->setCookieJar()</span></span>
+<span class="line"><span>    ->setMethod(Zend_Http_Client::POST)</span></span>
+<span class="line"><span>    ->setParameterPost(array(</span></span>
+<span class="line"><span>     'continue'             => $this->subscription_list_url,</span></span>
+<span class="line"><span>     'service'              => 'reader',</span></span>
+<span class="line"><span>     'niu'                  => 1,</span></span>
+<span class="line"><span>     'hl'                   => 'en',</span></span>
+<span class="line"><span>     'Email'              => $this->login,</span></span>
+<span class="line"><span>     'Passwd'               => $this->pass,</span></span>
+<span class="line"><span>     'PersistentCookie'     => 'yes',</span></span>
+<span class="line"><span>     'asts'                 => ''</span></span>
+<span class="line"><span>    ));</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>   //$error_level = error_reporting();</span></span>
+<span class="line"><span>   //error_reporting(1);</span></span>
+<span class="line"><span>   $response = $client->request('POST');</span></span>
+<span class="line"><span>   $client->setUri($this->subscription_list_url)->setMethod(Zend_Http_Client::GET);</span></span>
+<span class="line"><span>   $response = $client->request()->getBody();</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   if ($client->request()->getStatus() == 400) {</span></span>
+<span class="line"><span>    ?>Unable to login with supplied Google login/password&#x3C; ?</span></span>
+<span class="line"><span>    return;</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   //error_reporting($error_level);</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   //got the feed, parse it</span></span>
+<span class="line"><span>   $feed = simplexml_load_string($response);</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   $hashmap = array();</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   //organize the feeds by tag  </span></span>
+<span class="line"><span>   foreach ($feed->list->object as $e) {</span></span>
+<span class="line"><span>    $url = $e->string[0];</span></span>
+<span class="line"><span>    $title = $e->string[1];</span></span>
+<span class="line"><span>    $cat = $e->list->object->string[1];</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    //make sure a feed is filed somewhere</span></span>
+<span class="line"><span>    if ($cat == '') {</span></span>
+<span class="line"><span>     $cat = 'unfiled';</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    $t = $hashmap["$cat"];</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>    //a category hasn't been used before</span></span>
+<span class="line"><span>    if ($t == null) {</span></span>
+<span class="line"><span>     $t = array($e);</span></span>
+<span class="line"><span>     $hashmap["$cat"] = $t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    //category has been used before</span></span>
+<span class="line"><span>    else {</span></span>
+<span class="line"><span>     array_push($t, $e);</span></span>
+<span class="line"><span>     $hashmap["$cat"] = $t;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>   //sort the categories</span></span>
+<span class="line"><span>   ksort($hashmap);</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>   //output</span></span>
+<span class="line"><span>   ?></span></span>
+<span class="line"><span>   &#x3C;p>Tags:</span></span>
+<span class="line"><span>    &#x3C; ?</span></span>
+<span class="line"><span>    $endKey = end(array_keys($hashmap));</span></span>
+<span class="line"><span>    foreach ($hashmap as $cat=>$t) {</span></span>
+<span class="line"><span>     echo "&#x3C;a href='#$cat'>$cat&#x3C;/a>";</span></span>
+<span class="line"><span>     if ($cat != $endKey) {</span></span>
+<span class="line"><span>      echo ', ';</span></span>
+<span class="line"><span>     }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    ?></span></span>
+<span class="line"><span>   &#x3C;/p>&#x3C; ?</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   foreach ($hashmap as $cat=>$t) {</span></span>
+<span class="line"><span>    echo "&#x3C;a name='$cat'>&#x3C;/a>";</span></span>
+<span class="line"><span>    echo "&#x3C;b>$cat&#x3C;/b>&#x3C;br />";    </span></span>
+<span class="line"><span>    foreach ($t as $e) {</span></span>
+<span class="line"><span>     list($feed, $url) = split('feed/', $e->string[0]);</span></span>
+<span class="line"><span>     $title = $e->string[1];</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>     echo "&#x3C;a href='$url' target='_blank'>$title&#x3C;/a>&#x3C;br />";</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    echo '&#x3C;br />';</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  function addContent($content) {</span></span>
+<span class="line"><span>   // Only do this if this is a page and it has the appropriate custom field</span></span>
+<span class="line"><span>   if (is_page()) {</span></span>
+<span class="line"><span>    $cust_field_values = get_post_custom_values($this->show_list);</span></span>
+<span class="line"><span>    if ($cust_field_values != NULL) {</span></span>
+<span class="line"><span>     if (defined('WP_ZEND_FRAMEWORK') &#x26;&#x26; WP_ZEND_FRAMEWORK) {</span></span>
+<span class="line"><span>      require_once 'Zend/Loader.php';</span></span>
+<span class="line"><span>      Zend_Loader::loadClass('Zend_Http_Client');</span></span>
+<span class="line"><span>     }</span></span>
+<span class="line"><span>     $content = $this->show_sub_list();</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>   return $content;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  function init() {</span></span>
+<span class="line"><span>   $this->get_admin_options();</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  function get_admin_options() {</span></span>
+<span class="line"><span>   $admin_options = array('google_login' => '',</span></span>
+<span class="line"><span>    'google_pass' => '',</span></span>
+<span class="line"><span>    'use_accordion' => 'true');</span></span>
+<span class="line"><span>   $options = get_option($this->adminOptionName);</span></span>
+<span class="line"><span>   if (!empty($options)) {</span></span>
+<span class="line"><span>    foreach ($options as $key => $option) {</span></span>
+<span class="line"><span>     $admin_options[$key] = $option;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>   update_option($this->admin_optionsName, $admin_options);</span></span>
+<span class="line"><span>   return $admin_options;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>  function printAdminPage() {</span></span>
+<span class="line"><span>   $options = $this->get_admin_options();</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   if (isset($_POST['update_greader_sub_list_settings'])) {</span></span>
+<span class="line"><span>    if (isset($_POST['greader_sub_list_login'])) {</span></span>
+<span class="line"><span>     $options['google_login'] = $_POST['greader_sub_list_login'];</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    if (isset($_POST['greader_sub_list_pass'])) {</span></span>
+<span class="line"><span>     $options['google_pass'] = $_POST['greader_sub_list_pass'];</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    update_option($this->admin_optionsName, $options);</span></span>
+<span class="line"><span>    echo '&#x3C;div class="updated">&#x3C;p>&#x3C;strong>' .  _e('Settings Updated.', 'GoogleReaderSubList'). '&#x3C;/strong>&#x3C;/p>&#x3C;/div>';</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>   }</span></span>
+<span class="line"><span>   //$submit = _e('Update Settings', 'GoogleReaderSubList');</span></span>
+<span class="line"><span>  </span></span>
+<span class="line"><span>   echo "&#x3C;div class='wrap'>    &#x3C;form method='post' action='" . $_SERVER['REQUEST_URI'] . "'>     &#x3C;h2>Google Reader Subscription List&#x3C;/h2>     &#x3C;h3>Google Login&#x3C;/h3>     &#x3C;input type='text' name='greader_sub_list_login' value='";</span></span>
+<span class="line"><span>   echo _e(apply_filters('format_to_edit', $options['google_login']), 'GoogleReaderSubList');</span></span>
+<span class="line"><span>   echo "' /></span></span>
+<span class="line"><span>     &#x3C;h3>Google Password&#x3C;/h3>     &#x3C;input type='password' name='greader_sub_list_pass' value='";</span></span>
+<span class="line"><span>   echo _e(apply_filters('format_to_edit', $options['google_pass']), 'GoogleReaderSubList');</span></span>
+<span class="line"><span>   echo "' /></span></span>
+<span class="line"><span>     &#x3C;div class='submit'>      &#x3C;input type='submit' name='update_greader_sub_list_settings' value='";</span></span>
+<span class="line"><span>   echo _e('Update Settings', 'GoogleReaderSubList');</span></span>
+<span class="line"><span>   echo "'/></span></span>
+<span class="line"><span>     &#x3C;/div>    &#x3C;/form>   &#x3C;/div>";</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>if (class_exists('GoogleReaderSubList')) {</span></span>
+<span class="line"><span>$greader_sub_list = new GoogleReaderSubList();</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>if (!function_exists('greader_sub_list_ap')) {</span></span>
+<span class="line"><span>function greader_sub_list_ap() {</span></span>
+<span class="line"><span>  global $greader_sub_list;</span></span>
+<span class="line"><span>  if (!isset($greader_sub_list)) {</span></span>
+<span class="line"><span>   return;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  if (function_exists('add_options_page')) {</span></span>
+<span class="line"><span>   add_options_page('gReader Subscriptions', 'gReader Subscriptions', 9, basename(__FILE__), array(&#x26;$greader_sub_list, 'printAdminPage'));</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>if (isset($greader_sub_list)) {</span></span>
+<span class="line"><span>add_action('admin_menu', 'greader_sub_list_ap');</span></span>
+<span class="line"><span>add_action('activate_google-raeder-list/google-reader-list.php', array(&#x26;$greader_sub_list, 'init'));</span></span>
+<span class="line"><span>add_filter('the_content', array(&#x26;$greader_sub_list, 'addContent'), '7');</span></span>
+<span class="line"><span>}</span></span></code></pre> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/howto/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> HOWTO </span> </a><a href="/tag/php/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> php </span> </a><a href="/tag/reader/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> reader </span> </a><a href="/tag/wordpress/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> wordpress </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"> <title>Getting Started with Varnish Edge Side Includes and Wordpress | Tim Broder .com</title><meta name="description" content="Tim Broder is a creative technologist"><link rel="canonical" href="https://timbroder.com/2012/12/getting-started-with-varnish-edge-side-includes-and-wordpress/"><meta property="og:title" content="Getting Started with Varnish Edge Side Includes and Wordpress"><meta property="og:description" content="Tim Broder is a creative technologist"><meta property="og:type" content="website"><meta property="og:url" content="https://timbroder.com/2012/12/getting-started-with-varnish-edge-side-includes-and-wordpress/"><meta property="og:image" content="https://timbroder.com/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Getting Started with Varnish Edge Side Includes and Wordpress"><meta name="twitter:description" content="Tim Broder is a creative technologist"><meta name="twitter:image" content="https://timbroder.com/og-image.png"> <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Getting Started with Varnish Edge Side Includes and Wordpress","description":"","url":"https://timbroder.com/2012/12/getting-started-with-varnish-edge-side-includes-and-wordpress/","datePublished":"2012-12-18","author":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"publisher":{"@type":"Person","name":"Tim Broder","url":"https://timbroder.com"},"image":"https://timbroder.com/og-image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://timbroder.com/2012/12/getting-started-with-varnish-edge-side-includes-and-wordpress/"}}</script> <!-- GA4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-L8N53HMK1R"></script><script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L8N53HMK1R');
+    </script><link rel="stylesheet" href="/_astro/_page_.BUD9NVyC.css"></head> <body> <div class="bg-zinc-50"> <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8"> <div class="flex w-full max-w-7xl lg:px-8"> <div class="w-full bg-white ring-1 ring-zinc-100"></div> </div> </div> <div class="relative"> <div class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center"> <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur"> <li> <a href="/" class="relative block px-3 py-2 transition text-teal-500"> Posts <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0"></span> </a> </li><li> <a href="/podcasts/" class="relative block px-3 py-2 transition hover:text-teal-500"> Podcasts  </a> </li><li> <a href="/projects/" class="relative block px-3 py-2 transition hover:text-teal-500"> Projects  </a> </li><li> <a href="/talks/" class="relative block px-3 py-2 transition hover:text-teal-500"> Talks  </a> </li><li> <a href="/about/" class="relative block px-3 py-2 transition hover:text-teal-500"> About  </a> </li> </ul> </div> <div class="sm:px-8 mt-16 sm:mt-32"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl">  <header class="max-w-2xl">  </header> <div class="mt-16 sm:mt-20"> <main>   <article> <header class="flex flex-col"> <span class="flex flex-row mt-2"> <time datetime="2012-12-18" class="flex items-center text-base text-zinc-400"> <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3">December 18, 2012</span> </time> </span> <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl"> Getting Started with Varnish Edge Side Includes and Wordpress </h1> </header> <div class="mt-8 prose"> <section> <p>There are a lot of cases on blogs where once you write the post, the cache for
+that page doesn’t really have to be updated all that often.  Comments can be
+powered by Disqus so you don’t need to bust the cache every time someone
+comments. If you make a change to a post, it’s page and any pages that display
+it (home, category, etc) should be updated automatically anyway; <a href="https://github.com/pkhamre/wp-varnish">wp-
+varnish</a> is the best plugin for that
+btw.</p>
+<p>Now, the sidebar. That’s where it can get tricky.  On a lot of the
+content sites I work on, we can cache most pages for days, the backend doesn’t
+need to keep generating them, the content just lives in varnish. Except for
+the sidebar.  This could have things like “Popular Posts” or “New Posts”.
+Things that are going to change outside of the context of the post you are
+currently looking at.</p>
+<p>This is where <a href="http://en.wikipedia.org/wiki/Edge_Side_Includes">Edge Side
+Includes</a> (ESI) comes in.
+For a while, <a href="http://www.akamai.com/html/support/esi.html">Akamai</a> was the only way to get this behavior, and they are quite expensive. Don’t get me
+wrong, they are amazing, but you have to be getting serious traffic to need them. <a href="https://www.varnish-cache.org/">Varnish</a> is one of the best caching
+solutions you can use, especially for Wordpress. If you are unsure where to start with Varnish and wordpress, <a href="http://www.ewanleith.com/blog/900/10-million-hits-a-day-with-wordpress-using-a-15-server">this
+article</a> is a great starting point. I’v also bookmarked some other articles <a href="https://pinboard.in/u:broderboy/t:varnish/t:wordpress">here</a>.</p>
+<p>ESI was
+introduced in 2.1, and really fleshed out in 3.0 and can be thought of as
+fragment caching for Varnish. It’s really easy to fix the example I gave
+above: we want to be able to cache most of the content for 24 hours but
+refresh just the sidebar every 10 mins.  Varnish will do this processing for
+us, keeping the rest of the page cached, and splicing in the sidebar (and
+having your webserver process just the sidebar) when it needs to. Most of what
+I’m going to do below is in the ESI [documentation](<a href="https://www.varnish-">https://www.varnish-</a>
+cache.org/docs/3.0/tutorial/esi.html).</p>
+<p>We’re going to assume that our theme
+has a dynamic sidebar called “Sidebar” and that there are cases where we want
+ESI to be active (production) and some where wordpress should just behave
+normally (dev).  This is what we have before we start thinking about Varnish:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class=&#x26;quot;five columns&#x26;quot;></span></span>
+<span class="line"><span>&#x3C;?php</span></span>
+<span class="line"><span>	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(&#x26;quot;Sidebar&#x26;quot;) ) :</span></span>
+<span class="line"><span>	endif;</span></span>
+<span class="line"><span>?></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>The two varnish tags we are going to use are an esi comment, and an esi:remove tag. These are the switch that will process the page properly whether you have ESI or not. esi:remove will ignore everything between them if ESI is enabled. This is where we put our “normal processing” code. If ESI is not active, this code will run as normal. Inside the esi comment we put the code that we want to run if ESI is enabled. If it is not, the code will be ignored.</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div class=&#x26;quot;five columns&#x26;quot;></span></span>
+<span class="line"><span>	&#x3C;esi:remove></span></span>
+<span class="line"><span>		&#x3C;?php</span></span>
+<span class="line"><span>		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(&#x26;quot;Sidebar&#x26;quot;) ) :</span></span>
+<span class="line"><span>		endif;</span></span>
+<span class="line"><span>		?></span></span>
+<span class="line"><span>	&#x3C;/esi:remove></span></span>
+<span class="line"><span>	&#x3C;!--esi</span></span>
+<span class="line"><span>		&#x3C;esi:include src=&#x26;quot;/wp-content/plugins/myplugin/esihandler.php&#x26;quot;/></span></span>
+<span class="line"><span>	--></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+<p>Now our sidebar display is ESI ready, but we need to give Varnish an endpoint to hit so it can generate the fragment of the sidebar. So lets create esihandler.php:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;?php</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>$cwd = getcwd();</span></span>
+<span class="line"><span>$path = substr($cwd, 0, strpos($cwd, 'wp-content/'));</span></span>
+<span class="line"><span>require $path . 'wp-blog-header.php';</span></span>
+<span class="line"><span> </span></span>
+<span class="line"><span>if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(&#x26;quot;Sidebar&#x26;quot;) ) :</span></span>
+<span class="line"><span>endif;</span></span></code></pre>
+<p>Lastly, we’ll have to tell Varnish to cache for different timeframes. A full Varnish config is out of the scope of this post, see the links above for more info. What we need is in the sub vcl_fetch call. Add this at the top:</p>
+<pre class="astro-code monokai" style="background-color:#272822;color:#F8F8F2; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="c"><code><span class="line"><span style="color:#F92672">if</span><span style="color:#F8F8F2"> (req.url </span><span style="color:#F92672">~</span><span style="color:#F92672"> &#x26;</span><span style="color:#F8F8F2">quot;esihandler.php</span><span style="color:#F92672">&#x26;</span><span style="color:#F8F8F2">quot;) {</span></span>
+<span class="line"><span style="color:#F8F8F2">    set beresp.ttl </span><span style="color:#F92672">=</span><span style="color:#F44747"> 10m</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"><span style="color:#F92672">else</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#F8F8F2">    set beresp.do_esi </span><span style="color:#F92672">=</span><span style="color:#AE81FF"> true</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">    set beresp.ttl </span><span style="color:#F92672">=</span><span style="color:#F44747"> 1440m</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<p>And you should be all set. When developing you can use smaller timeframes (10 seconds, and 1min). Drop some logging in to see it in action.</p>
+<p>Let me know of any questions in the comments</p> </section> </div> <footer class="flex flex-col"> <span class="flex flex-row mt-2"> <span class="ml-1"> <a href="/tag/esi/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> ESI </span> </a><a href="/tag/varnish/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> varnish </span> </a><a href="/tag/wordpress/"> <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white"> wordpress </span> </a> </span> <span class="flex items-center text-base text-zinc-400"> <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span> <span class="ml-3 align-middle"> <a href="/category/code/">
+Category: <span class="underline">Code</span> </a> </span> </span> </span> </footer> </article>  </main> </div>  </div> </div> </div> </div> </div> <footer class="mt-32"> <div class="sm:px-8"> <div class="mx-auto max-w-7xl lg:px-8"> <div class="border-t border-zinc-100 pt-10 pb-16"> <div class="relative px-4 sm:px-8 lg:px-12"> <div class="mx-auto max-w-2xl lg:max-w-5xl"> <div class="flex flex-col items-center justify-between gap-6 sm:flex-row"> <div class="flex gap-6 text-sm font-medium text-zinc-800"> <a href="/" class="transition hover:text-teal-500"> Posts </a><a href="/podcasts/" class="transition hover:text-teal-500"> Podcasts </a><a href="/projects/" class="transition hover:text-teal-500"> Projects </a><a href="/talks/" class="transition hover:text-teal-500"> Talks </a><a href="/about/" class="transition hover:text-teal-500"> About </a> </div> <p class="text-sm text-zinc-400">
+&copy; 2007 - 2026 Tim Broder. All rights reserved.
+</p> </div> </div> </div> </div> </div> </div> </footer> </div> </body></html>

@@ -1,17 +1,287 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-.gatsby-highlight {
-    background-color: #272822;
-    border-radius: 0.3em;
-    margin: 0.5em 0;
-    padding: 1em;
-    overflow: auto;
+@import "@fontsource/montserrat";
+@import "@fontsource/merriweather";
+
+@theme {
+  --font-size-xs: 0.8125rem;
+  --font-size-xs--line-height: 1.5rem;
+  --font-size-sm: 0.875rem;
+  --font-size-sm--line-height: 1.5rem;
+  --font-size-base: 1rem;
+  --font-size-base--line-height: 1.75rem;
+  --font-size-lg: 1.125rem;
+  --font-size-lg--line-height: 1.75rem;
+  --font-size-xl: 1.25rem;
+  --font-size-xl--line-height: 2rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-2xl--line-height: 2rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-3xl--line-height: 2.25rem;
+  --font-size-4xl: 2rem;
+  --font-size-4xl--line-height: 2.5rem;
+  --font-size-5xl: 3rem;
+  --font-size-5xl--line-height: 3.5rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-6xl--line-height: 1;
+  --font-size-7xl: 4.5rem;
+  --font-size-7xl--line-height: 1;
+  --font-size-8xl: 6rem;
+  --font-size-8xl--line-height: 1;
+  --font-size-9xl: 8rem;
+  --font-size-9xl--line-height: 1;
 }
 
-.gatsby-highlight pre[class*="language-"].line-numbers {
-    padding: 0;
-    padding-left: 2.8em;
-    overflow: initial;
+/* Custom prose styles matching the old tailwind.config.js typography theme */
+.prose {
+  --tw-prose-body: var(--color-zinc-600);
+  --tw-prose-headings: var(--color-zinc-900);
+  --tw-prose-links: var(--color-teal-500);
+  --tw-prose-bold: var(--color-zinc-900);
+  --tw-prose-counters: var(--color-zinc-900);
+  --tw-prose-bullets: var(--color-zinc-900);
+  --tw-prose-hr: var(--color-zinc-100);
+  --tw-prose-quote-borders: var(--color-zinc-200);
+  --tw-prose-captions: var(--color-zinc-400);
+  --tw-prose-code: var(--color-zinc-700);
+  --tw-prose-pre-code: var(--color-zinc-100);
+  --tw-prose-pre-bg: var(--color-zinc-900);
+  --tw-prose-th-borders: var(--color-zinc-200);
+  --tw-prose-td-borders: var(--color-zinc-100);
+  line-height: 1.75rem;
+}
+
+.prose > * {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.prose p {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.prose h2,
+.prose h3 {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+}
+
+.prose h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.prose :is(h2, h3) + * {
+  margin-top: 0;
+}
+
+.prose img {
+  border-radius: 1.5rem;
+}
+
+.prose a {
+  color: var(--tw-prose-links);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: oklch(0.627 0.194 193.74 / 0.2);
+  transition-property: color, text-decoration-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.prose a:hover {
+  color: var(--color-teal-600);
+  text-decoration-color: var(--color-teal-500);
+}
+
+.prose strong {
+  color: var(--tw-prose-bold);
+  font-weight: 600;
+}
+
+.prose code {
+  display: inline-block;
+  color: var(--tw-prose-code);
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: oklch(0.705 0.015 286.07 / 0.2);
+  border-radius: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.prose a code {
+  color: inherit;
+}
+
+.prose :is(h2, h3) code {
+  font-weight: 700;
+}
+
+.prose blockquote {
+  padding-left: 1.5rem;
+  border-left-width: 2px;
+  border-left-color: var(--tw-prose-quote-borders);
+  font-style: italic;
+}
+
+.prose figcaption {
+  color: var(--tw-prose-captions);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.prose figcaption > p {
+  margin: 0;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 0.875rem;
+}
+
+.prose li::marker {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.prose ol > li::marker {
+  color: var(--tw-prose-counters);
+}
+
+.prose ul > li::marker {
+  color: var(--tw-prose-bullets);
+}
+
+.prose li :is(ol, ul) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.prose li :is(li, p) {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose pre {
+  color: var(--tw-prose-pre-code);
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--tw-prose-pre-bg);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  overflow-x: auto;
+  border: 1px solid transparent;
+}
+
+.prose pre code {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.prose hr {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-top-width: 1px;
+  border-color: var(--tw-prose-hr);
+}
+
+@media (min-width: 1024px) {
+  .prose hr {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+}
+
+.prose table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.prose thead {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-th-borders);
+}
+
+.prose thead th {
+  color: var(--tw-prose-headings);
+  font-weight: 600;
+  vertical-align: bottom;
+  padding-bottom: 0.5rem;
+}
+
+.prose thead th:not(:first-child) {
+  padding-left: 0.5rem;
+}
+
+.prose thead th:not(:last-child) {
+  padding-right: 0.5rem;
+}
+
+.prose tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--tw-prose-td-borders);
+}
+
+.prose tbody tr:last-child {
+  border-bottom-width: 0;
+}
+
+.prose tbody td {
+  vertical-align: baseline;
+}
+
+.prose tfoot {
+  border-top-width: 1px;
+  border-top-color: var(--tw-prose-th-borders);
+}
+
+.prose tfoot td {
+  vertical-align: top;
+}
+
+.prose :is(tbody, tfoot) td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.prose :is(tbody, tfoot) td:not(:first-child) {
+  padding-left: 0.5rem;
+}
+
+.prose :is(tbody, tfoot) td:not(:last-child) {
+  padding-right: 0.5rem;
 }
