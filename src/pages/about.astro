@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SEO from '../components/SEO.astro'
+import Container from '../components/Container.astro'
+import { Image } from 'astro:assets'
+import avatarImage from '../assets/avatar.png'
+
+import MastodonIcon from '../components/icons/MastodonIcon.astro'
+import InstagramIcon from '../components/icons/InstagramIcon.astro'
+import GithubIcon from '../components/icons/GithubIcon.astro'
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
+import RedditIcon from '../components/icons/RedditIcon.astro'
+import GoodreadsIcon from '../components/icons/GoodreadsIcon.astro'
+import PlaystationIcon from '../components/icons/PlaystationIcon.astro'
+import LastFmIcon from '../components/icons/LastFmIcon.astro'
+import TraktIcon from '../components/icons/TraktIcon.astro'
+
+const socialLinks = [
+  { href: 'https://masto.ai/@timothybroder', icon: 'mastodon', label: 'Follow on Mastodon' },
+  { href: 'https://www.instagram.com/timothybroder/', icon: 'instagram', label: 'Follow on Instagram' },
+  { href: 'https://github.com/timbroder', icon: 'github', label: 'Follow on GitHub' },
+  { href: 'https://www.linkedin.com/in/timbroder/', icon: 'linkedin', label: 'Follow on LinkedIn' },
+  { href: 'https://www.reddit.com/user/broderboy/', icon: 'reddit', label: 'Follow on Reddit' },
+  { href: 'https://www.goodreads.com/user/show/1253891-tim-broder', icon: 'goodreads', label: "What I'm reading" },
+  { href: 'https://www.exophase.com/user/timbroder/', icon: 'playstation', label: "What I'm playing" },
+  { href: 'https://www.last.fm/user/broderboy/', icon: 'lastfm', label: "What I'm listening to" },
+  { href: 'https://trakt.tv/users/timbroder', icon: 'trakt', label: "What I'm watching" },
+]
+---
+
+<BaseLayout>
+  <Fragment slot="head">
+    <SEO
+      title="About - Tim Broder"
+      description="I'm Tim Broder. I live just north of New York City, where I build things and play"
+      pathname="/about/"
+    />
+  </Fragment>
+
+  <Container class="mt-16 sm:mt-32">
+    <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+      <div class="lg:pl-20">
+        <div class="max-w-xs px-2.5 lg:max-w-none">
+          <Image
+            src={avatarImage}
+            alt="Profile picture"
+            width={1024}
+            height={1024}
+            class="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover"
+          />
+        </div>
+      </div>
+      <div class="lg:order-first lg:row-span-2">
+        <h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl">
+          I'm Tim Broder. I live just north of New York City, where I build things and play.
+        </h1>
+        <div class="mt-6 space-y-7 text-base text-zinc-600">
+          <p>
+            I've loved making things with tech for as long as I can remember. I got my start playing with MS paint when I was 8 years old on my dad's windows 3.1 machine. I built my first website (a Final Fantasy 7 fan site) on Geocities in 8th grade. I had only "been on the internet" for a few months at that point, and mostly at friends' houses. I remember thinking HOLY SH*T I can MAKE this myself?!?! Fast forward 6 months and I was competing in the ThinkQuest website competition through my school. I knew then that I wanted to get a "Ph. D. in web design"
+          </p>
+          <p>
+            Fast forward, and while I didn't quite get that Ph. D., I did get a great degree and have loved every job I've had since graduating college. I loved living in New York City and having lots of side projects to keep me busy. I had lots of time to read comics and binge-watch TV
+          </p>
+          <p>
+            Coming to the present day, I'm a husband and a father of two. I have less time these days for side projects and TV but I still have a lot of fun. After 14 years, I'm still doing Crossfit, 3 days a week, and taking the boys to school on the other weekdays. I rediscovered video games after a long absence. Any spare time I used to have for TV has largely gone to that, but I still do both. I discovered Dungeons and Dragons, got a game going with some dear high school friends, and have been playing with my boys whenever I can.
+          </p>
+        </div>
+      </div>
+      <div class="lg:pl-20">
+        <ul role="list">
+          {socialLinks.map((social, i) => (
+            <li class:list={['flex', i > 0 && 'mt-4']}>
+              <a
+                href={social.href}
+                class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {social.icon === 'mastodon' && <MastodonIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'instagram' && <InstagramIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'github' && <GithubIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'linkedin' && <LinkedInIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'reddit' && <RedditIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'goodreads' && <GoodreadsIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'playstation' && <PlaystationIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'lastfm' && <LastFmIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                {social.icon === 'trakt' && <TraktIcon class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />}
+                <span class="ml-4">{social.label}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>

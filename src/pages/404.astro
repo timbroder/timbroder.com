@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SEO from '../components/SEO.astro'
+---
+
+<BaseLayout>
+  <Fragment slot="head">
+    <SEO title="404: Not Found" />
+  </Fragment>
+
+  <h1 class="text-4xl font-bold tracking-tight text-zinc-800">404: Not Found</h1>
+  <p class="mt-4 text-zinc-600">You just hit a route that doesn't exist... the sadness.</p>
+</BaseLayout>

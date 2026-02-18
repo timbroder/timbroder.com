@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string
+  description?: string
+  pathname?: string
+  image?: string
+}
+
+const siteTitle = 'Tim Broder .com'
+const siteDescription = 'Tim Broder is a creative technologist'
+const siteUrl = 'https://timbroder.com'
+
+const { title, description, pathname, image } = Astro.props
+
+const metaDescription = description || siteDescription
+const canonicalUrl = pathname ? `${siteUrl}${pathname}` : undefined
+const ogImage = image || `${siteUrl}/og-image.png`
+const fullTitle = `${title} | ${siteTitle}`
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={metaDescription} />
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+<meta property="og:title" content={title} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:type" content="website" />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+<meta property="og:image" content={ogImage} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={ogImage} />

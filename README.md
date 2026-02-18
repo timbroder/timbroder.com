@@ -9,15 +9,15 @@ Deployed using [Netlify](https://app.netlify.com/sites/funny-meringue-5e00b8/ove
 
 ### Prerequisites
 
-- Node.js (recommended: use [nvm](https://github.com/nvm-sh/nvm) for version management)
+- Node.js 22+ (recommended: use [nvm](https://github.com/nvm-sh/nvm) for version management)
 - npm
 
 ### Setup
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/timbroder/timbroder.com-gat3.git
-   cd timbroder.com-gat3
+   git clone https://github.com/timbroder/timbroder.com.git
+   cd timbroder.com
    ```
 
 2. Install dependencies:
@@ -29,26 +29,24 @@ Deployed using [Netlify](https://app.netlify.com/sites/funny-meringue-5e00b8/ove
 
 Start the development server:
 ```bash
-npm run develop
+npm run dev
 ```
 
-The site will be available at `http://localhost:8000`
+The site will be available at `http://localhost:4321`
 
 ### Other commands
 
 | Command | Description |
 |---------|-------------|
 | `npm run build` | Build the production site |
-| `npm run serve` | Serve the production build locally |
-| `npm run clean` | Clear Gatsby cache and public directories |
-| `npm run format` | Format code with Prettier |
+| `npm run preview` | Serve the production build locally |
 
 ## Content Management
 
 This site supports two content sources that are merged together:
 
-### Markdown (content/blog/)
-Traditional markdown files with frontmatter. Add a new `.md` file, commit, and push to trigger a deploy.
+### Markdown (src/content/blog/)
+Markdown files with frontmatter. Add a new `.md` file, commit, and push to trigger a deploy.
 
 ### Contentful
 Blog posts can also be created in [Contentful](https://app.contentful.com/). Posts from both sources are merged and sorted by date.
@@ -59,7 +57,7 @@ Blog posts can also be created in [Contentful](https://app.contentful.com/). Pos
 
 ### Publishing Flow
 
-Since Gatsby is a static site generator, content changes require a site rebuild:
+Since Astro is a static site generator, content changes require a site rebuild:
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐

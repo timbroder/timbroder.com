@@ -1,0 +1,76 @@
+---
+import type { GetStaticPaths } from 'astro'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import SEO from '../../../components/SEO.astro'
+import PostCard from '../../../components/PostCard.astro'
+import Pagination from '../../../components/Pagination.astro'
+import Headline from '../../../components/Headline.astro'
+import { getAllPosts, getAllCategories, filterByCategory } from '../../../lib/posts'
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allPosts = await getAllPosts()
+  const categories = getAllCategories(allPosts)
+
+  const paths = []
+  for (const [catSlug, catInfo] of categories) {
+    const catPosts = filterByCategory(allPosts, catInfo.name)
+    const paginated = paginate(catPosts, {
+      params: { category: catSlug },
+      pageSize: 20,
+    })
+    paths.push(...paginated)
+  }
+  return paths
+}) satisfies GetStaticPaths
+
+const { page } = Astro.props
+const { category } = Astro.params
+const currentPage = page.currentPage
+const totalPages = page.lastPage
+const basePath = `/category/${category}/`
+
+// Find the display name
+const allPosts = page.data
+const categoryName = allPosts.length > 0 && allPosts[0].category
+  ? allPosts[0].category
+  : category
+
+const isFirst = currentPage === 1
+const isLast = currentPage === totalPages
+const prevPage = currentPage - 1 === 1 ? basePath : `${basePath}${currentPage - 1}/`
+const nextPage = `${basePath}${currentPage + 1}/`
+const title = currentPage === 1 ? `Category: ${categoryName}` : `Category: ${categoryName} - Page ${currentPage}`
+---
+
+<BaseLayout>
+  <Fragment slot="head">
+    <SEO title={title} pathname={Astro.url.pathname} />
+    {!isFirst && <link rel="prev" href={prevPage} />}
+    {!isLast && <link rel="next" href={nextPage} />}
+  </Fragment>
+
+  <header class="flex flex-col">
+    <Headline>Category: {categoryName}</Headline>
+  </header>
+
+  <div class="md:border-l md:border-zinc-100 md:pl-6">
+    <div class="flex max-w-3xl flex-col space-y-16">
+      {page.data.map((post) => (
+        <PostCard
+          slug={post.slug}
+          title={post.title}
+          date={post.formattedDate}
+          category={post.category}
+          description={post.description}
+          link={post.link}
+        />
+      ))}
+    </div>
+  </div>
+
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    basePath={basePath}
+  />
+</BaseLayout>

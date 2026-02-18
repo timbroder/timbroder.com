@@ -1,0 +1,142 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { render } from 'astro:content'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import SEO from '../components/SEO.astro'
+import Prose from '../components/Prose.astro'
+import Headline from '../components/Headline.astro'
+import { getAllPosts } from '../lib/posts'
+import { renderContentfulRichText } from '../lib/render-rich-text'
+
+export const getStaticPaths = (async () => {
+  const posts = await getAllPosts()
+  return posts.map(post => {
+    // Remove leading and trailing slashes for the slug param
+    const slugParam = post.slug.replace(/^\//, '').replace(/\/$/, '')
+    return {
+      params: { slug: slugParam },
+      props: { post },
+    }
+  })
+}) satisfies GetStaticPaths
+
+const { post } = Astro.props
+
+const siteUrl = 'https://timbroder.com'
+const articleUrl = `${siteUrl}${post.slug}`
+const ogImage = post.ogImage || `${siteUrl}/og-image.png`
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title,
+  "description": post.description,
+  "url": articleUrl,
+  "datePublished": post.date.toISOString().split('T')[0],
+  "author": {
+    "@type": "Person",
+    "name": "Tim Broder",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Tim Broder",
+    "url": siteUrl
+  },
+  "image": ogImage,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": articleUrl
+  }
+}
+
+function kebabCase(str: string): string {
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
+}
+
+// Render markdown content
+let Content: any = null
+if (post.source === 'markdown' && post.entry) {
+  const rendered = await render(post.entry)
+  Content = rendered.Content
+}
+
+// Render contentful rich text
+let contentfulHtml = ''
+if (post.source === 'contentful' && post.content) {
+  contentfulHtml = renderContentfulRichText(post.content)
+}
+---
+
+<BaseLayout>
+  <Fragment slot="head">
+    <SEO
+      title={post.title}
+      description={post.description}
+      pathname={post.slug}
+      image={post.ogImage}
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
+  <article>
+    <header class="flex flex-col">
+      <span class="flex flex-row mt-2">
+        <time
+          datetime={post.date.toISOString().split('T')[0]}
+          class="flex items-center text-base text-zinc-400"
+        >
+          <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
+          <span class="ml-3">{post.formattedDate}</span>
+        </time>
+      </span>
+      <Headline padded={false}>
+        {post.title}
+      </Headline>
+    </header>
+
+    <Prose class="mt-8">
+      {post.link && (
+        <p>
+          Check out the <a href={post.link} target="_blank" rel="noopener noreferrer">original article</a>.
+        </p>
+      )}
+
+      {post.source === 'markdown' && Content && (
+        <section>
+          <Content />
+        </section>
+      )}
+
+      {post.source === 'contentful' && contentfulHtml && (
+        <section set:html={contentfulHtml} />
+      )}
+    </Prose>
+
+    <footer class="flex flex-col">
+      <span class="flex flex-row mt-2">
+        {post.tags && post.tags.length > 0 && (
+          <span class="ml-1">
+            {post.tags.map((tag) => (
+              <a href={`/tag/${kebabCase(tag)}/`}>
+                <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white">
+                  {tag}
+                </span>
+              </a>
+            ))}
+          </span>
+        )}
+        {post.category && (
+          <span class="flex items-center text-base text-zinc-400">
+            <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200"></span>
+            <span class="ml-3 align-middle">
+              <a href={`/category/${kebabCase(post.category)}/`}>
+                Category: <span class="underline">{post.category}</span>
+              </a>
+            </span>
+          </span>
+        )}
+      </span>
+    </footer>
+  </article>
+</BaseLayout>
