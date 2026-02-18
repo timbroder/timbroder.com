@@ -35,7 +35,7 @@ function pad2(n: number): string {
 
 /**
  * Generate slug from a markdown post's data and file id.
- * Matches the old gatsby-node.js onCreateNode logic exactly.
+ * Uses date-based URL pattern: /{YYYY}/{MM}/{slug}/
  */
 export function getSlugFromPost(data: any, fileId: string): string {
   const date = new Date(data.date)
