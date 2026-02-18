@@ -74,6 +74,45 @@ function getContentfulSlug(date: string, slug: string): string {
   return `/${yyyy}/${mm}/${slug}/`
 }
 
+/**
+ * Generate a plain-text excerpt from markdown body content.
+ * Strips markdown syntax and returns the first ~160 characters at a word boundary.
+ */
+function generateExcerpt(body: string | undefined, maxLength = 160): string {
+  if (!body) return ''
+
+  let text = body
+    // Remove code blocks (fenced)
+    .replace(/```[\s\S]*?```/g, '')
+    // Remove code blocks (indented) - skip lines starting with 4+ spaces after a blank line
+    // Remove inline code
+    .replace(/`[^`]+`/g, '')
+    // Remove images
+    .replace(/!\[.*?\]\(.*?\)/g, '')
+    // Remove links but keep text
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    // Remove headings
+    .replace(/^#{1,6}\s+/gm, '')
+    // Remove bold/italic markers
+    .replace(/(\*{1,3}|_{1,3})(.*?)\1/g, '$2')
+    // Remove blockquotes
+    .replace(/^>\s?/gm, '')
+    // Remove horizontal rules
+    .replace(/^[-*_]{3,}\s*$/gm, '')
+    // Remove HTML tags
+    .replace(/<[^>]+>/g, '')
+    // Collapse whitespace
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (text.length <= maxLength) return text
+
+  // Trim to word boundary
+  const trimmed = text.slice(0, maxLength)
+  const lastSpace = trimmed.lastIndexOf(' ')
+  return (lastSpace > 0 ? trimmed.slice(0, lastSpace) : trimmed) + '…'
+}
+
 function kebabCase(str: string): string {
   return str
     .toLowerCase()
@@ -97,7 +136,7 @@ async function getMarkdownPosts(): Promise<NormalizedPost[]> {
         title: entry.data.title,
         date: new Date(entry.data.date),
         formattedDate: formatDate(new Date(entry.data.date)),
-        description: entry.data.description || entry.data.excerpt || '',
+        description: entry.data.description || entry.data.excerpt || generateExcerpt(entry.body),
         category: entry.data.category,
         tags: entry.data.tags || [],
         link: entry.data.link,
