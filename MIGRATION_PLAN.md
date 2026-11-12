@@ -56,6 +56,24 @@ The live sitemap lists 768 URLs.
 - Code fences use inconsistent language names (`PHP`, `HTML`, `XML`, `C`) and a few typos (`swiftlet`, `bashalias`).
 - 32 links in post bodies point at other posts on this site.
 
+### Custom features
+
+These are the behaviours built on top of the Gatsby starter. All of them carry over.
+
+- **Link posts.** A post with a real `link:` shows "Check out the original article." above its body, linking to that URL in a new tab. Its card on list pages says "Read commentary"; other cards say "Read article". The card links to the post on this site, not to the external article.
+- **Post cards.** Title, date, "in {category}", description and the call to action above.
+- **Post pages.** Date, headline and body, then tag pills that link to tag pages and a "Category: X" link.
+- **Headlines.** The home page shows the site title. Tag pages show "Tag: X" and category pages show "Category: X". Paged lists add "- Page N" to the page title.
+- **Navigation.** Five items, in the header and the footer. "Posts" is highlighted on the home page and on every post, but not on paged lists, tag pages or category pages.
+- **Footer.** "© 2007 - {current year} Tim Broder. All rights reserved."
+- **Head links.** Every page advertises the RSS feed at `/feed`. The home page and its paged lists also carry the Mastodon verification link (`rel="me"`) and the Feedburner link. All paged lists carry `rel="prev"` and `rel="next"` links between pages.
+- **About page.** Its own title and description, the tilted avatar and nine social links that open in a new tab.
+- **404 page.** "404: Not Found", with the "the sadness" line.
+- **AI attribution.** Two posts carry `ai_assisted: true` in frontmatter. No template reads it; the attribution line is in the post body.
+- **`podcasts.py`.** A standalone script that turns an Overcast export into a markdown list. It is not part of the build.
+
+Previous/next links between posts are not on the live site. The post template computes them and never renders them.
+
 ### Images
 
 - 20 posts reference 45 images at `/images/...`. Those URLs return 404 on the live site, though nearly all the files are in the repo under `content/blog/images/`.
@@ -91,7 +109,7 @@ Made with Tim on 2026-11-12.
 | Local images | Fix the 20 posts whose images 404 |
 | Remote images | Download each one into the repo and point the post at the local copy. If it is gone, use a funny "missing image" placeholder. |
 | Google Analytics | Keep |
-| Previous/next links on posts | Drop |
+| Previous/next links on posts | Not added. The live site never shows them, so nothing visible changes; the unused code goes away with Gatsby. |
 | Three never-published posts | Leave unpublished |
 | Docker files | Drop |
 
@@ -140,7 +158,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 5. **Content stays in `content/blog/` and `content/pages/`.** Astro's loader can read from there. This keeps history intact, lets new posts on `main` merge cleanly into `astro`, and makes "content only" easy to define for CI.
 6. **One `Post` shape with two loaders behind it.** A markdown loader and a Contentful loader both produce `Post`. Pages, feeds and tests only see `Post`, so nothing downstream knows where a post came from.
-7. **A strict schema for posts.** A post needs a title, a date and a clean slug. `link` is a valid URL or absent; empty strings and `None` become absent. Tags default to an empty list.
+7. **A strict schema for posts.** A post needs a title, a date and a clean slug. `link` is a valid URL or absent; empty strings and `None` become absent. Tags default to an empty list. `ai_assisted`, `ai_model` and the legacy fields are accepted and passed through.
 8. **Descriptions follow today's rule:** `description:` from frontmatter, else the first 512 characters of text.
 
 ### URLs and redirects
@@ -190,26 +208,30 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R4 | Tag and category URLs unchanged | All 217 baseline taxonomy URLs exist; unit tests cover `kebabCase` edge cases | Unit, build output |
 | R5 | List pages show the same posts in the same order | Titles on every home, tag and category page equal the baseline | Build output |
 | R6 | Post content renders the same | For all 518 posts: body text, headings, link targets, and counts of images, code blocks and embeds equal the baseline | Build output |
-| R7 | Pages look the same | Screenshots of each page type at desktop and phone width match live screenshots, with code blocks masked | Browser |
+| R7 | Pages look the same | Screenshots of each page type at desktop and phone width match live screenshots, with code blocks masked. Page types: home, paged list, post, link post, post with an image, post with an embedded video, tag, category, About, markdown page, 404. | Browser |
 | R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots | Browser |
 | R9 | Feed is unchanged for subscribers | Valid RSS; one item per post; every baseline guid still present; full content in every item; no relative URLs | Build output |
 | R10 | Feed is reachable | `/feed` and `/feed/` return 200 with an RSS content type | Deploy preview |
-| R11 | SEO tags unchanged | Title, description, canonical, Open Graph, Twitter and structured data equal the baseline on every page | Build output |
+| R11 | SEO tags and head links unchanged | Title, description, canonical, Open Graph, Twitter, structured data, RSS links, the Mastodon `rel="me"` link and `rel="prev"`/`rel="next"` equal the baseline on every page | Build output |
 | R12 | Sitemap is right | Its URLs equal the built pages, minus the 404 page and `/astrobook/` | Build output |
 | R13 | Local images load | Every local image reference in the built HTML points at a file in the build | Build output, build check |
 | R14 | No remote images remain | No `<img>` points at another host, except Contentful's CDN | Build output |
 | R15 | Dead images use the placeholder | Placeholder count equals the "gone" count in `image-sources.json` | Build output |
 | R16 | Internal links work | Every internal link resolves to a page, a file or a redirect | Build output |
-| R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a draft is hidden; markdown wins a URL clash | Unit, build output |
+| R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash | Unit, build output |
 | R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview | Manual |
 | R19 | Google Analytics is on every page | The GA tag appears exactly once on every page outside `/astrobook/` | Build output |
 | R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond GA and structured data | Build output |
 | R21 | Astrobook is public but not indexed | `/astrobook/` builds, has a `noindex` tag, and is absent from the sitemap | Build output |
 | R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot and passes accessibility checks | Browser |
-| R23 | Dropped things are gone | No previous/next links; no page for the draft or the three unpublished files | Build output |
+| R23 | Unpublished things stay unpublished | No page, list entry or feed item for the draft or the three unpublished files; no page at `/using-typescript/` | Build output |
 | R24 | Bad content cannot deploy | Unit tests feed the build checks a post with no date, a duplicate URL, an untidy slug and a missing image | Unit |
 | R25 | Pages are accessible | No serious accessibility violations on each page type | Browser |
 | R26 | Netlify behaviour is unchanged | Missing trailing slash redirects; unknown URL returns 404 with the custom page | Deploy preview |
+| R27 | Link posts work as today | For every post: the "original article" link is present with the right URL exactly when the baseline has one, and its card says "Read commentary" or "Read article" as in the baseline | Build output |
+| R28 | List pages carry the same details | On every list page: the headline, and each card's date, category, description and link, equal the baseline | Build output |
+| R29 | Navigation and footer unchanged | On every page: the nav items, which one is highlighted, the footer links and the copyright line equal the baseline | Build output |
+| R30 | Post details unchanged | On every post: the date, tag pills, tag links and category link equal the baseline | Build output |
 
 ### Differences from the baseline that are expected
 
@@ -217,7 +239,6 @@ Tests R6 and R11 allow these, and nothing else. They live in one file with a rea
 
 - Canonical URLs and links for the 83 re-slugged posts and the 2 pinned posts.
 - Image sources, which become local.
-- Previous/next links, which are removed.
 - Code block markup.
 - The broken "original article" link on the two `link: None` posts.
 - Three extra feed items.
@@ -237,8 +258,8 @@ Tests R6 and R11 allow these, and nothing else. They live in one file with a rea
 Stage 1 captures the baseline from the live site with a script that can be rerun while Gatsby is still live:
 
 - `urls.txt`: the 768 sitemap URLs.
-- `pages.json`: for every page, its title, meta tags, structured data, heading, body text, links, image sources and counts of code blocks and embeds.
-- `lists.json`: the ordered post titles on every list page.
+- `pages.json`: for every page and the 404 page, its title, meta tags, head links, structured data, heading, highlighted nav item, footer text, body text, links, image sources and counts of code blocks and embeds. For posts it also records the date, tags, category and "original article" link.
+- `lists.json`: for every list page, its headline and each card's title, date, category, description, link and call to action, in order.
 - `feed.json`: every feed item's guid, link and title.
 - Screenshots of each page type at 1280 and 390 pixels wide.
 
@@ -321,7 +342,8 @@ This document.
 
 - **Work:**
   - Replace Gatsby with a bare Astro 7 project on the branch.
-  - Remove Gatsby files, the Docker files and unused dependencies.
+  - Remove Gatsby files, the Docker files and unused dependencies. `podcasts.py` and `CLAUDE.md` stay as they are.
+  - Update the README's setup and commands for Astro. Its Contentful and AI-assisted writing sections stay.
   - Point Netlify's build at `dist/`.
   - Open the draft cutover PR from `astro` to `main` so the branch gets a deploy preview.
   - Work through every item in section 10 and record each answer in this file.
@@ -348,7 +370,7 @@ This document.
   - The layout and every component, each with stories.
   - Styled pages, including About and the 404 page.
   - Code highlighting.
-- **Tests added:** R7, R8, R20, R21, R22, R25.
+- **Tests added:** R7, R8, R20, R21, R22, R25, R27 to R30.
 - **Done when:** page screenshots match the live site, and Tim has approved the code block stories.
 
 ### Stage 5: Content fidelity and images
