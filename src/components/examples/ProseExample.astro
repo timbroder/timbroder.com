@@ -1,0 +1,38 @@
+---
+/** Story wrapper: every kind of content a post can hold, inside Prose. */
+import Prose from '../Prose.astro';
+import CodeBlock from '../CodeBlock.astro';
+---
+
+<Prose>
+  <p>
+    A paragraph with a <a href="https://example.com">link</a>, some <strong>bold</strong> and
+    <em>italic</em> text, and <code>inline code</code>. Don't get me wrong, it's a lot for one paragraph.
+  </p>
+  <h2>A second-level heading</h2>
+  <p>Here's what I do:</p>
+  <ul>
+    <li>An unordered item</li>
+    <li>Another, with a <a href="https://example.com">link</a></li>
+  </ul>
+  <ol>
+    <li>First step</li>
+    <li>Second step</li>
+  </ol>
+  <h3>A third-level heading</h3>
+  <blockquote>
+    <p>I've missed out on a lot of moments where I could've been celebrating but my brain had already moved on.</p>
+  </blockquote>
+  <CodeBlock lang="js" code={`const wins = ['small', 'big'];\nconsole.log(wins.length);`} />
+  <table>
+    <thead>
+      <tr><th>Tool</th><th>Use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>AeroPress</td><td>Coffee</td></tr>
+      <tr><td>Kobo</td><td>Reading</td></tr>
+    </tbody>
+  </table>
+  <hr />
+  <p>A closing paragraph after a rule.</p>
+</Prose>

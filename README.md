@@ -44,7 +44,9 @@ The site will be available at `http://localhost:4321`. The component library is 
 | `npm run preview` | Serve the production build locally |
 | `npm test` | Run the unit tests |
 | `npm run test:build` | Compare the build in `dist/` with the live-site baseline (run `npm run build` first) |
+| `npm run test:browser` | Browser tests: the pages against the live site, every component story, navigation and accessibility (run `npm run build` first) |
 | `npm run test:smoke` | Check redirects and headers on a deployed copy (set `SMOKE_URL`) |
+| `npm run serve` | Serve `dist/` the way the browser tests see it |
 | `npm run check` | Type-check the project |
 | `npm run format` | Format code with Prettier |
 | `npm run baseline:capture` | Re-capture the live-site baseline the migration is tested against (see `tests/baseline/README.md`) |

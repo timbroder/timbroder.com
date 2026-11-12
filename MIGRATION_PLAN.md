@@ -227,7 +227,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R4 | Tag and category URLs unchanged | Every baseline tag and category URL exists, apart from `/tag//`; unit tests cover `kebabCase` edge cases | Unit, build output |
 | R5 | Lists show the same posts in the same order | For every list, its pages joined together equal the baseline's order for that list, and no page has more than 20 posts | Build output |
 | R6 | Post content renders the same | For all 518 posts: body text, headings, link targets, and counts of images, code blocks and embeds equal the baseline | Build output |
-| R7 | Pages look the same | Screenshots of each page type at desktop and phone width match live screenshots, with code blocks masked. List pages are compared from the top down to the first few cards, since the live ones are far longer. Page types: home, paged list, post, link post, post with an image, post with an embedded video, tag, category, About, markdown page, 404. | Browser |
+| R7 | Pages look the same | Each page type is opened on the live site and on the new build in the same browser, at desktop and phone width, and the two screenshots are compared. List pages are compared from the top, since the live ones are far longer; a post with code is compared down to its first code block. Page types: home, post, link post, post with code, tag, category, About, markdown page, 404, plus the pagination and the footer on their own. A post with an image and a post with an embedded video are added in stage 5, once images are settled. | Browser |
 | R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots | Browser |
 | R9 | Feed is unchanged for subscribers | Valid RSS; one item per post; every baseline guid still present; full content in every item; no relative URLs | Build output |
 | R10 | Feed is reachable | `/feed` and `/feed/` return 200 with an RSS content type | Deploy preview |
@@ -245,7 +245,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot and passes accessibility checks | Browser |
 | R23 | Unpublished things stay unpublished | No page, list entry or feed item for the draft or the three unpublished files; no page at `/using-typescript/` | Build output |
 | R24 | Bad content cannot deploy | Unit tests feed the build checks a post with no date, a duplicate URL, an untidy slug and a missing image | Unit |
-| R25 | Pages are accessible | No serious accessibility violations on each page type | Browser |
+| R25 | Pages are accessible | No serious accessibility violations on each page type or story, apart from the colour contrast the design already has (see section 12) | Browser |
 | R26 | Netlify behaviour is unchanged | Missing trailing slash redirects; unknown URL returns 404 with the custom page | Deploy preview |
 | R27 | Link posts work as today | For every post: the "original article" link is present with the right URL exactly when the baseline has one, and its card says "Read commentary" or "Read article" as in the baseline | Build output |
 | R28 | List pages carry the same details | On every list page: the headline, and each card's date, category, description and link, equal the baseline | Build output |
@@ -295,9 +295,10 @@ The crawl is throttled and retries, because the live site occasionally returns a
 
 ### Screenshots
 
-- Screenshots are taken in one pinned Playwright container in CI, never on a laptop. Fonts render differently on macOS and Linux, which would make every comparison fail.
-- A manually started workflow updates the stored screenshots and commits them, so a deliberate visual change is one click.
-- Until cutover, page screenshots are compared to the live site. After cutover they are compared to the new site's own stored screenshots.
+- **Pages are compared with the live site directly.** Each test run opens a page on the live site and on the new build in the same browser and compares the two. Nothing is stored, so there is no stale baseline, and both sides render with the same fonts. Right now all 22 comparisons match pixel for pixel.
+- **Story screenshots are stored**, since stories have no live counterpart. They are taken in one pinned Playwright container in CI, never on a laptop, because fonts render differently on macOS and Linux. A unit test keeps the container's version in step with the installed Playwright.
+- **To accept a deliberate visual change,** delete the affected screenshots, let CI take new ones, and commit them from the run's artifact.
+- **After cutover** the live site is the new site, so the page comparison switches to stored screenshots too.
 
 ## 7. Astrobook
 
@@ -395,7 +396,7 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 
 - **Work:**
   - Tailwind.
-  - Playwright, and screenshots of the live site taken in the pinned container.
+  - Playwright, with pages compared against the live site in the same run.
   - The layout and every component, each with stories.
   - Styled pages, including About and the 404 page.
   - Code highlighting.
@@ -520,3 +521,10 @@ These are deliberately left for after cutover.
 - Cleaning legacy frontmatter out of old posts.
 - Renaming or moving content files.
 - Publishing the three never-published posts.
+
+### Problems the live design already has
+
+The migration matches the live site, so it carries these over. The tests know about them and will catch anything new of the same kind. Each is a small fix once the new site is live.
+
+- **Colour contrast.** Dates and the copyright line (zinc-400 on white), and links and "Read article" (teal-500 on white), are below the 4.5:1 contrast that accessibility guidelines ask for.
+- **Sideways scrolling on a phone.** A card summary that contains a long web address cannot wrap, so the page scrolls sideways. `/tag/chrome/` is one example.
