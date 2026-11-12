@@ -1,0 +1,21 @@
+# Stage 2 proof (P5): can Netlify redirect old URLs that contain odd
+# characters? Each rule is written once raw and once percent-encoded, and the
+# probe script requests both forms. Stage 3 replaces this file with the real,
+# generated redirects.
+/redirect-proof/raw-|-pipe/            /?hit=raw-pipe            301
+/redirect-proof/enc-%7C-pipe/          /?hit=enc-pipe            301
+/redirect-proof/raw-q&a/               /?hit=raw-amp             301
+/redirect-proof/enc-q%26a/             /?hit=enc-amp             301
+/redirect-proof/raw-aren’t/            /?hit=raw-curly           301
+/redirect-proof/enc-aren%E2%80%99t/    /?hit=enc-curly           301
+/redirect-proof/raw-git-2.5,-x/        /?hit=raw-comma           301
+/redirect-proof/enc-git-2.5%2C-x/      /?hit=enc-comma           301
+/redirect-proof/raw-up:-in/            /?hit=raw-colon           301
+/redirect-proof/enc-up%3A-in/          /?hit=enc-colon           301
+/redirect-proof/raw-world's-best/      /?hit=raw-apostrophe      301
+/redirect-proof/enc-world%27s-best/    /?hit=enc-apostrophe      301
+/redirect-proof/raw-a-—-b/             /?hit=raw-emdash          301
+/redirect-proof/enc-a-%E2%80%94-b/     /?hit=enc-emdash          301
+/redirect-proof/raw-Great-Series/      /?hit=raw-upper           301
+/redirect-proof/raw-a---b/             /?hit=raw-triple          301
+/:year/:month/redirect-proof-wildcard/ /?hit=wildcard            301

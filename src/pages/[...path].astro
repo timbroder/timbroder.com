@@ -1,0 +1,57 @@
+---
+/**
+ * Stage 2 placeholder: every post and markdown page at its Gatsby URL, with
+ * the body only. It exists so rendered content can be compared against the
+ * baseline before any design work. Stage 3 replaces it with the real routes.
+ */
+import { getCollection, render } from 'astro:content';
+import { legacyPagePath, legacyPostPath } from '../lib/legacy-url.ts';
+
+export async function getStaticPaths() {
+  // Undated posts were filed under the month of the Gatsby build.
+  const undatedMonth = process.env.LEGACY_UNDATED_MONTH ?? '2026/11';
+  const toParam = (path: string) => path.replace(/^\/|\/$/g, '');
+
+  const posts = await getCollection('blog', (entry) => entry.data.draft !== true);
+  const pages = await getCollection('pages');
+
+  return [
+    ...posts.map((entry) => ({
+      params: {
+        path: toParam(
+          legacyPostPath(
+            { slug: entry.data.slug, date: entry.data.date, filePath: entry.filePath ?? entry.id },
+            undatedMonth,
+          ),
+        ),
+      },
+      props: { entry },
+    })),
+    ...pages.map((entry) => ({
+      params: { path: toParam(legacyPagePath(String(entry.data.path))) },
+      props: { entry },
+    })),
+  ];
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{entry.data.title}</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>{entry.data.title}</h1>
+        <div class="prose">
+          <section itemprop="articleBody"><Content /></section>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
