@@ -4,7 +4,7 @@ name: CI
 # (posts, pages, images) skips the tests: the site build validates content.
 #
 # `gate` is the one job to mark as a required check. It passes when the tests
-# passed or were skipped, so a content-only pull request goes green in seconds
+# and smoke tests passed or were skipped, so a content-only pull request goes green in seconds
 # instead of waiting on a check that never runs.
 
 on:
@@ -58,14 +58,38 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-      # Install scripts are skipped: the tests do not build the Gatsby site,
-      # so its native dependencies do not need compiling.
-      - run: npm ci --ignore-scripts
+      - run: npm ci
+      - run: npm run check
       - run: npm test
+      - run: npm run build
+
+  smoke:
+    name: Smoke tests
+    needs: changes
+    # Netlify only builds deploy previews for pull requests into main, and
+    # redirects, headers and 404 handling only exist on Netlify.
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.base_ref == 'main' &&
+      needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    env:
+      SMOKE_URL: https://deploy-preview-${{ github.event.pull_request.number }}--funny-meringue-5e00b8.netlify.app
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Wait for the deploy preview to serve this commit
+        run: node scripts/ci/wait-for-deploy.ts "$SMOKE_URL" "$HEAD_SHA"
+      - run: npm run test:smoke
 
   gate:
     name: gate
-    needs: [changes, test]
+    needs: [changes, test, smoke]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -73,14 +97,20 @@ jobs:
         env:
           CHANGES: ${{ needs.changes.result }}
           TEST: ${{ needs.test.result }}
+          SMOKE: ${{ needs.smoke.result }}
         run: |
           echo "changes: $CHANGES"
           echo "test:    $TEST"
+          echo "smoke:   $SMOKE"
           if [ "$CHANGES" != "success" ]; then
             echo "Could not classify the change."
             exit 1
           fi
           if [ "$TEST" != "success" ] && [ "$TEST" != "skipped" ]; then
             echo "Tests did not pass."
+            exit 1
+          fi
+          if [ "$SMOKE" != "success" ] && [ "$SMOKE" != "skipped" ]; then
+            echo "Smoke tests did not pass."
             exit 1
           fi

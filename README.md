@@ -7,17 +7,19 @@ Deployed using [Netlify](https://app.netlify.com/sites/funny-meringue-5e00b8/ove
 
 ## Local Development
 
+The site is built with [Astro](https://astro.build/). A migration from Gatsby is in progress; see [MIGRATION_PLAN.md](MIGRATION_PLAN.md).
+
 ### Prerequisites
 
-- Node.js (recommended: use [nvm](https://github.com/nvm-sh/nvm) for version management)
+- Node.js 22.23.4 or later (the version is pinned in `.nvmrc`; [nvm](https://github.com/nvm-sh/nvm) will pick it up)
 - npm
 
 ### Setup
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/timbroder/timbroder.com-gat3.git
-   cd timbroder.com-gat3
+   git clone https://github.com/timbroder/timbroder.com.git
+   cd timbroder.com
    ```
 
 2. Install dependencies:
@@ -29,19 +31,21 @@ Deployed using [Netlify](https://app.netlify.com/sites/funny-meringue-5e00b8/ove
 
 Start the development server:
 ```bash
-npm run develop
+npm run dev
 ```
 
-The site will be available at `http://localhost:8000`
+The site will be available at `http://localhost:4321`. The component library is at `http://localhost:4321/astrobook/`.
 
 ### Other commands
 
 | Command | Description |
 |---------|-------------|
-| `npm run build` | Build the production site |
-| `npm run serve` | Serve the production build locally |
-| `npm run clean` | Clear Gatsby cache and public directories |
+| `npm run build` | Build the production site into `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm test` | Run the unit tests |
+| `npm run check` | Type-check the project |
 | `npm run format` | Format code with Prettier |
+| `npm run baseline:capture` | Re-capture the live-site baseline the migration is tested against (see `tests/baseline/README.md`) |
 
 ## Content Management
 
@@ -59,7 +63,7 @@ Blog posts can also be created in [Contentful](https://app.contentful.com/). Pos
 
 ### Publishing Flow
 
-Since Gatsby is a static site generator, content changes require a site rebuild:
+Since the site is statically generated, content changes require a site rebuild:
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
