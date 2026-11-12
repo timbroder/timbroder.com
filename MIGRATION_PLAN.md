@@ -119,7 +119,7 @@ Made with Tim on 2026-11-12.
 
 Say so if any of these is wrong.
 
-- The slug rule also changes `/2007/10/new-blog-address_23/` (underscore), making 83 posts rather than the 82 we discussed.
+- The slug rule changes 84 posts, not the 82 we discussed: it also catches one with an underscore and one ending in ` (1)`.
 - The two undated posts are pinned to the dates in their filenames: `/2015/07/fussy-coffee/` and `/2015/03/games-i-was-addicted-to-in-2014/`.
 - `/using-typescript/` is removed and redirects to `/`.
 - The two posts with `link: None` stop showing a broken "original article" link.
@@ -127,7 +127,7 @@ Say so if any of these is wrong.
 - Before using the placeholder for a dead remote image, I try the Internet Archive's copy.
 - Legacy frontmatter fields (`wordpress_id`, `dsq_thread_id`, `author`, `comments`) stay in the old posts untouched.
 - Lists are split into real pages of 20 posts. On the live site every page of a list shows the whole list (see below).
-- The two posts with an empty title get one. `heymamma-2` gets the title already in its frontmatter, quoted so YAML reads it. `games-i-was-addicted-to-in-2014` gets "Games I Was Addicted To in 2014".
+- The two posts with an empty title get the title already in their frontmatter. `heymamma-2` has it quoted so YAML reads it. `games-i-was-addicted-to-in-2014` had four spaces before its opening `---`, so none of its frontmatter was ever read; removing them also gives it back its date, tags and link.
 - Tags, categories, link posts and the five markdown pages all stay.
 - The About page stays a hand-built page.
 
@@ -144,6 +144,8 @@ The baseline capture in stage 1 found these. Each one becomes an expected differ
 | `/tag/apps/` has no cards, because its only post is one of the three unlisted ones. | It shows that post. |
 | The 404 page highlights "Posts" in the navigation. | Nothing is highlighted. |
 | Some card descriptions show raw markdown where a post starts with an image. | Descriptions are plain text. |
+| A tag or category written two ways ("jira" and "Jira") has one page, which only lists the posts using the older spelling. This affects `/tag/jira/` and `/category/productivity/`. | The page lists the posts using either spelling. |
+| Posts published on the same day can be out of order, because dates are sorted as text. | Posts are sorted by their actual time. |
 
 ## 3. What the old plans got wrong
 
@@ -182,7 +184,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 9. **URL rules are small pure functions, using UTC.** That makes them easy to test against all 518 live URLs.
 10. **Clean slugs live in frontmatter.** Each re-slugged post gets `slug: new-slug` and `redirect_from: [old URL]`. New posts must have a clean slug, so untidy URLs cannot come back.
-11. **Slug cleanup goes through a review file.** A script writes `slug-cleanup.csv` with each old URL and proposed new slug. Tim edits it, and a second script applies it to the frontmatter.
+11. **Slug cleanup goes through a review file.** A script writes `slug-cleanup.csv` with each old URL and proposed new slug, and a second script applies it to the frontmatter. The file and both scripts stay until cutover, so a slug can still be changed by editing the file and running `node scripts/slugs/apply.ts` again.
 12. **Redirects are a generated Netlify `_redirects` file.** The build collects every `redirect_from` plus a short fixed list, and writes each old URL in the forms Netlify needs (see section 10). Astro's own `redirects` setting is not used, because without an adapter it writes HTML refresh pages, not real 301s.
 13. **The two formerly undated posts get a wildcard redirect.** `/:year/:month/fussy-coffee/` goes to `/2015/07/fussy-coffee/`, which covers every month they have lived at.
 14. **Tag and category slugs use lodash `kebabCase` itself.** Reimplementing it would change URLs.
@@ -376,6 +378,8 @@ Done in #135.
 
 ### Stage 3: Content and URLs
 
+Done in #137. The proposed slugs are applied; they can still be edited (see decision 11).
+
 - **Work:**
   - Content collections, the schema and the `Post` model.
   - URL rules.
@@ -500,7 +504,7 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | When | What |
 |---|---|
 | Every stage | Merge the stage's PR into `astro` |
-| Stage 3 | Review and edit `slug-cleanup.csv`, the 83 old URLs and proposed new slugs |
+| Any time before cutover | Review `slug-cleanup.csv`, the 84 old URLs and their new slugs. Edit the `new_slug` column where one reads badly and I will re-apply it. |
 | Stage 4 | Approve the code block stories in Astrobook |
 | Stage 5 | Review the placeholder image and the list of remote images that could not be recovered |
 | Stage 6 | Publish a test post in Contentful and check it on the deploy preview |

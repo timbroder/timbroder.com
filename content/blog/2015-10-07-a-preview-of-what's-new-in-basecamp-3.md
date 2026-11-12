@@ -1,8 +1,11 @@
 ---
 layout: post
 title: A Preview Of What'S New In Basecamp 3
+slug: a-preview-of-whats-new-in-basecamp-3
 date: 2015-10-07 16:37
 link: https://signalvnoise.com/posts/3955-a-preview-of-whats-new-in-basecamp-3
+redirect_from:
+  - "/2015/10/a-preview-of-what's-new-in-basecamp-3/"
 ---
 
 Basecamp 3 is [coming](https://signalvnoise.com/posts/3955-a-preview-of-whats-new-in-basecamp-3 "coming") and I'm exited. Below are excerpts from Basecamp's preview post on what I'm looking forward to most

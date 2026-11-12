@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep014 - Getting Social
+slug: gtdjedi-podcast-ep014-getting-social
 date: 2016-04-03 15:30
 link: http://tekside.net/gtdjedi/2016/3/30/gtdjedi-podcast-ep
+redirect_from:
+  - "/2016/04/gtdjedi-podcast---ep014---getting-social/"
 ---
 
 > The Big Discussion

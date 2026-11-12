@@ -1,0 +1,28 @@
+---
+/** A page of a list: an optional headline, the post cards and the pagination. */
+import type { ListPage } from '../lib/lists.ts';
+import Headline from './Headline.astro';
+import Pagination from './Pagination.astro';
+import PostCard from './PostCard.astro';
+
+interface Props {
+  list: ListPage;
+  headline?: string;
+}
+
+const { list, headline } = Astro.props;
+---
+
+{
+  headline && (
+    <header>
+      <Headline>{headline}</Headline>
+    </header>
+  )
+}
+<div>
+  <div>
+    {list.posts.map((post) => <PostCard post={post} />)}
+  </div>
+</div>
+<Pagination page={list.page} numPages={list.numPages} prev={list.prev} next={list.next} />

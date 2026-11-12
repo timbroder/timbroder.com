@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep018 - Dock Worthy Watch Apps
+slug: gtdjedi-podcast-ep018-dock-worthy-watch-apps
 date: 2016-07-20 09:18
 link: http://tekside.net/gtdjedi/2016/7/20/gtdjedi-podcast-ep018-dock-worthy-watch-apps
+redirect_from:
+  - "/2016/07/gtdjedi-podcast---ep018---dock-worthy-watch-apps/"
 ---
 
 > The Big Discussion

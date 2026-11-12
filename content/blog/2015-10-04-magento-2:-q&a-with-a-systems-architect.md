@@ -1,8 +1,11 @@
 ---
 layout: post
 title: 'Magento 2: Q&A With A Systems Architect'
+slug: magento-2-q-and-a-with-a-systems-architect
 date: 2015-10-04 16:55
 link: http://www.blueacorn.com/blog/Magento-Two-Interview/
+redirect_from:
+  - "/2015/10/magento-2:-q&a-with-a-systems-architect/"
 ---
 
 > Magento 2 has revamped the architecture of the platform. Many of these changes introduced tried and true design patterns into the platform. Although these design patterns are more advanced, they come with a lot of literature to describe how they should be used in practice (read up on the ‘Gang of Four’). For eCommerce managers, these fundamental changes provide their team with a more structurally sound platform to scale-up their business.

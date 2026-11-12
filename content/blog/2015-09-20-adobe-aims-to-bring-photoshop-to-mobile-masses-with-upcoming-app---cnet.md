@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Adobe Aims To Bring Photoshop To Mobile Masses With Upcoming App - Cnet
+slug: adobe-aims-to-bring-photoshop-to-mobile-masses-with-upcoming-app-cnet
 date: 2015-09-20 09:32
 link: http://www.cnet.com/news/with-project-rigel-adobe-hopes-to-bring-photoshop-to-the-mobile-masses/
+redirect_from:
+  - "/2015/09/adobe-aims-to-bring-photoshop-to-mobile-masses-with-upcoming-app---cnet/"
 ---
 
 > Photoshop is so well known that the product name is synonymous with photo editing. But the software itself is a success only on personal computers, not smartphones or tablets.

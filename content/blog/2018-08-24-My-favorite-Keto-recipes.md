@@ -1,7 +1,10 @@
 ---
 layout: post
 title: My Favorite Keto Recipes
+slug: my-favorite-keto-recipes
 date: 2018-08-24 08:30
+redirect_from:
+  - "/2018/08/My-favorite-Keto-recipes/"
 ---
 
 *As mentioned on my guest appearance on [The JackedCast Episode 38](http://tekside.net/jacked/2018/8/25/jackedcast-ep038-transformations-with-timothy-broder)*

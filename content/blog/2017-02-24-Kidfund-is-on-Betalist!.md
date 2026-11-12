@@ -4,7 +4,7 @@ comments: true
 date: 2017-02-24 09:31:00+00:00
 layout: post
 link: ''
-slug: kidfund-is-on-betalist!
+slug: kidfund-is-on-betalist
 
 title: Kidfund is on Betalist!
 
@@ -12,6 +12,8 @@ category: Kidfund
 tags:
 - startup
 - beta
+redirect_from:
+  - "/2017/02/kidfund-is-on-betalist!/"
 ---
 
 My startup, Kidfund has been [featured on Betalist](https://betalist.com/startups/kidfund "featured on Betalist")!!

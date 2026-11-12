@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep034 - Our Favorite Things Of 2017
+slug: gtdjedi-podcast-ep034-our-favorite-things-of-2017
 date: 2017-11-22 16:40
 link: http://tekside.net/gtdjedi/2017/11/22/gtdjedi-podcast-ep034-our-favorite-things-of-2017
+redirect_from:
+  - "/2017/11/gtdjedi-podcast---ep034---our-favorite-things-of-2017/"
 ---
 
 > The Big Discussion

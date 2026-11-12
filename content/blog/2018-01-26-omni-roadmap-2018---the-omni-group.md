@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Omni Roadmap 2018 - The Omni Group
+slug: omni-roadmap-2018-the-omni-group
 date: 2018-01-26 18:49
 link: https://www.omnigroup.com/blog/omni-roadmap-2018
+redirect_from:
+  - "/2018/01/omni-roadmap-2018---the-omni-group/"
 ---
 
 I amy very, very excited about this OmniFocus 3 [news](https://www.omnigroup.com/blog/omni-roadmap-2018). I’ve been using Due for daily tasks and it will be great to go back to just 1 app. 

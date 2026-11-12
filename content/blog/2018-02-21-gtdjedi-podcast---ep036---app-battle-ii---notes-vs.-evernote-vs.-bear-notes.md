@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep036 - App Battle Ii - Notes Vs. Evernote Vs. Bear Notes
+slug: gtdjedi-podcast-ep036-app-battle-ii-notes-vs-evernote-vs-bear-notes
 date: 2018-02-21 08:53
 link: http://tekside.net/gtdjedi/2018/2/21/gtdjedi-podcast-ep036-app-battle-ii-notes-vs-evernote-vs-bear-notes
+redirect_from:
+  - "/2018/02/gtdjedi-podcast---ep036---app-battle-ii---notes-vs.-evernote-vs.-bear-notes/"
 ---
 
 Note taking App Battle! I represent Bear!

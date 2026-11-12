@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Tektok Podcast - Ep025 - Ocd & The Se
+slug: tektok-podcast-ep025-ocd-and-the-se
 date: 2016-03-22 20:46
 link: http://tekside.net/tektok/2016/3/22/tektok
+redirect_from:
+  - "/2016/03/tektok-podcast---ep025---ocd-&-the-se/"
 ---
 
 > TEK Topics

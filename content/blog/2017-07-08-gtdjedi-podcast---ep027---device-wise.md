@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep027 - Device-Wise
+slug: gtdjedi-podcast-ep027-device-wise
 date: 2017-07-08 10:07
 link: http://tekside.net/gtdjedi/2017/3/29/gtdjedi-podcast-ep027-device-wise
+redirect_from:
+  - "/2017/07/gtdjedi-podcast---ep027---device-wise/"
 ---
 
 > The Big Discussion

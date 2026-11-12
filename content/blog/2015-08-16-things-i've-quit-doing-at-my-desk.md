@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Things I'Ve Quit Doing At My Desk
+slug: things-ive-quit-doing-at-my-desk
 date: 2015-08-16 21:00
 link: http://justinjackson.ca/i-quit-my-desk/
+redirect_from:
+  - "/2015/08/things-i've-quit-doing-at-my-desk/"
 ---
 
 > In reality, we do all sorts of things at our desks that aren’t real work (or affect our ability to produce our best work).

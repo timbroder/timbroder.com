@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Being A Developer After 40 — Medium
+slug: being-a-developer-after-40-medium
 date: 2016-04-26 18:33
 link: https://medium.com/@akosma/being-a-developer-after-40-3c5dd112210c#.1glz09xiz
+redirect_from:
+  - "/2016/04/being-a-developer-after-40-—-medium/"
 ---
 
 Good #longread for any developer. Regardless of how long you've been doing this

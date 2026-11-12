@@ -1,18 +1,18 @@
 /**
  * Compares rendered post bodies in a build against the baseline.
  *
- *   node scripts/spike/compare-bodies.ts dist [--show N] [--only field]
+ *   npm run build && node scripts/spike/compare-bodies.ts [--show N] [--only field]
  *
  * Used in stage 2 to choose a markdown processor (plan proof P2). Stage 5
  * turns this comparison into a real test.
  */
-import { existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import { loadPages } from '../../tests/lib/baseline.ts';
-import { extractPage, type BodyFacts } from '../../tests/lib/extract.ts';
+import { asBrowserSends, builtPages, readPage, resolveRedirect } from '../../tests/lib/dist.ts';
+import type { BodyFacts } from '../../tests/lib/extract.ts';
 
 const args = process.argv.slice(2);
-const dist = args[0] ?? 'dist';
+const dist = 'dist';
+const built = builtPages();
 const show = Number(args[args.indexOf('--show') + 1] || 0) || 3;
 const only = args.includes('--only') ? args[args.indexOf('--only') + 1] : null;
 
@@ -34,18 +34,21 @@ function firstDifference(a: string, b: string): [string, string] {
 }
 
 for (const page of baseline) {
-  const file = join(dist, page.url, 'index.html');
-  if (!existsSync(file)) {
+  // A re-slugged post is found through its redirect.
+  const url = built.has(page.url)
+    ? page.url
+    : resolveRedirect(asBrowserSends(page.url))?.to;
+  if (!url || !built.has(url)) {
     missing.push(page.url);
     continue;
   }
-  const built = extractPage(page.url, readFileSync(file, 'utf8')).post;
-  if (!built) {
+  const post = readPage(url).post;
+  if (!post) {
     missing.push(`${page.url} (no article body)`);
     continue;
   }
   const a: BodyFacts = page.post!.body;
-  const b: BodyFacts = built.body;
+  const b: BodyFacts = post.body;
   let equal = true;
   for (const field of FIELDS) {
     const left = field === 'text' ? a.text : JSON.stringify(a[field]);

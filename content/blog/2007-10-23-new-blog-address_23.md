@@ -5,12 +5,14 @@ date: 2007-10-23 23:34:00+00:00
 dsq_thread_id: '109993630'
 layout: post
 link: ''
-slug: new-blog-address_23
+slug: new-blog-address-23
 title: New Blog Address
 wordpress_id: 95
 category: Code
 tags:
 - gpowered.net
+redirect_from:
+  - "/2007/10/new-blog-address_23/"
 ---
 
 After doing quite a bit of reading over at Yaro Starak's [Entrepreneur's

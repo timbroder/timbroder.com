@@ -1,0 +1,26 @@
+---
+/** "Page 2 of 26" with links to the previous and next page. */
+interface Props {
+  page: number;
+  numPages: number;
+  prev: string | null;
+  next: string | null;
+}
+
+const { page, numPages, prev, next } = Astro.props;
+---
+
+{
+  numPages > 1 && (
+    <nav aria-label="Pagination">
+      <div>
+        <p>
+          Page <span>{page}</span> of <span>{numPages}</span>
+        </p>
+      </div>
+      <div>
+        {prev && <a rel="prev" href={prev}>← Previous</a>}{next && <a rel="next" href={next}>Next →</a>}
+      </div>
+    </nav>
+  )
+}

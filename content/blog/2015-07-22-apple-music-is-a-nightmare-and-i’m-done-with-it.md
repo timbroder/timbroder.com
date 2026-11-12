@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Apple Music Is A Nightmare And I’m Done With It
+slug: apple-music-is-a-nightmare-and-im-done-with-it
 date: 2015-07-22 15:51
 link: http://www.loopinsight.com/2015/07/22/apple-music-is-a-nightmare-and-im-done-with-it/
+redirect_from:
+  - "/2015/07/apple-music-is-a-nightmare-and-i’m-done-with-it/"
 ---
 
 Jim Dalrymple at The Loop has had some scathing issues with Apple Music. My thoughts below.

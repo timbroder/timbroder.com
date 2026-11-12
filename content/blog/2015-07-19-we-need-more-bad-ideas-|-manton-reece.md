@@ -1,8 +1,11 @@
 ---
 layout: post
 title: We Need More Bad Ideas
+slug: we-need-more-bad-ideas-manton-reece
 date: 2015-07-19 22:25
 link: http://www.manton.org/2015/06/we-need-more-bad-ideas.html
+redirect_from:
+  - "/2015/07/we-need-more-bad-ideas-|-manton-reece/"
 ---
 
 [Manton Reece](http://www.manton.org/2015/06/we-need-more-bad-ideas.html):

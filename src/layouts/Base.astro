@@ -1,0 +1,83 @@
+---
+/**
+ * The page shell: head, navigation, main content and footer.
+ *
+ * Stage 3 keeps the markup plain. Stage 4 adds the design; stage 7 adds the
+ * rest of the head (social tags, structured data, analytics).
+ */
+import { SITE, activeNavHref } from '../lib/site.ts';
+
+interface Props {
+  /** Page title, without the site name. */
+  title: string;
+  description?: string;
+  /** Set to false on pages with no canonical URL, like the 404 page. */
+  canonical?: boolean;
+  /** Shows the site title as the headline, as on the home page. */
+  showSiteTitle?: boolean;
+  /** Set to false to highlight nothing in the navigation. */
+  highlightNav?: boolean;
+}
+
+const {
+  title,
+  description = SITE.description,
+  canonical = true,
+  showSiteTitle = false,
+  highlightNav = true,
+} = Astro.props;
+
+const pathname = Astro.url.pathname;
+const active = highlightNav ? activeNavHref(pathname) : null;
+// Netlify sets COMMIT_REF. The smoke tests read it to know which build they
+// are looking at.
+const commit = process.env.COMMIT_REF ?? 'local';
+const year = new Date().getUTCFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="build-commit" content={commit} />
+    <title>{`${title} | ${SITE.title}`}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={new URL(pathname, SITE.url).href} />}
+    <link rel="alternate" type="application/rss+xml" title={SITE.feedTitle} href="/feed" />
+    <slot name="head" />
+  </head>
+  <body>
+    <nav aria-label="Main">
+      <ul>
+        {
+          SITE.nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={item.href === active ? 'page' : undefined}>
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    {
+      showSiteTitle && (
+        <header>
+          <h1>
+            <a href="/">{SITE.title}</a>
+          </h1>
+        </header>
+      )
+    }
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div>
+        {SITE.nav.map((item) => <a href={item.href}>{item.title}</a>)}
+      </div>
+      <p>&copy; {SITE.since} - {year} {SITE.author}. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

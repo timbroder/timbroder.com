@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep017 - Automation Faves
+slug: gtdjedi-podcast-ep017-automation-faves
 date: 2016-06-23 18:35
 link: http://tekside.net/gtdjedi/2016/6/22/gtdjedi-podcast-ep017-automation-faves
+redirect_from:
+  - "/2016/06/gtdjedi-podcast---ep017---automation-faves/"
 ---
 
 > GTDJedi Show Notes
