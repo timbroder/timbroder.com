@@ -18,7 +18,9 @@ async function get(path: string) {
   });
 }
 
-describe.skipIf(!BASE)('deployed site', () => {
+// A deploy can take a few seconds to reach every Netlify server, so a
+// failure is retried before it counts.
+describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
   it('serves the home page', async () => {
     const res = await get('/');
     expect(res.status).toBe(200);
