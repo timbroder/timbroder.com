@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Jackedcast - Ep038 - Transformations With Timothy Broder
+slug: jackedcast-ep038-transformations-with-timothy-broder
 date: 2018-08-28 13:27
 link: http://tekside.net/jacked/2018/8/25/jackedcast-ep038-transformations-with-timothy-broder
+redirect_from:
+  - "/2018/08/jackedcast---ep038---transformations-with-timothy-broder/"
 ---
 
 # The Big Discussion

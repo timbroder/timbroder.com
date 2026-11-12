@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep040 - Wwdc Recap
+slug: gtdjedi-podcast-ep040-wwdc-recap
 date: 2018-06-06 14:19
 link: http://tekside.net/gtdjedi/2018/6/6/gtdjedi-podcast-ep040-wwdc-recap
+redirect_from:
+  - "/2018/06/gtdjedi-podcast---ep040---wwdc-recap/"
 ---
 
 

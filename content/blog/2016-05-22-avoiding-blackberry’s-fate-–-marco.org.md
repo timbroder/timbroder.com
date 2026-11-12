@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Avoiding Blackberry’S Fate – Marco.Org
+slug: avoiding-blackberrys-fate-marco-org
 date: 2016-05-22 07:44
 link: https://marco.org/2016/05/21/avoiding-blackberrys-fate
+redirect_from:
+  - "/2016/05/avoiding-blackberry’s-fate-–-marco.org/"
 ---
 
 > The BlackBerry’s success came to an end not because RIM started releasing worse smartphones, but because the new job of the smartphone shifted almost entirely outside of their capabilities, and it was too late to catch u

@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Apiary Releases ‘World'S First’ Automated Api Ci Testing Service - The New Stack
+slug: apiary-releases-worlds-first-automated-api-ci-testing-service-the-new-stack
 date: 2015-08-22 10:45
 link: http://thenewstack.io/apiary-releases-world-first-automated-api-ci-testing-service/
+redirect_from:
+  - "/2015/08/apiary-releases-‘world's-first’-automated-api-ci-testing-service---the-new-stack/"
 ---
 
 > Industrial API Model

@@ -1,12 +1,15 @@
 ---
 layout: post
 title: How to Sync Basecamp Todos to Omnifocus or Todoist 
+slug: how-to-sync-basecamp-todos-to-omnifocus-or-todoist
 date: 2015-10-17 11:54
 category: productivity
 tags:
 - omnifocus
 - GTD
 - todoist
+redirect_from:
+  - "/2015/10/how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/"
 ---
 
 [Basecamp](https://basecamp.com/ "Basecamp") is a large part of our process at Ai. It tracks most of our communication (a lot of this has been moving to [Slack](https://slack.com/ "Slack")). Basecamp serves as our system of record for signs-offs and deliverables. We also use it's "todo" function pretty heavily in the planning stages and tracking client tasks. Once we get into implementation, we transition to [Jira](https://www.atlassian.com/software/jira "Jira"), as it's more powerful. Clients do not have access to Jira. 

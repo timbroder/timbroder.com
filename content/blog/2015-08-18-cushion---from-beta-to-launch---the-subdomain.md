@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Cushion - From Beta To Launch - The Subdomain
+slug: cushion-from-beta-to-launch-the-subdomain
 date: 2015-08-18 06:33
 link: http://cushionapp.com/journal/from-beta-to-launch-the-subdomain/
+redirect_from:
+  - "/2015/08/cushion---from-beta-to-launch---the-subdomain/"
 ---
 
 > When I started Cushion, I knew I wanted to keep the marketing website and the web app separate. I’ve worked on apps in the past where the marketing site is baked into the app code, so any change—even a typo—required a deploy of the entire app. This approach would make me think twice about updating the marketing site—it turned a simple task into a daunting one. Because of this experience, I deliberately separated the two, hosting the marketing site at the root domain while the app lived on a subdomain

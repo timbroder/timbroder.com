@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Laravel 5.4 – Higher Order Messaging For Collections
+slug: laravel-54-higher-order-messaging-for-collections
 date: 2016-11-07 09:59
 link: https://laravel-news.com/2016/11/higher-order-messaging/
+redirect_from:
+  - "/2016/11/laravel-54-–-higher-order-messaging-for-collections/"
 ---
 
 Two words: HELL, YES

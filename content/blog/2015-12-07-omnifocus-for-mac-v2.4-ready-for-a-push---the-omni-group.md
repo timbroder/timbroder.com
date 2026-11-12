@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Omnifocus For Mac V2.4 Ready For A Push - The Omni Group
+slug: omnifocus-for-mac-v2-4-ready-for-a-push-the-omni-group
 date: 2015-12-07 15:42
 link: https://www.omnigroup.com/blog/omnifocus-for-mac-ready-for-push
+redirect_from:
+  - "/2015/12/omnifocus-for-mac-v2.4-ready-for-a-push---the-omni-group/"
 ---
 
 > Due Soon also includes a new option—“Today”—which includes only items due before midnight instead of over “the next 24 hours.”

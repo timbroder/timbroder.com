@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Craig Federighi Talks Open Source Swift And What’S Coming In Version 3.0
+slug: craig-federighi-talks-open-source-swift-and-whats-coming-in-version-3-0
 date: 2015-12-03 20:31
 link: http://arstechnica.com/apple/2015/12/craig-federighi-talks-open-source-swift-and-whats-coming-in-version-3-0/
+redirect_from:
+  - "/2015/12/craig-federighi-talks-open-source-swift-and-what’s-coming-in-version-3.0/"
 ---
 
 So many good things happened with Swift and open source today. 

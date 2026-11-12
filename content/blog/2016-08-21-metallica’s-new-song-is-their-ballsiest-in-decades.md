@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Metallica’S New Song Is Their Ballsiest In Decades
+slug: metallicas-new-song-is-their-ballsiest-in-decades
 date: 2016-08-21 10:58
 link: http://nypost.com/2016/08/18/metallicas-new-song-is-their-ballsiest-in-decades/
+redirect_from:
+  - "/2016/08/metallica’s-new-song-is-their-ballsiest-in-decades/"
 ---
 
 > The metal-heads who thought Metallica had turned into tired old wussies should sit down and shut up for three minutes, because the quartet is back with a new song that ranks as its best work in decades.

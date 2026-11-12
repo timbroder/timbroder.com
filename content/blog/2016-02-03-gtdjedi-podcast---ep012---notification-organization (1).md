@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep012 - Notification Organization
+slug: gtdjedi-podcast-ep012-notification-organization-1
 date: 2016-02-03 08:41
 link: http://tekside.net/gtdjedi/2016/2/3/gtdjedi-podcast-ep012-notification-organization
+redirect_from:
+  - "/2016/02/gtdjedi-podcast---ep012---notification-organization (1)/"
 ---
 
 > Hosts: Clay Russell, Jerry Goldbaum & Timothy Broder

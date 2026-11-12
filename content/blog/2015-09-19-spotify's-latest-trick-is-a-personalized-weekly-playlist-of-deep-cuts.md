@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Spotify'S Latest Trick Is A Personalized Weekly Playlist Of Deep Cuts
+slug: spotifys-latest-trick-is-a-personalized-weekly-playlist-of-deep-cuts
 date: 2015-09-19 12:52
 link: http://www.theverge.com/2015/7/20/9001317/spotify-discover-weekly-poersonalized-playlist-deep-cuts
+redirect_from:
+  - "/2015/09/spotify's-latest-trick-is-a-personalized-weekly-playlist-of-deep-cuts/"
 ---
 
 > Spotify says the Discover Weekly playlist is built based on the music that you listen to in addition to what other, similar users have been listening to. It’s designed to surface the lesser-known tracks and deep cuts, as opposed to just being a playlist of the most popular songs out right now. It’s available at the top of each user’s Playlist folder.

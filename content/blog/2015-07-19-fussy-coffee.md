@@ -1,5 +1,6 @@
 ---
 title: Fussy Coffee
+date: 2015-07-19
 tags:
     - coffee
 categories:

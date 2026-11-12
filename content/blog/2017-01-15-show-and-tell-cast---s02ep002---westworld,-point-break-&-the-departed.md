@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Show And Tell Cast - S02Ep002 - Westworld, Point Break & The Departed
+slug: show-and-tell-cast-s02ep002-westworld-point-break-and-the-departed
 date: 2017-01-15 13:44
 link: http://tekside.net/showandtell/2017/1/15/show-and-tell-cast-s02ep002-westworld-point-break-the-departed
+redirect_from:
+  - "/2017/01/show-and-tell-cast---s02ep002---westworld,-point-break-&-the-departed/"
 ---
 
 > This Episode’s Films

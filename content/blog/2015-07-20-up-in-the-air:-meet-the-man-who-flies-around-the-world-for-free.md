@@ -1,8 +1,11 @@
 ---
 layout: post
 title: 'Up In The Air: Meet The Man Who Flies Around The World For Free'
+slug: up-in-the-air-meet-the-man-who-flies-around-the-world-for-free
 date: 2015-07-20 20:12
 link: http://www.rollingstone.com/culture/features/ben-schlappig-airlines-fly-free-20150720
+redirect_from:
+  - "/2015/07/up-in-the-air:-meet-the-man-who-flies-around-the-world-for-free/"
 ---
 
 This was a fascinating read about a quasi-underground culture or gaming airline systems and flying for free.  Luxury only: business class and private rooms only

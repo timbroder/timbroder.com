@@ -1,8 +1,11 @@
 ---
 layout: post
 title: The best iPhone case I've ever owned
+slug: review-caudabe-the-sheath-for-iphone-7
 date: 2017-01-24 19:29
 link: http://www.techmusings.me/3/post/2016/12/review-caudabe-the-sheath-for-iphone-7.html
+redirect_from:
+  - "/2017/01/review:-caudabe---the-sheath-for-iphone-7/"
 ---
 
 Thank you, [Jerry](http://www.techmusings.me/3/post/2016/12/review-caudabe-the-sheath-for-iphone-7.html "Jerry")

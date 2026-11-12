@@ -1,8 +1,11 @@
 ---
 layout: post
 title: How Relay Fm Proves That Podcasts Aren’T An Overnight Success
+slug: how-relay-fm-proves-that-podcasts-arent-an-overnight-success
 date: 2015-08-21 06:29
 link: http://social.techcrunch.com/2015/08/18/relay-fm-and-the-podcast-renaissance-that-never-was/
+redirect_from:
+  - "/2015/08/how-relay-fm-proves-that-podcasts-aren’t-an-overnight-success/"
 ---
 
 > Just a year later, Relay FM features 16 different shows and delivers 1.5 million episodes every month.

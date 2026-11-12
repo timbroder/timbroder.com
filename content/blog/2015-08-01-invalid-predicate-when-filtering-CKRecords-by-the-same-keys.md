@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Invalid predicate when filtering CKRecords by the same keys?
+slug: invalid-predicate-when-filtering-ckrecords-by-the-same-keys
 date: 2015-08-01 20:19
+redirect_from:
+  - "/2015/08/invalid-predicate-when-filtering-CKRecords-by-the-same-keys/"
 ---
 
 Originally posted on [StackOverflow](http://stackoverflow.com/questions/31441807/invalid-predicate-when-filtering-ckrecords-by-the-same-keys "StackOverflow")

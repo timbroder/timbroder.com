@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Surviving Anxiety, Or, How I Re-Met Adam Culp Today | Remarks
+slug: surviving-anxiety-or-how-i-re-met-adam-culp-today-remarks
 date: 2015-08-18 06:44
 link: http://bhmarks.com/blog/surviving-anxiety-or-how-i-re-met-adam-culp-today/
+redirect_from:
+  - "/2015/08/surviving-anxiety,-or,-how-i-re-met-adam-culp-today-|-remarks/"
 ---
 
 > My running is teaching me two things. One is to “push through” – to go beyond a point when I want to give up short of a goal. The other is to pay attention and take a break when I need it lest I end up hurting myself.

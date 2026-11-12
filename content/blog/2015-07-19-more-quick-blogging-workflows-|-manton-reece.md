@@ -1,8 +1,11 @@
 ---
 layout: post
 title: More Quick Blogging Workflows | Manton Reece
+slug: more-quick-blogging-workflows-manton-reece
 date: 2015-07-19 22:32
 link: http://www.manton.org/2015/06/more-quick-blogging-workflows.html
+redirect_from:
+  - "/2015/07/more-quick-blogging-workflows-|-manton-reece/"
 ---
 
 > We all want to get better at writing and posting more frequently. As I mentioned in yesterday's post, the best way to improve anything is to do more of it, more often

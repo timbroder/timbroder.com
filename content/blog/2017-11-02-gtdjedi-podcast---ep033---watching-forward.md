@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep033 - Watching Forward
+slug: gtdjedi-podcast-ep033-watching-forward
 date: 2017-11-02 08:38
 link: http://tekside.net/gtdjedi/2017/11/2/gtdjedi-podcast-ep033-watching-forward
+redirect_from:
+  - "/2017/11/gtdjedi-podcast---ep033---watching-forward/"
 ---
 
 > The Big Discussion

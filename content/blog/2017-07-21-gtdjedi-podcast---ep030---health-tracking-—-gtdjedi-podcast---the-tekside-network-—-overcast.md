@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Gtdjedi Podcast - Ep030 - Health Tracking — Gtdjedi Podcast - The Tekside Network — Overcast
+slug: gtdjedi-podcast-ep030-health-tracking-gtdjedi-podcast-the-tekside-network-overcast
 date: 2017-07-21 22:30
 link: http://tekside.net/gtdjedi/2017/7/19/gtdjedi-podcast-ep030-health-tracking
+redirect_from:
+  - "/2017/07/gtdjedi-podcast---ep030---health-tracking-—-gtdjedi-podcast---the-tekside-network-—-overcast/"
 ---
 
 > The Big Discussion
