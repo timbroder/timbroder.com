@@ -15,11 +15,11 @@ tags:
 - docker
 ---
 
-I read on a Kobo. I also listen to audiobooks on my phone. What I've wanted for a long time is for those to be the *same* book.
+I sometimes read on a Kobo. I also listen to audiobooks on my phone. What I've wanted for a long time is for those to be the *same* book.
 
 Switching formats mid-book is miserable. You finish a chapter on the Kobo, switch to the audiobook, and then spend five minutes scrubbing around trying to find the sentence you stopped on.
 
-Amazon solved this ages ago with Whispersync. But I don't read on a Kindle, and my books and audiobooks live on my own server.
+Amazon solved this ages ago with Whispersync. But I don't always read on a Kindle, and my books and audiobooks live on my own server.
 
 So I built my own. Put the Kobo down, pick up the phone, hit play, and the audio starts where I stopped reading. And the other way around.
 
@@ -66,7 +66,7 @@ On the devices:
 
 - **Kobo:** [KOReader](https://koreader.rocks), instead of the stock Kobo reader.
 - **iPhone, text:** [Readest](https://readest.com), which speaks the same KOReader sync protocol.
-- **iPhone, audio:** the Audiobookshelf app.
+- **iPhone, audio:** an Audiobookshelf app.
 
 ## How a book gets processed
 
