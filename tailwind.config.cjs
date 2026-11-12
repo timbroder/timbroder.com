@@ -3,6 +3,31 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,ts,md}"],
   plugins: [require('@tailwindcss/typography')],
   theme: {
+    // The font stacks the Gatsby site shipped (Tailwind 3.4's defaults).
+    // Loading this file as a legacy config would otherwise bring in an older
+    // stack, which picks a different font on Linux.
+    fontFamily: {
+      sans: [
+        'ui-sans-serif',
+        'system-ui',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+        '"Noto Color Emoji"',
+      ],
+      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      mono: [
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace',
+      ],
+    },
     fontSize: {
       xs: ['0.8125rem', { lineHeight: '1.5rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
