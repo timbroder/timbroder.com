@@ -1,27 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
+import ListHead from '../components/ListHead.astro';
+import PostList from '../components/PostList.astro';
+import Base from '../layouts/Base.astro';
+import { listPages } from '../lib/lists.ts';
+import { getPosts } from '../lib/posts.ts';
 
-const posts = await getCollection('blog');
-const pages = await getCollection('pages');
-
-// Netlify sets COMMIT_REF. The smoke tests read it to know which build they
-// are looking at.
-const commit = process.env.COMMIT_REF ?? 'local';
+const [list] = listPages('/', await getPosts());
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="build-commit" content={commit} />
-    <title>Tim Broder .com</title>
-  </head>
-  <body>
-    <main>
-      <h1>Tim Broder .com</h1>
-      <p>Astro migration in progress.</p>
-      <p data-count="posts">{posts.length}</p>
-      <p data-count="pages">{pages.length}</p>
-    </main>
-  </body>
-</html>
+<Base title="TimBroder.com Posts" showSiteTitle>
+  <ListHead slot="head" list={list} />
+  <PostList list={list} />
+</Base>

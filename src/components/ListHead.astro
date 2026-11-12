@@ -1,0 +1,13 @@
+---
+/** Head links between the pages of a list. */
+import type { ListPage } from '../lib/lists.ts';
+
+interface Props {
+  list: ListPage;
+}
+
+const { list } = Astro.props;
+---
+
+{list.prev && <link rel="prev" href={list.prev} />}
+{list.next && <link rel="next" href={list.next} />}

@@ -1,8 +1,28 @@
 // @ts-check
+import { rename } from 'node:fs/promises';
 import { defineConfig } from 'astro/config';
 import { satteri } from '@astrojs/markdown-satteri';
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import astrobook from 'astrobook';
+
+/**
+ * Netlify reads redirects from a file called `_redirects`. Astro will not
+ * build a route whose name starts with "_", so the file is built as
+ * redirects.txt (src/pages/redirects.txt.ts) and renamed here.
+ *
+ * @returns {import('astro').AstroIntegration}
+ */
+function netlifyRedirects() {
+  return {
+    name: 'netlify-redirects',
+    hooks: {
+      'astro:build:done': async ({ dir }) => {
+        await rename(new URL('redirects.txt', dir), new URL('_redirects', dir));
+      },
+    },
+  };
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +33,9 @@ export default defineConfig({
     processor: satteri({ features: { smartPunctuation: false } }),
   },
   integrations: [
+    // sitemap-index.xml and sitemap-0.xml, the same names the Gatsby site used.
+    sitemap({ filter: (page) => !page.includes('/astrobook/') }),
+    netlifyRedirects(),
     // The component library, public at /astrobook/.
     // ASTROBOOK=off leaves it out of a build if it ever blocks a deploy.
     ...(process.env.ASTROBOOK === 'off'

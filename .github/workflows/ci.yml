@@ -62,6 +62,8 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run build
+      # Compares the build with the baseline captured from the live site.
+      - run: npm run test:build
 
   smoke:
     name: Smoke tests
@@ -83,6 +85,8 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      # The smoke tests read the redirect rules from the build.
+      - run: npm run build
       - name: Wait for the deploy preview to serve this commit
         run: node scripts/ci/wait-for-deploy.ts "$SMOKE_URL" "$HEAD_SHA"
       - run: npm run test:smoke

@@ -43,6 +43,8 @@ The site will be available at `http://localhost:4321`. The component library is 
 | `npm run build` | Build the production site into `dist/` |
 | `npm run preview` | Serve the production build locally |
 | `npm test` | Run the unit tests |
+| `npm run test:build` | Compare the build in `dist/` with the live-site baseline (run `npm run build` first) |
+| `npm run test:smoke` | Check redirects and headers on a deployed copy (set `SMOKE_URL`) |
 | `npm run check` | Type-check the project |
 | `npm run format` | Format code with Prettier |
 | `npm run baseline:capture` | Re-capture the live-site baseline the migration is tested against (see `tests/baseline/README.md`) |

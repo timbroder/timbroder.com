@@ -1,0 +1,61 @@
+---
+import Headline from '../../../components/Headline.astro';
+import Base from '../../../layouts/Base.astro';
+import { termSlug, type Post } from '../../../lib/post-model.ts';
+import { getPosts } from '../../../lib/posts.ts';
+import { formatDate, isoDate } from '../../../lib/site.ts';
+
+export async function getStaticPaths() {
+  return (await getPosts()).map((post) => {
+    const [year, month, slug] = post.url.split('/').filter(Boolean);
+    return { params: { year, month, slug }, props: { post } };
+  });
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<Base title={post.title} description={post.description}>
+  <article>
+    <header>
+      <span>
+        <time datetime={isoDate(post.date)}><span>{formatDate(post.date)}</span></time>
+      </span>
+      <Headline padded={false}>{post.title}</Headline>
+    </header>
+    <div class="prose">
+      {
+        post.link && (
+          <p>
+            Check out the <a href={post.link} target="_blank" rel="noopener">original article</a>.
+          </p>
+        )
+      }
+      <section itemprop="articleBody" set:html={post.html} />
+    </div>
+    <footer>
+      <span>
+        {
+          post.tags.length > 0 && (
+            <span>
+              {post.tags.map((tag) => (
+                <a href={`/tag/${termSlug(tag)}/`}><span>{tag}</span></a>
+              ))}
+            </span>
+          )
+        }
+        {
+          post.category && (
+            <span>
+              <a href={`/category/${termSlug(post.category)}/`}>Category: <span>{post.category}</span></a>
+            </span>
+          )
+        }
+      </span>
+    </footer>
+  </article>
+</Base>

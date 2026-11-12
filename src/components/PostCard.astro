@@ -1,0 +1,23 @@
+---
+/** One post in a list. */
+import type { Post } from '../lib/post-model.ts';
+import { formatDate } from '../lib/site.ts';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const date = formatDate(post.date);
+---
+
+<article>
+  <div>
+    <h2>
+      <a href={post.url}><span>{post.title}</span></a>
+    </h2>
+    <time datetime={date}>{date}{post.category && <span> in {post.category}</span>}</time>
+    <p>{post.description}</p>
+    <div aria-hidden="true">Read {post.link ? 'commentary' : 'article'}</div>
+  </div>
+</article>
