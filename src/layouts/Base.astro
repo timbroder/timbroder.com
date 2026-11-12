@@ -2,9 +2,14 @@
 /**
  * The page shell: head, navigation, main content and footer.
  *
- * Stage 3 keeps the markup plain. Stage 4 adds the design; stage 7 adds the
- * rest of the head (social tags, structured data, analytics).
+ * Stage 7 adds the rest of the head (social tags, structured data,
+ * analytics).
  */
+import '../styles/global.css';
+import Container from '../components/Container.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Headline from '../components/Headline.astro';
 import { SITE, activeNavHref } from '../lib/site.ts';
 
 interface Props {
@@ -32,7 +37,6 @@ const active = highlightNav ? activeNavHref(pathname) : null;
 // Netlify sets COMMIT_REF. The smoke tests read it to know which build they
 // are looking at.
 const commit = process.env.COMMIT_REF ?? 'local';
-const year = new Date().getUTCFullYear();
 ---
 
 <!doctype html>
@@ -48,36 +52,32 @@ const year = new Date().getUTCFullYear();
     <slot name="head" />
   </head>
   <body>
-    <nav aria-label="Main">
-      <ul>
-        {
-          SITE.nav.map((item) => (
-            <li>
-              <a href={item.href} aria-current={item.href === active ? 'page' : undefined}>
-                {item.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-    {
-      showSiteTitle && (
-        <header>
-          <h1>
-            <a href="/">{SITE.title}</a>
-          </h1>
-        </header>
-      )
-    }
-    <main>
-      <slot />
-    </main>
-    <footer>
-      <div>
-        {SITE.nav.map((item) => <a href={item.href}>{item.title}</a>)}
+    <div class="bg-zinc-50">
+      <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-zinc-100"></div>
+        </div>
       </div>
-      <p>&copy; {SITE.since} - {year} {SITE.author}. All rights reserved.</p>
-    </footer>
+      <div class="relative">
+        <Header active={active} />
+        <Container class="mt-16 sm:mt-32">
+          <header class="max-w-2xl">
+            {
+              showSiteTitle && (
+                <Headline>
+                  <a href="/">{SITE.title}</a>
+                </Headline>
+              )
+            }
+          </header>
+          <div class="mt-16 sm:mt-20">
+            <main>
+              <slot />
+            </main>
+          </div>
+        </Container>
+      </div>
+      <Footer />
+    </div>
   </body>
 </html>

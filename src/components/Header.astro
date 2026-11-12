@@ -1,0 +1,40 @@
+---
+/** The main navigation: a pill of links, with the current section highlighted. */
+import { SITE } from '../lib/site.ts';
+
+interface Props {
+  /** The href of the item to highlight, or null for none. */
+  active: string | null;
+}
+
+const { active } = Astro.props;
+---
+
+<nav aria-label="Main" class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center">
+  <ul
+    class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur-sm"
+  >
+    {
+      SITE.nav.map((item) => {
+        const isActive = item.href === active;
+        return (
+          <li>
+            <a
+              href={item.href}
+              aria-current={isActive ? 'page' : undefined}
+              class:list={[
+                'relative block px-3 py-2 transition',
+                isActive ? 'text-teal-500' : 'hover:text-teal-500',
+              ]}
+            >
+              {item.title}
+              {isActive && (
+                <span class="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0" />
+              )}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

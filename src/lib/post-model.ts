@@ -32,7 +32,8 @@ export interface Post {
   link?: string;
   tags: string[];
   category?: string;
-  description?: string;
+  /** A summary for cards and link previews. Empty when the post has no text. */
+  description: string;
   /** The rendered body. */
   html: string;
 }
@@ -108,7 +109,7 @@ export function toPost(input: PostInput): Post {
     link: input.link,
     tags: input.tags ?? [],
     category: input.category,
-    description: input.description,
+    description: input.description ?? '',
     html: input.html,
   };
 }

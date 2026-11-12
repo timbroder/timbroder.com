@@ -31,6 +31,8 @@ export default defineConfig({
   markdown: {
     // The Gatsby site did not convert quotes or dashes, so neither does this.
     processor: satteri({ features: { smartPunctuation: false } }),
+    // The closest Shiki theme to Prism's Okaidia, which the Gatsby site used.
+    shikiConfig: { theme: 'monokai' },
   },
   integrations: [
     // sitemap-index.xml and sitemap-0.xml, the same names the Gatsby site used.
@@ -45,6 +47,8 @@ export default defineConfig({
             subpath: '/astrobook',
             directory: 'src/components',
             css: ['./src/styles/global.css'],
+            // Keeps the component library out of search results.
+            head: './src/components/AstrobookHead.astro',
             title: 'timbroder.com components',
           }),
         ]),

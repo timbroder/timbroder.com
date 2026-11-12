@@ -1,0 +1,37 @@
+---
+/** The foot of a post: its tags as pills, then its category. */
+import { termSlug } from '../lib/post-model.ts';
+
+interface Props {
+  tags: string[];
+  category?: string;
+}
+
+const { tags, category } = Astro.props;
+---
+
+<footer class="flex flex-col">
+  <span class="flex flex-row mt-2">
+    {
+      tags.length > 0 && (
+        <span class="ml-1">
+          {tags.map((tag) => (
+            <a href={`/tag/${termSlug(tag)}/`}>
+              <span class="align-middle mx-1 px-3 py-0.5 rounded-full text-xs font-medium bg-zinc-800 text-white">{tag}</span>
+            </a>
+          ))}
+        </span>
+      )
+    }
+    {
+      category && (
+        <span class="flex items-center text-base text-zinc-400">
+          <span class="ml-3 h-4 w-0.5 rounded-full bg-zinc-200" />
+          <span class="ml-3 align-middle">
+            <a href={`/category/${termSlug(category)}/`}>Category: <span class="underline"> {category}</span></a>
+          </span>
+        </span>
+      )
+    }
+  </span>
+</footer>

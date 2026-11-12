@@ -5,12 +5,14 @@
  * else uses the list returned here.
  */
 import { getCollection } from 'astro:content';
+import { excerpt } from './excerpt.ts';
 import { finalizePosts, toPost, type Post } from './post-model.ts';
 
 async function loadMarkdownPosts(): Promise<Post[]> {
   const entries = await getCollection('blog', (entry) => !entry.data.draft);
-  return entries.map((entry) =>
-    toPost({
+  return entries.map((entry) => {
+    const html = entry.rendered?.html ?? '';
+    return toPost({
       id: entry.id,
       source: 'markdown',
       filePath: entry.filePath ?? `${entry.id}.md`,
@@ -21,10 +23,11 @@ async function loadMarkdownPosts(): Promise<Post[]> {
       link: entry.data.link,
       tags: entry.data.tags,
       category: entry.data.category,
-      description: entry.data.description,
-      html: entry.rendered?.html ?? '',
-    }),
-  );
+      // A post's own description, or else a summary of its text.
+      description: entry.data.description ?? excerpt(html),
+      html,
+    });
+  });
 }
 
 let cache: Promise<Post[]> | undefined;

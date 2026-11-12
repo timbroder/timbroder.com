@@ -1,0 +1,42 @@
+---
+/** The list of places to find Tim, each with its icon. Links open in a new tab. */
+import { SOCIAL_ICONS, type SocialIconName } from './social-icons.ts';
+
+export interface SocialLink {
+  icon: SocialIconName;
+  href: string;
+  label: string;
+}
+
+interface Props {
+  links: SocialLink[];
+}
+
+const { links } = Astro.props;
+---
+
+<ul role="list">
+  {
+    links.map((link, index) => (
+      <li class:list={[index > 0 && 'mt-4', 'flex']}>
+        <a
+          href={link.href}
+          class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500"
+          >
+            <title>{SOCIAL_ICONS[link.icon].title}</title>
+            <path d={SOCIAL_ICONS[link.icon].path} />
+          </svg>
+          <span class="ml-4">{link.label}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

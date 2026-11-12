@@ -1,0 +1,12 @@
+---
+/** On a link post, the line that points at the article being commented on. */
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<p>
+  Check out the <a href={href} target="_blank" rel="noopener">original article</a>.
+</p>
