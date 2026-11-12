@@ -25,6 +25,8 @@ Work lands as small PRs into the `astro` branch. `main` keeps serving Gatsby unt
 
 Checked against timbroder.com and this repo on 2026-11-12.
 
+A new post went live later that day. The figures below are from the first check; the baseline committed in `tests/baseline/` (771 URLs, 519 posts) is the source of truth for counts.
+
 ### URLs
 
 The live sitemap lists 768 URLs.
@@ -124,9 +126,24 @@ Say so if any of these is wrong.
 - The web app manifest stays, with the name fixed to "Tim Broder .com" and the avatar as its icon. Today it says "Gatsby Starter Blog".
 - Before using the placeholder for a dead remote image, I try the Internet Archive's copy.
 - Legacy frontmatter fields (`wordpress_id`, `dsq_thread_id`, `author`, `comments`) stay in the old posts untouched.
-- Pagination stays at 20 posts per page.
+- Lists are split into real pages of 20 posts. On the live site every page of a list shows the whole list (see below).
+- The two posts with an empty title get one. `heymamma-2` gets the title already in its frontmatter, quoted so YAML reads it. `games-i-was-addicted-to-in-2014` gets "Games I Was Addicted To in 2014".
 - Tags, categories, link posts and the five markdown pages all stay.
 - The About page stays a hand-built page.
+
+### Live-site quirks and what the new site does
+
+The baseline capture in stage 1 found these. Each one becomes an expected difference in the tests.
+
+| On the live site | On the new site |
+|---|---|
+| Every page of a list shows the whole list: `/page/2/` has the same 516 cards as `/`. Tag and category pages do the same. | Each page shows its own 20 posts. The page URLs and page counts stay the same. |
+| Three posts are missing from every list and from the feed, though their pages exist. They lack `layout:` or `date:`. | They appear in lists and in the feed like any other post. |
+| Two posts have an empty title; one page title reads "null". | Both get a title. |
+| `/tag//` exists, titled "Tag: null", because two posts have an empty tag. | Empty tags are ignored and the page is gone. |
+| `/tag/apps/` has no cards, because its only post is one of the three unlisted ones. | It shows that post. |
+| The 404 page highlights "Posts" in the navigation. | Nothing is highlighted. |
+| Some card descriptions show raw markdown where a post starts with an image. | Descriptions are plain text. |
 
 ## 3. What the old plans got wrong
 
@@ -202,13 +219,13 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 | # | Requirement | Test | Layer |
 |---|---|---|---|
-| R1 | Every live URL still works | Each of the 768 baseline URLs is either a built page or a redirect whose target is a built page | Build output |
+| R1 | Every live URL still works | Each baseline URL is either a built page or a redirect whose target is a built page. The one exception is `/tag//`. | Build output |
 | R2 | Old URLs redirect | Every redirect returns 301 to the right place, tried both raw and percent-encoded: the 83 re-slugged posts, the two pinned posts and `/using-typescript/` | Deploy preview |
 | R3 | No redirect chains or loops | Every redirect target is a real page, never another redirect | Build output |
-| R4 | Tag and category URLs unchanged | All 217 baseline taxonomy URLs exist; unit tests cover `kebabCase` edge cases | Unit, build output |
-| R5 | List pages show the same posts in the same order | Titles on every home, tag and category page equal the baseline | Build output |
+| R4 | Tag and category URLs unchanged | Every baseline tag and category URL exists, apart from `/tag//`; unit tests cover `kebabCase` edge cases | Unit, build output |
+| R5 | Lists show the same posts in the same order | For every list, its pages joined together equal the baseline's order for that list, and no page has more than 20 posts | Build output |
 | R6 | Post content renders the same | For all 518 posts: body text, headings, link targets, and counts of images, code blocks and embeds equal the baseline | Build output |
-| R7 | Pages look the same | Screenshots of each page type at desktop and phone width match live screenshots, with code blocks masked. Page types: home, paged list, post, link post, post with an image, post with an embedded video, tag, category, About, markdown page, 404. | Browser |
+| R7 | Pages look the same | Screenshots of each page type at desktop and phone width match live screenshots, with code blocks masked. List pages are compared from the top down to the first few cards, since the live ones are far longer. Page types: home, paged list, post, link post, post with an image, post with an embedded video, tag, category, About, markdown page, 404. | Browser |
 | R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots | Browser |
 | R9 | Feed is unchanged for subscribers | Valid RSS; one item per post; every baseline guid still present; full content in every item; no relative URLs | Build output |
 | R10 | Feed is reachable | `/feed` and `/feed/` return 200 with an RSS content type | Deploy preview |
@@ -241,7 +258,7 @@ Tests R6 and R11 allow these, and nothing else. They live in one file with a rea
 - Image sources, which become local.
 - Code block markup.
 - The broken "original article" link on the two `link: None` posts.
-- Three extra feed items.
+- Everything in "Live-site quirks and what the new site does" in section 2, which includes three extra feed items.
 
 ## 6. Test layers and CI
 
@@ -261,7 +278,8 @@ Stage 1 captures the baseline from the live site with a script that can be rerun
 - `pages.json`: for every page and the 404 page, its title, meta tags, head links, structured data, heading, highlighted nav item, footer text, body text, links, image sources and counts of code blocks and embeds. For posts it also records the date, tags, category and "original article" link.
 - `lists.json`: for every list page, its headline and each card's title, date, category, description, link and call to action, in order.
 - `feed.json`: every feed item's guid, link and title.
-- Screenshots of each page type at 1280 and 390 pixels wide.
+
+Screenshots of each page type at 1280 and 390 pixels wide are captured in stage 4, alongside the visual tests that use them.
 
 The crawl is throttled and retries, because the live site occasionally returns a transient Netlify error.
 
@@ -325,18 +343,22 @@ Each story file sits next to its component, as `PostCard.stories.ts` beside `Pos
 
 Each stage is one PR into `astro` unless it grows too large to review. A stage is done when its tests pass in CI.
 
+Tim merges each PR. Until a stage is merged, the next stage's branch is stacked on top of it.
+
 ### Stage 0: Plan
 
 This document.
 
 ### Stage 1: Baseline and test harness
 
+Done in #133.
+
 - **Work:**
   - Write the baseline capture script and commit its output.
-  - Set up Vitest and Playwright.
+  - Set up Vitest.
   - Add the CI workflow with the `changes`, `test` and `gate` jobs.
-- **Tests added:** baseline self-checks: 768 URLs, 518 posts, every page has a title and canonical tag.
-- **Done when:** CI is green on a code PR and skips on a content-only PR.
+- **Tests added:** unit tests for the page extractor and the change classifier, and self-checks on the baseline.
+- **Done when:** CI is green on a code PR and skips on a content-only PR. Both were confirmed, the second with a throwaway PR (#134).
 
 ### Stage 2: Astro skeleton and proofs
 
@@ -367,6 +389,7 @@ This document.
 
 - **Work:**
   - Tailwind.
+  - Playwright, and screenshots of the live site taken in the pinned container.
   - The layout and every component, each with stories.
   - Styled pages, including About and the 404 page.
   - Code highlighting.
@@ -459,7 +482,8 @@ These are assumptions I have not run. Stage 2 settles each one before anything i
 
 | When | What |
 |---|---|
-| Stage 2 | If P8 fails: remove the Gatsby plugin in Netlify, or tell me how you want to handle it |
+| Every stage | Merge the stage's PR into `astro` |
+| Stage 2 | Merge `main` into `astro`, so the branch has the newest posts. Then, if P8 fails: remove the Gatsby plugin in Netlify, or tell me how you want to handle it. |
 | Stage 3 | Review and edit `slug-cleanup.csv`, the 83 old URLs and proposed new slugs |
 | Stage 4 | Approve the code block stories in Astrobook |
 | Stage 5 | Review the placeholder image and the list of remote images that could not be recovered |
