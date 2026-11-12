@@ -173,7 +173,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 ### Content model
 
-5. **Content stays in `content/blog/` and `content/pages/`.** Astro's loader can read from there. This keeps history intact, lets new posts on `main` merge cleanly into `astro`, and makes "content only" easy to define for CI.
+5. **Content stays in `content/blog/` and `content/pages/`.** Astro's loader can read from there, though only `.md` files, so the `.markdown` files were renamed. This keeps history intact, lets new posts on `main` merge cleanly into `astro`, and makes "content only" easy to define for CI.
 6. **One `Post` shape with two loaders behind it.** A markdown loader and a Contentful loader both produce `Post`. Pages, feeds and tests only see `Post`, so nothing downstream knows where a post came from.
 7. **A strict schema for posts.** A post needs a title, a date and a clean slug. `link` is a valid URL or absent; empty strings and `None` become absent. Tags default to an empty list. `ai_assisted`, `ai_model` and the legacy fields are accepted and passed through.
 8. **Descriptions follow today's rule:** `description:` from frontmatter, else the first 512 characters of text.
@@ -183,7 +183,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 9. **URL rules are small pure functions, using UTC.** That makes them easy to test against all 518 live URLs.
 10. **Clean slugs live in frontmatter.** Each re-slugged post gets `slug: new-slug` and `redirect_from: [old URL]`. New posts must have a clean slug, so untidy URLs cannot come back.
 11. **Slug cleanup goes through a review file.** A script writes `slug-cleanup.csv` with each old URL and proposed new slug. Tim edits it, and a second script applies it to the frontmatter.
-12. **Redirects are a generated Netlify `_redirects` file.** The build collects every `redirect_from` plus a short fixed list. Astro's own `redirects` setting is not used, because without an adapter it writes HTML refresh pages, not real 301s.
+12. **Redirects are a generated Netlify `_redirects` file.** The build collects every `redirect_from` plus a short fixed list, and writes each old URL in the forms Netlify needs (see section 10). Astro's own `redirects` setting is not used, because without an adapter it writes HTML refresh pages, not real 301s.
 13. **The two formerly undated posts get a wildcard redirect.** `/:year/:month/fussy-coffee/` goes to `/2015/07/fussy-coffee/`, which covers every month they have lived at.
 14. **Tag and category slugs use lodash `kebabCase` itself.** Reimplementing it would change URLs.
 15. **Paged list URLs are built by hand as `/page/N/`.** Astro's `paginate()` would produce `/N/`.
@@ -191,7 +191,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 ### Rendering
 
-17. **Markdown processor is chosen by evidence.** Astro 7's default is Sätteri, a new Rust processor. The older remark pipeline is still available and is closer to what Gatsby uses. Stage 2 runs both over all 518 posts and compares the output to the live site; Sätteri is used unless it loses.
+17. **The markdown processor is Sätteri, Astro 7's default.** Stage 2 ran it and the older remark pipeline over every post and compared the output to the live site. They tied, so the default stays. Smart punctuation is off, because the Gatsby site did not convert quotes or dashes.
 18. **Code highlighting uses Shiki with the `monokai` theme and CSS line numbers.** This is the closest match to today's Prism Okaidia. Fence language names are fixed in the content.
 19. **Images are served from stable URLs under `/images/`, not through Astro's image pipeline.** The feed carries full post HTML and needs image URLs that never change, and 20 posts already use this form. The cost is no automatic resizing; images are compressed once when they are added.
 20. **Image files move to `public/images/`.** Downloaded remote images go in `public/images/remote/`. A file, `content/image-sources.json`, records each original URL, its local path and whether it came from the original host, the Internet Archive or the placeholder.
@@ -362,12 +362,14 @@ Done in #133.
 
 ### Stage 2: Astro skeleton and proofs
 
+Done in #135.
+
 - **Work:**
   - Replace Gatsby with a bare Astro 7 project on the branch.
   - Remove Gatsby files, the Docker files and unused dependencies. `podcasts.py` and `CLAUDE.md` stay as they are.
   - Update the README's setup and commands for Astro. Its Contentful and AI-assisted writing sections stay.
   - Point Netlify's build at `dist/`.
-  - Open the draft cutover PR from `astro` to `main` so the branch gets a deploy preview.
+  - Open a draft, preview-only PR into `main` (#136) so the branch gets a deploy preview. Netlify only builds previews for PRs into `main`.
   - Work through every item in section 10 and record each answer in this file.
 - **Tests added:** the smoke job, against a placeholder page.
 - **Done when:** the deploy preview builds, and every item in section 10 has an answer.
@@ -464,26 +466,40 @@ Netlify keeps every deploy. To roll back, publish the last Gatsby deploy from th
 
 ## 10. Things to prove early
 
-These are assumptions I have not run. Stage 2 settles each one before anything is built on it.
+These were the assumptions the plan rested on. Stage 2 settled all nine (#135, with the Netlify ones run on the preview in #136).
 
-| # | Question | If the answer is no |
+| # | Question | Answer |
 |---|---|---|
-| P1 | Does Astro's loader read `.markdown` files as markdown? | Rename the 492 files to `.md` in one mechanical commit |
-| P2 | Does Sätteri render the raw HTML, Liquid leftovers and odd fences the way the live site does? | Use the remark pipeline |
-| P3 | Can an endpoint get each post's rendered HTML for the feed? | Render through Astro's container API |
-| P4 | Does an endpoint file build to `/feed` with no extension, and does a Netlify header set its content type? | Build `feed.xml` and rewrite `/feed` to it on Netlify |
-| P5 | Do Netlify redirects match old URLs containing `\|`, `&`, `’`, commas and colons? | Emit both raw and encoded rules, or use an edge function |
-| P6 | Does Astrobook 0.13 run on Astro 7 with Tailwind 4? | Pin working versions, or use the hand-written fallback |
-| P7 | Does Tailwind 4 reproduce today's styles from the existing config? | Stay on Tailwind 3 through PostCSS |
-| P8 | Can the branch build on Netlify while the site is still set up for Gatsby? | Set the skip-Gatsby-plugin variable in the branch's `netlify.toml`, or remove the plugin early |
-| P9 | Does Astro 7's stricter HTML parsing or its whitespace stripping affect any template? | Fix the template; the content and screenshot tests will show it |
+| P1 | Does Astro's loader read `.markdown` files as markdown? | **No**, only `.md`. The 497 `.markdown` files were renamed to `.md` in one mechanical commit. |
+| P2 | Does Sätteri render the content the way the live site does? | **Yes.** Of 524 post and page bodies, 472 match the live site exactly. The remark pipeline gives the same result apart from one malformed file, so Sätteri stays. Most of the 52 differences are places where the live site shows raw markdown and the new build renders it; stage 5 goes through them. |
+| P3 | Can an endpoint get each post's rendered HTML for the feed? | **Yes**, through `entry.rendered.html`. Images referenced by relative path come out as placeholders, which confirms decision 19. |
+| P4 | Does an endpoint file build to `/feed` with no extension, and does a Netlify header set its content type? | **Yes.** `/feed` and `/feed/` return 200 as `application/rss+xml`. |
+| P5 | Do Netlify redirects match old URLs containing odd characters? | **Yes, with care.** Netlify compares a rule with the request exactly as sent. See "How Netlify matches redirects" below. |
+| P6 | Does Astrobook 0.13 run on Astro 7 with Tailwind 4? | **Yes.** Each story also gets a bare page at `/astrobook/stories/<component>/<story>/`, which the screenshot tests will use. |
+| P7 | Does Tailwind 4 reproduce today's styles from the existing config? | **Yes so far.** The font scale and typography settings load unchanged. One `@screen lg` rule, which Tailwind 4 no longer understands, became a plain media query. Stage 4's screenshots are the full check. |
+| P8 | Can the branch build on Netlify while the site is still set up for Gatsby? | **Yes**, with no workaround. The preview builds in about 30 seconds. |
+| P9 | Does Astro 7's stricter HTML parsing or its whitespace stripping affect any template? | **Not so far.** All pages build and post bodies are unaffected. Templates are checked as they are written in stage 4. |
+
+### How Netlify matches redirects
+
+Found by requesting test rules on the deploy preview.
+
+- **A rule matches only the exact characters of the request.** Netlify does not treat `|` and `%7C` as the same thing.
+- **Characters a browser always encodes** (`|`, curly quotes, dashes) only match a rule written percent-encoded.
+- **Characters a browser sends as they are** (`&`, `,`, `:`, `'`) match a rule written raw. A client that encodes them anyway only matches a rule written encoded.
+- **Rules are case-sensitive.** A rule with capitals does not match the lowercased request, and Netlify's own lowercase redirect only applies to real files.
+- **A trailing slash on the request is optional.**
+- **Placeholders work**: `/:year/:month/slug/` matches any year and month.
+
+So each old URL gets a rule in the form a browser sends and a rule fully percent-encoded. An old URL with capitals also gets both in lowercase, since visitors have been landing on the lowercase form.
+
+One more thing the preview showed: a new deploy reaches Netlify's servers over a few seconds, and in that window some requests still get the old answer. The smoke job waits for six good responses in a row before it starts.
 
 ## 11. What I need from Tim
 
 | When | What |
 |---|---|
 | Every stage | Merge the stage's PR into `astro` |
-| Stage 2 | Merge `main` into `astro`, so the branch has the newest posts. Then, if P8 fails: remove the Gatsby plugin in Netlify, or tell me how you want to handle it. |
 | Stage 3 | Review and edit `slug-cleanup.csv`, the 83 old URLs and proposed new slugs |
 | Stage 4 | Approve the code block stories in Astrobook |
 | Stage 5 | Review the placeholder image and the list of remote images that could not be recovered |
