@@ -5,8 +5,7 @@
  */
 import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
-import { livePages } from '../lib/live.ts';
-import { builtPages, exists, newUrlOf, readHtml } from '../lib/dist.ts';
+import { builtPages, exists, readHtml, readPage } from '../lib/dist.ts';
 import { loadImageSources, PLACEHOLDER } from '../lib/image-sources.ts';
 
 const pages = [...builtPages()].filter((path) => !path.startsWith('/astrobook/'));
@@ -57,12 +56,15 @@ describe('R13: local images load', () => {
 });
 
 describe('R14: the old posts show no image from another host', () => {
-  // Every post that existed when the site moved. A post written since may
-  // show a remote image; nothing stops that.
-  const migrated = livePages()
-    .filter((page) => page.post)
-    .map((page) => newUrlOf(page.url))
-    .filter((url): url is string => url !== null);
+  // Every post from before the site moved, on 2026-11-13: their remote
+  // images were all brought into the site. A post written since may show a
+  // remote image; nothing stops that.
+  const MOVED = '2026-11-14';
+  const migrated = pages.filter((page) => {
+    if (!/^\/\d{4}\/\d{2}\/[^/]+\/$/.test(page)) return false;
+    const day = readPage(page).post?.dateTime;
+    return Boolean(day) && day! < MOVED;
+  });
 
   it('covers the migrated posts', () => {
     expect(migrated.length).toBeGreaterThan(500);

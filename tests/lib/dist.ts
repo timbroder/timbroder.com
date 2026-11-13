@@ -54,7 +54,7 @@ export function readHtml(url: string): string {
 
 const cache = new Map<string, PageFacts>();
 
-/** The same facts the baseline holds, read from the built page. */
+/** The facts of a built page: its head, navigation, and what kind of page it is. */
 export function readPage(url: string): PageFacts {
   let facts = cache.get(url);
   if (!facts) {
@@ -118,11 +118,11 @@ export function resolveRedirect(request: string): RedirectRule | null {
 export const asBrowserSends = (path: string) => encodeURI(path);
 
 /**
- * Where a URL from the live site ends up on the new one: the same page, the
- * target of its redirect, or null if it is gone.
+ * Where a request for `path` ends up: the page itself, the page its
+ * redirect leads to, or null if it goes nowhere.
  */
-export function newUrlOf(liveUrl: string): string | null {
-  if (builtPages().has(liveUrl)) return liveUrl;
-  const rule = resolveRedirect(asBrowserSends(liveUrl));
+export function destinationOf(path: string): string | null {
+  if (builtPages().has(path)) return path;
+  const rule = resolveRedirect(asBrowserSends(path));
   return rule && builtPages().has(rule.to) ? rule.to : null;
 }
