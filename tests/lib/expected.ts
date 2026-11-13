@@ -33,23 +33,6 @@ export const ADDED_URL_PREFIXES: Record<string, string> = {
 };
 
 /**
- * Links inside post bodies that are known to be broken for now.
- *
- * TODO(stage 5): remove. They are broken on the live site too:
- * - /images/...: 20 posts point at image files that are not served yet.
- * - /wp-...: uploads from the WordPress days.
- * - ....html and ....html/...: links to this site's posts, and to their
- *   image attachment pages, in the form the WordPress site used.
- * - one link that was cut off mid-URL when the post was imported.
- */
-export const KNOWN_BROKEN_LINKS: RegExp[] = [
-  /^\/images\//,
-  /^\/wp-/,
-  /\.html(\/.*)?$/,
-  /^\/2011\/01\/getting-it-onto-the-$/,
-];
-
-/**
  * Lists that now show more posts than on the live site.
  *
  * The live site counted a term's posts across every spelling ("jira" and
@@ -107,26 +90,17 @@ export const HAD_EMPTY_TAGS = [
 ];
 
 /**
- * Cards whose summary differs from the live site, because the post's body
- * renders differently. In most of them the live site shows raw markdown
- * ("[Facebook Connect](http://...)", "**queue") that is now rendered; in the
- * rest a few characters of difference move the point where the summary is
- * cut.
+ * Cards whose summary is cut a word earlier or later than on the live site,
+ * though the post reads the same. The two parsers put a space more or less
+ * between two blocks, and a summary is cut by counting characters.
  *
- * TODO(stage 5): go through these with the body comparison and keep only the
- * ones that are improvements.
+ * A summary may also differ wherever the post's own text is meant to
+ * differ: see NOW_RENDERED and REPAIRED_BODIES in expected-content.ts.
  */
 export const SUMMARY_DIFFERS = [
   '/2007/09/google-acquires-postini/',
   '/2007/10/google-overheard-in-office/',
-  '/2008/09/digg-and-facebook-heading-to-future-of/',
   '/2008/09/i-just-won-50000000-gbp-from-google-uk/',
-  '/2009/11/online-advertising-moving-to-your-car/',
-  '/2011/04/new-digg-reverse-paywall-coming/',
-  '/2013/10/why-android-first-is-a-myth-steve-cheney-technology-business-strategy/',
-  '/2013/11/weather-notifications-on-lifehacker/',
-  '/2014/03/avspeechsynthesizers-queue-doesnt-work/',
-  '/2015/01/equality-in-the-apple-blogging-scene/',
 ];
 
 /** The 404 page: the live site highlights "Posts" in the navigation there. */

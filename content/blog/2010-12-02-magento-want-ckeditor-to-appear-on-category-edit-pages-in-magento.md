@@ -26,7 +26,7 @@ However, the way magento ajaxes the form fields into view on the category pages 
 
 This snippet should help anyone trying to get it to work in ```app/design/adminhtml/default/default/template/fontis/wysiwyg/wysiwyg.phtml```
 
-```PHP
+```php
 {% verbatim %}
 <?php } else if($editorType == 'ckeditor') { ?>
 

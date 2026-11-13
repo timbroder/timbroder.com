@@ -31,6 +31,15 @@ describe('plainText', () => {
     );
   });
 
+  it('treats an old image copied from another host as it did when it was remote', () => {
+    expect(
+      plainText('<p><img src="/images/remote/2008-06-20-social-badges/picasa.png" alt="Picasa"> x</p>'),
+    ).toBe('Picasa x');
+    expect(plainText('<p><img src="/images/missing-image.svg" alt="A chart"> x</p>')).toBe(
+      'A chart x',
+    );
+  });
+
   it('counts headings, table cells and line breaks as separators', () => {
     expect(plainText('<h2>Title</h2>\n<p>a<br>b</p>')).toBe('Title a b');
     expect(plainText('<table><tr><td>x</td><td>y</td></tr></table>')).toBe('x y');

@@ -37,16 +37,16 @@ This has been working for me and I've already be able to re-find things that hel
 
 **Setup**
 
-1. Spin up an instance of [stack2rss](https://github.com/nathan-osman/stack2rss "stack2rss"). There is a [demo](http://stack2rss.quickmediasolutions.com/ "demo") available, but I've found it tends to go down. I've submitted a [PR](https://github.com/nathan-osman/stack2rss/pull/3 "PR") so you can 1 click install to Heroku. Click this [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nathan-osman/stack2rss/)
+1. Spin up an instance of [stack2rss](https://github.com/nathan-osman/stack2rss "stack2rss"). There is a [demo](http://stack2rss.quickmediasolutions.com/ "demo") available, but I've found it tends to go down. I've submitted a [PR](https://github.com/nathan-osman/stack2rss/pull/3 "PR") so you can 1 click install to Heroku. Click this [![Deploy](/images/remote/2017-01-09-remembering-all-those-helpful-stackoverflow-posts/button.svg)](https://heroku.com/deploy?template=https://github.com/nathan-osman/stack2rss/)
 2. Get the url for your starred feeds: ```https://[YOUR-HEROKU-APP].herokuapp.com/2.2/users/[YOUR-SO-ID]/favorites?order=desc&sort=activity&site=stackoverflow```
 3. Login or Register with [Zapier](https://zapier.com/ "Zapier")
 4. Create a 2 step zap with the trigger being ```RSS by Zapier``` and Pinboard's ```create bookmark``` action
 5. Set each up as follows 
 
-![](https://c5.staticflickr.com/1/622/32066204692_74e32cdde5_z.jpg)
+![](/images/remote/2017-01-09-remembering-all-those-helpful-stackoverflow-posts/32066204692_74e32cdde5_z.jpg)
 
-![](https://c1.staticflickr.com/1/515/32066204992_a2aa11295d_z.jpg)
+![](/images/remote/2017-01-09-remembering-all-those-helpful-stackoverflow-posts/32066204992_a2aa11295d_z.jpg)
 
-![](https://c5.staticflickr.com/1/571/32176780436_a1fec1e26d_z.jpg)
+![](/images/remote/2017-01-09-remembering-all-those-helpful-stackoverflow-posts/32176780436_a1fec1e26d_z.jpg)
 
 This has already saved me a lot of time. If you'd like help setting up, leave me a comment below

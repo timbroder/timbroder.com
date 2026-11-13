@@ -5,7 +5,7 @@ date: 2015-07-21 11:03
 link: http://www.samuelstrickland.me/blog/2015/7/ios-games-you-need-to-play
 ---
 
-I wrote about my [favorite games of 2014](http://timbroder.com/2015/03/games-i-was-addicted-to-in-2014.html). [Sam](http://www.samuelstrickland.me/blog/2015/7/ios-games-you-need-to-play?utm_content=buffer125bf&utm_medium=social&utm_source=twitter.com&u) posted his list. You should take a look. 
+I wrote about my [favorite games of 2014](/2015/03/games-i-was-addicted-to-in-2014/). [Sam](http://www.samuelstrickland.me/blog/2015/7/ios-games-you-need-to-play?utm_content=buffer125bf&utm_medium=social&utm_source=twitter.com&u) posted his list. You should take a look. 
 
 > [Sword & Sworcery](http://apple.co/1MnhKiF)
 > This is one of my favorite games of all time. It tells a tragic and beautiful story full of fantastical mystery. The world is unlike anything else; creating an amazing blend between high fantasy, music culture, and otherworldly charm. Everything reacts to your touch. It makes you feel like you are a guide and a participant in this story, following the Sythian through her journey as a companion rather than an observer.

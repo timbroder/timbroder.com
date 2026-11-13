@@ -13,4 +13,4 @@ tags:
 - engagement
 ---
 
-![](https://scontent-lga1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/58397_674436202390_998421_n.jpg?oh=8aeee1c0251130261bf3083400d40faa&oe=56500E63)
+![](/images/missing-image.svg)

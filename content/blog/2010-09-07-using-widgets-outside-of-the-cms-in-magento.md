@@ -32,7 +32,7 @@ to add a type filter, a title filter, and a sorter.
 
 
 
-```PHP 
+```php
 class Mage_Widget_Model_Mysql4_Widget_Instance_Collection extends Mage_Core_Model_Mysql4_Collection_Abstract
 {
     /**
@@ -89,7 +89,7 @@ Now we should be able to query any widgets from any template in our system:
 
 
 
-```PHP
+```php
 < ?php 
 $wids = Mage::getModel('widget/widget_instance')
 	->getCollection()

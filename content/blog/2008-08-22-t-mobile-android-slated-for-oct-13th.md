@@ -22,6 +22,7 @@ Highlights
   * 2 year contract required
   * $35 unlimited data &amp; messaging plan
   * $25 plan including 400 messages
+
 Phone Features
 
   * Touch Screen

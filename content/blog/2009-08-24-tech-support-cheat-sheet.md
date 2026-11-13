@@ -13,4 +13,4 @@ category: Code
 
 [Tech Support Cheat Sheet](http://xkcd.com/627/): !['Hey Megan, it's your
 father. How do I print out a
-flowchart?'](https://imgs.xkcd.com/comics/tech_support_cheat_sheet.png)
+flowchart?'](/images/remote/2009-08-24-tech-support-cheat-sheet/tech_support_cheat_sheet.png)

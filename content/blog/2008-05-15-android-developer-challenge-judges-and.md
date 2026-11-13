@@ -27,7 +27,7 @@ about that product and where you can buy it right from your phone (amazon,
 ebay, etc). Do yourself a favor and watch the
 [video](https://scan.jsharkey.org/).  
   
-![](https://scan.jsharkey.org/vlcsnap-7082040.png.jpg)  
+![](/images/remote/2008-05-15-android-developer-challenge-judges-and/vlcsnap-7082040.png.jpg)  
   
 I'll be going through that slide deck and will be posting some more of my
 favorites. Anyone else hope the HTC Diamond can run Android out of the box?

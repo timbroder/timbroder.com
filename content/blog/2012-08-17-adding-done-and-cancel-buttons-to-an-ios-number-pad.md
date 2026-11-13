@@ -124,5 +124,4 @@ DoneCancelNumberPadToolbar.m
 ``` 
 
 Special thanks to [akozl
-ik](http://www.reddit.com/r/iOSProgramming/comments/ydrzv/adding_done_and_canc
-el_buttons_to_an_ios_number/c5v4rpt) for the help with delegates.
+ik](http://www.reddit.com/r/iOSProgramming/comments/ydrzv/adding_done_and_cancel_buttons_to_an_ios_number/c5v4rpt) for the help with delegates.

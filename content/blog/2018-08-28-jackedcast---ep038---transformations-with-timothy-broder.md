@@ -23,7 +23,7 @@ redirect_from:
 - Tim’s [Gummy Bears](https://www.amazon.com/gp/product/B01AP9DWK0/ref=oh_aui_search_detailpage?psc=1&tag=nyen0e-20&ie=UTF8) 
 - [FatHead Pizza](https://www.ditchthecarbs.com/fat-head-pizza/) 
 - [Keto Chow](http://www.ketochow.xyz/) 
-- [Tim’s favorite recipes](http://www.timbroder.com/2018/08/My-favorite-Keto-recipes.html) 
+- [Tim’s favorite recipes](/2018/08/my-favorite-keto-recipes/) 
 - Tim’s favorite recipe sites 
     - [Keto Connect](https://www.ketoconnect.net/recipes/) 
     - [Ruled.me](https://www.ruled.me/keto-recipes/) 

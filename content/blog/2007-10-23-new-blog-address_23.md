@@ -18,7 +18,7 @@ redirect_from:
 After doing quite a bit of reading over at Yaro Starak's [Entrepreneur's
 Journey](http://www.entrepreneurs-journey.com/) and Darren Rowse's
 [ProBlogger.net](http://problogger.net) I've decided to move gPowered onto my
-domain at <http://blog.gpowered.net/>.  
+domain at [http://blog.gpowered.net/](/).  
   
 Over the coming days/weeks I'll be updating the template on the rest of the
 domain to coincide more with the blog, as well as adding the top menu to the

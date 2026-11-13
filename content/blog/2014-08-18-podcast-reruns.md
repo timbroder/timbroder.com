@@ -19,7 +19,7 @@ was able to get through all of [Developing
 Perspective](http://developingperspective.com/) (they are short) and was
 working on [Build and Analyze](http://5by5.tv/buildanalyze).  I’m halfway-ish
 through B&amp;A, but my listening has died off in leu of new episodes of
-[other shows](http://timbroder.com/podcasts).
+[other shows](/podcasts/).
 
 I’ve missed listening to it.  The reason it dropped of is playlist related.
 Everything I listen to is in one playlist that I prune from time to time. I
@@ -60,8 +60,7 @@ your pod catcher.
 ![2014 07 29 1602](/images/2014/07/2014-07-29_16021.png)
 
 I’ve been testing this for a few weeks now and it’s working great! Another
-good use would be [Overcast’s](https://itunes.apple.com/us/app/overcast-
-podcast-player/id888422857?mt=8&at=11laRZ&ct=pro) “Retired Greats” Section:
+good use would be [Overcast’s](https://itunes.apple.com/us/app/overcast-podcast-player/id888422857?mt=8&at=11laRZ&ct=pro) “Retired Greats” Section:
 
  ![Overcast1](/images/2014/08/overcast1.jpg)
 

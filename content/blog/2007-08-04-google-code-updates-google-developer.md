@@ -22,7 +22,7 @@ team](http://www.rpicrew.com) can use. We have a shared google calendar that
 some of us use to keep track of races, meetings, etc. This gadget pulls and
 formats it nicely for the google IG or desktop.  
   
-[![Add to Google](https://buttons.googlesyndication.com/fusion/add.gif)](http://fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file/109141966999504040851/RPICrewSchedule.xml)  
+[![Add to Google](/images/remote/2007-08-04-google-code-updates-google-developer/add.gif)](http://fusion.google.com/add?moduleurl=http%3A//hosting.gmodules.com/ig/gadgets/file/109141966999504040851/RPICrewSchedule.xml)  
   
 Javascript code for the gadget:  
 

@@ -68,6 +68,7 @@ through:
 1. Double check it’s there
 	```ls -la```
 1. Mount your NAS. This is the IP of it in my house. This should be the IP you use to get to the admin console. My Admin is: http://192.168.1.205:5000
+
 You’ll also need to know what share your Time Machine back is in. For me, it has it’s own drive, represented by “timstimemachine”. I’ll go into the details of my NAS setup in a future post
 	```mount -t afp afp://admin:[password]@192.168.1.205/timstimemachine synology```
 1. Check you see files in the synology folder

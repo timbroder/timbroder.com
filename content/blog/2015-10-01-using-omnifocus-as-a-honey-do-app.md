@@ -29,19 +29,19 @@ How to set it up:
 	
 	Do this: OmniFocus; Create Task
 	
-	![](https://farm1.staticflickr.com/719/21681067339_db906f98a5_o_d.png)
+	![](/images/missing-image.svg)
 	
 1. Make sure your Wunderlist and Omnifocus accounts are set up
 
-	![](https://farm6.staticflickr.com/5809/21679942520_236c324ea8_o_d.png)
+	![](/images/missing-image.svg)
 	
 1. Create a shared list in Wunderlist and add someone to it
 
-	![](https://farm1.staticflickr.com/709/21680180338_e6cc122036_o_d.png)
+	![](/images/missing-image.svg)
 	
 1. Tell Zapier to only trigger on the list you just created. (We'll add advanced filtering later)
 
-	![](https://farm6.staticflickr.com/5691/21680197978_0b416d2374_o_d.png)
+	![](/images/missing-image.svg)
 	
 1. Create the OmniFocus task. I put "BroderFam" in front so I know where it came from, the name of the task, and the due date. (I manually set the due date when I process my OmniFocus inbox)
 
@@ -49,13 +49,13 @@ How to set it up:
 	
 	Keep note of the assignee ID on the first task that comes in, you'll want it for advanced filtering
 
-	![](https://farm1.staticflickr.com/590/21245318674_4fbd5a2429_o_d.png)
+	![](/images/missing-image.svg)
 	
 1. Test the Zap and turn it on. Now, any task that goes into your list will go to OmniFocus. But, we don't want that. We only want the ones that are assigned to me.
 
 	Now that you have the assigneeID from the first task, go back into the Zap and add a custom filter
 	
-	![](https://farm6.staticflickr.com/5658/21841976776_1f20a8cf24_o_d.png)
+	![](/images/missing-image.svg)
 	
 	Also go back in and remove AssigneeID from the body of the task
 	

@@ -21,7 +21,7 @@ to get to some unsupported feeds (Reader, Bookmarks, etc) The [Zend Gdata
 library](http://framework.zend.com/download/gdata) is required
 
 
-```PHP
+```php
 $show_list       = 'show-google-reader-sub-list';  //the hook in a page
 $login          = '';
 $pass          = '';

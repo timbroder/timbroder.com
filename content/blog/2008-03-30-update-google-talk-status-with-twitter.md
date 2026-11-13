@@ -23,8 +23,7 @@ this script runs, picks up your current twitter status, and if need be,
 updates your gChat status. I'm working on a service version of this where you
 could use gpowered.net to do all this for you. Stay tuned =) If I change the
 version of the script that I have running in the service, you will be able to
-see the source code that I have checked in [here](http://code.google.com/p/gpo
-wered/source/browse/trunk/gpowered/scripts/twitter2gChat.py)  
+see the source code that I have checked in [here](http://code.google.com/p/gpowered/source/browse/trunk/gpowered/scripts/twitter2gChat.py)  
   
 For those of you that don't know what Twitter is: _  
 "Twitter is a free social networking and micro-blogging service that allows

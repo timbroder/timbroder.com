@@ -17,4 +17,4 @@ tags:
 Warning: cursing
 
 
-[![](https://img.youtube.com/vi/FL7yD-0pqZg/0.jpg)](http://www.youtube.com/watch?v=FL7yD-0pqZg)
+[![](/images/remote/2010-06-28-iphone4-vs-htc-evo/0.jpg)](http://www.youtube.com/watch?v=FL7yD-0pqZg)

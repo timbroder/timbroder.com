@@ -14,4 +14,4 @@ tags:
 - Stan Lee
 ---
 
-[![](https://img.youtube.com/vi/6RX-gNBRgqc/0.jpg)](http://www.youtube.com/watch?v=6RX-gNBRgqc)
+[![](/images/remote/2010-08-05-fake-stan-lee-vs-comic-con-2009/0.jpg)](http://www.youtube.com/watch?v=6RX-gNBRgqc)

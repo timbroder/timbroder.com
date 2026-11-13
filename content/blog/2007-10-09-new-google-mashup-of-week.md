@@ -40,8 +40,7 @@ The Ugly: New York wasn't in the default list!
   
 Other contestants:  
   
-[Spell Boy Beta](http://www.google.com/ig/directory?hl=en&url=http://www.sends
-ome.org/spellboy/modules/google_gadget/index.xml)  
+[Spell Boy Beta](http://www.google.com/ig/directory?hl=en&url=http://www.sendsome.org/spellboy/modules/google_gadget/index.xml)  
 APIs: [Google Gadgets](www.google.com/apis/gadgets/)  
 Why it didn't make it: For on the web FireFox or Google toolbar can spell
 check all the forms for you, and if you're mail client can't spellcheck...

@@ -17,7 +17,7 @@ tags:
 
 By default, WordPress will link directly to an image in the category or post view.  In a project I was working on today I wanted to change that. On the category view I wanted the image just to link to the post, and in the post, I didn’t want a link at all. Useful trick I found below:
 
-```PHP
+```php
 function change_image_permalink($content){
 	$format = get_post_format();
  

@@ -18,7 +18,7 @@ We're ajaxing part of the Magento shopping cart so we need to modify/extend some
 
 app/code/local/Ai/Checkout/etc/config.xml:
 
-```XML
+```xml
 <config>
     <modules>
         <Ai_Checkout>
@@ -42,7 +42,7 @@ app/code/local/Ai/Checkout/etc/config.xml:
 
 app/code/local/Ai/Checkout/controllers/CartController.php:
 
-```PHP
+```php
 require_once Mage::getModuleDir('controllers', 'Mage_Checkout') . DS . 'CartController.php';
 
 class Ai_Checkout_CartController extends Mage_Checkout_CartController

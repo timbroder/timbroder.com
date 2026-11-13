@@ -23,7 +23,7 @@ few more features on the main Docs UI (bulk file upload, share files right
 from there instead of having to publish from within the document) and allow
 for any file type.  
   
-![](https://lh3.google.com/timothy.broder/RvHFzfREi8I/AAAAAAAAMSI/87CkGvBuJLI/s400/plat1.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
 Quick recap of the internal GDrive / Platypus client:  
 Backup: if your computer goes down, catches on fire, or just plain old BSOD's,
@@ -48,7 +48,7 @@ available
   
 **[Xdrive](http://www.xdrive.com)**  
   
-![](https://lh6.google.com/timothy.broder/RvHFzPREi4I/AAAAAAAAMRo/Z4qDjUvEaSM/s400/xdrive.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
 Pros
 
@@ -58,6 +58,7 @@ Pros
   * good upload speed
   * 5 gigs of space is free
   * you can make "shows" to show off your photos and/or videos
+
 Cons
 
   * Had to sign in with my AIM account to sign up for the service. Then directly after signing up I had to sign in with my AIM account again.
@@ -68,7 +69,7 @@ Cons
   
 **[Box.net](http://www.box.net)**  
   
-![](https://lh6.google.com/timothy.broder/RvHFzPREi5I/AAAAAAAAMRw/Z_IsNLXYdyw/s400/boxnet.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
 Pros
 
@@ -80,6 +81,7 @@ Pros
   * share folders as a link or an RSS feed
   * drag and drop file upload in a popup
   * there are groups in the paid account
+
 Cons
 
   * friends have to sign up to send files (I would rather be able to give them a public link to my folder)
@@ -89,13 +91,14 @@ Cons
   
 **[MoveDigital](www.movedigital.com/)**  
   
-![](https://lh3.google.com/timothy.broder/RvHFzfREi6I/AAAAAAAAMR4/JBWgcFd5K4k/s400/movedigital.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
 Pros
 
   * can upload a file from a URL
   * Uploads showed all the details: speed, percent done, etc
   * Has mobile phone access
+
 Cons
 
   * Expensive. The pricing starts at $10 for 1 gig and goes up exponentially
@@ -105,8 +108,7 @@ Cons
   
 **[Omnidrive](www.omnidrive.com/)**  
   
-![](https://lh3.google.com/timothy.broder/RvHFzfREi7I/AAAAAAAAMSA/P_Z24ztAeQ4/s
-400/omni.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
 
   * Sign up was very slow
@@ -118,6 +120,7 @@ Pros
   * Multiple file upload is very responsive and pretty
   * Can embed in blog
   * Has link to share with public
+
 Cons
 
   * Needed to install an ActiveX control (had to use IE, bummer) for multiple file upload.

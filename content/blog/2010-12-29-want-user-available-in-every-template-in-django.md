@@ -36,7 +36,7 @@ def user(request):
 
 user is now available in any template:
 
-```HTML
+```html
 {% verbatim %}
 {% if user.is_authenticated %}Do Something Special{% endif %}
 {% endverbatim %}

@@ -4,7 +4,7 @@ title: Jumping Ship on Basecamp 3
 date: 2016-03-29 18:06
 ---
 
-I love Basecamp. I've used it in [some shape](https://help.basecamp.com/basecamp "some form") or [form](https://basecamp.com/2 "form") for almost [7 years](https://www.alexanderinteractive.com/ "7 years"). I was [super excited](http://www.timbroder.com/2015/10/a-preview-of-what's-new-in-basecamp-3.html "super excited") for Basecamp 3. I wish I could say "It's not you, it's me" but that would be a lie. 
+I love Basecamp. I've used it in [some shape](https://help.basecamp.com/basecamp "some form") or [form](https://basecamp.com/2 "form") for almost [7 years](https://www.alexanderinteractive.com/ "7 years"). I was [super excited](/2015/10/a-preview-of-whats-new-in-basecamp-3/ "super excited") for Basecamp 3. I wish I could say "It's not you, it's me" but that would be a lie. 
 
 **Basecamp 3 is not ready**
 
@@ -28,7 +28,7 @@ Email in [isn’t on the roadmap](https://twitter.com/timothybroder/status/69678
 This functionality is partially there, hidden away in the "forward from client" section. When I found out it was missing I almost left, but I figured I could cobble something together with the API and Zapier...
 
 # API 
-I have a few main [use cases](https://github.com/basecamp/bcx-api/issues/196#issuecomment-181549941 "use cases") for an API. The primary one being a hacked together Email-in. The second is [replicating](http://www.timbroder.com/2015/10/how-to-sync-basecamp-todos-to-omnifocus-or-todoist-.html "replicating") Basecamp tasks in my todo app. (I happen to use Omnifocus.)
+I have a few main [use cases](https://github.com/basecamp/bcx-api/issues/196#issuecomment-181549941 "use cases") for an API. The primary one being a hacked together Email-in. The second is [replicating](/2015/10/how-to-sync-basecamp-todos-to-omnifocus-or-todoist/ "replicating") Basecamp tasks in my todo app. (I happen to use Omnifocus.)
 
 Lacking an API, or a roadmap for one, I grumbled. But, I figured I could wait and make my tasks by hand. After all, that's me wanting to work the way I like to. Manually entering emails into Basecamp, littering messages with "as communicated by," seemed a small price to pay.
 

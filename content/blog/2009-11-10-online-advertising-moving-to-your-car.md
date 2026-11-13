@@ -18,11 +18,9 @@ car?](https://www.alexanderinteractive.com/blog/2009/11/online-advertising-movin
 
 > With the release of [Android
 2.0](http://developer.android.com/sdk/android-2.0-highlights.html) on the
-Motorola [Droid](http://www.motorola.com/Consumers/US-EN/Consumer-Product-and-
-Services/Mobile-Phones/Motorola-DROID-US-EN), the Google Maps for Mobile
+Motorola [Droid](http://www.motorola.com/Consumers/US-EN/Consumer-Product-and-Services/Mobile-Phones/Motorola-DROID-US-EN), the Google Maps for Mobile
 application brings turn by turn GPS navigation (with voice) to your car. A
-great feature by far, it actually made Garmin and TomTom's stocks [tank](http:
-//www.wiseandroid.com/NewsItem.aspx?category=News&path=October&itemid=37), but
+great feature by far, it actually made Garmin and TomTom's stocks [tank](http://www.wiseandroid.com/NewsItem.aspx?category=News&path=October&itemid=37), but
 what does it mean for the future?
 
 Currently adwords is all over the web; on pages, in your mail, on maps. Now

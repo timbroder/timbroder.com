@@ -35,6 +35,7 @@ To get this working:
   3. Install [AlfredGist](https://github.com/phallstrom/AlfredGist)
   * Be sure to follow the setup [instructions](https://github.com/phallstrom/AlfredGist).
   * I prefer to have the ‘raw’ url returned from AlfredGist. (in the clipboard and opened)  
+
 To enable this, open functions.sh  
 Look for this line: ```gist_url=$(get_json_key “html_url" "$json")  ```
 Modify to: ```gist_url=$(get_json_key “raw_url” "$json")```

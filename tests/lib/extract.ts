@@ -53,6 +53,13 @@ export interface BodyFacts {
   images: { src: string; alt: string }[];
   /** Text of each code block, in order. */
   code: string[];
+  /**
+   * Where each paragraph, heading and list item starts and ends: one entry
+   * per block, in order, as "path|length|start of its text". The path names
+   * the lists and quotes the block sits in, for example "ul>li" or
+   * "blockquote>p". See `bodyBlocks`.
+   */
+  blocks: string[];
   counts: {
     iframes: number;
     objects: number;
@@ -140,6 +147,11 @@ export function blockText(
   $el: Sel,
   skip: readonly string[] = ['script', 'style', 'noscript'],
 ): string {
+  return normalizeText(rawBlockText($el, skip));
+}
+
+/** `blockText` before its whitespace is collapsed, for joining pieces. */
+function rawBlockText($el: Sel, skip: readonly string[]): string {
   let out = '';
   const walk = (node: AnyNode) => {
     if (node.type === 'text') {
@@ -154,7 +166,7 @@ export function blockText(
     if (block) out += ' ';
   };
   $el.each((_, node) => walk(node));
-  return normalizeText(out);
+  return out;
 }
 
 const HEAD_LINK_RELS = new Set(['alternate', 'me', 'prev', 'next', 'manifest']);
@@ -263,6 +275,89 @@ function imageSrc($img: Sel): string | null {
   return candidates.find((src) => src && !src.startsWith('data:')) ?? null;
 }
 
+/** Elements that hold blocks. Their own name becomes part of the path. */
+const CONTAINERS = new Set(['ul', 'ol', 'li', 'blockquote', 'dl', 'dd', 'table', 'tr', 'td', 'th']);
+/** Wrappers with no meaning of their own; blocks inside count as if unwrapped. */
+const TRANSPARENT = new Set(['div', 'section', 'article', 'tbody', 'thead', 'tfoot', 'center', 'figure']);
+const BLOCK_START = 24;
+
+/**
+ * The block structure of a post body.
+ *
+ * `text` proves the words are the same; this proves they are in the same
+ * paragraphs and list items. Each entry is "path|length|start", where path
+ * is the chain of lists and quotes around the block, ending in what the
+ * block is.
+ *
+ * Two things that make no visible difference are left out. A list item
+ * reads "ul>li" whether or not its text is wrapped in a paragraph (a
+ * "loose" list). A second paragraph in the same item reads "ul>li+".
+ * Code blocks are an entry with no text, since `code` compares theirs.
+ */
+export function bodyBlocks($: $, $body: Sel): string[] {
+  const blocks: string[] = [];
+  const add = (path: string, text: string) => {
+    const clean = normalizeText(text);
+    if (clean) blocks.push(`${path}|${clean.length}|${clean.slice(0, BLOCK_START)}`);
+  };
+
+  /**
+   * Walks the children of `node`, which lies in the container at `path`.
+   * `item` is shared with a wrapper <div> inside a list item, so a block in
+   * the wrapper still knows whether it is the first in its item.
+   */
+  const walk = (node: AnyNode, path: string[], item = { first: true }) => {
+    if (!('children' in node)) return;
+    const inItem = path.at(-1) === 'li';
+    /** The path of a block of this kind, lying directly in the container. */
+    const here = (kind: string) => {
+      if (!inItem) return [...path, kind].join('>');
+      const own = [...path.slice(0, -1), item.first ? 'li' : 'li+'];
+      item.first = false;
+      return (kind === 'p' || kind === 'text' ? own : [...own, kind]).join('>');
+    };
+    // Text and inline elements lying directly in the container form one block.
+    let loose = '';
+    const flush = () => {
+      if (normalizeText(loose)) add(here('text'), loose);
+      loose = '';
+    };
+
+    for (const child of node.children as AnyNode[]) {
+      if (child.type === 'text') {
+        loose += child.data;
+        continue;
+      }
+      if (!('name' in child)) continue;
+      const name = child.name;
+      if (name === 'script' || name === 'style' || name === 'noscript') continue;
+      if (name === 'pre') {
+        flush();
+        blocks.push(`${here('pre')}|0|`);
+      } else if (CONTAINERS.has(name)) {
+        flush();
+        if (inItem) item.first = false;
+        walk(child, [...path, name]);
+      } else if (TRANSPARENT.has(name)) {
+        flush();
+        walk(child, path, item);
+      } else if (name === 'br') {
+        loose += ' ';
+      } else if (BLOCK_TAGS.has(name)) {
+        flush();
+        add(here(name), blockText($(child), ['pre', 'script', 'style', 'noscript']));
+      } else {
+        // Not collapsed yet: a space at the edge of a link is part of the sentence.
+        loose += rawBlockText($(child), ['script', 'style', 'noscript']);
+      }
+    }
+    flush();
+  };
+
+  $body.each((_, node) => walk(node, []));
+  return blocks;
+}
+
 export function extractBody($: $, $body: Sel): BodyFacts {
   const code: string[] = [];
   $body.find('pre').each((_, el) => {
@@ -305,6 +400,7 @@ export function extractBody($: $, $body: Sel): BodyFacts {
     links,
     images,
     code,
+    blocks: bodyBlocks($, $body),
     counts,
   };
 }

@@ -146,7 +146,7 @@ This post and the Radar helped me collect my thoughts to post on [Stack](http://
  **Update 2014-09-11**
     
 
-[Vanyas](http://timbroder.com/2014/08/uitableviewcell-action-swiping-in-ios8-and-swift.html#comment-1565598353) has a great sample application that addresses what I’m trying to do.  I was forcing the delete button on the right hand side myself.  Updating editingStyleForRowAtIndexPath to the below fixed my issue:
+[Vanyas](/2014/08/uitableviewcell-action-swiping-in-ios8-and-swift/) has a great sample application that addresses what I’m trying to do.  I was forcing the delete button on the right hand side myself.  Updating editingStyleForRowAtIndexPath to the below fixed my issue:
 
 ```c
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath

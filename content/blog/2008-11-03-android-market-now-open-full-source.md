@@ -17,8 +17,7 @@ The Android Market is now open, register to add your apps!
 <http://www.android.com/market/>  
   
 
-[![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SQ8LWQBaTRI/AAAAAAAATtw/dg9Emi0zDTs
-/s320-R/market.JPG)](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SQ8LWQBaTRI/AAAAAAAATtw/vUbKNKpvwLg/s1600-h/market.JPG)
+[![](/images/missing-image.svg)](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SQ8LWQBaTRI/AAAAAAAATtw/vUbKNKpvwLg/s1600-h/market.JPG)
 
   
 The full source code for Android is now available:

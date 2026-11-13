@@ -15,8 +15,7 @@ tags:
 - socialgraph
 ---
 
-[Blogger](http://buzz.blogger.com/2008/04/blog-list-scheduled-post-publishing-
-on.html) in [draft](http://draft.blogger.com/) added 2 new features today: a
+[Blogger](http://buzz.blogger.com/2008/04/blog-list-scheduled-post-publishing-on.html) in [draft](http://draft.blogger.com/) added 2 new features today: a
 blogroll page element, and post scheduling. Post scheduling is pretty useful,
 you can write up your post, set the time (in the future) that you want it to
 post, and Blogger will do it automatically. The second feature, a blogroll, I
@@ -29,14 +28,14 @@ is that it does not support [XFN](http://gmpg.org/xfn/) or
 if I linked to my [girlfriend's blog](http://maybe-not.net/ "Laura's blog" ),
 the blogroll just lists this as
 
-```HTML
+```html
 <a href='http://maybe-not.net/' target='_blank'>Maybe-Not</a>
 ```
 
 A better link, for example from a [wordpress](http://www.wordpress.org)
 blogroll would look something like
 
-```HTML
+```html
 <a href="http://maybe-not.net/" rel="friend sweetheart" title="Laura&#8217;s blog">Maybe-Not</a>< 
 ```
 

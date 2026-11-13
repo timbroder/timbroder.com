@@ -17,8 +17,7 @@ I’m not sure which is better.  If it's returning something that is directly
 tied to the class: a slice/dice of properties is already has, I'm leaning
 towards properties. Because of the many examples I _feel_ like read-only
 properties are the way to do.  I’m not the only person
-[wondering](http://stackoverflow.com/questions/24035276/computed-read-only-
-property-vs-function-in-swift), so that’s validating.
+[wondering](http://stackoverflow.com/questions/24035276/computed-read-only-property-vs-function-in-swift), so that’s validating.
 
 Property:
 

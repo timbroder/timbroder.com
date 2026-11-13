@@ -111,8 +111,7 @@ Screen**](https://wiki.ubuntu.com/DesktopTeam/Specs/ExitStrategy)
 They want to streamline the options you have when you click that big red
 button, to make things less confusing.  
   
-[Better Integrated Wine](https://blueprints.launchpad.net/ubuntu/+spec/better-
-integrated-wine)  
+[Better Integrated Wine](https://blueprints.launchpad.net/ubuntu/+spec/better-integrated-wine)  
 Better Wine will make it easier for Windows users to convert, thus helping to
 solve [bug #1](https://blueprints.launchpad.net/bugs/1).  
   

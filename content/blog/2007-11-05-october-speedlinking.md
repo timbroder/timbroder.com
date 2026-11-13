@@ -54,7 +54,7 @@ haven't gotten a chance to until now. Enjoy.
   * [LabeledMarker v1.1](http://googlemapsapi.blogspot.com/2007/10/labeledmarker-v11-now-supporting-marker.html) in Google Maps comes out with Marker and Label toggling   
   
 
-  * Google Reader comes out with [Subscriber stats](http://googlesystem.blogspot.com/2007/10/find-number-of-google-subscribers-for.html). Read about the controversy [here](http://blog.gpowered.net/2007/10/google-reader-stats-out-of-wack.html). Google responds [here](http://googlereader.blogspot.com/2007/10/subscriber-stats-summed-up.html)   
+  * Google Reader comes out with [Subscriber stats](http://googlesystem.blogspot.com/2007/10/find-number-of-google-subscribers-for.html). Read about the controversy [here](/2007/10/google-reader-stats-out-of-wack/). Google responds [here](http://googlereader.blogspot.com/2007/10/subscriber-stats-summed-up.html)   
   
 
   * [Google Maps Goes Social](http://googlesystem.blogspot.com/2007/10/google-maps-becomes-social.html)   

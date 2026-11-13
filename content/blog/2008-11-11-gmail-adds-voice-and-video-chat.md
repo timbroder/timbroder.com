@@ -16,7 +16,7 @@ tags:
 Is the death of Skype iminent?  
   
 
-[![](https://mail.google.com/tools/dlpage/res/videochat/en/screenshot.png)](https://mail.google.com/videochat?hl=en)
+[![](/images/remote/2008-11-11-gmail-adds-voice-and-video-chat/screenshot.png)](https://mail.google.com/videochat?hl=en)
 
 The [plugin](https://mail.google.com/videochat?hl=en) isn't out for Linux so I
 can't test it out just yet. Hopefully I'll be able to try it out on

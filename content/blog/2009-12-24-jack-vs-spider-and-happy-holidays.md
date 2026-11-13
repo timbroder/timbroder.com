@@ -20,4 +20,4 @@ Check out my company's holiday E-card
   
 Our VP of Security takes on an 8 legged intruder 
 
-[![](https://img.youtube.com/vi/HZB3N9bqBSg/0.jpg)](http://www.youtube.com/watch?v=HZB3N9bqBSg)
+[![](/images/missing-image.svg)](http://www.youtube.com/watch?v=HZB3N9bqBSg)

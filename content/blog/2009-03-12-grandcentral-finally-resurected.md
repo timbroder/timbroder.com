@@ -22,7 +22,7 @@ Features:
 
 **Google number** \- One number for all your calls and SMS
 
-![Features_thumb1](https://www.google.com/voice/resources/3664525910-features_thumb1.jpg)  
+![Features_thumb1](/images/remote/2009-03-12-grandcentral-finally-resurected/3664525910-features_thumb1.jpg)  
   
   * [Call screening](https://www.google.com/voice/about#) \- Announce and screen callers 
   * [Listen in](https://www.google.com/voice/about#) \- Listen before taking a call 
@@ -35,19 +35,20 @@ Features:
   
 **Google voicemail** \- Voicemail as easy as email, with transcripts
 
-![Features_thumb2](https://www.google.com/voice/resources/4096164457-features_thumb2.jpg)  
+![Features_thumb2](/images/remote/2009-03-12-grandcentral-finally-resurected/4096164457-features_thumb2.jpg)  
   
   * [Voicemail transcripts](https://www.google.com/voice/about#) \- Read what your voicemail says 
   * [Listen to voicemail](https://www.google.com/voice/about#) \- Check online or from your phone 
   * [Notifications](https://www.google.com/voice/about#) \- Receive voicemails via email or SMS 
   * [Personalize greeting](https://www.google.com/voice/about#) \- Vary greetings by caller 
   * [Share voicemail](https://www.google.com/voice/about#) \- Forward or download voicemails 
+
 |  
   
   
 **Voice features** \- More cool things you can do with Google Voice
 
-![Features_thumb3](https://www.google.com/voice/resources/67413083-features_thumb3.jpg)  
+![Features_thumb3](/images/remote/2009-03-12-grandcentral-finally-resurected/67413083-features_thumb3.jpg)  
   
   * [Conference calling](https://www.google.com/voice/about#) \- Join people into a single call 
   * [Call record](https://www.google.com/voice/about#) \- Record calls and store them online 

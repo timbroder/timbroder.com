@@ -17,7 +17,7 @@ tags:
 I'm currently in the process of migrating gpowerd.net over to this domain and
 onto wordpress. [ SyntaxHighlighter
 ](http://alexgorbatchev.com/wiki/SyntaxHighlighter)has been upgraded quite a
-bit since I [last](http://timbroder.com/2007/07/howto-post-code/) wrote about
+bit since I [last](/2007/07/howto-post-code/) wrote about
 it.  I came across a [great
 plugin](http://wordpress.org/extend/plugins/syntaxhighlighter/) to handle the
 code highlighting for me on wordpress.  I love the plugin, didn't have to go

@@ -50,7 +50,7 @@ multiple times a day on average so they needed to stay.
 This is my main screen. From bottom left to top right: Text my wife Apps that
 I use to consume things Apps that I use to "do" things Contacts and logging to
 Day One Group texting and communication Random things and [adding to
-Trello](http://timbroder.com/2013/03/automating-adding-to-trello-on-ios.html)
+Trello](/2013/03/automating-adding-to-trello-on-ios/)
 
 ![IMG_2100](/images/2014/03/IMG_2100.png)
 

@@ -16,9 +16,7 @@ tags:
 
 Dropbox recently raised the cap on it's free tier to 18 gigs. But, you only
 get 2 gigs out of the gate. The rest is easy to get, but takes a little leg
-work. [![](http://timbroder.com/wp-
-content/uploads/2012/08/dropbox01.png)](http://timbroder.com/wp-
-content/uploads/2012/08/dropbox01.png) First, log into Dropbox and click on
+work. [![](/images/2012/08/dropbox01.png)](/images/2012/08/dropbox01.png) First, log into Dropbox and click on
 "Get free space!" at the top right. Then, do all the Facebook/twitter/social
 offers to get free space.
 

@@ -61,7 +61,7 @@ class PreviewAdmin(admin.ModelAdmin):
                    'js/jquery.adminpreview.js'
 ```
 
-```CSS
+```css
 //base.css
 .previewslide {
 	cursor:pointer;

@@ -29,7 +29,8 @@ into mercurial.   Anyway, to migrate a project from svn to git, use the
 following command: [code]git svn clone http://svn/repo/here/trunk[/code] To
 migrate a project from svn to hg, use the following command: 
 ```
-hg convert http://svn/repo/here/trunk```   
+hg convert http://svn/repo/here/trunk
+```
 
 Branching is now much, much easier and if
 that isn't enough for you to switch here are a few more reasons:

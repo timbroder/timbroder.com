@@ -28,7 +28,7 @@ here](http://wordpress.org/extend/plugins/google-reader-subscription-list/)
 
 
 
-```PHP
+```php
 /*
 Plugin Name: Google Reader Subscription List
 Version: 1

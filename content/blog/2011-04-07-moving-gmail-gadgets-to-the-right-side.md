@@ -22,8 +22,7 @@ gadgets to the right hand side with the exception of chat (labels used to do
 this but was removed in favor of drag in drop back in late 2009).
 [![](/images/2011/04/gmail_right_widgets.png)](/images/2011/04/gmail_right_widgets.png)   If you don't have anything
 in the right hand column, _enable Right-Side Chat_ from Gmail Labs.  We are
-going to add in some custom css to gmail so install either [Stylist ](https://
-chrome.google.com/extensions/detail/pabfempgigicdjjlccdgnbmeggkbjdhd)for
+going to add in some custom css to gmail so install either [Stylist ](https://chrome.google.com/extensions/detail/pabfempgigicdjjlccdgnbmeggkbjdhd)for
 Chrome or [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/)
 for Firefox. Add the following style: 
 

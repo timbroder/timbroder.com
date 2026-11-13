@@ -27,7 +27,7 @@ sudo vi /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/I
 Add this text just ABOVE the close of the `<dict>` at the bottom of this file: 
 
 
-```XML
+```xml
 <key>Custom</key>
     <dict>
       <key>Delete Current Line In One Hit</key>
@@ -39,6 +39,7 @@ Note that:
 
   * This is _inside_ the existing `<dict>` so there is a `</dict></plist>` after this
   * This associates the named action "Delete Current Line In One Hit" to the three key actions in the string. I played around with different options here to get the right combination. For instance, if you try moveToBeginningOfLine, deleteToEndOfLine instead of vice versa, then using it on empty lines will delete the line _and_ the entire next line. Which is unpleasant
+
 Save this and open XCode
 
   1. Open XCode Preferences
@@ -46,4 +47,5 @@ Save this and open XCode
   3. Click on All
   4. In the SEarch box type "Delete" and search for "Delete Current Line in One Hit"
   5. Add your new binding.
+
 I use cmd+d, so I had to map duplicate to something else first

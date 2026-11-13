@@ -86,8 +86,7 @@ def get_SID():
 We'll also need a function that can handle any of those URLs, create the
 header, attach a cookie to it, and retrieve the data from Google. I left the
 return as a raw data string so you could use whatever XML parsing library you
-want. I personally like using [ElementTree](http://effbot.org/zone/element-
-index.htm).  
+want. I personally like using [ElementTree](http://effbot.org/zone/element-index.htm).  
 
 ```python
 #get results from url

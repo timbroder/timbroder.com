@@ -24,6 +24,6 @@ catalog.xml enable it with:
 
 and in your template: 
 
-```PHP
+```php
 <?php echo $this->getChildHtml('review_form'); ?>
 ```

@@ -11,8 +11,7 @@ wordpress_id: 1757
 category: Commentary
 ---
 
-Robert Böhnke wrote a good [piece](http://robb.is/thinking-about/beyond-
-uxkit/) on what UXKit could mean for the future of iOS/Mac UI Engineering
+Robert Böhnke wrote a good [piece](http://robb.is/thinking-about/beyond-uxkit/) on what UXKit could mean for the future of iOS/Mac UI Engineering
 
 > The new Photos for Mac is based on a new private framework in 10.10.3,
 UXKit. It is essentially a replica of UIKit, based on top of AppKit.

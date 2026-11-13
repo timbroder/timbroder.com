@@ -18,7 +18,7 @@ tags:
 
 In: ```lib/Zend/DB/Adapter/Adapter.php```
 
-```PHP
+```php
 public function query($sql, $bind = array())
 {
 	// connect to the database if needed

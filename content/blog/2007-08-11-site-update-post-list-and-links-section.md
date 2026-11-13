@@ -14,10 +14,10 @@ tags:
 ---
 
 I Added an easier way to go through the posts I'v put on
-[blogger](https://gpowered.blogspot.com/) and the
+[blogger](/) and the
 [site](https://gpowered.net/g/). Quick tutorial on it is
-[here](http://blog.gpowered.net/2007/08/howto-getting-list-of-post-titles-from.html).  
+[here](/2007/08/howto-getting-list-of-post-titles-from/).  
   
 Also added a [Links](https://gpowered.net/links) section that pull from my
-Google Bookmarks. HOWTO is [here](http://blog.gpowered.net/2007/08/howto-pulling-google-bookmarks-with.html)
+Google Bookmarks. HOWTO is [here](/2007/08/howto-pulling-google-bookmarks-with/)
 

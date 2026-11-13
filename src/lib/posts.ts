@@ -4,6 +4,8 @@
  * This is the only place that knows about content collections. Everything
  * else uses the list returned here.
  */
+import { existsSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 import { getCollection } from 'astro:content';
 import { excerpt } from './excerpt.ts';
 import { finalizePosts, toPost, type Post } from './post-model.ts';
@@ -30,10 +32,16 @@ async function loadMarkdownPosts(): Promise<Post[]> {
   });
 }
 
+/** A post may only show a local image that is really there. */
+function publicFileExists(path: string): boolean {
+  const file = join(process.cwd(), 'public', path);
+  return existsSync(file) && statSync(file).isFile();
+}
+
 let cache: Promise<Post[]> | undefined;
 
 /** Published posts, newest first. Throws if the content breaks a rule. */
 export function getPosts(): Promise<Post[]> {
-  cache ??= loadMarkdownPosts().then(finalizePosts);
+  cache ??= loadMarkdownPosts().then((posts) => finalizePosts(posts, { publicFileExists }));
   return cache;
 }

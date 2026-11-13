@@ -13,5 +13,4 @@ tags:
 - Android
 ---
 
-[![](/images/2012/05/Screenshot_2012-05-24-14-
-05-231.png)](/images/2012/05/Screenshot_2012-05-24-14-05-231.png)
+[![](/images/2012/05/Screenshot_2012-05-24-14-05-231.png)](/images/2012/05/Screenshot_2012-05-24-14-05-231.png)

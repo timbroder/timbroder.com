@@ -142,7 +142,31 @@ export function preferMarkdown(posts: Post[]): { kept: Post[]; dropped: Post[] }
  * Checks that hold across all posts. Throws a ContentError listing every
  * problem, so one build shows everything that needs fixing.
  */
-export function validatePosts(posts: Post[]): void {
+/**
+ * The local images a piece of rendered HTML shows, as paths from the site
+ * root: "/images/2012/08/solr1.png".
+ */
+export function localImages(html: string): string[] {
+  const found: string[] = [];
+  for (const match of html.matchAll(/<img\b[^>]*?\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)')/gi)) {
+    const src = (match[1] ?? match[2]).replace(/&amp;/g, '&');
+    if (!src.startsWith('/') || src.startsWith('//')) continue;
+    const path = src.split(/[?#]/)[0];
+    try {
+      found.push(decodeURIComponent(path));
+    } catch {
+      found.push(path);
+    }
+  }
+  return found;
+}
+
+export interface ContentChecks {
+  /** Says whether a file exists in public/, given its path from the site root. */
+  publicFileExists?: (path: string) => boolean;
+}
+
+export function validatePosts(posts: Post[], checks: ContentChecks = {}): void {
   const problems: string[] = [];
   const urls = new Map<string, Post>();
 
@@ -177,6 +201,16 @@ export function validatePosts(posts: Post[]): void {
     }
   }
 
+  if (checks.publicFileExists) {
+    for (const post of posts) {
+      for (const image of new Set(localImages(post.html))) {
+        if (!checks.publicFileExists(image)) {
+          problems.push(`${post.id} shows the image ${image}, but there is no file public${image}`);
+        }
+      }
+    }
+  }
+
   if (problems.length) {
     throw new ContentError(
       `Content problems:\n${problems.map((p) => `  - ${p}`).join('\n')}`,
@@ -185,10 +219,10 @@ export function validatePosts(posts: Post[]): void {
 }
 
 /** Sort, resolve clashes between sources, and validate. */
-export function finalizePosts(posts: Post[]): Post[] {
+export function finalizePosts(posts: Post[], checks: ContentChecks = {}): Post[] {
   const { kept } = preferMarkdown(posts);
   const sorted = sortPosts(kept);
-  validatePosts(sorted);
+  validatePosts(sorted, checks);
   return sorted;
 }
 

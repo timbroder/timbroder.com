@@ -20,7 +20,7 @@ that magento provides, or you just want to cherry pick which attributes to
 show on your product listing page template/catalog/product/view.phtml
 
 
-```PHP
+```php
 $_product = $this->getProduct();
 
 //For the attribute bike_specs_rear_shock

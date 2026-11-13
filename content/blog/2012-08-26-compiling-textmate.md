@@ -25,6 +25,7 @@ compiled it yet. Here's the quick and easy on how to compile it.
 
   * Either [homebrew](http://mxcl.github.com/homebrew/) or [macports](http://www.macports.org/) (I'll be using homebrew for this post)
   * [Xcode](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) 4.4+ (make sure to open at least once and accept licence agreement)
+
 Now install the needed apps with brew: [shell] brew install ragel boost
 multimarkdown hg ninja proctools [/shell]
 
