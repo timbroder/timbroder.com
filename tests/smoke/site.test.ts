@@ -28,12 +28,29 @@ describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
     expect(await res.text()).toContain('<h1');
   });
 
-  it('serves the feed as RSS at /feed', async () => {
-    const res = await get('/feed');
+  // R10. Feed readers have both addresses.
+  it.each(['/feed', '/feed/'])('serves the feed as RSS at %s', async (path) => {
+    const res = await get(path);
     expect(res.status).toBe(200);
     expect(res.headers.get('content-type')).toContain('application/rss+xml');
-    expect(await res.text()).toContain('<rss');
+    const xml = await res.text();
+    expect(xml).toContain('<rss');
+    expect(xml).toContain('<item>');
   });
+
+  it('serves the web app manifest as a manifest', async () => {
+    const res = await get('/manifest.webmanifest');
+    expect(res.status).toBe(200);
+    expect(res.headers.get('content-type')).toContain('application/manifest+json');
+    expect((await res.json()).name).toBe('Tim Broder .com');
+  });
+
+  it.each(['/favicon.ico', '/og-image.png', '/robots.txt', '/sitemap-index.xml'])(
+    'serves %s',
+    async (path) => {
+      expect((await get(path)).status).toBe(200);
+    },
+  );
 
   it('adds a missing trailing slash with a redirect', async () => {
     const res = await get('/projects');
@@ -43,8 +60,12 @@ describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
     );
   });
 
-  it('returns 404 for an unknown URL', async () => {
+  // R26.
+  it('returns 404 for an unknown URL, with the site\'s own page', async () => {
     const res = await get('/this-page-does-not-exist/');
     expect(res.status).toBe(404);
+    const html = await res.text();
+    expect(html).toContain('404: Not Found');
+    expect(html).toContain('the sadness');
   });
 });

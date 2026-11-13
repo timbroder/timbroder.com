@@ -6,6 +6,7 @@ import Prose from '../../../components/Prose.astro';
 import Base from '../../../layouts/Base.astro';
 import type { Post } from '../../../lib/post-model.ts';
 import { getPosts } from '../../../lib/posts.ts';
+import { articleData, scriptJson } from '../../../lib/seo.ts';
 
 export async function getStaticPaths() {
   return (await getPosts()).map((post) => {
@@ -21,7 +22,8 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<Base title={post.title} description={post.description}>
+<Base title={post.title} description={post.description} image={post.image}>
+  <script is:inline slot="head" type="application/ld+json" set:html={scriptJson(articleData(post))} />
   <article itemscope itemtype="http://schema.org/Article">
     <PostHeader title={post.title} date={post.date} />
     <Prose class="mt-8">

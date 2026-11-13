@@ -103,5 +103,16 @@ export const SUMMARY_DIFFERS = [
   '/2008/09/i-just-won-50000000-gbp-from-google-uk/',
 ];
 
+/**
+ * Markdown pages whose description differs from the live site. A page's
+ * description is a summary of its text, like a card's.
+ */
+export const PAGE_DESCRIPTION_DIFFERS: Record<string, string> = {
+  '/apps/':
+    'The page shows an app icon, written as a reference-style picture. The live summary skipped ' +
+    'pictures written that way. The new one includes its alt text, as it does for every other ' +
+    'picture that was hosted elsewhere.',
+};
+
 /** The 404 page: the live site highlights "Posts" in the navigation there. */
 export const NAV_HIGHLIGHT_DIFFERS = ['/404.html'];

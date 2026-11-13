@@ -4,6 +4,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Headline from '../components/Headline.astro';
 import Prose from '../components/Prose.astro';
 import Base from '../layouts/Base.astro';
+import { excerpt } from '../lib/excerpt.ts';
 
 export async function getStaticPaths() {
   return (await getCollection('pages')).map((entry) => ({
@@ -18,9 +19,11 @@ interface Props {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+// A page's own description, or else a summary of its text, as for posts.
+const description = entry.data.description ?? excerpt(entry.rendered?.html ?? '');
 ---
 
-<Base title={entry.data.title} description={entry.data.description}>
+<Base title={entry.data.title} description={description}>
   <header class="flex flex-col">
     <Headline padded={false}>{entry.data.title}</Headline>
   </header>

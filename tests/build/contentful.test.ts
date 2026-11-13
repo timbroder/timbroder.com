@@ -172,6 +172,7 @@ describe('R17: Contentful posts', () => {
       const item = feed.items.find(({ link }) => link === `https://timbroder.com${url}`);
       expect(item, url).toBeDefined();
       expect(item!.contentLength).toBeGreaterThan(50);
+      expect(item!.guid).toBe(`https://timbroder.com${url.replace(/\/$/, '')}`);
       expect(sitemap).toContain(`<loc>https://timbroder.com${url}</loc>`);
     }
     expect(feed.items.find(({ link }) => link.endsWith(POST))).toMatchObject({
@@ -217,6 +218,30 @@ describe('R17: Contentful posts', () => {
     ]);
     expect(html).toMatch(/<img [^>]*width="1600" height="1600"/);
     expect(html).toContain("<figcaption>The picture's description is shown as its caption.</figcaption>");
+  });
+
+  it("uses a post's own share image in link previews, and the site's for the rest", () => {
+    const share =
+      'https://images.ctfassets.net/sample-space/sample-share-image/a1b2c3d4e5f60718293a4b5c6d7e8f90/share.png';
+    const rich = page(RICH_POST).head;
+    expect(rich.og['og:image']).toBe(share);
+    expect(rich.twitter['twitter:image']).toBe(share);
+    expect((rich.jsonLd[0] as { image: string }).image).toBe(share);
+
+    const plain = page(POST).head;
+    expect(plain.og['og:image']).toBe('https://timbroder.com/og-image.png');
+    expect((plain.jsonLd[0] as { image: string }).image).toBe('https://timbroder.com/og-image.png');
+  });
+
+  it('describes a Contentful post to search engines like any other', () => {
+    expect(page(POST).head.jsonLd).toEqual([
+      expect.objectContaining({
+        '@type': 'Article',
+        headline: 'A sample post written in Contentful',
+        url: `https://timbroder.com${POST}`,
+        datePublished: '2026-03-14',
+      }),
+    ]);
   });
 
   it('highlights code exactly as a markdown post does', () => {
