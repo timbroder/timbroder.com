@@ -3,6 +3,8 @@ node_modules/
 
 # Astro build output and generated types
 dist/
+# The same site built with the sample Contentful posts (npm run build:samples).
+dist-samples/
 .astro/
 
 # local environment

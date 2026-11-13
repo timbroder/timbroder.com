@@ -10,6 +10,7 @@ import Container from '../components/Container.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Headline from '../components/Headline.astro';
+import { contentfulStatus } from '../lib/posts.ts';
 import { SITE, activeNavHref } from '../lib/site.ts';
 
 interface Props {
@@ -37,6 +38,9 @@ const active = highlightNav ? activeNavHref(pathname) : null;
 // Netlify sets COMMIT_REF. The smoke tests read it to know which build they
 // are looking at.
 const commit = process.env.COMMIT_REF ?? 'local';
+// What the build read from Contentful, so a deployed build can be asked
+// whether it reached the real space.
+const contentful = await contentfulStatus();
 ---
 
 <!doctype html>
@@ -45,6 +49,7 @@ const commit = process.env.COMMIT_REF ?? 'local';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="build-commit" content={commit} />
+    <meta name="build-contentful" content={contentful} />
     <title>{`${title} | ${SITE.title}`}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={new URL(pathname, SITE.url).href} />}

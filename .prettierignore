@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-samples/
 .astro/
 tests/baseline/
 package-lock.json

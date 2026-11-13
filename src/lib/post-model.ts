@@ -34,6 +34,8 @@ export interface Post {
   category?: string;
   /** A summary for cards and link previews. Empty when the post has no text. */
   description: string;
+  /** The post's own picture for link previews, as a full address. Most posts have none. */
+  image?: string;
   /** The rendered body. */
   html: string;
 }
@@ -51,6 +53,7 @@ export interface PostInput {
   tags?: string[];
   category?: string;
   description?: string;
+  image?: string;
   html: string;
 }
 
@@ -80,7 +83,8 @@ export function postSlug(input: Pick<PostInput, 'id' | 'filePath' | 'slug'>): st
   if (!isCleanSlug(slug)) {
     throw new ContentError(
       `${describe(input)} would get the slug "${slug}". Slugs may only contain ` +
-        'lowercase letters, digits and single hyphens. Add a clean `slug:` to its frontmatter.',
+        'lowercase letters, digits and single hyphens. ' +
+        (input.filePath ? 'Add a clean `slug:` to its frontmatter.' : 'Change its slug.'),
     );
   }
   return slug;
@@ -110,6 +114,7 @@ export function toPost(input: PostInput): Post {
     tags: input.tags ?? [],
     category: input.category,
     description: input.description ?? '',
+    image: input.image,
     html: input.html,
   };
 }
@@ -139,10 +144,6 @@ export function preferMarkdown(posts: Post[]): { kept: Post[]; dropped: Post[] }
 }
 
 /**
- * Checks that hold across all posts. Throws a ContentError listing every
- * problem, so one build shows everything that needs fixing.
- */
-/**
  * The local images a piece of rendered HTML shows, as paths from the site
  * root: "/images/2012/08/solr1.png".
  */
@@ -166,6 +167,10 @@ export interface ContentChecks {
   publicFileExists?: (path: string) => boolean;
 }
 
+/**
+ * Checks that hold across all posts. Throws a ContentError listing every
+ * problem, so one build shows everything that needs fixing.
+ */
 export function validatePosts(posts: Post[], checks: ContentChecks = {}): void {
   const problems: string[] = [];
   const urls = new Map<string, Post>();
@@ -218,12 +223,19 @@ export function validatePosts(posts: Post[], checks: ContentChecks = {}): void {
   }
 }
 
-/** Sort, resolve clashes between sources, and validate. */
-export function finalizePosts(posts: Post[], checks: ContentChecks = {}): Post[] {
-  const { kept } = preferMarkdown(posts);
+/**
+ * Sort, resolve clashes between sources, and validate. Returns the posts to
+ * publish, and the Contentful posts left out because a markdown post has
+ * their URL.
+ */
+export function finalizePosts(
+  posts: Post[],
+  checks: ContentChecks = {},
+): { posts: Post[]; dropped: Post[] } {
+  const { kept, dropped } = preferMarkdown(posts);
   const sorted = sortPosts(kept);
   validatePosts(sorted, checks);
-  return sorted;
+  return { posts: sorted, dropped };
 }
 
 /**

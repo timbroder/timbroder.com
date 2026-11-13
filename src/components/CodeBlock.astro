@@ -1,8 +1,8 @@
 ---
 /**
  * A highlighted block of code, looking the same as the code blocks in posts.
- * Posts get theirs from the markdown processor; this is for everything else
- * (Contentful posts, the component library).
+ * Markdown posts get theirs from the markdown processor and Contentful posts
+ * from src/lib/highlight.ts; this is for the component library.
  */
 import { Code } from 'astro:components';
 import type { BuiltinLanguage, SpecialLanguage } from 'shiki';
