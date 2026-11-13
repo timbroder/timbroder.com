@@ -15,6 +15,7 @@ import {
   isNewlyListed,
   isRepaired,
 } from '../lib/expected.ts';
+import { isRepairedBody, NOW_RENDERED } from '../lib/expected-content.ts';
 import type { CardFacts } from '../lib/extract.ts';
 
 const baseline = loadPages();
@@ -181,12 +182,23 @@ describe('R28: list cards', () => {
     expect(differing).toEqual([]);
   });
 
-  it('shows the same summary', () => {
+  it('shows the same summary, unless the text of the post is meant to differ', () => {
     const differing = comparable
       .filter(({ liveUrl }) => !SUMMARY_DIFFERS.includes(newUrlOf(liveUrl)!))
+      // Raw markdown that now renders, or a post repaired by hand: the
+      // summary is taken from text that has changed.
+      .filter(({ liveUrl }) => !NOW_RENDERED.has(liveUrl) && !isRepairedBody(liveUrl))
       .filter(({ live, now }) => live.description !== now!.description)
       .map(({ liveUrl }) => liveUrl);
     expect(differing).toEqual([]);
+  });
+
+  it('shows no raw markdown link in a summary that the live site did not show', () => {
+    const RAW_LINK = /\]\(\s*(https?:|\/)/;
+    const worse = comparable
+      .filter(({ live, now }) => RAW_LINK.test(now!.description) && !RAW_LINK.test(live.description))
+      .map(({ liveUrl }) => liveUrl);
+    expect(worse).toEqual([]);
   });
 
   it('lists a summary as different only while it really is', () => {

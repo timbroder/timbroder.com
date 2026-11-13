@@ -2,7 +2,6 @@
 import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
 import { builtPages, exists, readHtml, resolveRedirect } from '../lib/dist.ts';
-import { KNOWN_BROKEN_LINKS } from '../lib/expected.ts';
 
 const pages = [...builtPages()].filter((path) => !path.startsWith('/astrobook/'));
 
@@ -43,8 +42,6 @@ describe('R16: internal links', () => {
       $('a[href]').each((_, el) => {
         const href = internalPath($(el).attr('href') ?? '');
         if (href === null) return;
-        const path = href.split('#')[0].split('?')[0];
-        if (KNOWN_BROKEN_LINKS.some((pattern) => pattern.test(path))) return;
         if (!resolves(href)) broken.set(href, [...(broken.get(href) ?? []), page]);
       });
     }
