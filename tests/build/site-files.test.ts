@@ -3,6 +3,7 @@
  * and the icons. Part of R11 (what search engines and browsers are told
  * about the site).
  */
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import * as cheerio from 'cheerio';
@@ -64,15 +65,30 @@ describe('the web app manifest', () => {
 });
 
 describe('icons', () => {
+  const iconLinks = (path: string) => {
+    const $ = cheerio.load(readHtml(path));
+    return $('link[rel="icon"], link[rel="apple-touch-icon"]')
+      .toArray()
+      .map((element) => $(element).attr('href') ?? '');
+  };
+
   it('are linked from every page, and every linked file exists', () => {
     const wrong = pages.filter((path) => {
-      const $ = cheerio.load(readHtml(path));
-      const links = $('link[rel="icon"], link[rel="apple-touch-icon"], link[rel="manifest"]')
-        .toArray()
-        .map((element) => $(element).attr('href') ?? '');
-      return links.length !== 4 || links.some((href) => !exists(href));
+      const links = iconLinks(path);
+      return links.length !== 3 || links.some((href) => !exists(href.split('?')[0]));
     });
     expect(wrong).toEqual([]);
+  });
+
+  it('have an address that changes when the picture does', () => {
+    // A browser keeps a tab icon by its address. /favicon.ico was a blank
+    // icon for years, and a browser that kept it would go on showing it.
+    for (const href of iconLinks('/')) {
+      const [file, fingerprint] = href.split('?v=');
+      const hash = createHash('sha1').update(readFileSync(join(DIST, file))).digest('hex');
+      expect(fingerprint, href).toBe(hash.slice(0, 8));
+      expect(file).not.toBe('/favicon.ico');
+    }
   });
 
   it('include a favicon.ico that is a real icon', () => {

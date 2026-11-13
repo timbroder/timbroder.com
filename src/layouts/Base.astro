@@ -12,6 +12,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Headline from '../components/Headline.astro';
 import { contentfulStatus } from '../lib/posts.ts';
+import { fingerprinted } from '../lib/public-files.ts';
 import { analyticsScript, oneLine, socialTags } from '../lib/seo.ts';
 import { SITE, activeNavHref } from '../lib/site.ts';
 
@@ -84,9 +85,9 @@ const contentful = await contentfulStatus();
     }
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href={fingerprinted('/icons/icon-32.png')} />
+    <link rel="icon" type="image/png" sizes="192x192" href={fingerprinted('/icons/icon-192.png')} />
+    <link rel="apple-touch-icon" href={fingerprinted('/icons/apple-touch-icon.png')} />
     <slot name="head" />
     <script is:inline set:html={analyticsScript()} />
   </head>
