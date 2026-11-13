@@ -72,16 +72,18 @@ module.exports = {
         css: {
           '--tw-prose-body': theme('colors.zinc.600'),
           '--tw-prose-headings': theme('colors.zinc.900'),
-          '--tw-prose-links': theme('colors.teal.500'),
-          '--tw-prose-links-hover': theme('colors.teal.600'),
-          '--tw-prose-underline': theme('colors.teal.500 / 0.2'),
-          '--tw-prose-underline-hover': theme('colors.teal.500'),
+          // Links were teal-500 (hover teal-600) and captions zinc-400 on the
+          // Gatsby site. Those are below 4.5:1 on white, so they are darker here.
+          '--tw-prose-links': theme('colors.teal.700'),
+          '--tw-prose-links-hover': theme('colors.teal.800'),
+          '--tw-prose-underline': theme('colors.teal.700 / 0.2'),
+          '--tw-prose-underline-hover': theme('colors.teal.700'),
           '--tw-prose-bold': theme('colors.zinc.900'),
           '--tw-prose-counters': theme('colors.zinc.900'),
           '--tw-prose-bullets': theme('colors.zinc.900'),
           '--tw-prose-hr': theme('colors.zinc.100'),
           '--tw-prose-quote-borders': theme('colors.zinc.200'),
-          '--tw-prose-captions': theme('colors.zinc.400'),
+          '--tw-prose-captions': theme('colors.zinc.500'),
           '--tw-prose-code': theme('colors.zinc.700'),
           '--tw-prose-code-bg': theme('colors.zinc.300 / 0.2'),
           '--tw-prose-pre-code': theme('colors.zinc.100'),
@@ -168,6 +170,8 @@ module.exports = {
           },
           code: {
             display: 'inline-block',
+            // Lets a long path or address wrap instead of widening the page.
+            maxWidth: '100%',
             color: 'var(--tw-prose-code)',
             fontSize: theme('fontSize.sm')[0],
             fontWeight: theme('fontWeight.semibold'),

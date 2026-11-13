@@ -12,12 +12,12 @@ interface Props {
 
 const { post } = Astro.props;
 const date = formatDate(post.date);
-const eyebrow = 'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400';
+const eyebrow = 'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-500';
 ---
 
 <article class="md:grid md:grid-cols-4 md:items-baseline">
   <div class="md:col-span-3 group relative flex flex-col items-start">
-    <h2 class="text-base font-semibold tracking-tight text-zinc-800">
+    <h2 class="max-w-full text-base font-semibold tracking-tight text-zinc-800">
       <div
         class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
       >
@@ -33,8 +33,8 @@ const eyebrow = 'relative z-10 order-first mb-3 flex items-center text-sm text-z
       </span>
       {date}{post.category && <span>&nbsp;in {post.category}</span>}
     </time>
-    <p class="relative z-10 mt-2 text-sm text-zinc-600">{post.description}</p>
-    <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">
+    <p class="relative z-10 mt-2 max-w-full text-sm text-zinc-600">{post.description}</p>
+    <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-700">
       Read {post.link ? 'commentary' : 'article'}
       <svg
         xmlns="http://www.w3.org/2000/svg"

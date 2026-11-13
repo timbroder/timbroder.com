@@ -1,4 +1,11 @@
-import { article, linkPost, longTitle, noCategory, noDescription } from '../fixtures/posts.ts';
+import {
+  article,
+  linkPost,
+  longTitle,
+  longWord,
+  noCategory,
+  noDescription,
+} from '../fixtures/posts.ts';
 import PostCard from './PostCard.astro';
 
 export default {
@@ -15,3 +22,6 @@ export const NoCategory = { args: { post: noCategory } };
 export const NoDescription = { args: { post: noDescription } };
 
 export const LongTitle = { args: { post: longTitle } };
+
+/** A web address too long for one line wraps; the card never grows wider. */
+export const LongWord = { args: { post: longWord } };

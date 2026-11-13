@@ -67,4 +67,43 @@ export const longTitle: Post = toPost({
   html: body,
 });
 
-export const samplePosts: Post[] = [article, linkPost, noCategory, noDescription, longTitle];
+/** A post whose summary holds a web address far longer than a line. */
+export const longWord: Post = toPost({
+  id: 'long-word',
+  source: 'markdown',
+  title: 'House of Cards regex mute filter for Tweetbot',
+  date: new Date('2014-02-15T22:12:22Z'),
+  slug: 'house-cards-regex-mute-filter-tweetbot',
+  category: 'Code',
+  description:
+    "Some regular expressions if you don't want to see spoilers in your timeline Just the show name. tweetbot:///mute/keyword?regex=1&text=(%3Fi)%23%3Fhouse(%20%3Fof)%3F(%3F%3D%20%3Fcards)%7C(%3Fi)%23%3Fkevin(%3F%3D%20%3Fspacey) @housecards #houseofcards",
+  html: body,
+});
+
+/** More tags than fit on one line of a phone. */
+export const manyTags = [
+  'Android',
+  'appengine',
+  'blogger',
+  'bookmarks',
+  'calendar',
+  'Docs Spreadsheets',
+  'gadgets',
+  'gchat',
+  'gdata',
+  'gears',
+  'GWT',
+  'maps',
+  'Mashups',
+  'picasa web',
+  'reader',
+];
+
+export const samplePosts: Post[] = [
+  article,
+  linkPost,
+  noCategory,
+  noDescription,
+  longTitle,
+  longWord,
+];

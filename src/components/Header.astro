@@ -24,12 +24,12 @@ const { active } = Astro.props;
               aria-current={isActive ? 'page' : undefined}
               class:list={[
                 'relative block px-3 py-2 transition',
-                isActive ? 'text-teal-500' : 'hover:text-teal-500',
+                isActive ? 'text-teal-700' : 'hover:text-teal-700',
               ]}
             >
               {item.title}
               {isActive && (
-                <span class="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0" />
+                <span class="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-teal-700/0 via-teal-700/40 to-teal-700/0" />
               )}
             </a>
           </li>

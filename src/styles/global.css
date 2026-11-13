@@ -4,6 +4,12 @@
    the Gatsby site, loaded as it is so the design does not shift. */
 @config '../../tailwind.config.cjs';
 
+/* A word too long for its line (a web address, a file path) wraps instead
+   of making the page scroll sideways. */
+html {
+  overflow-wrap: break-word;
+}
+
 /*
  * Code blocks.
  *

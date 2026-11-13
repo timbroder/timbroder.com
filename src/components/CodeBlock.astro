@@ -6,6 +6,7 @@
  */
 import { Code } from 'astro:components';
 import type { BuiltinLanguage, SpecialLanguage } from 'shiki';
+import { codeTheme } from '../lib/code-theme.ts';
 
 interface Props {
   code: string;
@@ -15,4 +16,4 @@ interface Props {
 const { code, lang = 'text' } = Astro.props;
 ---
 
-<Code code={code} lang={lang} theme="monokai" />
+<Code code={code} lang={lang} theme={codeTheme} />

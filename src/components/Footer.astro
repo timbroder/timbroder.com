@@ -18,9 +18,9 @@ const { year = new Date().getUTCFullYear() } = Astro.props;
           <div class="mx-auto max-w-2xl lg:max-w-5xl">
             <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div class="flex gap-6 text-sm font-medium text-zinc-800">
-                {SITE.nav.map((item) => <a href={item.href} class="transition hover:text-teal-500">{item.title}</a>)}
+                {SITE.nav.map((item) => <a href={item.href} class="transition hover:text-teal-700">{item.title}</a>)}
               </div>
-              <p class="text-sm text-zinc-400">
+              <p class="text-sm text-zinc-500">
                 &copy; {SITE.since} - {year} {SITE.author}. All rights reserved.
               </p>
             </div>
