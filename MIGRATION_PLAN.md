@@ -338,6 +338,17 @@ The crawl is throttled and retries, because the live site occasionally returns a
 - **`gate` job:** always runs and passes when `test` passed or was skipped. This is the one check to mark as required, so a content-only PR goes green in seconds and never hangs.
 - **`smoke` job:** waits for the Netlify deploy preview to serve the commit under test, then runs the smoke tests against it. Each page carries the commit hash in a meta tag so the job knows the right build is live.
 
+### New posts and the tests
+
+**After cutover, publishing a post must never need a change to a test.**
+
+- A markdown post only touches `content/` and `public/images/`, so CI skips the tests for it. A post published in Contentful rebuilds the site on Netlify and never reaches CI.
+- The build still checks every post (decision 28). A post that breaks a rule stops the Netlify build with a message, and the site stays as it was.
+- No test that remains after cutover may depend on which posts exist. The tests that compare the build with the live Gatsby site do, and they go at cutover: the baseline tests, the browser comparison with the live site, and the list of Contentful posts (`CONTENTFUL_ON_LIVE`). The stored page screenshots that replace the browser comparison are taken of pages a new post does not change: single posts, markdown pages, the About page, the 404 page and lists of old tags. The home list is not one of them.
+- What is left can only fail on a post that has a real fault, such as a link to a page that does not exist, and it says so the next time the tests run.
+
+**Until cutover, a new post on the live site does turn CI red on the migration branches,** because those tests prove the new site equals the live one, and the live one has just changed. Nothing is edited by hand for a markdown post: `main` is merged into `astro` and the baseline is captured again. A post published in Contentful also needs one line in `CONTENTFUL_ON_LIVE`, since CI cannot read Contentful.
+
 ### Screenshots
 
 - **Pages are compared with the live site directly.** Each test run opens a page on the live site and on the new build in the same browser and compares the two. Nothing is stored, so there is no stale baseline, and both sides render with the same fonts.
@@ -528,7 +539,7 @@ Netlify keeps every deploy. To roll back, publish the last Gatsby deploy from th
 ### In the following two weeks
 
 - Watch for 404s in Netlify and in Search Console.
-- Switch page screenshot tests from the live baseline to the new site's own screenshots.
+- Switch page screenshot tests from the live baseline to the new site's own screenshots, of pages that a new post does not change (see "New posts and the tests").
 - Remove this plan, the baseline crawl script and the stale migration branches.
 
 ## 10. Things to prove early
