@@ -7,7 +7,7 @@ Deployed using [Netlify](https://app.netlify.com/sites/funny-meringue-5e00b8/ove
 
 ## Local Development
 
-The site is built with [Astro](https://astro.build/). A migration from Gatsby is in progress; see [MIGRATION_PLAN.md](MIGRATION_PLAN.md).
+The site is built with [Astro](https://astro.build/). It replaced a Gatsby site on 2026-11-13; [MIGRATION_PLAN.md](MIGRATION_PLAN.md) records how and why.
 
 ### Prerequisites
 
@@ -43,14 +43,23 @@ The site will be available at `http://localhost:4321`. The component library is 
 | `npm run build` | Build the production site into `dist/` |
 | `npm run preview` | Serve the production build locally |
 | `npm test` | Run the unit tests |
-| `npm run test:build` | Compare the build in `dist/` with the live-site baseline (run `npm run build` first). Also builds the site with the sample Contentful posts and checks those. |
+| `npm run test:build` | Check the build in `dist/`: lists, head tags, the feed, redirects, links and images (run `npm run build` first). Also builds the site with the sample Contentful posts and checks those. |
 | `npm run build:samples` | Build the site with the sample Contentful posts into `dist-samples/` |
-| `npm run test:browser` | Browser tests: the pages against the live site, every component story, navigation and accessibility (run `npm run build` first) |
+| `npm run test:browser` | Browser tests: screenshots of each kind of page and of every component story, navigation and accessibility (run `npm run build` first) |
 | `npm run test:smoke` | Check redirects and headers on a deployed copy (set `SMOKE_URL`) |
 | `npm run serve` | Serve `dist/` the way the browser tests see it |
 | `npm run check` | Type-check the project |
 | `npm run format` | Format code with Prettier |
-| `npm run baseline:capture` | Re-capture the live-site baseline the migration is tested against (see `tests/baseline/README.md`) |
+
+### Tests and publishing
+
+Publishing a post never needs a change to a test.
+
+- A markdown post only touches `content/` and `public/images/`, and CI skips the tests for a change like that. A post published in Contentful rebuilds the site on Netlify and never reaches CI.
+- The build itself checks every post. One that breaks a rule (no date, an untidy slug, a local picture with no file) stops the Netlify build with a message, and the site stays as it was.
+- The tests check rules, not a list of posts. Two things are pinned: the addresses and feed guids the site had on the day it replaced the Gatsby site (`tests/fixtures/cutover.json`), which must keep working, and screenshots of a few pages that a new post does not change.
+
+Screenshots are stored under `tests/browser/__screenshots__/linux/` and only compare on the system that took them. To accept a deliberate change of design, run `npm run build`, then `npm run test:browser:linux -- --update-snapshots` (it needs Docker), and commit the screenshots that changed.
 
 ## Content Management
 

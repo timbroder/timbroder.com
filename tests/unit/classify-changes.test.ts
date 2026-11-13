@@ -17,7 +17,7 @@ describe('isContentPath', () => {
   it.each([
     'src/components/PostCard.astro',
     'package.json',
-    'tests/baseline/urls.txt',
+    'tests/fixtures/cutover.json',
     'public/robots.txt',
     'contentful/loader.ts',
     'MIGRATION_PLAN.md',

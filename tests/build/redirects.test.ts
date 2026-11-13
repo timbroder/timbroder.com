@@ -1,62 +1,15 @@
 /**
- * R1, R3, R4, R23: every live URL still works, redirects are sound, and
- * nothing unexpected is published.
+ * R3, R23: redirects are sound, and nothing unpublished is published.
+ *
+ * The redirects are the old addresses of posts whose slug was tidied up
+ * (`redirect_from:` in their frontmatter) plus a short fixed list. Netlify
+ * reads them from the _redirects file in the build.
  */
 import { describe, expect, it } from 'vitest';
-import { liveUrls } from '../lib/live.ts';
-import {
-  asBrowserSends,
-  builtPages,
-  loadRedirects,
-  resolveRedirect,
-} from '../lib/dist.ts';
-import { ADDED_URL_PREFIXES, DROPPED_URLS } from '../lib/expected.ts';
-import { classifyPath } from '../lib/urls.ts';
+import { asBrowserSends, builtPages, loadRedirects, resolveRedirect } from '../lib/dist.ts';
 
-const baseline = liveUrls();
 const built = builtPages();
 const rules = loadRedirects();
-
-/** Where a baseline URL ends up on the new site, or null. */
-function destination(url: string): string | null {
-  if (built.has(url)) return url;
-  const rule = resolveRedirect(asBrowserSends(url));
-  return rule && built.has(rule.to) ? rule.to : null;
-}
-
-describe('R1: every live URL still works', () => {
-  it('serves or redirects every baseline URL', () => {
-    const lost = baseline.filter((url) => !(url in DROPPED_URLS) && !destination(url));
-    expect(lost).toEqual([]);
-  });
-
-  it('has dropped only the URLs listed as dropped', () => {
-    for (const url of Object.keys(DROPPED_URLS)) {
-      expect(baseline, `${url} is not in the baseline`).toContain(url);
-      expect(destination(url), `${url} is listed as dropped but still works`).toBeNull();
-    }
-  });
-
-  it('has added no pages beyond the new homes of old URLs', () => {
-    const known = new Set(baseline.map(destination).filter(Boolean));
-    const added = [...built].filter(
-      (url) =>
-        !known.has(url) &&
-        !Object.keys(ADDED_URL_PREFIXES).some((prefix) => url.startsWith(prefix)),
-    );
-    expect(added).toEqual([]);
-  });
-});
-
-describe('R4: tag and category URLs are unchanged', () => {
-  it('builds every baseline tag and category page at the same URL', () => {
-    const moved = baseline.filter((url) => {
-      const type = classifyPath(url);
-      return (type === 'tag' || type === 'category') && !built.has(url);
-    });
-    expect(moved).toEqual([]);
-  });
-});
 
 describe('R3: redirects are sound', () => {
   it('has rules', () => {

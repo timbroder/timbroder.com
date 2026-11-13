@@ -1,220 +1,167 @@
 /**
- * R11: the tags in the head of every page match the live site.
+ * R11: the tags in the head of every page.
  *
  * These are what a search result and a shared link are made from: the
  * title, the description, the canonical address, the Open Graph and Twitter
  * tags, the structured data on posts, and the links to the feed, the
- * manifest, Mastodon and the neighbouring pages of a list.
+ * manifest and Mastodon.
  *
- * Intended differences are the ones in tests/lib/expected.ts: a post with a
- * new slug has a new address, a repaired post has its real title and date,
- * and a description follows the text of the post where that text changed.
+ * The values are the ones the Gatsby site had; they were compared with it
+ * page by page until the day this site replaced it. These tests hold the
+ * rules those values follow, on whatever pages the build has.
  */
 import { describe, expect, it } from 'vitest';
-import { livePages } from '../lib/live.ts';
-import { builtPages, newUrlOf, readPage } from '../lib/dist.ts';
-import {
-  MERGED_SPELLINGS,
-  PAGE_DESCRIPTION_DIFFERS,
-  SUMMARY_DIFFERS,
-  isRepaired,
-} from '../lib/expected.ts';
-import { NOW_RENDERED, isRepairedBody } from '../lib/expected-content.ts';
-import type { HeadFacts, PageFacts } from '../lib/extract.ts';
+import { builtPages, readPage } from '../lib/dist.ts';
+import type { HeadFacts } from '../lib/extract.ts';
 
 const SITE = 'https://timbroder.com';
 const SUFFIX = ' | Tim Broder .com';
-const built = builtPages();
+const DEFAULT_IMAGE = `${SITE}/og-image.png`;
+const FEED = { rel: 'alternate', href: '/feed', type: 'application/rss+xml', title: 'TimBroder.com RSS Feed' };
+const FEEDBURNER = { ...FEED, href: 'https://feeds.feedburner.com/timbroder' };
+const MANIFEST = { rel: 'manifest', href: '/manifest.webmanifest' };
+const MASTODON = { rel: 'me', href: 'https://masto.ai/@timothybroder' };
 
-interface Pair {
-  live: PageFacts;
-  /** The address the page has now. */
+const isPost = (url: string) => /^\/\d{4}\/\d{2}\/[^/]+\/$/.test(url);
+const isHomeList = (url: string) => url === '/' || /^\/page\/\d+\/$/.test(url);
+
+interface Page {
   url: string;
-  now: HeadFacts;
+  head: HeadFacts;
 }
 
-/** Baseline pages that still exist, each with the head it has now. */
-const pairs: Pair[] = livePages().flatMap((live) => {
-  const url =
-    live.url === '/404.html'
-      ? live.url
-      : live.type === 'post'
-        ? newUrlOf(live.url)
-        : built.has(live.url)
-          ? live.url
-          : null;
-  return url ? [{ live, url, now: readPage(url).head }] : [];
-});
-const posts = pairs.filter(({ live }) => live.type === 'post');
+const pages: Page[] = [...builtPages(), '/404.html']
+  .filter((url) => !url.startsWith('/astrobook/'))
+  .map((url) => ({ url, head: readPage(url).head }));
 
-/** A page whose summary is taken from text that is meant to differ. */
-const summaryMayDiffer = ({ live, url }: Pair) =>
-  SUMMARY_DIFFERS.includes(url) ||
-  url in PAGE_DESCRIPTION_DIFFERS ||
-  NOW_RENDERED.has(live.url) ||
-  isRepairedBody(live.url) ||
-  isRepaired(live.url);
+const failing = (test: (page: Page) => boolean) => pages.filter(test).map(({ url }) => url);
 
-const differing = (test: (pair: Pair) => boolean) => pairs.filter(test).map(({ url }) => url);
-
-/** A description keeps the line breaks of the post on the live site. They mean nothing in a tag. */
-const oneLine = (text: string | null | undefined) => (text ?? '').replace(/\s+/g, ' ').trim();
+/** True when the head has exactly this link. Key order does not matter. */
+const has = (head: HeadFacts, link: Record<string, string>) =>
+  head.links.some(
+    (candidate) =>
+      Object.keys(candidate).length === Object.keys(link).length &&
+      Object.entries(link).every(([key, value]) => (candidate as unknown as Record<string, string>)[key] === value),
+  );
 
 describe('R11: head tags', () => {
-  it('compares every page of the live site that still exists', () => {
-    expect(pairs.length).toBeGreaterThan(765);
-    expect(posts.length).toBeGreaterThanOrEqual(519);
+  it('covers every page of the site', () => {
+    expect(pages.length).toBeGreaterThan(765);
   });
 
-  it('keeps the language and the title', () => {
-    expect(differing(({ live, now }) => live.head.lang !== now.lang)).toEqual([]);
+  it('gives every page a language and a title that ends with the site name', () => {
+    expect(failing(({ head }) => head.lang !== 'en')).toEqual([]);
     expect(
-      differing((pair) => !isRepaired(pair.live.url) && pair.live.head.title !== pair.now.title),
+      failing(({ head }) => !head.title?.endsWith(SUFFIX) || head.title.length <= SUFFIX.length),
     ).toEqual([]);
   });
 
-  it('gives the repaired posts their real title', () => {
-    const repaired = pairs.filter(({ live }) => isRepaired(live.url));
-    expect(repaired.length).toBe(3);
-    for (const { now } of repaired) {
-      expect(now.title).toMatch(/^\S.+ \| Tim Broder \.com$/);
-      expect(now.title).not.toMatch(/^null /);
-    }
-  });
-
-  it('keeps the description, unless the text it is taken from is meant to differ', () => {
+  it('gives every page a description, on one line', () => {
     expect(
-      differing(
-        (pair) => !summaryMayDiffer(pair) && oneLine(pair.live.head.description) !== pair.now.description,
+      failing(
+        ({ head }) =>
+          !head.description || head.description !== head.description.replace(/\s+/g, ' ').trim(),
       ),
     ).toEqual([]);
   });
 
-  it('lists a page description as different only while it really is', () => {
-    const stale = Object.keys(PAGE_DESCRIPTION_DIFFERS).filter((url) => {
-      const pair = pairs.find((candidate) => candidate.url === url);
-      return !pair || oneLine(pair.live.head.description) === pair.now.description;
-    });
-    expect(stale).toEqual([]);
-  });
-
-  it('writes every description on one line', () => {
-    expect(differing(({ now }) => now.description !== oneLine(now.description))).toEqual([]);
-  });
-
-  it('never leaves a page without a description', () => {
-    expect(differing(({ now }) => !now.description?.trim())).toEqual([]);
-  });
-
   it('points the canonical address at the page itself', () => {
     expect(
-      differing(({ url, now }) => now.canonical !== (url === '/404.html' ? null : `${SITE}${url}`)),
-    ).toEqual([]);
-    // The live site did the same, so this is no change.
-    expect(
-      pairs.filter(({ live }) => live.head.canonical !== null && live.head.canonical !== `${SITE}${live.url}`),
+      failing(({ url, head }) => head.canonical !== (url === '/404.html' ? null : `${SITE}${url}`)),
     ).toEqual([]);
   });
 
-  it('has the same Open Graph and Twitter tags', () => {
-    const wrong = differing(({ live, url, now }) => {
-      const title = now.title!.slice(0, -SUFFIX.length);
-      const expected = {
-        og: {
-          'og:title': title,
-          'og:description': now.description,
-          'og:type': live.head.og['og:type'],
-          ...(url === '/404.html' ? {} : { 'og:url': `${SITE}${url}` }),
-          'og:image': live.head.og['og:image'],
-        },
-        twitter: {
-          'twitter:card': live.head.twitter['twitter:card'],
-          'twitter:title': title,
-          'twitter:description': now.description,
-          'twitter:image': live.head.twitter['twitter:image'],
-        },
+  it('repeats the title, description and address in the Open Graph and Twitter tags', () => {
+    const wrong = failing(({ url, head }) => {
+      const title = head.title!.slice(0, -SUFFIX.length);
+      const image = head.og['og:image'];
+      const og = {
+        'og:title': title,
+        'og:description': head.description,
+        'og:type': 'website',
+        ...(url === '/404.html' ? {} : { 'og:url': `${SITE}${url}` }),
+        'og:image': image,
       };
-      return JSON.stringify(expected.og) !== JSON.stringify(now.og) ||
-        JSON.stringify(expected.twitter) !== JSON.stringify(now.twitter);
+      const twitter = {
+        'twitter:card': 'summary_large_image',
+        'twitter:title': title,
+        'twitter:description': head.description,
+        'twitter:image': image,
+      };
+      return JSON.stringify(og) !== JSON.stringify(head.og) || JSON.stringify(twitter) !== JSON.stringify(head.twitter);
     });
     expect(wrong).toEqual([]);
   });
 
-  it('repeats the title and description in those tags as the live site did', () => {
-    // On the live site the three were always the same text. A few titles
-    // there end in a space, which the page title never showed.
-    const odd = pairs.filter(
-      ({ live }) =>
-        !isRepaired(live.url) &&
-        (`${live.head.og['og:title'].trim()}${SUFFIX}` !== live.head.title ||
-          live.head.og['og:title'] !== live.head.twitter['twitter:title'] ||
-          live.head.og['og:description'] !== live.head.description ||
-          live.head.twitter['twitter:description'] !== live.head.description),
-    );
-    expect(odd.map(({ live }) => live.url)).toEqual([]);
+  it("uses the site's picture for link previews, unless a post has its own", () => {
+    // Only a post from Contentful can have one; tests/build/contentful.test.ts covers that.
+    expect(
+      failing(({ url, head }) => {
+        const image = head.og['og:image'];
+        return isPost(url) ? !/^https:\/\/\S+$/.test(image) : image !== DEFAULT_IMAGE;
+      }),
+    ).toEqual([]);
   });
 
-  it('has the same links to the feed, the manifest, Mastodon and neighbouring pages', () => {
-    const wrong = differing(
-      ({ live, url, now }) =>
-        !(url in MERGED_SPELLINGS) && JSON.stringify(live.head.links) !== JSON.stringify(now.links),
-    );
+  it('links every page to the feed and the manifest', () => {
+    expect(failing(({ head }) => !has(head, FEED) || !has(head, MANIFEST))).toEqual([]);
+  });
+
+  it('links to Feedburner and Mastodon from the pages of the home list, and from no other', () => {
+    expect(
+      failing(
+        ({ url, head }) =>
+          has(head, FEEDBURNER) !== isHomeList(url) || has(head, MASTODON) !== isHomeList(url),
+      ),
+    ).toEqual([]);
+  });
+
+  it('has no head link beyond those and the ones between the pages of a list', () => {
+    const known = [FEED, FEEDBURNER, MANIFEST, MASTODON];
+    expect(
+      failing(({ head }) =>
+        head.links.some(
+          (link) =>
+            link.rel !== 'prev' &&
+            link.rel !== 'next' &&
+            !known.some((candidate) => candidate.rel === link.rel && candidate.href === link.href),
+        ),
+      ),
+    ).toEqual([]);
+  });
+
+  it('describes every post to search engines, and nothing else', () => {
+    const person = { '@type': 'Person', name: 'Tim Broder', url: SITE };
+    const wrong = failing(({ url, head }) => {
+      if (!isPost(url)) return head.jsonLd.length !== 0;
+      const address = `${SITE}${url}`;
+      const [data] = head.jsonLd as Record<string, unknown>[];
+      const expected = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: head.title!.slice(0, -SUFFIX.length),
+        // A post with no text has no summary of its own: its page falls back
+        // on the site's description, and its structured data gives none.
+        description: data?.description === '' ? '' : head.description,
+        url: address,
+        datePublished: readPage(url).post!.dateTime,
+        author: person,
+        publisher: person,
+        image: head.og['og:image'],
+        mainEntityOfPage: { '@type': 'WebPage', '@id': address },
+      };
+      return head.jsonLd.length !== 1 || JSON.stringify(expected) !== JSON.stringify(data);
+    });
     expect(wrong).toEqual([]);
   });
 
-  it('describes every post to search engines as the live site did', () => {
-    const wrong = posts
-      .filter(({ live, url, now }) => {
-        const was = live.head.jsonLd[0] as Record<string, unknown>;
-        const address = `${SITE}${url}`;
-        const expected: Record<string, unknown> = {
-          ...was,
-          description: oneLine(was.description as string),
-          url: address,
-          mainEntityOfPage: { '@type': 'WebPage', '@id': address },
-        };
-        const is = { ...(now.jsonLd[0] as Record<string, unknown>) };
-        if (isRepaired(live.url)) {
-          // Its title and date were missing or wrong on the live site.
-          for (const key of ['headline', 'datePublished', 'description']) {
-            delete expected[key];
-            delete is[key];
-          }
-        } else {
-          expected.headline = String(was.headline).trim();
-          if (summaryMayDiffer({ live, url, now })) {
-            delete expected.description;
-            delete is.description;
-          }
-        }
-        return now.jsonLd.length !== 1 || JSON.stringify(expected) !== JSON.stringify(is);
-      })
-      .map(({ url }) => url);
-    expect(wrong).toEqual([]);
-  });
-
-  it('gives a repaired post a headline and a date in its structured data', () => {
-    for (const { now, live } of posts.filter(({ live }) => isRepaired(live.url))) {
-      const data = now.jsonLd[0] as Record<string, unknown>;
-      expect(data.headline, live.url).toBeTruthy();
-      expect(data.datePublished, live.url).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-    }
-  });
-
-  it('has structured data on posts only', () => {
-    expect(differing(({ live, now }) => live.type !== 'post' && now.jsonLd.length > 0)).toEqual([]);
-  });
-
-  it('gives every page the same head whether or not the live site had it', () => {
-    // Pages that are new (the three newly listed posts are not new pages).
-    const others = [...built].filter(
-      (url) => !url.startsWith('/astrobook/') && !pairs.some((pair) => pair.url === url),
-    );
-    for (const url of others) {
-      const { head } = readPage(url);
-      expect(head.canonical, url).toBe(`${SITE}${url}`);
-      expect(head.og['og:url'], url).toBe(`${SITE}${url}`);
-      expect(head.links.some((link) => link.href === '/feed'), url).toBe(true);
-    }
+  it('gives every post a date in its structured data', () => {
+    expect(
+      failing(
+        ({ url, head }) =>
+          isPost(url) &&
+          !/^\d{4}-\d{2}-\d{2}$/.test(String((head.jsonLd[0] as Record<string, unknown>)?.datePublished)),
+      ),
+    ).toEqual([]);
   });
 });
