@@ -65,6 +65,38 @@ jobs:
       # Compares the build with the baseline captured from the live site.
       - run: npm run test:build
 
+  browser:
+    name: Browser tests
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
+    runs-on: ubuntu-latest
+    # Screenshots only compare on the system that took them, so the browser
+    # tests always run in this pinned image. Keep the tag the same as the
+    # version of @playwright/test in package.json; a unit test checks it.
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.0-noble
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:browser
+      # The screenshots taken in this run, and a report with the differences
+      # when a comparison fails. New story screenshots are committed from here.
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: browser-test-results
+          path: |
+            tests/browser/__screenshots__/linux
+            test-results
+            playwright-report
+          if-no-files-found: ignore
+          retention-days: 14
+
   smoke:
     name: Smoke tests
     needs: changes
@@ -93,7 +125,7 @@ jobs:
 
   gate:
     name: gate
-    needs: [changes, test, smoke]
+    needs: [changes, test, browser, smoke]
     if: always()
     runs-on: ubuntu-latest
     steps:
@@ -101,10 +133,12 @@ jobs:
         env:
           CHANGES: ${{ needs.changes.result }}
           TEST: ${{ needs.test.result }}
+          BROWSER: ${{ needs.browser.result }}
           SMOKE: ${{ needs.smoke.result }}
         run: |
           echo "changes: $CHANGES"
           echo "test:    $TEST"
+          echo "browser: $BROWSER"
           echo "smoke:   $SMOKE"
           if [ "$CHANGES" != "success" ]; then
             echo "Could not classify the change."
@@ -112,6 +146,10 @@ jobs:
           fi
           if [ "$TEST" != "success" ] && [ "$TEST" != "skipped" ]; then
             echo "Tests did not pass."
+            exit 1
+          fi
+          if [ "$BROWSER" != "success" ] && [ "$BROWSER" != "skipped" ]; then
+            echo "Browser tests did not pass."
             exit 1
           fi
           if [ "$SMOKE" != "success" ] && [ "$SMOKE" != "skipped" ]; then

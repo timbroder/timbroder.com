@@ -70,3 +70,64 @@ export const MERGED_SPELLINGS: Record<string, string> = {
  * day by day, not post by post.
  */
 export const SAME_DAY_ORDER_MAY_DIFFER = true;
+
+/**
+ * Posts whose title, date, tags or link differ from the live site because
+ * their frontmatter was broken there and is now fixed. Matched by the end of
+ * the URL.
+ */
+export const REPAIRED_POSTS: Record<string, string> = {
+  '/games-i-was-addicted-to-in-2014/':
+    'Four spaces before the opening "---" meant none of its frontmatter was read. It now has its title, date, tag, category and link.',
+  '/fussy-coffee/': 'It had no date. It now has the date from its file name.',
+  '/heymamma-2/':
+    'Its title starts with "#", which YAML read as a comment, so the live title is "null". The title is now quoted.',
+};
+
+export const isRepaired = (url: string) =>
+  Object.keys(REPAIRED_POSTS).some((ending) => url.endsWith(ending));
+
+/**
+ * Posts with `link: None` in frontmatter. The live site treats "None" as a
+ * URL: it shows an "original article" link to .../None/ and says "Read
+ * commentary" on the card. They are ordinary posts now.
+ */
+export const NOT_LINK_POSTS = [
+  '/2014/05/reordering-nsfetchedresultscontroller/',
+  '/2014/09/the-rise-and-fall-of-communication-mediums/',
+];
+
+/**
+ * Posts with an empty tag. The live site shows an empty pill linking to
+ * /tag//. Empty tags are now ignored.
+ */
+export const HAD_EMPTY_TAGS = [
+  '/2016/07/opening-iterm2-tabs-at-specific-directories/',
+  '/2017/01/adding-smartspeed-to-any-audio-file/',
+];
+
+/**
+ * Cards whose summary differs from the live site, because the post's body
+ * renders differently. In most of them the live site shows raw markdown
+ * ("[Facebook Connect](http://...)", "**queue") that is now rendered; in the
+ * rest a few characters of difference move the point where the summary is
+ * cut.
+ *
+ * TODO(stage 5): go through these with the body comparison and keep only the
+ * ones that are improvements.
+ */
+export const SUMMARY_DIFFERS = [
+  '/2007/09/google-acquires-postini/',
+  '/2007/10/google-overheard-in-office/',
+  '/2008/09/digg-and-facebook-heading-to-future-of/',
+  '/2008/09/i-just-won-50000000-gbp-from-google-uk/',
+  '/2009/11/online-advertising-moving-to-your-car/',
+  '/2011/04/new-digg-reverse-paywall-coming/',
+  '/2013/10/why-android-first-is-a-myth-steve-cheney-technology-business-strategy/',
+  '/2013/11/weather-notifications-on-lifehacker/',
+  '/2014/03/avspeechsynthesizers-queue-doesnt-work/',
+  '/2015/01/equality-in-the-apple-blogging-scene/',
+];
+
+/** The 404 page: the live site highlights "Posts" in the navigation there. */
+export const NAV_HIGHLIGHT_DIFFERS = ['/404.html'];

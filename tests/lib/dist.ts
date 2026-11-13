@@ -116,3 +116,13 @@ export function resolveRedirect(request: string): RedirectRule | null {
 
 /** The form of a path that a browser puts on the wire. */
 export const asBrowserSends = (path: string) => encodeURI(path);
+
+/**
+ * Where a URL from the live site ends up on the new one: the same page, the
+ * target of its redirect, or null if it is gone.
+ */
+export function newUrlOf(liveUrl: string): string | null {
+  if (builtPages().has(liveUrl)) return liveUrl;
+  const rule = resolveRedirect(asBrowserSends(liveUrl));
+  return rule && builtPages().has(rule.to) ? rule.to : null;
+}

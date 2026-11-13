@@ -1,0 +1,22 @@
+---
+/** The top of a post: its date, then its title. */
+import { formatDate, isoDate } from '../lib/site.ts';
+import Headline from './Headline.astro';
+
+interface Props {
+  title: string;
+  date: Date;
+}
+
+const { title, date } = Astro.props;
+---
+
+<header class="flex flex-col">
+  <span class="flex flex-row mt-2">
+    <time datetime={isoDate(date)} class="flex items-center text-base text-zinc-500">
+      <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
+      <span class="ml-3">{formatDate(date)}</span>
+    </time>
+  </span>
+  <Headline padded={false}>{title}</Headline>
+</header>

@@ -1,0 +1,12 @@
+---
+/** Wraps long-form content in the site's typography. */
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={[className, 'prose']}>
+  <slot />
+</div>

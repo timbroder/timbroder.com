@@ -3,3 +3,53 @@
 /* The theme (font scale and typography) is still the Tailwind 3 config from
    the Gatsby site, loaded as it is so the design does not shift. */
 @config '../../tailwind.config.cjs';
+
+/* A word too long for its line (a web address, a file path) wraps instead
+   of making the page scroll sideways. */
+html {
+  overflow-wrap: break-word;
+}
+
+/*
+ * Code blocks.
+ *
+ * The Gatsby site used Prism's Okaidia theme with line numbers. Astro
+ * highlights with Shiki, so these rules recreate that look: the same dark
+ * background, type and spacing, and a numbered gutter drawn with a CSS
+ * counter (each line is a `.line` span).
+ */
+pre.astro-code {
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+  border-radius: 0.3em;
+  background-color: #272822;
+  color: #f8f8f2;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  tab-size: 4;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+pre.astro-code code {
+  counter-reset: line;
+  padding: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
+
+pre.astro-code .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 2em;
+  margin-right: 1em;
+  padding-right: 0.8em;
+  border-right: 1px solid #999;
+  color: #999;
+  text-align: right;
+  text-shadow: none;
+  user-select: none;
+}

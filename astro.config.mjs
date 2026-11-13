@@ -5,6 +5,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import astrobook from 'astrobook';
+import { codeTheme } from './src/lib/code-theme.ts';
 
 /**
  * Netlify reads redirects from a file called `_redirects`. Astro will not
@@ -31,6 +32,8 @@ export default defineConfig({
   markdown: {
     // The Gatsby site did not convert quotes or dashes, so neither does this.
     processor: satteri({ features: { smartPunctuation: false } }),
+    // Monokai with a few colours lightened; see src/lib/code-theme.ts.
+    shikiConfig: { theme: codeTheme },
   },
   integrations: [
     // sitemap-index.xml and sitemap-0.xml, the same names the Gatsby site used.
@@ -45,6 +48,8 @@ export default defineConfig({
             subpath: '/astrobook',
             directory: 'src/components',
             css: ['./src/styles/global.css'],
+            // Keeps the component library out of search results.
+            head: './src/components/AstrobookHead.astro',
             title: 'timbroder.com components',
           }),
         ]),

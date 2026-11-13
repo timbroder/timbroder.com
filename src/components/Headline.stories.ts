@@ -1,4 +1,4 @@
-import HeadlineExample from './HeadlineExample.astro';
+import HeadlineExample from './examples/HeadlineExample.astro';
 
 export default {
   component: HeadlineExample,
