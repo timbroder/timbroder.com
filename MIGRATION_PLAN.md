@@ -1,5 +1,7 @@
 # Gatsby to Astro migration plan
 
+> **Done.** The Astro site replaced the Gatsby site at timbroder.com on 2026-11-13 (#142). This document is kept as the record of what was decided and why. It describes the work as it was planned and carried out, so parts of it speak of the "live site" meaning the Gatsby site, and of tests and scripts that were removed once the new site was live. What is left to do is at the end of section 9.
+
 This plan replaces the earlier ones in #96, #97, #98, #118 and #120. It starts fresh: nothing is carried over from the earlier Astro attempt.
 
 The site moves from Gatsby 5 to Astro 7 and keeps its look. Every stage adds automated tests, and the live Gatsby site is the reference those tests compare against.
@@ -340,14 +342,18 @@ The crawl is throttled and retries, because the live site occasionally returns a
 
 ### New posts and the tests
 
-**After cutover, publishing a post must never need a change to a test.**
+**Publishing a post never needs a change to a test.**
 
 - A markdown post only touches `content/` and `public/images/`, so CI skips the tests for it. A post published in Contentful rebuilds the site on Netlify and never reaches CI.
 - The build still checks every post (decision 28). A post that breaks a rule stops the Netlify build with a message, and the site stays as it was.
-- No test that remains after cutover may depend on which posts exist. The tests that compare the build with the live Gatsby site do, and they go at cutover: the baseline tests, the browser comparison with the live site, and the list of Contentful posts (`CONTENTFUL_ON_LIVE`). The stored page screenshots that replace the browser comparison are taken of pages a new post does not change: single posts, markdown pages, the About page, the 404 page and lists of old tags. The home list is not one of them.
+- No test depends on which posts exist. The tests that compared the build with the Gatsby site did, and they were removed once the new site was live: the baseline and everything that read it, the browser comparison with the live site, and the list of Contentful posts. What they proved is kept in a form that publishing cannot break:
+  - **The rules**, checked on whatever the build has: the home list has every post, a tag page has the posts that carry the tag, 20 to a page, newest first; every page has its head tags; every feed item is whole.
+  - **What existed on the day of the cutover** (`tests/fixtures/cutover.json`): every post and page address, every old address that redirects, and every feed guid must keep working. This list only changes if something from that day is removed on purpose.
+  - **Stored screenshots of pages a new post does not change**: single posts, lists of old tags, the About page, a markdown page and the 404 page. The home list is not one of them.
+  - **Contentful posts on the deployed site**, found by the smoke tests as the posts the deployed site has and the local build of the same commit lacks.
 - What is left can only fail on a post that has a real fault, such as a link to a page that does not exist, and it says so the next time the tests run.
 
-**Until cutover, a new post on the live site does turn CI red on the migration branches,** because those tests prove the new site equals the live one, and the live one has just changed. Nothing is edited by hand for a markdown post: `main` is merged into `astro` and the baseline is captured again. A post published in Contentful also needs one line in `CONTENTFUL_ON_LIVE`, since CI cannot read Contentful.
+Before the cutover a new post on the live site did turn CI red on the migration branches, because those tests proved the new site equal to the live one, and the live one had just changed.
 
 ### Screenshots
 
@@ -356,7 +362,7 @@ The crawl is throttled and retries, because the live site occasionally returns a
 - **The comparison is strict enough to notice one shade of grey.** At most 100 pixels may differ in a screenshot. The pages differ by 22 at most, because the live site splits some lines of text in a way that moves a letter by a fraction of a pixel. Changing the colour of one line of small text changes about 470. The first version of this test allowed 1% of the pixels to differ, which let a change of text colour through unnoticed.
 - **Story screenshots are stored**, since stories have no live counterpart. They are taken in one pinned Playwright container, never directly on a laptop, because fonts render differently on macOS and Linux. A unit test keeps the container's version in step with the installed Playwright. A story has to match its screenshot exactly.
 - **To accept a deliberate visual change,** run `npm run build`, then `npm run test:browser:linux -- stories --update-snapshots`, and commit the screenshots that changed. This runs the same container as CI and needs Docker. Without Docker: delete the affected screenshots, let CI take new ones, and commit them from the run's artifact.
-- **After cutover** the live site is the new site, so the page comparison switches to stored screenshots too.
+- **After cutover** the live site is the new site, so the page comparison switched to stored screenshots too (`tests/browser/pages.spec.ts`). They leave out the copyright line, which shows the year of the build.
 
 ## 7. Astrobook
 
@@ -534,13 +540,22 @@ Merge the cutover PR. Netlify builds and publishes the Astro site.
 
 ### Straight after
 
-1. Run the smoke tests against `https://timbroder.com`: `SMOKE_URL=https://timbroder.com npm run test:smoke` after `npm run build`.
-2. Open the real-time view in Google Analytics and load a page of the site. This is the first time analytics can be seen working, because it only runs at `timbroder.com`.
-3. Load `/feed` and check that Feedburner picks up the new build.
-4. Resubmit the sitemap in Google Search Console.
-5. In Netlify, remove the Gatsby build plugins.
-6. Close pull request #136 without merging it, and delete the `astro-preview` branch.
-7. Take out the tests that compare the build with the old site (see "New posts and the tests"). Until that is done, a new post makes them fail the next time the tests run.
+Done on 2026-11-13:
+
+1. The smoke tests pass against `https://timbroder.com`. On the first run the two feed checks timed out: just after the deploy, Netlify took 12 to 22 seconds to send the 1.6 MB feed. It takes under a second since.
+2. Every one of the 778 addresses the Gatsby site had was asked for on production. 690 are served directly, 87 redirect in one step to a page, and `/tag//` returns 404, as intended.
+3. A browser opening a post at `timbroder.com` asks Google for the analytics code with the right property; the same page on a deploy preview asks for nothing.
+4. The tests that compared the build with the Gatsby site were removed, with the scripts that made the one-off changes to the content (see "New posts and the tests").
+
+Still to do:
+
+1. Tim: look at the real-time view in Google Analytics while loading a page of the site.
+2. Tim: check that Feedburner has picked up the new feed. An hour after the cutover it was still serving its copy of the old one.
+3. Tim: resubmit the sitemap in Google Search Console.
+4. Tim: remove the Gatsby build plugins in Netlify.
+5. Tim: mark `gate` as a required check on `main`.
+6. Close #136 without merging it, and delete the `astro-preview`, `astro` and stage branches.
+7. Any time: look for the 90 missing pictures in Google Photos (`RECOVER_MISSING_IMAGES.md`).
 
 ### Rollback
 
@@ -549,8 +564,7 @@ Netlify keeps every deploy. To roll back, publish the last Gatsby deploy from th
 ### In the following two weeks
 
 - Watch for 404s in Netlify and in Search Console.
-- Switch page screenshot tests from the live baseline to the new site's own screenshots, of pages that a new post does not change (see "New posts and the tests").
-- Remove this plan, the baseline crawl script and the stale migration branches.
+- Remove this plan once nothing in it is needed any more.
 
 ## 10. Things to prove early
 

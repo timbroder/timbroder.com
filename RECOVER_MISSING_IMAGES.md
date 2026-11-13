@@ -28,7 +28,7 @@ You need:
 
 If you have neither, stop and tell Tim which one you need. Do not look for another way in.
 
-Start from the right branch. If `MIGRATION_PLAN.md` is still at the root of the repo and says the cutover has not happened, branch from `astro`. After the cutover, branch from `main`.
+Branch from `main`.
 
 ## Step 1: see what is missing
 
@@ -153,5 +153,5 @@ In the pull request, give Tim three short lists:
 ## Background
 
 - `content/image-sources.json` is the record of every image that used to be remote: its old address, what the post shows now, and where the copy came from. For a missing image, `positions` says which image of which post it is.
-- `scripts/images/fetch.ts` and `scripts/images/apply.ts` did the original search and are not needed for this job.
-- `MIGRATION_PLAN.md` describes the whole migration. Stage 5 is the part about images.
+- The scripts that did the original search were removed once the site went live. `scripts/images/recover.ts` is all this job needs.
+- `MIGRATION_PLAN.md`, if it is still in the repo, describes the whole migration. Stage 5 is the part about images.
