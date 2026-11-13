@@ -5,7 +5,7 @@
  */
 import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
-import { loadPages } from '../lib/baseline.ts';
+import { livePages } from '../lib/live.ts';
 import { builtPages, exists, newUrlOf, readHtml } from '../lib/dist.ts';
 import { loadImageSources, PLACEHOLDER } from '../lib/image-sources.ts';
 
@@ -59,7 +59,7 @@ describe('R13: local images load', () => {
 describe('R14: the old posts show no image from another host', () => {
   // Every post that existed when the site moved. A post written since may
   // show a remote image; nothing stops that.
-  const migrated = loadPages()
+  const migrated = livePages()
     .filter((page) => page.post)
     .map((page) => newUrlOf(page.url))
     .filter((url): url is string => url !== null);

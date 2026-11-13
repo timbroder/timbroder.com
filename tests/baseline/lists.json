@@ -524,55 +524,60 @@
    "pagination": null,
    "sequence": 24
   },
+  "/tag/astro/": {
+   "headline": "Tag: astro",
+   "pagination": null,
+   "sequence": 25
+  },
   "/tag/atom/": {
    "headline": "Tag: Atom",
    "pagination": null,
-   "sequence": 25
+   "sequence": 26
   },
   "/tag/audiobooks/": {
    "headline": "Tag: audiobooks",
    "pagination": null,
-   "sequence": 26
+   "sequence": 27
   },
   "/tag/audiobookshelf/": {
    "headline": "Tag: audiobookshelf",
    "pagination": null,
-   "sequence": 26
+   "sequence": 27
   },
   "/tag/autocomplete/": {
    "headline": "Tag: autocomplete",
    "pagination": null,
-   "sequence": 27
+   "sequence": 28
   },
   "/tag/automation/": {
    "headline": "Tag: automation",
    "pagination": null,
-   "sequence": 28
+   "sequence": 29
   },
   "/tag/av-speech-synthesizer/": {
    "headline": "Tag: AVSpeechSynthesizer",
    "pagination": null,
-   "sequence": 29
+   "sequence": 30
   },
   "/tag/avengers/": {
    "headline": "Tag: Avengers",
    "pagination": null,
-   "sequence": 30
+   "sequence": 31
   },
   "/tag/batman-and-robin/": {
    "headline": "Tag: Batman and Robin",
    "pagination": null,
-   "sequence": 31
+   "sequence": 32
   },
   "/tag/batman-inc/": {
    "headline": "Tag: Batman Inc.",
    "pagination": null,
-   "sequence": 31
+   "sequence": 32
   },
   "/tag/batman/": {
    "headline": "Tag: Batman",
    "pagination": null,
-   "sequence": 31
+   "sequence": 32
   },
   "/tag/beta/": {
    "headline": "Tag: beta",
@@ -582,57 +587,57 @@
   "/tag/bit-ly/": {
    "headline": "Tag: bit.ly",
    "pagination": null,
-   "sequence": 32
+   "sequence": 33
   },
   "/tag/blackberry/": {
    "headline": "Tag: blackberry",
    "pagination": null,
-   "sequence": 33
+   "sequence": 34
   },
   "/tag/blogger/": {
    "headline": "Tag: blogger",
    "pagination": null,
-   "sequence": 34
+   "sequence": 35
   },
   "/tag/bookmarks/": {
    "headline": "Tag: bookmarks",
    "pagination": null,
-   "sequence": 35
+   "sequence": 36
   },
   "/tag/books/": {
    "headline": "Tag: books",
    "pagination": null,
-   "sequence": 36
+   "sequence": 37
   },
   "/tag/brightkite/": {
    "headline": "Tag: brightkite",
    "pagination": null,
-   "sequence": 37
+   "sequence": 38
   },
   "/tag/caddy/": {
    "headline": "Tag: caddy",
    "pagination": null,
-   "sequence": 38
+   "sequence": 39
   },
   "/tag/calendar/": {
    "headline": "Tag: calendar",
    "pagination": null,
-   "sequence": 39
+   "sequence": 40
   },
   "/tag/calibre/": {
    "headline": "Tag: Calibre",
    "pagination": null,
-   "sequence": 40
+   "sequence": 41
   },
   "/tag/cheese/": {
    "headline": "Tag: Cheese",
    "pagination": null,
-   "sequence": 41
+   "sequence": 42
   },
   "/tag/chrome/": {
    "headline": "Tag: chrome",
    "pagination": null,
-   "sequence": 42
+   "sequence": 43
   },
   "/tag/ck-editor/": {
    "headline": "Tag: CKEditor",
@@ -642,107 +647,112 @@
   "/tag/claude/": {
    "headline": "Tag: claude",
    "pagination": null,
-   "sequence": 43
+   "sequence": 44
   },
   "/tag/coffee/": {
    "headline": "Tag: coffee",
    "pagination": null,
-   "sequence": 44
+   "sequence": 45
   },
   "/tag/comic-con/": {
    "headline": "Tag: ComicCon",
    "pagination": null,
-   "sequence": 45
+   "sequence": 46
   },
   "/tag/commentary/": {
    "headline": "Tag: Commentary",
    "pagination": null,
-   "sequence": 46
+   "sequence": 47
+  },
+  "/tag/contentful/": {
+   "headline": "Tag: contentful",
+   "pagination": null,
+   "sequence": 25
   },
   "/tag/core-data/": {
    "headline": "Tag: CoreData",
    "pagination": null,
-   "sequence": 47
+   "sequence": 48
   },
   "/tag/css/": {
    "headline": "Tag: css",
    "pagination": null,
-   "sequence": 48
+   "sequence": 49
   },
   "/tag/dayone/": {
    "headline": "Tag: dayone",
    "pagination": null,
-   "sequence": 49
+   "sequence": 50
   },
   "/tag/debug/": {
    "headline": "Tag: debug",
    "pagination": null,
-   "sequence": 50
+   "sequence": 51
   },
   "/tag/digg/": {
    "headline": "Tag: digg",
    "pagination": null,
-   "sequence": 51
+   "sequence": 52
   },
   "/tag/django/": {
    "headline": "Tag: django",
    "pagination": null,
-   "sequence": 52
+   "sequence": 53
   },
   "/tag/docker/": {
    "headline": "Tag: docker",
    "pagination": null,
-   "sequence": 53
+   "sequence": 54
   },
   "/tag/docs-spreadsheets/": {
    "headline": "Tag: Docs Spreadsheets",
    "pagination": null,
-   "sequence": 54
+   "sequence": 55
   },
   "/tag/drafts/": {
    "headline": "Tag: drafts",
    "pagination": null,
-   "sequence": 55
+   "sequence": 56
   },
   "/tag/drm/": {
    "headline": "Tag: DRM",
    "pagination": null,
-   "sequence": 25
+   "sequence": 26
   },
   "/tag/dropbox/": {
    "headline": "Tag: dropbox",
    "pagination": null,
-   "sequence": 56
+   "sequence": 57
   },
   "/tag/encryption/": {
    "headline": "Tag: encryption",
    "pagination": null,
-   "sequence": 57
+   "sequence": 58
   },
   "/tag/engagement/": {
    "headline": "Tag: engagement",
    "pagination": null,
-   "sequence": 58
+   "sequence": 59
   },
   "/tag/esi/": {
    "headline": "Tag: ESI",
    "pagination": null,
-   "sequence": 59
+   "sequence": 60
   },
   "/tag/events/": {
    "headline": "Tag: events",
    "pagination": null,
-   "sequence": 60
+   "sequence": 61
   },
   "/tag/facebook/": {
    "headline": "Tag: facebook",
    "pagination": null,
-   "sequence": 61
+   "sequence": 62
   },
   "/tag/firefox/": {
    "headline": "Tag: firefox",
    "pagination": null,
-   "sequence": 62
+   "sequence": 63
   },
   "/tag/fontis/": {
    "headline": "Tag: Fontis",
@@ -752,102 +762,107 @@
   "/tag/friendfeed/": {
    "headline": "Tag: friendfeed",
    "pagination": null,
-   "sequence": 63
+   "sequence": 64
   },
   "/tag/gadgets/": {
    "headline": "Tag: gadgets",
    "pagination": null,
-   "sequence": 64
+   "sequence": 65
   },
   "/tag/garlic/": {
    "headline": "Tag: Garlic",
    "pagination": null,
-   "sequence": 41
+   "sequence": 42
+  },
+  "/tag/gatsby/": {
+   "headline": "Tag: gatsby",
+   "pagination": null,
+   "sequence": 25
   },
   "/tag/gchat/": {
    "headline": "Tag: gchat",
    "pagination": null,
-   "sequence": 65
+   "sequence": 66
   },
   "/tag/gdata/": {
    "headline": "Tag: gdata",
    "pagination": null,
-   "sequence": 66
+   "sequence": 67
   },
   "/tag/gdrive/": {
    "headline": "Tag: gdrive",
    "pagination": null,
-   "sequence": 67
+   "sequence": 68
   },
   "/tag/gears/": {
    "headline": "Tag: gears",
    "pagination": null,
-   "sequence": 68
+   "sequence": 69
   },
   "/tag/git/": {
    "headline": "Tag: git",
    "pagination": null,
-   "sequence": 69
+   "sequence": 70
   },
   "/tag/github/": {
    "headline": "Tag: github",
    "pagination": null,
-   "sequence": 70
+   "sequence": 71
   },
   "/tag/gmail/": {
    "headline": "Tag: gmail",
    "pagination": null,
-   "sequence": 71
+   "sequence": 72
   },
   "/tag/gme/": {
    "headline": "Tag: GME",
    "pagination": null,
-   "sequence": 72
+   "sequence": 73
   },
   "/tag/google-reader/": {
    "headline": "Tag: Google Reader",
    "pagination": null,
-   "sequence": 73
+   "sequence": 74
   },
   "/tag/google/": {
    "headline": "Tag: Google",
    "pagination": null,
-   "sequence": 74
+   "sequence": 75
   },
   "/tag/gpowered-net/": {
    "headline": "Tag: gpowered.net",
    "pagination": null,
-   "sequence": 75
+   "sequence": 76
   },
   "/tag/greasemonkey/": {
    "headline": "Tag: greasemonkey",
    "pagination": null,
-   "sequence": 76
+   "sequence": 77
   },
   "/tag/groups/": {
    "headline": "Tag: groups",
    "pagination": null,
-   "sequence": 77
+   "sequence": 78
   },
   "/tag/gtd/": {
    "headline": "Tag: GTD",
    "pagination": null,
-   "sequence": 78
+   "sequence": 79
   },
   "/tag/gwt/": {
    "headline": "Tag: GWT",
    "pagination": null,
-   "sequence": 79
+   "sequence": 80
   },
   "/tag/homebrew/": {
    "headline": "Tag: homebrew",
    "pagination": null,
-   "sequence": 80
+   "sequence": 81
   },
   "/tag/homelab/": {
    "headline": "Tag: homelab",
    "pagination": null,
-   "sequence": 81
+   "sequence": 82
   },
   "/tag/howto/": {
    "headline": "Tag: HOWTO",
@@ -856,7 +871,7 @@
     "prev": null,
     "next": "/tag/howto/page/2/"
    },
-   "sequence": 82
+   "sequence": 83
   },
   "/tag/howto/page/2/": {
    "headline": "Tag: HOWTO",
@@ -865,62 +880,62 @@
     "prev": "/tag/howto/",
     "next": null
    },
-   "sequence": 82
+   "sequence": 83
   },
   "/tag/hulu/": {
    "headline": "Tag: Hulu",
    "pagination": null,
-   "sequence": 83
+   "sequence": 84
   },
   "/tag/instapaper/": {
    "headline": "Tag: instapaper",
    "pagination": null,
-   "sequence": 84
+   "sequence": 85
   },
   "/tag/interfacebuilder/": {
    "headline": "Tag: interfacebuilder",
    "pagination": null,
-   "sequence": 85
+   "sequence": 86
   },
   "/tag/internet-explorer/": {
    "headline": "Tag: Internet Explorer",
    "pagination": null,
-   "sequence": 86
+   "sequence": 87
   },
   "/tag/ios/": {
    "headline": "Tag: ios",
    "pagination": null,
-   "sequence": 87
+   "sequence": 88
   },
   "/tag/ipad/": {
    "headline": "Tag: ipad",
    "pagination": null,
-   "sequence": 88
+   "sequence": 89
   },
   "/tag/iphone/": {
    "headline": "Tag: iphone",
    "pagination": null,
-   "sequence": 89
+   "sequence": 90
   },
   "/tag/javascript/": {
    "headline": "Tag: javascript",
    "pagination": null,
-   "sequence": 90
+   "sequence": 91
   },
   "/tag/jira/": {
    "headline": "Tag: JIRA",
    "pagination": null,
-   "sequence": 91
+   "sequence": 92
   },
   "/tag/journal/": {
    "headline": "Tag: journal",
    "pagination": null,
-   "sequence": 49
+   "sequence": 50
   },
   "/tag/jquery/": {
    "headline": "Tag: jquery",
    "pagination": null,
-   "sequence": 92
+   "sequence": 93
   },
   "/tag/json/": {
    "headline": "Tag: json",
@@ -930,77 +945,77 @@
   "/tag/kids/": {
    "headline": "Tag: kids",
    "pagination": null,
-   "sequence": 93
+   "sequence": 94
   },
   "/tag/kindle/": {
    "headline": "Tag: Kindle",
    "pagination": null,
-   "sequence": 40
+   "sequence": 41
   },
   "/tag/kobo/": {
    "headline": "Tag: kobo",
    "pagination": null,
-   "sequence": 26
+   "sequence": 27
   },
   "/tag/koreader/": {
    "headline": "Tag: koreader",
    "pagination": null,
-   "sequence": 26
+   "sequence": 27
   },
   "/tag/laravel/": {
    "headline": "Tag: laravel",
    "pagination": null,
-   "sequence": 94
+   "sequence": 95
   },
   "/tag/launch-center-pro/": {
    "headline": "Tag: launch center pro",
    "pagination": null,
-   "sequence": 95
+   "sequence": 96
   },
   "/tag/leadership/": {
    "headline": "Tag: leadership",
    "pagination": null,
-   "sequence": 96
+   "sequence": 97
   },
   "/tag/magento/": {
    "headline": "Tag: magento",
    "pagination": null,
-   "sequence": 97
+   "sequence": 98
   },
   "/tag/maps/": {
    "headline": "Tag: maps",
    "pagination": null,
-   "sequence": 98
+   "sequence": 99
   },
   "/tag/mashups/": {
    "headline": "Tag: Mashups",
    "pagination": null,
-   "sequence": 99
+   "sequence": 100
   },
   "/tag/mcp/": {
    "headline": "Tag: mcp",
    "pagination": null,
-   "sequence": 38
+   "sequence": 39
   },
   "/tag/memcached/": {
    "headline": "Tag: Memcached",
    "pagination": null,
-   "sequence": 100
+   "sequence": 101
   },
   "/tag/mercurial/": {
    "headline": "Tag: mercurial",
    "pagination": null,
-   "sequence": 101
+   "sequence": 102
   },
   "/tag/mock/": {
    "headline": "Tag: mock",
    "pagination": null,
-   "sequence": 102
+   "sequence": 103
   },
   "/tag/mongodb/": {
    "headline": "Tag: mongodb",
    "pagination": null,
-   "sequence": 103
+   "sequence": 104
   },
   "/tag/music/": {
    "headline": "Tag: music",
@@ -1010,27 +1025,37 @@
   "/tag/mysql/": {
    "headline": "Tag: mysql",
    "pagination": null,
-   "sequence": 104
+   "sequence": 105
   },
   "/tag/netbook/": {
    "headline": "Tag: netbook",
    "pagination": null,
-   "sequence": 105
+   "sequence": 106
+  },
+  "/tag/netlify/": {
+   "headline": "Tag: netlify",
+   "pagination": null,
+   "sequence": 25
+  },
+  "/tag/nextjs/": {
+   "headline": "Tag: nextjs",
+   "pagination": null,
+   "sequence": 25
   },
   "/tag/nosql/": {
    "headline": "Tag: nosql",
    "pagination": null,
-   "sequence": 106
+   "sequence": 107
   },
   "/tag/objective-c/": {
    "headline": "Tag: objective c",
    "pagination": null,
-   "sequence": 88
+   "sequence": 89
   },
   "/tag/oil/": {
    "headline": "Tag: oil",
    "pagination": null,
-   "sequence": 41
+   "sequence": 42
   },
   "/tag/omni-focus/": {
    "headline": "Tag: OmniFocus",
@@ -1040,22 +1065,22 @@
   "/tag/omnifocus/": {
    "headline": "Tag: omnifocus",
    "pagination": null,
-   "sequence": 107
+   "sequence": 108
   },
   "/tag/opensocial/": {
    "headline": "Tag: opensocial",
    "pagination": null,
-   "sequence": 108
+   "sequence": 109
   },
   "/tag/opensource/": {
    "headline": "Tag: opensource",
    "pagination": null,
-   "sequence": 109
+   "sequence": 110
   },
   "/tag/oracle/": {
    "headline": "Tag: Oracle",
    "pagination": null,
-   "sequence": 106
+   "sequence": 107
   },
   "/tag/os/": {
    "headline": "Tag: os",
@@ -1065,127 +1090,132 @@
   "/tag/osx/": {
    "headline": "Tag: osx",
    "pagination": null,
-   "sequence": 80
+   "sequence": 81
   },
   "/tag/pesto/": {
    "headline": "Tag: pesto",
    "pagination": null,
-   "sequence": 41
+   "sequence": 42
   },
   "/tag/php-storm/": {
    "headline": "Tag: PhpStorm",
    "pagination": null,
-   "sequence": 110
+   "sequence": 111
   },
   "/tag/php-unit/": {
    "headline": "Tag: PHPUnit",
    "pagination": null,
-   "sequence": 111
+   "sequence": 112
   },
   "/tag/php/": {
    "headline": "Tag: php",
    "pagination": null,
-   "sequence": 112
+   "sequence": 113
   },
   "/tag/picasa-web/": {
    "headline": "Tag: picasa web",
    "pagination": null,
-   "sequence": 113
+   "sequence": 114
   },
   "/tag/playwright/": {
    "headline": "Tag: playwright",
    "pagination": null,
-   "sequence": 36
+   "sequence": 37
   },
   "/tag/podcasts/": {
    "headline": "Tag: podcasts",
    "pagination": null,
-   "sequence": 114
+   "sequence": 115
   },
   "/tag/postgre-sql/": {
    "headline": "Tag: PostgreSQL",
    "pagination": null,
-   "sequence": 106
+   "sequence": 107
   },
   "/tag/powershell/": {
    "headline": "Tag: powershell",
    "pagination": null,
-   "sequence": 115
+   "sequence": 116
   },
   "/tag/primal/": {
    "headline": "Tag: primal",
    "pagination": null,
-   "sequence": 116
+   "sequence": 117
   },
   "/tag/productivity/": {
    "headline": "Tag: productivity",
    "pagination": null,
-   "sequence": 117
+   "sequence": 118
   },
   "/tag/python/": {
    "headline": "Tag: python",
    "pagination": null,
-   "sequence": 118
+   "sequence": 119
   },
   "/tag/pythonista/": {
    "headline": "Tag: pythonista",
    "pagination": null,
-   "sequence": 95
+   "sequence": 96
   },
   "/tag/quick/": {
    "headline": "Tag: quick",
    "pagination": null,
-   "sequence": 119
+   "sequence": 120
   },
   "/tag/reader/": {
    "headline": "Tag: reader",
    "pagination": null,
-   "sequence": 120
+   "sequence": 121
   },
   "/tag/realm/": {
    "headline": "Tag: realm",
    "pagination": null,
-   "sequence": 57
+   "sequence": 58
   },
   "/tag/redmine/": {
    "headline": "Tag: Redmine",
    "pagination": null,
-   "sequence": 121
+   "sequence": 122
   },
   "/tag/regex/": {
    "headline": "Tag: regex",
    "pagination": null,
-   "sequence": 122
+   "sequence": 123
   },
   "/tag/remember-the-milk/": {
    "headline": "Tag: Remember the Milk",
    "pagination": null,
-   "sequence": 123
+   "sequence": 124
+  },
+  "/tag/replatforming/": {
+   "headline": "Tag: replatforming",
+   "pagination": null,
+   "sequence": 25
   },
   "/tag/rss/": {
    "headline": "Tag: RSS",
    "pagination": null,
-   "sequence": 25
+   "sequence": 26
   },
   "/tag/ruby/": {
    "headline": "Tag: Ruby",
    "pagination": null,
-   "sequence": 121
+   "sequence": 122
   },
   "/tag/running/": {
    "headline": "Tag: running",
    "pagination": null,
-   "sequence": 124
+   "sequence": 125
   },
   "/tag/search/": {
    "headline": "Tag: search",
    "pagination": null,
-   "sequence": 27
+   "sequence": 28
   },
   "/tag/security/": {
    "headline": "Tag: security",
    "pagination": null,
-   "sequence": 125
+   "sequence": 126
   },
   "/tag/seo/": {
    "headline": "Tag: seo",
@@ -1195,57 +1225,57 @@
   "/tag/shared-web-hosting-service/": {
    "headline": "Tag: Shared web hosting service",
    "pagination": null,
-   "sequence": 126
+   "sequence": 127
   },
   "/tag/siri/": {
    "headline": "Tag: Siri",
    "pagination": null,
-   "sequence": 29
+   "sequence": 30
   },
   "/tag/sketch/": {
    "headline": "Tag: sketch",
    "pagination": null,
-   "sequence": 127
+   "sequence": 128
   },
   "/tag/skynet/": {
    "headline": "Tag: skynet",
    "pagination": null,
-   "sequence": 128
+   "sequence": 129
   },
   "/tag/skype/": {
    "headline": "Tag: Skype",
    "pagination": null,
-   "sequence": 129
+   "sequence": 130
   },
   "/tag/sleep/": {
    "headline": "Tag: sleep",
    "pagination": null,
-   "sequence": 44
+   "sequence": 45
   },
   "/tag/socialgraph/": {
    "headline": "Tag: socialgraph",
    "pagination": null,
-   "sequence": 130
+   "sequence": 131
   },
   "/tag/solr/": {
    "headline": "Tag: solr",
    "pagination": null,
-   "sequence": 131
+   "sequence": 132
   },
   "/tag/sony-reader/": {
    "headline": "Tag: Sony Reader",
    "pagination": null,
-   "sequence": 25
+   "sequence": 26
   },
   "/tag/sql/": {
    "headline": "Tag: SQL",
    "pagination": null,
-   "sequence": 132
+   "sequence": 133
   },
   "/tag/stan-lee/": {
    "headline": "Tag: Stan Lee",
    "pagination": null,
-   "sequence": 45
+   "sequence": 46
   },
   "/tag/startup/": {
    "headline": "Tag: startup",
@@ -1255,37 +1285,37 @@
   "/tag/storyteller/": {
    "headline": "Tag: storyteller",
    "pagination": null,
-   "sequence": 26
+   "sequence": 27
   },
   "/tag/swift/": {
    "headline": "Tag: swift",
    "pagination": null,
-   "sequence": 133
+   "sequence": 134
   },
   "/tag/tdd/": {
    "headline": "Tag: TDD",
    "pagination": null,
-   "sequence": 102
+   "sequence": 103
   },
   "/tag/terminator/": {
    "headline": "Tag: Terminator",
    "pagination": null,
-   "sequence": 128
+   "sequence": 129
   },
   "/tag/testing/": {
    "headline": "Tag: testing",
    "pagination": null,
-   "sequence": 134
+   "sequence": 135
   },
   "/tag/textmate/": {
    "headline": "Tag: textmate",
    "pagination": null,
-   "sequence": 80
+   "sequence": 81
   },
   "/tag/timbroder-com/": {
    "headline": "Tag: timbroder.com",
    "pagination": null,
-   "sequence": 37
+   "sequence": 38
   },
   "/tag/tiny-mce/": {
    "headline": "Tag: TinyMCE",
@@ -1295,126 +1325,127 @@
   "/tag/todoist/": {
    "headline": "Tag: todoist",
    "pagination": null,
-   "sequence": 78
+   "sequence": 79
   },
   "/tag/twitter-2-g-talk/": {
    "headline": "Tag: twitter2gTalk",
    "pagination": null,
-   "sequence": 135
+   "sequence": 136
   },
   "/tag/twitter/": {
    "headline": "Tag: twitter",
    "pagination": null,
-   "sequence": 136
+   "sequence": 137
   },
   "/tag/ubuntu/": {
    "headline": "Tag: ubuntu",
    "pagination": null,
-   "sequence": 137
+   "sequence": 138
   },
   "/tag/urls/": {
    "headline": "Tag: urls",
    "pagination": null,
-   "sequence": 32
+   "sequence": 33
   },
   "/tag/vagrant/": {
    "headline": "Tag: vagrant",
    "pagination": null,
-   "sequence": 138
+   "sequence": 139
   },
   "/tag/varnish/": {
    "headline": "Tag: varnish",
    "pagination": null,
-   "sequence": 59
+   "sequence": 60
   },
   "/tag/vibrams/": {
    "headline": "Tag: Vibrams",
    "pagination": null,
-   "sequence": 139
+   "sequence": 140
   },
   "/tag/virtual-hosting/": {
    "headline": "Tag: Virtual hosting",
    "pagination": null,
-   "sequence": 126
+   "sequence": 127
   },
   "/tag/virtual-private-server/": {
    "headline": "Tag: Virtual private server",
    "pagination": null,
-   "sequence": 126
+   "sequence": 127
   },
   "/tag/virtualenv/": {
    "headline": "Tag: virtualenv",
    "pagination": null,
-   "sequence": 115
+   "sequence": 116
   },
   "/tag/walking-dead/": {
    "headline": "Tag: Walking Dead",
    "pagination": null,
-   "sequence": 140
+   "sequence": 141
   },
   "/tag/web-hosting/": {
    "headline": "Tag: Web hosting",
    "pagination": null,
-   "sequence": 126
+   "sequence": 127
   },
   "/tag/whatsapp/": {
    "headline": "Tag: whatsapp",
    "pagination": null,
-   "sequence": 38
+   "sequence": 39
   },
   "/tag/winamp/": {
    "headline": "Tag: winamp",
    "pagination": null,
-   "sequence": 141
+   "sequence": 142
   },
   "/tag/windows/": {
    "headline": "Tag: windows",
    "pagination": null,
-   "sequence": 142
+   "sequence": 143
   },
   "/tag/wordpress/": {
    "headline": "Tag: wordpress",
    "pagination": null,
-   "sequence": 143
+   "sequence": 144
   },
   "/tag/xbox/": {
    "headline": "Tag: xbox",
    "pagination": null,
-   "sequence": 144
+   "sequence": 145
   },
   "/tag/xcode/": {
    "headline": "Tag: xcode",
    "pagination": null,
-   "sequence": 145
+   "sequence": 146
   },
   "/tag/xml/": {
    "headline": "Tag: xml",
    "pagination": null,
-   "sequence": 100
+   "sequence": 101
   },
   "/tag/yahoo-pipes/": {
    "headline": "Tag: yahoo pipes",
    "pagination": null,
-   "sequence": 146
+   "sequence": 147
   },
   "/tag/youtube/": {
    "headline": "Tag: youtube",
    "pagination": null,
-   "sequence": 147
+   "sequence": 148
   },
   "/tag/yui/": {
    "headline": "Tag: YUI",
    "pagination": null,
-   "sequence": 148
+   "sequence": 149
   },
   "/tag/zend/": {
    "headline": "Tag: Zend",
    "pagination": null,
-   "sequence": 149
+   "sequence": 150
   }
  },
  "sequences": [
   [
+   "/2026/11/gatsby-on-autopilot-time-to-replatform/",
    "/2026/11/goodreads-to-storygraph-sync/",
    "/2026/11/kobo-audiobook-sync/",
    "/2026/10/whatsapp-claude-connector/",
@@ -1937,6 +1968,7 @@
    "/2010/09/outtake-from-our-engagement-photo-shoot/"
   ],
   [
+   "/2026/11/gatsby-on-autopilot-time-to-replatform/",
    "/2026/11/goodreads-to-storygraph-sync/",
    "/2026/11/kobo-audiobook-sync/",
    "/2026/10/whatsapp-claude-connector/",
@@ -2421,6 +2453,9 @@
    "/2026/01/natural-scroll-applescript-tahoe/"
   ],
   [],
+  [
+   "/2026/11/gatsby-on-autopilot-time-to-replatform/"
+  ],
   [
    "/2011/01/getting-it-onto-the-kindle/"
   ],
@@ -7166,6 +7201,14 @@
    "date": "October 24, 2026",
    "category": "Code",
    "description": "A big chunk of my Scout-life runs through WhatsApp group chats: Campouts, cabin bunk counts, who's tenting, who's bringing cots, what's happening next month. And WhatsApp search is... fine. If you remember the exact word someone used. What I actually want to ask is something like \"find the messages from yesterday where we talked about camping planning in the scoutmaster chat.\" That's a Claude question, not a search box question. So I set out to make it one. The problem There's no official API for reading…",
+   "cta": "Read article"
+  },
+  "/2026/11/gatsby-on-autopilot-time-to-replatform/": {
+   "title": "Gatsby Is on Autopilot. Time to Think About Replatforming.",
+   "href": "/2026/11/gatsby-on-autopilot-time-to-replatform/",
+   "date": "November 13, 2026",
+   "category": "Code",
+   "description": "Since Netlify acquired Gatsby in 2023 and cut most of its team, the framework has been coasting: four minor releases in three years, and nothing since February. My site is along for the ride, and it might be time to get off.",
    "cta": "Read article"
   },
   "/2026/11/goodreads-to-storygraph-sync/": {

@@ -5,7 +5,7 @@
  * details. Every intended difference is listed in tests/lib/expected.ts.
  */
 import { describe, expect, it } from 'vitest';
-import { loadLists, loadPages } from '../lib/baseline.ts';
+import { liveLists, livePages } from '../lib/live.ts';
 import { builtPages, newUrlOf, readList, readPage } from '../lib/dist.ts';
 import {
   HAD_EMPTY_TAGS,
@@ -18,8 +18,8 @@ import {
 import { isRepairedBody, NOW_RENDERED } from '../lib/expected-content.ts';
 import type { CardFacts } from '../lib/extract.ts';
 
-const baseline = loadPages();
-const lists = loadLists();
+const baseline = livePages();
+const lists = liveLists();
 const built = builtPages();
 
 /** Baseline pages that still exist, each with the URL it has now. */

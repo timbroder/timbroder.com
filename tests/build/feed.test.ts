@@ -8,7 +8,7 @@
 import * as cheerio from 'cheerio';
 import sax from 'sax';
 import { describe, expect, it } from 'vitest';
-import { loadFeed } from '../lib/baseline.ts';
+import { liveFeed } from '../lib/live.ts';
 import { builtPages, exists, readHtml } from '../lib/dist.ts';
 import { isNewlyListed } from '../lib/expected.ts';
 import { extractFeed } from '../lib/extract.ts';
@@ -16,7 +16,7 @@ import { extractFeed } from '../lib/extract.ts';
 const SITE = 'https://timbroder.com';
 const xml = readHtml('/feed');
 const feed = extractFeed(xml);
-const live = loadFeed();
+const live = liveFeed();
 
 const $ = cheerio.load(xml, { xml: true });
 const contents = $('item')

@@ -516,6 +516,7 @@
 /2026/10/whatsapp-claude-connector/
 /2026/11/fussy-coffee/
 /2026/11/games-i-was-addicted-to-in-2014/
+/2026/11/gatsby-on-autopilot-time-to-replatform/
 /2026/11/goodreads-to-storygraph-sync/
 /2026/11/kobo-audiobook-sync/
 /about/
@@ -591,6 +592,7 @@
 /tag/applepay/
 /tag/applescript/
 /tag/apps/
+/tag/astro/
 /tag/atom/
 /tag/audiobooks/
 /tag/audiobookshelf/
@@ -618,6 +620,7 @@
 /tag/coffee/
 /tag/comic-con/
 /tag/commentary/
+/tag/contentful/
 /tag/core-data/
 /tag/css/
 /tag/dayone/
@@ -639,6 +642,7 @@
 /tag/friendfeed/
 /tag/gadgets/
 /tag/garlic/
+/tag/gatsby/
 /tag/gchat/
 /tag/gdata/
 /tag/gdrive/
@@ -688,6 +692,8 @@
 /tag/music/
 /tag/mysql/
 /tag/netbook/
+/tag/netlify/
+/tag/nextjs/
 /tag/nosql/
 /tag/objective-c/
 /tag/oil/
@@ -717,6 +723,7 @@
 /tag/redmine/
 /tag/regex/
 /tag/remember-the-milk/
+/tag/replatforming/
 /tag/rss/
 /tag/ruby/
 /tag/running/

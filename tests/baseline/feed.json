@@ -1,10 +1,18 @@
 {
  "contentType": "text/plain; charset=UTF-8",
- "bytes": 2102721,
+ "bytes": 2103573,
  "title": "TimBroder.com RSS Feed",
  "description": "Tim Broder is a creative technologist",
  "link": "https://timbroder.com",
  "items": [
+  {
+   "guid": "https://timbroder.com/2026/11/gatsby-on-autopilot-time-to-replatform/",
+   "link": "https://timbroder.com/2026/11/gatsby-on-autopilot-time-to-replatform/",
+   "title": "Gatsby Is on Autopilot. Time to Think About Replatforming.",
+   "pubDate": "2026-11-13T05:00:00.000Z",
+   "descriptionLength": 224,
+   "contentLength": 224
+  },
   {
    "guid": "https://timbroder.com/2026/11/goodreads-to-storygraph-sync",
    "link": "https://timbroder.com/2026/11/goodreads-to-storygraph-sync",

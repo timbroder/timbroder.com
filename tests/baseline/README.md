@@ -26,6 +26,14 @@ npm test
 
 Run it whenever `main` has changed while Gatsby is still the live site. The capture makes about 780 requests, four at a time, and takes two to three minutes.
 
+## Posts written in Contentful
+
+The live site has posts that come from Contentful, and so does this capture. A build made without the Contentful settings cannot have them, and that is every build except Netlify's.
+
+- `tests/lib/expected.ts` lists them in `CONTENTFUL_ON_LIVE`. Add a post there when one is published in Contentful.
+- The build tests read the baseline through `tests/lib/live.ts`, which leaves those posts out when the build lacks them, along with the tag pages that exist only for them.
+- The smoke tests ask the deployed site for exactly those pages.
+
 ## Quirks of the live site
 
 The capture records what the live site does, including things that are bugs. Each one needs a decision about whether the new site repeats it; those decisions are tracked in `MIGRATION_PLAN.md`.

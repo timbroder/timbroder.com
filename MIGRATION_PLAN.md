@@ -510,17 +510,23 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 
 See section 9.
 
-One thing to carry into it: when the baseline is captured again, it will include the posts written in Contentful. The build tests must then leave those out when the build has no Contentful settings, as the browser comparison already does (`CONTENTFUL_ON_LIVE`). Add a post to that list when one is published in Contentful before cutover.
+- **Done on 2026-11-13, on the `cutover` branch:**
+  - `main` had nothing new to merge. Every commit on `main` is already in `astro`.
+  - The baseline was captured again. Since the last capture the live site gained exactly one post, the one written in Contentful, and the six tag pages that exist for it: 778 URLs, up from 771, and 517 feed items, up from 516. Nothing else changed.
+  - The build CI tests has no Contentful settings, so it cannot have that post. The build tests now compare the build with the baseline minus the posts in `CONTENTFUL_ON_LIVE` and the list pages that exist only for them (`tests/lib/live.ts`). The smoke tests ask the deployed site for exactly those pages. Between the two, every URL of the live site is checked.
+- **Add a post to `CONTENTFUL_ON_LIVE`** when one is published in Contentful before cutover, and capture the baseline again.
 
 ## 9. Cutover and rollback
 
 ### Before merging
 
-1. Merge `main` into `astro` so the newest posts are included.
-2. Rerun the baseline capture and review what changed since stage 1.
+1. Merge `main` into `astro` so the newest posts are included. *Done: there was nothing to merge.*
+2. Rerun the baseline capture and review what changed since stage 1. *Done: one new post, from Contentful.*
 3. Confirm the full suite and the smoke tests are green on the cutover PR.
-4. In Netlify, remove the Gatsby build plugins (see section 11).
-5. Check that the Contentful credentials are set for production builds.
+4. Check that the Contentful credentials are set for production builds. *They are: the live site's production build reads the same two settings, and it published the Contentful post.* A production build of the new site stops if they are missing.
+5. If a post has been published since the baseline was captured, bring the branch up to date first: merge `main`, capture the baseline again, and add a Contentful post to `CONTENTFUL_ON_LIVE`.
+
+The Gatsby build plugins in Netlify do not block the merge. Deploy previews have built with them in place since stage 2. Remove them afterwards.
 
 ### Merge
 
@@ -528,9 +534,13 @@ Merge the cutover PR. Netlify builds and publishes the Astro site.
 
 ### Straight after
 
-1. Run the smoke tests against `https://timbroder.com`.
-2. Load `/feed` and check that Feedburner picks up the new build.
-3. Resubmit the sitemap in Google Search Console.
+1. Run the smoke tests against `https://timbroder.com`: `SMOKE_URL=https://timbroder.com npm run test:smoke` after `npm run build`.
+2. Open the real-time view in Google Analytics and load a page of the site. This is the first time analytics can be seen working, because it only runs at `timbroder.com`.
+3. Load `/feed` and check that Feedburner picks up the new build.
+4. Resubmit the sitemap in Google Search Console.
+5. In Netlify, remove the Gatsby build plugins.
+6. Close pull request #136 without merging it, and delete the `astro-preview` branch.
+7. Take out the tests that compare the build with the old site (see "New posts and the tests"). Until that is done, a new post makes them fail the next time the tests run.
 
 ### Rollback
 
@@ -584,7 +594,7 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
 | Stage 6 | ~~Publish a test post in Contentful and check it on the deploy preview (R18).~~ Done on 2026-11-13, with a real post. |
 | Stage 7 | Look at the new tab icon (your avatar, in place of the Gatsby logo) on the deploy preview and say if you want something else |
-| Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
+| Cutover | Merge the cutover pull request. Afterwards: remove the Gatsby build plugins in Netlify, mark `gate` as a required check on `main`, and look at the real-time view in Google Analytics |
 
 ### The Contentful check (R18)
 

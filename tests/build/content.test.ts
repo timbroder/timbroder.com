@@ -7,7 +7,7 @@
  * tests/lib/expected-content.ts, and only as much as it says.
  */
 import { describe, expect, it } from 'vitest';
-import { loadPages } from '../lib/baseline.ts';
+import { livePages } from '../lib/live.ts';
 import { compareBodies, type ImageChanges } from '../lib/compare-body.ts';
 import { newUrlOf, readPage } from '../lib/dist.ts';
 import {
@@ -25,7 +25,7 @@ const images: ImageChanges = {
   replaced: new Set(sources.filter((s) => s.local).map((s) => s.original)),
 };
 
-const posts = loadPages().filter((page) => page.post);
+const posts = livePages().filter((page) => page.post);
 const results = posts.map((page) => {
   const url = newUrlOf(page.url);
   const now = url ? readPage(url).post?.body : undefined;

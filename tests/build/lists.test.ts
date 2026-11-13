@@ -6,12 +6,12 @@
  * comparing.
  */
 import { describe, expect, it } from 'vitest';
-import { loadLists } from '../lib/baseline.ts';
+import { liveLists } from '../lib/live.ts';
 import { asBrowserSends, builtPages, readList, resolveRedirect } from '../lib/dist.ts';
 import { DROPPED_URLS, MERGED_SPELLINGS, isNewlyListed } from '../lib/expected.ts';
 import { listRoot, pageNumber } from '../lib/urls.ts';
 
-const lists = loadLists();
+const lists = liveLists();
 const built = builtPages();
 
 /** The new URL of a post that the baseline lists at `url`. */

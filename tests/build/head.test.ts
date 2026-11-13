@@ -11,7 +11,7 @@
  * and a description follows the text of the post where that text changed.
  */
 import { describe, expect, it } from 'vitest';
-import { loadPages } from '../lib/baseline.ts';
+import { livePages } from '../lib/live.ts';
 import { builtPages, newUrlOf, readPage } from '../lib/dist.ts';
 import {
   MERGED_SPELLINGS,
@@ -34,7 +34,7 @@ interface Pair {
 }
 
 /** Baseline pages that still exist, each with the head it has now. */
-const pairs: Pair[] = loadPages().flatMap((live) => {
+const pairs: Pair[] = livePages().flatMap((live) => {
   const url =
     live.url === '/404.html'
       ? live.url
@@ -63,7 +63,7 @@ const oneLine = (text: string | null | undefined) => (text ?? '').replace(/\s+/g
 describe('R11: head tags', () => {
   it('compares every page of the live site that still exists', () => {
     expect(pairs.length).toBeGreaterThan(765);
-    expect(posts.length).toBe(519);
+    expect(posts.length).toBeGreaterThanOrEqual(519);
   });
 
   it('keeps the language and the title', () => {

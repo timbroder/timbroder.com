@@ -3,7 +3,7 @@
  * nothing unexpected is published.
  */
 import { describe, expect, it } from 'vitest';
-import { loadUrls } from '../lib/baseline.ts';
+import { liveUrls } from '../lib/live.ts';
 import {
   asBrowserSends,
   builtPages,
@@ -13,7 +13,7 @@ import {
 import { ADDED_URL_PREFIXES, DROPPED_URLS } from '../lib/expected.ts';
 import { classifyPath } from '../lib/urls.ts';
 
-const baseline = loadUrls();
+const baseline = liveUrls();
 const built = builtPages();
 const rules = loadRedirects();
 
