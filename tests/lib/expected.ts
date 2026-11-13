@@ -103,5 +103,27 @@ export const SUMMARY_DIFFERS = [
   '/2008/09/i-just-won-50000000-gbp-from-google-uk/',
 ];
 
+/**
+ * Posts on the live site that are written in Contentful.
+ *
+ * A build without the Contentful settings cannot have them, and that is
+ * every build except Netlify's: a local one, and the one CI tests. So the
+ * comparison with the live site leaves these posts out when the build does
+ * not have them, and the smoke tests check them where they can exist, on
+ * the deployed site.
+ */
+export const CONTENTFUL_ON_LIVE = ['/2026/11/gatsby-on-autopilot-time-to-replatform/'];
+
+/**
+ * Markdown pages whose description differs from the live site. A page's
+ * description is a summary of its text, like a card's.
+ */
+export const PAGE_DESCRIPTION_DIFFERS: Record<string, string> = {
+  '/apps/':
+    'The page shows an app icon, written as a reference-style picture. The live summary skipped ' +
+    'pictures written that way. The new one includes its alt text, as it does for every other ' +
+    'picture that was hosted elsewhere.',
+};
+
 /** The 404 page: the live site highlights "Posts" in the navigation there. */
 export const NAV_HIGHLIGHT_DIFFERS = ['/404.html'];

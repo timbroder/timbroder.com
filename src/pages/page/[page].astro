@@ -18,7 +18,7 @@ interface Props {
 const { list } = Astro.props;
 ---
 
-<Base title={listTitle('TimBroder.com Posts', list.page)}>
+<Base title={listTitle('TimBroder.com Posts', list.page)} home>
   <ListHead slot="head" list={list} />
   <PostList list={list} />
 </Base>

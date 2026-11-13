@@ -12,9 +12,10 @@
  * After cutover the live site is the new site, and this test is replaced by
  * stored screenshots. Set SKIP_LIVE=1 to skip it (for example offline).
  */
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname } from 'node:path';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
 import { expect, test, type Page } from '@playwright/test';
+import { CONTENTFUL_ON_LIVE } from '../lib/expected.ts';
 
 const LIVE = (process.env.LIVE_URL ?? 'https://timbroder.com').replace(/\/$/, '');
 
@@ -69,6 +70,15 @@ const INTENDED_DIFFERENCES = `
      making the page scroll sideways. The tag sample has one, on a phone. */
   main article h2, main article p { max-width: 100%; overflow-wrap: break-word; }
 `;
+
+/**
+ * Posts the live site has from Contentful and this build does not, because
+ * it was built without the Contentful settings. Their cards are taken off
+ * the live page before it is compared.
+ */
+const NOT_IN_THIS_BUILD = CONTENTFUL_ON_LIVE.filter(
+  (path) => !existsSync(join(process.cwd(), 'dist', path, 'index.html')),
+);
 
 interface Sample {
   name: string;
@@ -129,9 +139,17 @@ async function capture(
   url: string,
   sample: Sample,
   styles?: string,
+  withoutPosts: string[] = [],
 ): Promise<Buffer> {
   await page.goto(url, { waitUntil: 'networkidle' });
   if (styles) await page.addStyleTag({ content: styles });
+  if (withoutPosts.length) {
+    await page.evaluate((paths) => {
+      for (const card of document.querySelectorAll('main article')) {
+        if (paths.some((path) => card.querySelector(`a[href="${path}"]`))) card.remove();
+      }
+    }, withoutPosts);
+  }
   await page.evaluate(() => document.fonts.ready);
   const mask = (sample.mask ?? []).map((selector) => page.locator(selector));
   const options = { animations: 'disabled', caret: 'hide', mask } as const;
@@ -168,6 +186,7 @@ test.describe('pages look the same as on the live site', () => {
         `${LIVE}${sample.livePath ?? sample.path}`,
         sample,
         INTENDED_DIFFERENCES,
+        NOT_IN_THIS_BUILD,
       );
       await livePage.close();
 

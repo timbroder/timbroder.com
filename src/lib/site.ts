@@ -6,6 +6,10 @@ export const SITE = {
   author: 'Tim Broder',
   since: 2007,
   feedTitle: 'TimBroder.com RSS Feed',
+  /** A copy of the feed that older subscribers still use. */
+  feedburner: 'https://feeds.feedburner.com/timbroder',
+  /** Linked with rel="me" so Mastodon shows the site as verified. */
+  mastodon: 'https://masto.ai/@timothybroder',
   nav: [
     { title: 'Posts', href: '/' },
     { title: 'Podcasts', href: '/podcasts/' },

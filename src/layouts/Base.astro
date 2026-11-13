@@ -2,8 +2,9 @@
 /**
  * The page shell: head, navigation, main content and footer.
  *
- * Stage 7 adds the rest of the head (social tags, structured data,
- * analytics).
+ * The head carries what the Gatsby site's did: the tags for search engines
+ * and link previews, the feed and manifest links, and Google Analytics.
+ * See src/lib/seo.ts.
  */
 import '../styles/global.css';
 import Container from '../components/Container.astro';
@@ -11,6 +12,8 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Headline from '../components/Headline.astro';
 import { contentfulStatus } from '../lib/posts.ts';
+import { fingerprinted } from '../lib/public-files.ts';
+import { analyticsScript, oneLine, socialTags } from '../lib/seo.ts';
 import { SITE, activeNavHref } from '../lib/site.ts';
 
 interface Props {
@@ -19,6 +22,10 @@ interface Props {
   description?: string;
   /** Set to false on pages with no canonical URL, like the 404 page. */
   canonical?: boolean;
+  /** The page's own picture for link previews, as a full address. */
+  image?: string;
+  /** Adds the links that only the home list carries: Feedburner and Mastodon. */
+  home?: boolean;
   /** Shows the site title as the headline, as on the home page. */
   showSiteTitle?: boolean;
   /** Set to false to highlight nothing in the navigation. */
@@ -27,14 +34,19 @@ interface Props {
 
 const {
   title,
-  description = SITE.description,
+  description: ownDescription,
   canonical = true,
+  image,
+  home = false,
   showSiteTitle = false,
   highlightNav = true,
 } = Astro.props;
 
+// A page with nothing to say about itself gets the site's description.
+const description = oneLine(ownDescription ?? '') || SITE.description;
 const pathname = Astro.url.pathname;
 const active = highlightNav ? activeNavHref(pathname) : null;
+const social = socialTags({ title, description, path: canonical ? pathname : null, image });
 // Netlify sets COMMIT_REF. The smoke tests read it to know which build they
 // are looking at.
 const commit = process.env.COMMIT_REF ?? 'local';
@@ -53,8 +65,31 @@ const contentful = await contentfulStatus();
     <title>{`${title} | ${SITE.title}`}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={new URL(pathname, SITE.url).href} />}
+    {
+      social.map((tag) =>
+        tag.property ? (
+          <meta property={tag.property} content={tag.content} />
+        ) : (
+          <meta name={tag.name} content={tag.content} />
+        ),
+      )
+    }
     <link rel="alternate" type="application/rss+xml" title={SITE.feedTitle} href="/feed" />
+    {
+      home && (
+        <>
+          <link rel="alternate" type="application/rss+xml" title={SITE.feedTitle} href={SITE.feedburner} />
+          <link rel="me" href={SITE.mastodon} />
+        </>
+      )
+    }
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href={fingerprinted('/icons/icon-32.png')} />
+    <link rel="icon" type="image/png" sizes="192x192" href={fingerprinted('/icons/icon-192.png')} />
+    <link rel="apple-touch-icon" href={fingerprinted('/icons/apple-touch-icon.png')} />
     <slot name="head" />
+    <script is:inline set:html={analyticsScript()} />
   </head>
   <body>
     <div class="bg-zinc-50">

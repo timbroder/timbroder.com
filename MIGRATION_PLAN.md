@@ -165,6 +165,7 @@ Stage 4 found two problems in the live design. Tim asked for both to be fixed du
 | Code blocks use Prism's Okaidia theme. | Code blocks use Shiki's Monokai, the closest match. Five of its colours were below 4.5:1 on the dark background (keywords, comments and errors among them); each is lightened just enough to pass. The whole theme is checked, not only the colours used today. |
 | A long web address or file path cannot wrap, in a card summary or in a post, so the page scrolls sideways. Built the same way, the new site had 98 such pages on a phone and 4 on a desktop. | Long words wrap. No page scrolls sideways. |
 | A post with many tags scrolls sideways on a phone, because the row of tags cannot wrap. | The tags wrap, and the category moves below them when there is no room beside. |
+| A post written in Contentful has its own look: larger, bolder headings that sit close to the text above, and lists indented further. | It looks like a markdown post. |
 
 ## 3. What the old plans got wrong
 
@@ -220,9 +221,19 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 ### Feed and SEO
 
 21. **The feed is an endpoint at `/feed`**, with a Netlify header so it is served as RSS and not plain text.
-22. **Feed guids never change.** A re-slugged post keeps its old URL as its guid and gets the new URL as its link. Otherwise every feed reader would show 83 old posts as new.
-23. **The feed includes every published post.** That is 518, up from 515; the live feed drops posts that lack `layout:`.
+22. **Feed guids never change.** A post's guid is the address it had on the live site, in the form the live feed uses: without a trailing slash for a markdown post, with one for a post from Contentful. A re-slugged post keeps its old address as its guid and gets the new one as its link. Otherwise every feed reader would show 83 old posts as new.
+23. **The feed includes every published post.** That is 519, up from 516; the live feed drops posts that lack `layout:`.
+    - Every address inside a post is made absolute, so pictures and links work in a feed reader.
+    - An item links to the post's address with its trailing slash, which saves the reader a redirect.
+    - An item's description is the post's summary (up to 512 characters). The live feed cut it at 140.
+    - The feed's date is the newest post's, so two builds of the same content give the same file.
 24. **Sitemap file names stay `sitemap-index.xml` and `sitemap-0.xml`**, so `robots.txt` needs no change. `/astrobook/` and the 404 page are excluded.
+
+Three more, decided in stage 7:
+
+- **Head tags are the live site's**, value for value: title, description, canonical address, Open Graph, Twitter, the structured data on posts, and the links to the feed, Feedburner, the manifest and Mastodon. A description is written on one line; the live site kept the line breaks of the post in it.
+- **Google Analytics only runs on the real site.** Every page carries one small script that loads Google's code when the page is at `timbroder.com`. A deploy preview, a local build or a test run is no longer counted as a visit. The live site counted them.
+- **The icons are the avatar.** The live site's tab icon and manifest icons are the Gatsby logo, left over from the starter. The manifest is named "Tim Broder .com" and served as a manifest, not as a download.
 
 ### Contentful
 
@@ -263,8 +274,8 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R16 | Internal links work | Every internal link resolves to a page, a file or a redirect | Build output |
 | R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash; code is highlighted exactly as in a markdown post. The share image is checked on the post until stage 7 puts it in the page head. | Unit, build output |
 | R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview. Steps are in section 11. | Manual |
-| R19 | Google Analytics is on every page | The GA tag appears exactly once on every page outside `/astrobook/` | Build output |
-| R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond GA and structured data | Build output |
+| R19 | Google Analytics is on every page | The analytics script appears exactly once on every page outside `/astrobook/`, and not in it. Run against a stand-in for the browser, it loads Google's code on `timbroder.com` and does nothing on any other host | Build output, unit |
+| R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond the analytics script and, on a post, its structured data | Build output |
 | R21 | Astrobook is public but not indexed | `/astrobook/` builds, has a `noindex` tag, and is absent from the sitemap | Build output |
 | R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot exactly and passes accessibility checks | Browser |
 | R23 | Unpublished things stay unpublished | No page, list entry or feed item for the draft or the three unpublished files; no page at `/using-typescript/` | Build output |
@@ -285,6 +296,8 @@ Tests R6, R11 and R27 to R30 allow these, and nothing else. They live in `tests/
 - Code block markup.
 - The broken "original article" link on the two `link: None` posts.
 - Everything in "Live-site quirks and what the new site does" in section 2, which includes three extra feed items.
+- Line breaks inside a description, which become spaces.
+- The description of `/apps/`, which now includes the alt text of the app icon. The live summary skipped pictures written in markdown's reference style.
 
 Three kinds of difference in post bodies came out of stage 5. The first two are checked mechanically: the test accepts a difference only if it is exactly of that kind.
 
@@ -324,6 +337,17 @@ The crawl is throttled and retries, because the live site occasionally returns a
 - **`test` job:** runs when code changed. Installs, runs unit tests, builds, runs build output tests, runs browser tests.
 - **`gate` job:** always runs and passes when `test` passed or was skipped. This is the one check to mark as required, so a content-only PR goes green in seconds and never hangs.
 - **`smoke` job:** waits for the Netlify deploy preview to serve the commit under test, then runs the smoke tests against it. Each page carries the commit hash in a meta tag so the job knows the right build is live.
+
+### New posts and the tests
+
+**After cutover, publishing a post must never need a change to a test.**
+
+- A markdown post only touches `content/` and `public/images/`, so CI skips the tests for it. A post published in Contentful rebuilds the site on Netlify and never reaches CI.
+- The build still checks every post (decision 28). A post that breaks a rule stops the Netlify build with a message, and the site stays as it was.
+- No test that remains after cutover may depend on which posts exist. The tests that compare the build with the live Gatsby site do, and they go at cutover: the baseline tests, the browser comparison with the live site, and the list of Contentful posts (`CONTENTFUL_ON_LIVE`). The stored page screenshots that replace the browser comparison are taken of pages a new post does not change: single posts, markdown pages, the About page, the 404 page and lists of old tags. The home list is not one of them.
+- What is left can only fail on a post that has a real fault, such as a link to a page that does not exist, and it says so the next time the tests run.
+
+**Until cutover, a new post on the live site does turn CI red on the migration branches,** because those tests prove the new site equals the live one, and the live one has just changed. Nothing is edited by hand for a markdown post: `main` is merged into `astro` and the baseline is captured again. A post published in Contentful also needs one line in `CONTENTFUL_ON_LIVE`, since CI cannot read Contentful.
 
 ### Screenshots
 
@@ -463,6 +487,9 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 - **Done when:** the samples appear correctly on pages, lists and tags, and Tim has done the manual check (R18).
 - **How the samples were made:** by hand, in the format of the Content Delivery API. The real space has no published posts to save an answer from, and the session that built this had no credentials for it. The envelope (items, linked entries and assets, errors) was checked against Contentful's public example space; the rich text node names come from Contentful's own type definitions; the field names come from the Gatsby site's schema. What is not yet proven is that the real space's content types match that schema. R18 proves it.
 - **What the deploy preview showed:** the preview build read the real space and found no published posts (`build-contentful` says `api: 0 posts`). So the credentials reach deploy previews, the space answers, and it has a `blogPost` content type.
+- **The manual check (R18), done on 2026-11-13.** Tim published a real post in Contentful, "Gatsby Is on Autopilot. Time to Think About Replatforming." The preview built with it (`api: 1 post`). Compared with the live site's page for the same post, the title, description, date, tags, category, headings, links, text and the paragraph each sentence is in are all the same. It is on the home list and its tag and category pages.
+  - **One thing was wrong, and is fixed:** the post's guid in the feed. The live feed gives a Contentful post a guid with a trailing slash and a markdown post one without. The new feed gave both the same form, which would have shown this post to subscribers a second time.
+  - **The live site now has a post that only a Netlify build can have.** A local build and the build CI tests have no Contentful settings. Such posts are listed in `CONTENTFUL_ON_LIVE` (`tests/lib/expected.ts`): the comparison with the live site leaves them out when the build lacks them, and the smoke tests check them on the deployed site, including the guid.
 - **Also fixed:** a story taller than the browser window was cut off at the bottom of its screenshot. Three stories are that tall (the 120-line code block, the Prose example and the new Contentful sample), and their screenshots now show all of them.
 
 ### Stage 7: Feed, SEO and analytics
@@ -472,12 +499,18 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
   - Head tags and structured data.
   - Google Analytics.
   - The manifest, favicon and `robots.txt`.
-- **Tests added:** R9, R10, R11, R19, R26.
+- **Tests added:** R9, R10, R11, R19, R26. R20 now allows exactly the analytics script and structured data. R17 gained its last check: a Contentful post's own share image is used in its link preview.
 - **Done when:** the feed validates and SEO tags match the baseline.
+- **What the comparison with the live site found:**
+  - Every guid in the live feed is in the new one, with the same date. The three new items are the three posts the live feed left out.
+  - The head tags of all 770 pages match, apart from the listed differences. Two things needed fixing to get there: markdown pages had the site's description, not a summary of their own text, and descriptions carried line breaks in different places than the live ones.
+  - The live tab icon is the Gatsby logo, and so are the manifest's icons.
 
 ### Stage 8: Cutover
 
 See section 9.
+
+One thing to carry into it: when the baseline is captured again, it will include the posts written in Contentful. The build tests must then leave those out when the build has no Contentful settings, as the browser comparison already does (`CONTENTFUL_ON_LIVE`). Add a post to that list when one is published in Contentful before cutover.
 
 ## 9. Cutover and rollback
 
@@ -506,7 +539,7 @@ Netlify keeps every deploy. To roll back, publish the last Gatsby deploy from th
 ### In the following two weeks
 
 - Watch for 404s in Netlify and in Search Console.
-- Switch page screenshot tests from the live baseline to the new site's own screenshots.
+- Switch page screenshot tests from the live baseline to the new site's own screenshots, of pages that a new post does not change (see "New posts and the tests").
 - Remove this plan, the baseline crawl script and the stale migration branches.
 
 ## 10. Things to prove early
@@ -549,7 +582,8 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Stage 4 | Approve the code block stories in Astrobook |
 | Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`node scripts/images/recover.ts --list`) |
 | Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
-| Stage 6 | Publish a test post in Contentful and check it on the deploy preview (R18). Steps below. |
+| Stage 6 | ~~Publish a test post in Contentful and check it on the deploy preview (R18).~~ Done on 2026-11-13, with a real post. |
+| Stage 7 | Look at the new tab icon (your avatar, in place of the Gatsby logo) on the deploy preview and say if you want something else |
 | Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
 
 ### The Contentful check (R18)

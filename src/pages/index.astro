@@ -8,7 +8,7 @@ import { getPosts } from '../lib/posts.ts';
 const [list] = listPages('/', await getPosts());
 ---
 
-<Base title="TimBroder.com Posts" showSiteTitle>
+<Base title="TimBroder.com Posts" showSiteTitle home>
   <ListHead slot="head" list={list} />
   <PostList list={list} />
 </Base>
