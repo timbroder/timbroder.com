@@ -226,9 +226,14 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 ### Contentful
 
-25. **The loader reads saved samples when `CONTENTFUL_FIXTURES` is set**, and the real API otherwise.
-26. **A production build fails if the Contentful credentials are missing.** A silent fallback would quietly drop posts.
-27. **Rich text renders to HTML with the same code highlighter as markdown.** Images embedded in Contentful posts stay on Contentful's CDN; this is the one allowed exception to "no remote images".
+25. **The loader reads saved samples when `CONTENTFUL_FIXTURES` names their file**, and the real API otherwise. The samples are one saved answer in the API's own format, `src/fixtures/contentful/entries.json`. The loader talks to the Content Delivery API directly, with no client library, so a sample and a real answer take exactly the same path.
+26. **A production build fails if the Contentful credentials are missing.** A silent fallback would quietly drop posts. A production build also refuses the samples. Anywhere else, a build without credentials leaves the Contentful posts out and says so in its log. Every page says what its build read, in `<meta name="build-contentful">` (`api: 2 posts`, `samples: 3 posts` or `off`), so a deployed build can be asked.
+27. **Rich text renders to the same HTML as markdown, with the same code highlighter.** The same markup means one set of styles and one summary rule cover both sources. Images embedded in Contentful posts stay on Contentful's CDN; this is the one allowed exception to "no remote images".
+    - A picture's alt text is the asset's title. Its description, when it has one, is shown as a caption. A picture wider than 1600 pixels is asked for at 1600.
+    - A code block is a `codeBlock` entry embedded in the text. Its `showLineNumbers` field can turn the line numbers off.
+    - A link to another blog post entry becomes a link to that post's URL on this site.
+    - **Anything the site cannot show stops the build**, with a message naming the post: an embedded entry or picture that is not published, an entry of another type, a kind of block or text style added to Contentful later. Leaving it out quietly would publish a post with a hole in it.
+    - A Contentful post follows the rules of a markdown post: a title, a date, a clean slug, the month of its URL in UTC. Every problem in every entry is reported at once.
 
 ### Build-time checks
 
@@ -256,8 +261,8 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R14 | No remote images remain | No `<img>` in a post that existed at the migration points at another host, except Contentful's CDN. No page shows an address recorded in `image-sources.json` | Build output |
 | R15 | Dead images use the placeholder | The placeholder is shown exactly as often as `image-sources.json` says images are gone. Every other image in that file has a local copy or a reason for its removal | Build output |
 | R16 | Internal links work | Every internal link resolves to a page, a file or a redirect | Build output |
-| R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash | Unit, build output |
-| R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview | Manual |
+| R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash; code is highlighted exactly as in a markdown post. The share image is checked on the post until stage 7 puts it in the page head. | Unit, build output |
+| R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview. Steps are in section 11. | Manual |
 | R19 | Google Analytics is on every page | The GA tag appears exactly once on every page outside `/astrobook/` | Build output |
 | R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond GA and structured data | Build output |
 | R21 | Astrobook is public but not indexed | `/astrobook/` builds, has a `noindex` tag, and is absent from the sitemap | Build output |
@@ -295,7 +300,7 @@ The summary on a card may differ from the live site wherever the post's text is 
 
 1. **Build checks.** Run inside every build, on Netlify too. Described in decision 28.
 2. **Unit tests (Vitest).** Pure functions: URL rules, slug cleaning, taxonomy slugs, link handling, dates, Contentful normalisation and merging, rich text rendering, feed guids, descriptions.
-3. **Build output tests (Vitest).** Build the site with Contentful samples, then read `dist/` and compare it to the baseline. Most requirements are tested here because it is fast and covers every page, not a sample.
+3. **Build output tests (Vitest).** Build the site, then read `dist/` and compare it to the baseline. Most requirements are tested here because it is fast and covers every page, not a sample. The Contentful test (R17) builds the site a second time with the samples, into `dist-samples/`, so that sample posts never get into the comparison with the live site.
 4. **Browser tests (Playwright).** Run against a local preview of the build: screenshots, Astrobook stories, navigation, pagination, accessibility.
 5. **Deploy preview smoke tests.** Run against the Netlify deploy preview, the only place where redirects, headers and 404 handling are real. The same suite runs against production right after cutover.
 
@@ -456,6 +461,8 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
   - Sample responses: a normal post, a link post, a draft, a post with an image and a code block, and a post that clashes with a markdown URL.
 - **Tests added:** R17.
 - **Done when:** the samples appear correctly on pages, lists and tags, and Tim has done the manual check (R18).
+- **How the samples were made:** by hand, in the format of the Content Delivery API. The real space has no published posts to save an answer from, and the session that built this had no credentials for it. The envelope (items, linked entries and assets, errors) was checked against Contentful's public example space; the rich text node names come from Contentful's own type definitions; the field names come from the Gatsby site's schema. What is not yet proven is that the real space's content types match that schema. R18 proves it.
+- **What the deploy preview showed:** see the pull request for this stage.
 
 ### Stage 7: Feed, SEO and analytics
 
@@ -541,8 +548,19 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Stage 4 | Approve the code block stories in Astrobook |
 | Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`node scripts/images/recover.ts --list`) |
 | Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
-| Stage 6 | Publish a test post in Contentful and check it on the deploy preview |
+| Stage 6 | Publish a test post in Contentful and check it on the deploy preview (R18). Steps below. |
 | Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
+
+### The Contentful check (R18)
+
+1. In Contentful, create a Blog Post and publish it. Give it a title, the slug `contentful-test`, a date in the past such as 1 January 2020, a tag, and some rich text: a paragraph, a picture, and an embedded Code Block entry. Publish the picture and the Code Block too.
+2. Rebuild the deploy preview: in Netlify, open the latest deploy preview of pull request #136 and choose "Retry deploy". Or ask me to.
+3. Open `/2020/01/contentful-test/` on the preview. The post should be there with its picture and highlighted code, and on the home list and its tag page. In the page source, `build-contentful` should say `api: 1 post`.
+4. Unpublish the test post.
+
+While the test post is published, the live Gatsby site shows it too, if the Contentful webhook is set up: the webhook rebuilds `main`, and Gatsby also reads Contentful. A date in the past keeps it off the front page and far down the feed, and unpublishing removes it at the next build.
+
+If the build fails instead, its log says what in the entry the site could not show. That is the build check working, and worth telling me about.
 
 ## 12. Out of scope
 
