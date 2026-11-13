@@ -5,6 +5,10 @@
  * browser, and the two screenshots are compared. Nothing is stored, so
  * there is no stale baseline, and both sides render with the same fonts.
  *
+ * The new design differs from the live one on purpose in a few places (see
+ * INTENDED_DIFFERENCES). The live page is given those same changes before
+ * its screenshot is taken, so everything else still has to match.
+ *
  * After cutover the live site is the new site, and this test is replaced by
  * stored screenshots. Set SKIP_LIVE=1 to skip it (for example offline).
  */
@@ -15,11 +19,56 @@ import { expect, test, type Page } from '@playwright/test';
 const LIVE = (process.env.LIVE_URL ?? 'https://timbroder.com').replace(/\/$/, '');
 
 /**
- * The share of pixels allowed to differ. Small differences are expected:
- * Tailwind 4 defines the same colours in a different notation, which can
- * move a channel by one. Set VISUAL_TOLERANCE=0 to see every difference.
+ * How different two screenshots may be.
+ *
+ * A pixel counts as different when its colour is off by more than
+ * THRESHOLD (0 is identical, 1 is black against white). 0.1 lets through
+ * the one thing that always differs: Tailwind 4 writes the same palette in
+ * another notation, which moves a colour channel by a few steps. It still
+ * catches one shade of grey swapped for the next.
+ *
+ * Up to MAX_DIFFERENT_PIXELS such pixels are allowed in a screenshot. The
+ * live site (React) splits a line like the copyright notice into several
+ * pieces of text, and letters next to a split sit a fraction of a pixel
+ * apart: at most 22 pixels on the sampled pages. Changing the colour of a
+ * single line of small text changes about 470.
+ *
+ * Set VISUAL_MAX_PIXELS=0 to see every difference.
  */
-const TOLERANCE = Number(process.env.VISUAL_TOLERANCE ?? 0.01);
+const THRESHOLD = 0.1;
+const MAX_DIFFERENT_PIXELS = Number(process.env.VISUAL_MAX_PIXELS ?? 100);
+
+/**
+ * What the new design changes on purpose, written as styles for the live
+ * site's own markup. Code blocks are the other intended difference; the
+ * samples below stay clear of them.
+ *
+ * Only changes that show on a sampled page are here. The rest (long words
+ * wrapping in posts, tags wrapping in a post's footer) change nothing on a
+ * page that already fitted its screen, and leaving them out proves that.
+ */
+const INTENDED_DIFFERENCES = `
+  /* Text that was too faint on white (below 4.5:1) is darker. */
+  /* Dates, categories and the copyright line: zinc-400 to zinc-500. */
+  .text-zinc-400 { color: #71717a !important; }
+  /* "Read article" and the current page in the header: teal-500 to teal-700. */
+  .text-teal-500 { color: #0f766e !important; }
+  /* The line under the current page in the header, to match. */
+  .via-teal-500\\/40 {
+    background-image: linear-gradient(
+      to right, rgb(15 118 110 / 0), rgb(15 118 110 / 0.4), rgb(15 118 110 / 0)
+    ) !important;
+  }
+  /* Links in posts and pages: teal-500 to teal-700. */
+  .prose {
+    --tw-prose-links: #0f766e !important;
+    --tw-prose-underline: rgb(15 118 110 / 0.2) !important;
+  }
+
+  /* A long word in a card (a web address) wraps instead of making the page
+     scroll sideways. */
+  main article h2, main article p { max-width: 100%; overflow-wrap: break-word; }
+`;
 
 interface Sample {
   name: string;
@@ -63,8 +112,14 @@ const samples: Sample[] = [
   { name: 'not-found', path: '/404.html', livePath: '/this-page-does-not-exist/', element: 'main' },
 ];
 
-async function capture(page: Page, url: string, sample: Sample): Promise<Buffer> {
+async function capture(
+  page: Page,
+  url: string,
+  sample: Sample,
+  styles?: string,
+): Promise<Buffer> {
   await page.goto(url, { waitUntil: 'networkidle' });
+  if (styles) await page.addStyleTag({ content: styles });
   await page.evaluate(() => document.fonts.ready);
   const mask = (sample.mask ?? []).map((selector) => page.locator(selector));
   const options = { animations: 'disabled', caret: 'hide', mask } as const;
@@ -96,7 +151,12 @@ test.describe('pages look the same as on the live site', () => {
   for (const sample of samples) {
     test(sample.name, async ({ page, context }, testInfo) => {
       const livePage = await context.newPage();
-      const expected = await capture(livePage, `${LIVE}${sample.livePath ?? sample.path}`, sample);
+      const expected = await capture(
+        livePage,
+        `${LIVE}${sample.livePath ?? sample.path}`,
+        sample,
+        INTENDED_DIFFERENCES,
+      );
       await livePage.close();
 
       // The live screenshot becomes the expected image for this run only.
@@ -106,7 +166,10 @@ test.describe('pages look the same as on the live site', () => {
       writeFileSync(file, expected);
 
       const actual = await capture(page, sample.path, sample);
-      expect(actual).toMatchSnapshot(name, { maxDiffPixelRatio: TOLERANCE });
+      expect(actual).toMatchSnapshot(name, {
+        threshold: THRESHOLD,
+        maxDiffPixels: MAX_DIFFERENT_PIXELS,
+      });
     });
   }
 });

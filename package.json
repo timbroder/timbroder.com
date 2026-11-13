@@ -22,6 +22,7 @@
     "test:smoke": "vitest run tests/smoke",
     "test:build": "vitest run tests/build",
     "test:browser": "playwright test",
+    "test:browser:linux": "sh scripts/ci/browser-tests-linux.sh",
     "serve": "node scripts/serve-dist.ts"
   },
   "dependencies": {

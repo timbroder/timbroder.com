@@ -2,6 +2,10 @@ import { defineConfig } from '@playwright/test';
 
 const PORT = 4321;
 
+const DESKTOP = { browserName: 'chromium', viewport: { width: 1280, height: 900 } } as const;
+const PHONE = { browserName: 'chromium', viewport: { width: 390, height: 844 } } as const;
+const EVERY_PAGE = '**/every-page.spec.ts';
+
 /**
  * Browser tests run against a local preview of the build (`npm run build`
  * first).
@@ -26,17 +30,29 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   expect: {
-    toHaveScreenshot: { animations: 'disabled', caret: 'hide', maxDiffPixelRatio: 0.01 },
-    toMatchSnapshot: { maxDiffPixelRatio: 0.01 },
+    // Stored screenshots must match exactly: no pixel may be off by more
+    // than a rounding error. The pinned container draws a page the same way
+    // every time, so anything looser would only hide real changes (a change
+    // of text colour moves well under 1% of the pixels).
+    toHaveScreenshot: { animations: 'disabled', caret: 'hide', maxDiffPixels: 0, threshold: 0.05 },
   },
   projects: [
+    { name: 'desktop', testIgnore: EVERY_PAGE, use: DESKTOP },
+    { name: 'phone', testIgnore: EVERY_PAGE, use: PHONE },
+    // Opening every page keeps every processor busy for a minute, and a
+    // screenshot taken under that load once came out a few pixels different.
+    // So these start only when the tests above have finished.
     {
-      name: 'desktop',
-      use: { browserName: 'chromium', viewport: { width: 1280, height: 900 } },
+      name: 'every-page-desktop',
+      testMatch: EVERY_PAGE,
+      use: DESKTOP,
+      dependencies: ['desktop', 'phone'],
     },
     {
-      name: 'phone',
-      use: { browserName: 'chromium', viewport: { width: 390, height: 844 } },
+      name: 'every-page-phone',
+      testMatch: EVERY_PAGE,
+      use: PHONE,
+      dependencies: ['desktop', 'phone'],
     },
   ],
   webServer: {

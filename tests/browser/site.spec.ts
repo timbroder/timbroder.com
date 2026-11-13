@@ -4,6 +4,7 @@
  */
 import { expect, test } from '@playwright/test';
 import { seriousViolations } from './a11y.ts';
+import { sidewaysScroll } from './layout.ts';
 
 const PAGE_TYPES = {
   home: '/',
@@ -91,27 +92,10 @@ test('an unknown URL shows the 404 page', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('404: Not Found');
 });
 
-/**
- * Pages that scroll sideways on a phone on the live site too. A card summary
- * there contains a long web address, which cannot wrap. Matching the live
- * site comes first during the migration; this is a follow-up for after
- * cutover.
- */
-const INHERITED_OVERFLOW: Record<string, string[]> = {
-  phone: ['/tag/chrome/'],
-};
-
 for (const [name, path] of Object.entries(PAGE_TYPES)) {
-  test(`${name}: fits the screen without scrolling sideways`, async ({ page }, testInfo) => {
-    test.skip(
-      (INHERITED_OVERFLOW[testInfo.project.name] ?? []).includes(path),
-      'Scrolls sideways on the live site too; see INHERITED_OVERFLOW.',
-    );
+  test(`${name}: fits the screen without scrolling sideways`, async ({ page }) => {
     await page.goto(path);
-    const overflow = await page.evaluate(
-      () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
-    );
-    expect(overflow).toBeLessThanOrEqual(0);
+    expect(await sidewaysScroll(page)).toBeNull();
   });
 
   test(`${name}: has no serious accessibility problems`, async ({ page }) => {
