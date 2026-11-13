@@ -462,7 +462,7 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 - **Tests added:** R17.
 - **Done when:** the samples appear correctly on pages, lists and tags, and Tim has done the manual check (R18).
 - **How the samples were made:** by hand, in the format of the Content Delivery API. The real space has no published posts to save an answer from, and the session that built this had no credentials for it. The envelope (items, linked entries and assets, errors) was checked against Contentful's public example space; the rich text node names come from Contentful's own type definitions; the field names come from the Gatsby site's schema. What is not yet proven is that the real space's content types match that schema. R18 proves it.
-- **What the deploy preview showed:** see the pull request for this stage.
+- **What the deploy preview showed:** the preview build read the real space and found no published posts (`build-contentful` says `api: 0 posts`). So the credentials reach deploy previews, the space answers, and it has a `blogPost` content type.
 - **Also fixed:** a story taller than the browser window was cut off at the bottom of its screenshot. Three stories are that tall (the 120-line code block, the Prose example and the new Contentful sample), and their screenshots now show all of them.
 
 ### Stage 7: Feed, SEO and analytics
