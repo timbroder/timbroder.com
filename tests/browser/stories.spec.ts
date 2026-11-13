@@ -67,6 +67,16 @@ for (const story of stories) {
     } else {
       await expect(main.locator('*').first()).toBeVisible();
       await expect(page.locator('#no-pointer')).toHaveCount(1);
+
+      // A story taller than the window scrolls inside <main>, and its
+      // screenshot would stop at the fold. The window is made tall enough
+      // to show all of it.
+      const height = await main.evaluate((element) => element.scrollHeight);
+      const viewport = page.viewportSize()!;
+      if (height > viewport.height) {
+        await page.setViewportSize({ width: viewport.width, height });
+        await expect.poll(() => main.evaluate((el) => el.scrollHeight <= el.clientHeight)).toBe(true);
+      }
       await expect(main).toHaveScreenshot(`${story.replace('/', '-')}.png`);
 
       // The accessibility checks see the story as a reader gets it.

@@ -25,6 +25,20 @@ html {
 }
 
 /*
+ * A picture in a Contentful post comes with a caption. Both sit in the
+ * middle of the column. Markdown posts have no captions.
+ */
+.prose figure > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose figcaption {
+  text-align: center;
+}
+
+/*
  * Code blocks.
  *
  * The Gatsby site used Prism's Okaidia theme with line numbers. Astro
@@ -66,4 +80,9 @@ pre.astro-code .line::before {
   text-align: right;
   text-shadow: none;
   user-select: none;
+}
+
+/* A code block in a Contentful post can ask for no line numbers. */
+pre.astro-code.no-line-numbers .line::before {
+  content: none;
 }
