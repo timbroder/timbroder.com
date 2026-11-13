@@ -104,7 +104,7 @@ Made with Tim on 2026-11-12.
 | Contentful tests | Saved sample responses in the repo. One manual check against the real space before cutover. |
 | Post URLs | Clean up all untidy slugs with one rule: lowercase letters, digits and single hyphens. Each old URL gets a 301 to the new one. |
 | Feed | Stays at `/feed`, with full content of every post |
-| Design | Match the live site. Code blocks move to Astro's built-in highlighter and are reviewed by eye. |
+| Design | Match the live site, with three exceptions. Code blocks move to Astro's built-in highlighter and are reviewed by eye. Text that was too faint is darker. Long words and rows of tags wrap, so no page scrolls sideways. See "Where the design differs from the live site" below. |
 | Component library | Astrobook, built into the site and public at `/astrobook/` |
 | CI | GitHub Actions runs the full suite when code changes. Changes that only touch content skip it. |
 | Rollout | Staged PRs into the `astro` branch, then one cutover PR to `main` |
@@ -146,6 +146,18 @@ The baseline capture in stage 1 found these. Each one becomes an expected differ
 | Some card descriptions show raw markdown where a post starts with an image. | Descriptions are plain text. |
 | A tag or category written two ways ("jira" and "Jira") has one page, which only lists the posts using the older spelling. This affects `/tag/jira/` and `/category/productivity/`. | The page lists the posts using either spelling. |
 | Posts published on the same day can be out of order, because dates are sorted as text. | Posts are sorted by their actual time. |
+
+### Where the design differs from the live site
+
+Stage 4 found two problems in the live design. Tim asked for both to be fixed during the migration, not after it. These, and code blocks, are the only places the new design differs on purpose.
+
+| On the live site | On the new site |
+|---|---|
+| Dates, categories and the copyright line are a grey (zinc-400) with 2.6:1 contrast on white. Accessibility guidelines (WCAG AA) ask for 4.5:1. | One shade darker (zinc-500), at 4.8:1. |
+| Links, "Read article" and the current page in the header are a teal (teal-500) with 2.4:1 contrast. | Two shades darker (teal-700), at 5.4:1. Links go one shade darker again when pointed at. |
+| Code blocks use Prism's Okaidia theme. | Code blocks use Shiki's Monokai, the closest match. Five of its colours were below 4.5:1 on the dark background (keywords, comments and errors among them); each is lightened just enough to pass. The whole theme is checked, not only the colours used today. |
+| A long web address or file path cannot wrap, in a card summary or in a post, so the page scrolls sideways. Built the same way, the new site had 98 such pages on a phone and 4 on a desktop. | Long words wrap. No page scrolls sideways. |
+| A post with many tags scrolls sideways on a phone, because the row of tags cannot wrap. | The tags wrap, and the category moves below them when there is no room beside. |
 
 ## 3. What the old plans got wrong
 
@@ -194,7 +206,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 ### Rendering
 
 17. **The markdown processor is Sätteri, Astro 7's default.** Stage 2 ran it and the older remark pipeline over every post and compared the output to the live site. They tied, so the default stays. Smart punctuation is off, because the Gatsby site did not convert quotes or dashes.
-18. **Code highlighting uses Shiki with the `monokai` theme and CSS line numbers.** This is the closest match to today's Prism Okaidia. Fence language names are fixed in the content.
+18. **Code highlighting uses Shiki with the `monokai` theme and CSS line numbers.** This is the closest match to today's Prism Okaidia. Five of the theme's colours are lightened to reach 4.5:1 contrast (`src/lib/code-theme.ts`). Fence language names are fixed in the content.
 19. **Images are served from stable URLs under `/images/`, not through Astro's image pipeline.** The feed carries full post HTML and needs image URLs that never change, and 20 posts already use this form. The cost is no automatic resizing; images are compressed once when they are added.
 20. **Image files move to `public/images/`.** Downloaded remote images go in `public/images/remote/`. A file, `content/image-sources.json`, records each original URL, its local path and whether it came from the original host, the Internet Archive or the placeholder.
 
@@ -227,8 +239,8 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R4 | Tag and category URLs unchanged | Every baseline tag and category URL exists, apart from `/tag//`; unit tests cover `kebabCase` edge cases | Unit, build output |
 | R5 | Lists show the same posts in the same order | For every list, its pages joined together equal the baseline's order for that list, and no page has more than 20 posts | Build output |
 | R6 | Post content renders the same | For all 518 posts: body text, headings, link targets, and counts of images, code blocks and embeds equal the baseline | Build output |
-| R7 | Pages look the same | Each page type is opened on the live site and on the new build in the same browser, at desktop and phone width, and the two screenshots are compared. List pages are compared from the top, since the live ones are far longer; a post with code is compared down to its first code block. Page types: home, post, link post, post with code, tag, category, About, markdown page, 404, plus the pagination and the footer on their own. A post with an image and a post with an embedded video are added in stage 5, once images are settled. | Browser |
-| R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots | Browser |
+| R7 | Pages look the same, and fit the screen | Each page type is opened on the live site and on the new build in the same browser, at desktop and phone width, and the two screenshots are compared. The live page is first given the intended design differences, so everything else has to match. Separately, every page is opened at both widths to check that none scrolls sideways. List pages are compared from the top, since the live ones are far longer; a post with code is compared down to its first code block. Page types: home, post, link post, post with code, tag, category, About, markdown page, 404, plus the pagination and the footer on their own. A post with an image and a post with an embedded video are added in stage 5, once images are settled. | Browser |
+| R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots. Every colour in the theme has at least 4.5:1 contrast | Browser, Unit |
 | R9 | Feed is unchanged for subscribers | Valid RSS; one item per post; every baseline guid still present; full content in every item; no relative URLs | Build output |
 | R10 | Feed is reachable | `/feed` and `/feed/` return 200 with an RSS content type | Deploy preview |
 | R11 | SEO tags and head links unchanged | Title, description, canonical, Open Graph, Twitter, structured data, RSS links, the Mastodon `rel="me"` link and `rel="prev"`/`rel="next"` equal the baseline on every page | Build output |
@@ -242,10 +254,10 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R19 | Google Analytics is on every page | The GA tag appears exactly once on every page outside `/astrobook/` | Build output |
 | R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond GA and structured data | Build output |
 | R21 | Astrobook is public but not indexed | `/astrobook/` builds, has a `noindex` tag, and is absent from the sitemap | Build output |
-| R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot and passes accessibility checks | Browser |
+| R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot exactly and passes accessibility checks | Browser |
 | R23 | Unpublished things stay unpublished | No page, list entry or feed item for the draft or the three unpublished files; no page at `/using-typescript/` | Build output |
 | R24 | Bad content cannot deploy | Unit tests feed the build checks a post with no date, a duplicate URL, an untidy slug and a missing image | Unit |
-| R25 | Pages are accessible | No serious accessibility violations on each page type or story, apart from the colour contrast the design already has (see section 12) | Browser |
+| R25 | Pages are accessible | No serious accessibility violations on each page type or story, with no exceptions. Colour contrast is checked on every page, not only a sample | Browser |
 | R26 | Netlify behaviour is unchanged | Missing trailing slash redirects; unknown URL returns 404 with the custom page | Deploy preview |
 | R27 | Link posts work as today | For every post: the "original article" link is present with the right URL exactly when the baseline has one, and its card says "Read commentary" or "Read article" as in the baseline | Build output |
 | R28 | List pages carry the same details | On every list page: the headline, and each card's date, category, description and link, equal the baseline | Build output |
@@ -295,9 +307,11 @@ The crawl is throttled and retries, because the live site occasionally returns a
 
 ### Screenshots
 
-- **Pages are compared with the live site directly.** Each test run opens a page on the live site and on the new build in the same browser and compares the two. Nothing is stored, so there is no stale baseline, and both sides render with the same fonts. Right now all 22 comparisons match pixel for pixel.
-- **Story screenshots are stored**, since stories have no live counterpart. They are taken in one pinned Playwright container in CI, never on a laptop, because fonts render differently on macOS and Linux. A unit test keeps the container's version in step with the installed Playwright.
-- **To accept a deliberate visual change,** delete the affected screenshots, let CI take new ones, and commit them from the run's artifact.
+- **Pages are compared with the live site directly.** Each test run opens a page on the live site and on the new build in the same browser and compares the two. Nothing is stored, so there is no stale baseline, and both sides render with the same fonts.
+- **Intended differences are applied to the live page first.** The test holds the short list of style changes from "Where the design differs from the live site" and gives them to the live page before its screenshot. Everything else still has to match.
+- **The comparison is strict enough to notice one shade of grey.** At most 100 pixels may differ in a screenshot. The pages differ by 22 at most, because the live site splits some lines of text in a way that moves a letter by a fraction of a pixel. Changing the colour of one line of small text changes about 470. The first version of this test allowed 1% of the pixels to differ, which let a change of text colour through unnoticed.
+- **Story screenshots are stored**, since stories have no live counterpart. They are taken in one pinned Playwright container, never directly on a laptop, because fonts render differently on macOS and Linux. A unit test keeps the container's version in step with the installed Playwright. A story has to match its screenshot exactly.
+- **To accept a deliberate visual change,** run `npm run build`, then `npm run test:browser:linux -- stories --update-snapshots`, and commit the screenshots that changed. This runs the same container as CI and needs Docker. Without Docker: delete the affected screenshots, let CI take new ones, and commit them from the run's artifact.
 - **After cutover** the live site is the new site, so the page comparison switches to stored screenshots too.
 
 ## 7. Astrobook
@@ -400,8 +414,9 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
   - The layout and every component, each with stories.
   - Styled pages, including About and the 404 page.
   - Code highlighting.
+  - Fixes for the two problems found in the live design: faint text and sideways scrolling.
 - **Tests added:** R7, R8, R20, R21, R22, R25, R27 to R30.
-- **Done when:** page screenshots match the live site, and Tim has approved the code block stories.
+- **Done when:** page screenshots match the live site apart from the intended differences, and Tim has approved the code block stories.
 
 ### Stage 5: Content fidelity and images
 
@@ -515,16 +530,9 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 
 These are deliberately left for after cutover.
 
-- Any design change, including dark mode.
+- Any other design change, including dark mode.
 - Search, comments, reading time, tables of contents or other new features.
 - Automatic image resizing.
 - Cleaning legacy frontmatter out of old posts.
 - Renaming or moving content files.
 - Publishing the three never-published posts.
-
-### Problems the live design already has
-
-The migration matches the live site, so it carries these over. The tests know about them and will catch anything new of the same kind. Each is a small fix once the new site is live.
-
-- **Colour contrast.** Dates and the copyright line (zinc-400 on white), and links and "Read article" (teal-500 on white), are below the 4.5:1 contrast that accessibility guidelines ask for.
-- **Sideways scrolling on a phone.** A card summary that contains a long web address cannot wrap, so the page scrolls sideways. `/tag/chrome/` is one example.
