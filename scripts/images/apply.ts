@@ -32,7 +32,7 @@ import {
   writeFileSync,
 } from 'node:fs';
 import { basename, dirname, extname, join, relative } from 'node:path';
-import { contentFiles, imageRefs, isRemote, judge, maskCode, stemOf, STAND_INS } from './lib.ts';
+import { contentFiles, imageRefs, isRemote, judge, maskCode, STAND_INS } from './lib.ts';
 import type { Fetched } from './fetch.ts';
 
 const CACHE = 'scripts/images/.cache';
