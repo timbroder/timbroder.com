@@ -220,9 +220,19 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 ### Feed and SEO
 
 21. **The feed is an endpoint at `/feed`**, with a Netlify header so it is served as RSS and not plain text.
-22. **Feed guids never change.** A re-slugged post keeps its old URL as its guid and gets the new URL as its link. Otherwise every feed reader would show 83 old posts as new.
-23. **The feed includes every published post.** That is 518, up from 515; the live feed drops posts that lack `layout:`.
+22. **Feed guids never change.** A post's guid is the address it had on the live site, without a trailing slash, which is the form the live feed uses. A re-slugged post keeps its old address as its guid and gets the new one as its link. Otherwise every feed reader would show 83 old posts as new.
+23. **The feed includes every published post.** That is 519, up from 516; the live feed drops posts that lack `layout:`.
+    - Every address inside a post is made absolute, so pictures and links work in a feed reader.
+    - An item links to the post's address with its trailing slash, which saves the reader a redirect.
+    - An item's description is the post's summary (up to 512 characters). The live feed cut it at 140.
+    - The feed's date is the newest post's, so two builds of the same content give the same file.
 24. **Sitemap file names stay `sitemap-index.xml` and `sitemap-0.xml`**, so `robots.txt` needs no change. `/astrobook/` and the 404 page are excluded.
+
+Three more, decided in stage 7:
+
+- **Head tags are the live site's**, value for value: title, description, canonical address, Open Graph, Twitter, the structured data on posts, and the links to the feed, Feedburner, the manifest and Mastodon. A description is written on one line; the live site kept the line breaks of the post in it.
+- **Google Analytics only runs on the real site.** Every page carries one small script that loads Google's code when the page is at `timbroder.com`. A deploy preview, a local build or a test run is no longer counted as a visit. The live site counted them.
+- **The icons are the avatar.** The live site's tab icon and manifest icons are the Gatsby logo, left over from the starter. The manifest is named "Tim Broder .com" and served as a manifest, not as a download.
 
 ### Contentful
 
@@ -263,8 +273,8 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R16 | Internal links work | Every internal link resolves to a page, a file or a redirect | Build output |
 | R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash; code is highlighted exactly as in a markdown post. The share image is checked on the post until stage 7 puts it in the page head. | Unit, build output |
 | R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview. Steps are in section 11. | Manual |
-| R19 | Google Analytics is on every page | The GA tag appears exactly once on every page outside `/astrobook/` | Build output |
-| R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond GA and structured data | Build output |
+| R19 | Google Analytics is on every page | The analytics script appears exactly once on every page outside `/astrobook/`, and not in it. Run against a stand-in for the browser, it loads Google's code on `timbroder.com` and does nothing on any other host | Build output, unit |
+| R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond the analytics script and, on a post, its structured data | Build output |
 | R21 | Astrobook is public but not indexed | `/astrobook/` builds, has a `noindex` tag, and is absent from the sitemap | Build output |
 | R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot exactly and passes accessibility checks | Browser |
 | R23 | Unpublished things stay unpublished | No page, list entry or feed item for the draft or the three unpublished files; no page at `/using-typescript/` | Build output |
@@ -285,6 +295,8 @@ Tests R6, R11 and R27 to R30 allow these, and nothing else. They live in `tests/
 - Code block markup.
 - The broken "original article" link on the two `link: None` posts.
 - Everything in "Live-site quirks and what the new site does" in section 2, which includes three extra feed items.
+- Line breaks inside a description, which become spaces.
+- The description of `/apps/`, which now includes the alt text of the app icon. The live summary skipped pictures written in markdown's reference style.
 
 Three kinds of difference in post bodies came out of stage 5. The first two are checked mechanically: the test accepts a difference only if it is exactly of that kind.
 
@@ -472,8 +484,12 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
   - Head tags and structured data.
   - Google Analytics.
   - The manifest, favicon and `robots.txt`.
-- **Tests added:** R9, R10, R11, R19, R26.
+- **Tests added:** R9, R10, R11, R19, R26. R20 now allows exactly the analytics script and structured data. R17 gained its last check: a Contentful post's own share image is used in its link preview.
 - **Done when:** the feed validates and SEO tags match the baseline.
+- **What the comparison with the live site found:**
+  - Every guid in the live feed is in the new one, with the same date. The three new items are the three posts the live feed left out.
+  - The head tags of all 770 pages match, apart from the listed differences. Two things needed fixing to get there: markdown pages had the site's description, not a summary of their own text, and descriptions carried line breaks in different places than the live ones.
+  - The live tab icon is the Gatsby logo, and so are the manifest's icons.
 
 ### Stage 8: Cutover
 
@@ -550,6 +566,7 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`node scripts/images/recover.ts --list`) |
 | Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
 | Stage 6 | Publish a test post in Contentful and check it on the deploy preview (R18). Steps below. |
+| Stage 7 | Look at the new tab icon (your avatar, in place of the Gatsby logo) on the deploy preview and say if you want something else |
 | Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
 
 ### The Contentful check (R18)
