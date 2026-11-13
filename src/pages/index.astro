@@ -1,0 +1,14 @@
+---
+import ListHead from '../components/ListHead.astro';
+import PostList from '../components/PostList.astro';
+import Base from '../layouts/Base.astro';
+import { listPages } from '../lib/lists.ts';
+import { getPosts } from '../lib/posts.ts';
+
+const [list] = listPages('/', await getPosts());
+---
+
+<Base title="TimBroder.com Posts" showSiteTitle home>
+  <ListHead slot="head" list={list} />
+  <PostList list={list} />
+</Base>

@@ -29,10 +29,10 @@ The [Overcast](https://geo.itunes.apple.com/us/app/overcast-podcast-player/id888
 1. Open Audacity
 2. Click File -> Import Audio
 3. Choose your audio recording
-4. Optional: If Audacity prompts you to "Select Stream(s) to import", select all of them and hit OK ![](https://c1.staticflickr.com/6/5567/32174620192_8f027bbbef_b.jpg)
+4. Optional: If Audacity prompts you to "Select Stream(s) to import", select all of them and hit OK ![](/images/remote/2017-01-15-Adding-SmartSpeed-to-any-audio-file/32174620192_8f027bbbef_b.jpg)
 5. Select one of the audio streams and hit CMD+A to highlight all of the audio
 6. Click Effect -> Truncate Silence
-7. I currently have **duration** set to **0.9** and **truncate to** set to **0.5**. What this does is find any silence longer that 0.9 seconds and shorten it to 0.5 seconds ![](https://c1.staticflickr.com/1/281/32174511182_ee8cfc68db_b.jpg)
+7. I currently have **duration** set to **0.9** and **truncate to** set to **0.5**. What this does is find any silence longer that 0.9 seconds and shorten it to 0.5 seconds ![](/images/remote/2017-01-15-Adding-SmartSpeed-to-any-audio-file/32174511182_ee8cfc68db_b.jpg)
 8. Hit ok & let it run
 9. File -> Export *(As a WAV. You may have to hit OK a few times)*
 10. Done!

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Missing image</title>
+  <desc id="d">A crooked, empty picture frame with a tumbleweed rolling through it. The caption reads: This picture has left the internet. It lived on a server that shut down, and it did not leave a forwarding address.</desc>
+  <style>
+    text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  </style>
+  <rect x="1.5" y="1.5" width="477" height="297" rx="18" fill="#fafafa" stroke="#d4d4d8" stroke-width="3" stroke-dasharray="10 8"/>
+
+  <!-- the nail and the string the frame hangs from -->
+  <circle cx="240" cy="30" r="4" fill="#71717a"/>
+  <path d="M240 30 L176 62 M240 30 L300 50" stroke="#a1a1aa" stroke-width="2" fill="none"/>
+
+  <!-- the frame, hanging crooked -->
+  <g transform="rotate(-5 240 110)">
+    <rect x="160" y="52" width="160" height="116" rx="6" fill="#ffffff" stroke="#3f3f46" stroke-width="5"/>
+    <rect x="172" y="64" width="136" height="92" fill="#f4f4f5" stroke="#d4d4d8" stroke-width="1.5"/>
+    <!-- desert floor -->
+    <path d="M172 138 H308" stroke="#a1a1aa" stroke-width="2"/>
+    <!-- a small cactus, far away -->
+    <path d="M286 138 V118 M286 128 H280 V122 M286 124 H292 V119" stroke="#0f766e" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- the tumbleweed -->
+    <g stroke="#a16207" stroke-width="2" fill="none" stroke-linecap="round">
+      <circle cx="226" cy="121" r="16"/>
+      <path d="M212 114 Q226 104 240 116 M213 126 Q226 138 239 125 M219 109 Q232 121 221 135 M233 108 Q222 121 234 134 M210 121 H242"/>
+    </g>
+    <!-- it is moving -->
+    <path d="M184 112 H198 M180 122 H196 M186 132 H200" stroke="#a1a1aa" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <text x="240" y="214" text-anchor="middle" font-size="22" font-weight="700" fill="#27272a">This picture has left the internet</text>
+  <text x="240" y="242" text-anchor="middle" font-size="14" fill="#52525b">It lived on a server that shut down,</text>
+  <text x="240" y="262" text-anchor="middle" font-size="14" fill="#52525b">and it did not leave a forwarding address.</text>
+</svg>

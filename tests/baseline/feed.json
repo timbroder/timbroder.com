@@ -1,0 +1,4145 @@
+{
+ "contentType": "text/plain; charset=UTF-8",
+ "bytes": 2103573,
+ "title": "TimBroder.com RSS Feed",
+ "description": "Tim Broder is a creative technologist",
+ "link": "https://timbroder.com",
+ "items": [
+  {
+   "guid": "https://timbroder.com/2026/11/gatsby-on-autopilot-time-to-replatform/",
+   "link": "https://timbroder.com/2026/11/gatsby-on-autopilot-time-to-replatform/",
+   "title": "Gatsby Is on Autopilot. Time to Think About Replatforming.",
+   "pubDate": "2026-11-13T05:00:00.000Z",
+   "descriptionLength": 224,
+   "contentLength": 224
+  },
+  {
+   "guid": "https://timbroder.com/2026/11/goodreads-to-storygraph-sync",
+   "link": "https://timbroder.com/2026/11/goodreads-to-storygraph-sync",
+   "title": "I Built a Robot to Move My Books From Goodreads to StoryGraph",
+   "pubDate": "2026-11-12T00:00:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 8076
+  },
+  {
+   "guid": "https://timbroder.com/2026/11/kobo-audiobook-sync",
+   "link": "https://timbroder.com/2026/11/kobo-audiobook-sync",
+   "title": "Reading on My Kobo, Listening on My Phone, Never Losing My Place",
+   "pubDate": "2026-11-11T00:00:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 11301
+  },
+  {
+   "guid": "https://timbroder.com/2026/10/whatsapp-claude-connector",
+   "link": "https://timbroder.com/2026/10/whatsapp-claude-connector",
+   "title": "Making WhatsApp Searchable from Claude",
+   "pubDate": "2026-10-24T00:00:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 15036
+  },
+  {
+   "guid": "https://timbroder.com/2026/01/natural-scroll-applescript-tahoe",
+   "link": "https://timbroder.com/2026/01/natural-scroll-applescript-tahoe",
+   "title": "Updating Natural Scroll using AppleScript in Tahoe",
+   "pubDate": "2026-01-05T00:00:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2380
+  },
+  {
+   "guid": "https://timbroder.com/2025/03/my-leadership-style",
+   "link": "https://timbroder.com/2025/03/my-leadership-style",
+   "title": "My Leadership Style",
+   "pubDate": "2025-03-21T00:00:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 24881
+  },
+  {
+   "guid": "https://timbroder.com/2020/03/best-life-hack",
+   "link": "https://timbroder.com/2020/03/best-life-hack",
+   "title": "What's your best life hack?",
+   "pubDate": "2020-03-20T00:00:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 475
+  },
+  {
+   "guid": "https://timbroder.com/2020/03/kids-home",
+   "link": "https://timbroder.com/2020/03/kids-home",
+   "title": "Kids are Home",
+   "pubDate": "2020-03-17T00:00:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 4899
+  },
+  {
+   "guid": "https://timbroder.com/2020/02/phpstorm-tweaks",
+   "link": "https://timbroder.com/2020/02/phpstorm-tweaks",
+   "title": "My PhpStorm Tweaks",
+   "pubDate": "2020-02-21T00:00:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 4372
+  },
+  {
+   "guid": "https://timbroder.com/2019/09/small-wins",
+   "link": "https://timbroder.com/2019/09/small-wins",
+   "title": "Small Wins",
+   "pubDate": "2019-09-07T00:00:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 707
+  },
+  {
+   "guid": "https://timbroder.com/2018/09/gtdjedi-podcast---ep043---app-battle-iii---reminders-vs-omnifocus-3-vs-todoist",
+   "link": "https://timbroder.com/2018/09/gtdjedi-podcast---ep043---app-battle-iii---reminders-vs-omnifocus-3-vs-todoist",
+   "title": "Gtdjedi Podcast - Ep043 - App Battle Iii - Reminders Vs Omnifocus 3 Vs Todoist",
+   "pubDate": "2018-09-09T08:17:00.000Z",
+   "descriptionLength": 64,
+   "contentLength": 105
+  },
+  {
+   "guid": "https://timbroder.com/2018/08/jackedcast---ep038---transformations-with-timothy-broder",
+   "link": "https://timbroder.com/2018/08/jackedcast---ep038---transformations-with-timothy-broder",
+   "title": "Jackedcast - Ep038 - Transformations With Timothy Broder",
+   "pubDate": "2018-08-28T13:27:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1523
+  },
+  {
+   "guid": "https://timbroder.com/2018/08/show-&-tell-cast---s02ep017---escape-from-new-york,-the-delta-force-&-big-trouble-in-little-china",
+   "link": "https://timbroder.com/2018/08/show-&-tell-cast---s02ep017---escape-from-new-york,-the-delta-force-&-big-trouble-in-little-china",
+   "title": "Show & Tell Cast - S02Ep017 - Escape From New York, The Delta Force & Big Trouble In Little China",
+   "pubDate": "2018-08-27T20:47:00.000Z",
+   "descriptionLength": 63,
+   "contentLength": 118
+  },
+  {
+   "guid": "https://timbroder.com/2018/08/My-favorite-Keto-recipes",
+   "link": "https://timbroder.com/2018/08/My-favorite-Keto-recipes",
+   "title": "My Favorite Keto Recipes",
+   "pubDate": "2018-08-24T08:30:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 5246
+  },
+  {
+   "guid": "https://timbroder.com/2018/08/show-&-tell-cast---s02ep017",
+   "link": "https://timbroder.com/2018/08/show-&-tell-cast---s02ep017",
+   "title": "Show & Tell Cast - S02Ep017 - Escape From New York, The Delta Force & Big Trouble in Little China",
+   "pubDate": "2018-08-11T09:09:00.000Z",
+   "descriptionLength": 94,
+   "contentLength": 156
+  },
+  {
+   "guid": "https://timbroder.com/2018/08/gtdjedi-podcast---ep042---geeking-out-with-mac-utilities",
+   "link": "https://timbroder.com/2018/08/gtdjedi-podcast---ep042---geeking-out-with-mac-utilities",
+   "title": "Gtdjedi Podcast - Ep042 - Geeking Out With Mac Utilities",
+   "pubDate": "2018-08-03T16:40:00.000Z",
+   "descriptionLength": 115,
+   "contentLength": 177
+  },
+  {
+   "guid": "https://timbroder.com/2018/07/gtdjedi-podcast---ep041---noise-reduction",
+   "link": "https://timbroder.com/2018/07/gtdjedi-podcast---ep041---noise-reduction",
+   "title": "Gtdjedi Podcast - Ep041 - Noise Reduction",
+   "pubDate": "2018-07-19T11:55:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 348
+  },
+  {
+   "guid": "https://timbroder.com/2018/06/show-&-tell-cast---s02ep016---the-outsiders,-stardust-&-how-to-train-your-dragon",
+   "link": "https://timbroder.com/2018/06/show-&-tell-cast---s02ep016---the-outsiders,-stardust-&-how-to-train-your-dragon",
+   "title": "Show & Tell Cast - S02Ep016 - The Outsiders, Stardust & How To Train Your Dragon",
+   "pubDate": "2018-06-22T09:09:00.000Z",
+   "descriptionLength": 91,
+   "contentLength": 153
+  },
+  {
+   "guid": "https://timbroder.com/2018/06/gtdjedi-podcast---ep040---wwdc-recap",
+   "link": "https://timbroder.com/2018/06/gtdjedi-podcast---ep040---wwdc-recap",
+   "title": "Gtdjedi Podcast - Ep040 - Wwdc Recap",
+   "pubDate": "2018-06-06T14:19:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 780
+  },
+  {
+   "guid": "https://timbroder.com/2018/05/show-&-tell-cast---s02ep015---casablanca,-amadeus-&-forrest-gump",
+   "link": "https://timbroder.com/2018/05/show-&-tell-cast---s02ep015---casablanca,-amadeus-&-forrest-gump",
+   "title": "Show & Tell Cast - S02Ep015 - Casablanca, Amadeus & Forrest Gump",
+   "pubDate": "2018-05-09T09:30:00.000Z",
+   "descriptionLength": 75,
+   "contentLength": 137
+  },
+  {
+   "guid": "https://timbroder.com/2018/03/gtdjedi-podcast---ep037---talking-drafts-with-jedi-master-greg-pierce",
+   "link": "https://timbroder.com/2018/03/gtdjedi-podcast---ep037---talking-drafts-with-jedi-master-greg-pierce",
+   "title": "Gtdjedi Podcast - Ep037 - Talking Drafts With Jedi Master Greg Pierce",
+   "pubDate": "2018-03-21T17:31:00.000Z",
+   "descriptionLength": 57,
+   "contentLength": 176
+  },
+  {
+   "guid": "https://timbroder.com/2018/03/heymamma-2",
+   "link": "https://timbroder.com/2018/03/heymamma-2",
+   "title": "No title",
+   "pubDate": "2018-03-05T19:10:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 323
+  },
+  {
+   "guid": "https://timbroder.com/2018/02/show-and-tell-cast---s02ep014---the-postman,-reign-of-fire-&-book-of-eli",
+   "link": "https://timbroder.com/2018/02/show-and-tell-cast---s02ep014---the-postman,-reign-of-fire-&-book-of-eli",
+   "title": "Show And Tell Cast - S02Ep014 - The Postman, Reign Of Fire & Book Of Eli",
+   "pubDate": "2018-02-24T09:18:00.000Z",
+   "descriptionLength": 81,
+   "contentLength": 143
+  },
+  {
+   "guid": "https://timbroder.com/2018/02/gtdjedi-podcast---ep036---app-battle-ii---notes-vs.-evernote-vs.-bear-notes",
+   "link": "https://timbroder.com/2018/02/gtdjedi-podcast---ep036---app-battle-ii---notes-vs.-evernote-vs.-bear-notes",
+   "title": "Gtdjedi Podcast - Ep036 - App Battle Ii - Notes Vs. Evernote Vs. Bear Notes",
+   "pubDate": "2018-02-21T08:53:00.000Z",
+   "descriptionLength": 95,
+   "contentLength": 143
+  },
+  {
+   "guid": "https://timbroder.com/2018/02/show-&-tell-cast---s02ep013---braveheart,-the-patriot-&-we-were-soldiers",
+   "link": "https://timbroder.com/2018/02/show-&-tell-cast---s02ep013---braveheart,-the-patriot-&-we-were-soldiers",
+   "title": "Show & Tell Cast - S02Ep013 - Braveheart, The Patriot & We Were Soldiers",
+   "pubDate": "2018-02-03T07:34:00.000Z",
+   "descriptionLength": 83,
+   "contentLength": 145
+  },
+  {
+   "guid": "https://timbroder.com/2018/01/omni-roadmap-2018---the-omni-group",
+   "link": "https://timbroder.com/2018/01/omni-roadmap-2018---the-omni-group",
+   "title": "Omni Roadmap 2018 - The Omni Group",
+   "pubDate": "2018-01-26T18:49:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2613
+  },
+  {
+   "guid": "https://timbroder.com/2017/11/gtdjedi-podcast---ep034---our-favorite-things-of-2017",
+   "link": "https://timbroder.com/2017/11/gtdjedi-podcast---ep034---our-favorite-things-of-2017",
+   "title": "Gtdjedi Podcast - Ep034 - Our Favorite Things Of 2017",
+   "pubDate": "2017-11-22T16:40:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1138
+  },
+  {
+   "guid": "https://timbroder.com/2017/11/show-&-tell-cast---s02ep011---star-wars-rogue-one,-holiday-special-&-force-awakens",
+   "link": "https://timbroder.com/2017/11/show-&-tell-cast---s02ep011---star-wars-rogue-one,-holiday-special-&-force-awakens",
+   "title": "Show & Tell Cast - S02Ep011 - Star Wars Rogue One, Holiday Special & Force Awakens",
+   "pubDate": "2017-11-05T08:39:00.000Z",
+   "descriptionLength": 108,
+   "contentLength": 163
+  },
+  {
+   "guid": "https://timbroder.com/2017/11/gtdjedi-podcast---ep033---watching-forward",
+   "link": "https://timbroder.com/2017/11/gtdjedi-podcast---ep033---watching-forward",
+   "title": "Gtdjedi Podcast - Ep033 - Watching Forward",
+   "pubDate": "2017-11-02T08:38:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 586
+  },
+  {
+   "guid": "https://timbroder.com/2017/10/show-&-tell-cast---s02ep010---dune,-mystic-river-&-final-girls",
+   "link": "https://timbroder.com/2017/10/show-&-tell-cast---s02ep010---dune,-mystic-river-&-final-girls",
+   "title": "Show & Tell Cast - S02Ep010 - Dune, Mystic River & Final Girls",
+   "pubDate": "2017-10-12T08:33:00.000Z",
+   "descriptionLength": 73,
+   "contentLength": 135
+  },
+  {
+   "guid": "https://timbroder.com/2017/09/gtdjedi-podcast---ep032--mixed-emotions-on-ios-11",
+   "link": "https://timbroder.com/2017/09/gtdjedi-podcast---ep032--mixed-emotions-on-ios-11",
+   "title": "Gtdjedi Podcast - Ep032 -Mixed Emotions On Ios 11",
+   "pubDate": "2017-09-27T08:28:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 578
+  },
+  {
+   "guid": "https://timbroder.com/2017/09/show-&-tell-cast---s02ep009---the-dark-crystal,-labyrinth-&-tango-&-cash",
+   "link": "https://timbroder.com/2017/09/show-&-tell-cast---s02ep009---the-dark-crystal,-labyrinth-&-tango-&-cash",
+   "title": "Show & Tell Cast - S02Ep009 - The Dark Crystal, Labyrinth & Tango & Cash",
+   "pubDate": "2017-09-10T11:33:00.000Z",
+   "descriptionLength": 83,
+   "contentLength": 150
+  },
+  {
+   "guid": "https://timbroder.com/2017/08/gtdjedi-podcast---ep031---an-array-of-topics",
+   "link": "https://timbroder.com/2017/08/gtdjedi-podcast---ep031---an-array-of-topics",
+   "title": "Gtdjedi Podcast - Ep031 - An Array Of Topics",
+   "pubDate": "2017-08-24T08:26:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 206
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/fuze-code-studio-will-let-kids-use-the-switch-to-code-their-own-switch-games",
+   "link": "https://timbroder.com/2017/07/fuze-code-studio-will-let-kids-use-the-switch-to-code-their-own-switch-games",
+   "title": "Fuze Code Studio Will Let Kids Use The Switch To Code Their Own Switch Games",
+   "pubDate": "2017-07-22T18:49:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 428
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/gtdjedi-podcast---ep030---health-tracking-—-gtdjedi-podcast---the-tekside-network-—-overcast",
+   "link": "https://timbroder.com/2017/07/gtdjedi-podcast---ep030---health-tracking-—-gtdjedi-podcast---the-tekside-network-—-overcast",
+   "title": "Gtdjedi Podcast - Ep030 - Health Tracking — Gtdjedi Podcast - The Tekside Network — Overcast",
+   "pubDate": "2017-07-21T22:30:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 569
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/gtdjedi-podcast---ep029---let's-talk-sherlock",
+   "link": "https://timbroder.com/2017/07/gtdjedi-podcast---ep029---let's-talk-sherlock",
+   "title": "Gtdjedi Podcast - Ep029 - Let'S Talk Sherlock",
+   "pubDate": "2017-07-08T10:12:00.000Z",
+   "descriptionLength": 133,
+   "contentLength": 181
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/show-&-tell-cast---s02ep007---full-metal-jacket,-sneakers-&-pcu",
+   "link": "https://timbroder.com/2017/07/show-&-tell-cast---s02ep007---full-metal-jacket,-sneakers-&-pcu",
+   "title": "Show & Tell Cast - S02Ep007 - Full Metal Jacket, Sneakers & Pcu",
+   "pubDate": "2017-07-08T10:11:00.000Z",
+   "descriptionLength": 74,
+   "contentLength": 136
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/gtdjedi-podcast---ep028---app-battle---ios-mail-vs-airmail-vs-newton",
+   "link": "https://timbroder.com/2017/07/gtdjedi-podcast---ep028---app-battle---ios-mail-vs-airmail-vs-newton",
+   "title": "Gtdjedi Podcast - Ep028 - App Battle - Ios Mail Vs Airmail Vs Newton",
+   "pubDate": "2017-07-08T10:10:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 291
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/show-&-tell-cast---s02ep006---the-wedding-singer,-super-troopers-&-anchorman",
+   "link": "https://timbroder.com/2017/07/show-&-tell-cast---s02ep006---the-wedding-singer,-super-troopers-&-anchorman",
+   "title": "Show & Tell Cast - S02Ep006 - The Wedding Singer, Super Troopers & Anchorman",
+   "pubDate": "2017-07-08T10:09:00.000Z",
+   "descriptionLength": 87,
+   "contentLength": 149
+  },
+  {
+   "guid": "https://timbroder.com/2017/07/gtdjedi-podcast---ep027---device-wise",
+   "link": "https://timbroder.com/2017/07/gtdjedi-podcast---ep027---device-wise",
+   "title": "Gtdjedi Podcast - Ep027 - Device-Wise",
+   "pubDate": "2017-07-08T10:07:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 493
+  },
+  {
+   "guid": "https://timbroder.com/2017/05/show-and-tell-cast---s02ep005---the-rocketeer,-reservoir-dogs-&-groundhog-day",
+   "link": "https://timbroder.com/2017/05/show-and-tell-cast---s02ep005---the-rocketeer,-reservoir-dogs-&-groundhog-day",
+   "title": "Show And Tell Cast - S02Ep005 - The Rocketeer, Reservoir Dogs & Groundhog Day",
+   "pubDate": "2017-05-01T15:24:00.000Z",
+   "descriptionLength": 86,
+   "contentLength": 148
+  },
+  {
+   "guid": "https://timbroder.com/2017/04/sensegrow",
+   "link": "https://timbroder.com/2017/04/sensegrow",
+   "title": "Sensegrow PivotalTracker case study",
+   "pubDate": "2017-04-27T12:45:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 204
+  },
+  {
+   "guid": "https://timbroder.com/2017/03/gtdjedi-podcast---ep026---a-day-in-the-life-of-a-gtdjedi-master",
+   "link": "https://timbroder.com/2017/03/gtdjedi-podcast---ep026---a-day-in-the-life-of-a-gtdjedi-master",
+   "title": "Gtdjedi Podcast - Ep026 - A Day In The Life Of A Gtdjedi Master",
+   "pubDate": "2017-03-02T20:55:00.000Z",
+   "descriptionLength": 68,
+   "contentLength": 116
+  },
+  {
+   "guid": "https://timbroder.com/2017/02/kidfund-is-on-betalist!",
+   "link": "https://timbroder.com/2017/02/kidfund-is-on-betalist!",
+   "title": "Kidfund is on Betalist!",
+   "pubDate": "2017-02-24T09:31:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 313
+  },
+  {
+   "guid": "https://timbroder.com/2017/02/feb-23-was-a-security-day",
+   "link": "https://timbroder.com/2017/02/feb-23-was-a-security-day",
+   "title": "Feb 23 was a security day",
+   "pubDate": "2017-02-24T09:22:00.000Z",
+   "descriptionLength": 127,
+   "contentLength": 628
+  },
+  {
+   "guid": "https://timbroder.com/2017/02/show-&-tell-cast---s02ep003---blues-brothers,-drop-zone-&-american-history-x",
+   "link": "https://timbroder.com/2017/02/show-&-tell-cast---s02ep003---blues-brothers,-drop-zone-&-american-history-x",
+   "title": "Show & Tell Cast - S02Ep003 - Blues Brothers, Drop Zone & American History X",
+   "pubDate": "2017-02-15T08:28:00.000Z",
+   "descriptionLength": 87,
+   "contentLength": 149
+  },
+  {
+   "guid": "https://timbroder.com/2017/01/review:-caudabe---the-sheath-for-iphone-7",
+   "link": "https://timbroder.com/2017/01/review:-caudabe---the-sheath-for-iphone-7",
+   "title": "The best iPhone case I've ever owned",
+   "pubDate": "2017-01-24T19:29:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 911
+  },
+  {
+   "guid": "https://timbroder.com/2017/01/show-and-tell-cast---s02ep002---westworld,-point-break-&-the-departed",
+   "link": "https://timbroder.com/2017/01/show-and-tell-cast---s02ep002---westworld,-point-break-&-the-departed",
+   "title": "Show And Tell Cast - S02Ep002 - Westworld, Point Break & The Departed",
+   "pubDate": "2017-01-15T13:44:00.000Z",
+   "descriptionLength": 96,
+   "contentLength": 158
+  },
+  {
+   "guid": "https://timbroder.com/2017/01/adding-smartspeed-to-any-audio-file",
+   "link": "https://timbroder.com/2017/01/adding-smartspeed-to-any-audio-file",
+   "title": "Adding Smart Speed to any audio file with Audacity",
+   "pubDate": "2017-01-15T09:18:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 3049
+  },
+  {
+   "guid": "https://timbroder.com/2017/01/remembering-all-those-helpful-stackoverflow-posts",
+   "link": "https://timbroder.com/2017/01/remembering-all-those-helpful-stackoverflow-posts",
+   "title": "Remembering All Those Helpful Stackoverflow Posts",
+   "pubDate": "2017-01-09T14:38:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3497
+  },
+  {
+   "guid": "https://timbroder.com/2016/12/show-&-tell-cast---s02ep001---dr.-strangelove,-young-guns-&-the-boondock-saints",
+   "link": "https://timbroder.com/2016/12/show-&-tell-cast---s02ep001---dr.-strangelove,-young-guns-&-the-boondock-saints",
+   "title": "Show & Tell Cast - S02Ep001 - Dr. Strangelove, Young Guns & The Boondock Saints",
+   "pubDate": "2016-12-23T09:19:00.000Z",
+   "descriptionLength": 86,
+   "contentLength": 148
+  },
+  {
+   "guid": "https://timbroder.com/2016/11/gtdjedi-podcast---ep022---where,-when-&-how-we-use-our-devices",
+   "link": "https://timbroder.com/2016/11/gtdjedi-podcast---ep022---where,-when-&-how-we-use-our-devices",
+   "title": "Gtdjedi Podcast - Ep022 - Where, When & How We Use Our Devices",
+   "pubDate": "2016-11-11T13:26:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 232
+  },
+  {
+   "guid": "https://timbroder.com/2016/11/laravel-54-–-higher-order-messaging-for-collections",
+   "link": "https://timbroder.com/2016/11/laravel-54-–-higher-order-messaging-for-collections",
+   "title": "Laravel 5.4 – Higher Order Messaging For Collections",
+   "pubDate": "2016-11-07T09:59:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2105
+  },
+  {
+   "guid": "https://timbroder.com/2016/10/using-an-encrypted-realm-with-background-or-notificatio-processes",
+   "link": "https://timbroder.com/2016/10/using-an-encrypted-realm-with-background-or-notificatio-processes",
+   "title": "Using an Encrypted Realm in a background or notification processes?",
+   "pubDate": "2016-10-30T13:54:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 2727
+  },
+  {
+   "guid": "https://timbroder.com/2016/08/using-ios-10-devices-with-xcode-7",
+   "link": "https://timbroder.com/2016/08/using-ios-10-devices-with-xcode-7",
+   "title": "Using iOS 10 devices with Xcode 7",
+   "pubDate": "2016-08-31T16:33:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1316
+  },
+  {
+   "guid": "https://timbroder.com/2016/08/how-to-give-your-brain-a-vacation",
+   "link": "https://timbroder.com/2016/08/how-to-give-your-brain-a-vacation",
+   "title": "How To Give Your Brain A Vacation",
+   "pubDate": "2016-08-22T10:47:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 184
+  },
+  {
+   "guid": "https://timbroder.com/2016/08/metallica’s-new-song-is-their-ballsiest-in-decades",
+   "link": "https://timbroder.com/2016/08/metallica’s-new-song-is-their-ballsiest-in-decades",
+   "title": "Metallica’S New Song Is Their Ballsiest In Decades",
+   "pubDate": "2016-08-21T10:58:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 573
+  },
+  {
+   "guid": "https://timbroder.com/2016/07/opening-iterm2-tabs-at-specific-directories",
+   "link": "https://timbroder.com/2016/07/opening-iterm2-tabs-at-specific-directories",
+   "title": "Opening iTerm2 Tabs at Specific Directories",
+   "pubDate": "2016-07-21T10:22:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 4056
+  },
+  {
+   "guid": "https://timbroder.com/2016/07/gtdjedi-podcast---ep018---dock-worthy-watch-apps",
+   "link": "https://timbroder.com/2016/07/gtdjedi-podcast---ep018---dock-worthy-watch-apps",
+   "title": "Gtdjedi Podcast - Ep018 - Dock Worthy Watch Apps",
+   "pubDate": "2016-07-20T09:18:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 509
+  },
+  {
+   "guid": "https://timbroder.com/2016/06/gtdjedi-podcast---ep017---automation-faves",
+   "link": "https://timbroder.com/2016/06/gtdjedi-podcast---ep017---automation-faves",
+   "title": "Gtdjedi Podcast - Ep017 - Automation Faves",
+   "pubDate": "2016-06-23T18:35:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 252
+  },
+  {
+   "guid": "https://timbroder.com/2016/06/hey-mama-16",
+   "link": "https://timbroder.com/2016/06/hey-mama-16",
+   "title": "Hey Mama! Podcast",
+   "pubDate": "2016-06-20T15:05:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 428
+  },
+  {
+   "guid": "https://timbroder.com/2016/06/app-launching-on-apple-watch",
+   "link": "https://timbroder.com/2016/06/app-launching-on-apple-watch",
+   "title": "App Launching On Apple Watch",
+   "pubDate": "2016-06-19T19:35:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 775
+  },
+  {
+   "guid": "https://timbroder.com/2016/06/github-file-and-link-tricks",
+   "link": "https://timbroder.com/2016/06/github-file-and-link-tricks",
+   "title": "Github File and Link Tricks",
+   "pubDate": "2016-06-09T10:25:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1195
+  },
+  {
+   "guid": "https://timbroder.com/2016/06/gtdjedi-podcast---ep016---custom-keyboard-input",
+   "link": "https://timbroder.com/2016/06/gtdjedi-podcast---ep016---custom-keyboard-input",
+   "title": "Gtdjedi Podcast - Ep016 - Custom Keyboard Input",
+   "pubDate": "2016-06-02T12:21:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 358
+  },
+  {
+   "guid": "https://timbroder.com/2016/05/open-source-everything",
+   "link": "https://timbroder.com/2016/05/open-source-everything",
+   "title": "Open source everything",
+   "pubDate": "2016-05-24T16:51:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 695
+  },
+  {
+   "guid": "https://timbroder.com/2016/05/avoiding-blackberry’s-fate-–-marco.org",
+   "link": "https://timbroder.com/2016/05/avoiding-blackberry’s-fate-–-marco.org",
+   "title": "Avoiding Blackberry’S Fate – Marco.Org",
+   "pubDate": "2016-05-22T07:44:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 2346
+  },
+  {
+   "guid": "https://timbroder.com/2016/05/setup-and-teardown-the-database-once-per-test-suite-with-phpunit-listeners",
+   "link": "https://timbroder.com/2016/05/setup-and-teardown-the-database-once-per-test-suite-with-phpunit-listeners",
+   "title": "Setup and Teardown the Database Once Per Test Suite in PHPUnit",
+   "pubDate": "2016-05-04T16:15:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 11234
+  },
+  {
+   "guid": "https://timbroder.com/2016/05/sketch-git-plugin",
+   "link": "https://timbroder.com/2016/05/sketch-git-plugin",
+   "title": "Sketch Git Plugin",
+   "pubDate": "2016-05-04T11:10:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 173
+  },
+  {
+   "guid": "https://timbroder.com/2016/04/gtdjedi-podcast---ep015---notes-on-notes",
+   "link": "https://timbroder.com/2016/04/gtdjedi-podcast---ep015---notes-on-notes",
+   "title": "Gtdjedi Podcast - Ep015 - Notes On Notes",
+   "pubDate": "2016-04-27T09:22:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 342
+  },
+  {
+   "guid": "https://timbroder.com/2016/04/being-a-developer-after-40-—-medium",
+   "link": "https://timbroder.com/2016/04/being-a-developer-after-40-—-medium",
+   "title": "Being A Developer After 40 — Medium",
+   "pubDate": "2016-04-26T18:33:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 214
+  },
+  {
+   "guid": "https://timbroder.com/2016/04/Great-Series-on-Errors-&-Their-Presentation",
+   "link": "https://timbroder.com/2016/04/Great-Series-on-Errors-&-Their-Presentation",
+   "title": "Presenting Unanticipated Errors To Users",
+   "pubDate": "2016-04-26T10:25:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 1152
+  },
+  {
+   "guid": "https://timbroder.com/2016/04/trying-to-mock-a-self-booting-laravel-model-trait",
+   "link": "https://timbroder.com/2016/04/trying-to-mock-a-self-booting-laravel-model-trait",
+   "title": "Trying to Mock a Self Booting Laravel Model Trait",
+   "pubDate": "2016-04-12T11:01:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 22973
+  },
+  {
+   "guid": "https://timbroder.com/2016/04/everything-is-possible-but-nothing-is-free-—-signal-v.-noise",
+   "link": "https://timbroder.com/2016/04/everything-is-possible-but-nothing-is-free-—-signal-v.-noise",
+   "title": "Everything Is Possible But Nothing Is Free",
+   "pubDate": "2016-04-04T17:47:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 449
+  },
+  {
+   "guid": "https://timbroder.com/2016/04/gtdjedi-podcast---ep014---getting-social",
+   "link": "https://timbroder.com/2016/04/gtdjedi-podcast---ep014---getting-social",
+   "title": "Gtdjedi Podcast - Ep014 - Getting Social",
+   "pubDate": "2016-04-03T15:30:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 476
+  },
+  {
+   "guid": "https://timbroder.com/2016/03/jumping-ship-on-basecamp-3",
+   "link": "https://timbroder.com/2016/03/jumping-ship-on-basecamp-3",
+   "title": "Jumping Ship on Basecamp 3",
+   "pubDate": "2016-03-29T18:06:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 6141
+  },
+  {
+   "guid": "https://timbroder.com/2016/03/how-to-get-notified-if-someone-stars,-forks,-or-follows-your-github",
+   "link": "https://timbroder.com/2016/03/how-to-get-notified-if-someone-stars,-forks,-or-follows-your-github",
+   "title": "How to Get Notified if someone stars, forks, or follows your Github",
+   "pubDate": "2016-03-25T15:41:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 304
+  },
+  {
+   "guid": "https://timbroder.com/2016/03/how-to-set-up-an-ios-and-android-smart-app-banner",
+   "link": "https://timbroder.com/2016/03/how-to-set-up-an-ios-and-android-smart-app-banner",
+   "title": "How To Set Up An Ios And Android Smart App Banner",
+   "pubDate": "2016-03-22T21:04:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 364
+  },
+  {
+   "guid": "https://timbroder.com/2016/03/tektok-podcast---ep025---ocd-&-the-se",
+   "link": "https://timbroder.com/2016/03/tektok-podcast---ep025---ocd-&-the-se",
+   "title": "Tektok Podcast - Ep025 - Ocd & The Se",
+   "pubDate": "2016-03-22T20:46:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 899
+  },
+  {
+   "guid": "https://timbroder.com/2016/03/gtdjedi-podcast---ep013---default-worthy-apps",
+   "link": "https://timbroder.com/2016/03/gtdjedi-podcast---ep013---default-worthy-apps",
+   "title": "Gtdjedi Podcast - Ep013 - Default Worthy Apps",
+   "pubDate": "2016-03-10T15:07:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 259
+  },
+  {
+   "guid": "https://timbroder.com/2016/02/jira-filter-subscriptions",
+   "link": "https://timbroder.com/2016/02/jira-filter-subscriptions",
+   "title": "Jira Filter Subscriptions",
+   "pubDate": "2016-02-22T23:00:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 994
+  },
+  {
+   "guid": "https://timbroder.com/2016/02/gtdjedi-podcast---ep012---notification-organization (1)",
+   "link": "https://timbroder.com/2016/02/gtdjedi-podcast---ep012---notification-organization (1)",
+   "title": "Gtdjedi Podcast - Ep012 - Notification Organization",
+   "pubDate": "2016-02-03T08:41:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 784
+  },
+  {
+   "guid": "https://timbroder.com/2016/02/activist-engineering",
+   "link": "https://timbroder.com/2016/02/activist-engineering",
+   "title": "Activist Engineering",
+   "pubDate": "2016-02-02T18:16:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 497
+  },
+  {
+   "guid": "https://timbroder.com/2016/02/giving-better-code-reviews",
+   "link": "https://timbroder.com/2016/02/giving-better-code-reviews",
+   "title": "Giving Better Code Reviews",
+   "pubDate": "2016-02-01T19:08:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 363
+  },
+  {
+   "guid": "https://timbroder.com/2016/01/testing-uiviewcontroller-transitions",
+   "link": "https://timbroder.com/2016/01/testing-uiviewcontroller-transitions",
+   "title": "Testing UIViewController Transitions with Quick and Swift",
+   "pubDate": "2016-01-31T14:57:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 21451
+  },
+  {
+   "guid": "https://timbroder.com/2016/01/tektok-podcast---ep023---overly-connected",
+   "link": "https://timbroder.com/2016/01/tektok-podcast---ep023---overly-connected",
+   "title": "Tektok Podcast - Ep023 - Overly Connected",
+   "pubDate": "2016-01-28T15:21:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1022
+  },
+  {
+   "guid": "https://timbroder.com/2016/01/the-wertzone:-a-history-of-epic-fantasy---part-1",
+   "link": "https://timbroder.com/2016/01/the-wertzone:-a-history-of-epic-fantasy---part-1",
+   "title": "The Wertzone: A History Of Epic Fantasy - Part 1",
+   "pubDate": "2016-01-10T20:57:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 693
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/5-reasons-why-you-should-build-a-small-business-—-not-a-start-up-—-life-learning",
+   "link": "https://timbroder.com/2015/12/5-reasons-why-you-should-build-a-small-business-—-not-a-start-up-—-life-learning",
+   "title": "5 Reasons Why You Should Build A Small Business — Not A Start-Up",
+   "pubDate": "2015-12-26T10:24:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 350
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/vagrant-1.8---hashicorp",
+   "link": "https://timbroder.com/2015/12/vagrant-1.8---hashicorp",
+   "title": "Vagrant 1.8 is out! Linked clones, snapshots, port, ansible and more!",
+   "pubDate": "2015-12-21T18:59:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 750
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/install-hashicorp-through-homebrew-cask",
+   "link": "https://timbroder.com/2015/12/install-hashicorp-through-homebrew-cask",
+   "title": "Installing Vagrant and other Hashicorp products using brew cask on OSX",
+   "pubDate": "2015-12-18T19:12:00.000Z",
+   "descriptionLength": 65,
+   "contentLength": 5612
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/why-quizup-turned-the-fastest-growing-game-in-history-into-a-social-platform",
+   "link": "https://timbroder.com/2015/12/why-quizup-turned-the-fastest-growing-game-in-history-into-a-social-platform",
+   "title": "Why Quizup Turned The Fastest-Growing Game In History Into A Social Platform",
+   "pubDate": "2015-12-18T19:12:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 557
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/show-&-tell-cast---ep014---star-wars-prequel-trilogy",
+   "link": "https://timbroder.com/2015/12/show-&-tell-cast---ep014---star-wars-prequel-trilogy",
+   "title": "Show & Tell Cast - Ep014 - Star Wars Prequel Trilogy",
+   "pubDate": "2015-12-11T08:51:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 254
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/why-2do-is-my-new-favorite-ios-task-manager",
+   "link": "https://timbroder.com/2015/12/why-2do-is-my-new-favorite-ios-task-manager",
+   "title": "Why 2Do Is My New Favorite Ios Task Manager",
+   "pubDate": "2015-12-11T08:25:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 360
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/new-manager-tools",
+   "link": "https://timbroder.com/2015/12/new-manager-tools",
+   "title": "New Manager Tools",
+   "pubDate": "2015-12-09T10:45:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 6915
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/omnifocus-for-mac-v2.4-ready-for-a-push---the-omni-group",
+   "link": "https://timbroder.com/2015/12/omnifocus-for-mac-v2.4-ready-for-a-push---the-omni-group",
+   "title": "Omnifocus For Mac V2.4 Ready For A Push - The Omni Group",
+   "pubDate": "2015-12-07T15:42:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 554
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/still-using-feedbin",
+   "link": "https://timbroder.com/2015/12/still-using-feedbin",
+   "title": "Still Using Feedbin",
+   "pubDate": "2015-12-07T11:45:00.000Z",
+   "descriptionLength": 133,
+   "contentLength": 1269
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/five-lesser-known-features-of-php-7-|-colin-o'dell",
+   "link": "https://timbroder.com/2015/12/five-lesser-known-features-of-php-7-|-colin-o'dell",
+   "title": "Five Lesser-Known Features Of Php 7 | Colin O'Dell",
+   "pubDate": "2015-12-04T06:34:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 197
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/craig-federighi-talks-open-source-swift-and-what’s-coming-in-version-3.0",
+   "link": "https://timbroder.com/2015/12/craig-federighi-talks-open-source-swift-and-what’s-coming-in-version-3.0",
+   "title": "Craig Federighi Talks Open Source Swift And What’S Coming In Version 3.0",
+   "pubDate": "2015-12-03T20:31:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1703
+  },
+  {
+   "guid": "https://timbroder.com/2015/12/awesome-self-hosted",
+   "link": "https://timbroder.com/2015/12/awesome-self-hosted",
+   "title": "Awesome Self Hosted",
+   "pubDate": "2015-12-02T09:37:00.000Z",
+   "descriptionLength": 29,
+   "contentLength": 36
+  },
+  {
+   "guid": "https://timbroder.com/2015/11/first-timers-only",
+   "link": "https://timbroder.com/2015/11/first-timers-only",
+   "title": "First Timers Only",
+   "pubDate": "2015-11-25T15:45:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 377
+  },
+  {
+   "guid": "https://timbroder.com/2015/11/top-four-5",
+   "link": "https://timbroder.com/2015/11/top-four-5",
+   "title": "Top Four 5: Podcasts",
+   "pubDate": "2015-11-14T07:42:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1129
+  },
+  {
+   "guid": "https://timbroder.com/2015/11/show-&-tell---ep013---star-wars-original-trilogy",
+   "link": "https://timbroder.com/2015/11/show-&-tell---ep013---star-wars-original-trilogy",
+   "title": "Show & Tell - Ep013 - Star Wars Original Trilogy",
+   "pubDate": "2015-11-10T09:24:00.000Z",
+   "descriptionLength": 133,
+   "contentLength": 227
+  },
+  {
+   "guid": "https://timbroder.com/2015/11/science-says-snapchat-makes-you-happy",
+   "link": "https://timbroder.com/2015/11/science-says-snapchat-makes-you-happy",
+   "title": "Science Says Snapchat Makes You Happy",
+   "pubDate": "2015-11-01T09:23:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1144
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/12-months-of-a-movie-podcast",
+   "link": "https://timbroder.com/2015/10/12-months-of-a-movie-podcast",
+   "title": "12 Months of the Show & Tell Podcast",
+   "pubDate": "2015-10-25T17:56:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 4232
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/sending-email-to-omnifocus-in-airmail2",
+   "link": "https://timbroder.com/2015/10/sending-email-to-omnifocus-in-airmail2",
+   "title": "Sending Email to Omnifocus in Airmail2",
+   "pubDate": "2015-10-25T09:10:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1341
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/how-to-sync-basecamp-todos-to-omnifocus-or-todoist-",
+   "link": "https://timbroder.com/2015/10/how-to-sync-basecamp-todos-to-omnifocus-or-todoist-",
+   "title": "How to Sync Basecamp Todos to Omnifocus or Todoist",
+   "pubDate": "2015-10-17T11:54:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 3476
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/creating-a-custom-podcast-feed-using-dropbox-and-huffduffer",
+   "link": "https://timbroder.com/2015/10/creating-a-custom-podcast-feed-using-dropbox-and-huffduffer",
+   "title": "Creating a Custom Podcast Feed Using Dropbox and Huffduffer",
+   "pubDate": "2015-10-13T18:28:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 3234
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/a-preview-of-what's-new-in-basecamp-3",
+   "link": "https://timbroder.com/2015/10/a-preview-of-what's-new-in-basecamp-3",
+   "title": "A Preview Of What'S New In Basecamp 3",
+   "pubDate": "2015-10-07T16:37:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 3037
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/magento-2:-q&a-with-a-systems-architect",
+   "link": "https://timbroder.com/2015/10/magento-2:-q&a-with-a-systems-architect",
+   "title": "Magento 2: Q&A With A Systems Architect",
+   "pubDate": "2015-10-04T16:55:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 937
+  },
+  {
+   "guid": "https://timbroder.com/2015/10/using-omnifocus-as-a-honey-do-app",
+   "link": "https://timbroder.com/2015/10/using-omnifocus-as-a-honey-do-app",
+   "title": "Using Omnifocus as a Honey-Do App",
+   "pubDate": "2015-10-01T12:40:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 4458
+  },
+  {
+   "guid": "https://timbroder.com/2015/09/workflow-1.3-brings-powerful-widget,-sync,-health-actions,-and-more",
+   "link": "https://timbroder.com/2015/09/workflow-1.3-brings-powerful-widget,-sync,-health-actions,-and-more",
+   "title": "Workflow 1.3 Brings Powerful Widget, Sync, Health Actions, And More",
+   "pubDate": "2015-09-20T10:17:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 841
+  },
+  {
+   "guid": "https://timbroder.com/2015/09/adobe-aims-to-bring-photoshop-to-mobile-masses-with-upcoming-app---cnet",
+   "link": "https://timbroder.com/2015/09/adobe-aims-to-bring-photoshop-to-mobile-masses-with-upcoming-app---cnet",
+   "title": "Adobe Aims To Bring Photoshop To Mobile Masses With Upcoming App - Cnet",
+   "pubDate": "2015-09-20T09:32:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 673
+  },
+  {
+   "guid": "https://timbroder.com/2015/09/threes’-free-version-doubles-developers’-profits",
+   "link": "https://timbroder.com/2015/09/threes’-free-version-doubles-developers’-profits",
+   "title": "Threes’ Free Version Doubles Developers’ Profits",
+   "pubDate": "2015-09-19T15:31:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 218
+  },
+  {
+   "guid": "https://timbroder.com/2015/09/spotify's-latest-trick-is-a-personalized-weekly-playlist-of-deep-cuts",
+   "link": "https://timbroder.com/2015/09/spotify's-latest-trick-is-a-personalized-weekly-playlist-of-deep-cuts",
+   "title": "Spotify'S Latest Trick Is A Personalized Weekly Playlist Of Deep Cuts",
+   "pubDate": "2015-09-19T12:52:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 639
+  },
+  {
+   "guid": "https://timbroder.com/2015/09/uie-article:-themes---a-small-change-to-product-roadmaps-with-large-effects",
+   "link": "https://timbroder.com/2015/09/uie-article:-themes---a-small-change-to-product-roadmaps-with-large-effects",
+   "title": "Uie Article: Themes - A Small Change To Product Roadmaps With Large Effects",
+   "pubDate": "2015-09-17T08:33:00.000Z",
+   "descriptionLength": 60,
+   "contentLength": 101
+  },
+  {
+   "guid": "https://timbroder.com/2015/09/ordering-baby-supplies-online-in-bulk",
+   "link": "https://timbroder.com/2015/09/ordering-baby-supplies-online-in-bulk",
+   "title": "The Best Place to Order Baby Supplies Online, In Bulk",
+   "pubDate": "2015-09-13T16:07:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 2854
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/apiary-releases-‘world's-first’-automated-api-ci-testing-service---the-new-stack",
+   "link": "https://timbroder.com/2015/08/apiary-releases-‘world's-first’-automated-api-ci-testing-service---the-new-stack",
+   "title": "Apiary Releases ‘World'S First’ Automated Api Ci Testing Service - The New Stack",
+   "pubDate": "2015-08-22T10:45:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 2706
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/drupal-8-admin-menu-needs-a-fix",
+   "link": "https://timbroder.com/2015/08/drupal-8-admin-menu-needs-a-fix",
+   "title": "The Drupal 8 Admin Menu Needs a Fix",
+   "pubDate": "2015-08-21T17:07:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 449
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/how-relay-fm-proves-that-podcasts-aren’t-an-overnight-success",
+   "link": "https://timbroder.com/2015/08/how-relay-fm-proves-that-podcasts-aren’t-an-overnight-success",
+   "title": "How Relay Fm Proves That Podcasts Aren’T An Overnight Success",
+   "pubDate": "2015-08-21T06:29:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 464
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/keep-on-showing-up",
+   "link": "https://timbroder.com/2015/08/keep-on-showing-up",
+   "title": "Just keep showing up",
+   "pubDate": "2015-08-20T10:22:00.000Z",
+   "descriptionLength": 62,
+   "contentLength": 150
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/surviving-anxiety,-or,-how-i-re-met-adam-culp-today-|-remarks",
+   "link": "https://timbroder.com/2015/08/surviving-anxiety,-or,-how-i-re-met-adam-culp-today-|-remarks",
+   "title": "Surviving Anxiety, Or, How I Re-Met Adam Culp Today | Remarks",
+   "pubDate": "2015-08-18T06:44:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 692
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/cushion---from-beta-to-launch---the-subdomain",
+   "link": "https://timbroder.com/2015/08/cushion---from-beta-to-launch---the-subdomain",
+   "title": "Cushion - From Beta To Launch - The Subdomain",
+   "pubDate": "2015-08-18T06:33:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1641
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/things-i've-quit-doing-at-my-desk",
+   "link": "https://timbroder.com/2015/08/things-i've-quit-doing-at-my-desk",
+   "title": "Things I'Ve Quit Doing At My Desk",
+   "pubDate": "2015-08-16T21:00:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1359
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/when-our-blog-became-a-business---$2,000-from-one-post",
+   "link": "https://timbroder.com/2015/08/when-our-blog-became-a-business---$2,000-from-one-post",
+   "title": "When Our Blog Became A Business - $2,000 From One Post",
+   "pubDate": "2015-08-16T20:52:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 417
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/gitlab",
+   "link": "https://timbroder.com/2015/08/gitlab",
+   "title": "Gitlab: Almost Everything We Do Will Be Open",
+   "pubDate": "2015-08-07T17:01:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 634
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/open-sourcing-energy---artsy-engineering",
+   "link": "https://timbroder.com/2015/08/open-sourcing-energy---artsy-engineering",
+   "title": "Open Sourcing Energy - Artsy Engineering",
+   "pubDate": "2015-08-07T17:00:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 469
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/cutting-back",
+   "link": "https://timbroder.com/2015/08/cutting-back",
+   "title": "Cutting Back",
+   "pubDate": "2015-08-06T09:31:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1862
+  },
+  {
+   "guid": "https://timbroder.com/2015/08/invalid-predicate-when-filtering-CKRecords-by-the-same-keys",
+   "link": "https://timbroder.com/2015/08/invalid-predicate-when-filtering-CKRecords-by-the-same-keys",
+   "title": "Invalid predicate when filtering CKRecords by the same keys?",
+   "pubDate": "2015-08-01T20:19:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 6138
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/world's-best-whisky-is-being-sent-to-age-in-space",
+   "link": "https://timbroder.com/2015/07/world's-best-whisky-is-being-sent-to-age-in-space",
+   "title": "World'S Best Whisky Is Being Sent To Age In Space",
+   "pubDate": "2015-07-31T09:38:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 497
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/when-to-give-up-trying-to-start-a-new-habit",
+   "link": "https://timbroder.com/2015/07/when-to-give-up-trying-to-start-a-new-habit",
+   "title": "When To Give Up Trying To Start A New Habit",
+   "pubDate": "2015-07-30T11:19:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 3372
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/git-2.5,-including-multiple-worktrees-and-triangular-workflows",
+   "link": "https://timbroder.com/2015/07/git-2.5,-including-multiple-worktrees-and-triangular-workflows",
+   "title": "Git 2.5, Including Multiple Worktrees And Triangular Workflows",
+   "pubDate": "2015-07-30T10:26:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1128
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/how-to-remember-tar-flags",
+   "link": "https://timbroder.com/2015/07/how-to-remember-tar-flags",
+   "title": "How To Remember Tar Flags",
+   "pubDate": "2015-07-28T17:43:00.000Z",
+   "descriptionLength": 101,
+   "contentLength": 216
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/recent-omnifocus-reading",
+   "link": "https://timbroder.com/2015/07/recent-omnifocus-reading",
+   "title": "Recent Omnifocus Reading and Things I Want to Try",
+   "pubDate": "2015-07-28T15:56:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 12154
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/apple-music-followup-part-1",
+   "link": "https://timbroder.com/2015/07/apple-music-followup-part-1",
+   "title": "Apple Music Followup: Part 1",
+   "pubDate": "2015-07-26T21:55:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 3994
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/gigster-does-the-dev-dirty-work-to-turn-your-idea-into-an-app",
+   "link": "https://timbroder.com/2015/07/gigster-does-the-dev-dirty-work-to-turn-your-idea-into-an-app",
+   "title": "Gigster Does The Dev Dirty Work To Turn Your Idea Into An App",
+   "pubDate": "2015-07-24T11:31:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1005
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/apple-music-is-a-nightmare-and-i’m-done-with-it",
+   "link": "https://timbroder.com/2015/07/apple-music-is-a-nightmare-and-i’m-done-with-it",
+   "title": "Apple Music Is A Nightmare And I’m Done With It",
+   "pubDate": "2015-07-22T15:51:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 4055
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/ios-games-you-need-to-play",
+   "link": "https://timbroder.com/2015/07/ios-games-you-need-to-play",
+   "title": "Sam: Ios Games You Need To Play",
+   "pubDate": "2015-07-21T11:03:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2200
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/up-in-the-air:-meet-the-man-who-flies-around-the-world-for-free",
+   "link": "https://timbroder.com/2015/07/up-in-the-air:-meet-the-man-who-flies-around-the-world-for-free",
+   "title": "Up In The Air: Meet The Man Who Flies Around The World For Free",
+   "pubDate": "2015-07-20T20:12:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 709
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/blog-little-things---coffee-coder",
+   "link": "https://timbroder.com/2015/07/blog-little-things---coffee-coder",
+   "title": "Blog Little Things - Coffee Coder",
+   "pubDate": "2015-07-20T13:32:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 398
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/more-quick-blogging-workflows-|-manton-reece",
+   "link": "https://timbroder.com/2015/07/more-quick-blogging-workflows-|-manton-reece",
+   "title": "More Quick Blogging Workflows | Manton Reece",
+   "pubDate": "2015-07-19T22:32:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 928
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/we-need-more-bad-ideas-|-manton-reece",
+   "link": "https://timbroder.com/2015/07/we-need-more-bad-ideas-|-manton-reece",
+   "title": "We Need More Bad Ideas",
+   "pubDate": "2015-07-19T22:25:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 825
+  },
+  {
+   "guid": "https://timbroder.com/2015/07/inessential-secret-projects-diary-swift-2-protocols",
+   "link": "https://timbroder.com/2015/07/inessential-secret-projects-diary-swift-2-protocols",
+   "title": "Learning from Brent",
+   "pubDate": "2015-07-19T21:42:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1578
+  },
+  {
+   "guid": "https://timbroder.com/2015/05/open-sourcing-jewelbots",
+   "link": "https://timbroder.com/2015/05/open-sourcing-jewelbots",
+   "title": "Open-Sourcing Jewelbots",
+   "pubDate": "2015-05-02T17:08:34.000Z",
+   "descriptionLength": 98,
+   "contentLength": 139
+  },
+  {
+   "guid": "https://timbroder.com/2015/03/php7-vagrant-box",
+   "link": "https://timbroder.com/2015/03/php7-vagrant-box",
+   "title": "PHP7 Vagrant Box",
+   "pubDate": "2015-03-07T16:13:24.000Z",
+   "descriptionLength": 140,
+   "contentLength": 611
+  },
+  {
+   "guid": "https://timbroder.com/2015/02/beyond-uxkit-robert-bohnke",
+   "link": "https://timbroder.com/2015/02/beyond-uxkit-robert-bohnke",
+   "title": "Beyond UXKit - Robert Böhnke",
+   "pubDate": "2015-02-07T15:46:33.000Z",
+   "descriptionLength": 135,
+   "contentLength": 549
+  },
+  {
+   "guid": "https://timbroder.com/2015/02/mongular-content-delivery-system",
+   "link": "https://timbroder.com/2015/02/mongular-content-delivery-system",
+   "title": "Mongular, a Content Delivery System",
+   "pubDate": "2015-02-06T16:03:23.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2166
+  },
+  {
+   "guid": "https://timbroder.com/2015/01/equality-in-the-apple-blogging-scene",
+   "link": "https://timbroder.com/2015/01/equality-in-the-apple-blogging-scene",
+   "title": "Equality in the Apple Blogging Scene",
+   "pubDate": "2015-01-12T00:10:24.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1533
+  },
+  {
+   "guid": "https://timbroder.com/2015/01/contributing-to-magento2",
+   "link": "https://timbroder.com/2015/01/contributing-to-magento2",
+   "title": "Contributing to Magento2",
+   "pubDate": "2015-01-07T17:04:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1048
+  },
+  {
+   "guid": "https://timbroder.com/2015/01/my-2375-amazon-ec2-mistake",
+   "link": "https://timbroder.com/2015/01/my-2375-amazon-ec2-mistake",
+   "title": "My $2375 Amazon EC2 Mistake",
+   "pubDate": "2015-01-07T16:02:04.000Z",
+   "descriptionLength": 138,
+   "contentLength": 829
+  },
+  {
+   "guid": "https://timbroder.com/2014/12/the-programmers-dream",
+   "link": "https://timbroder.com/2014/12/the-programmers-dream",
+   "title": "The Programmer's Dream",
+   "pubDate": "2014-12-26T14:59:48.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1222
+  },
+  {
+   "guid": "https://timbroder.com/2014/12/integrated-automation-for-ios-8",
+   "link": "https://timbroder.com/2014/12/integrated-automation-for-ios-8",
+   "title": "Integrated Automation for iOS 8",
+   "pubDate": "2014-12-20T21:34:24.000Z",
+   "descriptionLength": 141,
+   "contentLength": 944
+  },
+  {
+   "guid": "https://timbroder.com/2014/12/apple-pay-and-magento",
+   "link": "https://timbroder.com/2014/12/apple-pay-and-magento",
+   "title": "Apple Pay and Magento",
+   "pubDate": "2014-12-13T23:12:12.000Z",
+   "descriptionLength": 141,
+   "contentLength": 3928
+  },
+  {
+   "guid": "https://timbroder.com/2014/11/facebook-creepy-piece-sht",
+   "link": "https://timbroder.com/2014/11/facebook-creepy-piece-sht",
+   "title": "Facebook, you creepy piece of sh*t",
+   "pubDate": "2014-11-09T02:04:35.000Z",
+   "descriptionLength": 141,
+   "contentLength": 2890
+  },
+  {
+   "guid": "https://timbroder.com/2014/11/twitter-is-not-a-replacement-for-blogs-marco-org",
+   "link": "https://timbroder.com/2014/11/twitter-is-not-a-replacement-for-blogs-marco-org",
+   "title": "Twitter is not a replacement for blogs",
+   "pubDate": "2014-11-04T15:21:15.000Z",
+   "descriptionLength": 112,
+   "contentLength": 153
+  },
+  {
+   "guid": "https://timbroder.com/2014/10/a-tale-of-two-iphones-part-2",
+   "link": "https://timbroder.com/2014/10/a-tale-of-two-iphones-part-2",
+   "title": "A Tale of Two iPhones: Part 2",
+   "pubDate": "2014-10-13T15:02:46.000Z",
+   "descriptionLength": 139,
+   "contentLength": 3068
+  },
+  {
+   "guid": "https://timbroder.com/2014/10/my-packing-list",
+   "link": "https://timbroder.com/2014/10/my-packing-list",
+   "title": "My Packing List",
+   "pubDate": "2014-10-07T18:01:55.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3134
+  },
+  {
+   "guid": "https://timbroder.com/2014/10/meet-magento-2014-new-york-a-personal-summary",
+   "link": "https://timbroder.com/2014/10/meet-magento-2014-new-york-a-personal-summary",
+   "title": "Meet Magento 2014 New York – a Personal Summary",
+   "pubDate": "2014-10-05T22:56:35.000Z",
+   "descriptionLength": 140,
+   "contentLength": 883
+  },
+  {
+   "guid": "https://timbroder.com/2014/10/a-tale-of-two-iphones",
+   "link": "https://timbroder.com/2014/10/a-tale-of-two-iphones",
+   "title": "A Tale of Two iPhones",
+   "pubDate": "2014-10-05T20:59:39.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3039
+  },
+  {
+   "guid": "https://timbroder.com/2014/09/these-are-the-apps-you-want-to-try-on-your-new-iphone",
+   "link": "https://timbroder.com/2014/09/these-are-the-apps-you-want-to-try-on-your-new-iphone",
+   "title": "These are the apps you want to try on your new iPhone",
+   "pubDate": "2014-09-20T15:18:31.000Z",
+   "descriptionLength": 139,
+   "contentLength": 288
+  },
+  {
+   "guid": "https://timbroder.com/2014/09/morning-rituals",
+   "link": "https://timbroder.com/2014/09/morning-rituals",
+   "title": "On Morning Rituals",
+   "pubDate": "2014-09-16T15:51:28.000Z",
+   "descriptionLength": 137,
+   "contentLength": 5659
+  },
+  {
+   "guid": "https://timbroder.com/2014/09/the-rise-and-fall-of-communication-mediums",
+   "link": "https://timbroder.com/2014/09/the-rise-and-fall-of-communication-mediums",
+   "title": "The Rise and Fall of Communication Mediums",
+   "pubDate": "2014-09-07T20:49:49.000Z",
+   "descriptionLength": 136,
+   "contentLength": 1539
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/dont-skimp-on-coffee-a-ctos-plea",
+   "link": "https://timbroder.com/2014/08/dont-skimp-on-coffee-a-ctos-plea",
+   "title": "Don't Skimp on Coffee: A CTO's Plea",
+   "pubDate": "2014-08-21T13:56:27.000Z",
+   "descriptionLength": 137,
+   "contentLength": 426
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/podcast-reruns",
+   "link": "https://timbroder.com/2014/08/podcast-reruns",
+   "title": "Podcast Reruns",
+   "pubDate": "2014-08-18T18:06:58.000Z",
+   "descriptionLength": 141,
+   "contentLength": 9759
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/make-time",
+   "link": "https://timbroder.com/2014/08/make-time",
+   "title": "“make” time",
+   "pubDate": "2014-08-13T23:13:59.000Z",
+   "descriptionLength": 141,
+   "contentLength": 907
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/uitableviewcell-action-swiping-in-ios8-and-swift",
+   "link": "https://timbroder.com/2014/08/uitableviewcell-action-swiping-in-ios8-and-swift",
+   "title": "UITableViewCell Action Swiping in iOS8 and Swift",
+   "pubDate": "2014-08-09T20:43:58.000Z",
+   "descriptionLength": 137,
+   "contentLength": 29161
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/restore-time-machine-backup-synology-nas",
+   "link": "https://timbroder.com/2014/08/restore-time-machine-backup-synology-nas",
+   "title": "How to Restore a Time Machine Backup From a Synology NAS",
+   "pubDate": "2014-08-04T22:28:26.000Z",
+   "descriptionLength": 139,
+   "contentLength": 4944
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/twitter-or-rss",
+   "link": "https://timbroder.com/2014/08/twitter-or-rss",
+   "title": "Twitter or RSS",
+   "pubDate": "2014-08-03T22:34:34.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1096
+  },
+  {
+   "guid": "https://timbroder.com/2014/08/the-most-dangerous-word-in-software-development",
+   "link": "https://timbroder.com/2014/08/the-most-dangerous-word-in-software-development",
+   "title": "The Most Dangerous Word In Software Development",
+   "pubDate": "2014-08-03T19:12:41.000Z",
+   "descriptionLength": 138,
+   "contentLength": 403
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/dismiss-a-modal-uiviewcontroller-created-in-interface-builder",
+   "link": "https://timbroder.com/2014/07/dismiss-a-modal-uiviewcontroller-created-in-interface-builder",
+   "title": "Dismiss a Modal UIViewController created in Interface Builder",
+   "pubDate": "2014-07-27T22:31:11.000Z",
+   "descriptionLength": 137,
+   "contentLength": 4265
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/using-ponydebugger-on-a-device",
+   "link": "https://timbroder.com/2014/07/using-ponydebugger-on-a-device",
+   "title": "Using PonyDebugger on a device",
+   "pubDate": "2014-07-27T20:25:59.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2089
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/uitapgesturerecognizer-in-swift",
+   "link": "https://timbroder.com/2014/07/uitapgesturerecognizer-in-swift",
+   "title": "UITapGestureRecognizer in Swift",
+   "pubDate": "2014-07-27T14:47:33.000Z",
+   "descriptionLength": 83,
+   "contentLength": 1807
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/creating-a-conforming-delegate-uitableviewdelegate-in-swift",
+   "link": "https://timbroder.com/2014/07/creating-a-conforming-delegate-uitableviewdelegate-in-swift",
+   "title": "Creating a conforming delegate (UITableViewDelegate) in Swift",
+   "pubDate": "2014-07-27T02:11:16.000Z",
+   "descriptionLength": 137,
+   "contentLength": 1978
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/why-i-turned-off-email-notifications",
+   "link": "https://timbroder.com/2014/07/why-i-turned-off-email-notifications",
+   "title": "Why I turned off email notifications",
+   "pubDate": "2014-07-23T01:02:24.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1332
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/coding-under-par",
+   "link": "https://timbroder.com/2014/07/coding-under-par",
+   "title": "Coding Under Par",
+   "pubDate": "2014-07-23T01:02:13.000Z",
+   "descriptionLength": 137,
+   "contentLength": 621
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/looping-subviews-downcasting-swift",
+   "link": "https://timbroder.com/2014/07/looping-subviews-downcasting-swift",
+   "title": "Looping through subviews and downcasting in Swift",
+   "pubDate": "2014-07-22T23:23:27.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2866
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/functions-vs-read-properties-swift",
+   "link": "https://timbroder.com/2014/07/functions-vs-read-properties-swift",
+   "title": "Functions or Read-Only Properties in Swift?",
+   "pubDate": "2014-07-12T23:22:03.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2182
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/playgrounds-in-swift-are-awesome",
+   "link": "https://timbroder.com/2014/07/playgrounds-in-swift-are-awesome",
+   "title": "Playgrounds in Swift are Awesome",
+   "pubDate": "2014-07-12T23:19:42.000Z",
+   "descriptionLength": 94,
+   "contentLength": 406
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/parsing-sentences-string-swift",
+   "link": "https://timbroder.com/2014/07/parsing-sentences-string-swift",
+   "title": "Parsing sentences from a String in Swift",
+   "pubDate": "2014-07-12T23:08:57.000Z",
+   "descriptionLength": 134,
+   "contentLength": 9937
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/apples-swift-blog",
+   "link": "https://timbroder.com/2014/07/apples-swift-blog",
+   "title": "Apple's Swift Blog",
+   "pubDate": "2014-07-11T17:46:58.000Z",
+   "descriptionLength": 140,
+   "contentLength": 538
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/on-working-from-home-and-running-a-business",
+   "link": "https://timbroder.com/2014/07/on-working-from-home-and-running-a-business",
+   "title": "On Working From Home and Running a Business",
+   "pubDate": "2014-07-11T01:11:46.000Z",
+   "descriptionLength": 132,
+   "contentLength": 829
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/format-json-and-save-to-gist",
+   "link": "https://timbroder.com/2014/07/format-json-and-save-to-gist",
+   "title": "Format JSON and save to gist with Alfred",
+   "pubDate": "2014-07-08T21:02:32.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1629
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/whatever-goes-up-thats-what-we-do",
+   "link": "https://timbroder.com/2014/07/whatever-goes-up-thats-what-we-do",
+   "title": "Whatever goes up, that’s what we do",
+   "pubDate": "2014-07-06T19:57:34.000Z",
+   "descriptionLength": 139,
+   "contentLength": 881
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/swiftinflux",
+   "link": "https://timbroder.com/2014/07/swiftinflux",
+   "title": "SwiftInFlux",
+   "pubDate": "2014-07-06T19:56:24.000Z",
+   "descriptionLength": 141,
+   "contentLength": 403
+  },
+  {
+   "guid": "https://timbroder.com/2014/07/dont-be-scared-of-functional-programming",
+   "link": "https://timbroder.com/2014/07/dont-be-scared-of-functional-programming",
+   "title": "Don't Be Scared Of Functional Programming",
+   "pubDate": "2014-07-04T14:07:25.000Z",
+   "descriptionLength": 139,
+   "contentLength": 700
+  },
+  {
+   "guid": "https://timbroder.com/2014/06/launch-center-pro-trello-via-ifttt",
+   "link": "https://timbroder.com/2014/06/launch-center-pro-trello-via-ifttt",
+   "title": "Launch Center Pro to Trello via IFTTT",
+   "pubDate": "2014-06-15T17:11:21.000Z",
+   "descriptionLength": 133,
+   "contentLength": 3284
+  },
+  {
+   "guid": "https://timbroder.com/2014/06/opening-sourcetree-from-the-command-line",
+   "link": "https://timbroder.com/2014/06/opening-sourcetree-from-the-command-line",
+   "title": "Opening SourceTree from the Command line",
+   "pubDate": "2014-06-06T15:33:35.000Z",
+   "descriptionLength": 140,
+   "contentLength": 525
+  },
+  {
+   "guid": "https://timbroder.com/2014/06/delayed-thoughts-wwdc-2014-keynote",
+   "link": "https://timbroder.com/2014/06/delayed-thoughts-wwdc-2014-keynote",
+   "title": "Delayed Liveblog on the WWDC 2014 Keynote",
+   "pubDate": "2014-06-03T01:08:39.000Z",
+   "descriptionLength": 140,
+   "contentLength": 7318
+  },
+  {
+   "guid": "https://timbroder.com/2014/05/reordering-nsfetchedresultscontroller",
+   "link": "https://timbroder.com/2014/05/reordering-nsfetchedresultscontroller",
+   "title": "Reordering a NSFetchedResultsController",
+   "pubDate": "2014-05-31T16:14:22.000Z",
+   "descriptionLength": 136,
+   "contentLength": 4339
+  },
+  {
+   "guid": "https://timbroder.com/2014/05/the-old-reader-on-good-ol-rss",
+   "link": "https://timbroder.com/2014/05/the-old-reader-on-good-ol-rss",
+   "title": "The Old Reader on Good Ol’ RSS",
+   "pubDate": "2014-05-09T22:40:24.000Z",
+   "descriptionLength": 140,
+   "contentLength": 259
+  },
+  {
+   "guid": "https://timbroder.com/2014/05/up-and-running-with-mindsea-doing-it-the-right-way",
+   "link": "https://timbroder.com/2014/05/up-and-running-with-mindsea-doing-it-the-right-way",
+   "title": "Up and Running with MindSea: Doing it the Right Way",
+   "pubDate": "2014-05-09T02:03:47.000Z",
+   "descriptionLength": 139,
+   "contentLength": 412
+  },
+  {
+   "guid": "https://timbroder.com/2014/05/poking-angularjs-model-within-iframe",
+   "link": "https://timbroder.com/2014/05/poking-angularjs-model-within-iframe",
+   "title": "Poking at an AngularJS model from within an iFrame",
+   "pubDate": "2014-05-07T16:07:24.000Z",
+   "descriptionLength": 139,
+   "contentLength": 19688
+  },
+  {
+   "guid": "https://timbroder.com/2014/05/facebook-launches-applinks-to-make-deep-linking-between-apps-easier",
+   "link": "https://timbroder.com/2014/05/facebook-launches-applinks-to-make-deep-linking-between-apps-easier",
+   "title": "Facebook Launches AppLinks To Make Deep Linking Between Apps Easier",
+   "pubDate": "2014-05-03T00:09:09.000Z",
+   "descriptionLength": 138,
+   "contentLength": 621
+  },
+  {
+   "guid": "https://timbroder.com/2014/05/how-to-be-an-open-source-gardener",
+   "link": "https://timbroder.com/2014/05/how-to-be-an-open-source-gardener",
+   "title": "How to be an open source gardener",
+   "pubDate": "2014-05-02T21:09:48.000Z",
+   "descriptionLength": 138,
+   "contentLength": 797
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/ember-icloud-app-reviews-by-dancounsell-realmac-blog",
+   "link": "https://timbroder.com/2014/04/ember-icloud-app-reviews-by-dancounsell-realmac-blog",
+   "title": "Ember, iCloud & App Reviews by @dancounsell — Realmac Blog",
+   "pubDate": "2014-04-26T23:26:35.000Z",
+   "descriptionLength": 137,
+   "contentLength": 570
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/build-2014",
+   "link": "https://timbroder.com/2014/04/build-2014",
+   "title": "Build 2014",
+   "pubDate": "2014-04-11T23:58:54.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1485
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/security",
+   "link": "https://timbroder.com/2014/04/security",
+   "title": "“Security”",
+   "pubDate": "2014-04-11T23:53:21.000Z",
+   "descriptionLength": 139,
+   "contentLength": 205
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/nsa-said-to-exploit-heartbleed-bug-for-years",
+   "link": "https://timbroder.com/2014/04/nsa-said-to-exploit-heartbleed-bug-for-years",
+   "title": "NSA Said to Exploit Heartbleed Bug for Years",
+   "pubDate": "2014-04-11T23:51:07.000Z",
+   "descriptionLength": 139,
+   "contentLength": 720
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/brian-on-data-migration",
+   "link": "https://timbroder.com/2014/04/brian-on-data-migration",
+   "title": "Brian on Data Migration",
+   "pubDate": "2014-04-09T22:32:16.000Z",
+   "descriptionLength": 139,
+   "contentLength": 207
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/now",
+   "link": "https://timbroder.com/2014/04/now",
+   "title": "Then and Now",
+   "pubDate": "2014-04-06T13:46:28.000Z",
+   "descriptionLength": 0,
+   "contentLength": 2092
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/inessential-com-pauls-talk-core-data",
+   "link": "https://timbroder.com/2014/04/inessential-com-pauls-talk-core-data",
+   "title": "inessential.com: Paul’s Talk on Core Data",
+   "pubDate": "2014-04-03T12:41:35.000Z",
+   "descriptionLength": 138,
+   "contentLength": 635
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/begging-app-ratings",
+   "link": "https://timbroder.com/2014/04/begging-app-ratings",
+   "title": "Begging For App Ratings",
+   "pubDate": "2014-04-01T13:51:28.000Z",
+   "descriptionLength": 140,
+   "contentLength": 604
+  },
+  {
+   "guid": "https://timbroder.com/2014/04/inessential-com-azure-takes",
+   "link": "https://timbroder.com/2014/04/inessential-com-azure-takes",
+   "title": "inessential.com: Azure Takes Over",
+   "pubDate": "2014-04-01T13:50:22.000Z",
+   "descriptionLength": 138,
+   "contentLength": 372
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/tips-resources-beginning-ios-development",
+   "link": "https://timbroder.com/2014/03/tips-resources-beginning-ios-development",
+   "title": "Tips and Resources for beginning iOS Development",
+   "pubDate": "2014-03-30T17:41:32.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1593
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/quote-day-david-37signals",
+   "link": "https://timbroder.com/2014/03/quote-day-david-37signals",
+   "title": "Quote of the day by David of 37signals",
+   "pubDate": "2014-03-29T15:40:50.000Z",
+   "descriptionLength": 141,
+   "contentLength": 360
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/readkit-article-sorting-group-feed-feed-wrangler-smart-streams",
+   "link": "https://timbroder.com/2014/03/readkit-article-sorting-group-feed-feed-wrangler-smart-streams",
+   "title": "ReadKit article sorting: group by feed in Feed Wrangler smart streams",
+   "pubDate": "2014-03-29T15:40:16.000Z",
+   "descriptionLength": 137,
+   "contentLength": 523
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/drafts",
+   "link": "https://timbroder.com/2014/03/drafts",
+   "title": "Drafts",
+   "pubDate": "2014-03-28T16:07:22.000Z",
+   "descriptionLength": 141,
+   "contentLength": 579
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/automating-layouts-bring-flipboards-magazine-style-to-web-and-windows",
+   "link": "https://timbroder.com/2014/03/automating-layouts-bring-flipboards-magazine-style-to-web-and-windows",
+   "title": "Automating Layouts Bring Flipboard’s Magazine Style To Web And Windows",
+   "pubDate": "2014-03-24T22:52:37.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1021
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/launch-center-pro-homescreen",
+   "link": "https://timbroder.com/2014/03/launch-center-pro-homescreen",
+   "title": "How I use my Launch Center Pro homescreen",
+   "pubDate": "2014-03-24T19:58:57.000Z",
+   "descriptionLength": 137,
+   "contentLength": 31838
+  },
+  {
+   "guid": "https://timbroder.com/2014/03/avspeechsynthesizers-queue-doesnt-work",
+   "link": "https://timbroder.com/2014/03/avspeechsynthesizers-queue-doesnt-work",
+   "title": "AVSpeechSynthesizer's queue doesn't work",
+   "pubDate": "2014-03-01T20:46:39.000Z",
+   "descriptionLength": 140,
+   "contentLength": 11732
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/quote-week-brent-simmons-terrible-things",
+   "link": "https://timbroder.com/2014/02/quote-week-brent-simmons-terrible-things",
+   "title": "Quote of the week: Brent Simmons on terrible things",
+   "pubDate": "2014-02-27T16:43:15.000Z",
+   "descriptionLength": 131,
+   "contentLength": 331
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/expansion-followed-by-consolidation",
+   "link": "https://timbroder.com/2014/02/expansion-followed-by-consolidation",
+   "title": "Expansion Followed By Consolidation",
+   "pubDate": "2014-02-21T00:46:40.000Z",
+   "descriptionLength": 132,
+   "contentLength": 381
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/house-cards-regex-mute-filter-tweetbot",
+   "link": "https://timbroder.com/2014/02/house-cards-regex-mute-filter-tweetbot",
+   "title": "House of Cards regex mute filter for Tweetbot",
+   "pubDate": "2014-02-15T22:12:22.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1645
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/background-fetch-an-unexpected-botnet",
+   "link": "https://timbroder.com/2014/02/background-fetch-an-unexpected-botnet",
+   "title": "Background fetch: An Unexpected Botnet",
+   "pubDate": "2014-02-15T14:37:08.000Z",
+   "descriptionLength": 137,
+   "contentLength": 721
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/quote-of-the-day-marco-arment",
+   "link": "https://timbroder.com/2014/02/quote-of-the-day-marco-arment",
+   "title": "Quote of the Day: Marco Arment",
+   "pubDate": "2014-02-05T13:09:33.000Z",
+   "descriptionLength": 116,
+   "contentLength": 157
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/follow-pie-the-story-of-the-instagram-bot-made-to-increase-app-store-downloads",
+   "link": "https://timbroder.com/2014/02/follow-pie-the-story-of-the-instagram-bot-made-to-increase-app-store-downloads",
+   "title": "Follow Pie – The Story Of The Instagram Bot Made To Increase App Store Downloads",
+   "pubDate": "2014-02-02T21:55:45.000Z",
+   "descriptionLength": 140,
+   "contentLength": 215
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/interesting-lessons-from-building-a-pedometer-david-smith",
+   "link": "https://timbroder.com/2014/02/interesting-lessons-from-building-a-pedometer-david-smith",
+   "title": "Interesting Lessons from Building a Pedometer - David Smith",
+   "pubDate": "2014-02-01T14:25:34.000Z",
+   "descriptionLength": 140,
+   "contentLength": 333
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/hypercritical-the-road-to-geekdom",
+   "link": "https://timbroder.com/2014/02/hypercritical-the-road-to-geekdom",
+   "title": "Hypercritical: The Road to Geekdom",
+   "pubDate": "2014-02-01T14:19:54.000Z",
+   "descriptionLength": 140,
+   "contentLength": 921
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/how-i-lost-my-50000-twitter-username",
+   "link": "https://timbroder.com/2014/02/how-i-lost-my-50000-twitter-username",
+   "title": "How I lost my $50,000 Twitter username",
+   "pubDate": "2014-02-01T10:59:35.000Z",
+   "descriptionLength": 132,
+   "contentLength": 531
+  },
+  {
+   "guid": "https://timbroder.com/2014/02/google-bringing-chrome-apps-to-ios-and-android",
+   "link": "https://timbroder.com/2014/02/google-bringing-chrome-apps-to-ios-and-android",
+   "title": "Google Bringing Chrome Apps to iOS and Android",
+   "pubDate": "2014-02-01T10:49:51.000Z",
+   "descriptionLength": 138,
+   "contentLength": 868
+  },
+  {
+   "guid": "https://timbroder.com/2014/01/my-url-schemes-for-posting-links-from-my-iphone-and-ipad-using-poster",
+   "link": "https://timbroder.com/2014/01/my-url-schemes-for-posting-links-from-my-iphone-and-ipad-using-poster",
+   "title": "My URL Schemes for Posting Links From My iPhone and iPad Using Poster",
+   "pubDate": "2014-01-26T20:39:57.000Z",
+   "descriptionLength": 139,
+   "contentLength": 230
+  },
+  {
+   "guid": "https://timbroder.com/2013/11/motivation-sam-soffes",
+   "link": "https://timbroder.com/2013/11/motivation-sam-soffes",
+   "title": "Motivation — Sam Soffes",
+   "pubDate": "2013-11-08T14:13:07.000Z",
+   "descriptionLength": 140,
+   "contentLength": 643
+  },
+  {
+   "guid": "https://timbroder.com/2013/11/weather-notifications-on-lifehacker",
+   "link": "https://timbroder.com/2013/11/weather-notifications-on-lifehacker",
+   "title": "Weather Notifications on Lifehacker!",
+   "pubDate": "2013-11-05T19:08:53.000Z",
+   "descriptionLength": 137,
+   "contentLength": 1315
+  },
+  {
+   "guid": "https://timbroder.com/2013/10/why-android-first-is-a-myth-steve-cheney-technology-business-strategy",
+   "link": "https://timbroder.com/2013/10/why-android-first-is-a-myth-steve-cheney-technology-business-strategy",
+   "title": "Why Android First is a Myth | steve cheney – technology, business & strategy",
+   "pubDate": "2013-10-23T14:17:41.000Z",
+   "descriptionLength": 136,
+   "contentLength": 795
+  },
+  {
+   "guid": "https://timbroder.com/2013/10/garageband-for-ios-7-to-become-free-with-in-app-purchases-as-apple-reveals-full-set-of-new-ilife-and-iwork-icons-mac-rumors",
+   "link": "https://timbroder.com/2013/10/garageband-for-ios-7-to-become-free-with-in-app-purchases-as-apple-reveals-full-set-of-new-ilife-and-iwork-icons-mac-rumors",
+   "title": "GarageBand for iOS 7 to Become Free with In-App Purchases as Apple Reveals Full Set of New iLife and iWork Icons - Mac Rumors",
+   "pubDate": "2013-10-21T15:01:03.000Z",
+   "descriptionLength": 133,
+   "contentLength": 1356
+  },
+  {
+   "guid": "https://timbroder.com/2013/10/inessential-com-why-care-about-30000-notes",
+   "link": "https://timbroder.com/2013/10/inessential-com-why-care-about-30000-notes",
+   "title": "inessential.com: Why Care About 30,000 Notes?",
+   "pubDate": "2013-10-20T15:14:45.000Z",
+   "descriptionLength": 137,
+   "contentLength": 402
+  },
+  {
+   "guid": "https://timbroder.com/2013/10/gamasutra-david-framptons-blog-postmortem-the-blockheads",
+   "link": "https://timbroder.com/2013/10/gamasutra-david-framptons-blog-postmortem-the-blockheads",
+   "title": "Gamasutra: David Framptons Blog - Postmortem: The Blockheads",
+   "pubDate": "2013-10-17T21:50:50.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1211
+  },
+  {
+   "guid": "https://timbroder.com/2013/09/why-we-do-what-we-do",
+   "link": "https://timbroder.com/2013/09/why-we-do-what-we-do",
+   "title": "Why We Do What We Do",
+   "pubDate": "2013-09-29T21:09:22.000Z",
+   "descriptionLength": 140,
+   "contentLength": 279
+  },
+  {
+   "guid": "https://timbroder.com/2013/05/fixing-youtube-embeds-in-wordpress",
+   "link": "https://timbroder.com/2013/05/fixing-youtube-embeds-in-wordpress",
+   "title": "Fixing YouTube embeds in Wordpress",
+   "pubDate": "2013-05-10T16:42:32.000Z",
+   "descriptionLength": 141,
+   "contentLength": 6747
+  },
+  {
+   "guid": "https://timbroder.com/2013/03/automating-adding-to-trello-on-ios",
+   "link": "https://timbroder.com/2013/03/automating-adding-to-trello-on-ios",
+   "title": "Automate Adding to Trello on iOS with Launch Center Pro and Pythonista",
+   "pubDate": "2013-03-23T17:38:14.000Z",
+   "descriptionLength": 140,
+   "contentLength": 36845
+  },
+  {
+   "guid": "https://timbroder.com/2013/03/why-git",
+   "link": "https://timbroder.com/2013/03/why-git",
+   "title": "Why Git?",
+   "pubDate": "2013-03-07T15:45:55.000Z",
+   "descriptionLength": 141,
+   "contentLength": 714
+  },
+  {
+   "guid": "https://timbroder.com/2013/02/adding-a-delete-line-hotkey-in-xcode",
+   "link": "https://timbroder.com/2013/02/adding-a-delete-line-hotkey-in-xcode",
+   "title": "Adding a Delete Line hotkey in Xcode",
+   "pubDate": "2013-02-08T15:49:20.000Z",
+   "descriptionLength": 138,
+   "contentLength": 4000
+  },
+  {
+   "guid": "https://timbroder.com/2013/01/citrix-cca-exam-for-windows-2003-server-and-xenapp",
+   "link": "https://timbroder.com/2013/01/citrix-cca-exam-for-windows-2003-server-and-xenapp",
+   "title": "Citrix CCA Exam for Windows 2003 Server and XenApp",
+   "pubDate": "2013-01-20T23:26:19.000Z",
+   "descriptionLength": 134,
+   "contentLength": 1887
+  },
+  {
+   "guid": "https://timbroder.com/2012/12/how-to-remove-or-change-the-way-wordpress-links-to-images-in-posts",
+   "link": "https://timbroder.com/2012/12/how-to-remove-or-change-the-way-wordpress-links-to-images-in-posts",
+   "title": "How to Remove or Change the way Wordpress Links to Images in Posts",
+   "pubDate": "2012-12-24T20:34:43.000Z",
+   "descriptionLength": 139,
+   "contentLength": 5526
+  },
+  {
+   "guid": "https://timbroder.com/2012/12/getting-started-with-varnish-edge-side-includes-and-wordpress",
+   "link": "https://timbroder.com/2012/12/getting-started-with-varnish-edge-side-includes-and-wordpress",
+   "title": "Getting Started with Varnish Edge Side Includes and Wordpress",
+   "pubDate": "2012-12-18T20:20:35.000Z",
+   "descriptionLength": 138,
+   "contentLength": 12122
+  },
+  {
+   "guid": "https://timbroder.com/2012/09/generating-an-inlineadmin-form-on-the-fly-in-django",
+   "link": "https://timbroder.com/2012/09/generating-an-inlineadmin-form-on-the-fly-in-django",
+   "title": "Generating an InlineModelAdmin Form on the fly in Django",
+   "pubDate": "2012-09-11T19:17:52.000Z",
+   "descriptionLength": 141,
+   "contentLength": 8672
+  },
+  {
+   "guid": "https://timbroder.com/2012/09/ios-multiple-lines-of-text-in-a-uitableviewcell",
+   "link": "https://timbroder.com/2012/09/ios-multiple-lines-of-text-in-a-uitableviewcell",
+   "title": "iOS: Multiple Lines of Text in a UITableViewCell",
+   "pubDate": "2012-09-10T23:32:42.000Z",
+   "descriptionLength": 136,
+   "contentLength": 7436
+  },
+  {
+   "guid": "https://timbroder.com/2012/09/how-to-tell-if-its-html5",
+   "link": "https://timbroder.com/2012/09/how-to-tell-if-its-html5",
+   "title": "How to tell if it's HTML5",
+   "pubDate": "2012-09-06T14:44:32.000Z",
+   "descriptionLength": 0,
+   "contentLength": 2300
+  },
+  {
+   "guid": "https://timbroder.com/2012/09/the-top-10-best-wordpress-plugins-to-get-up-and-running",
+   "link": "https://timbroder.com/2012/09/the-top-10-best-wordpress-plugins-to-get-up-and-running",
+   "title": "The top 10 best Wordpress plugins to get up and running with everything you need.",
+   "pubDate": "2012-09-03T00:39:24.000Z",
+   "descriptionLength": 140,
+   "contentLength": 9148
+  },
+  {
+   "guid": "https://timbroder.com/2012/08/get-18-gigs-on-a-free-dropbox-account-for-10-20",
+   "link": "https://timbroder.com/2012/08/get-18-gigs-on-a-free-dropbox-account-for-10-20",
+   "title": "Get 18+ Gigs on a Free Dropbox account for $10-$20",
+   "pubDate": "2012-08-29T14:03:28.000Z",
+   "descriptionLength": 141,
+   "contentLength": 9889
+  },
+  {
+   "guid": "https://timbroder.com/2012/08/compiling-textmate",
+   "link": "https://timbroder.com/2012/08/compiling-textmate",
+   "title": "Compiling Textmate",
+   "pubDate": "2012-08-26T18:24:16.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2497
+  },
+  {
+   "guid": "https://timbroder.com/2012/08/getting-started-with-solr-and-django",
+   "link": "https://timbroder.com/2012/08/getting-started-with-solr-and-django",
+   "title": "Getting Started with Solr and Django",
+   "pubDate": "2012-08-23T19:45:56.000Z",
+   "descriptionLength": 137,
+   "contentLength": 72649
+  },
+  {
+   "guid": "https://timbroder.com/2012/08/hiding-fields-in-the-admin-based-on-permission",
+   "link": "https://timbroder.com/2012/08/hiding-fields-in-the-admin-based-on-permission",
+   "title": "Hiding fields in the Django admin based on permission",
+   "pubDate": "2012-08-20T16:53:46.000Z",
+   "descriptionLength": 119,
+   "contentLength": 5426
+  },
+  {
+   "guid": "https://timbroder.com/2012/08/animate-adwhirl-bottom",
+   "link": "https://timbroder.com/2012/08/animate-adwhirl-bottom",
+   "title": "Animate an AdWhirlView from the Bottom of the Screen",
+   "pubDate": "2012-08-18T00:50:47.000Z",
+   "descriptionLength": 122,
+   "contentLength": 3914
+  },
+  {
+   "guid": "https://timbroder.com/2012/08/adding-done-and-cancel-buttons-to-an-ios-number-pad",
+   "link": "https://timbroder.com/2012/08/adding-done-and-cancel-buttons-to-an-ios-number-pad",
+   "title": "Adding Done and Cancel buttons to an iOS number pad",
+   "pubDate": "2012-08-17T15:49:55.000Z",
+   "descriptionLength": 141,
+   "contentLength": 16794
+  },
+  {
+   "guid": "https://timbroder.com/2012/07/improve-your-magento-workflow-use-git-or-mercurial",
+   "link": "https://timbroder.com/2012/07/improve-your-magento-workflow-use-git-or-mercurial",
+   "title": "Improve your Magento workflow: Use git or mercurial",
+   "pubDate": "2012-07-31T13:18:07.000Z",
+   "descriptionLength": 141,
+   "contentLength": 2171
+  },
+  {
+   "guid": "https://timbroder.com/2012/07/ios-game-engines",
+   "link": "https://timbroder.com/2012/07/ios-game-engines",
+   "title": "iOS Game Engines",
+   "pubDate": "2012-07-30T20:06:21.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2373
+  },
+  {
+   "guid": "https://timbroder.com/2012/07/refreshing-all-the-css-on-a-page-using-jquery",
+   "link": "https://timbroder.com/2012/07/refreshing-all-the-css-on-a-page-using-jquery",
+   "title": "Refreshing all the css on a page using jQuery",
+   "pubDate": "2012-07-16T19:16:03.000Z",
+   "descriptionLength": 138,
+   "contentLength": 2913
+  },
+  {
+   "guid": "https://timbroder.com/2012/07/important-magento-security-update-zend-platform-vulnerability",
+   "link": "https://timbroder.com/2012/07/important-magento-security-update-zend-platform-vulnerability",
+   "title": "Important Magento Security Update – Zend Platform Vulnerability",
+   "pubDate": "2012-07-06T18:47:04.000Z",
+   "descriptionLength": 132,
+   "contentLength": 1863
+  },
+  {
+   "guid": "https://timbroder.com/2012/05/setting-office-365-email-android",
+   "link": "https://timbroder.com/2012/05/setting-office-365-email-android",
+   "title": "Setting up Office 365 email on Android",
+   "pubDate": "2012-05-25T16:42:48.000Z",
+   "descriptionLength": 57,
+   "contentLength": 130
+  },
+  {
+   "guid": "https://timbroder.com/2012/05/making-virtualenv-on-windows-with-powershell-a-little-cleaner",
+   "link": "https://timbroder.com/2012/05/making-virtualenv-on-windows-with-powershell-a-little-cleaner",
+   "title": "Making virtualenv on windows with powershell a little cleaner",
+   "pubDate": "2012-05-22T15:27:45.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3088
+  },
+  {
+   "guid": "https://timbroder.com/2012/04/developing-with-multiple-versions-of-django-on-windows",
+   "link": "https://timbroder.com/2012/04/developing-with-multiple-versions-of-django-on-windows",
+   "title": "Developing with multiple versions of Django on windows",
+   "pubDate": "2012-04-19T16:47:46.000Z",
+   "descriptionLength": 137,
+   "contentLength": 4172
+  },
+  {
+   "guid": "https://timbroder.com/2012/04/sync-side-loaded-content-between-your-kindle-and-other-devices",
+   "link": "https://timbroder.com/2012/04/sync-side-loaded-content-between-your-kindle-and-other-devices",
+   "title": "Sync side-loaded content between your Kindle and other devices",
+   "pubDate": "2012-04-16T17:35:23.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2024
+  },
+  {
+   "guid": "https://timbroder.com/2011/12/where-the-new-ice-cream-sandwich-build-of-dropbox-stores-files",
+   "link": "https://timbroder.com/2011/12/where-the-new-ice-cream-sandwich-build-of-dropbox-stores-files",
+   "title": "Where the new Ice Cream Sandwich build of dropbox stores files",
+   "pubDate": "2011-12-24T16:21:12.000Z",
+   "descriptionLength": 140,
+   "contentLength": 322
+  },
+  {
+   "guid": "https://timbroder.com/2011/10/what-do-you-listen-to-podcast-edition",
+   "link": "https://timbroder.com/2011/10/what-do-you-listen-to-podcast-edition",
+   "title": "What do you listen to? (podcast edition)",
+   "pubDate": "2011-10-21T16:25:07.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2237
+  },
+  {
+   "guid": "https://timbroder.com/2011/10/1060",
+   "link": "https://timbroder.com/2011/10/1060",
+   "title": "Creating a stateless request in Magento",
+   "pubDate": "2011-10-17T16:22:06.000Z",
+   "descriptionLength": 135,
+   "contentLength": 9651
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/jira-tabs-open-all-those-jiras-at-once",
+   "link": "https://timbroder.com/2011/04/jira-tabs-open-all-those-jiras-at-once",
+   "title": "Jira Tabs: Open all those Jira's at once!",
+   "pubDate": "2011-04-22T18:21:22.000Z",
+   "descriptionLength": 138,
+   "contentLength": 680
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/groupon-competitor-goes-live",
+   "link": "https://timbroder.com/2011/04/groupon-competitor-goes-live",
+   "title": "Google’s Groupon Competitor Goes Live",
+   "pubDate": "2011-04-21T21:43:56.000Z",
+   "descriptionLength": 20,
+   "contentLength": 62
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/skynet",
+   "link": "https://timbroder.com/2011/04/skynet",
+   "title": "Skynet Becomes Self Aware Tonight",
+   "pubDate": "2011-04-19T21:25:05.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2109
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/extending-a-magento-controller",
+   "link": "https://timbroder.com/2011/04/extending-a-magento-controller",
+   "title": "Extending a Magento Controller",
+   "pubDate": "2011-04-19T21:16:46.000Z",
+   "descriptionLength": 135,
+   "contentLength": 7078
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/moving-gmail-gadgets-to-the-right-side",
+   "link": "https://timbroder.com/2011/04/moving-gmail-gadgets-to-the-right-side",
+   "title": "Moving Gmail Gadgets to the Right Side",
+   "pubDate": "2011-04-07T14:56:39.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3737
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/new-digg-reverse-paywall-coming",
+   "link": "https://timbroder.com/2011/04/new-digg-reverse-paywall-coming",
+   "title": "New Digg reverse paywall coming",
+   "pubDate": "2011-04-06T13:45:21.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1155
+  },
+  {
+   "guid": "https://timbroder.com/2011/04/42-75-new-box-jump-pr",
+   "link": "https://timbroder.com/2011/04/42-75-new-box-jump-pr",
+   "title": "42.75\" New Box Jump PR",
+   "pubDate": "2011-04-05T13:24:33.000Z",
+   "descriptionLength": 5,
+   "contentLength": 118
+  },
+  {
+   "guid": "https://timbroder.com/2011/03/firefox-4-landing",
+   "link": "https://timbroder.com/2011/03/firefox-4-landing",
+   "title": "Firefox 4 landing",
+   "pubDate": "2011-03-21T20:01:55.000Z",
+   "descriptionLength": 95,
+   "contentLength": 538
+  },
+  {
+   "guid": "https://timbroder.com/2011/03/setting-a-project-as-the-default-redmine-homepage",
+   "link": "https://timbroder.com/2011/03/setting-a-project-as-the-default-redmine-homepage",
+   "title": "Setting a project as the default redmine homepage",
+   "pubDate": "2011-03-15T23:31:01.000Z",
+   "descriptionLength": 77,
+   "contentLength": 1498
+  },
+  {
+   "guid": "https://timbroder.com/2011/03/jump-higher",
+   "link": "https://timbroder.com/2011/03/jump-higher",
+   "title": "Jump Higher",
+   "pubDate": "2011-03-15T21:22:42.000Z",
+   "descriptionLength": 0,
+   "contentLength": 127
+  },
+  {
+   "guid": "https://timbroder.com/2011/03/crossfit-2011-are-you-ready",
+   "link": "https://timbroder.com/2011/03/crossfit-2011-are-you-ready",
+   "title": "Crossfit 2011. Are you Ready?",
+   "pubDate": "2011-03-04T18:25:24.000Z",
+   "descriptionLength": 0,
+   "contentLength": 127
+  },
+  {
+   "guid": "https://timbroder.com/2011/02/stress-relief-blow-things-up",
+   "link": "https://timbroder.com/2011/02/stress-relief-blow-things-up",
+   "title": "Stress Relief: Blow things up",
+   "pubDate": "2011-02-28T20:09:35.000Z",
+   "descriptionLength": 20,
+   "contentLength": 70
+  },
+  {
+   "guid": "https://timbroder.com/2011/02/running-mongodb-as-a-service-on-windows",
+   "link": "https://timbroder.com/2011/02/running-mongodb-as-a-service-on-windows",
+   "title": "Running Mongodb as a service on windows",
+   "pubDate": "2011-02-23T20:55:22.000Z",
+   "descriptionLength": 0,
+   "contentLength": 912
+  },
+  {
+   "guid": "https://timbroder.com/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached",
+   "link": "https://timbroder.com/2011/02/a-note-on-magento-and-multiple-nodes-using-memcached",
+   "title": "A note on Magento and multiple nodes using Memcached",
+   "pubDate": "2011-02-11T18:35:44.000Z",
+   "descriptionLength": 131,
+   "contentLength": 1483
+  },
+  {
+   "guid": "https://timbroder.com/2011/02/wolverine-or-2-batmen",
+   "link": "https://timbroder.com/2011/02/wolverine-or-2-batmen",
+   "title": "Wolverine? Or 2 Batmen?",
+   "pubDate": "2011-02-08T20:59:49.000Z",
+   "descriptionLength": 80,
+   "contentLength": 133
+  },
+  {
+   "guid": "https://timbroder.com/2011/02/twitter-recap-of-the-superbowl-halftime-show",
+   "link": "https://timbroder.com/2011/02/twitter-recap-of-the-superbowl-halftime-show",
+   "title": "Twitter recap of the superbowl halftime show",
+   "pubDate": "2011-02-07T01:36:05.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1244
+  },
+  {
+   "guid": "https://timbroder.com/2011/01/want-to-output-the-full-xml-config-magento-is-running",
+   "link": "https://timbroder.com/2011/01/want-to-output-the-full-xml-config-magento-is-running",
+   "title": "Want to output the full xml config Magento is running?",
+   "pubDate": "2011-01-27T19:56:14.000Z",
+   "descriptionLength": 56,
+   "contentLength": 1179
+  },
+  {
+   "guid": "https://timbroder.com/2011/01/getting-it-onto-the-kindle",
+   "link": "https://timbroder.com/2011/01/getting-it-onto-the-kindle",
+   "title": "Getting it onto the Kindle",
+   "pubDate": "2011-01-27T15:05:49.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1864
+  },
+  {
+   "guid": "https://timbroder.com/2011/01/my-picks-for-the-2011-oscars",
+   "link": "https://timbroder.com/2011/01/my-picks-for-the-2011-oscars",
+   "title": "My picks for the 2011 Oscars",
+   "pubDate": "2011-01-25T16:24:40.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2688
+  },
+  {
+   "guid": "https://timbroder.com/2011/01/breaking-them-in",
+   "link": "https://timbroder.com/2011/01/breaking-them-in",
+   "title": "Breaking them in",
+   "pubDate": "2011-01-23T18:24:49.000Z",
+   "descriptionLength": 44,
+   "contentLength": 51
+  },
+  {
+   "guid": "https://timbroder.com/2011/01/want-to-trace-the-call-stack-in-magento",
+   "link": "https://timbroder.com/2011/01/want-to-trace-the-call-stack-in-magento",
+   "title": "Want to trace the call stack in Magento?",
+   "pubDate": "2011-01-04T21:35:38.000Z",
+   "descriptionLength": 136,
+   "contentLength": 10710
+  },
+  {
+   "guid": "https://timbroder.com/2010/12/want-user-available-in-every-template-in-django",
+   "link": "https://timbroder.com/2010/12/want-user-available-in-every-template-in-django",
+   "title": "Want user available in every template in Django?",
+   "pubDate": "2010-12-29T03:08:52.000Z",
+   "descriptionLength": 121,
+   "contentLength": 2515
+  },
+  {
+   "guid": "https://timbroder.com/2010/12/want-to-dump-every-sql-query-magento-runs",
+   "link": "https://timbroder.com/2010/12/want-to-dump-every-sql-query-magento-runs",
+   "title": "Want to dump every SQL query Magento runs?",
+   "pubDate": "2010-12-02T22:35:04.000Z",
+   "descriptionLength": 3,
+   "contentLength": 6703
+  },
+  {
+   "guid": "https://timbroder.com/2010/12/magento-want-ckeditor-to-appear-on-category-edit-pages-in-magento",
+   "link": "https://timbroder.com/2010/12/magento-want-ckeditor-to-appear-on-category-edit-pages-in-magento",
+   "title": "Magento: Want CKEditor to appear on Category edit pages in Magento?",
+   "pubDate": "2010-12-02T16:50:50.000Z",
+   "descriptionLength": 135,
+   "contentLength": 13506
+  },
+  {
+   "guid": "https://timbroder.com/2010/11/how-batman-and-robin-16-should-have-ended",
+   "link": "https://timbroder.com/2010/11/how-batman-and-robin-16-should-have-ended",
+   "title": "How Batman and Robin #16 should have ended",
+   "pubDate": "2010-11-18T16:08:40.000Z",
+   "descriptionLength": 138,
+   "contentLength": 748
+  },
+  {
+   "guid": "https://timbroder.com/2010/10/oh-amazon",
+   "link": "https://timbroder.com/2010/10/oh-amazon",
+   "title": "oh amazon",
+   "pubDate": "2010-10-18T14:19:31.000Z",
+   "descriptionLength": 140,
+   "contentLength": 350
+  },
+  {
+   "guid": "https://timbroder.com/2010/10/pesto",
+   "link": "https://timbroder.com/2010/10/pesto",
+   "title": "Pesto",
+   "pubDate": "2010-10-04T20:35:20.000Z",
+   "descriptionLength": 140,
+   "contentLength": 663
+  },
+  {
+   "guid": "https://timbroder.com/2010/10/huge-omelet-after-opt",
+   "link": "https://timbroder.com/2010/10/huge-omelet-after-opt",
+   "title": "Huge omelet after OPT",
+   "pubDate": "2010-10-03T13:49:39.000Z",
+   "descriptionLength": 140,
+   "contentLength": 174
+  },
+  {
+   "guid": "https://timbroder.com/2010/10/goo-gl-url-shortener-goes-public",
+   "link": "https://timbroder.com/2010/10/goo-gl-url-shortener-goes-public",
+   "title": "Goo.gl url shortener goes public",
+   "pubDate": "2010-10-01T14:53:20.000Z",
+   "descriptionLength": 137,
+   "contentLength": 296
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/some-reading-from-django-nyc",
+   "link": "https://timbroder.com/2010/09/some-reading-from-django-nyc",
+   "title": "Some reading from django-nyc",
+   "pubDate": "2010-09-30T18:04:45.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2214
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/face-vs-watermelon-brutal",
+   "link": "https://timbroder.com/2010/09/face-vs-watermelon-brutal",
+   "title": "Face vs. watermelon = BRUTAL",
+   "pubDate": "2010-09-08T22:33:52.000Z",
+   "descriptionLength": 0,
+   "contentLength": 0
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/google-goes-instant",
+   "link": "https://timbroder.com/2010/09/google-goes-instant",
+   "title": "Google goes Instant",
+   "pubDate": "2010-09-08T19:21:05.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1644
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/outtake-from-our-engagement-photo-shoot",
+   "link": "https://timbroder.com/2010/09/outtake-from-our-engagement-photo-shoot",
+   "title": "Outtake from our engagement photo shoot.",
+   "pubDate": "2010-09-08T18:31:54.000Z",
+   "descriptionLength": 0,
+   "contentLength": 169
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/magento-enabling-the-product-review-form-anywhere",
+   "link": "https://timbroder.com/2010/09/magento-enabling-the-product-review-form-anywhere",
+   "title": "Magento:: Enabling the Product Review form anywhere",
+   "pubDate": "2010-09-08T18:03:07.000Z",
+   "descriptionLength": 76,
+   "contentLength": 2353
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/using-widgets-outside-of-the-cms-in-magento",
+   "link": "https://timbroder.com/2010/09/using-widgets-outside-of-the-cms-in-magento",
+   "title": "Using widgets outside of the CMS in Magento",
+   "pubDate": "2010-09-07T19:51:46.000Z",
+   "descriptionLength": 141,
+   "contentLength": 14018
+  },
+  {
+   "guid": "https://timbroder.com/2010/09/the-primal-blueprint-30-day-challenge",
+   "link": "https://timbroder.com/2010/09/the-primal-blueprint-30-day-challenge",
+   "title": "The Primal Blueprint 30-Day Challenge",
+   "pubDate": "2010-09-07T17:24:45.000Z",
+   "descriptionLength": 139,
+   "contentLength": 583
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/google-reader-adds-to-trends-view",
+   "link": "https://timbroder.com/2010/08/google-reader-adds-to-trends-view",
+   "title": "Google Reader adds to trends view",
+   "pubDate": "2010-08-31T13:22:38.000Z",
+   "descriptionLength": 140,
+   "contentLength": 529
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/how-fucd-is-your-database",
+   "link": "https://timbroder.com/2010/08/how-fucd-is-your-database",
+   "title": "How fuc**d is your database?",
+   "pubDate": "2010-08-26T20:53:42.000Z",
+   "descriptionLength": 110,
+   "contentLength": 165
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/gmail-to-real-phone-calling",
+   "link": "https://timbroder.com/2010/08/gmail-to-real-phone-calling",
+   "title": "Gmail to real phone calling",
+   "pubDate": "2010-08-25T19:07:05.000Z",
+   "descriptionLength": 138,
+   "contentLength": 882
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/amcs-the-walking-dead-trailer",
+   "link": "https://timbroder.com/2010/08/amcs-the-walking-dead-trailer",
+   "title": "AMC'S THE WALKING DEAD Trailer",
+   "pubDate": "2010-08-24T17:53:49.000Z",
+   "descriptionLength": 22,
+   "contentLength": 29
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/digg-4v-and-hulu-plus-invites-to-give-away",
+   "link": "https://timbroder.com/2010/08/digg-4v-and-hulu-plus-invites-to-give-away",
+   "title": "Digg 4v and Hulu Plus invites to give away",
+   "pubDate": "2010-08-19T19:32:25.000Z",
+   "descriptionLength": 137,
+   "contentLength": 187
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/why-vps",
+   "link": "https://timbroder.com/2010/08/why-vps",
+   "title": "Why VPS?",
+   "pubDate": "2010-08-19T15:16:43.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2560
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/powering-chrome-to-phone-with-android-to-device-messaging",
+   "link": "https://timbroder.com/2010/08/powering-chrome-to-phone-with-android-to-device-messaging",
+   "title": "Powering Chrome to Phone with Android to Device Messaging",
+   "pubDate": "2010-08-12T18:42:08.000Z",
+   "descriptionLength": 131,
+   "contentLength": 1011
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/fake-stan-lee-vs-comic-con-2009",
+   "link": "https://timbroder.com/2010/08/fake-stan-lee-vs-comic-con-2009",
+   "title": "Fake Stan Lee vs. Comic Con 2009",
+   "pubDate": "2010-08-05T15:01:33.000Z",
+   "descriptionLength": 0,
+   "contentLength": 127
+  },
+  {
+   "guid": "https://timbroder.com/2010/08/avengers-teaser-trailer-from-comic-con",
+   "link": "https://timbroder.com/2010/08/avengers-teaser-trailer-from-comic-con",
+   "title": "Avengers teaser trailer from Comic Con",
+   "pubDate": "2010-08-05T15:00:32.000Z",
+   "descriptionLength": 0,
+   "contentLength": 0
+  },
+  {
+   "guid": "https://timbroder.com/2010/07/gpowered-net-is-now-timbroder-com",
+   "link": "https://timbroder.com/2010/07/gpowered-net-is-now-timbroder-com",
+   "title": "gpowered.net is now timbroder.com",
+   "pubDate": "2010-07-23T19:48:27.000Z",
+   "descriptionLength": 136,
+   "contentLength": 703
+  },
+  {
+   "guid": "https://timbroder.com/2010/07/pig-roast",
+   "link": "https://timbroder.com/2010/07/pig-roast",
+   "title": "Pig Roast",
+   "pubDate": "2010-07-19T21:40:21.000Z",
+   "descriptionLength": 91,
+   "contentLength": 469
+  },
+  {
+   "guid": "https://timbroder.com/2010/07/front-runners-new-york-lesbian-and-gay-pride-run-5m",
+   "link": "https://timbroder.com/2010/07/front-runners-new-york-lesbian-and-gay-pride-run-5m",
+   "title": "Front Runners New York Lesbian and Gay Pride Run (5M)",
+   "pubDate": "2010-07-06T22:03:12.000Z",
+   "descriptionLength": 105,
+   "contentLength": 4162
+  },
+  {
+   "guid": "https://timbroder.com/2010/07/cookbake-off-at-aiaio",
+   "link": "https://timbroder.com/2010/07/cookbake-off-at-aiaio",
+   "title": "Cook/bake off at #aiaio!",
+   "pubDate": "2010-07-01T17:56:52.000Z",
+   "descriptionLength": 13,
+   "contentLength": 2326
+  },
+  {
+   "guid": "https://timbroder.com/2010/06/displaying-custom-attributes-on-the-product-page-in-magento",
+   "link": "https://timbroder.com/2010/06/displaying-custom-attributes-on-the-product-page-in-magento",
+   "title": "Displaying Custom Attributes on the Product Page in Magento",
+   "pubDate": "2010-06-29T16:27:47.000Z",
+   "descriptionLength": 137,
+   "contentLength": 2022
+  },
+  {
+   "guid": "https://timbroder.com/2010/06/iphone4-vs-htc-evo",
+   "link": "https://timbroder.com/2010/06/iphone4-vs-htc-evo",
+   "title": "iPhone4 vs HTC Evo",
+   "pubDate": "2010-06-28T17:24:17.000Z",
+   "descriptionLength": 16,
+   "contentLength": 151
+  },
+  {
+   "guid": "https://timbroder.com/2010/06/wedding-planning",
+   "link": "https://timbroder.com/2010/06/wedding-planning",
+   "title": "Wedding Planning",
+   "pubDate": "2010-06-22T21:39:41.000Z",
+   "descriptionLength": 119,
+   "contentLength": 183
+  },
+  {
+   "guid": "https://timbroder.com/2010/06/syntaxhighlighter-evolved",
+   "link": "https://timbroder.com/2010/06/syntaxhighlighter-evolved",
+   "title": "SyntaxHighlighter Evolved",
+   "pubDate": "2010-06-18T17:45:25.000Z",
+   "descriptionLength": 139,
+   "contentLength": 5202
+  },
+  {
+   "guid": "https://timbroder.com/2010/06/lazy-bum",
+   "link": "https://timbroder.com/2010/06/lazy-bum",
+   "title": "Lazy bum",
+   "pubDate": "2010-06-03T17:49:39.000Z",
+   "descriptionLength": 22,
+   "contentLength": 2188
+  },
+  {
+   "guid": "https://timbroder.com/2010/04/never-lose-a-bet-at-aiaio",
+   "link": "https://timbroder.com/2010/04/never-lose-a-bet-at-aiaio",
+   "title": "Never lose a bet at #aiaio",
+   "pubDate": "2010-04-23T13:38:07.000Z",
+   "descriptionLength": 0,
+   "contentLength": 2126
+  },
+  {
+   "guid": "https://timbroder.com/2010/03/select-foo-count-from-bar-group-by-foo-in-django",
+   "link": "https://timbroder.com/2010/03/select-foo-count-from-bar-group-by-foo-in-django",
+   "title": "select foo, count(*) from bar group by foo in django",
+   "pubDate": "2010-03-31T16:31:06.000Z",
+   "descriptionLength": 141,
+   "contentLength": 2613
+  },
+  {
+   "guid": "https://timbroder.com/2010/03/ie9-platform-preview",
+   "link": "https://timbroder.com/2010/03/ie9-platform-preview",
+   "title": "IE9 platform preview",
+   "pubDate": "2010-03-16T20:15:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 414
+  },
+  {
+   "guid": "https://timbroder.com/2010/02/hide-buzz-without-disabling-it",
+   "link": "https://timbroder.com/2010/02/hide-buzz-without-disabling-it",
+   "title": "Hide buzz without disabling it",
+   "pubDate": "2010-02-12T16:27:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 229
+  },
+  {
+   "guid": "https://timbroder.com/2010/02/why-google-needs-buzz",
+   "link": "https://timbroder.com/2010/02/why-google-needs-buzz",
+   "title": "Why Google Needs Buzz",
+   "pubDate": "2010-02-12T14:34:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1320
+  },
+  {
+   "guid": "https://timbroder.com/2010/02/google-buzz-facebook-email",
+   "link": "https://timbroder.com/2010/02/google-buzz-facebook-email",
+   "title": "Google Buzz? Facebook Email?",
+   "pubDate": "2010-02-10T16:55:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 295
+  },
+  {
+   "guid": "https://timbroder.com/2010/02/django-admin-inline-preview",
+   "link": "https://timbroder.com/2010/02/django-admin-inline-preview",
+   "title": "Django Admin inline preview",
+   "pubDate": "2010-02-09T19:17:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 10879
+  },
+  {
+   "guid": "https://timbroder.com/2010/02/get-admin-url-for-django-model",
+   "link": "https://timbroder.com/2010/02/get-admin-url-for-django-model",
+   "title": "Get the admin url for a django model",
+   "pubDate": "2010-02-09T18:48:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2264
+  },
+  {
+   "guid": "https://timbroder.com/2010/02/remaining-character-count-in-django",
+   "link": "https://timbroder.com/2010/02/remaining-character-count-in-django",
+   "title": "Remaining character count in django admin",
+   "pubDate": "2010-02-01T19:28:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 21345
+  },
+  {
+   "guid": "https://timbroder.com/2010/01/override-querysetdelete-one-way-of",
+   "link": "https://timbroder.com/2010/01/override-querysetdelete-one-way-of",
+   "title": "Override QuerySet.delete() (one way of preventing cascading deletes)",
+   "pubDate": "2010-01-07T17:05:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 2709
+  },
+  {
+   "guid": "https://timbroder.com/2010/01/quick-way-to-display-your-delicious",
+   "link": "https://timbroder.com/2010/01/quick-way-to-display-your-delicious",
+   "title": "A quick way to display your delicious links by tag",
+   "pubDate": "2010-01-05T14:46:00.000Z",
+   "descriptionLength": 40,
+   "contentLength": 3936
+  },
+  {
+   "guid": "https://timbroder.com/2009/12/jack-vs-spider-and-happy-holidays",
+   "link": "https://timbroder.com/2009/12/jack-vs-spider-and-happy-holidays",
+   "title": "Jack Vs Spider and Happy Holidays",
+   "pubDate": "2009-12-24T15:46:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 358
+  },
+  {
+   "guid": "https://timbroder.com/2009/12/django-gets-multi-db",
+   "link": "https://timbroder.com/2009/12/django-gets-multi-db",
+   "title": "Django gets Multi-DB",
+   "pubDate": "2009-12-22T19:58:00.000Z",
+   "descriptionLength": 129,
+   "contentLength": 1127
+  },
+  {
+   "guid": "https://timbroder.com/2009/12/share-google-reader-folders-with",
+   "link": "https://timbroder.com/2009/12/share-google-reader-folders-with",
+   "title": "Share Google Reader folders with friends",
+   "pubDate": "2009-12-22T17:09:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1718
+  },
+  {
+   "guid": "https://timbroder.com/2009/12/sneak-some-advanced-logic-into-django",
+   "link": "https://timbroder.com/2009/12/sneak-some-advanced-logic-into-django",
+   "title": "Sneak some advanced logic into a Django template",
+   "pubDate": "2009-12-17T17:03:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 8623
+  },
+  {
+   "guid": "https://timbroder.com/2009/12/we-fix-while-we-eat",
+   "link": "https://timbroder.com/2009/12/we-fix-while-we-eat",
+   "title": "We fix while we eat",
+   "pubDate": "2009-12-10T16:48:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 432
+  },
+  {
+   "guid": "https://timbroder.com/2009/12/google-wave-invites",
+   "link": "https://timbroder.com/2009/12/google-wave-invites",
+   "title": "Google Wave Invites",
+   "pubDate": "2009-12-10T15:01:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 277
+  },
+  {
+   "guid": "https://timbroder.com/2009/11/take-your-batch-into-cloud",
+   "link": "https://timbroder.com/2009/11/take-your-batch-into-cloud",
+   "title": "Take your batch into the cloud",
+   "pubDate": "2009-11-16T22:07:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 9774
+  },
+  {
+   "guid": "https://timbroder.com/2009/11/online-advertising-moving-to-your-car",
+   "link": "https://timbroder.com/2009/11/online-advertising-moving-to-your-car",
+   "title": "Online advertising moving to.... your car?",
+   "pubDate": "2009-11-10T22:38:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 1705
+  },
+  {
+   "guid": "https://timbroder.com/2009/11/googles-christmas-gift-to-america-is",
+   "link": "https://timbroder.com/2009/11/googles-christmas-gift-to-america-is",
+   "title": "Google’s Christmas gift to America is free Wi-Fi at airports starting today (reblog)",
+   "pubDate": "2009-11-10T21:03:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1220
+  },
+  {
+   "guid": "https://timbroder.com/2009/10/google-wave-as-project-collaboration",
+   "link": "https://timbroder.com/2009/10/google-wave-as-project-collaboration",
+   "title": "Google Wave as a Project Collaboration Tool",
+   "pubDate": "2009-10-29T17:21:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3132
+  },
+  {
+   "guid": "https://timbroder.com/2009/10/use-google-voice-with-your-existing",
+   "link": "https://timbroder.com/2009/10/use-google-voice-with-your-existing",
+   "title": "Use Google Voice with your existing number",
+   "pubDate": "2009-10-27T14:17:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 3537
+  },
+  {
+   "guid": "https://timbroder.com/2009/10/google-wave-checker-for-firefox",
+   "link": "https://timbroder.com/2009/10/google-wave-checker-for-firefox",
+   "title": "Google Wave checker for firefox",
+   "pubDate": "2009-10-14T20:12:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 427
+  },
+  {
+   "guid": "https://timbroder.com/2009/10/firefox-keyboard-and-mouse-shortcuts",
+   "link": "https://timbroder.com/2009/10/firefox-keyboard-and-mouse-shortcuts",
+   "title": "Firefox Keyboard and Mouse Shortcuts",
+   "pubDate": "2009-10-05T15:06:00.000Z",
+   "descriptionLength": 120,
+   "contentLength": 196
+  },
+  {
+   "guid": "https://timbroder.com/2009/09/checking-if-remote-file-exists-in",
+   "link": "https://timbroder.com/2009/09/checking-if-remote-file-exists-in",
+   "title": "Checking if a remote file exists in python",
+   "pubDate": "2009-09-30T19:51:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2722
+  },
+  {
+   "guid": "https://timbroder.com/2009/09/twitter-get-phone-calls-facebook-gets",
+   "link": "https://timbroder.com/2009/09/twitter-get-phone-calls-facebook-gets",
+   "title": "Twitter get phone calls, Facebook gets voice chat",
+   "pubDate": "2009-09-18T19:40:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 518
+  },
+  {
+   "guid": "https://timbroder.com/2009/09/fight-gone-bad-iv",
+   "link": "https://timbroder.com/2009/09/fight-gone-bad-iv",
+   "title": "Fight Gone Bad IV",
+   "pubDate": "2009-09-10T19:18:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1264
+  },
+  {
+   "guid": "https://timbroder.com/2009/08/location-location-location",
+   "link": "https://timbroder.com/2009/08/location-location-location",
+   "title": "Location, Location, Location",
+   "pubDate": "2009-08-29T18:39:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2575
+  },
+  {
+   "guid": "https://timbroder.com/2009/08/tech-support-cheat-sheet",
+   "link": "https://timbroder.com/2009/08/tech-support-cheat-sheet",
+   "title": "Tech Support Cheat Sheet",
+   "pubDate": "2009-08-24T18:32:00.000Z",
+   "descriptionLength": 88,
+   "contentLength": 221
+  },
+  {
+   "guid": "https://timbroder.com/2009/08/send-to-tumblr-and-track-with-bitly",
+   "link": "https://timbroder.com/2009/08/send-to-tumblr-and-track-with-bitly",
+   "title": "Send To Tumblr And Track With Bitly Google Reader Custom Link",
+   "pubDate": "2009-08-14T13:43:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 4461
+  },
+  {
+   "guid": "https://timbroder.com/2009/08/google-opt-out-feature-lets-users",
+   "link": "https://timbroder.com/2009/08/google-opt-out-feature-lets-users",
+   "title": "Google Opt Out Feature Lets Users Protect Privacy by Moving to Remote Village",
+   "pubDate": "2009-08-13T21:20:00.000Z",
+   "descriptionLength": 77,
+   "contentLength": 193
+  },
+  {
+   "guid": "https://timbroder.com/2009/07/author-of-windows-file-copy-dialog",
+   "link": "https://timbroder.com/2009/07/author-of-windows-file-copy-dialog",
+   "title": "The author of the Windows file copy dialog visits some friends",
+   "pubDate": "2009-07-20T13:40:00.000Z",
+   "descriptionLength": 0,
+   "contentLength": 127
+  },
+  {
+   "guid": "https://timbroder.com/2009/07/android-hacked-to-run-on-x86",
+   "link": "https://timbroder.com/2009/07/android-hacked-to-run-on-x86",
+   "title": "Android hacked to run on x86",
+   "pubDate": "2009-07-15T14:51:00.000Z",
+   "descriptionLength": 107,
+   "contentLength": 196
+  },
+  {
+   "guid": "https://timbroder.com/2009/06/how-to-display-what-google-reader-rss",
+   "link": "https://timbroder.com/2009/06/how-to-display-what-google-reader-rss",
+   "title": "Wordpress Plugin: Displaying your Google Reader RSS subscriptions",
+   "pubDate": "2009-06-02T15:07:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 50499
+  },
+  {
+   "guid": "https://timbroder.com/2009/06/quick-google-authentication-in-php",
+   "link": "https://timbroder.com/2009/06/quick-google-authentication-in-php",
+   "title": "Quick Google Authentication in PHP",
+   "pubDate": "2009-06-02T15:02:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 8041
+  },
+  {
+   "guid": "https://timbroder.com/2009/05/diggnation-nyc-june-4th",
+   "link": "https://timbroder.com/2009/05/diggnation-nyc-june-4th",
+   "title": "Diggnation NYC, June 4th!",
+   "pubDate": "2009-05-28T14:29:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 678
+  },
+  {
+   "guid": "https://timbroder.com/2009/05/google-maps-shows-interesting-street",
+   "link": "https://timbroder.com/2009/05/google-maps-shows-interesting-street",
+   "title": "Google Maps F-Bombs street names!",
+   "pubDate": "2009-05-01T00:16:00.000Z",
+   "descriptionLength": 115,
+   "contentLength": 358
+  },
+  {
+   "guid": "https://timbroder.com/2009/04/how-programmer-reads-your-resume",
+   "link": "https://timbroder.com/2009/04/how-programmer-reads-your-resume",
+   "title": "How a Programmer reads your resume",
+   "pubDate": "2009-04-28T16:00:00.000Z",
+   "descriptionLength": 0,
+   "contentLength": 135
+  },
+  {
+   "guid": "https://timbroder.com/2009/04/how-to-manage-podcasts-in-winamp-screw",
+   "link": "https://timbroder.com/2009/04/how-to-manage-podcasts-in-winamp-screw",
+   "title": "How to manage podcasts in Winamp (screw itunes)",
+   "pubDate": "2009-04-17T19:11:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 2078
+  },
+  {
+   "guid": "https://timbroder.com/2009/04/big-appengine-news-cron-java-firewalled",
+   "link": "https://timbroder.com/2009/04/big-appengine-news-cron-java-firewalled",
+   "title": "Big Appengine news: Cron, Java, Firewalled Data, DB Import",
+   "pubDate": "2009-04-08T13:45:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1093
+  },
+  {
+   "guid": "https://timbroder.com/2009/03/twitter-blog-replies-are-now-mentions",
+   "link": "https://timbroder.com/2009/03/twitter-blog-replies-are-now-mentions",
+   "title": "Twitter Blog: Replies Are Now Mentions",
+   "pubDate": "2009-03-31T14:33:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 215
+  },
+  {
+   "guid": "https://timbroder.com/2009/03/first-google-chrome-extensions",
+   "link": "https://timbroder.com/2009/03/first-google-chrome-extensions",
+   "title": "First Google Chrome Extensions",
+   "pubDate": "2009-03-19T17:11:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 885
+  },
+  {
+   "guid": "https://timbroder.com/2009/03/googles-javascript-chrome-experiments",
+   "link": "https://timbroder.com/2009/03/googles-javascript-chrome-experiments",
+   "title": "Google’s JavaScript/ Chrome Experiments Showcase",
+   "pubDate": "2009-03-19T17:08:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 442
+  },
+  {
+   "guid": "https://timbroder.com/2009/03/test-post-from-sms-now-supported-by",
+   "link": "https://timbroder.com/2009/03/test-post-from-sms-now-supported-by",
+   "title": "No Content Found",
+   "pubDate": "2009-03-16T20:51:00.000Z",
+   "descriptionLength": 72,
+   "contentLength": 119
+  },
+  {
+   "guid": "https://timbroder.com/2009/03/grandcentral-finally-resurected",
+   "link": "https://timbroder.com/2009/03/grandcentral-finally-resurected",
+   "title": "GrandCentral finally resurected",
+   "pubDate": "2009-03-12T13:46:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 2982
+  },
+  {
+   "guid": "https://timbroder.com/2009/03/google-calendar-gets-offline-access",
+   "link": "https://timbroder.com/2009/03/google-calendar-gets-offline-access",
+   "title": "Google Calendar gets offline access with Gears",
+   "pubDate": "2009-03-04T13:50:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 458
+  },
+  {
+   "guid": "https://timbroder.com/2009/02/installing-ubuntu-netbook-remix-with",
+   "link": "https://timbroder.com/2009/02/installing-ubuntu-netbook-remix-with",
+   "title": "Installing Ubuntu Netbook Remix (with Jaunty) on an MSI Wind",
+   "pubDate": "2009-02-25T20:51:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 4507
+  },
+  {
+   "guid": "https://timbroder.com/2009/02/google-app-engine-blog-skys-almost",
+   "link": "https://timbroder.com/2009/02/google-app-engine-blog-skys-almost",
+   "title": "Google App Engine Blog: The sky's (almost) the limit! \"High CPU\" is no more.",
+   "pubDate": "2009-02-17T16:16:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 209
+  },
+  {
+   "guid": "https://timbroder.com/2009/01/matrix-runs-on-windows",
+   "link": "https://timbroder.com/2009/01/matrix-runs-on-windows",
+   "title": "The Matrix Runs on Windows",
+   "pubDate": "2009-01-28T19:39:00.000Z",
+   "descriptionLength": 57,
+   "contentLength": 207
+  },
+  {
+   "guid": "https://timbroder.com/2009/01/how-to-get-brightkite-photos-into-rss",
+   "link": "https://timbroder.com/2009/01/how-to-get-brightkite-photos-into-rss",
+   "title": "How to get brightkite photos into an RSS feed (to post to a blog)",
+   "pubDate": "2009-01-26T15:11:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1861
+  },
+  {
+   "guid": "https://timbroder.com/2008/12/finding-unread-gmails-or-best-gmail",
+   "link": "https://timbroder.com/2008/12/finding-unread-gmails-or-best-gmail",
+   "title": "Finding unread gmails (or: the best gmail filter ever)",
+   "pubDate": "2008-12-23T15:45:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 419
+  },
+  {
+   "guid": "https://timbroder.com/2008/12/google-reader-gets-facelift",
+   "link": "https://timbroder.com/2008/12/google-reader-gets-facelift",
+   "title": "Google Reader gets a facelift",
+   "pubDate": "2008-12-05T14:20:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 385
+  },
+  {
+   "guid": "https://timbroder.com/2008/11/set-change-reset-mysql-root-password-on",
+   "link": "https://timbroder.com/2008/11/set-change-reset-mysql-root-password-on",
+   "title": "Set / Change / Reset the MySQL root password on Ubuntu Linux (Ubuntu)",
+   "pubDate": "2008-11-24T23:53:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 700
+  },
+  {
+   "guid": "https://timbroder.com/2008/11/gmail-adds-voice-and-video-chat",
+   "link": "https://timbroder.com/2008/11/gmail-adds-voice-and-video-chat",
+   "title": "Gmail adds voice and video chat",
+   "pubDate": "2008-11-11T22:54:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 603
+  },
+  {
+   "guid": "https://timbroder.com/2008/11/foxtrot-android",
+   "link": "https://timbroder.com/2008/11/foxtrot-android",
+   "title": "Foxtrot Android",
+   "pubDate": "2008-11-10T14:37:00.000Z",
+   "descriptionLength": 0,
+   "contentLength": 151
+  },
+  {
+   "guid": "https://timbroder.com/2008/11/android-market-now-open-full-source",
+   "link": "https://timbroder.com/2008/11/android-market-now-open-full-source",
+   "title": "Android Market now open. Full source released",
+   "pubDate": "2008-11-03T14:28:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 481
+  },
+  {
+   "guid": "https://timbroder.com/2008/10/gwtphp-google-web-toolkit-php-5",
+   "link": "https://timbroder.com/2008/10/gwtphp-google-web-toolkit-php-5",
+   "title": "GWTPHP = Google Web Toolkit + PHP 5",
+   "pubDate": "2008-10-09T20:28:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 680
+  },
+  {
+   "guid": "https://timbroder.com/2008/10/how-to-turn-any-webpage-into-rss-feed",
+   "link": "https://timbroder.com/2008/10/how-to-turn-any-webpage-into-rss-feed",
+   "title": "How to turn any webpage into an RSS feed",
+   "pubDate": "2008-10-06T12:55:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 4414
+  },
+  {
+   "guid": "https://timbroder.com/2008/10/debate-20",
+   "link": "https://timbroder.com/2008/10/debate-20",
+   "title": "Debate 2.0",
+   "pubDate": "2008-10-02T21:00:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2389
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/september-madness",
+   "link": "https://timbroder.com/2008/09/september-madness",
+   "title": "September Madness",
+   "pubDate": "2008-09-30T18:54:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 278
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/digg-and-facebook-heading-to-future-of",
+   "link": "https://timbroder.com/2008/09/digg-and-facebook-heading-to-future-of",
+   "title": "Digg and Facebook Heading to the Future of Web Apps expo",
+   "pubDate": "2008-09-30T14:17:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 842
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/what-happens-if-you-break-nda-with",
+   "link": "https://timbroder.com/2008/09/what-happens-if-you-break-nda-with",
+   "title": "What happens if you break the NDA with Apple's App Store",
+   "pubDate": "2008-09-30T14:08:00.000Z",
+   "descriptionLength": 0,
+   "contentLength": 153
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/i-just-won-50000000-gbp-from-google-uk",
+   "link": "https://timbroder.com/2008/09/i-just-won-50000000-gbp-from-google-uk",
+   "title": "I JUST WON £500,000.00 GBP FROM GOOGLE UK!!!",
+   "pubDate": "2008-09-25T15:27:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1988
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/wooho-google-maps-adds-nyc-transit",
+   "link": "https://timbroder.com/2008/09/wooho-google-maps-adds-nyc-transit",
+   "title": "Woohoo! Google Maps adds NYC transit directions",
+   "pubDate": "2008-09-24T17:55:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 301
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/google-android-g1-t-mobile-announcement",
+   "link": "https://timbroder.com/2008/09/google-android-g1-t-mobile-announcement",
+   "title": "Google Android G1 T-Mobile announcement is streaming live",
+   "pubDate": "2008-09-23T14:36:00.000Z",
+   "descriptionLength": 13,
+   "contentLength": 70
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/twitter-enters-porn-industry",
+   "link": "https://timbroder.com/2008/09/twitter-enters-porn-industry",
+   "title": "Twitter enters the Porn industry",
+   "pubDate": "2008-09-23T14:23:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 498
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/how-to-stream-video-to-xbox-360-from",
+   "link": "https://timbroder.com/2008/09/how-to-stream-video-to-xbox-360-from",
+   "title": "How to stream video to an Xbox 360 from linux",
+   "pubDate": "2008-09-22T22:05:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1979
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/official-t-mobile-android-announcement",
+   "link": "https://timbroder.com/2008/09/official-t-mobile-android-announcement",
+   "title": "Official: T-Mobile Android Announcement September 23rd",
+   "pubDate": "2008-09-17T22:31:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 248
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/man-i-would-love-to-do-this",
+   "link": "https://timbroder.com/2008/09/man-i-would-love-to-do-this",
+   "title": "Man I would love to do this",
+   "pubDate": "2008-09-17T20:48:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 365
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/t-mobile-android-handset-to-retail-for",
+   "link": "https://timbroder.com/2008/09/t-mobile-android-handset-to-retail-for",
+   "title": "T-Mobile Android handset to retail for $199",
+   "pubDate": "2008-09-17T20:30:00.000Z",
+   "descriptionLength": 23,
+   "contentLength": 126
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/offerpal-media-facebook-to-publish",
+   "link": "https://timbroder.com/2008/09/offerpal-media-facebook-to-publish",
+   "title": "Offerpal Media Facebook to Publish Event Directory for Search Engines",
+   "pubDate": "2008-09-17T20:04:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 437
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/adobe-air-beta-now-available-for-linux",
+   "link": "https://timbroder.com/2008/09/adobe-air-beta-now-available-for-linux",
+   "title": "Adobe AIR Beta Now Available for Linux",
+   "pubDate": "2008-09-17T20:00:00.000Z",
+   "descriptionLength": 125,
+   "contentLength": 279
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/diggnation-in-your-living-room",
+   "link": "https://timbroder.com/2008/09/diggnation-in-your-living-room",
+   "title": "Diggnation in your living room!",
+   "pubDate": "2008-09-17T14:23:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 1108
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/geek-10-vs-geek-20",
+   "link": "https://timbroder.com/2008/09/geek-10-vs-geek-20",
+   "title": "Geek 1.0 vs. Geek 2.0",
+   "pubDate": "2008-09-12T15:26:00.000Z",
+   "descriptionLength": 0,
+   "contentLength": 167
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/first-community-run-android-app-market",
+   "link": "https://timbroder.com/2008/09/first-community-run-android-app-market",
+   "title": "First Community run Android App Market goes live",
+   "pubDate": "2008-09-09T16:38:00.000Z",
+   "descriptionLength": 106,
+   "contentLength": 366
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/chrome-dont-clog-tubes",
+   "link": "https://timbroder.com/2008/09/chrome-dont-clog-tubes",
+   "title": "Chrome: Don't Clog the Tubes!",
+   "pubDate": "2008-09-08T19:06:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 390
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/wine-updates-with-better-chrome-support",
+   "link": "https://timbroder.com/2008/09/wine-updates-with-better-chrome-support",
+   "title": "WINE Updates with Better Chrome Support",
+   "pubDate": "2008-09-08T14:41:00.000Z",
+   "descriptionLength": 52,
+   "contentLength": 143
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/django-10-released",
+   "link": "https://timbroder.com/2008/09/django-10-released",
+   "title": "Django 1.0 released!",
+   "pubDate": "2008-09-05T01:00:00.000Z",
+   "descriptionLength": 61,
+   "contentLength": 128
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/chrome-coming-to-android",
+   "link": "https://timbroder.com/2008/09/chrome-coming-to-android",
+   "title": "Chrome coming to Android?",
+   "pubDate": "2008-09-04T13:24:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 452
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/android-market-user-driven-content",
+   "link": "https://timbroder.com/2008/09/android-market-user-driven-content",
+   "title": "Android Market: a user-driven content distribution system",
+   "pubDate": "2008-09-03T14:31:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 708
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/share-your-code-at-google-app-engine",
+   "link": "https://timbroder.com/2008/09/share-your-code-at-google-app-engine",
+   "title": "Share your code at ‘Google App Engine Cookbook’",
+   "pubDate": "2008-09-02T15:56:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 288
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/new-android-news",
+   "link": "https://timbroder.com/2008/09/new-android-news",
+   "title": "New Android news",
+   "pubDate": "2008-09-02T15:47:00.000Z",
+   "descriptionLength": 123,
+   "contentLength": 611
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/javascript-pacman-clone",
+   "link": "https://timbroder.com/2008/09/javascript-pacman-clone",
+   "title": "Javascript pacman clone",
+   "pubDate": "2008-09-02T15:40:00.000Z",
+   "descriptionLength": 66,
+   "contentLength": 190
+  },
+  {
+   "guid": "https://timbroder.com/2008/09/official-google-blog-fresh-take-on",
+   "link": "https://timbroder.com/2008/09/official-google-blog-fresh-take-on",
+   "title": "Official Google Blog: A fresh take on the browser",
+   "pubDate": "2008-09-02T13:54:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 301
+  },
+  {
+   "guid": "https://timbroder.com/2008/08/resistance-is-futile-microsoft",
+   "link": "https://timbroder.com/2008/08/resistance-is-futile-microsoft",
+   "title": "Resistance is Futile: Microsoft Paperclip comes to Unix",
+   "pubDate": "2008-08-28T20:40:00.000Z",
+   "descriptionLength": 28,
+   "contentLength": 178
+  },
+  {
+   "guid": "https://timbroder.com/2008/08/new-third-party-party-tool-for",
+   "link": "https://timbroder.com/2008/08/new-third-party-party-tool-for",
+   "title": "New third-party party tool for monitoring App Engine cluster status",
+   "pubDate": "2008-08-23T01:34:00.000Z",
+   "descriptionLength": 79,
+   "contentLength": 137
+  },
+  {
+   "guid": "https://timbroder.com/2008/08/t-mobile-android-slated-for-oct-13th",
+   "link": "https://timbroder.com/2008/08/t-mobile-android-slated-for-oct-13th",
+   "title": "T-Mobile Android slated for Oct 13th",
+   "pubDate": "2008-08-22T13:19:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 815
+  },
+  {
+   "guid": "https://timbroder.com/2008/08/back-from-vacation",
+   "link": "https://timbroder.com/2008/08/back-from-vacation",
+   "title": "Back from Vacation",
+   "pubDate": "2008-08-12T23:22:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1039
+  },
+  {
+   "guid": "https://timbroder.com/2008/08/analyst-htc-delay-rumors-debunked-q4",
+   "link": "https://timbroder.com/2008/08/analyst-htc-delay-rumors-debunked-q4",
+   "title": "Android: Analyst HTC delay rumors debunked - Q4 launch still on track",
+   "pubDate": "2008-08-11T14:41:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 325
+  },
+  {
+   "guid": "https://timbroder.com/2008/07/heading-on-vacation",
+   "link": "https://timbroder.com/2008/07/heading-on-vacation",
+   "title": "Heading on Vacation",
+   "pubDate": "2008-07-26T13:45:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 496
+  },
+  {
+   "guid": "https://timbroder.com/2008/07/im-not-sure-i-like-new-facebook-design",
+   "link": "https://timbroder.com/2008/07/im-not-sure-i-like-new-facebook-design",
+   "title": "I'm not sure I like the new Facebook Design",
+   "pubDate": "2008-07-23T02:19:00.000Z",
+   "descriptionLength": 129,
+   "contentLength": 914
+  },
+  {
+   "guid": "https://timbroder.com/2008/07/new-and-improved-google-personal",
+   "link": "https://timbroder.com/2008/07/new-and-improved-google-personal",
+   "title": "New and Improved Google Personal Homepage (ig)",
+   "pubDate": "2008-07-18T19:56:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 810
+  },
+  {
+   "guid": "https://timbroder.com/2008/07/gpowered-rated-82-on-bloggedcom",
+   "link": "https://timbroder.com/2008/07/gpowered-rated-82-on-bloggedcom",
+   "title": "gPowered Rated 8.2 on Blogged.com!",
+   "pubDate": "2008-07-02T01:19:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 1425
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/mars-robot-twittered-from-space",
+   "link": "https://timbroder.com/2008/06/mars-robot-twittered-from-space",
+   "title": "Mars Robot twittered from Space",
+   "pubDate": "2008-06-23T18:34:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 300
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/android-handsets-could-be-delayed-until",
+   "link": "https://timbroder.com/2008/06/android-handsets-could-be-delayed-until",
+   "title": "Android Handset’s Could Be Delayed Until 2009",
+   "pubDate": "2008-06-23T18:28:00.000Z",
+   "descriptionLength": 82,
+   "contentLength": 150
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/social-badges",
+   "link": "https://timbroder.com/2008/06/social-badges",
+   "title": "Social Badges",
+   "pubDate": "2008-06-20T00:25:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2662
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/httpjessenollercom20080619python-26-and",
+   "link": "https://timbroder.com/2008/06/httpjessenollercom20080619python-26-and",
+   "title": "Python 2.6 and 3.0 Beta 1 Released.",
+   "pubDate": "2008-06-19T22:28:00.000Z",
+   "descriptionLength": 40,
+   "contentLength": 179
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/wine-10-has-been-released",
+   "link": "https://timbroder.com/2008/06/wine-10-has-been-released",
+   "title": "Wine 1.0 has been released",
+   "pubDate": "2008-06-17T15:37:00.000Z",
+   "descriptionLength": 20,
+   "contentLength": 64
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/firefox3-help-set-world-record-starting",
+   "link": "https://timbroder.com/2008/06/firefox3-help-set-world-record-starting",
+   "title": "Firefox3: Help set a world record starting at 1pm EST",
+   "pubDate": "2008-06-17T15:15:00.000Z",
+   "descriptionLength": 5,
+   "contentLength": 74
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/google-io-session-videos-posted-with",
+   "link": "https://timbroder.com/2008/06/google-io-session-videos-posted-with",
+   "title": "Google I/O session videos posted with slides",
+   "pubDate": "2008-06-16T19:11:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 485
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/google-toolbar-available-for-firefox-3",
+   "link": "https://timbroder.com/2008/06/google-toolbar-available-for-firefox-3",
+   "title": "Google Toolbar Available for Firefox 3",
+   "pubDate": "2008-06-16T17:54:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 277
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/live-diggnation-ny-photos",
+   "link": "https://timbroder.com/2008/06/live-diggnation-ny-photos",
+   "title": "Live Diggnation NY Photos",
+   "pubDate": "2008-06-05T11:31:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3947
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/diggnation-filming-at-studio-b-in-nyc",
+   "link": "https://timbroder.com/2008/06/diggnation-filming-at-studio-b-in-nyc",
+   "title": "Diggnation filming at Studio B in NYC tonight",
+   "pubDate": "2008-06-04T11:36:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 890
+  },
+  {
+   "guid": "https://timbroder.com/2008/06/5-reasons-why-rim-should-make",
+   "link": "https://timbroder.com/2008/06/5-reasons-why-rim-should-make",
+   "title": "5 Reasons Why RIM Should Make A BlackBerry That Runs Android",
+   "pubDate": "2008-06-02T23:21:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 487
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/io-myspace-installs-gears",
+   "link": "https://timbroder.com/2008/05/io-myspace-installs-gears",
+   "title": "I/O: MySpace installs gears",
+   "pubDate": "2008-05-29T21:34:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 526
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/io-appengine-is-open",
+   "link": "https://timbroder.com/2008/05/io-appengine-is-open",
+   "title": "I/O: AppEngine is open!",
+   "pubDate": "2008-05-29T14:02:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 222
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/io-lots-of-android-ui-videos",
+   "link": "https://timbroder.com/2008/05/io-lots-of-android-ui-videos",
+   "title": "I/O: Lots of Android UI Videos!",
+   "pubDate": "2008-05-29T13:53:00.000Z",
+   "descriptionLength": 62,
+   "contentLength": 167
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/io-web-browser-meet-google-earth",
+   "link": "https://timbroder.com/2008/05/io-web-browser-meet-google-earth",
+   "title": "I/O: Web Browser, Meet Google Earth",
+   "pubDate": "2008-05-28T22:14:00.000Z",
+   "descriptionLength": 106,
+   "contentLength": 113
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/aol-joins-opensocial",
+   "link": "https://timbroder.com/2008/05/aol-joins-opensocial",
+   "title": "I/O: AOL Joins OpenSocial",
+   "pubDate": "2008-05-28T18:48:00.000Z",
+   "descriptionLength": 61,
+   "contentLength": 142
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/io-android-on-htc-dream",
+   "link": "https://timbroder.com/2008/05/io-android-on-htc-dream",
+   "title": "I/O: Android on the HTC Dream",
+   "pubDate": "2008-05-28T18:37:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 481
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/google-hosting-popular-javascript",
+   "link": "https://timbroder.com/2008/05/google-hosting-popular-javascript",
+   "title": "Google hosting popular javascript libraries",
+   "pubDate": "2008-05-28T16:04:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2156
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/appengine-pricing-announced",
+   "link": "https://timbroder.com/2008/05/appengine-pricing-announced",
+   "title": "AppEngine Pricing announced",
+   "pubDate": "2008-05-28T13:55:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 511
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/google-treasure-hunt-week-3-is-up",
+   "link": "https://timbroder.com/2008/05/google-treasure-hunt-week-3-is-up",
+   "title": "Google Treasure Hunt Week 3 is up",
+   "pubDate": "2008-05-27T18:36:00.000Z",
+   "descriptionLength": 7,
+   "contentLength": 14
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/twitter2gtalk-goes-live",
+   "link": "https://timbroder.com/2008/05/twitter2gtalk-goes-live",
+   "title": "twitter2gTalk Goes Live!",
+   "pubDate": "2008-05-22T19:01:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1679
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/why-microsoft-will-buy-facebook-and",
+   "link": "https://timbroder.com/2008/05/why-microsoft-will-buy-facebook-and",
+   "title": "Why Microsoft will buy Facebook and keep it closed",
+   "pubDate": "2008-05-19T21:42:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 340
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/android-developer-challenge-judges-and",
+   "link": "https://timbroder.com/2008/05/android-developer-challenge-judges-and",
+   "title": "Android Developer Challenge Judges and Top 50 Details",
+   "pubDate": "2008-05-15T12:27:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1140
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/appengine-hackathon",
+   "link": "https://timbroder.com/2008/05/appengine-hackathon",
+   "title": "Appengine Hackathon!",
+   "pubDate": "2008-05-07T12:07:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 626
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/got-my-google-appengine-account",
+   "link": "https://timbroder.com/2008/05/got-my-google-appengine-account",
+   "title": "Got my Google appengine account!",
+   "pubDate": "2008-05-06T23:59:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 271
+  },
+  {
+   "guid": "https://timbroder.com/2008/05/new-work-blackberry",
+   "link": "https://timbroder.com/2008/05/new-work-blackberry",
+   "title": "New Work Blackberry",
+   "pubDate": "2008-05-05T21:31:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 485
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/select-google-io-sessions-to-be-posted",
+   "link": "https://timbroder.com/2008/04/select-google-io-sessions-to-be-posted",
+   "title": "Select Google I/O sessions to be posted online",
+   "pubDate": "2008-04-30T00:17:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 186
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/added-tag-cloud",
+   "link": "https://timbroder.com/2008/04/added-tag-cloud",
+   "title": "Added a tag cloud",
+   "pubDate": "2008-04-29T22:57:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 468
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/distributing-ubuntu",
+   "link": "https://timbroder.com/2008/04/distributing-ubuntu",
+   "title": "Distributing Ubuntu",
+   "pubDate": "2008-04-29T20:39:00.000Z",
+   "descriptionLength": 85,
+   "contentLength": 302
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/limit-google-search-results-by-date",
+   "link": "https://timbroder.com/2008/04/limit-google-search-results-by-date",
+   "title": "Limit Google Search Results by Date",
+   "pubDate": "2008-04-28T14:43:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 900
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/fixing-nvidia-8600-gt-on-hardy-heron",
+   "link": "https://timbroder.com/2008/04/fixing-nvidia-8600-gt-on-hardy-heron",
+   "title": "Fixing Nvidia 8600 GT on Hardy Heron",
+   "pubDate": "2008-04-26T19:22:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 1317
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/google-code-blog-google-app-engine-hack",
+   "link": "https://timbroder.com/2008/04/google-code-blog-google-app-engine-hack",
+   "title": "Google Code Blog: Google App Engine Hack-a-thon coming to your coast!",
+   "pubDate": "2008-04-25T14:42:00.000Z",
+   "descriptionLength": 38,
+   "contentLength": 45
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/but-daddy-i-want-and-andoid-phone-now",
+   "link": "https://timbroder.com/2008/04/but-daddy-i-want-and-andoid-phone-now",
+   "title": "But Daddy! I want and Andoid phone NOW!",
+   "pubDate": "2008-04-25T14:02:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1551
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/upgrade-ubuntu-to-804-hardy-heron",
+   "link": "https://timbroder.com/2008/04/upgrade-ubuntu-to-804-hardy-heron",
+   "title": "Upgrade Ubuntu to 8.04 Hardy Heron",
+   "pubDate": "2008-04-24T14:09:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 5933
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/almost-time-for-new-ubuntu",
+   "link": "https://timbroder.com/2008/04/almost-time-for-new-ubuntu",
+   "title": "Almost time for a new Ubuntu",
+   "pubDate": "2008-04-22T10:59:00.000Z",
+   "descriptionLength": 83,
+   "contentLength": 271
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/google-website-optimizer-is-out-of-beta",
+   "link": "https://timbroder.com/2008/04/google-website-optimizer-is-out-of-beta",
+   "title": "Google Website Optimizer is out of beta",
+   "pubDate": "2008-04-19T02:46:00.000Z",
+   "descriptionLength": 134,
+   "contentLength": 285
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/non-google-appengine-hosting",
+   "link": "https://timbroder.com/2008/04/non-google-appengine-hosting",
+   "title": "Non Google AppEngine hosting",
+   "pubDate": "2008-04-18T20:05:00.000Z",
+   "descriptionLength": 94,
+   "contentLength": 135
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/best-android-quote",
+   "link": "https://timbroder.com/2008/04/best-android-quote",
+   "title": "Best Android quote",
+   "pubDate": "2008-04-10T23:00:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 204
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/test-from-my-blackberry",
+   "link": "https://timbroder.com/2008/04/test-from-my-blackberry",
+   "title": "test from my blackberry",
+   "pubDate": "2008-04-10T19:23:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 190
+  },
+  {
+   "guid": "https://timbroder.com/2008/04/blogger-adds-bloggroll",
+   "link": "https://timbroder.com/2008/04/blogger-adds-bloggroll",
+   "title": "Blogger adds bloggroll",
+   "pubDate": "2008-04-03T22:37:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 3807
+  },
+  {
+   "guid": "https://timbroder.com/2008/03/update-google-talk-status-with-twitter",
+   "link": "https://timbroder.com/2008/03/update-google-talk-status-with-twitter",
+   "title": "Update Google Talk status with Twitter",
+   "pubDate": "2008-03-30T23:11:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 7026
+  },
+  {
+   "guid": "https://timbroder.com/2008/03/ressurection",
+   "link": "https://timbroder.com/2008/03/ressurection",
+   "title": "Ressurection",
+   "pubDate": "2008-03-19T02:15:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 2571
+  },
+  {
+   "guid": "https://timbroder.com/2007/11/gphone-or-lack-there-of",
+   "link": "https://timbroder.com/2007/11/gphone-or-lack-there-of",
+   "title": "gPhone, or lack there of",
+   "pubDate": "2007-11-08T01:09:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1755
+  },
+  {
+   "guid": "https://timbroder.com/2007/11/october-speedlinking",
+   "link": "https://timbroder.com/2007/11/october-speedlinking",
+   "title": "October Speedlinking",
+   "pubDate": "2007-11-05T23:17:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 7772
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/linux-distro-popularity-according-to",
+   "link": "https://timbroder.com/2007/10/linux-distro-popularity-according-to",
+   "title": "Linux Distro Popularity According to Google",
+   "pubDate": "2007-10-30T02:30:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 2889
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-overheard-in-office",
+   "link": "https://timbroder.com/2007/10/google-overheard-in-office",
+   "title": "Google Overheard in the Office",
+   "pubDate": "2007-10-26T01:20:00.000Z",
+   "descriptionLength": 133,
+   "contentLength": 3921
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-reader-stats-out-of-wack",
+   "link": "https://timbroder.com/2007/10/google-reader-stats-out-of-wack",
+   "title": "Google Reader stats out of Wack",
+   "pubDate": "2007-10-25T00:27:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1788
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/new-blog-address_23",
+   "link": "https://timbroder.com/2007/10/new-blog-address_23",
+   "title": "New Blog Address",
+   "pubDate": "2007-10-23T23:34:00.000Z",
+   "descriptionLength": 135,
+   "contentLength": 1174
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/mashup-of-week",
+   "link": "https://timbroder.com/2007/10/mashup-of-week",
+   "title": "Mashup of the Week",
+   "pubDate": "2007-10-23T22:16:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 4718
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-overheard-in-new-york",
+   "link": "https://timbroder.com/2007/10/google-overheard-in-new-york",
+   "title": "Google Overheard in New York",
+   "pubDate": "2007-10-19T00:42:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 2666
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/ubuntu-710-gutsy-gibbon-is-out",
+   "link": "https://timbroder.com/2007/10/ubuntu-710-gutsy-gibbon-is-out",
+   "title": "Ubuntu 7.10 Gutsy Gibbon is out!",
+   "pubDate": "2007-10-18T12:01:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 949
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/my-first-google-api-ticket-has-been",
+   "link": "https://timbroder.com/2007/10/my-first-google-api-ticket-has-been",
+   "title": "My First Google API ticket has been fixed",
+   "pubDate": "2007-10-17T02:57:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 990
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-photos-blog-lesser-known-and",
+   "link": "https://timbroder.com/2007/10/google-photos-blog-lesser-known-and",
+   "title": "Top Secret Picasa Features",
+   "pubDate": "2007-10-16T02:14:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 1320
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/tennessee-for-weekend",
+   "link": "https://timbroder.com/2007/10/tennessee-for-weekend",
+   "title": "Tennessee for the weekend",
+   "pubDate": "2007-10-12T19:33:00.000Z",
+   "descriptionLength": 30,
+   "contentLength": 287
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-mashup-editor-blog-new-stuff-104",
+   "link": "https://timbroder.com/2007/10/google-mashup-editor-blog-new-stuff-104",
+   "title": "Google Mashup Editor Blog: New Stuff - 10/4 Feature Release",
+   "pubDate": "2007-10-11T01:43:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1084
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/how-often-do-google-blogs-post",
+   "link": "https://timbroder.com/2007/10/how-often-do-google-blogs-post",
+   "title": "How often do Google Blogs post?",
+   "pubDate": "2007-10-11T01:43:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 914
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/new-google-mashup-of-week",
+   "link": "https://timbroder.com/2007/10/new-google-mashup-of-week",
+   "title": "NEW! Google Mashup of the Week",
+   "pubDate": "2007-10-09T03:47:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 3306
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/picasa-get-blog",
+   "link": "https://timbroder.com/2007/10/picasa-get-blog",
+   "title": "Picasa gets a blog!",
+   "pubDate": "2007-10-07T15:47:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1205
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/displaying-what-you-read-in-google",
+   "link": "https://timbroder.com/2007/10/displaying-what-you-read-in-google",
+   "title": "Displaying what you read from Google Reader",
+   "pubDate": "2007-10-05T02:04:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 22348
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/comments-turned-on",
+   "link": "https://timbroder.com/2007/10/comments-turned-on",
+   "title": "Comments turned on",
+   "pubDate": "2007-10-03T23:10:00.000Z",
+   "descriptionLength": 103,
+   "contentLength": 110
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds",
+   "link": "https://timbroder.com/2007/10/howto-use-yahoo-pipe-to-filter-feeds",
+   "title": "HOWTO: Use a Yahoo Pipe to filter feeds",
+   "pubDate": "2007-10-03T22:59:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2873
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/problogger-birthday-bash-54000-in",
+   "link": "https://timbroder.com/2007/10/problogger-birthday-bash-54000-in",
+   "title": "ProBlogger Birthday Bash: $54,000 in prizes!",
+   "pubDate": "2007-10-03T15:53:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1437
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-apps-september-recap",
+   "link": "https://timbroder.com/2007/10/google-apps-september-recap",
+   "title": "Google Apps September recap",
+   "pubDate": "2007-10-02T23:28:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1086
+  },
+  {
+   "guid": "https://timbroder.com/2007/10/google-streetview-going-global",
+   "link": "https://timbroder.com/2007/10/google-streetview-going-global",
+   "title": "Google StreetView Going Global?",
+   "pubDate": "2007-10-01T15:41:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 1106
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/by-power-of-grayskull-i-mean-google",
+   "link": "https://timbroder.com/2007/09/by-power-of-grayskull-i-mean-google",
+   "title": "By the Power of Grayskull.... I mean Google",
+   "pubDate": "2007-09-30T15:10:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 1685
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/ubuntu-gutsy-goes-beta",
+   "link": "https://timbroder.com/2007/09/ubuntu-gutsy-goes-beta",
+   "title": "Ubuntu Gutsy Goes Beta",
+   "pubDate": "2007-09-30T04:59:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 583
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/google-developer-podcast-ep-9-quickcap",
+   "link": "https://timbroder.com/2007/09/google-developer-podcast-ep-9-quickcap",
+   "title": "Google Developer Podcast Ep 9 QuickCap",
+   "pubDate": "2007-09-27T23:36:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1807
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/google-developer-podcast-ep-8-summary",
+   "link": "https://timbroder.com/2007/09/google-developer-podcast-ep-8-summary",
+   "title": "Google Developer Podcast Ep 8 Summary",
+   "pubDate": "2007-09-25T03:24:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 3215
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/cangooglehearmecom-beta-starts",
+   "link": "https://timbroder.com/2007/09/cangooglehearmecom-beta-starts",
+   "title": "CanGoogleHearMe.com beta starts",
+   "pubDate": "2007-09-24T12:10:00.000Z",
+   "descriptionLength": 132,
+   "contentLength": 326
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/bring-on-gdrive",
+   "link": "https://timbroder.com/2007/09/bring-on-gdrive",
+   "title": "Bring on the GDrive!",
+   "pubDate": "2007-09-20T01:07:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 6648
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/using-blogger-and-feedburner-sitemaps",
+   "link": "https://timbroder.com/2007/09/using-blogger-and-feedburner-sitemaps",
+   "title": "Using Blogger and Feedburner Sitemaps in Webmaster Tools",
+   "pubDate": "2007-09-20T00:20:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 2286
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/google-books-my-library-vs-librarything",
+   "link": "https://timbroder.com/2007/09/google-books-my-library-vs-librarything",
+   "title": "Google Books “My Library” Vs. LibraryThing vs. Shelfari",
+   "pubDate": "2007-09-19T02:11:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 6321
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/rest-in-peace-robert-jordan",
+   "link": "https://timbroder.com/2007/09/rest-in-peace-robert-jordan",
+   "title": "Rest in Peace Robert Jordan",
+   "pubDate": "2007-09-18T10:55:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1033
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/google-acquires-postini",
+   "link": "https://timbroder.com/2007/09/google-acquires-postini",
+   "title": "Google acquires Postini",
+   "pubDate": "2007-09-16T17:31:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 973
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/gme-914-feature-release",
+   "link": "https://timbroder.com/2007/09/gme-914-feature-release",
+   "title": "GME 9/14 Feature Release",
+   "pubDate": "2007-09-16T17:21:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 934
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/playing-halo-3-on-imax",
+   "link": "https://timbroder.com/2007/09/playing-halo-3-on-imax",
+   "title": "Playing Halo 3 on IMAX!",
+   "pubDate": "2007-09-16T16:12:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1542
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/slight-delay-in-next-howto",
+   "link": "https://timbroder.com/2007/09/slight-delay-in-next-howto",
+   "title": "Slight delay in next HOWTO",
+   "pubDate": "2007-09-13T11:30:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1073
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/last-week-recap",
+   "link": "https://timbroder.com/2007/09/last-week-recap",
+   "title": "Last week recap",
+   "pubDate": "2007-09-12T01:24:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 2164
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/back-in-ny",
+   "link": "https://timbroder.com/2007/09/back-in-ny",
+   "title": "Back in NY!",
+   "pubDate": "2007-09-12T00:57:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 737
+  },
+  {
+   "guid": "https://timbroder.com/2007/09/google-reader-adds-search-box",
+   "link": "https://timbroder.com/2007/09/google-reader-adds-search-box",
+   "title": "Google Reader adds Search Box!!",
+   "pubDate": "2007-09-06T18:20:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 988
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/gpowerednet-update-diggs-and-howto-list",
+   "link": "https://timbroder.com/2007/08/gpowerednet-update-diggs-and-howto-list",
+   "title": "gPowered.net update: Diggs and HOWTO list",
+   "pubDate": "2007-08-31T23:50:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 276
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/howto-yui-tabview",
+   "link": "https://timbroder.com/2007/08/howto-yui-tabview",
+   "title": "HOWTO: YUI Tabview",
+   "pubDate": "2007-08-31T23:25:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 13959
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/vacation",
+   "link": "https://timbroder.com/2007/08/vacation",
+   "title": "Vacation!",
+   "pubDate": "2007-08-30T20:21:00.000Z",
+   "descriptionLength": 133,
+   "contentLength": 725
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/getting-numerof-diggs-from-digg",
+   "link": "https://timbroder.com/2007/08/getting-numerof-diggs-from-digg",
+   "title": "HOWTO: Getting the Numer of Diggs from Digg (Python)",
+   "pubDate": "2007-08-30T03:32:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 9548
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-newest-data-center-pics",
+   "link": "https://timbroder.com/2007/08/google-newest-data-center-pics",
+   "title": "Google's Newest Data Center [Pics]",
+   "pubDate": "2007-08-30T03:25:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 706
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/ny-state-fair-embedded-map",
+   "link": "https://timbroder.com/2007/08/ny-state-fair-embedded-map",
+   "title": "NY State Fair Embedded Map",
+   "pubDate": "2007-08-29T03:58:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 1739
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/codeless-embedded-maps",
+   "link": "https://timbroder.com/2007/08/codeless-embedded-maps",
+   "title": "Codeless Embedded Maps",
+   "pubDate": "2007-08-29T03:42:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 464
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/programmable-web-hits-500-apis",
+   "link": "https://timbroder.com/2007/08/programmable-web-hits-500-apis",
+   "title": "Programmable Web hits 500 API's!",
+   "pubDate": "2007-08-29T03:32:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 1113
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/old-google-design-back",
+   "link": "https://timbroder.com/2007/08/old-google-design-back",
+   "title": "Old Google Design back?",
+   "pubDate": "2007-08-29T03:29:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 373
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/webmaster-tools-adds",
+   "link": "https://timbroder.com/2007/08/webmaster-tools-adds",
+   "title": "Webmaster tools adds Internationalization support",
+   "pubDate": "2007-08-29T03:27:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 328
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-is-not-working-on-desktop-os-for",
+   "link": "https://timbroder.com/2007/08/google-is-not-working-on-desktop-os-for",
+   "title": "Google is NOT working on a desktop OS for the public!!",
+   "pubDate": "2007-08-28T22:52:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 1467
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/new-digg-home-page-breaks-linux-section",
+   "link": "https://timbroder.com/2007/08/new-digg-home-page-breaks-linux-section",
+   "title": "New Digg Home Page breaks the Linux section on IE?",
+   "pubDate": "2007-08-28T17:05:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 662
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/blogger-update-video-in-post-is-out-of",
+   "link": "https://timbroder.com/2007/08/blogger-update-video-in-post-is-out-of",
+   "title": "Blogger Update: Video in post is out of beta",
+   "pubDate": "2007-08-28T02:01:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 444
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/zoho-writer-using-gears-contd",
+   "link": "https://timbroder.com/2007/08/zoho-writer-using-gears-contd",
+   "title": "Zoho Writer using Gears (cont'd)",
+   "pubDate": "2007-08-28T01:45:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 582
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-reader-api-functions",
+   "link": "https://timbroder.com/2007/08/google-reader-api-functions",
+   "title": "HOWTO: Google Reader API Functions",
+   "pubDate": "2007-08-23T02:57:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 20411
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/view-google-groups-posts-in-reader",
+   "link": "https://timbroder.com/2007/08/view-google-groups-posts-in-reader",
+   "title": "View Google Groups posts in Reader",
+   "pubDate": "2007-08-22T21:11:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 459
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/blogger-resumes-service",
+   "link": "https://timbroder.com/2007/08/blogger-resumes-service",
+   "title": "Blogger resumes service",
+   "pubDate": "2007-08-22T14:52:00.000Z",
+   "descriptionLength": 103,
+   "contentLength": 372
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-web-toolkit-14-release-candidate",
+   "link": "https://timbroder.com/2007/08/google-web-toolkit-14-release-candidate",
+   "title": "Google Web Toolkit 1.4 Release Candidate 2",
+   "pubDate": "2007-08-22T03:47:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 713
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-mashup-editor-blog-new-tutorial",
+   "link": "https://timbroder.com/2007/08/google-mashup-editor-blog-new-tutorial",
+   "title": "Google Mashup Editor Blog: New Tutorial: Using Picasa Web Album Feeds in GME",
+   "pubDate": "2007-08-22T03:34:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 423
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/gadgets-now-on-google-calendar",
+   "link": "https://timbroder.com/2007/08/gadgets-now-on-google-calendar",
+   "title": "Gadgets now on Google Calendar!",
+   "pubDate": "2007-08-22T02:52:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 735
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-get-in-gear",
+   "link": "https://timbroder.com/2007/08/google-get-in-gear",
+   "title": "C'mon Google! Get in Gear!!",
+   "pubDate": "2007-08-22T02:34:00.000Z",
+   "descriptionLength": 137,
+   "contentLength": 1703
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/my-current-fav-google-map-mashups",
+   "link": "https://timbroder.com/2007/08/my-current-fav-google-map-mashups",
+   "title": "My current fav Google Map Mashups",
+   "pubDate": "2007-08-18T23:18:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2405
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/site-update-post-list-and-links-section",
+   "link": "https://timbroder.com/2007/08/site-update-post-list-and-links-section",
+   "title": "Site Update: Post list and Links section",
+   "pubDate": "2007-08-11T21:43:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 502
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/howto-pulling-google-bookmarks-with",
+   "link": "https://timbroder.com/2007/08/howto-pulling-google-bookmarks-with",
+   "title": "HOWTO: Pulling Google Bookmarks with Python",
+   "pubDate": "2007-08-11T21:22:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 4483
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/howto-getting-list-of-post-titles-from",
+   "link": "https://timbroder.com/2007/08/howto-getting-list-of-post-titles-from",
+   "title": "HOWTO: Getting a list of post titles from blogger (Python)",
+   "pubDate": "2007-08-11T18:25:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 4612
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/quick-docs-api-example-python",
+   "link": "https://timbroder.com/2007/08/quick-docs-api-example-python",
+   "title": "Quick Docs Api Example (python)",
+   "pubDate": "2007-08-10T03:04:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 11211
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/new-documents-list-api",
+   "link": "https://timbroder.com/2007/08/new-documents-list-api",
+   "title": "New Documents List API",
+   "pubDate": "2007-08-06T23:46:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 440
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/posting-to-blogger-from-google-docs",
+   "link": "https://timbroder.com/2007/08/posting-to-blogger-from-google-docs",
+   "title": "Posting to Blogger from Google Docs & Spreadsheets",
+   "pubDate": "2007-08-06T01:17:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 927
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/howto-displaying-blogger-feeds-with-php",
+   "link": "https://timbroder.com/2007/08/howto-displaying-blogger-feeds-with-php",
+   "title": "HOWTO: Displaying Blogger feeds with PHP",
+   "pubDate": "2007-08-05T22:44:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 46441
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/google-code-updates-google-developer",
+   "link": "https://timbroder.com/2007/08/google-code-updates-google-developer",
+   "title": "First Google Gadget",
+   "pubDate": "2007-08-04T22:48:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 18750
+  },
+  {
+   "guid": "https://timbroder.com/2007/08/new-calendar-api-features",
+   "link": "https://timbroder.com/2007/08/new-calendar-api-features",
+   "title": "New Calendar API features",
+   "pubDate": "2007-08-03T02:45:00.000Z",
+   "descriptionLength": 141,
+   "contentLength": 710
+  },
+  {
+   "guid": "https://timbroder.com/2007/07/domain",
+   "link": "https://timbroder.com/2007/07/domain",
+   "title": "domain!",
+   "pubDate": "2007-07-31T01:31:00.000Z",
+   "descriptionLength": 138,
+   "contentLength": 260
+  },
+  {
+   "guid": "https://timbroder.com/2007/07/picasa-web-api-updates",
+   "link": "https://timbroder.com/2007/07/picasa-web-api-updates",
+   "title": "Picasa Web Api updates",
+   "pubDate": "2007-07-24T02:17:00.000Z",
+   "descriptionLength": 136,
+   "contentLength": 1025
+  },
+  {
+   "guid": "https://timbroder.com/2007/07/howto-post-code",
+   "link": "https://timbroder.com/2007/07/howto-post-code",
+   "title": "HOWTO: post code",
+   "pubDate": "2007-07-24T01:52:00.000Z",
+   "descriptionLength": 139,
+   "contentLength": 3915
+  },
+  {
+   "guid": "https://timbroder.com/2007/07/howto-get-blogger-feeds-using-python",
+   "link": "https://timbroder.com/2007/07/howto-get-blogger-feeds-using-python",
+   "title": "HOWTO: Displaying Blogger feeds with Python",
+   "pubDate": "2007-07-19T03:07:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 39834
+  },
+  {
+   "guid": "https://timbroder.com/2007/07/begining",
+   "link": "https://timbroder.com/2007/07/begining",
+   "title": "A begining",
+   "pubDate": "2007-07-15T18:33:00.000Z",
+   "descriptionLength": 140,
+   "contentLength": 2421
+  }
+ ]
+}

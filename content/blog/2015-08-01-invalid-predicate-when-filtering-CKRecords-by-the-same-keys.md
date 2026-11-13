@@ -1,7 +1,10 @@
 ---
 layout: post
 title: Invalid predicate when filtering CKRecords by the same keys?
+slug: invalid-predicate-when-filtering-ckrecords-by-the-same-keys
 date: 2015-08-01 20:19
+redirect_from:
+  - "/2015/08/invalid-predicate-when-filtering-CKRecords-by-the-same-keys/"
 ---
 
 Originally posted on [StackOverflow](http://stackoverflow.com/questions/31441807/invalid-predicate-when-filtering-ckrecords-by-the-same-keys "StackOverflow")
@@ -10,7 +13,7 @@ I have a CKRecord type "Follow" which stores the user's ID and the ID of a frien
 
 Screenshot of record definition in CloudKit
 
-![](https://farm1.staticflickr.com/313/20186044436_b4629376af_z_d.jpg)
+![](/images/missing-image.svg)
 
 I want to query the Follow records to confirm that two users follow each other and are in fact, friends.
 

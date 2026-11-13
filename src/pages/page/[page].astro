@@ -1,0 +1,24 @@
+---
+import ListHead from '../../components/ListHead.astro';
+import PostList from '../../components/PostList.astro';
+import Base from '../../layouts/Base.astro';
+import { listPages, listTitle, type ListPage } from '../../lib/lists.ts';
+import { getPosts } from '../../lib/posts.ts';
+
+export async function getStaticPaths() {
+  return listPages('/', await getPosts())
+    .filter((list) => list.page > 1)
+    .map((list) => ({ params: { page: String(list.page) }, props: { list } }));
+}
+
+interface Props {
+  list: ListPage;
+}
+
+const { list } = Astro.props;
+---
+
+<Base title={listTitle('TimBroder.com Posts', list.page)} home>
+  <ListHead slot="head" list={list} />
+  <PostList list={list} />
+</Base>

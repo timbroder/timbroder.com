@@ -1,0 +1,16 @@
+---
+/** Story wrapper: the body of a sample Contentful post, as a post page shows it. */
+import { sampleBody } from '../../fixtures/contentful.ts';
+import Prose from '../Prose.astro';
+
+interface Props {
+  /** Which sample post to show. */
+  slug: string;
+}
+
+const html = await sampleBody(Astro.props.slug);
+---
+
+<Prose>
+  <section set:html={html} />
+</Prose>

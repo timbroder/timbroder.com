@@ -1,0 +1,35 @@
+---
+import LinkPostBanner from '../../../components/LinkPostBanner.astro';
+import PostHeader from '../../../components/PostHeader.astro';
+import PostMeta from '../../../components/PostMeta.astro';
+import Prose from '../../../components/Prose.astro';
+import Base from '../../../layouts/Base.astro';
+import type { Post } from '../../../lib/post-model.ts';
+import { getPosts } from '../../../lib/posts.ts';
+import { articleData, scriptJson } from '../../../lib/seo.ts';
+
+export async function getStaticPaths() {
+  return (await getPosts()).map((post) => {
+    const [year, month, slug] = post.url.split('/').filter(Boolean);
+    return { params: { year, month, slug }, props: { post } };
+  });
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<Base title={post.title} description={post.description} image={post.image}>
+  <script is:inline slot="head" type="application/ld+json" set:html={scriptJson(articleData(post))} />
+  <article itemscope itemtype="http://schema.org/Article">
+    <PostHeader title={post.title} date={post.date} />
+    <Prose class="mt-8">
+      {post.link && <LinkPostBanner href={post.link} />}
+      <section itemprop="articleBody" set:html={post.html} />
+    </Prose>
+    <PostMeta tags={post.tags} category={post.category} />
+  </article>
+</Base>

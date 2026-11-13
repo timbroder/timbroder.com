@@ -1,0 +1,621 @@
+# Gatsby to Astro migration plan
+
+This plan replaces the earlier ones in #96, #97, #98, #118 and #120. It starts fresh: nothing is carried over from the earlier Astro attempt.
+
+The site moves from Gatsby 5 to Astro 7 and keeps its look. Every stage adds automated tests, and the live Gatsby site is the reference those tests compare against.
+
+Work lands as small PRs into the `astro` branch. `main` keeps serving Gatsby until one final cutover PR.
+
+## Contents
+
+1. [What the live site does today](#1-what-the-live-site-does-today)
+2. [Decisions](#2-decisions)
+3. [What the old plans got wrong](#3-what-the-old-plans-got-wrong)
+4. [Technical decisions](#4-technical-decisions)
+5. [Requirements and how each is tested](#5-requirements-and-how-each-is-tested)
+6. [Test layers and CI](#6-test-layers-and-ci)
+7. [Astrobook](#7-astrobook)
+8. [Stages](#8-stages)
+9. [Cutover and rollback](#9-cutover-and-rollback)
+10. [Things to prove early](#10-things-to-prove-early)
+11. [What I need from Tim](#11-what-i-need-from-tim)
+12. [Out of scope](#12-out-of-scope)
+
+## 1. What the live site does today
+
+Checked against timbroder.com and this repo on 2026-11-12.
+
+A new post went live later that day. The figures below are from the first check; the baseline committed in `tests/baseline/` (771 URLs, 519 posts) is the source of truth for counts.
+
+### URLs
+
+The live sitemap lists 768 URLs.
+
+| Kind | Count | Pattern |
+|---|---|---|
+| Posts | 518 | `/YYYY/MM/slug/` |
+| Home and its pages | 26 | `/`, `/page/2/` to `/page/26/` |
+| Tags | 190 | `/tag/x/`, plus 2 paged (`/tag/x/page/2/`) |
+| Categories | 27 | `/category/x/`, plus 17 paged |
+| Markdown pages | 5 | `/apps/`, `/podcasts/`, `/podcasts-i-listen-to/`, `/projects/`, `/talks/` |
+| About | 1 | `/about/` |
+| Gatsby starter leftover | 1 | `/using-typescript/` |
+
+- Netlify redirects a path without a trailing slash to the same path with one, and an uppercase path to its lowercase form.
+- 394 post URLs come from `slug:` in frontmatter. The other 124 come from the filename.
+- 83 post URLs are untidy: 57 contain punctuation, capitals or curly quotes, 25 contain triple hyphens, and 1 contains an underscore.
+- Two posts have no `date:`, so Gatsby files them under the month of the latest build. Today they are at `/2026/11/fussy-coffee/` and `/2026/11/games-i-was-addicted-to-in-2014/`, and they move every month.
+- Year and month in a post URL match UTC. Recomputing all 518 URLs from the files with UTC dates reproduces the live sitemap exactly.
+
+### Content
+
+- There are 519 post files (492 `.markdown`, 27 `.md`). One is a draft.
+- Three more post files have no extension, so Gatsby has never published them.
+- Contentful is wired in but supplies none of the 518 live posts.
+- `link:` appears in 492 posts, but 334 are empty strings and 2 are the literal text `None`. About 155 are real link posts.
+- Tag and category URLs use lodash `kebabCase`, which splits on capitals and digits: `/tag/core-data/`, `/tag/twitter-2-g-talk/`, `/tag/gpowered-net/`.
+- About 20 posts contain raw HTML (`<div>`, `<script>`, `<object>`, `<iframe>`, `<table>`), and 8 contain leftover Liquid tags (`{% ... %}`).
+- Code fences use inconsistent language names (`PHP`, `HTML`, `XML`, `C`) and a few typos (`swiftlet`, `bashalias`).
+- 32 links in post bodies point at other posts on this site.
+
+### Custom features
+
+These are the behaviours built on top of the Gatsby starter. All of them carry over.
+
+- **Link posts.** A post with a real `link:` shows "Check out the original article." above its body, linking to that URL in a new tab. Its card on list pages says "Read commentary"; other cards say "Read article". The card links to the post on this site, not to the external article.
+- **Post cards.** Title, date, "in {category}", description and the call to action above.
+- **Post pages.** Date, headline and body, then tag pills that link to tag pages and a "Category: X" link.
+- **Headlines.** The home page shows the site title. Tag pages show "Tag: X" and category pages show "Category: X". Paged lists add "- Page N" to the page title.
+- **Navigation.** Five items, in the header and the footer. "Posts" is highlighted on the home page and on every post, but not on paged lists, tag pages or category pages.
+- **Footer.** "© 2007 - {current year} Tim Broder. All rights reserved."
+- **Head links.** Every page advertises the RSS feed at `/feed`. The home page and its paged lists also carry the Mastodon verification link (`rel="me"`) and the Feedburner link. All paged lists carry `rel="prev"` and `rel="next"` links between pages.
+- **About page.** Its own title and description, the tilted avatar and nine social links that open in a new tab.
+- **404 page.** "404: Not Found", with the "the sadness" line.
+- **AI attribution.** Two posts carry `ai_assisted: true` in frontmatter. No template reads it; the attribution line is in the post body.
+- **`podcasts.py`.** A standalone script that turns an Overcast export into a markdown list. It is not part of the build.
+
+Previous/next links between posts are not on the live site. The post template computes them and never renders them.
+
+### Images
+
+Stage 5 looked at every image and corrected the first count. These are the facts.
+
+- 17 posts show 41 images kept in the repo, under `content/blog/images/`. Gatsby's image plugin resizes them and serves the copies from `/static/`. The addresses the posts use, `/images/...`, return 404, and so do 18 links to full-size files.
+- 90 posts and pages show 213 distinct images from other hosts, mostly old Picasa, Blogger and Flickr addresses. About 30 of them do not show at all today: their address is broken (see the quirks below).
+- `content/blog/images/` also held 267 files in folders named after posts: earlier downloads of those remote images, never wired into the posts. 118 of them were not pictures. The most common file, saved 71 times, is the grey warning triangle Google sends in place of a picture it no longer has; others are saved error pages and 1 by 1 tracking pixels.
+
+### Feed, SEO and scripts
+
+- The feed is at `/feed`. It has 515 items with full post content, is about 2 MB, and is served as `text/plain`.
+- Feedburner (`feeds.feedburner.com/timbroder`) mirrors `/feed` and is current.
+- Feed item links and guids have no trailing slash, for example `https://timbroder.com/2026/11/kobo-audiobook-sync`.
+- The config redirects `/feed` to `/atom_feedburner.xml`, which returns 404. The redirect has no effect.
+- Descriptions come from `description:` in frontmatter, or the first 512 characters of the post.
+- Dates display as `MMMM DD, YYYY`.
+- Google Analytics (GA4, `G-L8N53HMK1R`) is present on live pages.
+- The current components have no client-side interactivity.
+
+## 2. Decisions
+
+Made with Tim on 2026-11-12.
+
+| Topic | Decision |
+|---|---|
+| Framework | Astro 7, static output, hosted on Netlify |
+| Contentful | Keep it and make it work. Markdown wins when both sources produce the same URL. |
+| Contentful tests | Saved sample responses in the repo. One manual check against the real space before cutover. |
+| Post URLs | Clean up all untidy slugs with one rule: lowercase letters, digits and single hyphens. Each old URL gets a 301 to the new one. |
+| Feed | Stays at `/feed`, with full content of every post |
+| Design | Match the live site, with three exceptions. Code blocks move to Astro's built-in highlighter and are reviewed by eye. Text that was too faint is darker. Long words and rows of tags wrap, so no page scrolls sideways. See "Where the design differs from the live site" below. |
+| Component library | Astrobook, built into the site and public at `/astrobook/` |
+| CI | GitHub Actions runs the full suite when code changes. Changes that only touch content skip it. |
+| Rollout | Staged PRs into the `astro` branch, then one cutover PR to `main` |
+| Local images | Fix the 20 posts whose images 404 |
+| Remote images | Download each one into the repo and point the post at the local copy. If it is gone, use a funny "missing image" placeholder. |
+| Google Analytics | Keep |
+| Previous/next links on posts | Not added. The live site never shows them, so nothing visible changes; the unused code goes away with Gatsby. |
+| Three never-published posts | Leave unpublished |
+| Docker files | Drop |
+
+### Defaults I am assuming
+
+Say so if any of these is wrong.
+
+- The slug rule changes 84 posts, not the 82 we discussed: it also catches one with an underscore and one ending in ` (1)`.
+- The two undated posts are pinned to the dates in their filenames: `/2015/07/fussy-coffee/` and `/2015/03/games-i-was-addicted-to-in-2014/`.
+- `/using-typescript/` is removed and redirects to `/`.
+- The two posts with `link: None` stop showing a broken "original article" link.
+- The web app manifest stays, with the name fixed to "Tim Broder .com" and the avatar as its icon. Today it says "Gatsby Starter Blog".
+- Before using the placeholder for a dead remote image, I try the Internet Archive's copy.
+- Legacy frontmatter fields (`wordpress_id`, `dsq_thread_id`, `author`, `comments`) stay in the old posts untouched.
+- Lists are split into real pages of 20 posts. On the live site every page of a list shows the whole list (see below).
+- The two posts with an empty title get the title already in their frontmatter. `heymamma-2` has it quoted so YAML reads it. `games-i-was-addicted-to-in-2014` had four spaces before its opening `---`, so none of its frontmatter was ever read; removing them also gives it back its date, tags and link.
+- Tags, categories, link posts and the five markdown pages all stay.
+- The About page stays a hand-built page.
+
+### Live-site quirks and what the new site does
+
+The baseline capture in stage 1 found these. Each one becomes an expected difference in the tests.
+
+| On the live site | On the new site |
+|---|---|
+| Every page of a list shows the whole list: `/page/2/` has the same 516 cards as `/`. Tag and category pages do the same. | Each page shows its own 20 posts. The page URLs and page counts stay the same. |
+| Three posts are missing from every list and from the feed, though their pages exist. They lack `layout:` or `date:`. | They appear in lists and in the feed like any other post. |
+| Two posts have an empty title; one page title reads "null". | Both get a title. |
+| `/tag//` exists, titled "Tag: null", because two posts have an empty tag. | Empty tags are ignored and the page is gone. |
+| `/tag/apps/` has no cards, because its only post is one of the three unlisted ones. | It shows that post. |
+| The 404 page highlights "Posts" in the navigation. | Nothing is highlighted. |
+| Some card descriptions show raw markdown where a post starts with an image. | Descriptions are plain text. |
+| A tag or category written two ways ("jira" and "Jira") has one page, which only lists the posts using the older spelling. This affects `/tag/jira/` and `/category/productivity/`. | The page lists the posts using either spelling. |
+| Posts published on the same day can be out of order, because dates are sorted as text. | Posts are sorted by their actual time. |
+| 54 posts show links and pictures as raw markdown, like `[here](http://example.com/a- b)`. The old exports wrapped long lines, also in the middle of an address, and an address with a break in it is not a link. | The addresses are whole again (131 of them), so the links work and the pictures show. |
+| A wrapped line can fall out of its list item or quote. Where a list item or quote wraps, the live site ends it and starts a paragraph, so a quote can break off in mid-sentence. | The line stays in its item or quote: 65 lines in 52 posts, and more in the posts above. A line that starts something new (a label such as "Cons", a picture, the paragraph after a recipe's ingredients) stays on its own, as on the live site. |
+| A picture kept on the site links to a resized copy under `/static/`, and gets its file name as alt text when it has none. Both come from Gatsby's image plugin. | The picture is shown as it is, with the alt text the post gives it. It links to its full-size file only where the post says so. |
+| Code fences with a language in capitals (`PHP`, `HTML`) are not highlighted. | The language names are in lower case (54 fences), so they are. |
+| Seven posts have code blocks or pictures mangled by the export: a fence that never closes and turns the rest of the post into code, screenshots indented into code blocks, a language name run together with the code. | Repaired by hand. Each is listed with its reason in `tests/lib/expected-content.ts`. |
+
+### Where the design differs from the live site
+
+Stage 4 found two problems in the live design. Tim asked for both to be fixed during the migration, not after it. These, and code blocks, are the only places the new design differs on purpose.
+
+| On the live site | On the new site |
+|---|---|
+| Dates, categories and the copyright line are a grey (zinc-400) with 2.6:1 contrast on white. Accessibility guidelines (WCAG AA) ask for 4.5:1. | One shade darker (zinc-500), at 4.8:1. |
+| Links, "Read article" and the current page in the header are a teal (teal-500) with 2.4:1 contrast. | Two shades darker (teal-700), at 5.4:1. Links go one shade darker again when pointed at. |
+| Code blocks use Prism's Okaidia theme. | Code blocks use Shiki's Monokai, the closest match. Five of its colours were below 4.5:1 on the dark background (keywords, comments and errors among them); each is lightened just enough to pass. The whole theme is checked, not only the colours used today. |
+| A long web address or file path cannot wrap, in a card summary or in a post, so the page scrolls sideways. Built the same way, the new site had 98 such pages on a phone and 4 on a desktop. | Long words wrap. No page scrolls sideways. |
+| A post with many tags scrolls sideways on a phone, because the row of tags cannot wrap. | The tags wrap, and the category moves below them when there is no room beside. |
+| A post written in Contentful has its own look: larger, bolder headings that sit close to the text above, and lists indented further. | It looks like a markdown post. |
+
+## 3. What the old plans got wrong
+
+- **#96 and #97** are questionnaires. They record no decisions.
+- **#98** plans a Gatsby dependency upgrade, which the migration makes unnecessary.
+- **#118** is a useful feature audit, but it was never checked against the live site:
+  - It counts "about 25" markdown posts. There are 519.
+  - It treats Contentful as an active source. Contentful supplies no live posts.
+  - It has no URL inventory, so nothing could prove that URLs survived.
+  - It misses the two posts whose URLs move every month.
+  - It misses the 20 posts with broken images.
+  - It does not record how tag URLs are built. A simpler slug function would have changed `/tag/core-data/` to `/tag/coredata/`.
+  - It does not record that the feed carries full content, or that item guids must stay stable.
+  - Its testing is manual spot checks.
+  - It has no component library.
+
+## 4. Technical decisions
+
+Each one has a reason. Where a choice depends on something I have not run yet, section 10 lists it.
+
+### Platform
+
+1. **Astro 7 with static output and no adapter.** Nothing on the site needs a server. Astro 7 needs Node 22.23.4 or later, so `.nvmrc` moves up from 22.10.0.
+2. **`trailingSlash: 'always'`.** This matches today's URLs.
+3. **Components are plain `.astro` files with no client framework.** The current components have no interactivity, so pages ship no JavaScript apart from Google Analytics and structured data.
+4. **Tailwind 4, loading the existing `tailwind.config.js` through `@config`.** This keeps the font scale and the typography settings as they are. The visual tests catch any change in Tailwind's defaults.
+
+### Content model
+
+5. **Content stays in `content/blog/` and `content/pages/`.** Astro's loader can read from there, though only `.md` files, so the `.markdown` files were renamed. This keeps history intact, lets new posts on `main` merge cleanly into `astro`, and makes "content only" easy to define for CI.
+6. **One `Post` shape with two loaders behind it.** A markdown loader and a Contentful loader both produce `Post`. Pages, feeds and tests only see `Post`, so nothing downstream knows where a post came from.
+7. **A strict schema for posts.** A post needs a title, a date and a clean slug. `link` is a valid URL or absent; empty strings and `None` become absent. Tags default to an empty list. `ai_assisted`, `ai_model` and the legacy fields are accepted and passed through.
+8. **Descriptions follow today's rule:** `description:` from frontmatter, else the first 512 characters of text.
+
+### URLs and redirects
+
+9. **URL rules are small pure functions, using UTC.** That makes them easy to test against all 518 live URLs.
+10. **Clean slugs live in frontmatter.** Each re-slugged post gets `slug: new-slug` and `redirect_from: [old URL]`. New posts must have a clean slug, so untidy URLs cannot come back.
+11. **Slug cleanup goes through a review file.** A script writes `slug-cleanup.csv` with each old URL and proposed new slug, and a second script applies it to the frontmatter. The file and both scripts stay until cutover, so a slug can still be changed by editing the file and running `node scripts/slugs/apply.ts` again.
+12. **Redirects are a generated Netlify `_redirects` file.** The build collects every `redirect_from` plus a short fixed list, and writes each old URL in the forms Netlify needs (see section 10). Astro's own `redirects` setting is not used, because without an adapter it writes HTML refresh pages, not real 301s.
+13. **The two formerly undated posts get a wildcard redirect.** `/:year/:month/fussy-coffee/` goes to `/2015/07/fussy-coffee/`, which covers every month they have lived at.
+14. **Tag and category slugs use lodash `kebabCase` itself.** Reimplementing it would change URLs.
+15. **Paged list URLs are built by hand as `/page/N/`.** Astro's `paginate()` would produce `/N/`.
+16. **Links between posts are rewritten to the new URLs** when a target is re-slugged.
+
+### Rendering
+
+17. **The markdown processor is Sätteri, Astro 7's default.** Stage 2 ran it and the older remark pipeline over every post and compared the output to the live site. They tied, so the default stays. Smart punctuation is off, because the Gatsby site did not convert quotes or dashes.
+18. **Code highlighting uses Shiki with the `monokai` theme and CSS line numbers.** This is the closest match to today's Prism Okaidia. Five of the theme's colours are lightened to reach 4.5:1 contrast (`src/lib/code-theme.ts`). Fence language names are fixed in the content.
+19. **Images are served from stable URLs under `/images/`, not through Astro's image pipeline.** The feed carries full post HTML and needs image URLs that never change, and 17 posts already use this form. The cost is no automatic resizing. A picture kept on the site is shown in the middle of the column and at most 630 pixels wide, as Gatsby's image plugin showed it.
+20. **Image files live in `public/images/`.** The old posts' remote images are in `public/images/remote/<post>/`. `content/image-sources.json` records each original address, its local path, how often the posts show it, and where the copy came from: the original address, an earlier download in the repo, the Internet Archive, the placeholder, or removed (a tracking pixel or a feed service's button, which was never a picture). For an image that shows the placeholder it also records which image of the post it is, so that the picture can be put back if it turns up: `RECOVER_MISSING_IMAGES.md` describes how, and `scripts/images/recover.ts` does it.
+
+### Feed and SEO
+
+21. **The feed is an endpoint at `/feed`**, with a Netlify header so it is served as RSS and not plain text.
+22. **Feed guids never change.** A post's guid is the address it had on the live site, in the form the live feed uses: without a trailing slash for a markdown post, with one for a post from Contentful. A re-slugged post keeps its old address as its guid and gets the new one as its link. Otherwise every feed reader would show 83 old posts as new.
+23. **The feed includes every published post.** That is 519, up from 516; the live feed drops posts that lack `layout:`.
+    - Every address inside a post is made absolute, so pictures and links work in a feed reader.
+    - An item links to the post's address with its trailing slash, which saves the reader a redirect.
+    - An item's description is the post's summary (up to 512 characters). The live feed cut it at 140.
+    - The feed's date is the newest post's, so two builds of the same content give the same file.
+24. **Sitemap file names stay `sitemap-index.xml` and `sitemap-0.xml`**, so `robots.txt` needs no change. `/astrobook/` and the 404 page are excluded.
+
+Three more, decided in stage 7:
+
+- **Head tags are the live site's**, value for value: title, description, canonical address, Open Graph, Twitter, the structured data on posts, and the links to the feed, Feedburner, the manifest and Mastodon. A description is written on one line; the live site kept the line breaks of the post in it.
+- **Google Analytics only runs on the real site.** Every page carries one small script that loads Google's code when the page is at `timbroder.com`. A deploy preview, a local build or a test run is no longer counted as a visit. The live site counted them.
+- **The icons are the avatar.** The live site's tab icon and manifest icons are the Gatsby logo, left over from the starter. The manifest is named "Tim Broder .com" and served as a manifest, not as a download.
+
+### Contentful
+
+25. **The loader reads saved samples when `CONTENTFUL_FIXTURES` names their file**, and the real API otherwise. The samples are one saved answer in the API's own format, `src/fixtures/contentful/entries.json`. The loader talks to the Content Delivery API directly, with no client library, so a sample and a real answer take exactly the same path.
+26. **A production build fails if the Contentful credentials are missing.** A silent fallback would quietly drop posts. A production build also refuses the samples. Anywhere else, a build without credentials leaves the Contentful posts out and says so in its log. Every page says what its build read, in `<meta name="build-contentful">` (`api: 2 posts`, `samples: 3 posts` or `off`), so a deployed build can be asked.
+27. **Rich text renders to the same HTML as markdown, with the same code highlighter.** The same markup means one set of styles and one summary rule cover both sources. Images embedded in Contentful posts stay on Contentful's CDN; this is the one allowed exception to "no remote images".
+    - A picture's alt text is the asset's title. Its description, when it has one, is shown as a caption. A picture wider than 1600 pixels is asked for at 1600.
+    - A code block is a `codeBlock` entry embedded in the text. Its `showLineNumbers` field can turn the line numbers off.
+    - A link to another blog post entry becomes a link to that post's URL on this site.
+    - **Anything the site cannot show stops the build**, with a message naming the post: an embedded entry or picture that is not published, an entry of another type, a kind of block or text style added to Contentful later. Leaving it out quietly would publish a post with a hole in it.
+    - A Contentful post follows the rules of a markdown post: a title, a date, a clean slug, the month of its URL in UTC. Every problem in every entry is reported at once.
+
+### Build-time checks
+
+28. **Every build validates content,** including Netlify builds triggered by a new post or by Contentful. The build fails on a bad schema, two posts with the same URL, a redirect whose target does not exist, or a local image reference with no file (added in stage 5). Netlify then keeps the previous deploy live.
+
+## 5. Requirements and how each is tested
+
+"Baseline" means data captured from the live Gatsby site in stage 1. The layers are explained in section 6.
+
+| # | Requirement | Test | Layer |
+|---|---|---|---|
+| R1 | Every live URL still works | Each baseline URL is either a built page or a redirect whose target is a built page. The one exception is `/tag//`. | Build output |
+| R2 | Old URLs redirect | Every redirect returns 301 to the right place, tried both raw and percent-encoded: the 83 re-slugged posts, the two pinned posts and `/using-typescript/` | Deploy preview |
+| R3 | No redirect chains or loops | Every redirect target is a real page, never another redirect | Build output |
+| R4 | Tag and category URLs unchanged | Every baseline tag and category URL exists, apart from `/tag//`; unit tests cover `kebabCase` edge cases | Unit, build output |
+| R5 | Lists show the same posts in the same order | For every list, its pages joined together equal the baseline's order for that list, and no page has more than 20 posts | Build output |
+| R6 | Post content renders the same | For every post and markdown page: the text, headings, links, code blocks, the number of pictures and embeds, and which paragraph or list item each piece of text is in, equal the baseline. A post may differ only in the ways listed under "Differences from the baseline that are expected", and the test checks that each difference is exactly of its kind | Build output |
+| R7 | Pages look the same, and fit the screen | Each page type is opened on the live site and on the new build in the same browser, at desktop and phone width, and the two screenshots are compared. The live page is first given the intended design differences, so everything else has to match. Separately, every page is opened at both widths to check that none scrolls sideways. List pages are compared from the top, since the live ones are far longer; a post with code is compared down to its first code block. Page types: home, post, link post, post with code, post with a picture, tag, category, About, markdown page, 404, plus the pagination and the footer on their own. No post embeds a video, so there is no sample for one. | Browser |
+| R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots. Every colour in the theme has at least 4.5:1 contrast | Browser, Unit |
+| R9 | Feed is unchanged for subscribers | Valid RSS; one item per post; every baseline guid still present; full content in every item; no relative URLs | Build output |
+| R10 | Feed is reachable | `/feed` and `/feed/` return 200 with an RSS content type | Deploy preview |
+| R11 | SEO tags and head links unchanged | Title, description, canonical, Open Graph, Twitter, structured data, RSS links, the Mastodon `rel="me"` link and `rel="prev"`/`rel="next"` equal the baseline on every page | Build output |
+| R12 | Sitemap is right | Its URLs equal the built pages, minus the 404 page and `/astrobook/` | Build output |
+| R13 | Local images load | Every local image reference in the built HTML points at a file in the build | Build output, build check |
+| R14 | No remote images remain | No `<img>` in a post that existed at the migration points at another host, except Contentful's CDN. No page shows an address recorded in `image-sources.json` | Build output |
+| R15 | Dead images use the placeholder | The placeholder is shown exactly as often as `image-sources.json` says images are gone. Every other image in that file has a local copy or a reason for its removal | Build output |
+| R16 | Internal links work | Every internal link resolves to a page, a file or a redirect | Build output |
+| R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash; code is highlighted exactly as in a markdown post. The share image is checked on the post until stage 7 puts it in the page head. | Unit, build output |
+| R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview. Steps are in section 11. | Manual |
+| R19 | Google Analytics is on every page | The analytics script appears exactly once on every page outside `/astrobook/`, and not in it. Run against a stand-in for the browser, it loads Google's code on `timbroder.com` and does nothing on any other host | Build output, unit |
+| R20 | No other JavaScript ships | Pages outside `/astrobook/` contain no scripts beyond the analytics script and, on a post, its structured data | Build output |
+| R21 | Astrobook is public but not indexed | `/astrobook/` builds, has a `noindex` tag, and is absent from the sitemap | Build output |
+| R22 | Every component state has a story that renders | Each story loads without error, matches its screenshot exactly and passes accessibility checks | Browser |
+| R23 | Unpublished things stay unpublished | No page, list entry or feed item for the draft or the three unpublished files; no page at `/using-typescript/` | Build output |
+| R24 | Bad content cannot deploy | Unit tests feed the build checks a post with no date, a duplicate URL, an untidy slug and a missing image | Unit |
+| R25 | Pages are accessible | No serious accessibility violations on each page type or story, with no exceptions. Colour contrast is checked on every page, not only a sample | Browser |
+| R26 | Netlify behaviour is unchanged | Missing trailing slash redirects; unknown URL returns 404 with the custom page | Deploy preview |
+| R27 | Link posts work as today | For every post: the "original article" link is present with the right URL exactly when the baseline has one, and its card says "Read commentary" or "Read article" as in the baseline | Build output |
+| R28 | List pages carry the same details | On every list page: the headline, and each card's date, category, description and link, equal the baseline | Build output |
+| R29 | Navigation and footer unchanged | On every page: the nav items, which one is highlighted, the footer links and the copyright line equal the baseline | Build output |
+| R30 | Post details unchanged | On every post: the date, tag pills, tag links and category link equal the baseline | Build output |
+
+### Differences from the baseline that are expected
+
+Tests R6, R11 and R27 to R30 allow these, and nothing else. They live in `tests/lib/expected.ts` and `tests/lib/expected-content.ts`, with a reason for each.
+
+- Canonical URLs and links for the 83 re-slugged posts and the 2 pinned posts.
+- Image sources, which become local. Links to Gatsby's resized copies, which go.
+- Code block markup.
+- The broken "original article" link on the two `link: None` posts.
+- Everything in "Live-site quirks and what the new site does" in section 2, which includes three extra feed items.
+- Line breaks inside a description, which become spaces.
+- The description of `/apps/`, which now includes the alt text of the app icon. The live summary skipped pictures written in markdown's reference style.
+
+Three kinds of difference in post bodies came out of stage 5. The first two are checked mechanically: the test accepts a difference only if it is exactly of that kind.
+
+- **Raw markdown that now renders** (57 posts). The live text contains `[text](address)` or `![alt](address)`; the new text has the link's text, or nothing for a picture. Nothing else in the text may differ, the new link must be an address that was raw on the live site, and the number of pictures must add up.
+- **Wrapped lines kept in their list item or quote** (65 lines in 52 posts). A paragraph that follows a list item or quote on the live site is the end of that item or quote on the new one, with the same words. The number of such lines is recorded for each post.
+- **Posts repaired by hand** (12). Each has its reason next to it. They are left out of the comparison, and the test fails if one of them stops differing from the live site.
+
+The summary on a card may differ from the live site wherever the post's text is meant to: it is taken from that text.
+
+## 6. Test layers and CI
+
+### Layers
+
+1. **Build checks.** Run inside every build, on Netlify too. Described in decision 28.
+2. **Unit tests (Vitest).** Pure functions: URL rules, slug cleaning, taxonomy slugs, link handling, dates, Contentful normalisation and merging, rich text rendering, feed guids, descriptions.
+3. **Build output tests (Vitest).** Build the site, then read `dist/` and compare it to the baseline. Most requirements are tested here because it is fast and covers every page, not a sample. The Contentful test (R17) builds the site a second time with the samples, into `dist-samples/`, so that sample posts never get into the comparison with the live site.
+4. **Browser tests (Playwright).** Run against a local preview of the build: screenshots, Astrobook stories, navigation, pagination, accessibility.
+5. **Deploy preview smoke tests.** Run against the Netlify deploy preview, the only place where redirects, headers and 404 handling are real. The same suite runs against production right after cutover.
+
+### Baseline
+
+Stage 1 captures the baseline from the live site with a script that can be rerun while Gatsby is still live:
+
+- `urls.txt`: the 768 sitemap URLs.
+- `pages.json`: for every page and the 404 page, its title, meta tags, head links, structured data, heading, highlighted nav item, footer text, body text, links, image sources and counts of code blocks and embeds. For posts it also records the date, tags, category and "original article" link.
+- `lists.json`: for every list page, its headline and each card's title, date, category, description, link and call to action, in order.
+- `feed.json`: every feed item's guid, link and title.
+
+Screenshots of each page type at 1280 and 390 pixels wide are captured in stage 4, alongside the visual tests that use them.
+
+The crawl is throttled and retries, because the live site occasionally returns a transient Netlify error.
+
+### CI workflow
+
+- **Trigger:** every pull request, and every push to `main` and `astro`.
+- **`changes` job:** decides whether the change is content only. Content means files under `content/` and `public/images/`.
+- **`test` job:** runs when code changed. Installs, runs unit tests, builds, runs build output tests, runs browser tests.
+- **`gate` job:** always runs and passes when `test` passed or was skipped. This is the one check to mark as required, so a content-only PR goes green in seconds and never hangs.
+- **`smoke` job:** waits for the Netlify deploy preview to serve the commit under test, then runs the smoke tests against it. Each page carries the commit hash in a meta tag so the job knows the right build is live.
+
+### New posts and the tests
+
+**After cutover, publishing a post must never need a change to a test.**
+
+- A markdown post only touches `content/` and `public/images/`, so CI skips the tests for it. A post published in Contentful rebuilds the site on Netlify and never reaches CI.
+- The build still checks every post (decision 28). A post that breaks a rule stops the Netlify build with a message, and the site stays as it was.
+- No test that remains after cutover may depend on which posts exist. The tests that compare the build with the live Gatsby site do, and they go at cutover: the baseline tests, the browser comparison with the live site, and the list of Contentful posts (`CONTENTFUL_ON_LIVE`). The stored page screenshots that replace the browser comparison are taken of pages a new post does not change: single posts, markdown pages, the About page, the 404 page and lists of old tags. The home list is not one of them.
+- What is left can only fail on a post that has a real fault, such as a link to a page that does not exist, and it says so the next time the tests run.
+
+**Until cutover, a new post on the live site does turn CI red on the migration branches,** because those tests prove the new site equals the live one, and the live one has just changed. Nothing is edited by hand for a markdown post: `main` is merged into `astro` and the baseline is captured again. A post published in Contentful also needs one line in `CONTENTFUL_ON_LIVE`, since CI cannot read Contentful.
+
+### Screenshots
+
+- **Pages are compared with the live site directly.** Each test run opens a page on the live site and on the new build in the same browser and compares the two. Nothing is stored, so there is no stale baseline, and both sides render with the same fonts.
+- **Intended differences are applied to the live page first.** The test holds the short list of style changes from "Where the design differs from the live site" and gives them to the live page before its screenshot. Everything else still has to match.
+- **The comparison is strict enough to notice one shade of grey.** At most 100 pixels may differ in a screenshot. The pages differ by 22 at most, because the live site splits some lines of text in a way that moves a letter by a fraction of a pixel. Changing the colour of one line of small text changes about 470. The first version of this test allowed 1% of the pixels to differ, which let a change of text colour through unnoticed.
+- **Story screenshots are stored**, since stories have no live counterpart. They are taken in one pinned Playwright container, never directly on a laptop, because fonts render differently on macOS and Linux. A unit test keeps the container's version in step with the installed Playwright. A story has to match its screenshot exactly.
+- **To accept a deliberate visual change,** run `npm run build`, then `npm run test:browser:linux -- stories --update-snapshots`, and commit the screenshots that changed. This runs the same container as CI and needs Docker. Without Docker: delete the affected screenshots, let CI take new ones, and commit them from the run's artifact.
+- **After cutover** the live site is the new site, so the page comparison switches to stored screenshots too.
+
+## 7. Astrobook
+
+Astrobook is a component playground for Astro. It renders `.astro` components directly, which Storybook cannot do without an experimental add-on.
+
+### Setup
+
+- Added as an Astro integration, mounted at `/astrobook/`, reading stories from `src/components/`.
+- It loads the site's global stylesheet, so components look the same as on the site.
+- A custom head component adds `noindex`. Google Analytics is not loaded there.
+- An environment switch, `ASTROBOOK=off`, leaves it out of a build. This is a safety valve if it ever blocks a production deploy.
+
+### What gets a story
+
+Each story file sits next to its component, as `PostCard.stories.ts` beside `PostCard.astro`. Every component gets one story per meaningful state.
+
+| Component | States |
+|---|---|
+| PostCard | Article; link post ("Read commentary"); no category; no description; very long title |
+| Pagination | First page; middle page; last page; single page |
+| Header | Each navigation item active |
+| Footer | Default |
+| Headline | Short; long |
+| Prose | Headings, lists, quote, table, inline code, image, embedded video |
+| CodeBlock | One per language in use; long lines; line numbers |
+| LinkPostBanner | "Original article" link |
+| PostMeta | Tags and category; tags only; neither |
+| SocialLinks | All nine icons |
+| MissingImage | The placeholder, with and without a caption |
+| RichText | The sample Contentful posts: one with a picture, a caption, code with and without line numbers, a list and a table; one with words only |
+
+### How stories are used
+
+- **Stories and tests share sample data.** One file of sample posts feeds both, so a story cannot show a state the tests do not know about.
+- **Every story is tested.** Playwright opens each story, checks that it renders, compares a screenshot and runs accessibility checks. A story that breaks fails CI. The screenshot shows the whole story, however tall it is.
+- **Code blocks are reviewed there.** They are the one area exempt from matching the live site, so the CodeBlock stories are where Tim approves how they look.
+- **Components that take slotted content** get a small wrapper component for the story, since story arguments only carry props.
+
+### Risks
+
+- Astrobook is version 0.13 with one maintainer. Its latest release (August 2026) came after Astro 7 and declares support for Astro 5 and later, but I have not run it on Astro 7 yet. Stage 2 proves it.
+- If it stops working, stories are plain objects, so the fallback is a small hand-written page that renders them. The stories and their tests would not change.
+
+## 8. Stages
+
+Each stage is one PR into `astro` unless it grows too large to review. A stage is done when its tests pass in CI.
+
+Tim merges each PR. Until a stage is merged, the next stage's branch is stacked on top of it.
+
+### Stage 0: Plan
+
+This document.
+
+### Stage 1: Baseline and test harness
+
+Done in #133.
+
+- **Work:**
+  - Write the baseline capture script and commit its output.
+  - Set up Vitest.
+  - Add the CI workflow with the `changes`, `test` and `gate` jobs.
+- **Tests added:** unit tests for the page extractor and the change classifier, and self-checks on the baseline.
+- **Done when:** CI is green on a code PR and skips on a content-only PR. Both were confirmed, the second with a throwaway PR (#134).
+
+### Stage 2: Astro skeleton and proofs
+
+Done in #135.
+
+- **Work:**
+  - Replace Gatsby with a bare Astro 7 project on the branch.
+  - Remove Gatsby files, the Docker files and unused dependencies. `podcasts.py` and `CLAUDE.md` stay as they are.
+  - Update the README's setup and commands for Astro. Its Contentful and AI-assisted writing sections stay.
+  - Point Netlify's build at `dist/`.
+  - Open a draft, preview-only PR into `main` (#136) so the branch gets a deploy preview. Netlify only builds previews for PRs into `main`.
+  - Work through every item in section 10 and record each answer in this file.
+- **Tests added:** the smoke job, against a placeholder page.
+- **Done when:** the deploy preview builds, and every item in section 10 has an answer.
+
+### Stage 3: Content and URLs
+
+Done in #137. The proposed slugs are applied; they can still be edited (see decision 11).
+
+- **Work:**
+  - Content collections, the schema and the `Post` model.
+  - URL rules.
+  - Slug cleanup through the review file.
+  - Pin the two undated posts.
+  - Routes for posts, markdown pages, list pages, tags and categories, with plain markup.
+  - The `_redirects` generator and the sitemap.
+  - Build checks.
+- **Tests added:** R1 to R5, R12, R16, R23, R24.
+- **Done when:** all 768 baseline URLs are accounted for and the redirects work on the deploy preview.
+
+### Stage 4: Components, design and Astrobook
+
+- **Work:**
+  - Tailwind.
+  - Playwright, with pages compared against the live site in the same run.
+  - The layout and every component, each with stories.
+  - Styled pages, including About and the 404 page.
+  - Code highlighting.
+  - Fixes for the two problems found in the live design: faint text and sideways scrolling.
+- **Tests added:** R7, R8, R20, R21, R22, R25, R27 to R30.
+- **Done when:** page screenshots match the live site apart from the intended differences, and Tim has approved the code block stories.
+
+### Stage 5: Content fidelity and images
+
+- **Work:**
+  - Run the content comparison across every post and fix what differs.
+  - Repair what the old exports broke: paragraphs swallowed by a list, addresses split across lines.
+  - Fix code fence languages.
+  - Move images to `public/images/`.
+  - Localise the remote images, reusing the earlier downloads in the repo that are real pictures.
+  - Draw the placeholder image.
+  - Rewrite links between posts.
+- **Tests added:** R6, R13, R14, R15. R16 no longer has a list of known broken links.
+- **Done when:** every remaining difference from the baseline is on the expected list with a reason.
+- **What happened to the 213 remote images:** 109 have a local copy (28 from the original address, 41 from earlier downloads in the repo, 40 from the Internet Archive). 90 are gone and show the placeholder, 91 times in 43 posts; all but three of those posts are from 2007 to 2009, and the images were on Picasa and Blogger accounts that no longer exist. The Archive holds nothing for them under any host name those services have used. 14 were tracking pixels or a feed service's buttons and are removed.
+
+### Stage 6: Contentful
+
+- **Work:**
+  - The Contentful loader.
+  - Rich text rendering.
+  - Merging with markdown.
+  - Sample responses: a normal post, a link post, a draft, a post with an image and a code block, and a post that clashes with a markdown URL.
+- **Tests added:** R17.
+- **Done when:** the samples appear correctly on pages, lists and tags, and Tim has done the manual check (R18).
+- **How the samples were made:** by hand, in the format of the Content Delivery API. The real space has no published posts to save an answer from, and the session that built this had no credentials for it. The envelope (items, linked entries and assets, errors) was checked against Contentful's public example space; the rich text node names come from Contentful's own type definitions; the field names come from the Gatsby site's schema. What is not yet proven is that the real space's content types match that schema. R18 proves it.
+- **What the deploy preview showed:** the preview build read the real space and found no published posts (`build-contentful` says `api: 0 posts`). So the credentials reach deploy previews, the space answers, and it has a `blogPost` content type.
+- **The manual check (R18), done on 2026-11-13.** Tim published a real post in Contentful, "Gatsby Is on Autopilot. Time to Think About Replatforming." The preview built with it (`api: 1 post`). Compared with the live site's page for the same post, the title, description, date, tags, category, headings, links, text and the paragraph each sentence is in are all the same. It is on the home list and its tag and category pages.
+  - **One thing was wrong, and is fixed:** the post's guid in the feed. The live feed gives a Contentful post a guid with a trailing slash and a markdown post one without. The new feed gave both the same form, which would have shown this post to subscribers a second time.
+  - **The live site now has a post that only a Netlify build can have.** A local build and the build CI tests have no Contentful settings. Such posts are listed in `CONTENTFUL_ON_LIVE` (`tests/lib/expected.ts`): the comparison with the live site leaves them out when the build lacks them, and the smoke tests check them on the deployed site, including the guid.
+- **Also fixed:** a story taller than the browser window was cut off at the bottom of its screenshot. Three stories are that tall (the 120-line code block, the Prose example and the new Contentful sample), and their screenshots now show all of them.
+
+### Stage 7: Feed, SEO and analytics
+
+- **Work:**
+  - The `/feed` endpoint with full content from both sources.
+  - Head tags and structured data.
+  - Google Analytics.
+  - The manifest, favicon and `robots.txt`.
+- **Tests added:** R9, R10, R11, R19, R26. R20 now allows exactly the analytics script and structured data. R17 gained its last check: a Contentful post's own share image is used in its link preview.
+- **Done when:** the feed validates and SEO tags match the baseline.
+- **What the comparison with the live site found:**
+  - Every guid in the live feed is in the new one, with the same date. The three new items are the three posts the live feed left out.
+  - The head tags of all 770 pages match, apart from the listed differences. Two things needed fixing to get there: markdown pages had the site's description, not a summary of their own text, and descriptions carried line breaks in different places than the live ones.
+  - The live tab icon is the Gatsby logo, and so are the manifest's icons.
+
+### Stage 8: Cutover
+
+See section 9.
+
+- **Done on 2026-11-13, on the `cutover` branch:**
+  - `main` had nothing new to merge. Every commit on `main` is already in `astro`.
+  - The baseline was captured again. Since the last capture the live site gained exactly one post, the one written in Contentful, and the six tag pages that exist for it: 778 URLs, up from 771, and 517 feed items, up from 516. Nothing else changed.
+  - The build CI tests has no Contentful settings, so it cannot have that post. The build tests now compare the build with the baseline minus the posts in `CONTENTFUL_ON_LIVE` and the list pages that exist only for them (`tests/lib/live.ts`). The smoke tests ask the deployed site for exactly those pages. Between the two, every URL of the live site is checked.
+- **Add a post to `CONTENTFUL_ON_LIVE`** when one is published in Contentful before cutover, and capture the baseline again.
+
+## 9. Cutover and rollback
+
+### Before merging
+
+1. Merge `main` into `astro` so the newest posts are included. *Done: there was nothing to merge.*
+2. Rerun the baseline capture and review what changed since stage 1. *Done: one new post, from Contentful.*
+3. Confirm the full suite and the smoke tests are green on the cutover PR.
+4. Check that the Contentful credentials are set for production builds. *They are: the live site's production build reads the same two settings, and it published the Contentful post.* A production build of the new site stops if they are missing.
+5. If a post has been published since the baseline was captured, bring the branch up to date first: merge `main`, capture the baseline again, and add a Contentful post to `CONTENTFUL_ON_LIVE`.
+
+The Gatsby build plugins in Netlify do not block the merge. Deploy previews have built with them in place since stage 2. Remove them afterwards.
+
+### Merge
+
+Merge the cutover PR. Netlify builds and publishes the Astro site.
+
+### Straight after
+
+1. Run the smoke tests against `https://timbroder.com`: `SMOKE_URL=https://timbroder.com npm run test:smoke` after `npm run build`.
+2. Open the real-time view in Google Analytics and load a page of the site. This is the first time analytics can be seen working, because it only runs at `timbroder.com`.
+3. Load `/feed` and check that Feedburner picks up the new build.
+4. Resubmit the sitemap in Google Search Console.
+5. In Netlify, remove the Gatsby build plugins.
+6. Close pull request #136 without merging it, and delete the `astro-preview` branch.
+7. Take out the tests that compare the build with the old site (see "New posts and the tests"). Until that is done, a new post makes them fail the next time the tests run.
+
+### Rollback
+
+Netlify keeps every deploy. To roll back, publish the last Gatsby deploy from the Netlify deploys list, which takes effect at once, then revert the merge commit on `main`.
+
+### In the following two weeks
+
+- Watch for 404s in Netlify and in Search Console.
+- Switch page screenshot tests from the live baseline to the new site's own screenshots, of pages that a new post does not change (see "New posts and the tests").
+- Remove this plan, the baseline crawl script and the stale migration branches.
+
+## 10. Things to prove early
+
+These were the assumptions the plan rested on. Stage 2 settled all nine (#135, with the Netlify ones run on the preview in #136).
+
+| # | Question | Answer |
+|---|---|---|
+| P1 | Does Astro's loader read `.markdown` files as markdown? | **No**, only `.md`. The 497 `.markdown` files were renamed to `.md` in one mechanical commit. |
+| P2 | Does Sätteri render the content the way the live site does? | **Yes.** Of 524 post and page bodies, 472 match the live site exactly. The remark pipeline gives the same result apart from one malformed file, so Sätteri stays. Most of the 52 differences are places where the live site shows raw markdown and the new build renders it; stage 5 goes through them. |
+| P3 | Can an endpoint get each post's rendered HTML for the feed? | **Yes**, through `entry.rendered.html`. Images referenced by relative path come out as placeholders, which confirms decision 19. |
+| P4 | Does an endpoint file build to `/feed` with no extension, and does a Netlify header set its content type? | **Yes.** `/feed` and `/feed/` return 200 as `application/rss+xml`. |
+| P5 | Do Netlify redirects match old URLs containing odd characters? | **Yes, with care.** Netlify compares a rule with the request exactly as sent. See "How Netlify matches redirects" below. |
+| P6 | Does Astrobook 0.13 run on Astro 7 with Tailwind 4? | **Yes.** Each story also gets a bare page at `/astrobook/stories/<component>/<story>/`, which the screenshot tests will use. |
+| P7 | Does Tailwind 4 reproduce today's styles from the existing config? | **Yes so far.** The font scale and typography settings load unchanged. One `@screen lg` rule, which Tailwind 4 no longer understands, became a plain media query. Stage 4's screenshots are the full check. |
+| P8 | Can the branch build on Netlify while the site is still set up for Gatsby? | **Yes**, with no workaround. The preview builds in about 30 seconds. |
+| P9 | Does Astro 7's stricter HTML parsing or its whitespace stripping affect any template? | **Not so far.** All pages build and post bodies are unaffected. Templates are checked as they are written in stage 4. |
+
+### How Netlify matches redirects
+
+Found by requesting test rules on the deploy preview.
+
+- **A rule matches only the exact characters of the request.** Netlify does not treat `|` and `%7C` as the same thing.
+- **Characters a browser always encodes** (`|`, curly quotes, dashes) only match a rule written percent-encoded.
+- **Characters a browser sends as they are** (`&`, `,`, `:`, `'`) match a rule written raw. A client that encodes them anyway only matches a rule written encoded.
+- **Rules are case-sensitive.** A rule with capitals does not match the lowercased request, and Netlify's own lowercase redirect only applies to real files.
+- **A trailing slash on the request is optional.**
+- **Placeholders work**: `/:year/:month/slug/` matches any year and month.
+
+So each old URL gets a rule in the form a browser sends and a rule fully percent-encoded. An old URL with capitals also gets both in lowercase, since visitors have been landing on the lowercase form.
+
+One more thing the preview showed: a new deploy reaches Netlify's servers over a few seconds, and in that window some requests still get the old answer. The smoke job waits for six good responses in a row before it starts.
+
+## 11. What I need from Tim
+
+| When | What |
+|---|---|
+| Every stage | Merge the stage's PR into `astro` |
+| Any time before cutover | Review `slug-cleanup.csv`, the 84 old URLs and their new slugs. Edit the `new_slug` column where one reads badly and I will re-apply it. |
+| Stage 4 | Approve the code block stories in Astrobook |
+| Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`node scripts/images/recover.ts --list`) |
+| Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
+| Stage 6 | ~~Publish a test post in Contentful and check it on the deploy preview (R18).~~ Done on 2026-11-13, with a real post. |
+| Stage 7 | Look at the new tab icon (your avatar, in place of the Gatsby logo) on the deploy preview and say if you want something else |
+| Cutover | Merge the cutover pull request. Afterwards: remove the Gatsby build plugins in Netlify, mark `gate` as a required check on `main`, and look at the real-time view in Google Analytics |
+
+### The Contentful check (R18)
+
+1. In Contentful, create a Blog Post and publish it. Give it a title, the slug `contentful-test`, a date in the past such as 1 January 2020, a tag, and some rich text: a paragraph, a picture, and an embedded Code Block entry. Publish the picture and the Code Block too.
+2. Rebuild the deploy preview: in Netlify, open the latest deploy preview of pull request #136 and choose "Retry deploy". Or ask me to.
+3. Open `/2020/01/contentful-test/` on the preview. The post should be there with its picture and highlighted code, and on the home list and its tag page. In the page source, `build-contentful` should say `api: 1 post`.
+4. Unpublish the test post.
+
+While the test post is published, the live Gatsby site shows it too, if the Contentful webhook is set up: the webhook rebuilds `main`, and Gatsby also reads Contentful. A date in the past keeps it off the front page and far down the feed, and unpublishing removes it at the next build.
+
+If the build fails instead, its log says what in the entry the site could not show. That is the build check working, and worth telling me about.
+
+## 12. Out of scope
+
+These are deliberately left for after cutover.
+
+- Any other design change, including dark mode.
+- Search, comments, reading time, tables of contents or other new features.
+- Automatic image resizing.
+- Removing the 304 WordPress size variants (`photo-150x150.jpg` and the like, 28 MB) that no post uses. They moved to `public/images/` with the rest.
+- Stopping a new post from showing an image from another host. The check on remote images covers the posts that existed at the migration.
+- Cleaning legacy frontmatter out of old posts.
+- Renaming or moving content files.
+- Publishing the three never-published posts.

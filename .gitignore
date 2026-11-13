@@ -1,13 +1,34 @@
+# dependencies
 node_modules/
-.cache/
-public/
-npm-debug.log
-.eslintcache
-.gatsby-context.js
-.idea
-gatsby-starter-lumen.iml
-.DS_Store
-yarn-error.log
+
+# Astro build output and generated types
+dist/
+# The same site built with the sample Contentful posts (npm run build:samples).
+dist-samples/
+.astro/
+
+# local environment
 .env*
-.env.development
-.env.production
+
+# logs
+npm-debug.log
+yarn-error.log
+
+# editors and OS
+.idea
+.DS_Store
+
+# Netlify local folder
+.netlify/
+
+# Playwright
+test-results/
+playwright-report/
+# Screenshots only compare on the system that took them; Linux ones are stored.
+tests/browser/__screenshots__/darwin/
+tests/browser/__screenshots__/win32/
+# Screenshots of the live site, taken fresh on every run.
+tests/browser/__screenshots__/**/live/
+
+# Downloaded images waiting to be applied (scripts/images/fetch.ts).
+scripts/images/.cache/

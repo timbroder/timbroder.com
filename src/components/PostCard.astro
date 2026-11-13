@@ -1,0 +1,54 @@
+---
+/**
+ * One post in a list: title, date, category, description and a call to
+ * action. Link posts say "Read commentary"; the rest say "Read article".
+ */
+import type { Post } from '../lib/post-model.ts';
+import { formatDate } from '../lib/site.ts';
+
+interface Props {
+  post: Pick<Post, 'url' | 'title' | 'date' | 'category' | 'description' | 'link'>;
+}
+
+const { post } = Astro.props;
+const date = formatDate(post.date);
+const eyebrow = 'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-500';
+---
+
+<article class="md:grid md:grid-cols-4 md:items-baseline">
+  <div class="md:col-span-3 group relative flex flex-col items-start">
+    <h2 class="max-w-full text-base font-semibold tracking-tight text-zinc-800">
+      <div
+        class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
+      >
+      </div>
+      <a href={post.url}>
+        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+        <span class="relative z-10">{post.title}</span>
+      </a>
+    </h2>
+    <time class:list={['md:hidden', eyebrow, 'pl-3.5']} datetime={date}>
+      <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+        <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
+      </span>
+      {date}{post.category && <span>&nbsp;in {post.category}</span>}
+    </time>
+    <p class="relative z-10 mt-2 max-w-full text-sm text-zinc-600">{post.description}</p>
+    <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-700">
+      Read {post.link ? 'commentary' : 'article'}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+      </svg>
+    </div>
+  </div>
+  <time class:list={['mt-1 hidden md:block', eyebrow]} datetime={date}>
+    {date}{post.category && <span>&nbsp;in {post.category}</span>}
+  </time>
+</article>

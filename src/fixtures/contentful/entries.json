@@ -1,0 +1,991 @@
+{
+  "sys": {
+    "type": "Array"
+  },
+  "total": 5,
+  "skip": 0,
+  "limit": 100,
+  "items": [
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "sample-space"
+          }
+        },
+        "id": "sample-post",
+        "type": "Entry",
+        "createdAt": "2026-03-14T13:00:00.000Z",
+        "updatedAt": "2026-03-14T13:00:00.000Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "A sample post written in Contentful",
+        "slug": "sample-contentful-post",
+        "date": "2026-03-14T09:30-04:00",
+        "description": "A sample post. It shows that a post written in Contentful appears on the site like any other.",
+        "category": "Code",
+        "tags": [
+          "Contentful samples",
+          "plain samples"
+        ],
+        "content": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This is a sample post. It lives in a file of saved Contentful answers and is only shown in test builds.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "It has ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": "bold",
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": ", ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": "italic",
+                  "marks": [
+                    {
+                      "type": "italic"
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": " and ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": "inline code",
+                  "marks": [
+                    {
+                      "type": "code"
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "text",
+                  "value": ", and a ",
+                  "marks": [],
+                  "data": {}
+                },
+                {
+                  "nodeType": "hyperlink",
+                  "data": {
+                    "uri": "https://www.contentful.com/"
+                  },
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "link",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "text",
+                  "value": ".",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "unordered-list",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "A list item",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Another, which links to ",
+                          "marks": [],
+                          "data": {}
+                        },
+                        {
+                          "nodeType": "entry-hyperlink",
+                          "data": {
+                            "target": {
+                              "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "sample-link-post"
+                              }
+                            }
+                          },
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "the sample link post",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "blockquote",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "A quote, for good measure.",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "sample-space"
+          }
+        },
+        "id": "sample-link-post",
+        "type": "Entry",
+        "createdAt": "2026-02-10T13:00:00.000Z",
+        "updatedAt": "2026-02-10T13:00:00.000Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "A sample link post from Contentful",
+        "slug": "sample-contentful-link-post",
+        "date": "2026-02-10",
+        "link": "https://example.com/an-article-worth-reading",
+        "category": "Commentary",
+        "tags": [
+          "Contentful samples"
+        ],
+        "content": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "A link post points at an article somewhere else and adds a few words about it. This one has no description of its own, so its summary is taken from this text.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "sample-space"
+          }
+        },
+        "id": "sample-draft",
+        "type": "Entry",
+        "createdAt": "2026-04-01T13:00:00.000Z",
+        "updatedAt": "2026-04-01T13:00:00.000Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "A sample draft that stays hidden",
+        "slug": "sample-contentful-draft",
+        "date": "2026-04-01",
+        "draft": true,
+        "tags": [
+          "Contentful samples",
+          "hidden samples"
+        ],
+        "content": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This post is published in Contentful but marked as a draft, so the site must not show it.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "sample-space"
+          }
+        },
+        "id": "sample-rich-post",
+        "type": "Entry",
+        "createdAt": "2026-01-20T18:00:00.000Z",
+        "updatedAt": "2026-01-20T18:00:00.000Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "A sample post with a picture and code",
+        "slug": "sample-contentful-picture-and-code",
+        "date": "2026-01-20T18:00:00.000Z",
+        "draft": false,
+        "category": "Code",
+        "tags": [
+          "Contentful samples",
+          "rich text samples"
+        ],
+        "ogImage": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "sample-share-image"
+          }
+        },
+        "content": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Rich text can hold more than words. This sample has one of everything.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "A picture",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "embedded-asset-block",
+              "data": {
+                "target": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Asset",
+                    "id": "sample-picture"
+                  }
+                }
+              },
+              "content": []
+            },
+            {
+              "nodeType": "heading-2",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Code",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "A code block is an entry of its own, embedded in the text:",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "embedded-entry-block",
+              "data": {
+                "target": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "sample-code-python"
+                  }
+                }
+              },
+              "content": []
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "This one asks for no line numbers:",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "embedded-entry-block",
+              "data": {
+                "target": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Entry",
+                    "id": "sample-code-shell"
+                  }
+                }
+              },
+              "content": []
+            },
+            {
+              "nodeType": "heading-3",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "The rest",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "ordered-list",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "First step",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "list-item",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "paragraph",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "text",
+                          "value": "Second step",
+                          "marks": [],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "table",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "table-row",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "table-header-cell",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Tool",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "table-header-cell",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Use",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "table-row",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "table-cell",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "AeroPress",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "table-cell",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Coffee",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "table-row",
+                  "data": {},
+                  "content": [
+                    {
+                      "nodeType": "table-cell",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Kobo",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "table-cell",
+                      "data": {},
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "data": {},
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Reading",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "nodeType": "hr",
+              "data": {},
+              "content": []
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "A closing line with <angle brackets> & an ampersand,\nbroken in two with shift and enter.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [],
+        "concepts": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "sample-space"
+          }
+        },
+        "id": "sample-clash",
+        "type": "Entry",
+        "createdAt": "2026-05-01T13:00:00.000Z",
+        "updatedAt": "2026-05-01T13:00:00.000Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogPost"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "A sample Contentful post at a markdown post's address",
+        "slug": "small-wins",
+        "date": "2019-09-07",
+        "tags": [
+          "Contentful samples",
+          "clashing samples"
+        ],
+        "content": {
+          "nodeType": "document",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "A markdown post already lives at this address, so this one must not be shown.",
+                  "marks": [],
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "includes": {
+    "Entry": [
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sample-space"
+            }
+          },
+          "id": "sample-code-python",
+          "type": "Entry",
+          "createdAt": "2026-01-20T17:00:00.000Z",
+          "updatedAt": "2026-01-20T17:00:00.000Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "codeBlock"
+            }
+          },
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Sample: count the wins",
+          "language": "python",
+          "code": "wins = [\"small\", \"big\"]\n\nfor win in wins:\n    print(f\"A {win} win\")",
+          "showLineNumbers": true
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sample-space"
+            }
+          },
+          "id": "sample-code-shell",
+          "type": "Entry",
+          "createdAt": "2026-01-20T17:00:00.000Z",
+          "updatedAt": "2026-01-20T17:00:00.000Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "codeBlock"
+            }
+          },
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Sample: build the site",
+          "language": "Bash",
+          "code": "npm run build && npm test",
+          "showLineNumbers": false
+        }
+      }
+    ],
+    "Asset": [
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sample-space"
+            }
+          },
+          "id": "sample-picture",
+          "type": "Asset",
+          "createdAt": "2026-01-20T17:00:00.000Z",
+          "updatedAt": "2026-01-20T17:00:00.000Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "A kettle on the stove",
+          "description": "The picture's description is shown as its caption.",
+          "file": {
+            "url": "//images.ctfassets.net/sample-space/sample-picture/0f1e2d3c4b5a69788796a5b4c3d2e1f0/kettle.jpg",
+            "details": {
+              "size": 1843200,
+              "image": {
+                "width": 2400,
+                "height": 2400
+              }
+            },
+            "fileName": "kettle.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      },
+      {
+        "metadata": {
+          "tags": [],
+          "concepts": []
+        },
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "sample-space"
+            }
+          },
+          "id": "sample-share-image",
+          "type": "Asset",
+          "createdAt": "2026-01-20T17:00:00.000Z",
+          "updatedAt": "2026-01-20T17:00:00.000Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "revision": 1,
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "Share image for the sample post",
+          "file": {
+            "url": "//images.ctfassets.net/sample-space/sample-share-image/a1b2c3d4e5f60718293a4b5c6d7e8f90/share.png",
+            "details": {
+              "size": 48213,
+              "image": {
+                "width": 1200,
+                "height": 630
+              }
+            },
+            "fileName": "share.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,3 +1,6 @@
 node_modules/
-public/
-.cache/
+dist/
+dist-samples/
+.astro/
+tests/baseline/
+package-lock.json

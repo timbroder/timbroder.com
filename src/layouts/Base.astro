@@ -1,0 +1,123 @@
+---
+/**
+ * The page shell: head, navigation, main content and footer.
+ *
+ * The head carries what the Gatsby site's did: the tags for search engines
+ * and link previews, the feed and manifest links, and Google Analytics.
+ * See src/lib/seo.ts.
+ */
+import '../styles/global.css';
+import Container from '../components/Container.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Headline from '../components/Headline.astro';
+import { contentfulStatus } from '../lib/posts.ts';
+import { fingerprinted } from '../lib/public-files.ts';
+import { analyticsScript, oneLine, socialTags } from '../lib/seo.ts';
+import { SITE, activeNavHref } from '../lib/site.ts';
+
+interface Props {
+  /** Page title, without the site name. */
+  title: string;
+  description?: string;
+  /** Set to false on pages with no canonical URL, like the 404 page. */
+  canonical?: boolean;
+  /** The page's own picture for link previews, as a full address. */
+  image?: string;
+  /** Adds the links that only the home list carries: Feedburner and Mastodon. */
+  home?: boolean;
+  /** Shows the site title as the headline, as on the home page. */
+  showSiteTitle?: boolean;
+  /** Set to false to highlight nothing in the navigation. */
+  highlightNav?: boolean;
+}
+
+const {
+  title,
+  description: ownDescription,
+  canonical = true,
+  image,
+  home = false,
+  showSiteTitle = false,
+  highlightNav = true,
+} = Astro.props;
+
+// A page with nothing to say about itself gets the site's description.
+const description = oneLine(ownDescription ?? '') || SITE.description;
+const pathname = Astro.url.pathname;
+const active = highlightNav ? activeNavHref(pathname) : null;
+const social = socialTags({ title, description, path: canonical ? pathname : null, image });
+// Netlify sets COMMIT_REF. The smoke tests read it to know which build they
+// are looking at.
+const commit = process.env.COMMIT_REF ?? 'local';
+// What the build read from Contentful, so a deployed build can be asked
+// whether it reached the real space.
+const contentful = await contentfulStatus();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="build-commit" content={commit} />
+    <meta name="build-contentful" content={contentful} />
+    <title>{`${title} | ${SITE.title}`}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={new URL(pathname, SITE.url).href} />}
+    {
+      social.map((tag) =>
+        tag.property ? (
+          <meta property={tag.property} content={tag.content} />
+        ) : (
+          <meta name={tag.name} content={tag.content} />
+        ),
+      )
+    }
+    <link rel="alternate" type="application/rss+xml" title={SITE.feedTitle} href="/feed" />
+    {
+      home && (
+        <>
+          <link rel="alternate" type="application/rss+xml" title={SITE.feedTitle} href={SITE.feedburner} />
+          <link rel="me" href={SITE.mastodon} />
+        </>
+      )
+    }
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href={fingerprinted('/icons/icon-32.png')} />
+    <link rel="icon" type="image/png" sizes="192x192" href={fingerprinted('/icons/icon-192.png')} />
+    <link rel="apple-touch-icon" href={fingerprinted('/icons/apple-touch-icon.png')} />
+    <slot name="head" />
+    <script is:inline set:html={analyticsScript()} />
+  </head>
+  <body>
+    <div class="bg-zinc-50">
+      <div class="bg-zinc-50 fixed inset-0 flex justify-center sm:px-8">
+        <div class="flex w-full max-w-7xl lg:px-8">
+          <div class="w-full bg-white ring-1 ring-zinc-100"></div>
+        </div>
+      </div>
+      <div class="relative">
+        <Header active={active} />
+        <Container class="mt-16 sm:mt-32">
+          <header class="max-w-2xl">
+            {
+              showSiteTitle && (
+                <Headline>
+                  <a href="/">{SITE.title}</a>
+                </Headline>
+              )
+            }
+          </header>
+          <div class="mt-16 sm:mt-20">
+            <main>
+              <slot />
+            </main>
+          </div>
+        </Container>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

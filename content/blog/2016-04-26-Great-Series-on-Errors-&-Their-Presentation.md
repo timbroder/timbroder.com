@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Presenting Unanticipated Errors To Users
+slug: great-series-on-errors-and-their-presentation
 date: 2016-04-26 10:25
 link: http://cocoawithlove.com/blog/2016/04/14/error-recovery-attempter.html
+redirect_from:
+  - "/2016/04/Great-Series-on-Errors-&-Their-Presentation/"
 ---
 
 This is the start of a really great series. It uses Swift for the examples but everything in the articles holds true for any language/platform

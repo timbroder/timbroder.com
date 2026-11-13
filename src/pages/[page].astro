@@ -1,0 +1,33 @@
+---
+/** Markdown pages from content/pages, each at the `path:` in its frontmatter. */
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Headline from '../components/Headline.astro';
+import Prose from '../components/Prose.astro';
+import Base from '../layouts/Base.astro';
+import { excerpt } from '../lib/excerpt.ts';
+
+export async function getStaticPaths() {
+  return (await getCollection('pages')).map((entry) => ({
+    params: { page: entry.data.path.replace(/^\/|\/$/g, '') },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'pages'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+// A page's own description, or else a summary of its text, as for posts.
+const description = entry.data.description ?? excerpt(entry.rendered?.html ?? '');
+---
+
+<Base title={entry.data.title} description={description}>
+  <header class="flex flex-col">
+    <Headline padded={false}>{entry.data.title}</Headline>
+  </header>
+  <Prose class="mt-8">
+    <section itemprop="articleBody"><Content /></section>
+  </Prose>
+</Base>

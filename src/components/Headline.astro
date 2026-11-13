@@ -1,0 +1,17 @@
+---
+interface Props {
+  /** Adds the space below the headline used on list pages. */
+  padded?: boolean;
+}
+
+const { padded = true } = Astro.props;
+---
+
+<h1
+  class:list={[
+    'text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl',
+    padded && 'mb-6',
+  ]}
+>
+  <slot />
+</h1>

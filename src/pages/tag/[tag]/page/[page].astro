@@ -1,0 +1,32 @@
+---
+import ListHead from '../../../../components/ListHead.astro';
+import PostList from '../../../../components/PostList.astro';
+import Base from '../../../../layouts/Base.astro';
+import { listPages, listTitle, type ListPage } from '../../../../lib/lists.ts';
+import { tagTerms } from '../../../../lib/post-model.ts';
+import { getPosts } from '../../../../lib/posts.ts';
+
+export async function getStaticPaths() {
+  return tagTerms(await getPosts()).flatMap((term) =>
+    listPages(`/tag/${term.slug}/`, term.posts)
+      .filter((list) => list.page > 1)
+      .map((list) => ({
+        params: { tag: term.slug, page: String(list.page) },
+        props: { name: term.name, list },
+      })),
+  );
+}
+
+interface Props {
+  name: string;
+  list: ListPage;
+}
+
+const { name, list } = Astro.props;
+const headline = `Tag: ${name}`;
+---
+
+<Base title={listTitle(headline, list.page)}>
+  <ListHead slot="head" list={list} />
+  <PostList list={list} headline={headline} />
+</Base>
