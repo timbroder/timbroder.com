@@ -172,7 +172,8 @@ describe('R17: Contentful posts', () => {
       const item = feed.items.find(({ link }) => link === `https://timbroder.com${url}`);
       expect(item, url).toBeDefined();
       expect(item!.contentLength).toBeGreaterThan(50);
-      expect(item!.guid).toBe(`https://timbroder.com${url.replace(/\/$/, '')}`);
+      // The form the live feed gives a Contentful post: with its trailing slash.
+      expect(item!.guid).toBe(`https://timbroder.com${url}`);
       expect(sitemap).toContain(`<loc>https://timbroder.com${url}</loc>`);
     }
     expect(feed.items.find(({ link }) => link.endsWith(POST))).toMatchObject({

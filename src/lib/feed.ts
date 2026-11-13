@@ -5,10 +5,10 @@
  * item must not change: a feed reader shows an item again as new when its
  * guid changes.
  *
- *  - A post's guid is the address it had on the old site, without a
- *    trailing slash, which is the form the old feed used. A post whose slug
- *    was tidied up keeps the old address as its guid, and links to the new
- *    one.
+ *  - A post's guid is the address it had on the old site, in the form the
+ *    old feed used: without a trailing slash for a markdown post, and with
+ *    one for a post from Contentful. A post whose slug was tidied up keeps
+ *    the old address as its guid, and links to the new one.
  *  - Every item carries the whole post, as before.
  *  - Addresses inside a post are made absolute. A feed is read somewhere
  *    else, where "/images/photo.jpg" points nowhere.
@@ -40,6 +40,9 @@ const withoutControlCharacters = (text: string) =>
  * a re-slugged post only redirects.
  */
 export function feedGuid(post: Post, site: string): string {
+  // The old site built a Contentful post's address with its trailing slash
+  // and a markdown post's without, and each feed item's guid from that.
+  if (post.source === 'contentful') return `${site}${post.url}`;
   const path = post.redirectFrom[0] ?? post.url;
   return `${site}${path.replace(/\/$/, '')}`;
 }

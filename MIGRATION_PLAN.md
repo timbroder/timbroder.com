@@ -165,6 +165,7 @@ Stage 4 found two problems in the live design. Tim asked for both to be fixed du
 | Code blocks use Prism's Okaidia theme. | Code blocks use Shiki's Monokai, the closest match. Five of its colours were below 4.5:1 on the dark background (keywords, comments and errors among them); each is lightened just enough to pass. The whole theme is checked, not only the colours used today. |
 | A long web address or file path cannot wrap, in a card summary or in a post, so the page scrolls sideways. Built the same way, the new site had 98 such pages on a phone and 4 on a desktop. | Long words wrap. No page scrolls sideways. |
 | A post with many tags scrolls sideways on a phone, because the row of tags cannot wrap. | The tags wrap, and the category moves below them when there is no room beside. |
+| A post written in Contentful has its own look: larger, bolder headings that sit close to the text above, and lists indented further. | It looks like a markdown post. |
 
 ## 3. What the old plans got wrong
 
@@ -220,7 +221,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 ### Feed and SEO
 
 21. **The feed is an endpoint at `/feed`**, with a Netlify header so it is served as RSS and not plain text.
-22. **Feed guids never change.** A post's guid is the address it had on the live site, without a trailing slash, which is the form the live feed uses. A re-slugged post keeps its old address as its guid and gets the new one as its link. Otherwise every feed reader would show 83 old posts as new.
+22. **Feed guids never change.** A post's guid is the address it had on the live site, in the form the live feed uses: without a trailing slash for a markdown post, with one for a post from Contentful. A re-slugged post keeps its old address as its guid and gets the new one as its link. Otherwise every feed reader would show 83 old posts as new.
 23. **The feed includes every published post.** That is 519, up from 516; the live feed drops posts that lack `layout:`.
     - Every address inside a post is made absolute, so pictures and links work in a feed reader.
     - An item links to the post's address with its trailing slash, which saves the reader a redirect.
@@ -475,6 +476,9 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 - **Done when:** the samples appear correctly on pages, lists and tags, and Tim has done the manual check (R18).
 - **How the samples were made:** by hand, in the format of the Content Delivery API. The real space has no published posts to save an answer from, and the session that built this had no credentials for it. The envelope (items, linked entries and assets, errors) was checked against Contentful's public example space; the rich text node names come from Contentful's own type definitions; the field names come from the Gatsby site's schema. What is not yet proven is that the real space's content types match that schema. R18 proves it.
 - **What the deploy preview showed:** the preview build read the real space and found no published posts (`build-contentful` says `api: 0 posts`). So the credentials reach deploy previews, the space answers, and it has a `blogPost` content type.
+- **The manual check (R18), done on 2026-11-13.** Tim published a real post in Contentful, "Gatsby Is on Autopilot. Time to Think About Replatforming." The preview built with it (`api: 1 post`). Compared with the live site's page for the same post, the title, description, date, tags, category, headings, links, text and the paragraph each sentence is in are all the same. It is on the home list and its tag and category pages.
+  - **One thing was wrong, and is fixed:** the post's guid in the feed. The live feed gives a Contentful post a guid with a trailing slash and a markdown post one without. The new feed gave both the same form, which would have shown this post to subscribers a second time.
+  - **The live site now has a post that only a Netlify build can have.** A local build and the build CI tests have no Contentful settings. Such posts are listed in `CONTENTFUL_ON_LIVE` (`tests/lib/expected.ts`): the comparison with the live site leaves them out when the build lacks them, and the smoke tests check them on the deployed site, including the guid.
 - **Also fixed:** a story taller than the browser window was cut off at the bottom of its screenshot. Three stories are that tall (the 120-line code block, the Prose example and the new Contentful sample), and their screenshots now show all of them.
 
 ### Stage 7: Feed, SEO and analytics
@@ -494,6 +498,8 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 ### Stage 8: Cutover
 
 See section 9.
+
+One thing to carry into it: when the baseline is captured again, it will include the posts written in Contentful. The build tests must then leave those out when the build has no Contentful settings, as the browser comparison already does (`CONTENTFUL_ON_LIVE`). Add a post to that list when one is published in Contentful before cutover.
 
 ## 9. Cutover and rollback
 
@@ -565,7 +571,7 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Stage 4 | Approve the code block stories in Astrobook |
 | Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`node scripts/images/recover.ts --list`) |
 | Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
-| Stage 6 | Publish a test post in Contentful and check it on the deploy preview (R18). Steps below. |
+| Stage 6 | ~~Publish a test post in Contentful and check it on the deploy preview (R18).~~ Done on 2026-11-13, with a real post. |
 | Stage 7 | Look at the new tab icon (your avatar, in place of the Gatsby logo) on the deploy preview and say if you want something else |
 | Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
 

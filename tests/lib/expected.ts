@@ -104,6 +104,17 @@ export const SUMMARY_DIFFERS = [
 ];
 
 /**
+ * Posts on the live site that are written in Contentful.
+ *
+ * A build without the Contentful settings cannot have them, and that is
+ * every build except Netlify's: a local one, and the one CI tests. So the
+ * comparison with the live site leaves these posts out when the build does
+ * not have them, and the smoke tests check them where they can exist, on
+ * the deployed site.
+ */
+export const CONTENTFUL_ON_LIVE = ['/2026/11/gatsby-on-autopilot-time-to-replatform/'];
+
+/**
  * Markdown pages whose description differs from the live site. A page's
  * description is a summary of its text, like a card's.
  */

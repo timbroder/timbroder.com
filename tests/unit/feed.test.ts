@@ -33,9 +33,9 @@ describe('feedGuid', () => {
     expect(feedItem(moved, SITE).link).toBe('https://timbroder.com/2019/09/show-and-tell-cast/');
   });
 
-  it('is the same for a post from Contentful', () => {
+  it('keeps the trailing slash for a post from Contentful, as the old feed did', () => {
     const fromContentful = post({ id: 'contentful:1', source: 'contentful', filePath: undefined, slug: 'hello' });
-    expect(feedGuid(fromContentful, SITE)).toBe('https://timbroder.com/2019/09/hello');
+    expect(feedGuid(fromContentful, SITE)).toBe('https://timbroder.com/2019/09/hello/');
   });
 });
 
