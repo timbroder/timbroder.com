@@ -186,12 +186,13 @@ describe('local images', () => {
 
 describe('finalizePosts', () => {
   it('lets markdown win when Contentful has a post at the same URL', () => {
-    const posts = finalizePosts([
+    const { posts, dropped } = finalizePosts([
       toPost(input({ id: 'cf', source: 'contentful', filePath: undefined, slug: 'small-wins' })),
       toPost(input({ id: 'md' })),
       toPost(input({ id: 'cf-only', source: 'contentful', filePath: undefined, slug: 'other' })),
     ]);
     expect(posts.map((p) => p.id).sort()).toEqual(['cf-only', 'md']);
+    expect(dropped.map((p) => p.id)).toEqual(['cf']);
   });
 });
 

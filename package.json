@@ -13,6 +13,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build:samples": "CONTENTFUL_FIXTURES=src/fixtures/contentful/entries.json ASTROBOOK=off astro build --outDir dist-samples",
     "preview": "astro preview",
     "check": "astro check",
     "test": "vitest run tests/unit",
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
+    "@contentful/rich-text-types": "^17.2.7",
     "astro": "^7.4.11",
     "cheerio": "^1.2.0",
     "lodash-es": "^4.18.1",
