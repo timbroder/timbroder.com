@@ -5,6 +5,7 @@ import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
 import {
   blockText,
+  bodyBlocks,
   extractFeed,
   extractPage,
   normalizeCode,
@@ -41,6 +42,54 @@ describe('text helpers', () => {
     const tight = cheerio.load('<main><h1>Title</h1><p>Body</p></main>');
     const loose = cheerio.load('<main>\n  <h1>Title</h1>\n  <p>Body</p>\n</main>');
     expect(blockText(tight('main'))).toBe(blockText(loose('main')));
+  });
+});
+
+describe('bodyBlocks', () => {
+  const blocks = (html: string) => {
+    const $ = cheerio.load(`<div id="body">${html}</div>`);
+    return bodyBlocks($, $('#body'));
+  };
+
+  it('lists each paragraph, heading and list item with its length and start', () => {
+    expect(blocks('<h2>Title</h2><p>One two.</p><ul><li>First</li><li>Second</li></ul>')).toEqual([
+      'h2|5|Title',
+      'p|8|One two.',
+      'ul>li|5|First',
+      'ul>li|6|Second',
+    ]);
+  });
+
+  it('reads a list item the same whether or not its text is in a paragraph', () => {
+    expect(blocks('<ul><li><p>First</p></li></ul>')).toEqual(blocks('<ul><li>First</li></ul>'));
+  });
+
+  it('marks a second paragraph in the same item, and names the lists around a nested one', () => {
+    expect(blocks('<ol><li><p>One</p><p>More</p><ul><li>Inner</li></ul></li></ol>')).toEqual([
+      'ol>li|3|One',
+      'ol>li+|4|More',
+      'ol>li>ul>li|5|Inner',
+    ]);
+  });
+
+  it('tells a paragraph after a list from the end of its last item', () => {
+    expect(blocks('<ul><li>Videos</li></ul><p>Cons</p>')).toEqual(['ul>li|6|Videos', 'p|4|Cons']);
+    expect(blocks('<ul><li>Videos Cons</li></ul>')).toEqual(['ul>li|11|Videos Cons']);
+  });
+
+  it('records a code block without its text, also through a wrapper', () => {
+    expect(blocks('<p>Run:</p><pre><code>ls</code></pre>')).toEqual(['p|4|Run:', 'pre|0|']);
+    expect(blocks('<ol><li>Run <div class="gatsby-highlight"><pre>ls</pre></div></li></ol>')).toEqual(
+      blocks('<ol><li>Run <pre>ls</pre></li></ol>'),
+    );
+    expect(blocks('<ol><li>Run <pre>ls</pre></li></ol>')).toEqual(['ol>li|3|Run', 'ol>li+>pre|0|']);
+  });
+
+  it('keeps a space at the edge of a link, and reads quotes', () => {
+    expect(blocks('<ul><li>using <a href="/x">ext2fs </a>(untested)</li></ul>')).toEqual([
+      'ul>li|23|using ext2fs (untested)',
+    ]);
+    expect(blocks('<blockquote><p>Said</p></blockquote>')).toEqual(['blockquote>p|4|Said']);
   });
 });
 
