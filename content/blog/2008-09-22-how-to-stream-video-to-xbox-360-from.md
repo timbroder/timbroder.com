@@ -33,6 +33,7 @@ machine.
 * You should see uShare (or whatever you named the share to in the configuration)
 * play videos!
 * note: **to play a .mkv file, rename it to .m4v **
+
 To Do:
 
   * get uShare to automatically rescan the directory (currently if I add a video to the folder, the 360 will not see it until i restart uShare)

@@ -21,7 +21,7 @@ define a shared prefix for the keys to use.
 
 In local.xml: 
 
-```XML
+```xml
         <cache>
 ...
             <prefix>a1i</prefix>

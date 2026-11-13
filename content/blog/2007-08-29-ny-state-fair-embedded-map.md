@@ -39,8 +39,5 @@ If you want, more advanced options:
 And now, the final product:  
   
   
-[View Larger Map](http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken
-,+NJ&daddr=Morristown,+NJ+to:Syracuse,+NY&mrcr=1&mra=pi&sll=40.759195,-74.2540
-55&sspn=0.207522,0.466919&ie=UTF8&om=1&ll=41.87761,-75.10599&spn=2.862977,4.66
-9189&z=7&source=embed)
+[View Larger Map](http://maps.google.com/maps?f=d&hl=en&geocode=&saddr=Hoboken,+NJ&daddr=Morristown,+NJ+to:Syracuse,+NY&mrcr=1&mra=pi&sll=40.759195,-74.254055&sspn=0.207522,0.466919&ie=UTF8&om=1&ll=41.87761,-75.10599&spn=2.862977,4.669189&z=7&source=embed)
 

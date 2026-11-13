@@ -27,7 +27,7 @@ updated in an Angular model on the parent page.
 Starting off a partial
 template: 
 
-```HTML
+```html
 <iframe src="/....html" width="100%" height="800" scrolling="no" seamless="seamless" style="border:0;"></iframe>
 ```
 
@@ -60,7 +60,7 @@ parent.callSave(outputXml);
 But, this method needs to live in the partial template AND update the model. For simplicity, I went with inline JS and created the proper textarea to hold my data and bind to the model. Below I can see that the data is coming back, and the textarea has the text. There are two problems with this: 1) The model itself isn’t getting updated and 2) This js is outside of Angular’s scope so I can’t just call $apply. Angular’s dirty checking won’t see this change. I needed a way to update the model from outside Angular.
 
 
-```HTML
+```html
 {% verbatim %}
 <script type="text/javascript">
     function callSave(payload){
@@ -78,7 +78,7 @@ But, this method needs to live in the partial template AND update the model. For
 
 The trick ended up being that ngModel listens for an “input” event. Use that, hide the textarea, and I’m good to go
 
-```HTML
+```html
 {% verbatim %}
 <script type="text/javascript">
     function callSave(payload){

@@ -44,15 +44,14 @@ above: we want to be able to cache most of the content for 24 hours but
 refresh just the sidebar every 10 mins.  Varnish will do this processing for
 us, keeping the rest of the page cached, and splicing in the sidebar (and
 having your webserver process just the sidebar) when it needs to. Most of what
-I'm going to do below is in the ESI [documentation](https://www.varnish-
-cache.org/docs/3.0/tutorial/esi.html). 
+I'm going to do below is in the ESI [documentation](https://www.varnish-cache.org/docs/3.0/tutorial/esi.html). 
 
 We're going to assume that our theme
 has a dynamic sidebar called "Sidebar" and that there are cases where we want
 ESI to be active (production) and some where wordpress should just behave
 normally (dev).  This is what we have before we start thinking about Varnish:
 
-```PHP
+```php
 <div class=&quot;five columns&quot;>
 <?php
 	if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(&quot;Sidebar&quot;) ) :
@@ -63,7 +62,7 @@ normally (dev).  This is what we have before we start thinking about Varnish:
 
 The two varnish tags we are going to use are an esi comment, and an esi:remove tag. These are the switch that will process the page properly whether you have ESI or not. esi:remove will ignore everything between them if ESI is enabled. This is where we put our “normal processing” code. If ESI is not active, this code will run as normal. Inside the esi comment we put the code that we want to run if ESI is enabled. If it is not, the code will be ignored.
 
-```PHP
+```php
 <div class=&quot;five columns&quot;>
 	<esi:remove>
 		<?php
@@ -79,7 +78,7 @@ The two varnish tags we are going to use are an esi comment, and an esi:remove t
 
 Now our sidebar display is ESI ready, but we need to give Varnish an endpoint to hit so it can generate the fragment of the sidebar. So lets create esihandler.php: 
 
-```PHP
+```php
 <?php
  
 $cwd = getcwd();

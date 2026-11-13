@@ -18,8 +18,7 @@ I read a lot of books on my kindle that I got from other sources, mostly
 [Manning](http://www.manning.com/catalog/mobile/) and
 [O'Rielly](http://shop.oreilly.com/category/ebooks.do), but these won't sync
 between my phone and my kindle.  Only books purchased from Amazon will sync
-between devices. [Again](http://timbroder.com/2011/01/getting-it-onto-the-
-kindle.html), Calibre to the rescue. For this to work, the book must already
+between devices. [Again](/2011/01/getting-it-onto-the-kindle/), Calibre to the rescue. For this to work, the book must already
 exist on the kindle and be sold through Amazon.  The example book I'm going to
 use is [Version Control with
 Git](http://shop.oreilly.com/product/9780596520137.do).
@@ -33,4 +32,5 @@ Git](http://shop.oreilly.com/product/9780596520137.do).
   7. Convert the book to .mobi (Even if it is already in .mobi format, you have to do this)
   8. Copy the book to your kindle via USB. Either by dragging it in your file manager or through Calibre. Do not use email, wifi, or 3g to do this, it will remove the ASIN code that we just wrapped onto the document. Once it is on the device syncing over wifi/3g will function as normal)
   9. Using USB, copy the file to your device. For android this is the kindle folder on your SD card. I haven't tested but doing through iTunes is supposed to work for an iphone/ipad.
+
 Enjoy!

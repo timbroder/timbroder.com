@@ -21,9 +21,7 @@ I'll have to fire up the Android emulator this weekend and see how this stacks
 up against mobile Google Docs and Spreadsheets.  
   
   
-[![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SBHoRfmVqOI/AAAAAAAARzk/Z6ryO5Ce-mo
-/s400/veruca+salt.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SBHoRfmVqOI/AAAA
-AAAARzk/Z6ryO5Ce-mo/s1600-h/veruca+salt.jpg)  
+[![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SBHoRfmVqOI/AAAAAAAARzk/Z6ryO5Ce-mo/s400/veruca+salt.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SBHoRfmVqOI/AAAAAAAARzk/Z6ryO5Ce-mo/s1600-h/veruca+salt.jpg)  
   
 **[Veruca Salt](http://www.imdb.com/name/nm0170628/)**: Hey, Daddy, I want an Oompa Loompa. I want you to get me an Oompa Loompa right away.   
 **[Mr. Salt](http://www.imdb.com/name/nm0455702/)**: All right, Veruca, all right. I'll get you one before the day is out.   

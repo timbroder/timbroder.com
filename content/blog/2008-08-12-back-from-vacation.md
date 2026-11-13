@@ -18,12 +18,11 @@ below.
   
 Also, Check out goodreads.com. Its a lot better then any of the other
 bookshelving services I've reviewed [in the
-past](http://blog.gpowered.net/2007/09/google-books-my-library-vs-librarything.html). The reasons why will be in a future post in the not so
+past](/2007/09/google-books-my-library-vs-librarything/). The reasons why will be in a future post in the not so
 distant future.  
   
 
-[![Widget_logo](https://www.goodreads.com/images/widget/widget_logo.gif)](http:
-//www.goodreads.com/user/show/1253891)
+[![Widget_logo](https://www.goodreads.com/images/widget/widget_logo.gif)](http://www.goodreads.com/user/show/1253891)
 
   
   

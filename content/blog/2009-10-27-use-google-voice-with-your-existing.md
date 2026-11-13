@@ -28,21 +28,9 @@ If you sign up using your existing number, you'll still get many of Google
 Voice's features. Most notably, you'll get all the functionality of Google
 voicemail, as explained in this video:  
   
-[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&
-hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel
-=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http:
-//www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&fe
-ature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color
-1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.yo
-utube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=pl
-ayer_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1
-b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.co
-m/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_emb
-edded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color
-2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)  
+[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)[](http://www.youtube.com/v/Ua9Q5frlQ2M&rel=0&color1=0xb1b1b1&color2=0xcfcfcf&hl=en&feature=player_embedded&fs=1)  
   
-If you already have a Google Voice account, you can [add Google voicemail](htt
-p://www.google.com/support/voice/bin/answer.py?hl=en&answer=164652) to any
+If you already have a Google Voice account, you can [add Google voicemail](http://www.google.com/support/voice/bin/answer.py?hl=en&answer=164652) to any
 mobile phone you've linked to your account. If you're not yet using Google
 Voice, you can [request an
 invite](https://services.google.com/fb/forms/googlevoiceinvite/) or ask a

@@ -23,8 +23,7 @@ When using the simulator, hitting localhost:9000 is fine. On a device, not so
 much; you need to hit your machine. [xip.io](http://xip.io/)to the rescue!
 What it is: xip.io is a magic domain name that provides wildcard DNS for any
 IP address. We use this heavily at work if the machine we’re on isn’t hooked
-up to a subdomain or [Vagrant Share](https://www.vagrantup.com/blog/feature-
-preview-vagrant-1-5-share.html).
+up to a subdomain or [Vagrant Share](https://www.vagrantup.com/blog/feature-preview-vagrant-1-5-share.html).
 
 We can use this wildcard to have our iPhone hit our laptop’s instance of
 PonyDebugger.
@@ -35,17 +34,24 @@ workflow. Take note of your local IP.
 
 Start PonyDebugger listening on that IP:
 
-```bashponyd serve —listen-interface=192.168.1.10 ```
+```bash
+ponyd serve —listen-interface=192.168.1.10
+```
 
 For handy access, alias this command:
 
-```bashalias pony="ponyd serve --listen-interface=192.168.1.10" ```
+```bash
+alias pony="ponyd serve --listen-interface=192.168.1.10"
+```
 
 Load Pony in your browser by appending your IP to the a xip.io URL:
 <http://192.168.1.10.xip.io:9000/>
 
 To access via the simulator or a device:
 
-```swiftlet pony = PDDebugger.defaultInstance()
+```swift
+let pony = PDDebugger.defaultInstance()
 pony.connectToURL(NSURL.URLWithString("ws://192.168.1.10.xip.io:9000/device"))
-pony.enableNetworkTrafficDebugging() pony.enableCoreDataDebugging() ``` 
+pony.enableNetworkTrafficDebugging()
+pony.enableCoreDataDebugging()
+```

@@ -27,6 +27,7 @@ Features include
   * In memory feed - ${tmp}
   * google.mashups.isUserAuthenticated(): method that returns true if and only if the user is authenticated
   * centerOnLocation(address) method added to map module: Takes a string and centers on the geo encoded location that is represented by the string
+
 Bug Fixes:
 
   * Fixed IE6 error that causes fatal errors in some applications.

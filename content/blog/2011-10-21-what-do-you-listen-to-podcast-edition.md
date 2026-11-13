@@ -29,6 +29,7 @@ opinions on the new libraries or trends.  I've found a number of fun libraries
   * The changelog - Open source news [ http://thechangelog.com/](http://thechangelog.com/)
   * ATX Web Show - web stuff <http://atxwebshow.com/>
   * The javascript show* - great js news and library coverage <http://javascriptshow.com/>
+
 Non Tech
 
   * iFanboy* - Comic book news and reviews [http://ifanboy.com/](http://javascriptshow.com/)

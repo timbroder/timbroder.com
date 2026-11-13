@@ -59,5 +59,4 @@ new look
 
 
 ————  
-Written using [MarsEdit](https://itunes.apple.com/us/app/marsedit-blog-editor-
-for-wordpress/id402376225?mt=12&at=11laRZ&ct=pro)
+Written using [MarsEdit](https://itunes.apple.com/us/app/marsedit-blog-editor-for-wordpress/id402376225?mt=12&at=11laRZ&ct=pro)

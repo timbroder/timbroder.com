@@ -14,6 +14,7 @@ tags:
 ---
 
   * [T-Mobile G1 phone images leaked!](https://androidcommunity.com/t-mobile-g1-phone-images-leaked-20080830/)  
+
 ![](https://androidcommunity.com/blog/wp-content/uploads/2008/08/t-mobile-g1-htc-android-dream_s.jpg)  
   
 

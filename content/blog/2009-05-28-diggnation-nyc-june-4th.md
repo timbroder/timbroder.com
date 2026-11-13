@@ -13,9 +13,7 @@ tags:
 - digg
 ---
 
-##### Veeeeery excited about this.  [Last
-year](http://blog.gpowered.net/2008/06/live-diggnation-ny-photos.html) was a
-blast  
+##### Veeeeery excited about this.  [Last year](/2008/06/live-diggnation-ny-photos/) was a blast
 
 ##### When?
 
@@ -26,8 +24,7 @@ Thursday, June 4th, 2009
 
 Webster Hall  
 125 East 11th Street, New York City, NY  
-[view map](http://maps.google.com/?q=125%20East%2011th%20Street,%20New%20York%
-20City,%20NY)
+[view map](http://maps.google.com/?q=125%20East%2011th%20Street,%20New%20York%20City,%20NY)
 
 ##### Streaming?
 

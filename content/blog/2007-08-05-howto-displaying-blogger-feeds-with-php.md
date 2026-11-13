@@ -23,7 +23,7 @@ To start out you'll have to grab the [Zend Google data Client
 Library](http://framework.zend.com/download/gdata) and then set the
 include_path so you can use it  
 
-```PHP
+```php
 ini_set("include_path", ".:../:./include:../include:/home/gpowered/webapps/php/includes/ZendGdata-1.0.1/library");
 ```
 
@@ -32,7 +32,7 @@ We then import the parts the we'll need:
   
 
     
-```PHP 
+```php
 require_once 'Zend/Loader.php';
 Zend_Loader::loadClass('Zend_Gdata');
 Zend_Loader::loadClass('Zend_Gdata_Query');
@@ -47,7 +47,7 @@ thentication](http://code.google.com/apis/blogger/developers_guide_php.html#clie
 ClientLogin. I built a small class called gPoweredBlogger to hold the
 different parts I will need for this example.  
 
-```PHP
+```php
 class gPoweredBlogger{
     private $user;// = 'timothy.broder';
     private $pass;// = '**************';
@@ -70,7 +70,7 @@ Then we start setting up our call to the service.
   
 
     
-```PHP
+```php
 public function __construct($user, $pass, $blog_id){
     $this->user = $user;
     $this->pass = $pass;
@@ -103,7 +103,7 @@ results. Below is the function and the small response we get from it.
   
 
     
-```PHP
+```php
 private function get_total($query){
     //query for no posts
     $this->query->setParam('max-results', '0');
@@ -118,7 +118,7 @@ private function get_total($query){
 
 
 
-```XML
+```xml
 <ns0:feed xmlns:ns0="http://www.w3.org/2005/Atom">
 <ns1:totalresults xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">5</ns1:totalresults>
 <ns1:itemsperpage xmlns:ns1="http://a9.com/-/spec/opensearchrss/1.0/">0</ns1:itemsperpage>
@@ -149,7 +149,7 @@ that will make use of it.
   
 
     
-```PHP
+```php
 //show latest posts
 public function Posts(){
     return $this->ListPosts($this->total_posts);
@@ -183,7 +183,7 @@ there are multiple nodes of the same name (entry, link)
   
 
     
-```PHP
+```php
 //for links
 $curr_id = $this->total_posts - $start + 1;
 
@@ -203,7 +203,7 @@ page). I also set part of the link, as well as the page title, that I will use
 below in the HTML.  
   
 
-```PHP
+```php
 $prev = $this->total_posts - ($start - $count) + 1;
 if($prev > $total_posts){
     $prev = null;
@@ -232,7 +232,7 @@ The final part is to make a quick object that we can use in the HTML to output
 everything  
 
     
-```PHP
+```php
         $this->output = new Output($feed->entries, $title, $prev, $next, $link);
     }
 }
@@ -259,7 +259,7 @@ To the HTML!
 The first part consists of displaying the post itself, along with its relevant
 information. So lets built up our objects  
   
-```PHP
+```php
 $blog = new gPoweredBlogger('timothy.broder', '*************', '413573351281770670');
 $blog->Posts();
 
@@ -269,7 +269,7 @@ $output = $blog->output;
 Below all the php we can run through out output object and display the posts  
 
 
-```HTML
+```html
 <? foreach($output->entries as $entry){ ?>
      <h2><a href="/post/<? echo $entry->my_id ?>"><? echo $entry->title->text ?></h2></a>
      <? echo $entry->content->text;

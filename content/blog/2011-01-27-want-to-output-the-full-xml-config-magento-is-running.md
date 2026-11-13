@@ -14,7 +14,7 @@ tags:
 - php
 ---
 
-```PHP
+```php
 Mage::getConfig()-&gt;getNode()-&gt;asNiceXml('full_config.xml');
 ```
 

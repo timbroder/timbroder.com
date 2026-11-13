@@ -13,5 +13,4 @@ tags:
 - Android
 ---
 
-Well... that would [suck](http://www.talkandroid.com/124-google-android-
-delayed/)
+Well... that would [suck](http://www.talkandroid.com/124-google-android-delayed/)

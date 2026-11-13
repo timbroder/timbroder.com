@@ -21,7 +21,7 @@ This has helped me immensely in situations like "Where is this getting called fr
 
 Create a helper like so:
 
-```PHP
+```php
 class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 {
 	private function get_callstack($delim=&quot;\n&quot;) {

@@ -66,6 +66,7 @@ and you are all set.
     * Optimized progressive render (pages appear to load instantly)
     * Improved web server performance (easily sustain high traffic spikes)
     * Up to 80% Bandwidth savings via Minify and HTTP compression of HTML, CSS, JavaScript and RSS feeds
+
 Features:
 
     * Compatible with shared hosting, virtual private servers and dedicated servers / clusters

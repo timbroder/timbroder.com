@@ -8,7 +8,7 @@ tags:
 - music
 ---
 
-A few new articles popped up in my RSS feed since I [mentioned](http://www.timbroder.com/2015/07/apple-music-is-a-nightmare-and-i%E2%80%99m-done-with-it.html) Apple Music
+A few new articles popped up in my RSS feed since I [mentioned](/2015/07/apple-music-is-a-nightmare-and-im-done-with-it/) Apple Music
 
 [I got my music back. At least most of it](http://www.loopinsight.com/2015/07/24/i-got-my-music-back-at-least-most-of-it/)
 

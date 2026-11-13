@@ -43,7 +43,7 @@ plan was to load each slice into an Utterance.  When the speaking was done for
 that Utternace, queue up the next one (it should start immediatly or close to
 it). Fragments of this below: 
 
-```C
+```c
     self.speechSynthesizer = [AVSpeechSynthesizer new];
     self.speechSynthesizer.delegate = self;
  
@@ -105,7 +105,7 @@ always dealing with the first item in the queue. I really don't like it.  This
 is still broken in 7.1 beta 5. Hopefully it gets fixed. I'd like to implement
 this properly. 
 
-```C
+```c
 - (void) resetSynth
 {
     self.speechSynthesizer = [AVSpeechSynthesizer new];

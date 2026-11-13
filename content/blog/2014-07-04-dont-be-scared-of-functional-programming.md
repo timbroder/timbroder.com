@@ -11,8 +11,7 @@ wordpress_id: 1562
 category: Code
 ---
 
-This [article](http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-
-functional-programming/) made a LOT of things click for me. I hadn't quite
+This [article](http://www.smashingmagazine.com/2014/07/02/dont-be-scared-of-functional-programming/) made a LOT of things click for me. I hadn't quite
 grasped the concepts of functional programming. (I hadn't really tried to).
 It's a little long. But, worth it.
 

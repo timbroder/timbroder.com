@@ -34,6 +34,7 @@ week, but here are the basic steps
   2. Another sheet holds the full list from distro watch (366 on record at the time of this writing)
   3. I set up a dapp to take these names, and return the number of results Google would have if you searched them
   4. A python script pulls the distros out of the spreadsheet, queries the dapp, and puts the results back into another sheet
+
 I have 2 sets of results. One is a query using the vanilla list out of the
 spreadsheet. The second is appending the word Linux to the distro if it does
 not already have it as the title, I was curious as to how this would effect

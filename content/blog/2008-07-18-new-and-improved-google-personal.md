@@ -20,5 +20,4 @@ favorite addition is definitely full screen Gmail preview, which I can't get
 to at work. I wonder how long until they block it....  
   
 
-[![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8/3uHMeD_JNbY
-/s320-R/ig.JPG)](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8/Wr2BUjBqMs8/s1600-h/ig.JPG)
+[![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8/3uHMeD_JNbY/s320-R/ig.JPG)](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SID2FFUAMUI/AAAAAAAASN8/Wr2BUjBqMs8/s1600-h/ig.JPG)

@@ -48,10 +48,10 @@ problems with it aside from a few random firefox crashes.
 13. If the wind boots off of the USB stick correctly, you should see the same screen as when you had booted off the cd
 14. [Install ](https://help.ubuntu.com/community/GraphicalInstall)Ubuntu
 15. I made my partitions as follows:  
+
 |30 gig recovery partition|20 gig XP partition|15 Gig Ext4 Ubuntu Partition|4
 gig swap partition|the rest of the drive as an ext4 partition  
-	![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAA
-AAAa74/DBWWqZQOEko/s1600-h/partitions.png)
+	![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAAAAAa74/DBWWqZQOEko/s1600-h/partitions.png)
 
 
 
@@ -61,6 +61,7 @@ AAAa74/DBWWqZQOEko/s1600-h/partitions.png)
 sudo gedit /etc/apt/sources.list
 
 18. add the following:  
+
 deb http://ppa.launchpad.net/netbook-remix-team/ubuntu intrepid main  
 deb-src http://ppa.launchpad.net/netbook-remix-team/ubuntu intrepid main
 
@@ -83,6 +84,7 @@ following to tweak it some more
 
 25. Delete all the applets on the top panel by right clicking on them
 26. Add applets to the top panel so it ends up like:  
+
 Window Picker Applet | Trash Can |Notification Area | MixerApplet | Clock
 
 27. I also made alt+q the hotkey to show the desktop, makes navigating to it faster. Another option is the show desktop applet button that can be added to the top bar.  Preferences-&gt;keyboard shortcuts-&gt;"Hide all normal windows....."  

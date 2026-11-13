@@ -58,8 +58,7 @@ Out of the gate, Pay is native app only. This leaves Magento sites at a
 disadvantage. In the future I’d like to see Apple open up this functionality
 to Safari on both mobile and desktop. Pay already has one-time number
 generation. This could be implemented in the browser similar to how
-[1Password](https://itunes.apple.com/us/app/1password-password-
-manager/id443987910?mt=12&at=11laRZ&ct=pro) can inject a credit card number
+[1Password](https://itunes.apple.com/us/app/1password-password-manager/id443987910?mt=12&at=11laRZ&ct=pro) can inject a credit card number
 into a form. Until something like this happens, only sites with a native app
 siting in front of Magento’s API will be able to take advantage.  If you are
 looking to investigate this space, [meets.io](http://meets.io/), an unofficial

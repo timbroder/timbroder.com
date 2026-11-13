@@ -11,7 +11,7 @@ wordpress_id: 166
 category: Code
 ---
 
-Things have changed slightly since I [last](http://blog.gpowered.net/2008/05/why-microsoft-will-buy-facebook-and.html) wrote about this, but for the
+Things have changed slightly since I [last](/2008/05/why-microsoft-will-buy-facebook-and/) wrote about this, but for the
 better. Look like Google will be able to trawl some of Facebook [after
 all](http://www.insidefacebook.com/2008/09/12/facebook-to-publish-event-directory-for-search-engines/).  
   

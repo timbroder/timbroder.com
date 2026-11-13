@@ -38,8 +38,7 @@ different data.  For my example this would be other people's comics.  Add
 these to the basket as well (you should try to have at least 4)  
   
 
-[![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoOoUkvuhI/AAAAAAAATJ8/WgfrxcqVv4E
-/s320-R/2.jpg)](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoOoUkvuhI/AAAAAAAATJ8/ktxQucSBFxY/s1600-h/2.jpg)
+[![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoOoUkvuhI/AAAAAAAATJ8/WgfrxcqVv4E/s320-R/2.jpg)](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoOoUkvuhI/AAAAAAAATJ8/ktxQucSBFxY/s1600-h/2.jpg)
 
 Click next step, and the system will analyze your pages.  You can watch
 another demo at this point.  Now you can start selecting page elements.  The
@@ -49,8 +48,7 @@ the title of the RSS article, and the number of pulls it had, which I will use
 for the body of the article.  
   
 
-[![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoP7VrxYiI/AAAAAAAATKE/Sa8E9LiQTBU
-/s320-R/3.jpg)](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoP7VrxYiI/AAAAAAAATKE/cZegoqyOGRg/s1600-h/3.jpg)
+[![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoP7VrxYiI/AAAAAAAATKE/Sa8E9LiQTBU/s320-R/3.jpg)](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SOoP7VrxYiI/AAAAAAAATKE/cZegoqyOGRg/s1600-h/3.jpg)
 
 
 
@@ -59,8 +57,7 @@ or save you dapp.  It should have already grouped your 2 items into an RSS
 group for you.  Exit the wizard to get the RSS feed and options.  
   
 
-[![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SOoRHt1LJRI/AAAAAAAATKM/xd4VjsOeDIk
-/s320-R/4.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SOoRHt1LJRI/AAAAAAAATKM/byTDlv2rlaA/s1600-h/4.jpg)
+[![](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SOoRHt1LJRI/AAAAAAAATKM/xd4VjsOeDIk/s320-R/4.jpg)](http://2.bp.blogspot.com/_Ng3QbVQfLZ8/SOoRHt1LJRI/AAAAAAAATKM/byTDlv2rlaA/s1600-h/4.jpg)
 
   
   
@@ -74,8 +71,7 @@ have been replaced directly in this url, it might not have been clear.  The
 new Pipes URL makes it a little easier to see [http://pipes.yahoo.com/pipes/pipe.run?_id=GjdOGm9_3RGeKVooPxJ3AQ&amp;_render=rss&amp;username=broderboy](http://pipes.yahoo.com/pipes/pipe.run?_id=GjdOGm9_3RGeKVooPxJ3AQ&_render=rss&username=broderboy).  
   
 
-[![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoTMSgH6JI/AAAAAAAATKU/f6s1x0hbHF4
-/s320-R/5.jpg)](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoTMSgH6JI/AAAAAAAATKU/fxS2mt00hNc/s1600-h/5.jpg)
+[![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoTMSgH6JI/AAAAAAAATKU/f6s1x0hbHF4/s320-R/5.jpg)](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SOoTMSgH6JI/AAAAAAAATKU/fxS2mt00hNc/s1600-h/5.jpg)
 
 You can also merge multiple RSS feeds in the pipe using the Union node.  
   

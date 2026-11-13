@@ -14,8 +14,7 @@ tags:
 ---
 
 I recently received an email about someone submitting gPowered to
-[blogged.com](http://www.blogged.com/blogs/gpowered-by-the-power-of-
-google.html). To whoever submitted it, thank you so much!!  
+[blogged.com](http://www.blogged.com/blogs/gpowered-by-the-power-of-google.html). To whoever submitted it, thank you so much!!  
   
 _ Dear Timothy Broder,  
   

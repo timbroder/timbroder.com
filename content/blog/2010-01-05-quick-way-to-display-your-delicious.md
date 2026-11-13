@@ -15,7 +15,7 @@ quick, dirty, and slow with lots of tags
   
 
 
-```HTML
+```html
 <html>
 <body>
 <script type="text/javascript"> 

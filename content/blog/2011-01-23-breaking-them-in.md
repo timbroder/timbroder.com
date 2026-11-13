@@ -13,5 +13,4 @@ tags:
 - Vibrams
 ---
 
-![image](/images/2011/01/wpid-
-IMAG0003.jpg)
+![image](/images/2011/01/wpid-IMAG0003.jpg)

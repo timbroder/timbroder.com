@@ -29,6 +29,7 @@ As much as I dislike iTunes, they have got podcast management down pat
   * download episodes
   * sync with ipod
   * **after an episode has been listened to, delete from computer hard drive**
+
 That last point is the most important part, everything else can be done
 manually  
   

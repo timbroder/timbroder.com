@@ -50,8 +50,7 @@ the output of the Filter to the Pipe Output and you are done.
 ![](https://lh6.google.com/timothy.broder/RwQeq2uGXtI/AAAAAAAAMTU/zrI8IloMhiw/s400/pipe3.jpg?imgdl=1)  
   
 You can then subscribe to the output of this pipe with the reader of your
-choice. When I subscribe to my pipe's [feed](http://pipes.yahoo.com/pipes/pipe
-.run?_id=vF35LapU3BG9UzFodbq02Q&_render=rss) in Google Reader, I only see
+choice. When I subscribe to my pipe's [feed](http://pipes.yahoo.com/pipes/pipe.run?_id=vF35LapU3BG9UzFodbq02Q&_render=rss) in Google Reader, I only see
 posts that contain the word Google or google. I also could have done that as
 one filter with a regular expression, or just with "oogle".  
   

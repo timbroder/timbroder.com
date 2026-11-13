@@ -17,15 +17,9 @@ tags:
 
 What really happened:
 
-[![](http://timbroder.com/wp-
-content/uploads/2010/11/batmaninc1.jpg)](http://timbroder.com/wp-
-content/uploads/2010/11/batmaninc1.jpg)[![](http://timbroder.com/wp-
-content/uploads/2010/11/batmaninc2.jpg)](http://timbroder.com/wp-
-content/uploads/2010/11/batmaninc2.jpg)
+[![](/images/2010/11/batmaninc1.jpg)](/images/2010/11/batmaninc1.jpg)[![](/images/2010/11/batmaninc2.jpg)](/images/2010/11/batmaninc2.jpg)
 
 What SHOULD have happened:
 
-[![](http://timbroder.com/wp-
-content/uploads/2010/11/batman3.jpg)](http://timbroder.com/wp-
-content/uploads/2010/11/batman3.jpg)Thanks to [John
+[![](/images/2010/11/batman3.jpg)](/images/2010/11/batman3.jpg)Thanks to [John
 ](http://twitter.com/#!/falcore000)for the images

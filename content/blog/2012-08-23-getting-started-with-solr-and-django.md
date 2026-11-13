@@ -112,8 +112,7 @@ SearchIndex object that will be used to transpose to data to Solr. save this
 as search_indexes.py in the same folder as your models.py. The text field with
 its template will be used for full text search on Solr. The other two fields
 will be used to faceted (drill down) navigation. For more details on this
-file, check out the [haystack tutorial](http://django-
-haystack.readthedocs.org/en/latest/tutorial.html#handling-data).
+file, check out the [haystack tutorial](http://django-haystack.readthedocs.org/en/latest/tutorial.html#handling-data).
 
 ```
 class JobIndex(indexes.SearchIndex, indexes.Indexable):
@@ -133,7 +132,7 @@ naming convention: ```search/indexes/[app]/[model]_text.txt```
 
 For us, this is templates/search/indexes/jobs/job_text.txt
 
-```HTML
+```html
 {% verbatim %}
 {{ object.name }}
 {{ object.description }}
@@ -161,13 +160,12 @@ At this point there are at least two templates we'll need. One for the search
 results page, and a sub-template to represent each item we are pulling back.
 My example uses [twitter bootstrap](http://twitter.github.com/bootstrap/) for
 some layout help and styling, see my base.html
-[here](https://github.com/broderboy/django-solr-
-demo/blob/master/templates/base.html) if interested.
+[here](https://github.com/broderboy/django-solr-demo/blob/master/templates/base.html) if interested.
 
 Create templates/search/search.html This gives you a basic search form, the
 results, and pagination for a number of results
 
-```HTML
+```html
 {% verbatim %}
 {% extends 'base.html' %}
 
@@ -238,7 +236,7 @@ results, and pagination for a number of results
 
 And the templates/search/_result_object.txt
 
-```HTML
+```html
 {% verbatim %}
 {% load more_like_this %}
 
@@ -289,13 +287,13 @@ Adding Related Items is as simple as using the related_content tag in the
 haystack more_like_this tag library and tweaking out Solr config. Open up
 solrconfig.xml and add a MoreLikeThisHandler within thetag:
 
-```XML
+```xml
 <requesthandler name="/mlt" class="solr.MoreLikeThisHandler"></requesthandler>
 ```
 
 Our full _result_object.html now looks like this:
 
-```HTML
+```html
 {% verbatim %}
 {% load more_like_this %}
  
@@ -435,10 +433,7 @@ variable
 {% endverbatim %}
 ```
 
-And we're done! As I said, check out the [haystack documentation](http
-://django-haystack.readthedocs.org/en/latest/index.html) for more information.
+And we're done! As I said, check out the [haystack documentation](http://django-haystack.readthedocs.org/en/latest/index.html) for more information.
 Leave any questions in the comments and I'll be sure to answer them
 
-[![](http://timbroder.com/wp-
-content/uploads/2012/08/solr2.png)](http://timbroder.com/wp-
-content/uploads/2012/08/solr2.png)
+[![](/images/2012/08/solr2.png)](/images/2012/08/solr2.png)

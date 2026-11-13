@@ -46,7 +46,7 @@ register.filter('has_jira', has_jira)
 
 Then, in my template:
 
-```HTML
+```html
 {% verbatim %}
 {% load has_jira %}
 {% if client.path|has_jira:project.path %}
@@ -76,7 +76,7 @@ def if_or(value, arg):
 ```
 
 
-```HTML
+```html
 {% verbatim %}
 {% if True|if_and:False %}
 show

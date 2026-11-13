@@ -23,7 +23,7 @@ However, the solution in
 that thread only works if the src is right next to the frameborder. Updated
 code below if you are running into this problem 
 
-```PHP
+```php
 function add_video_wmode_transparent( $html ) {
 	$pattern = '#(src=&quot;https?://www.youtube(?:-nocookie)?.com/(?:v|embed)/([a-zA-Z0-9-]+).&quot;)#';
 	preg_match_all( $pattern, $html, $matches );

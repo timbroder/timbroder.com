@@ -33,6 +33,7 @@ traveling. I'm around now until December, I promise ;)
   * [Yahoo Traffic](http://developer.yahoo.com/traffic/index.html)
   * [Yahoo Travel](http://developer.yahoo.com/travel/)
   * [YouTube](http://code.google.com/apis/youtube/overview.html)
+
 Why it won: Mappington is the most inclusive map / location information hub I
 have ever come across. "Mappington is a user created atlas of the world." It
 covers the following:  

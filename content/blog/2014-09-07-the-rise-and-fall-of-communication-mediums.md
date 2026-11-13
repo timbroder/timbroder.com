@@ -34,7 +34,7 @@ and to work through my own problems. At some times it’s been a voice for me,
 and I’ve dabbled in commentary.  Facebook is older than this blog, but I’m
 fairly close to Twitter.  I never thought we’d see the day when Google Reader
 would shut down. These days Google doesn’t surprise me anymore. Which, should
-say something. I was a [HUGE](http://timbroder.com/2007/07/begining.html)
+say something. I was a [HUGE](/2007/07/begining/)
 Google fanboy. Since moving off blogger, I’ve managed the servers and software
 that run this blog. I plan on being around for a long time. It’s too much fun
 to stop
