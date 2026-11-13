@@ -19,7 +19,6 @@
     "test": "vitest run tests/unit",
     "test:watch": "vitest",
     "format": "prettier --write \"**/*.{js,mjs,ts,json,md}\"",
-    "baseline:capture": "node scripts/baseline/capture.ts",
     "test:smoke": "vitest run tests/smoke",
     "test:build": "vitest run tests/build",
     "test:browser": "playwright test",
