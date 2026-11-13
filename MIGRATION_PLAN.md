@@ -78,9 +78,11 @@ Previous/next links between posts are not on the live site. The post template co
 
 ### Images
 
-- 20 posts reference 45 images at `/images/...`. Those URLs return 404 on the live site, though nearly all the files are in the repo under `content/blog/images/`.
-- 90 posts embed 198 distinct images from other hosts, mostly Flickr, Blogspot and old Google photo URLs.
-- `content/blog/images/` already holds 287 files in 92 folders named after posts. They look like earlier downloads of those remote images that were never wired into the markdown.
+Stage 5 looked at every image and corrected the first count. These are the facts.
+
+- 17 posts show 41 images kept in the repo, under `content/blog/images/`. Gatsby's image plugin resizes them and serves the copies from `/static/`. The addresses the posts use, `/images/...`, return 404, and so do 18 links to full-size files.
+- 90 posts and pages show 213 distinct images from other hosts, mostly old Picasa, Blogger and Flickr addresses. About 30 of them do not show at all today: their address is broken (see the quirks below).
+- `content/blog/images/` also held 267 files in folders named after posts: earlier downloads of those remote images, never wired into the posts. 118 of them were not pictures. The most common file, saved 71 times, is the grey warning triangle Google sends in place of a picture it no longer has; others are saved error pages and 1 by 1 tracking pixels.
 
 ### Feed, SEO and scripts
 
@@ -146,6 +148,11 @@ The baseline capture in stage 1 found these. Each one becomes an expected differ
 | Some card descriptions show raw markdown where a post starts with an image. | Descriptions are plain text. |
 | A tag or category written two ways ("jira" and "Jira") has one page, which only lists the posts using the older spelling. This affects `/tag/jira/` and `/category/productivity/`. | The page lists the posts using either spelling. |
 | Posts published on the same day can be out of order, because dates are sorted as text. | Posts are sorted by their actual time. |
+| 54 posts show links and pictures as raw markdown, like `[here](http://example.com/a- b)`. The old exports wrapped long lines, also in the middle of an address, and an address with a break in it is not a link. | The addresses are whole again (131 of them), so the links work and the pictures show. |
+| A wrapped line can fall out of its list item or quote. Where a list item or quote wraps, the live site ends it and starts a paragraph, so a quote can break off in mid-sentence. | The line stays in its item or quote: 65 lines in 52 posts, and more in the posts above. A line that starts something new (a label such as "Cons", a picture, the paragraph after a recipe's ingredients) stays on its own, as on the live site. |
+| A picture kept on the site links to a resized copy under `/static/`, and gets its file name as alt text when it has none. Both come from Gatsby's image plugin. | The picture is shown as it is, with the alt text the post gives it. It links to its full-size file only where the post says so. |
+| Code fences with a language in capitals (`PHP`, `HTML`) are not highlighted. | The language names are in lower case (54 fences), so they are. |
+| Seven posts have code blocks or pictures mangled by the export: a fence that never closes and turns the rest of the post into code, screenshots indented into code blocks, a language name run together with the code. | Repaired by hand. Each is listed with its reason in `tests/lib/expected-content.ts`. |
 
 ### Where the design differs from the live site
 
@@ -207,8 +214,8 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 17. **The markdown processor is Sätteri, Astro 7's default.** Stage 2 ran it and the older remark pipeline over every post and compared the output to the live site. They tied, so the default stays. Smart punctuation is off, because the Gatsby site did not convert quotes or dashes.
 18. **Code highlighting uses Shiki with the `monokai` theme and CSS line numbers.** This is the closest match to today's Prism Okaidia. Five of the theme's colours are lightened to reach 4.5:1 contrast (`src/lib/code-theme.ts`). Fence language names are fixed in the content.
-19. **Images are served from stable URLs under `/images/`, not through Astro's image pipeline.** The feed carries full post HTML and needs image URLs that never change, and 20 posts already use this form. The cost is no automatic resizing; images are compressed once when they are added.
-20. **Image files move to `public/images/`.** Downloaded remote images go in `public/images/remote/`. A file, `content/image-sources.json`, records each original URL, its local path and whether it came from the original host, the Internet Archive or the placeholder.
+19. **Images are served from stable URLs under `/images/`, not through Astro's image pipeline.** The feed carries full post HTML and needs image URLs that never change, and 17 posts already use this form. The cost is no automatic resizing. A picture kept on the site is shown in the middle of the column and at most 630 pixels wide, as Gatsby's image plugin showed it.
+20. **Image files live in `public/images/`.** The old posts' remote images are in `public/images/remote/<post>/`. `content/image-sources.json` records each original address, its local path, how often the posts show it, and where the copy came from: the original address, an earlier download in the repo, the Internet Archive, the placeholder, or removed (a tracking pixel or a feed service's button, which was never a picture).
 
 ### Feed and SEO
 
@@ -225,7 +232,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 ### Build-time checks
 
-28. **Every build validates content,** including Netlify builds triggered by a new post or by Contentful. The build fails on a bad schema, two posts with the same URL, a redirect whose target does not exist, or a local image reference with no file. Netlify then keeps the previous deploy live.
+28. **Every build validates content,** including Netlify builds triggered by a new post or by Contentful. The build fails on a bad schema, two posts with the same URL, a redirect whose target does not exist, or a local image reference with no file (added in stage 5). Netlify then keeps the previous deploy live.
 
 ## 5. Requirements and how each is tested
 
@@ -238,16 +245,16 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 | R3 | No redirect chains or loops | Every redirect target is a real page, never another redirect | Build output |
 | R4 | Tag and category URLs unchanged | Every baseline tag and category URL exists, apart from `/tag//`; unit tests cover `kebabCase` edge cases | Unit, build output |
 | R5 | Lists show the same posts in the same order | For every list, its pages joined together equal the baseline's order for that list, and no page has more than 20 posts | Build output |
-| R6 | Post content renders the same | For all 518 posts: body text, headings, link targets, and counts of images, code blocks and embeds equal the baseline | Build output |
-| R7 | Pages look the same, and fit the screen | Each page type is opened on the live site and on the new build in the same browser, at desktop and phone width, and the two screenshots are compared. The live page is first given the intended design differences, so everything else has to match. Separately, every page is opened at both widths to check that none scrolls sideways. List pages are compared from the top, since the live ones are far longer; a post with code is compared down to its first code block. Page types: home, post, link post, post with code, tag, category, About, markdown page, 404, plus the pagination and the footer on their own. A post with an image and a post with an embedded video are added in stage 5, once images are settled. | Browser |
+| R6 | Post content renders the same | For every post and markdown page: the text, headings, links, code blocks, the number of pictures and embeds, and which paragraph or list item each piece of text is in, equal the baseline. A post may differ only in the ways listed under "Differences from the baseline that are expected", and the test checks that each difference is exactly of its kind | Build output |
+| R7 | Pages look the same, and fit the screen | Each page type is opened on the live site and on the new build in the same browser, at desktop and phone width, and the two screenshots are compared. The live page is first given the intended design differences, so everything else has to match. Separately, every page is opened at both widths to check that none scrolls sideways. List pages are compared from the top, since the live ones are far longer; a post with code is compared down to its first code block. Page types: home, post, link post, post with code, post with a picture, tag, category, About, markdown page, 404, plus the pagination and the footer on their own. No post embeds a video, so there is no sample for one. | Browser |
 | R8 | Code blocks look right | Astrobook stories for each language; reviewed by eye, then locked with screenshots. Every colour in the theme has at least 4.5:1 contrast | Browser, Unit |
 | R9 | Feed is unchanged for subscribers | Valid RSS; one item per post; every baseline guid still present; full content in every item; no relative URLs | Build output |
 | R10 | Feed is reachable | `/feed` and `/feed/` return 200 with an RSS content type | Deploy preview |
 | R11 | SEO tags and head links unchanged | Title, description, canonical, Open Graph, Twitter, structured data, RSS links, the Mastodon `rel="me"` link and `rel="prev"`/`rel="next"` equal the baseline on every page | Build output |
 | R12 | Sitemap is right | Its URLs equal the built pages, minus the 404 page and `/astrobook/` | Build output |
 | R13 | Local images load | Every local image reference in the built HTML points at a file in the build | Build output, build check |
-| R14 | No remote images remain | No `<img>` points at another host, except Contentful's CDN | Build output |
-| R15 | Dead images use the placeholder | Placeholder count equals the "gone" count in `image-sources.json` | Build output |
+| R14 | No remote images remain | No `<img>` in a post that existed at the migration points at another host, except Contentful's CDN. No page shows an address recorded in `image-sources.json` | Build output |
+| R15 | Dead images use the placeholder | The placeholder is shown exactly as often as `image-sources.json` says images are gone. Every other image in that file has a local copy or a reason for its removal | Build output |
 | R16 | Internal links work | Every internal link resolves to a page, a file or a redirect | Build output |
 | R17 | Contentful posts work | Sample responses produce pages, list entries, feed items and tags; a link post behaves like a markdown one; a post's own share image is used; a draft is hidden; markdown wins a URL clash | Unit, build output |
 | R18 | Contentful works for real | A test post published in the real space shows up on a deploy preview | Manual |
@@ -266,13 +273,21 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 
 ### Differences from the baseline that are expected
 
-Tests R6 and R11 allow these, and nothing else. They live in one file with a reason for each.
+Tests R6, R11 and R27 to R30 allow these, and nothing else. They live in `tests/lib/expected.ts` and `tests/lib/expected-content.ts`, with a reason for each.
 
 - Canonical URLs and links for the 83 re-slugged posts and the 2 pinned posts.
-- Image sources, which become local.
+- Image sources, which become local. Links to Gatsby's resized copies, which go.
 - Code block markup.
 - The broken "original article" link on the two `link: None` posts.
 - Everything in "Live-site quirks and what the new site does" in section 2, which includes three extra feed items.
+
+Three kinds of difference in post bodies came out of stage 5. The first two are checked mechanically: the test accepts a difference only if it is exactly of that kind.
+
+- **Raw markdown that now renders** (57 posts). The live text contains `[text](address)` or `![alt](address)`; the new text has the link's text, or nothing for a picture. Nothing else in the text may differ, the new link must be an address that was raw on the live site, and the number of pictures must add up.
+- **Wrapped lines kept in their list item or quote** (65 lines in 52 posts). A paragraph that follows a list item or quote on the live site is the end of that item or quote on the new one, with the same words. The number of such lines is recorded for each post.
+- **Posts repaired by hand** (12). Each has its reason next to it. They are left out of the comparison, and the test fails if one of them stops differing from the live site.
+
+The summary on a card may differ from the live site wherever the post's text is meant to: it is taken from that text.
 
 ## 6. Test layers and CI
 
@@ -421,14 +436,16 @@ Done in #137. The proposed slugs are applied; they can still be edited (see deci
 ### Stage 5: Content fidelity and images
 
 - **Work:**
-  - Run the content comparison across all 518 posts and fix what differs.
+  - Run the content comparison across every post and fix what differs.
+  - Repair what the old exports broke: paragraphs swallowed by a list, addresses split across lines.
   - Fix code fence languages.
-  - Move images to `public/images/` and fix the 20 posts.
-  - Localise the remote images, reusing the 287 files already in the repo before downloading.
+  - Move images to `public/images/`.
+  - Localise the remote images, reusing the earlier downloads in the repo that are real pictures.
   - Draw the placeholder image.
   - Rewrite links between posts.
-- **Tests added:** R6, R13, R14, R15.
+- **Tests added:** R6, R13, R14, R15. R16 no longer has a list of known broken links.
 - **Done when:** every remaining difference from the baseline is on the expected list with a reason.
+- **What happened to the 213 remote images:** 109 have a local copy (28 from the original address, 41 from earlier downloads in the repo, 40 from the Internet Archive). 90 are gone and show the placeholder, 91 times in 43 posts; all but three of those posts are from 2007 to 2009, and the images were on Picasa and Blogger accounts that no longer exist. The Archive holds nothing for them under any host name those services have used. 14 were tracking pixels or a feed service's buttons and are removed.
 
 ### Stage 6: Contentful
 
@@ -522,7 +539,7 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Every stage | Merge the stage's PR into `astro` |
 | Any time before cutover | Review `slug-cleanup.csv`, the 84 old URLs and their new slugs. Edit the `new_slug` column where one reads badly and I will re-apply it. |
 | Stage 4 | Approve the code block stories in Astrobook |
-| Stage 5 | Review the placeholder image and the list of remote images that could not be recovered |
+| Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`content/image-sources.json`, the entries with `"source": "placeholder"`) |
 | Stage 6 | Publish a test post in Contentful and check it on the deploy preview |
 | Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
 
@@ -533,6 +550,8 @@ These are deliberately left for after cutover.
 - Any other design change, including dark mode.
 - Search, comments, reading time, tables of contents or other new features.
 - Automatic image resizing.
+- Removing the 304 WordPress size variants (`photo-150x150.jpg` and the like, 28 MB) that no post uses. They moved to `public/images/` with the rest.
+- Stopping a new post from showing an image from another host. The check on remote images covers the posts that existed at the migration.
 - Cleaning legacy frontmatter out of old posts.
 - Renaming or moving content files.
 - Publishing the three never-published posts.

@@ -39,7 +39,7 @@ The capture records what the live site does, including things that are bugs. Eac
 - **`/tag/apps/` has no cards.** Its only post is one of the three unlisted posts.
 - **The 404 page highlights "Posts"** in the navigation, because `/404.html` starts with a digit.
 - **Some card descriptions show raw markdown,** where a post begins with an image.
-- **61 posts show links or pictures as raw markdown,** such as `[here](http://example.com/a- b)`. The old export wrapped long lines, also in the middle of an address, and an address with a break in it is not a link.
+- **54 posts show links or pictures as raw markdown,** such as `[here](http://example.com/a- b)`. The old export wrapped long lines, also in the middle of an address, and an address with a break in it is not a link.
 - **A wrapped line can fall out of its list item or quote.** In the old exports a list item or quote that wraps continues on the next line with no indent. The live site ends the list or quote there and starts a paragraph, so a quote can break off in mid-sentence.
 - **A picture kept on the site links to a resized copy** under `/static/`, and gets its file name as alt text when it has none. Both come from Gatsby's image plugin.
 - **`/feed` is served as `text/plain`,** and the manifest as `application/octet-stream`.
