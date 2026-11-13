@@ -36,6 +36,13 @@ describe('imageRefs', () => {
     ]);
   });
 
+  it('follows an image written with a named address', () => {
+    const source = 'An icon ![icon350x350][3] here.\n\n[3]: https://x.test/icon.png\n';
+    const [ref] = imageRefs(source);
+    expect(ref).toMatchObject({ alt: 'icon350x350', url: 'https://x.test/icon.png' });
+    expect(source.slice(ref.start, ref.end)).toBe('https://x.test/icon.png');
+  });
+
   it('tells remote addresses from local ones', () => {
     expect(isRemote('https://x.test/a.png')).toBe(true);
     expect(isRemote('//x.test/a.png')).toBe(true);

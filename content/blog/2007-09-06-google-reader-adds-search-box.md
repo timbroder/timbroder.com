@@ -20,7 +20,7 @@ for a nice lunch over at dreamworks, glancing over a few feeds (I have a LOT
 to catch up on when I get back to NY), and one jumped out at me, the Google
 Reader Team has finally added a search box to Google reader.  
   
-![](https://lh3.google.com/timothy.broder/RuBD9JE6BbI/AAAAAAAAKqA/hVp1MIIZftM/s400/tim.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
 This box will search all of your feeds! Also included in this release are:  
   

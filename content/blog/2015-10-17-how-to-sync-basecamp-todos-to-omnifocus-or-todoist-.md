@@ -20,24 +20,24 @@ Back on track. How to get Basecamp todos into my system? Again, Zapier to the re
 
 1. Create a new Zap that triggers when a new Basecamp todo is created. Have it create a new task in your system
 	
-	![](https://farm6.staticflickr.com/5713/22062008838_fe08637466_k_d.jpg)
+	![](/images/remote/2015-10-17-how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/22062008838_fe08637466_k_d.jpg)
 	
 1. Select the appropriate Basecamp account and test it
 	
-	![](https://farm6.staticflickr.com/5776/22249798545_09e03d2937_o_d.png)
+	![](/images/remote/2015-10-17-how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/22249798545_09e03d2937_o_d.png)
 	
 1. Select and test your Todoist/Omnifocus account
 
-	![](https://farm1.staticflickr.com/737/22260363271_38415f36d9_o_d.png)
+	![](/images/remote/2015-10-17-how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/22260363271_38415f36d9_o_d.png)
 	
 1. Choose your Basecamp Account, Project, and Todo list. If you want to filter even more by only items assigned to you, add a custom filter. Do this by either Assignee ID or Name
 
-	![](https://farm1.staticflickr.com/669/22063082689_9af276bb66_o_d.png)
+	![](/images/remote/2015-10-17-how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/22063082689_9af276bb66_o_d.png)
 	
 1. Match up the Basecamp data to your tool of choice. First is how I send it to Omnifocus. Note, I do need to populate the due date by hand. In both options, I add the url back to the task in Basecamp so I can easy mark it off or comment in it when I'm done. Todoist lets you be a LOT more granular and handles all of the fields so you have no manual intervetntion
 
-	![](https://farm6.staticflickr.com/5697/22062121310_feb74fe493_o_d.png)
+	![](/images/remote/2015-10-17-how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/22062121310_feb74fe493_o_d.png)
 	
-	![](https://farm1.staticflickr.com/734/22062436938_6ef239ce7f_o_d.png)
+	![](/images/remote/2015-10-17-how-to-sync-basecamp-todos-to-omnifocus-or-todoist-/22062436938_6ef239ce7f_o_d.png)
 	
 1. My tasks are now in my world. Profit.

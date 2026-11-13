@@ -58,7 +58,7 @@ Slackware Linux| 3,010,000
 MEPIS Linux| 1,640,000  
   
   
-![Distro Chart](https://spreadsheets.google.com/pub?key=p919ps7OYXvugbqx9SegSTw&oid=2&output=image)  
+![Distro Chart](/images/missing-image.svg)  
   
 Stay tuned for the code behind it!
 [Subscribe](https://feeds.feedburner.com/gPpowered) to the feed to get more

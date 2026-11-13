@@ -38,9 +38,9 @@ These daily notification were HUGE. They let me know when I should be doing thin
 
 This app was on my home screen for the duration of pregnancy
 
-![Daddy Features](https://farm1.staticflickr.com/490/19535083889_fc74ddc6d8_o_d.png)
-![Daddy Tip 1](https://farm1.staticflickr.com/341/19100803003_f49e041b03_o_d.png)
-![Daddy Tip 2](https://farm1.staticflickr.com/308/19695513376_43bb959f3a_o_d.png)
+![Daddy Features](/images/remote/2015-07-27-best-apps-for-new-dads/19535083889_fc74ddc6d8_o_d.png)
+![Daddy Tip 1](/images/remote/2015-07-27-best-apps-for-new-dads/19100803003_f49e041b03_o_d.png)
+![Daddy Tip 2](/images/remote/2015-07-27-best-apps-for-new-dads/19695513376_43bb959f3a_o_d.png)
 
 [Nurture](http://apple.co/1CHgsMa)
 
@@ -50,7 +50,7 @@ The feature I liked most about Nurture was the description of how big Charlie ac
 
 Every week I would scroll through the relevant medical and parenting articles that the app suggested. Most were very good and worth reading. I also read a few books which I'll cover in a future post.
 
-![Nurture Screenshot](https://farm1.staticflickr.com/268/19101397623_e102831237_o_d.png)
+![Nurture Screenshot](/images/remote/2015-07-27-best-apps-for-new-dads/19101397623_e102831237_o_d.png)
 
 [Full Term](http://apple.co/1O6Foxb)
 
@@ -77,15 +77,15 @@ We've only been using the Feed, Diaper, and Milestone functions so far. Photos w
 
 The killer feature of BabyConnect is it's sync capabilities. We have it set up where both Laura and I are the parents of Charlie and either of us can enter information from any device and it immediately syncs. Just in case we forgot to grab our phone for a night feeding, we also have an iPod touch sitting in the nursery with this app installed so we can track what goes on at night.  I also have notifications turned on (for now anyway) so I can see when Laura does certain things with Charlie
 
-![BabyConnect Features](https://farm1.staticflickr.com/274/19100802803_1e098e6101_o_d.png)
-![BabyConnect Chart](https://farm1.staticflickr.com/558/19726310291_212508717f_o_d.png)
+![BabyConnect Features](/images/remote/2015-07-27-best-apps-for-new-dads/19100802803_1e098e6101_o_d.png)
+![BabyConnect Chart](/images/remote/2015-07-27-best-apps-for-new-dads/19726310291_212508717f_o_d.png)
 
 [Quick Tips](http://apple.co/1CHg9kn)
 
 Great quick tips and how-to's for new dads. I find myself browsing these while I'm trying to get Charlie to calm down at night. How to deal with crying or feeding  or tutorials on holding, diaper changes, and bath time.
 
-![Quick Tips](https://farm1.staticflickr.com/483/19099268484_68f0d377cc_o_d.png)
-![How To](https://farm1.staticflickr.com/466/19721849935_d39099a900_o_d.png)
+![Quick Tips](/images/remote/2015-07-27-best-apps-for-new-dads/19099268484_68f0d377cc_o_d.png)
+![How To](/images/remote/2015-07-27-best-apps-for-new-dads/19721849935_d39099a900_o_d.png)
 
 [DayOne](http://apple.co/1CHgy6p)
 

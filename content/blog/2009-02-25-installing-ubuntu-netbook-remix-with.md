@@ -24,11 +24,11 @@ on April 23rd, and the driver support is more complete.  I haven't had many
 problems with it aside from a few random firefox crashes.  
 
 
-![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SaWunIJBkfI/AAAAAAAAa7c/XG8CFukv18E/s1600-h/Screenshot1.png)
+![](/images/missing-image.svg)
 
 
 
-![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAAAAAa74/DBWWqZQOEko/s1600-h/partitions.png)
+![](/images/missing-image.svg)
 
 1. We're going to make a bootable USB stick to install Ubuntu   
 
@@ -51,7 +51,7 @@ problems with it aside from a few random firefox crashes.
 
 |30 gig recovery partition|20 gig XP partition|15 Gig Ext4 Ubuntu Partition|4
 gig swap partition|the rest of the drive as an ext4 partition  
-	![](https://3.bp.blogspot.com/_Ng3QbVQfLZ8/SaYPBBQ2EmI/AAAAAAAAa74/DBWWqZQOEko/s1600-h/partitions.png)
+	![](/images/missing-image.svg)
 
 
 

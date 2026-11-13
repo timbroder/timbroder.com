@@ -11,4 +11,4 @@ wordpress_id: 176
 category: Code
 ---
 
-[![](https://www.geekculture.com/joyoftech/joyimages/1156.jpg)](https://www.geekculture.com/joyoftech/joyimages/1156.jpg)
+[![](/images/remote/2008-09-30-what-happens-if-you-break-nda-with/1156.jpg)](/images/remote/2008-09-30-what-happens-if-you-break-nda-with/1156.jpg)

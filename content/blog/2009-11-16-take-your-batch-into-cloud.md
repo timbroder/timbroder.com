@@ -47,11 +47,11 @@ each other
 The original code was something like:  
   
 ```
-    for users in all my users:  
-         get twitter status  
-         connect to gtalk  
-         get current status  
-         update status
+    for users in all my users:  
+         get twitter status  
+         connect to gtalk  
+         get current status  
+         update status
 ```
 
 My process for converting this to app engine tasks was as follows:  
@@ -63,23 +63,23 @@ user that it is associated with
 Skeleton Code for Step 1:
 
 ```python
-    class TaskLoader(BaseRequestHandler):
+    class TaskLoader(BaseRequestHandler):
 
-        def get(self):  
-            logging.info("Starting to load tasks %s" %
+        def get(self):  
+            logging.info("Starting to load tasks %s" %
 datetime.datetime.now())
 
-            users = Account.gql('WHERE active = :1', True)  
+            users = Account.gql('WHERE active = :1', True)  
   
-            count = 0  
-            for user in users:
+            count = 0  
+            for user in users:
 
-                send_key = # data to send to the worker  
-                taskqueue.add(url='/worker/', params={'key': send_key})
+                send_key = # data to send to the worker  
+                taskqueue.add(url='/worker/', params={'key': send_key})
 
-                count += 1  
+                count += 1  
   
-            logging.info("Ended load tasks (%d users) %s" % (count,
+            logging.info("Ended load tasks (%d users) %s" % (count,
 datetime.datetime.now()))  
 ```
   
@@ -88,17 +88,17 @@ The Url call for this method: ('/taskloader/', TaskLoader),
 The Skeleton code for step 2:  
   
 ```python
-    class TaskWorker(BaseRequestHandler):  
-         def post(self):  
-             key = self.request.get('key')
+    class TaskWorker(BaseRequestHandler):  
+         def post(self):  
+             key = self.request.get('key')
 
-             t = ''.join(["http://django.gpowered.net/xmppproxy/", key])
+             t = ''.join(["http://django.gpowered.net/xmppproxy/", key])
 
-             logging.info("URL !%s!" % t)  
-             result = urlfetch.fetch(t,  
-                     None,  
-                     urlfetch.GET,  
-                     {'Cache-Control':'no-cache,max-age=0', 'Pragma':'no-
+             logging.info("URL !%s!" % t)  
+             result = urlfetch.fetch(t,  
+                     None,  
+                     urlfetch.GET,  
+                     {'Cache-Control':'no-cache,max-age=0', 'Pragma':'no-
 cache'})  
 ```
   

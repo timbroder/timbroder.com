@@ -38,6 +38,21 @@ function holdsBlocks(el: Element): boolean {
   return el.name === 'li' && el.children.some((c) => isElement(c) && BLOCK_CHILDREN.has(c.name));
 }
 
+/**
+ * True for an image that was hosted elsewhere when the Gatsby site took its
+ * summaries. That includes the old posts' images that have since been
+ * copied into /images/remote/, and the placeholder that stands in for the
+ * ones that could not be recovered: their summaries should not change
+ * because the picture moved.
+ */
+export function wasHostedElsewhere(src: string): boolean {
+  return (
+    /^(https?:)?\/\//.test(src) ||
+    src.startsWith('/images/remote/') ||
+    src === '/images/missing-image.svg'
+  );
+}
+
 /** The text of rendered post HTML, the way the Gatsby site collected it. */
 export function plainText(html: string): string {
   const $ = cheerio.load(html, null, false);
@@ -60,7 +75,7 @@ export function plainText(html: string): string {
     // from this site does not: the Gatsby site's image plugin turned those
     // into raw HTML before the summary was taken.
     if (name === 'img') {
-      if (/^(https?:)?\/\//.test(node.attribs.src ?? '')) parts.push(node.attribs.alt ?? '');
+      if (wasHostedElsewhere(node.attribs.src ?? '')) parts.push(node.attribs.alt ?? '');
       return;
     }
     if (!MARKDOWN_TAGS.has(name)) {

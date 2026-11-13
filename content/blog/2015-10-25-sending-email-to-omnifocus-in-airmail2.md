@@ -18,4 +18,4 @@ But, I don't like the default hotkey, I just want it to be ```^O```. To get this
 3. Add an action with the Menu Title of: ```OmniFocus...```
 4. Record your keyboard shortcut to be ^O
 
-![](https://farm1.staticflickr.com/568/22484974791_0b2b82d3d6_o_d.png)
+![](/images/remote/2015-10-25-sending-email-to-omnifocus-in-airmail2/22484974791_0b2b82d3d6_o_d.png)

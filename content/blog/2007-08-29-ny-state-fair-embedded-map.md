@@ -20,21 +20,21 @@ easy as well.
   
 First stop:  
   
-![](https://lh6.google.com/timothy.broder/RtTt55E6BVI/AAAAAAAAKo0/w16pCqdM2ZU/s400/emap1.gif?imgdl=1)  
+![](/images/missing-image.svg)  
   
 Adding the second stop:  
   
-![](https://lh3.google.com/timothy.broder/RtTt6JE6BWI/AAAAAAAAKo8/gWekdVwBTkM/s400/emap2.gif?imgdl=1)  
+![](/images/missing-image.svg)  
   
 Getting the code to embed the map by clicking on "Link to this page":  
   
-![](https://lh3.google.com/timothy.broder/RtTt6JE6BXI/AAAAAAAAKpE/HbyVJXrzdoc/s400/emap3.gif?imgdl=1)  
+![](/images/missing-image.svg)  
   
 If you want, more advanced options:  
   
-![](https://lh5.google.com/timothy.broder/RtTuupE6BaI/AAAAAAAAKpg/l7pzHKuWAbo/s400/emap4.gif?imgdl=1)  
+![](/images/missing-image.svg)  
   
-![](https://lh3.google.com/timothy.broder/RtTt6JE6BZI/AAAAAAAAKpU/-pr_1w9SUe0/s400/emap5.gif?imgdl=1)  
+![](/images/missing-image.svg)  
   
 And now, the final product:  
   

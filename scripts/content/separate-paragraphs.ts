@@ -103,7 +103,10 @@ for (const file of contentFiles()) {
     // A line that had to wrap is the rest of a sentence. So is one that
     // was broken on purpose but neither ends nor starts a sentence, as in
     // a quote pasted with its line breaks.
-    let separate = !hadToWrap && (endsSentence || startsFresh);
+    // A picture on a line of its own is never the rest of a sentence, however
+    // long its address makes the line.
+    const picture = /^\[?!\[/.test(line.trim());
+    let separate = picture || (!hadToWrap && (endsSentence || startsFresh));
     const ambiguous = hadToWrap && endsSentence && startsFresh;
     const key = `${file.replace('content/', '')}:${lines[i].trim().slice(0, 30)}`;
     if (key in DECIDED) separate = DECIDED[key];

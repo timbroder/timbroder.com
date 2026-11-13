@@ -3,6 +3,7 @@ import {
   ContentError,
   categoryTerms,
   finalizePosts,
+  localImages,
   pagePath,
   paginate,
   postSlug,
@@ -158,6 +159,28 @@ describe('validatePosts', () => {
     } catch (err) {
       expect((err as Error).message.match(/^ {2}- /gm)).toHaveLength(2);
     }
+  });
+});
+
+describe('local images', () => {
+  const html =
+    '<p><img src="/images/2012/08/solr1.png" alt=""> <img src=\'/images/a%20b.png?x=1\'>' +
+    '<img src="https://example.com/c.png"><img src="//example.com/d.png"></p>';
+
+  it('finds the images served from this site', () => {
+    expect(localImages(html)).toEqual(['/images/2012/08/solr1.png', '/images/a b.png']);
+  });
+
+  it('rejects a post that shows an image with no file', () => {
+    const post = toPost(input({ id: 'a', html }));
+    expect(() =>
+      validatePosts([post], { publicFileExists: (path) => path !== '/images/a b.png' }),
+    ).toThrow(/a shows the image \/images\/a b\.png, but there is no file public\/images\/a b\.png/);
+  });
+
+  it('accepts a post whose images are all there', () => {
+    const post = toPost(input({ id: 'a', html }));
+    expect(() => validatePosts([post], { publicFileExists: () => true })).not.toThrow();
   });
 });
 

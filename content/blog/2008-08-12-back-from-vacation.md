@@ -22,13 +22,13 @@ past](/2007/09/google-books-my-library-vs-librarything/). The reasons why will b
 distant future.  
   
 
-[![Widget_logo](https://www.goodreads.com/images/widget/widget_logo.gif)](http://www.goodreads.com/user/show/1253891)
+[![Widget_logo](/images/remote/2008-08-12-back-from-vacation/widget_logo.gif)](http://www.goodreads.com/user/show/1253891)
 
   
   
   
   
-[![](https://lh6.ggpht.com/timothy.broder/SJXRQBmxkJE/AAAAAAAASaM/y38REUtNRG8/s160-c/VacationInWIldwood.jpg)](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  
+[![](/images/missing-image.svg)](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  
 ---  
 [Vacation in
 WIldwood](http://picasaweb.google.com/timothy.broder/VacationInWIldwood)  

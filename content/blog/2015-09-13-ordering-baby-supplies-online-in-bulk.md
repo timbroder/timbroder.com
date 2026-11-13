@@ -17,7 +17,7 @@ I knew there would be a good chance we'd stick with Amazon, but I wanted to chec
 
 I had high hopes for either Boxed.com who really tout their competitive prices and free shipping over $50. I have a few friends who swore by Diapers.com for their kids. Jet.com was a new player, and technically did have the lowest overall price. But, they have a secret formula that they apply to your cart which lowers the price. I really didn't like not knowing how that worked of if it would change month to month.
 
-![](https://farm6.staticflickr.com/5759/21204183788_3cc3122ec0_o_d.png)
+![](/images/remote/2015-09-13-ordering-baby-supplies-online-in-bulk/21204183788_3cc3122ec0_o_d.png)
 
 In the end, Amazon won out. We get our usual 15% off Subscribe & Save the months we receive 5+ items (you play with it and game it a little) Diapers always get 20% off. If you find yourself running low, just hit the "I need it now" button and you will get your next shipment early. Bonus points: We also have an Amazon Credit Card (that is only used at Amazon) for an additional 1-3% cash back. We let this charge up and then every few years buy something nice with it. It's how we got our [Sonos Playbar](http://amzn.to/1KgDOWb "Sonos Playbar").
 

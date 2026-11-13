@@ -22,14 +22,14 @@ I've been using it to create a custom podcast feed of random audio files that I 
 
 1. Setup Dropbox on iOS
 2. Open [this url](https://workflow.is/workflows/8e8692c8bacd4dc39c944edb18b0dea8 "this url") in Safari
-3. Tap "Get Workflow" ![](https://farm6.staticflickr.com/5690/22099535245_93b81398fb_o_d.jpg)
-4. Allow Safari to open Workflow ![](https://farm6.staticflickr.com/5711/22099516045_42ec98f0d2_o_d.png)
-5. Open the workflow in Workflow ![](https://farm6.staticflickr.com/5672/22073343796_82eb407d66_o_d.jpg)
-6. Check to see if Workflow has access to Dropbox ![](https://farm1.staticflickr.com/693/21911637698_f4f1c3f0d2_o_d.jpg)
+3. Tap "Get Workflow" ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/22099535245_93b81398fb_o_d.jpg)
+4. Allow Safari to open Workflow ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/22099516045_42ec98f0d2_o_d.png)
+5. Open the workflow in Workflow ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/22073343796_82eb407d66_o_d.jpg)
+6. Check to see if Workflow has access to Dropbox ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/21911637698_f4f1c3f0d2_o_d.jpg)
 7. Hit Done
 8. Go back into the workflow and run it
-9. Navigate to where your audio files are in dropbox ![](https://farm6.staticflickr.com/5767/21911561790_82249be6f8_o_d.png)
-10. Tap the one you want, and give it a Title ![](https://farm1.staticflickr.com/693/22109773541_ff38564705_o_d.png)
+9. Navigate to where your audio files are in dropbox ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/21911561790_82249be6f8_o_d.png)
+10. Tap the one you want, and give it a Title ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/22109773541_ff38564705_o_d.png)
 11. Go to your profile page in huffduffer and grab the RSS url for your profile
-12. Add this by URL in your podcast app of choice ![](https://farm6.staticflickr.com/5658/22087276112_010ff80060_o_d.jpg)
-13. You are done! ![](https://farm6.staticflickr.com/5771/22099817315_0cbdc22934_o_d.png)
+12. Add this by URL in your podcast app of choice ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/22087276112_010ff80060_o_d.jpg)
+13. You are done! ![](/images/remote/2015-10-11-creating-a-custom-podcast-feed-using-dropbox-and-huffduffer/22099817315_0cbdc22934_o_d.png)

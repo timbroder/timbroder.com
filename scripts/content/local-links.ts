@@ -71,6 +71,8 @@ const LINKED_PICTURE = /\[\s*!\[[^\]]*\]\(([^()\s]+)\)\s*\]\(([^()\s]+)\)/g;
 /** "](" address, with an optional title, ")". */
 const TARGET = /\]\(([^()\s]+)((?:\s+"[^"]*")?\s*\))/g;
 const AUTOLINK = /<(https?:\/\/[^>\s]+)>/g;
+/** "[name]: address" on a line of its own, for links written as [text][name]. */
+const NAMED = /^[ \t]*\[[^\]]+\]:[ \t]*<?([^\s>]+)/gm;
 
 const listOnly = process.argv.includes('--list');
 builtPages();
@@ -111,6 +113,19 @@ for (const file of contentFiles()) {
       left.add(url);
       continue;
     }
+    edits.push([start, start + url.length, local]);
+    note(url, local);
+  }
+
+  for (const match of masked.matchAll(NAMED)) {
+    const url = match[1];
+    if (!OWN_HOSTS.test(url)) continue;
+    const local = localise(url);
+    if (!local) {
+      left.add(url);
+      continue;
+    }
+    const start = match.index + match[0].lastIndexOf(url);
     edits.push([start, start + url.length, local]);
     note(url, local);
   }

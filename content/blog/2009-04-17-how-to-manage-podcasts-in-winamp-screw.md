@@ -45,7 +45,7 @@ following steps should get you up to speed on podcasting with winamp
   
   
 
-![](https://1.bp.blogspot.com/_Ng3QbVQfLZ8/SejSAesN5OI/AAAAAAAAbG8/i6n7ZuHGR7A/s1600-h/1.jpg)
+![](/images/missing-image.svg)
 
   * plug in your ipod
   * enable podcast support for the ipod
@@ -55,11 +55,11 @@ following steps should get you up to speed on podcasting with winamp
   
   
 
-![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SejS5pxj2JI/AAAAAAAAbHE/zU0cecph26A/s1600-h/2.jpg)
+![](/images/missing-image.svg)
 
   * Add your podcasts by searching for them in the directory, or adding them manually using their RSS feed  
   
   
-![](https://4.bp.blogspot.com/_Ng3QbVQfLZ8/SejTsQ-8VoI/AAAAAAAAbHM/RGPUVDtoXpI/s1600-h/3.jpg)
+![](/images/missing-image.svg)
 
 After this you should be good to go. podcasts!

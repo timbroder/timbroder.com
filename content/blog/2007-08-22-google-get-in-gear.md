@@ -35,7 +35,7 @@ in Docs and Spreadsheets first. I'm sure it would help a great deal with the
 Google Office Hacks [book](http://blogoscoped.com/archive/2007-08-08-n90.html)
 that Philipp Lenssen is writing. C'mon Google, GET IN GEAR(S)!!  
   
-![](https://lh6.google.com/timothy.broder/RsugnJE6BMI/AAAAAAAAKmo/W349O0lJ6LU/s400/zoho_gears1.jpg?imgdl=1)  
+![](/images/missing-image.svg)  
   
-![](https://lh3.google.com/timothy.broder/RsugnZE6BNI/AAAAAAAAKmw/ts_cV14F9LI/s400/zoho_gears2.jpg?imgdl=1)
+![](/images/missing-image.svg)
 

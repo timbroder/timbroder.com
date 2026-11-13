@@ -22,7 +22,7 @@ I’d rather just update the UIBarButtonItem that I already have:
 
 
 
-[![2014-07-27_1826](https://farm6.staticflickr.com/5566/14575059147_d33d111203_b.jpg)](https://www.flickr.com/photos/timothybroder/14575059147 "View
+[![2014-07-27_1826](/images/remote/2014-07-27-dismiss-a-modal-uiviewcontroller-created-in-interface-builder/14575059147_d33d111203_b.jpg)](https://www.flickr.com/photos/timothybroder/14575059147 "View
 '2014-07-27_1826' on Flickr.com" )
 
 All I needed to do, was attach the appropriate target and action to the

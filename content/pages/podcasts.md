@@ -12,9 +12,9 @@ Up until the pandemic, I co-hosted 3 podcasts on the [Tekside][7]. Combined, my 
 
 Check out the shows that [I listen to][11]
 
-![](images/gtdj.png)
+![](/images/pages/gtdj.png)
 
-![](images/st.png)
+![](/images/pages/st.png)
 
 
 [7]: http://tekside.net/show-tell/

@@ -11,4 +11,4 @@ wordpress_id: 824
 category: Comics
 ---
 
-![](http://www.igeektrooper.com/wp-content/uploads/2011/02/wolverinebatmen.jpg)
+![](/images/remote/2011-02-08-wolverine-or-2-batmen/wolverinebatmen.jpg)

@@ -13,7 +13,7 @@ I have a CKRecord type "Follow" which stores the user's ID and the ID of a frien
 
 Screenshot of record definition in CloudKit
 
-![](https://farm1.staticflickr.com/313/20186044436_b4629376af_z_d.jpg)
+![](/images/missing-image.svg)
 
 I want to query the Follow records to confirm that two users follow each other and are in fact, friends.
 

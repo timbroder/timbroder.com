@@ -24,4 +24,4 @@ your screen will open up in new tabs
 
 Demo:
 
-[![](https://img.youtube.com/vi/PltTkfuhKfM/0.jpg)](http://www.youtube.com/watch?v=PltTkfuhKfM)
+[![](/images/remote/2011-04-22-jira-tabs-open-all-those-jiras-at-once/0.jpg)](http://www.youtube.com/watch?v=PltTkfuhKfM)

@@ -19,7 +19,7 @@ system](http://android-developers.blogspot.com/2008/08/android-market-user-drive
 Eat it Apple  
 The beta version of the market will be available at launch  
   
-![](https://3.bp.blogspot.com/_-e06f1q-QQE/SLbW0tDkvKI/AAAAAAAAAF8/0eQVyZFDSCo/s320/1.png) |
-![](https://4.bp.blogspot.com/_-e06f1q-QQE/SLbW928wXxI/AAAAAAAAAGE/HbP2fKv0hJE/s320/2.png)  
-![](https://4.bp.blogspot.com/_-e06f1q-QQE/SLbXEL6PcQI/AAAAAAAAAGM/SJKe1ay0_Ws/s320/3.png) |
-![](https://1.bp.blogspot.com/_-e06f1q-QQE/SLbXI1U1D5I/AAAAAAAAAGU/PXiiPQS42q0/s320/4.png)  
+![](/images/remote/2008-09-03-android-market-user-driven-content/1.png) |
+![](/images/remote/2008-09-03-android-market-user-driven-content/2.png)  
+![](/images/remote/2008-09-03-android-market-user-driven-content/3.png) |
+![](/images/remote/2008-09-03-android-market-user-driven-content/4.png)  

@@ -11,6 +11,20 @@ html {
 }
 
 /*
+ * Pictures kept on this site sit in the middle of the column and are never
+ * wider than 630 pixels, which is how the Gatsby site showed them. The old
+ * posts' pictures that were copied from other hosts (and the placeholder
+ * for the ones that are gone) are left as they were shown there: at their
+ * own size, in the flow of the text.
+ */
+.prose img[src^='/images/']:not([src^='/images/remote/']):not([src='/images/missing-image.svg']) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(100%, 630px);
+}
+
+/*
  * Code blocks.
  *
  * The Gatsby site used Prism's Okaidia theme with line numbers. Astro

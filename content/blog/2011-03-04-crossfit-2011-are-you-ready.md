@@ -11,4 +11,4 @@ wordpress_id: 865
 category: Crossfit
 ---
 
-[![](https://img.youtube.com/vi/xqbw6hZW91k/0.jpg)](http://www.youtube.com/watch?v=xqbw6hZW91k)
+[![](/images/remote/2011-03-04-crossfit-2011-are-you-ready/0.jpg)](http://www.youtube.com/watch?v=xqbw6hZW91k)

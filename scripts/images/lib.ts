@@ -54,14 +54,25 @@ const IMAGE = new RegExp(
   'g',
 );
 
-/** Markdown images (`![alt](url)`) outside code. */
+/**
+ * Markdown images outside code: `![alt](url)`, and `![alt][name]` with its
+ * address given elsewhere as `[name]: url`.
+ */
 export function imageRefs(source: string): ImageRef[] {
+  const masked = maskCode(source);
   const refs: ImageRef[] = [];
-  for (const match of maskCode(source).matchAll(IMAGE)) {
+  for (const match of masked.matchAll(IMAGE)) {
     const start = match.index + match[0].indexOf(match[2], match[1].length + 3);
     refs.push({ url: match[2], alt: match[1], start, end: start + match[2].length });
   }
-  return refs;
+  for (const match of masked.matchAll(/!\[([^\]]*)\]\[([^\]]+)\]/g)) {
+    const name = match[2].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const definition = masked.match(new RegExp(`^[ \\t]*\\[${name}\\]:[ \\t]*<?([^\\s>]+)`, 'im'));
+    if (!definition || definition.index === undefined) continue;
+    const start = definition.index + definition[0].lastIndexOf(definition[1]);
+    refs.push({ url: definition[1], alt: match[1], start, end: start + definition[1].length });
+  }
+  return refs.sort((a, b) => a.start - b.start);
 }
 
 export const isRemote = (url: string) => /^(https?:)?\/\//i.test(url);

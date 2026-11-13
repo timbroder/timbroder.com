@@ -14,4 +14,4 @@ tags:
 - windows
 ---
 
-[![](https://imgs.xkcd.com/comics/estimation.png)](https://imgs.xkcd.com/comics/estimation.png)
+[![](/images/remote/2009-07-20-author-of-windows-file-copy-dialog/estimation.png)](/images/remote/2009-07-20-author-of-windows-file-copy-dialog/estimation.png)

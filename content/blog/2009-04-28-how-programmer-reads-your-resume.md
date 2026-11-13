@@ -11,4 +11,4 @@ wordpress_id: 202
 category: Code
 ---
 
-[![](https://www.hanovsolutions.com/resume_comic.png)](https://www.hanovsolutions.com/resume_comic.png)
+[![](/images/remote/2009-04-28-how-programmer-reads-your-resume/resume_comic.png)](/images/remote/2009-04-28-how-programmer-reads-your-resume/resume_comic.png)
