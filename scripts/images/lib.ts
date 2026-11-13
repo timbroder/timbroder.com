@@ -77,6 +77,43 @@ export function imageRefs(source: string): ImageRef[] {
 
 export const isRemote = (url: string) => /^(https?:)?\/\//i.test(url);
 
+/**
+ * Points the image at `position` in a markdown source (counting from 1) at
+ * another address. It refuses unless that image now has the address
+ * `expected`, so the wrong picture cannot be replaced by a slip of the
+ * count.
+ */
+export function setImageAddress(
+  source: string,
+  position: number,
+  expected: string,
+  replacement: string,
+): string {
+  const ref = imageRefs(source)[position - 1];
+  if (!ref) throw new Error(`There is no image ${position}`);
+  if (ref.url !== expected) {
+    throw new Error(`Image ${position} is ${ref.url}, not ${expected}`);
+  }
+  return source.slice(0, ref.start) + replacement + source.slice(ref.end);
+}
+
+/**
+ * The file name a copy of a remote image gets: its own name from the
+ * address, made safe, with the extension its content calls for.
+ */
+export function localName(url: string, type: string): string {
+  const address = new URL(url.startsWith('//') ? `https:${url}` : url);
+  let raw = address.pathname.split('/').pop() || 'image';
+  try {
+    raw = decodeURIComponent(raw);
+  } catch {
+    // Keep the name as written.
+  }
+  const dot = raw.lastIndexOf('.');
+  const stem = (dot > 0 ? raw.slice(0, dot) : raw).replace(/[^A-Za-z0-9._-]+/g, '-') || 'image';
+  return `${stem}.${type}`;
+}
+
 export interface ImageInfo {
   type: 'png' | 'jpg' | 'gif' | 'webp' | 'bmp' | 'svg';
   width: number;

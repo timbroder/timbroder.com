@@ -31,8 +31,16 @@ import {
   statSync,
   writeFileSync,
 } from 'node:fs';
-import { basename, dirname, extname, join, relative } from 'node:path';
-import { contentFiles, imageRefs, isRemote, judge, maskCode, STAND_INS } from './lib.ts';
+import { basename, dirname, join, relative } from 'node:path';
+import {
+  contentFiles,
+  imageRefs,
+  isRemote,
+  judge,
+  localName,
+  maskCode,
+  STAND_INS,
+} from './lib.ts';
 import type { Fetched } from './fetch.ts';
 
 const CACHE = 'scripts/images/.cache';
@@ -64,15 +72,24 @@ export interface Source {
    * archive: recovered from the Internet Archive.
    * placeholder: gone everywhere; the post shows the placeholder.
    * removed: never a picture; taken out of the post.
+   * google-photos: found later in Tim's own photo library and put back
+   *   with recover.ts (see RECOVER_MISSING_IMAGES.md).
    */
-  source: 'original' | 'repo' | 'archive' | 'placeholder' | 'removed';
+  source: 'original' | 'repo' | 'archive' | 'placeholder' | 'removed' | 'google-photos';
   /** The Internet Archive capture, for `archive`. */
   archived?: string;
   /** Why, for `removed`. */
   reason?: string;
   /** For `removed`: where the links around it led, which went with it. */
   links?: string[];
+  /** For `google-photos`: where it was found. */
+  note?: string;
   posts: string[];
+  /**
+   * For an image that is or was the placeholder: which image of each post
+   * it is, counting every image in the post from 1.
+   */
+  positions?: Record<string, number[]>;
   /** How many times the posts show it. */
   uses: number;
 }
@@ -132,11 +149,9 @@ for (const [from, to] of [
 const taken = new Set(walk(PUBLIC));
 function place(entry: Fetched): string {
   const post = entry.posts[0];
-  // Keep the file's own name, with the extension its content calls for.
-  const address = new URL(entry.url.startsWith('//') ? `https:${entry.url}` : entry.url);
-  const raw = decodeURIComponent(basename(address.pathname)) || 'image';
-  const stem = (extname(raw) ? raw.slice(0, -extname(raw).length) : raw).replace(/[^A-Za-z0-9._-]+/g, '-');
-  let target = join(PUBLIC, 'remote', post, `${stem}.${entry.type}`);
+  const name = localName(entry.url, entry.type!);
+  const stem = name.slice(0, name.lastIndexOf('.'));
+  let target = join(PUBLIC, 'remote', post, name);
   for (let n = 2; taken.has(target); n += 1) {
     if (readFileSync(target).equals(readFileSync(join(CACHE, entry.file!)))) return target;
     target = join(PUBLIC, 'remote', post, `${stem}-${n}.${entry.type}`);

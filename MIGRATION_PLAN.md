@@ -215,7 +215,7 @@ Each one has a reason. Where a choice depends on something I have not run yet, s
 17. **The markdown processor is Sätteri, Astro 7's default.** Stage 2 ran it and the older remark pipeline over every post and compared the output to the live site. They tied, so the default stays. Smart punctuation is off, because the Gatsby site did not convert quotes or dashes.
 18. **Code highlighting uses Shiki with the `monokai` theme and CSS line numbers.** This is the closest match to today's Prism Okaidia. Five of the theme's colours are lightened to reach 4.5:1 contrast (`src/lib/code-theme.ts`). Fence language names are fixed in the content.
 19. **Images are served from stable URLs under `/images/`, not through Astro's image pipeline.** The feed carries full post HTML and needs image URLs that never change, and 17 posts already use this form. The cost is no automatic resizing. A picture kept on the site is shown in the middle of the column and at most 630 pixels wide, as Gatsby's image plugin showed it.
-20. **Image files live in `public/images/`.** The old posts' remote images are in `public/images/remote/<post>/`. `content/image-sources.json` records each original address, its local path, how often the posts show it, and where the copy came from: the original address, an earlier download in the repo, the Internet Archive, the placeholder, or removed (a tracking pixel or a feed service's button, which was never a picture).
+20. **Image files live in `public/images/`.** The old posts' remote images are in `public/images/remote/<post>/`. `content/image-sources.json` records each original address, its local path, how often the posts show it, and where the copy came from: the original address, an earlier download in the repo, the Internet Archive, the placeholder, or removed (a tracking pixel or a feed service's button, which was never a picture). For an image that shows the placeholder it also records which image of the post it is, so that the picture can be put back if it turns up: `RECOVER_MISSING_IMAGES.md` describes how, and `scripts/images/recover.ts` does it.
 
 ### Feed and SEO
 
@@ -539,7 +539,8 @@ One more thing the preview showed: a new deploy reaches Netlify's servers over a
 | Every stage | Merge the stage's PR into `astro` |
 | Any time before cutover | Review `slug-cleanup.csv`, the 84 old URLs and their new slugs. Edit the `new_slug` column where one reads badly and I will re-apply it. |
 | Stage 4 | Approve the code block stories in Astrobook |
-| Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`content/image-sources.json`, the entries with `"source": "placeholder"`) |
+| Stage 5 | Review the placeholder image (`public/images/missing-image.svg`) and the list of remote images that could not be recovered (`node scripts/images/recover.ts --list`) |
+| Any time | Give a Claude session that can open your Google Photos the file `RECOVER_MISSING_IMAGES.md`. Most of the missing images were on Picasa, Blogger and Flickr, and their originals may be in that library. |
 | Stage 6 | Publish a test post in Contentful and check it on the deploy preview |
 | Cutover | Remove the Gatsby build plugins in Netlify; mark `gate` as a required check on `main` |
 

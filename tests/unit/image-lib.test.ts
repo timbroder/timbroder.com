@@ -1,6 +1,15 @@
 /** The helpers the image and content scripts share (scripts/images/lib.ts). */
 import { describe, expect, it } from 'vitest';
-import { imageRefs, inspectImage, isRemote, judge, maskCode, STAND_INS } from '../../scripts/images/lib.ts';
+import {
+  imageRefs,
+  inspectImage,
+  isRemote,
+  judge,
+  localName,
+  maskCode,
+  setImageAddress,
+  STAND_INS,
+} from '../../scripts/images/lib.ts';
 
 describe('maskCode', () => {
   it('blanks fenced and inline code and keeps everything else in place', () => {
@@ -47,6 +56,35 @@ describe('imageRefs', () => {
     expect(isRemote('https://x.test/a.png')).toBe(true);
     expect(isRemote('//x.test/a.png')).toBe(true);
     expect(isRemote('/images/a.png')).toBe(false);
+  });
+});
+
+describe('setImageAddress', () => {
+  const source = 'One ![a](/images/missing-image.svg) two ![b](/images/kept.png) three ![c](/images/missing-image.svg).';
+
+  it('points the image at that position at another address, and no other', () => {
+    expect(setImageAddress(source, 3, '/images/missing-image.svg', '/images/remote/post/c.png')).toBe(
+      'One ![a](/images/missing-image.svg) two ![b](/images/kept.png) three ![c](/images/remote/post/c.png).',
+    );
+  });
+
+  it('refuses when the image there is not the one expected, or there is none', () => {
+    expect(() => setImageAddress(source, 2, '/images/missing-image.svg', '/x.png')).toThrow(
+      'Image 2 is /images/kept.png, not /images/missing-image.svg',
+    );
+    expect(() => setImageAddress(source, 4, '/images/missing-image.svg', '/x.png')).toThrow(
+      'There is no image 4',
+    );
+  });
+});
+
+describe('localName', () => {
+  it("keeps the file's own name, with the extension its content calls for", () => {
+    expect(
+      localName('https://lh4.google.com/someone/abc/def/s400/blogger_down1.jpg?imgdl=1', 'png'),
+    ).toBe('blogger_down1.png');
+    expect(localName('//x.test/a/veruca%20salt.jpg', 'jpg')).toBe('veruca-salt.jpg');
+    expect(localName('https://x.test/pub?key=1&output=image', 'png')).toBe('pub.png');
   });
 });
 

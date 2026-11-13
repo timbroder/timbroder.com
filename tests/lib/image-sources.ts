@@ -8,13 +8,17 @@ export interface ImageSource {
   original: string;
   /** What the post shows now, or null when the image was removed. */
   local: string | null;
-  source: 'original' | 'repo' | 'archive' | 'placeholder' | 'removed';
+  source: 'original' | 'repo' | 'archive' | 'placeholder' | 'removed' | 'google-photos';
   archived?: string;
   reason?: string;
   /** For `removed`: where the links around it led, which went with it. */
   links?: string[];
+  /** For `google-photos`: where it was found. */
+  note?: string;
   /** The posts that show it, as file names without ".md". */
   posts: string[];
+  /** For an image that is or was the placeholder: which image of each post it is. */
+  positions?: Record<string, number[]>;
   /** How many times the posts show it. */
   uses: number;
 }
