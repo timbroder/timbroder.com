@@ -550,7 +550,7 @@ Done on 2026-11-13:
 Still to do:
 
 1. Tim: look at the real-time view in Google Analytics while loading a page of the site.
-2. Tim: check that Feedburner has picked up the new feed. An hour after the cutover it was still serving its copy of the old one.
+2. Tim: check that Feedburner has picked up the new feed. Forty minutes after the cutover it still had the copy it fetched an hour before it.
 3. Tim: resubmit the sitemap in Google Search Console.
 4. Tim: remove the Gatsby build plugins in Netlify.
 5. Tim: mark `gate` as a required check on `main`.
