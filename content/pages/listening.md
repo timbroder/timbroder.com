@@ -19,7 +19,7 @@ These are some of the podcasts I used listen to every week. Some I cherry picked
 * [B-Sides](http://relay.fm/b-sides)
 * [Back to Work](http://5by5.tv/b2w)
 * [Bitsplitting](http://bitsplitting.org/)
-* [Build Phase]()
+* Build Phase
 * [CMD+Space](http://5by5.tv/cmdspace)
 * [CocoaRadio](http://carpeaqua.com/cocoaradio)
 * [Connected](http://relay.fm/connected)
