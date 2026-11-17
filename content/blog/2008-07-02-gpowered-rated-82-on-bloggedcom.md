@@ -23,9 +23,7 @@ Our editors recently reviewed your blog and have given it an 8.2 score out of
   
 This is quite an achievement!  
   
-[ http://www.blogged.com/directory/technology](
-
-http://www.blogged.com/directory/technology)  
+[http://www.blogged.com/directory/technology](http://www.blogged.com/directory/technology)  
   
 We evaluated your blog based on the following criteria: Frequency of Updates,
 Relevance of Content, Site Design, and Writing Style.  

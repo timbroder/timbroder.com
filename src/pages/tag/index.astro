@@ -1,0 +1,30 @@
+---
+/** Every tag, with the number of posts that carry it. Linked from the footer of every page. */
+import Headline from '../../components/Headline.astro';
+import TermList from '../../components/TermList.astro';
+import Base from '../../layouts/Base.astro';
+import { tagTerms } from '../../lib/post-model.ts';
+import { getPosts } from '../../lib/posts.ts';
+
+const terms = tagTerms(await getPosts()).map((term) => ({
+  slug: term.slug,
+  name: term.name,
+  count: term.posts.length,
+}));
+const count = `${terms.length} ${terms.length === 1 ? 'tag' : 'tags'}`;
+---
+
+<Base
+  title="Tags"
+  description={`All ${count} on timbroder.com, each with the number of posts that carry it.`}
+  highlightNav={false}
+>
+  <header class="flex flex-col">
+    <Headline>Tags</Headline>
+    <p class="mb-10 max-w-2xl text-base text-zinc-600">
+      {count}, each with the number of posts that carry it. Every post is in the{' '}
+      <a href="/archive/" class="font-medium text-teal-700 underline">archive</a>.
+    </p>
+  </header>
+  <TermList root="/tag/" terms={terms} />
+</Base>

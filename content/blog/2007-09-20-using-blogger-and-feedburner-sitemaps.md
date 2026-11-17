@@ -35,7 +35,7 @@ Here is a way to make it work (assuming you already have a blog set up):
 	![](/images/missing-image.svg)  
   
 
-  3. Finally, if you want to track your blog in [Google Webmaster Tools](www.google.com/webmasters/sitemaps/) you will have to add the sitemap a little differently then normal. Add a General Web sitemap as the "rss.xml?orderby=updated" feed off of your blog. FeedBurner does not pick up this feed in the redirects, so the Google Bot will not have trouble with it.  
+  3. Finally, if you want to track your blog in [Google Webmaster Tools](https://www.google.com/webmasters/sitemaps/) you will have to add the sitemap a little differently then normal. Add a General Web sitemap as the "rss.xml?orderby=updated" feed off of your blog. FeedBurner does not pick up this feed in the redirects, so the Google Bot will not have trouble with it.  
   
      ![](/images/missing-image.svg)  
   

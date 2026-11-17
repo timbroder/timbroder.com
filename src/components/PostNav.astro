@@ -1,0 +1,49 @@
+---
+/**
+ * The way from a post to the ones beside it. The newer post is on the left
+ * and the older on the right, so that right leads back in time, as "Next"
+ * does on a list. Shows nothing for a post with no neighbour.
+ *
+ * Without these, a post was linked from the lists it is on and from little
+ * else: only one post in twenty was linked from another post.
+ */
+import type { Post } from '../lib/post-model.ts';
+
+type Neighbour = Pick<Post, 'url' | 'title'> | null;
+
+interface Props {
+  newer: Neighbour;
+  older: Neighbour;
+}
+
+const { newer, older } = Astro.props;
+const label = 'block text-sm text-zinc-500';
+const title =
+  'mt-1 block text-base font-semibold tracking-tight text-zinc-800 transition group-hover:text-teal-700';
+---
+
+{
+  (newer || older) && (
+    <nav
+      aria-label="Newer and older posts"
+      class="mt-16 grid gap-8 border-t border-zinc-100 pt-8 sm:grid-cols-2"
+    >
+      {newer && (
+        <a href={newer.url} class="group block">
+          <span class={label}>
+            <span aria-hidden="true">← </span>Newer
+          </span>
+          <span class={title}>{newer.title}</span>
+        </a>
+      )}
+      {older && (
+        <a href={older.url} class="group block sm:col-start-2 sm:text-right">
+          <span class={label}>
+            Older<span aria-hidden="true"> →</span>
+          </span>
+          <span class={title}>{older.title}</span>
+        </a>
+      )}
+    </nav>
+  )
+}

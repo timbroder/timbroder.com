@@ -1,0 +1,24 @@
+---
+/** Every post on one page, by year. Linked from the footer of every page. */
+import Headline from '../components/Headline.astro';
+import PostIndex from '../components/PostIndex.astro';
+import Base from '../layouts/Base.astro';
+import { postsByYear } from '../lib/lists.ts';
+import { getPosts } from '../lib/posts.ts';
+
+const posts = await getPosts();
+const years = postsByYear(posts);
+const count = `${posts.length} ${posts.length === 1 ? 'post' : 'posts'}`;
+const span = years.length > 1 ? `, from ${years.at(-1)!.year} to ${years[0].year}` : '';
+---
+
+<Base title="Archive" description={`Every post on timbroder.com: ${count}${span}, newest first.`} highlightNav={false}>
+  <header class="flex flex-col">
+    <Headline>Archive</Headline>
+    <p class="mb-10 max-w-2xl text-base text-zinc-600">
+      {count}, newest first. They are also listed{' '}
+      <a href="/tag/" class="font-medium text-teal-700 underline">by tag</a>.
+    </p>
+  </header>
+  <PostIndex years={years} />
+</Base>

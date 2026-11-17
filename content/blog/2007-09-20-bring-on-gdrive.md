@@ -89,7 +89,7 @@ Cons
   * contacts section felt ackward
   
   
-**[MoveDigital](www.movedigital.com/)**  
+**[MoveDigital](https://www.movedigital.com/)**  
   
 ![](/images/missing-image.svg)  
   
@@ -106,7 +106,7 @@ Cons
   * Slow uploads
   
   
-**[Omnidrive](www.omnidrive.com/)**  
+**[Omnidrive](https://www.omnidrive.com/)**  
   
 ![](/images/missing-image.svg)  
   

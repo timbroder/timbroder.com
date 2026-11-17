@@ -33,7 +33,7 @@ and sets it as your Google Talk status (away) message.
 I've been toying with [this](/2008/03/update-google-talk-status-with-twitter/) for a while now. I really wanted to launch
 twitter2gTalk as a service that anyone could use. I had the backend code all
 done and was dragging my feet writing the django front-end. I went to a
-hackathon for [Google AppEngine](code.google.com/appengine/) and converted
+hackathon for [Google AppEngine](https://code.google.com/appengine/) and converted
 most of the code to run on that. You need a Google Account to login, but then
 again, you need one to use gTalk anyway.  
   

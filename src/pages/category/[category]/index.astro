@@ -2,7 +2,7 @@
 import ListHead from '../../../components/ListHead.astro';
 import PostList from '../../../components/PostList.astro';
 import Base from '../../../layouts/Base.astro';
-import { listPages, type ListPage } from '../../../lib/lists.ts';
+import { listDescription, listPages, type ListPage } from '../../../lib/lists.ts';
 import { categoryTerms } from '../../../lib/post-model.ts';
 import { getPosts } from '../../../lib/posts.ts';
 
@@ -22,7 +22,7 @@ const { name, list } = Astro.props;
 const headline = `Category: ${name}`;
 ---
 
-<Base title={headline}>
+<Base title={headline} description={listDescription(list, `in the category ${name}`)}>
   <ListHead slot="head" list={list} />
   <PostList list={list} headline={headline} />
 </Base>

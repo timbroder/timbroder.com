@@ -2,7 +2,7 @@
 import ListHead from '../../../../components/ListHead.astro';
 import PostList from '../../../../components/PostList.astro';
 import Base from '../../../../layouts/Base.astro';
-import { listPages, listTitle, type ListPage } from '../../../../lib/lists.ts';
+import { listDescription, listPages, listTitle, type ListPage } from '../../../../lib/lists.ts';
 import { tagTerms } from '../../../../lib/post-model.ts';
 import { getPosts } from '../../../../lib/posts.ts';
 
@@ -26,7 +26,7 @@ const { name, list } = Astro.props;
 const headline = `Tag: ${name}`;
 ---
 
-<Base title={listTitle(headline, list.page)}>
+<Base title={listTitle(headline, list.page)} description={listDescription(list, `tagged ${name}`)}>
   <ListHead slot="head" list={list} />
   <PostList list={list} headline={headline} />
 </Base>

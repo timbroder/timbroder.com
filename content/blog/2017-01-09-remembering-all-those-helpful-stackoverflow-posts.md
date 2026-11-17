@@ -29,7 +29,7 @@ I wanted something that would let me search *my* collection of SO *things* so I 
 
 **The Flow**
 
-1. Use an instance of [stack2rss](stack2rss "stack2rss") to get an RSS feed of SO posts I've starred. 
+1. Use an instance of [stack2rss](https://github.com/nathan-osman/stack2rss "stack2rss") to get an RSS feed of SO posts I've starred. 
 2. Run a [Zap](https://zapier.com/ "Zap") that pulls these in and sends them to my [bookmarks](https://pinboard.in/u:broderboy/t:stackoverflow/ "bookmarks") (tagged as 'stackoverflow')
 3. Search using [Pinboard Premium](https://pinboard.in/upgrade/ "Pinboard Premium") which downloads the questions and archives them. *(this is optional)*
 

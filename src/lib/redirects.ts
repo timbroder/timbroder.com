@@ -10,6 +10,12 @@
  * - the fully percent-encoded form, for clients that encode everything
  * - both again in lowercase when the old URL has capitals, because Netlify
  *   has been sending visitors to the lowercase form
+ *
+ * Each old URL is also written with ".html" in place of its last slash.
+ * Netlify itself sends "/a/b.html" to "/a/b/" when that page exists, so the
+ * site has always answered both. Once a post moves, its old page is gone and
+ * only a rule can answer for the ".html" form. Search Console had one of
+ * these as "Not found (404)" within days of the cutover.
  */
 
 export interface Redirect {
@@ -41,6 +47,9 @@ export function requestForms(path: string): string[] {
   return [...forms];
 }
 
+/** "/2018/01/old-slug/" as "/2018/01/old-slug.html". */
+export const htmlForm = (path: string) => path.replace(/\/$/, '.html');
+
 /**
  * Redirects that are not tied to one post.
  *
@@ -48,6 +57,10 @@ export function requestForms(path: string): string[] {
  * under the month of the latest build and their URL changed every month.
  * The placeholders catch every month they have lived at. Netlify serves a
  * real page before it looks at redirects, so the posts' own URLs still work.
+ *
+ * The last one was never an address of this site. Another site links to the
+ * Kindle post with the end of the address cut off, and Search Console
+ * reported the result as "Not found (404)".
  */
 export const FIXED_REDIRECTS: Redirect[] = [
   { from: '/using-typescript/', to: '/' },
@@ -56,6 +69,7 @@ export const FIXED_REDIRECTS: Redirect[] = [
     from: '/:year/:month/games-i-was-addicted-to-in-2014/',
     to: '/2015/03/games-i-was-addicted-to-in-2014/',
   },
+  { from: '/2011/01/getting-it-onto-the-', to: '/2011/01/getting-it-onto-the-kindle/' },
 ];
 
 export function redirectsFile(
@@ -68,12 +82,18 @@ export function redirectsFile(
   ];
   const sorted = [...posts].sort((a, b) => a.url.localeCompare(b.url));
   for (const post of sorted) {
+    // When only the capitals changed, the lowercase form of the old URL is
+    // the new URL. A rule for it would point at itself, and Netlify already
+    // answers for the new URL's own ".html" form.
+    const own = new Set(
+      [post.url, htmlForm(post.url)].flatMap((path) => [encodeURI(path), fullyEncode(path)]),
+    );
     for (const from of post.redirectFrom) {
-      for (const form of requestForms(from)) {
-        // When only the capitals changed, the lowercase form of the old URL
-        // is the new URL. A rule for it would point at itself.
-        if (form === encodeURI(post.url) || form === fullyEncode(post.url)) continue;
-        lines.push(`${form}  ${post.url}  301`);
+      for (const old of [from, htmlForm(from)]) {
+        for (const form of requestForms(old)) {
+          if (own.has(form)) continue;
+          lines.push(`${form}  ${post.url}  301`);
+        }
       }
     }
   }

@@ -13,7 +13,7 @@ import { seriousViolations } from './a11y.ts';
 const STORIES_DIR = join(process.cwd(), 'dist', 'astrobook', 'stories');
 
 /** Stories that are meant to render nothing. */
-const EMPTY_STORIES = new Set(['pagination/single-page']);
+const EMPTY_STORIES = new Set(['pagination/single-page', 'post-nav/neither']);
 
 function findStories(): string[] {
   if (!existsSync(STORIES_DIR)) {

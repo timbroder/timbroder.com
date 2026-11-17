@@ -69,10 +69,12 @@ describe('redirectsFile', () => {
   );
   const rules = file.split('\n').filter((l) => l && !l.startsWith('#'));
 
-  it('writes one 301 rule per form, then the fixed rules', () => {
+  it('writes one 301 rule per form, with and without ".html", then the fixed rules', () => {
     expect(rules).toEqual([
       '/2015/10/q&a/  /2015/10/q-and-a/  301',
       '/2015/10/q%26a/  /2015/10/q-and-a/  301',
+      '/2015/10/q&a.html  /2015/10/q-and-a/  301',
+      '/2015/10/q%26a.html  /2015/10/q-and-a/  301',
       '/old/  /  301',
     ]);
   });
@@ -85,6 +87,9 @@ describe('redirectsFile', () => {
     );
     expect(caseOnly.split('\n').filter((l) => l && !l.startsWith('#'))).toEqual([
       '/2018/08/My-favorite-Keto-recipes/  /2018/08/my-favorite-keto-recipes/  301',
+      // Netlify answers for the new URL's own ".html" form, so only the old
+      // spelling needs a rule.
+      '/2018/08/My-favorite-Keto-recipes.html  /2018/08/my-favorite-keto-recipes/  301',
     ]);
   });
 

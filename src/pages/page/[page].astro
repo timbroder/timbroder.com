@@ -2,7 +2,7 @@
 import ListHead from '../../components/ListHead.astro';
 import PostList from '../../components/PostList.astro';
 import Base from '../../layouts/Base.astro';
-import { listPages, listTitle, type ListPage } from '../../lib/lists.ts';
+import { listDescription, listPages, listTitle, type ListPage } from '../../lib/lists.ts';
 import { getPosts } from '../../lib/posts.ts';
 
 export async function getStaticPaths() {
@@ -18,7 +18,7 @@ interface Props {
 const { list } = Astro.props;
 ---
 
-<Base title={listTitle('TimBroder.com Posts', list.page)} home>
+<Base title={listTitle('TimBroder.com Posts', list.page)} description={listDescription(list, 'on timbroder.com')} home>
   <ListHead slot="head" list={list} />
   <PostList list={list} />
 </Base>

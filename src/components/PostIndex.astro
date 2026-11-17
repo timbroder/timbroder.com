@@ -1,0 +1,46 @@
+---
+/**
+ * Every post under the year it was written, a date and a title to a line.
+ *
+ * The archive page shows the whole site this way. The home list only links
+ * to its next page, so before there was an archive the median post was six
+ * clicks from the home page and some were more than twenty.
+ */
+import type { YearOfPosts } from '../lib/lists.ts';
+import { isoDate, shortDate } from '../lib/site.ts';
+
+interface Props {
+  years: YearOfPosts[];
+}
+
+const { years } = Astro.props;
+---
+
+<div class="md:border-l md:border-zinc-100 md:pl-6">
+  <div class="flex max-w-3xl flex-col space-y-12">
+    {
+      years.map(({ year, posts }) => (
+        <section aria-labelledby={`year-${year}`}>
+          <h2 id={`year-${year}`} class="text-2xl font-bold tracking-tight text-zinc-800">
+            {year}
+          </h2>
+          <ul class="mt-4 space-y-3">
+            {posts.map((post) => (
+              <li class="flex gap-4">
+                <time datetime={isoDate(post.date)} class="w-14 flex-none text-sm leading-6 text-zinc-500">
+                  {shortDate(post.date)}
+                </time>
+                <a
+                  href={post.url}
+                  class="min-w-0 text-base font-medium text-zinc-800 transition hover:text-teal-700"
+                >
+                  {post.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</div>

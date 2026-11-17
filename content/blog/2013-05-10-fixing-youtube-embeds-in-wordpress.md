@@ -47,4 +47,4 @@ add_filter( 'the_content', 'add_video_wmode_transparent', 10 );
 ```
 
 New thread in the wordpress forums can be found
-[here](htp://wordpress.org/support/topic/dynamically-change-youtube-iframe-embeds-to-auto-add-transparent-mode-updated). (The original was closed)
+[here](http://wordpress.org/support/topic/dynamically-change-youtube-iframe-embeds-to-auto-add-transparent-mode-updated). (The original was closed)
