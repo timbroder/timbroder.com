@@ -26,7 +26,7 @@ going away... like next weekend (Tennessee).... and the weekend after that
   
 [Jolocate](http://www.jolocate.com/Listings.aspx)  
 APIs: [Google Maps](http://www.google.com/apis/maps/),
-[Craigslist](www.craigslist.org)  
+[Craigslist](https://www.craigslist.org)  
 The Good: Its craigslist... with a map. Or I should say its a map with
 Craiglist in it. If you've ever gone apartment hunting, you know the value of
 this. Smooth, no lag when changing grids, Craiglist opens right in the same
@@ -41,7 +41,7 @@ The Ugly: New York wasn't in the default list!
 Other contestants:  
   
 [Spell Boy Beta](http://www.google.com/ig/directory?hl=en&url=http://www.sendsome.org/spellboy/modules/google_gadget/index.xml)  
-APIs: [Google Gadgets](www.google.com/apis/gadgets/)  
+APIs: [Google Gadgets](https://www.google.com/apis/gadgets/)  
 Why it didn't make it: For on the web FireFox or Google toolbar can spell
 check all the forms for you, and if you're mail client can't spellcheck...
 well.. get a new one.  
@@ -56,7 +56,7 @@ any place to search by job? only by location and then I have to hit ctrl+F?
 [Checker-forum.de](http://www.checker-forum.de/wbblite/portal.php)  
 Small community that uses the Youtube API to show off and comment on videos in
 users profiles.  
-APIs: [Youtube](www.youtube.com/dev )  
+APIs: [Youtube](https://www.youtube.com/dev)  
 Why it didn't make it: I don't speak German  
   
 [100 Mile Diet](http://100milediet.org/map/)  
@@ -67,7 +67,7 @@ typically traveled at least 1,500 miles. Use this interactive map and the
   
 [FormSpring + Google Calendar](http://www.formspring.com/blog/2007/09/07/using-google-calendar-with-the-formspring-api/)  
 APIs: [Google
-Calendar](code.google.com/apis/calendar/developers_guide_protocol.html),
+Calendar](https://code.google.com/apis/calendar/developers_guide_protocol.html),
 formspring  
 Why it didn't make it: Formspring costs money for anything worthwhile, free
 gives u 3 forms and 50 saves per form?
