@@ -48,6 +48,10 @@ export function requestForms(path: string): string[] {
  * under the month of the latest build and their URL changed every month.
  * The placeholders catch every month they have lived at. Netlify serves a
  * real page before it looks at redirects, so the posts' own URLs still work.
+ *
+ * The last one was never an address of this site. Another site links to the
+ * Kindle post with the end of the address cut off, and Search Console
+ * reported the result as "Not found (404)".
  */
 export const FIXED_REDIRECTS: Redirect[] = [
   { from: '/using-typescript/', to: '/' },
@@ -56,6 +60,7 @@ export const FIXED_REDIRECTS: Redirect[] = [
     from: '/:year/:month/games-i-was-addicted-to-in-2014/',
     to: '/2015/03/games-i-was-addicted-to-in-2014/',
   },
+  { from: '/2011/01/getting-it-onto-the-', to: '/2011/01/getting-it-onto-the-kindle/' },
 ];
 
 export function redirectsFile(
