@@ -1,10 +1,10 @@
 /**
  * Turns a page's HTML into plain facts that can be compared.
  *
- * The same extractor runs on the live Gatsby site (to capture the baseline)
- * and on the new build (to compare against it), so it only relies on markup
- * both sides share: semantic elements, `itemprop="articleBody"`, link targets
- * and a few stable class names.
+ * It was written to read the Gatsby site and this one alike, while the two
+ * were being compared, so it only relies on markup both had: semantic
+ * elements, `itemprop="articleBody"`, link targets and a few stable class
+ * names. The build tests read the built pages through it.
  */
 import * as cheerio from 'cheerio';
 import type { AnyNode } from 'domhandler';

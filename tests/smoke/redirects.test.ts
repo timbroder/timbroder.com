@@ -6,9 +6,8 @@
  * form a browser sends and the fully percent-encoded form.
  */
 import { describe, expect, it } from 'vitest';
+import { loadCutover } from '../lib/cutover.ts';
 import { asBrowserSends, builtPages, loadRedirects } from '../lib/dist.ts';
-import { DROPPED_URLS } from '../lib/expected.ts';
-import { NOT_IN_THIS_BUILD, listPagesLeftOut, liveUrls } from '../lib/live.ts';
 
 const BASE = process.env.SMOKE_URL?.replace(/\/$/, '');
 
@@ -34,9 +33,9 @@ describe.skipIf(!BASE)('redirects on the deployed site', { retry: 2, timeout: 12
     expect(wrong).toEqual([]);
   });
 
-  it('redirects every old URL that is no longer a page, as a browser sends it', async () => {
+  it('redirects every address the Gatsby site had that is not a page now, as a browser sends it', async () => {
     const built = builtPages();
-    const moved = liveUrls().filter((url) => !built.has(url) && !(url in DROPPED_URLS));
+    const moved = loadCutover().oldAddresses.filter((url) => !built.has(url));
     expect(moved.length).toBeGreaterThan(80);
     const wrong: string[] = [];
     for (const url of moved) {
@@ -44,17 +43,6 @@ describe.skipIf(!BASE)('redirects on the deployed site', { retry: 2, timeout: 12
       if (res.status !== 301 || !built.has(target(res))) {
         wrong.push(`${url}: ${res.status} ${res.headers.get('location') ?? ''}`);
       }
-    }
-    expect(wrong).toEqual([]);
-  });
-
-  it('serves the pages that only a build with Contentful has', async () => {
-    // The local build is compared with the live site without these (see
-    // tests/lib/live.ts). The deployed site is where they exist.
-    const wrong: string[] = [];
-    for (const url of [...NOT_IN_THIS_BUILD, ...listPagesLeftOut()]) {
-      const res = await get(asBrowserSends(url));
-      if (res.status !== 200) wrong.push(`${url}: ${res.status}`);
     }
     expect(wrong).toEqual([]);
   });

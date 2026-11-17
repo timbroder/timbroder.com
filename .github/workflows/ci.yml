@@ -10,7 +10,7 @@ name: CI
 on:
   pull_request:
   push:
-    branches: [main, astro]
+    branches: [main]
 
 permissions:
   contents: read
@@ -62,7 +62,7 @@ jobs:
       - run: npm run check
       - run: npm test
       - run: npm run build
-      # Compares the build with the baseline captured from the live site.
+      # Reads the build in dist/: lists, head tags, the feed, redirects, images.
       - run: npm run test:build
 
   browser:

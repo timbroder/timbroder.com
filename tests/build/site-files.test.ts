@@ -8,11 +8,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
-import { loadSite } from '../lib/baseline.ts';
 import { DIST, builtPages, exists, readHtml } from '../lib/dist.ts';
-
-const live = loadSite();
-const liveManifest = live.manifest as Record<string, unknown>;
 
 /** The size of a PNG file, read from its header, or null if it is not one. */
 function pngSize(path: string): { width: number; height: number } | null {
@@ -23,8 +19,10 @@ function pngSize(path: string): { width: number; height: number } | null {
 const pages = [...builtPages(), '/404.html'].filter((path) => !path.startsWith('/astrobook/'));
 
 describe('robots.txt', () => {
-  it('is what the live site serves', () => {
-    expect(readHtml('/robots.txt')).toBe(live.robots);
+  it('lets every page be indexed and names the sitemap', () => {
+    expect(readHtml('/robots.txt')).toBe(
+      'User-agent: *\nDisallow:\n\nSitemap: https://timbroder.com/sitemap-index.xml\n',
+    );
   });
 
   it('names a sitemap that exists', () => {
@@ -42,16 +40,15 @@ describe('the web app manifest', () => {
     icons: { src: string; sizes: string; type: string }[];
   };
 
-  it('carries the site\'s name, not the Gatsby starter\'s', () => {
-    expect(liveManifest.name).toBe('Gatsby Starter Blog');
+  it('carries the site\'s name', () => {
     expect(manifest.name).toBe('Tim Broder .com');
     expect(manifest.short_name).toBe('Tim Broder');
   });
 
-  it('keeps the other settings of the live one', () => {
-    expect(manifest.start_url).toBe(liveManifest.start_url);
-    expect(manifest.display).toBe(liveManifest.display);
-    expect(manifest.background_color).toBe(liveManifest.background_color);
+  it('opens at the home page, in a plain window', () => {
+    expect(manifest.start_url).toBe('/');
+    expect(manifest.display).toBe('minimal-ui');
+    expect(manifest.background_color).toBe('#ffffff');
   });
 
   it('lists icons that exist, at the sizes it says', () => {

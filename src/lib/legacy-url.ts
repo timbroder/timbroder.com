@@ -1,8 +1,10 @@
 /**
- * The URL rules of the Gatsby site, kept as small pure functions.
+ * Dates and file names, read the way the site's addresses need them.
  *
- * They are used to prove that every old URL is still reachable, and to
- * generate redirects for posts whose slug has been cleaned up.
+ * A post lives at /YYYY/MM/slug/. These are the small rules behind the
+ * YYYY/MM part and behind a slug taken from a file name. The file is named
+ * for where the rules came from: the Gatsby site this one replaced, whose
+ * addresses it keeps.
  */
 
 /**
@@ -49,42 +51,4 @@ export function yearMonth(date: Date): string {
 export function fileStem(filePath: string): string {
   const name = filePath.split('/').pop() ?? filePath;
   return name.replace(/\.(md|markdown)$/, '');
-}
-
-export interface LegacyPostInput {
-  /** `slug:` from frontmatter, if any. */
-  slug?: unknown;
-  /** `date:` from frontmatter, if any. */
-  date?: unknown;
-  /** Path of the source file. */
-  filePath: string;
-}
-
-/**
- * The path Gatsby gave a post: /YYYY/MM/slug/.
- *
- * The slug is `slug:` from frontmatter, or else the file name with every
- * YYYY-MM-DD- pattern removed. A post with no date was filed under the month
- * of the build, which is why `undatedMonth` has to be supplied for those.
- */
-export function legacyPostPath(
-  post: LegacyPostInput,
-  undatedMonth?: string,
-): string {
-  const date = parseFrontmatterDate(post.date);
-  const month = date ? yearMonth(date) : undatedMonth;
-  if (!month) {
-    throw new Error(`${post.filePath} has no date and no fallback month`);
-  }
-  const slug =
-    typeof post.slug === 'string' && post.slug !== ''
-      ? post.slug
-      : fileStem(post.filePath).replace(/\d{4}-\d{2}-\d{2}-/g, '');
-  return `/${month}/${slug}/`;
-}
-
-/** The path Gatsby gave a markdown page: its `path:`, with a trailing slash. */
-export function legacyPagePath(path: string): string {
-  const withSlash = path.endsWith('/') ? path : `${path}/`;
-  return withSlash.startsWith('/') ? withSlash : `/${withSlash}`;
 }

@@ -1,5 +1,5 @@
 /**
- * URL helpers shared by the baseline capture and the tests.
+ * URL helpers for the tests.
  *
  * Paths are always stored decoded (so `’` and `|` are readable) and with a
  * leading slash.

@@ -27,8 +27,6 @@ playwright-report/
 # Screenshots only compare on the system that took them; Linux ones are stored.
 tests/browser/__screenshots__/darwin/
 tests/browser/__screenshots__/win32/
-# Screenshots of the live site, taken fresh on every run.
-tests/browser/__screenshots__/**/live/
 
 # Downloaded images waiting to be applied (scripts/images/fetch.ts).
 scripts/images/.cache/

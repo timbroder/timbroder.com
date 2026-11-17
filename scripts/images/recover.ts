@@ -23,8 +23,7 @@
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join } from 'node:path';
-import { imageRefs, inspectImage, judge, localName, setImageAddress } from './lib.ts';
-import type { Source } from './apply.ts';
+import { imageRefs, inspectImage, judge, localName, setImageAddress, type Source } from './lib.ts';
 
 const SOURCES = 'content/image-sources.json';
 const PLACEHOLDER = '/images/missing-image.svg';

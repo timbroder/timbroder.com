@@ -1,22 +1,19 @@
 /**
- * R9: the feed is unchanged for the people subscribed to it.
+ * R9: the feed.
  *
- * A feed reader knows a post by its guid. If one changed, every subscriber
- * would see that post again as new, so every guid in the live feed has to
- * be in the new one.
+ * A feed reader knows a post by its guid, so a guid must never change. The
+ * guids the feed had when this site replaced the Gatsby site are checked in
+ * tests/build/cutover.test.ts; the rule they follow is in src/lib/feed.ts.
  */
 import * as cheerio from 'cheerio';
 import sax from 'sax';
 import { describe, expect, it } from 'vitest';
-import { liveFeed } from '../lib/live.ts';
 import { builtPages, exists, readHtml } from '../lib/dist.ts';
-import { isNewlyListed } from '../lib/expected.ts';
 import { extractFeed } from '../lib/extract.ts';
 
 const SITE = 'https://timbroder.com';
 const xml = readHtml('/feed');
 const feed = extractFeed(xml);
-const live = liveFeed();
 
 const $ = cheerio.load(xml, { xml: true });
 const contents = $('item')
@@ -41,32 +38,28 @@ describe('R9: the feed', () => {
     expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true);
   });
 
-  it('has the same title, description and link as the live feed', () => {
-    expect(feed.title).toBe(live.title);
-    expect(feed.description).toBe(live.description);
-    expect(feed.link).toBe(live.link);
+  it('has the title, description and link subscribers know it by', () => {
+    expect(feed.title).toBe('TimBroder.com RSS Feed');
+    expect(feed.description).toBe('Tim Broder is a creative technologist');
+    expect(feed.link).toBe(SITE);
   });
 
   it('has one item for every post', () => {
     expect(feed.items.map((item) => new URL(item.link).pathname).sort()).toEqual([...posts].sort());
   });
 
-  it('keeps every guid of the live feed', () => {
-    const guids = new Set(feed.items.map((item) => item.guid));
-    expect(live.items.map((item) => item.guid).filter((guid) => !guids.has(guid))).toEqual([]);
-    expect(guids.size).toBe(feed.items.length);
+  it('gives every item a guid of its own', () => {
+    expect(new Set(feed.items.map((item) => item.guid)).size).toBe(feed.items.length);
+    expect(feed.items.filter((item) => !item.guid.startsWith(`${SITE}/`))).toEqual([]);
   });
 
-  it('adds only the posts the live feed left out', () => {
-    const known = new Set(live.items.map((item) => item.guid));
-    const added = feed.items.filter((item) => !known.has(item.guid));
-    expect(added.length).toBe(3);
-    expect(added.filter((item) => !isNewlyListed(new URL(item.link).pathname))).toEqual([]);
-  });
-
-  it('keeps the date of every item', () => {
-    const dates = new Map(feed.items.map((item) => [item.guid, item.pubDate]));
-    expect(live.items.filter((item) => dates.get(item.guid) !== item.pubDate)).toEqual([]);
+  it('gives every item the date its post shows', () => {
+    const wrong = feed.items.filter((item) => {
+      const html = readHtml(new URL(item.link).pathname);
+      const day = cheerio.load(html)('main article header time').attr('datetime');
+      return item.pubDate?.slice(0, 10) !== day;
+    });
+    expect(wrong.map((item) => item.link)).toEqual([]);
   });
 
   it('lists the newest post first', () => {

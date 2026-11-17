@@ -1,14 +1,15 @@
 /**
  * Smoke tests against a deployed copy of the site.
  *
- * These cover what only exists on Netlify: redirects, headers and 404
- * handling. They run against a deploy preview in CI and against production
- * after cutover.
+ * These cover what only exists on Netlify: redirects, headers, 404
+ * handling and the posts written in Contentful. They run against a deploy
+ * preview in CI. Run `npm run build` first: some of them compare the
+ * deployed site with the local build.
  *
  *   SMOKE_URL=https://deploy-preview-123--funny-meringue-5e00b8.netlify.app npm run test:smoke
  */
 import { describe, expect, it } from 'vitest';
-import { CONTENTFUL_ON_LIVE } from '../lib/expected.ts';
+import { builtPages } from '../lib/dist.ts';
 
 const BASE = process.env.SMOKE_URL?.replace(/\/$/, '');
 
@@ -29,8 +30,9 @@ describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
     expect(await res.text()).toContain('<h1');
   });
 
-  // R10. Feed readers have both addresses.
-  it.each(['/feed', '/feed/'])('serves the feed as RSS at %s', async (path) => {
+  // R10. Feed readers have both addresses. The feed is a large file, and
+  // just after a deploy Netlify can take twenty seconds to send it.
+  it.each(['/feed', '/feed/'])('serves the feed as RSS at %s', { timeout: 60_000 }, async (path) => {
     const res = await get(path);
     expect(res.status).toBe(200);
     expect(res.headers.get('content-type')).toContain('application/rss+xml');
@@ -62,26 +64,45 @@ describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
   });
 
   // R18. Only a build on Netlify has the Contentful settings, so this is
-  // where the posts written in Contentful can be checked.
-  describe('posts written in Contentful', () => {
-    it('were read from the real space', async () => {
+  // where the posts written in Contentful can be checked. They are the
+  // posts the deployed site has and the local build of the same commit does
+  // not; nobody has to list them.
+  describe('posts written in Contentful', { timeout: 60_000 }, () => {
+    const POST = /^\/\d{4}\/\d{2}\/[^/]+\/$/;
+
+    async function fromContentful(): Promise<string[]> {
+      const sitemap = await (await get('/sitemap-0.xml')).text();
+      const deployed = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) =>
+        decodeURI(new URL(match[1].replace(/&amp;/g, '&')).pathname),
+      );
+      return deployed.filter((path) => POST.test(path) && !builtPages().has(path));
+    }
+
+    it('were read from the real space, and all of them are published', async () => {
       const html = await (await get('/')).text();
       const status = html.match(/<meta name="build-contentful" content="([^"]*)"/)?.[1];
-      const count = Number(status?.match(/^api: (\d+) posts?$/)?.[1]);
-      expect(status, 'the build-contentful tag').toMatch(/^api: /);
-      expect(count).toBeGreaterThanOrEqual(CONTENTFUL_ON_LIVE.length);
+      expect(status, 'the build-contentful tag').toMatch(/^api: \d+ posts?$/);
+      // If these differ, the local build is not of the commit that is deployed.
+      expect((await fromContentful()).length).toBe(Number(status!.match(/\d+/)![0]));
     });
 
-    it.each(CONTENTFUL_ON_LIVE)('shows %s, on the home list too', async (path) => {
-      const res = await get(path);
-      expect(res.status).toBe(200);
-      expect(await res.text()).toContain('itemprop="articleBody"');
-      expect(await (await get('/')).text()).toContain(`href="${path}"`);
+    it('have a page each', async () => {
+      const wrong: string[] = [];
+      for (const path of await fromContentful()) {
+        const res = await get(encodeURI(path));
+        if (res.status !== 200 || !(await res.text()).includes('itemprop="articleBody"')) {
+          wrong.push(`${path}: ${res.status}`);
+        }
+      }
+      expect(wrong).toEqual([]);
     });
 
-    it.each(CONTENTFUL_ON_LIVE)('keeps the guid the live feed gives %s', async (path) => {
+    it('are in the feed, with the guid the Gatsby site gave a Contentful post', async () => {
       const xml = await (await get('/feed')).text();
-      expect(xml).toContain(`<guid isPermaLink="false">https://timbroder.com${path}</guid>`);
+      const missing = (await fromContentful()).filter(
+        (path) => !xml.includes(`<guid isPermaLink="false">https://timbroder.com${path}</guid>`),
+      );
+      expect(missing).toEqual([]);
     });
   });
 

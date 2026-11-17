@@ -213,3 +213,37 @@ export function judge(data: Buffer, standIns: Record<string, string> = STAND_INS
   }
   return { ok: true, info, sha1: hash };
 }
+
+/** One entry of content/image-sources.json: an image a post used to show from another host. */
+export interface Source {
+  /** The address the post used to show. */
+  original: string;
+  /** What the post shows now, or null when the image was removed. */
+  local: string | null;
+  /**
+   * original: downloaded from the original address.
+   * repo: a copy that was already in this repository.
+   * archive: recovered from the Internet Archive.
+   * placeholder: gone everywhere; the post shows the placeholder.
+   * removed: never a picture; taken out of the post.
+   * google-photos: found later in Tim's own photo library and put back
+   *   with recover.ts (see RECOVER_MISSING_IMAGES.md).
+   */
+  source: 'original' | 'repo' | 'archive' | 'placeholder' | 'removed' | 'google-photos';
+  /** The Internet Archive capture, for `archive`. */
+  archived?: string;
+  /** Why, for `removed`. */
+  reason?: string;
+  /** For `removed`: where the links around it led, which went with it. */
+  links?: string[];
+  /** For `google-photos`: where it was found. */
+  note?: string;
+  posts: string[];
+  /**
+   * For an image that is or was the placeholder: which image of each post
+   * it is, counting every image in the post from 1.
+   */
+  positions?: Record<string, number[]>;
+  /** How many times the posts show it. */
+  uses: number;
+}
