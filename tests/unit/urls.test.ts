@@ -21,6 +21,9 @@ describe('classifyPath', () => {
     ['/404.html', 'notfound'],
     ['/projects/', 'page'],
     ['/podcasts-i-listen-to/', 'page'],
+    // The archive and the tag index list posts and tags, but are not paged lists.
+    ['/archive/', 'page'],
+    ['/tag/', 'page'],
   ])('%s is a %s page', (path, type) => {
     expect(classifyPath(path)).toBe(type);
   });

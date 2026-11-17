@@ -9,7 +9,7 @@
 import { describe, expect, it } from 'vitest';
 import { builtPages, readList, readPage } from '../lib/dist.ts';
 import { normalizeText, type CardFacts, type PostFacts } from '../lib/extract.ts';
-import { listRoot, pageNumber } from '../lib/urls.ts';
+import { classifyPath, isListType, listRoot, pageNumber } from '../lib/urls.ts';
 
 const built = builtPages();
 const POST = /^\/\d{4}\/\d{2}\/[^/]+\/$/;
@@ -22,10 +22,13 @@ for (const url of built) {
   posts.set(url, { ...page.post!, title: page.chrome.heading });
 }
 
-/** The pages of every list, by the list's first page. */
+/**
+ * The pages of every list, by the list's first page. The tag index at /tag/
+ * is not one: it lists tags, not posts (see finding-posts.test.ts).
+ */
 const lists = new Map<string, string[]>();
 for (const url of built) {
-  if (url !== '/' && !/^\/(page|tag|category)\//.test(url)) continue;
+  if (!isListType(classifyPath(url))) continue;
   const root = listRoot(url);
   lists.set(root, [...(lists.get(root) ?? []), url]);
 }

@@ -17,6 +17,14 @@ export const SITE = {
     { title: 'Talks', href: '/talks/' },
     { title: 'About', href: '/about/' },
   ],
+  /**
+   * Shown in the footer after the navigation. They put every post and every
+   * tag page two clicks from any page of the site.
+   */
+  footerNav: [
+    { title: 'Archive', href: '/archive/' },
+    { title: 'Tags', href: '/tag/' },
+  ],
 } as const;
 
 /** "November 11, 2026", in UTC so it does not depend on where the build runs. */
@@ -29,6 +37,17 @@ const DATE_FORMAT = new Intl.DateTimeFormat('en-US', {
 
 export function formatDate(date: Date): string {
   return DATE_FORMAT.format(date);
+}
+
+/** "Nov 11", in UTC, for lists where the year is given once above. */
+const SHORT_DATE_FORMAT = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+
+export function shortDate(date: Date): string {
+  return SHORT_DATE_FORMAT.format(date);
 }
 
 /** "2026-11-11", in UTC. */

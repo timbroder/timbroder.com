@@ -1,0 +1,32 @@
+---
+/**
+ * Tags as pills, each with the number of posts that carry it. The pills
+ * are the ones at the foot of a post, with a count added.
+ */
+interface Props {
+  /** A term's page is at `${root}${slug}/`. */
+  root: string;
+  terms: { slug: string; name: string; count: number }[];
+}
+
+const { root, terms } = Astro.props;
+---
+
+<ul class="flex flex-wrap gap-2">
+  {
+    terms.map((term) => (
+      <li>
+        <a
+          href={`${root}${term.slug}/`}
+          class="inline-flex items-center gap-2 rounded-full bg-zinc-800 px-3 py-0.5 text-xs font-medium text-white transition hover:bg-zinc-700"
+        >
+          <span>{term.name}</span>
+          <span class="text-zinc-300">
+            {term.count}
+            <span class="sr-only">{term.count === 1 ? 'post' : 'posts'}</span>
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>

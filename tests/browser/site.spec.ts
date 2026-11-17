@@ -16,6 +16,8 @@ const PAGE_TYPES = {
   category: '/category/crossfit/',
   about: '/about/',
   'markdown page': '/projects/',
+  archive: '/archive/',
+  'tag index': '/tag/',
   'not found': '/404.html',
 };
 
@@ -74,6 +76,49 @@ test.describe('pagination', () => {
   test('a paged list highlights nothing in the header', async ({ page }) => {
     await page.goto('/page/2/');
     await expect(page.locator('nav[aria-label="Main"] [aria-current]')).toHaveCount(0);
+  });
+});
+
+test.describe('ways to a post', () => {
+  test('the footer leads to the archive, and the archive to a post', async ({ page }) => {
+    await page.goto('/about/');
+    await page.getByRole('contentinfo').getByRole('link', { name: 'Archive' }).click();
+    await expect(page).toHaveURL(/\/archive\/$/);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText('Archive');
+
+    const first = page.locator('main li a').first();
+    const title = (await first.innerText()).trim();
+    await first.click();
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(title);
+  });
+
+  test('the footer leads to the tag index, and a tag to its posts', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('contentinfo').getByRole('link', { name: 'Tags' }).click();
+    await expect(page).toHaveURL(/\/tag\/$/);
+
+    await page.locator('main li a').first().click();
+    await expect(page).toHaveURL(/\/tag\/[^/]+\/$/);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(/^Tag: /);
+  });
+
+  test('"Older" and "Newer" on a post lead to the posts beside it', async ({ page }) => {
+    await page.goto('/');
+    const [newest, second] = await page.locator('main article h2 a').evaluateAll((links) =>
+      links.slice(0, 2).map((link) => link.getAttribute('href')),
+    );
+    await page.goto(newest!);
+    const beside = page.getByRole('navigation', { name: 'Newer and older posts' });
+    // Nothing is newer than the newest post.
+    await expect(beside.getByRole('link', { name: /Newer/ })).toHaveCount(0);
+
+    await beside.getByRole('link', { name: /Older/ }).click();
+    await expect(page).toHaveURL(new RegExp(`${second}$`));
+    await page
+      .getByRole('navigation', { name: 'Newer and older posts' })
+      .getByRole('link', { name: /Newer/ })
+      .click();
+    await expect(page).toHaveURL(new RegExp(`${newest}$`));
   });
 });
 

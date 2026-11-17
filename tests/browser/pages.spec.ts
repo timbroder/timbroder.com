@@ -6,9 +6,13 @@
  * same pinned container as the story screenshots (see playwright.config.ts).
  *
  * Every page here is one that a new post does not change: single posts,
- * lists of old tags and categories, and the standalone pages. The home list
- * is left out on purpose, since its cards and its page count change with
- * every post; its parts are covered by the component stories.
+ * lists of old tags and categories, and the standalone pages. The home
+ * list, the archive and the tag index are left out on purpose, since they
+ * change with every post; their parts are covered by the component stories.
+ *
+ * A post shows the titles of the posts beside it. None of the posts here is
+ * the newest, so a new post does not become their neighbour; only a post
+ * dated between one of them and its neighbour would change its picture.
  *
  * To accept a deliberate change of design: `npm run build`, then
  * `npm run test:browser:linux -- pages --update-snapshots`, and commit the
