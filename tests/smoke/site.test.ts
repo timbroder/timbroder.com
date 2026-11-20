@@ -10,6 +10,7 @@
  */
 import { describe, expect, it } from 'vitest';
 import { builtPages } from '../lib/dist.ts';
+import { checkLinks } from '../lib/links.ts';
 
 const BASE = process.env.SMOKE_URL?.replace(/\/$/, '');
 
@@ -103,6 +104,22 @@ describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
         (path) => !xml.includes(`<guid isPermaLink="false">https://timbroder.com${path}</guid>`),
       );
       expect(missing).toEqual([]);
+    });
+
+    // R16. The local build has no page for these posts, so the build test
+    // leaves every link to a post it cannot find for here. A link with a
+    // mistake in it gets the 404 page.
+    it('are where the links to them point', async () => {
+      const wrong: Record<string, string> = {};
+      for (const { href, request, pages } of checkLinks().forDeployedSite) {
+        const res = await fetch(`${BASE}${request}`, {
+          headers: { 'user-agent': 'timbroder.com-smoke-test' },
+        });
+        if (res.status !== 200 || !(await res.text()).includes('itemprop="articleBody"')) {
+          wrong[href] = `${res.status}, linked from ${pages.join(', ')}`;
+        }
+      }
+      expect(wrong).toEqual({});
     });
   });
 
