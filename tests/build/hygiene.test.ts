@@ -4,7 +4,8 @@
  * R19: Google Analytics is on every page of the site, once.
  * R20: the site's own pages carry no other JavaScript. The only scripts are
  * the one that starts Google Analytics and, on a post, the structured data
- * that describes it to search engines (which is data, not a program).
+ * that describes it to search engines (which is data, not a program). The
+ * search page is the one exception: it runs the search, in one script.
  * R21: the component library is public but kept out of search engines.
  */
 import { readFileSync } from 'node:fs';
@@ -17,6 +18,7 @@ const all = [...builtPages(), '/404.html'];
 const sitePages = all.filter((path) => !path.startsWith('/astrobook/'));
 const libraryPages = all.filter((path) => path.startsWith('/astrobook/'));
 const isPost = (path: string) => /^\/\d{4}\/\d{2}\/[^/]+\/$/.test(path);
+const SEARCH = '/search/';
 
 /** The scripts of a page, apart from any a post's author wrote into the post long ago. */
 function scriptsOf(path: string) {
@@ -67,19 +69,34 @@ describe('R20: no other JavaScript on the site\'s own pages', () => {
     const wrong = sitePages.filter((path) => {
       const kinds = scriptsOf(path)
         .map((script) =>
-          script.src
-            ? `file ${script.src}`
-            : script.type === 'application/ld+json'
-              ? 'structured data'
-              : script.text.includes(ANALYTICS_ID)
-                ? 'analytics'
-                : 'other',
+          // The search page's own script, built by Astro into a file of its own.
+          path === SEARCH && script.type === 'module' && script.src?.startsWith('/_astro/search.')
+            ? 'search'
+            : script.src
+              ? `file ${script.src}`
+              : script.type === 'application/ld+json'
+                ? 'structured data'
+                : script.text.includes(ANALYTICS_ID)
+                  ? 'analytics'
+                  : 'other',
         )
         .sort();
-      const expected = isPost(path) ? ['analytics', 'structured data'] : ['analytics'];
+      const expected = isPost(path)
+        ? ['analytics', 'structured data']
+        : path === SEARCH
+          ? ['analytics', 'search']
+          : ['analytics'];
       return JSON.stringify(kinds) !== JSON.stringify(expected);
     });
     expect(wrong).toEqual([]);
+  });
+
+  it('runs the search with a script that exists, and loads the index only when asked', () => {
+    const [script] = scriptsOf(SEARCH).filter((candidate) => candidate.type === 'module');
+    const code = readFileSync(`dist${script.src}`, 'utf8');
+    // The index is fetched by the script when someone searches, never by the page.
+    expect(code).toContain('/pagefind/pagefind.js');
+    expect(readHtml(SEARCH)).not.toContain('pagefind');
   });
 
   it('has structured data that is valid JSON and cannot end its own element', () => {

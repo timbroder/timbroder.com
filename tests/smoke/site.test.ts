@@ -123,6 +123,22 @@ describe.skipIf(!BASE)('deployed site', { retry: 2 }, () => {
     });
   });
 
+  // The index is made by the build on Netlify, which is the one with the
+  // posts written in Contentful. Those can only be counted here.
+  it('can search every post, the ones written in Contentful included', { timeout: 60_000 }, async () => {
+    expect((await get('/pagefind/pagefind.js')).status).toBe(200);
+    const entry = (await (await get('/pagefind/pagefind-entry.json')).json()) as {
+      languages: Record<string, { page_count: number }>;
+    };
+    const searchable = Object.values(entry.languages).reduce((sum, { page_count }) => sum + page_count, 0);
+    const sitemap = await (await get('/sitemap-0.xml')).text();
+    const posts = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].filter((match) =>
+      /^\/\d{4}\/\d{2}\/[^/]+\/$/.test(new URL(match[1].replace(/&amp;/g, '&')).pathname),
+    );
+    expect(posts.length).toBeGreaterThan(500);
+    expect(searchable).toBe(posts.length);
+  });
+
   // R26.
   it('returns 404 for an unknown URL, with the site\'s own page', async () => {
     const res = await get('/this-page-does-not-exist/');

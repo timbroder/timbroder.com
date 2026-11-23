@@ -40,13 +40,13 @@ The site will be available at `http://localhost:4321`. The component library is 
 
 | Command | Description |
 |---------|-------------|
-| `npm run build` | Build the production site into `dist/` |
+| `npm run build` | Build the production site into `dist/`, with its search index in `dist/pagefind/` |
 | `npm run preview` | Serve the production build locally |
 | `npm test` | Run the unit tests |
 | `npm run test:build` | Check the build in `dist/`: lists, head tags, the feed, redirects, links and images (run `npm run build` first). Also builds the site with the sample Contentful posts and checks those. |
 | `npm run build:samples` | Build the site with the sample Contentful posts into `dist-samples/` |
-| `npm run test:browser` | Browser tests: screenshots of each kind of page and of every component story, navigation and accessibility (run `npm run build` first) |
-| `npm run test:smoke` | Check redirects, headers and the posts written in Contentful on a deployed copy (set `SMOKE_URL`, and run `npm run build` first) |
+| `npm run test:browser` | Browser tests: screenshots of each kind of page and of every component story, navigation, search and accessibility (run `npm run build` first) |
+| `npm run test:smoke` | Check redirects, headers, the posts written in Contentful and the search index on a deployed copy (set `SMOKE_URL`, and run `npm run build` first) |
 | `npm run serve` | Serve `dist/` the way the browser tests see it |
 | `npm run check` | Type-check the project |
 | `npm run format` | Format code with Prettier |
@@ -61,6 +61,17 @@ Publishing a post never needs a change to a test.
 - The tests check rules, not a list of posts. Two things are pinned: the addresses and feed guids the site had on the day it replaced the Gatsby site (`tests/fixtures/cutover.json`), which must keep working, and screenshots of a few pages that a new post does not change.
 
 Screenshots are stored under `tests/browser/__screenshots__/linux/` and only compare on the system that took them. To accept a deliberate change of design, run `npm run build`, then `npm run test:browser:linux -- --update-snapshots` (it needs Docker), and commit the screenshots that changed.
+
+## Search
+
+The search page is at `/search/`. It is the only page that runs a script of its own.
+
+- [Pagefind](https://pagefind.app) makes the index when the site is built, from the pages in `dist/`, and writes it to `dist/pagefind/`. It is a step of the build (`astro.config.mjs`), so a build on Netlify indexes the posts written in Contentful too.
+- Only posts are in the index. A post page marks its text with `data-pagefind-body`; no other page does. A post with no words, such as one that is only a picture, gives the index its title to read.
+- The search runs in the visitor's browser. Nothing they type is sent anywhere.
+- `npm run dev` has no index, because nothing has been built. To try search, run `npm run build` and then `npm run serve`.
+
+When no word starts with what was typed, Pagefind falls back on the longest word that begins it. So "redirectz" finds "redirect", and a word typed wrong in the middle can match a single letter.
 
 ## Content Management
 

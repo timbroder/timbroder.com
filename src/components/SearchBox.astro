@@ -1,0 +1,41 @@
+---
+/**
+ * The search field: one line, shaped like the navigation pill.
+ *
+ * It is a form that leads to the search page, so a search has an address
+ * that can be shared: /search/?q=redirects.
+ */
+interface Props {
+  /** What the field holds to begin with. */
+  value?: string;
+}
+
+const { value } = Astro.props;
+---
+
+<form role="search" action="/search/" method="get" class="relative max-w-2xl">
+  <label for="search-field" class="sr-only">Search posts</label>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    aria-hidden="true"
+    class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-zinc-500"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+  </svg>
+  <input
+    id="search-field"
+    type="search"
+    name="q"
+    value={value}
+    placeholder="Search posts"
+    autocomplete="off"
+    class="block w-full rounded-full bg-white py-3 pl-12 pr-5 text-base text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/10 placeholder:text-zinc-500 focus:ring-2 focus:ring-teal-700 focus:outline-none"
+  />
+</form>
