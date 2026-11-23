@@ -10,5 +10,8 @@ export const ProjectsActive = { args: { active: '/projects/' } };
 export const TalksActive = { args: { active: '/talks/' } };
 export const AboutActive = { args: { active: '/about/' } };
 
+/** Search is the icon at the end. */
+export const SearchActive = { args: { active: '/search/' } };
+
 /** Paged lists, tag pages and category pages highlight nothing. */
 export const NoneActive = { args: { active: null } };

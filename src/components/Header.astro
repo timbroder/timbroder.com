@@ -1,5 +1,11 @@
 ---
-/** The main navigation: a pill of links, with the current section highlighted. */
+/**
+ * The main navigation: a pill of links, with the current section highlighted.
+ *
+ * Search comes last, as an icon: the word would make the pill wider than a
+ * phone's screen. The links sit a little closer together on a phone, which
+ * keeps the pill as wide as it was before the icon was added.
+ */
 import { SITE } from '../lib/site.ts';
 
 interface Props {
@@ -8,6 +14,13 @@ interface Props {
 }
 
 const { active } = Astro.props;
+const link = (isActive: boolean) => [
+  'relative block px-2 py-2 transition sm:px-3',
+  isActive ? 'text-teal-700' : 'hover:text-teal-700',
+];
+const underline =
+  'absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-teal-700/0 via-teal-700/40 to-teal-700/0';
+const searching = SITE.search.href === active;
 ---
 
 <nav aria-label="Main" class="top-0 z-10 h-16 pt-6 flex flex-1 justify-center">
@@ -19,22 +32,33 @@ const { active } = Astro.props;
         const isActive = item.href === active;
         return (
           <li>
-            <a
-              href={item.href}
-              aria-current={isActive ? 'page' : undefined}
-              class:list={[
-                'relative block px-3 py-2 transition',
-                isActive ? 'text-teal-700' : 'hover:text-teal-700',
-              ]}
-            >
+            <a href={item.href} aria-current={isActive ? 'page' : undefined} class:list={link(isActive)}>
               {item.title}
-              {isActive && (
-                <span class="absolute inset-x-1 -bottom-px h-px bg-linear-to-r from-teal-700/0 via-teal-700/40 to-teal-700/0" />
-              )}
+              {isActive && <span class={underline} />}
             </a>
           </li>
         );
       })
     }
+    <li>
+      <a href={SITE.search.href} aria-current={searching ? 'page' : undefined} class:list={link(searching)}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+          class="h-5 w-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+        </svg>
+        <span class="sr-only">{SITE.search.title}</span>
+        {searching && <span class={underline} />}
+      </a>
+    </li>
   </ul>
 </nav>

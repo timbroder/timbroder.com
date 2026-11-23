@@ -1,3 +1,6 @@
+/** The search page. The header shows it as an icon, the footer as a word. */
+const SEARCH = { title: 'Search', href: '/search/' } as const;
+
 /** Site-wide facts, in one place. */
 export const SITE = {
   title: 'Tim Broder .com',
@@ -17,13 +20,15 @@ export const SITE = {
     { title: 'Talks', href: '/talks/' },
     { title: 'About', href: '/about/' },
   ],
+  search: SEARCH,
   /**
-   * Shown in the footer after the navigation. They put every post and every
-   * tag page two clicks from any page of the site.
+   * Shown in the footer after the navigation. The archive and the tag index
+   * put every post and every tag page two clicks from any page of the site.
    */
   footerNav: [
     { title: 'Archive', href: '/archive/' },
     { title: 'Tags', href: '/tag/' },
+    SEARCH,
   ],
 } as const;
 
@@ -59,10 +64,11 @@ export function isoDate(date: Date): string {
  * Which navigation item is highlighted on a page.
  *
  * "Posts" is highlighted on the home page and on every post (any path that
- * starts with a year), but not on paged lists, tags or categories.
+ * starts with a year), but not on paged lists, tags or categories. The
+ * search icon is highlighted on the search page.
  */
 export function activeNavHref(pathname: string): string | null {
-  for (const item of SITE.nav) {
+  for (const item of [...SITE.nav, SITE.search]) {
     if (pathname === item.href) return item.href;
   }
   return /^\/\d{4}\//.test(pathname) ? '/' : null;

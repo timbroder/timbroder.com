@@ -1,0 +1,63 @@
+---
+/**
+ * One search result. It is the post card of the lists, with the passage
+ * that matched in place of the summary, and no "Read article" line.
+ *
+ * The search page fills results in the browser: it keeps one empty result
+ * in a <template> and copies it for each post found. The parts it fills are
+ * marked with data-search. Given a `result`, the card is drawn filled in,
+ * which is how the stories show it.
+ */
+import { resultWhen } from '../lib/search.ts';
+
+export interface Result {
+  url: string;
+  title: string;
+  /** "2026-11-11" */
+  date: string;
+  category?: string;
+  /** The passage that matched, with the matched words in <mark>. A post with no text has none. */
+  passage?: string;
+}
+
+interface Props {
+  result?: Result;
+}
+
+const { result } = Astro.props;
+const when = result ? resultWhen(result.date, result.category) : '';
+const eyebrow = 'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-500';
+---
+
+<article class="md:grid md:grid-cols-4 md:items-baseline">
+  <div class="md:col-span-3 group relative flex flex-col items-start">
+    <h2 class="max-w-full text-base font-semibold tracking-tight text-zinc-800">
+      <div
+        class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl"
+      >
+      </div>
+      <a href={result?.url} data-search="link">
+        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+        <span class="relative z-10" data-search="title">{result?.title}</span>
+      </a>
+    </h2>
+    <time class:list={['md:hidden', eyebrow, 'pl-3.5']} datetime={result?.date}>
+      <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+        <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
+      </span>
+      <span data-search="when">{when}</span>
+    </time>
+    {
+      (!result || result.passage) && (
+        <p
+          class="relative z-10 mt-2 max-w-full text-sm text-zinc-600 [&_mark]:rounded-sm [&_mark]:bg-teal-100 [&_mark]:px-0.5 [&_mark]:font-medium [&_mark]:text-zinc-800"
+          data-search="passage"
+          set:html={result?.passage}
+        />
+      )
+    }
+  </div>
+  <time class:list={['mt-1 hidden md:block', eyebrow]} datetime={result?.date}>
+    <span data-search="when">{when}</span>
+  </time>
+</article>
