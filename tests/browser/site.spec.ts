@@ -18,6 +18,7 @@ const PAGE_TYPES = {
   'markdown page': '/projects/',
   archive: '/archive/',
   'tag index': '/tag/',
+  search: '/search/',
   'not found': '/404.html',
 };
 

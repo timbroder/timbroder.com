@@ -1,0 +1,194 @@
+---
+/**
+ * Search. The only page of the site that runs a script of its own.
+ *
+ * The index is made by Pagefind when the site is built (astro.config.mjs)
+ * and loaded here, in the browser, when someone searches. Nothing is sent
+ * anywhere: the search runs on the visitor's machine.
+ */
+import Headline from '../components/Headline.astro';
+import SearchBox from '../components/SearchBox.astro';
+import SearchResult from '../components/SearchResult.astro';
+import Base from '../layouts/Base.astro';
+import { getPosts } from '../lib/posts.ts';
+
+const posts = await getPosts();
+const count = `${posts.length} ${posts.length === 1 ? 'post' : 'posts'}`;
+const link = 'font-medium text-teal-700 underline';
+---
+
+<Base title="Search" description={`Search the text of all ${count} on timbroder.com.`}>
+  <header class="flex flex-col">
+    <Headline>Search</Headline>
+    <p class="mb-10 max-w-2xl text-base text-zinc-600">
+      Search the text of all {count}. They are also listed in the{' '}
+      <a href="/archive/" class={link}>archive</a> and{' '}
+      <a href="/tag/" class={link}>by tag</a>.
+    </p>
+  </header>
+  <SearchBox />
+  <noscript>
+    <p class="mt-8 max-w-2xl text-base text-zinc-600">
+      Search needs JavaScript, which is turned off in this browser. Every post is in the archive.
+    </p>
+  </noscript>
+  <p id="search-status" role="status" class="mt-8 text-sm text-zinc-600"></p>
+  <div class="mt-10 md:border-l md:border-zinc-100 md:pl-6">
+    <div id="search-results" class="flex max-w-3xl flex-col space-y-16"></div>
+    <button
+      id="search-more"
+      type="button"
+      hidden
+      class="mt-12 rounded-md bg-white px-3 py-2 text-sm font-semibold text-zinc-900 ring-1 ring-inset ring-zinc-300 hover:bg-zinc-50"
+    ></button>
+  </div>
+  <template id="search-result"><SearchResult /></template>
+</Base>
+
+<script>
+  import {
+    RESULTS_PER_PAGE,
+    addressOf,
+    countLine,
+    isOnlyTheTitle,
+    moreLabel,
+    queryFrom,
+    resultWhen,
+  } from '../lib/search.ts';
+
+  /** What Pagefind knows about one post it found. */
+  interface FoundPost {
+    url: string;
+    /** The passage that matched. Pagefind escapes the text and adds only <mark>. */
+    excerpt: string;
+    plain_excerpt: string;
+    meta: { title?: string; date?: string; category?: string };
+  }
+
+  interface Pagefind {
+    options(options: Record<string, unknown>): Promise<void>;
+    init(): Promise<void>;
+    search(query: string): Promise<{ results: { data(): Promise<FoundPost> }[] }>;
+  }
+
+  // The index is written after the pages are built, so the bundler must not
+  // look for it: it is loaded by its address when someone searches.
+  const INDEX = '/pagefind/pagefind.js';
+  /** Long enough that a search does not start on every key of a fast typist. */
+  const PAUSE_MS = 150;
+
+  const form = document.querySelector<HTMLFormElement>('form[role="search"]')!;
+  const field = form.querySelector<HTMLInputElement>('input[name="q"]')!;
+  const status = document.getElementById('search-status')!;
+  const list = document.getElementById('search-results')!;
+  const more = document.getElementById('search-more') as HTMLButtonElement;
+  const template = document.getElementById('search-result') as HTMLTemplateElement;
+
+  let pagefind: Promise<Pagefind> | undefined;
+
+  function index(): Promise<Pagefind> {
+    pagefind ??= import(/* @vite-ignore */ INDEX).then(async (loaded: Pagefind) => {
+      // A passage cut out of a longer text says so at the end that was cut.
+      await loaded.options({ excerptLength: 30, excerptEllipsis: '…' });
+      await loaded.init();
+      return loaded;
+    });
+    return pagefind;
+  }
+
+  /** The posts the latest search found, and how many of them are on the page. */
+  let found: { data(): Promise<FoundPost> }[] = [];
+  let shown = 0;
+  /** Counts searches, so the answer to an older one is dropped when it arrives late. */
+  let latest = 0;
+
+  function card(post: FoundPost): HTMLElement {
+    const result = template.content.firstElementChild!.cloneNode(true) as HTMLElement;
+    const title = post.meta.title ?? post.url;
+    result.querySelector<HTMLAnchorElement>('[data-search="link"]')!.href = post.url;
+    result.querySelector('[data-search="title"]')!.textContent = title;
+
+    const when = resultWhen(post.meta.date, post.meta.category);
+    for (const time of result.querySelectorAll('time')) {
+      if (when === '') time.remove();
+      else {
+        time.dateTime = post.meta.date!;
+        time.querySelector('[data-search="when"]')!.textContent = when;
+      }
+    }
+
+    const passage = result.querySelector('[data-search="passage"]')!;
+    if (isOnlyTheTitle(post.plain_excerpt, title)) passage.remove();
+    else passage.innerHTML = post.excerpt;
+    return result;
+  }
+
+  async function showMore(search = latest): Promise<void> {
+    const next = await Promise.all(
+      found.slice(shown, shown + RESULTS_PER_PAGE).map((post) => post.data()),
+    );
+    if (search !== latest) return;
+    const cards = next.map(card);
+    list.append(...cards);
+    // Someone who pressed "Show more" with the keyboard carries on from the
+    // first new result: the button may be gone.
+    if (shown > 0) cards[0]?.querySelector('a')?.focus();
+    shown += cards.length;
+    const label = moreLabel(shown, found.length);
+    more.hidden = label === null;
+    more.textContent = label ?? '';
+  }
+
+  async function search(): Promise<void> {
+    const query = field.value.trim();
+    const mine = ++latest;
+    history.replaceState(null, '', addressOf(query, location.pathname));
+
+    if (query === '') {
+      found = [];
+      shown = 0;
+      list.replaceChildren();
+      status.textContent = '';
+      more.hidden = true;
+      return;
+    }
+
+    try {
+      const { results } = await (await index()).search(query);
+      if (mine !== latest) return;
+      found = results;
+      shown = 0;
+      list.replaceChildren();
+      more.hidden = true;
+      status.textContent = countLine(found.length, query);
+      await showMore(mine);
+    } catch (error) {
+      if (mine !== latest) return;
+      pagefind = undefined;
+      status.textContent = import.meta.env.DEV
+        ? 'The search index is made by a build. Run "npm run build", then "npm run serve".'
+        : 'Search is not working right now. Every post is in the archive.';
+      console.error(error);
+    }
+  }
+
+  let pause: ReturnType<typeof setTimeout> | undefined;
+
+  field.addEventListener('input', () => {
+    clearTimeout(pause);
+    pause = setTimeout(search, PAUSE_MS);
+  });
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    clearTimeout(pause);
+    void search();
+  });
+  more.addEventListener('click', () => void showMore());
+  // Fetch the index as soon as someone is about to type, not on the first key.
+  field.addEventListener('focus', () => void index().catch(() => {}), { once: true });
+
+  // A page opened with a search in its address shows that search.
+  field.value = queryFrom(location.search);
+  if (field.value !== '') void search();
+  else field.focus();
+</script>

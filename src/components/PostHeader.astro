@@ -6,13 +6,19 @@ import Headline from './Headline.astro';
 interface Props {
   title: string;
   date: Date;
+  /**
+   * Lets the search index read the title as the text of the post. For a post
+   * with no words of its own, such as one that is only a picture: the index
+   * leaves out a page it finds no words on.
+   */
+  titleIsText?: boolean;
 }
 
-const { title, date } = Astro.props;
+const { title, date, titleIsText = false } = Astro.props;
 ---
 
-<header class="flex flex-col">
-  <span class="flex flex-row mt-2">
+<header class="flex flex-col" data-pagefind-body={titleIsText || undefined}>
+  <span class="flex flex-row mt-2" data-pagefind-ignore>
     <time datetime={isoDate(date)} class="flex items-center text-base text-zinc-500">
       <span class="h-4 w-0.5 rounded-full bg-zinc-200"></span>
       <span class="ml-3">{formatDate(date)}</span>
