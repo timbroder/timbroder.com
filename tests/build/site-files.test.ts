@@ -4,7 +4,7 @@
  * about the site).
  */
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
@@ -86,6 +86,23 @@ describe('icons', () => {
       expect(fingerprint, href).toBe(hash.slice(0, 8));
       expect(file).not.toBe('/favicon.ico');
     }
+  });
+
+  it('are saved with 256 colours, so none takes more than a byte a pixel', () => {
+    // The icons are a photo, and a PNG that keeps every colour of a photo is
+    // heavy: the 192px one was 67 KB, a quarter of what a first visit
+    // downloaded. Chrome fetches that one on a first visit, to offer the
+    // site as an app. Saved with 256 colours it is a third of the size and
+    // looks the same. pngquant, ImageOptim and Squoosh can all do it.
+    const heavy = readdirSync(join(DIST, 'icons'))
+      .filter((file) => file.endsWith('.png'))
+      .map((file) => `/icons/${file}`)
+      .filter((path) => {
+        const size = pngSize(path);
+        // The 2 KB is room for the list of colours and the file's headers.
+        return !size || readFileSync(join(DIST, path)).length > size.width * size.height + 2048;
+      });
+    expect(heavy).toEqual([]);
   });
 
   it('include a favicon.ico that is a real icon', () => {
